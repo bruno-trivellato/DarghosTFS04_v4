@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Zugurosh" nameDescription="Zugurosh" race="fire" experience="10000" speed="340" manacost="0">
+  <health now="95000" max="95000"/>
+  <look type="12" head="2" body="35" legs="57" feet="91" corpse="6068"/>
+  <targetchange interval="5000" chance="15"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="85"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="120" attack="130"/>
+    <attack name="fire" interval="3000" chance="20" target="1" radius="4" min="-250" max="-850">
+      <attribute key="areaEffect" value="explosion"/>
+    </attack>
+    <attack name="death" interval="2000" chance="15" target="0" radius="4" min="-100" max="-350">
+      <attribute key="areaEffect" value="smallclouds"/>
+    </attack>
+    <attack name="manadrain" interval="1000" chance="13" radius="5" target="0" min="-60" max="-230">
+      <attribute key="areaEffect" value="watersplash"/>
+    </attack>
+    <attack name="death" interval="2000" chance="15" length="7" spread="0" min="0" max="-500">
+      <attribute key="areaEffect" value="mortarea"/>
+    </attack>
+  </attacks>
+  <defenses armor="45" defense="55">
+    <defense name="healing" interval="2000" chance="15" min="400" max="650">
+      <attribute key="areaEffect" value="greenshimmer"/>
+    </defense>
+    <defense name="invisible" interval="1000" chance="5" duration="6000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+    <element icePercent="25"/>
+    <element energyPercent="20"/>
+    <element earthPercent="40"/>
+    <element firePercent="30"/>
+    <element holyPercent="30"/>
+  </elements>
+  <immunities>
+    <immunity death="1"/>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="You will run out of resources soon enough!!" yell="1"/>
+    <voice sentence="One little mistake and your all are mine!"/>
+    <voice sentence="I sense your strength fading!"/>
+  </voices>
+  <loot>
+    <item id="2148" countmax="100" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2148" countmax="84" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2152" countmax="29" chance1="20000">
+      <!--platinum coin-->
+    </item>    
+    <item id="6500" countmax="1" chance1="100000">
+      <!--demonic essence-->
+    </item>
+    <item id="9808" chance="42000">
+      <!--rusty armor-->
+    </item>       
+    <item id="9811" chance="60000">
+      <!--rusty legs-->
+    </item>      
+    <item id="8472" chance="25000">
+      <!--great spirit potion-->
+    </item>    
+    <item id="8473" chance="22000">
+      <!--ultimate health potion-->
+    </item>  
+    <item id="7591" chance="22000">
+      <!--great health potion-->
+    </item>    
+    <item id="7590" chance="22000">
+      <!--great mana potion-->
+    </item>    
+    <item id="5944" chance="25000">
+      <!--soul orb-->
+    </item>  
+    <item id="5944" chance="25000">
+      <!--soul orb-->
+    </item>          
+    <item id="2195" chance="5000">
+      <!--boots of haste-->
+    </item>
+    <item id="2151" countmax="29" chance1="24000">
+      <!--talon-->
+    </item>  
+    <item id="5911" chance="17000" countmax="10">
+      <!--red piece of cloth-->
+    </item>
+    <item id="5909" chance="16000" countmax="10">
+      <!--white piece of cloth-->
+    </item>
+    <item id="5913" chance="15000" countmax="10">
+      <!--brown piece of cloth-->
+    </item>
+    <item id="5912" chance="15000" countmax="10">
+      <!--blue piece of cloth-->
+    </item>
+    <item id="5910" chance="15000" countmax="10">
+      <!--green piece of cloth-->
+    </item>
+    <item id="5914" chance="8000" countmax="10">
+      <!--yellow piece of cloth-->
+    </item>    
+    <item id="4845" chance="15000">
+      <!--silver brooch-->
+    </item>
+    <item id="7698" chance="14000">
+      <!--jewel case-->
+    </item>
+    <item id="2173" chance="9000">
+      <!--amulet of loss-->
+    </item>
+    <item id="2173" chance="9000">
+      <!--amulet of loss-->
+    </item> 
+    <item id="5954" chance1="7000" countmax="2">
+      <!--demon horn-->
+    </item>
+    <item id="2645" chance="6000">
+      <!--steel boots-->
+    </item>
+    <item id="2646" chance="1200">
+      <!--golden boots-->
+    </item>                                                  
+  </loot>
+</monster>

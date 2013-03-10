@@ -1,0 +1,300 @@
+[26/7/2012 10:9:2] > Using MD5 encryption
+[26/7/2012 10:9:2] >> Loading RSA key
+[26/7/2012 10:9:2] >> Starting SQL connection
+
+[26/7/2012 10:9:2] > WARNING: Outdated MySQL server detected, consider upgrading to a newer version.
+[26/7/2012 10:9:2] >> Running Database Manager
+[26/7/2012 10:9:2] >> Loading items (OTB)
+[26/7/2012 10:9:3] >> Loading items (XML)
+[26/7/2012 10:9:3] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[26/7/2012 10:9:3] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[26/7/2012 10:9:3] >> Loading groups
+[26/7/2012 10:9:3] >> Loading vocations
+[26/7/2012 10:9:3] >> Loading outfits
+[26/7/2012 10:9:3] >> Loading chat channels
+[26/7/2012 10:9:3] >> Loading script systems
+[26/7/2012 10:9:4] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[26/7/2012 10:9:4] >> Loading mods...
+[26/7/2012 10:9:4] > 0 mods were loaded.
+[26/7/2012 10:9:4] >> Loading experience stages
+[26/7/2012 10:9:4] >> Loading monsters
+[26/7/2012 10:9:5] [Warning - Monsters::deserializeSpell] Frost Dragon - Unknown areaEffect: smallice
+[26/7/2012 10:9:6] >> Loading map and spawns...
+[26/7/2012 10:9:7] > Map size: 5000x5000.
+[26/7/2012 10:9:7] > Map descriptions: 
+[26/7/2012 10:9:7] "Saved with Remere's Map Editor 2.1"
+[26/7/2012 10:9:7] "SimOne MapEditor 0.5.5"
+[26/7/2012 10:9:8] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1070/1121/6
+[26/7/2012 10:9:8] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1070/1129/6
+[26/7/2012 10:9:8] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1073/1121/6
+[26/7/2012 10:9:8] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1073/1129/6
+[26/7/2012 10:9:8] Duplicate uniqueId 6401
+[26/7/2012 10:9:8] Duplicate uniqueId 6401
+[26/7/2012 10:9:9] Duplicate uniqueId 6401
+[26/7/2012 10:9:9] Duplicate uniqueId 6401
+[26/7/2012 10:9:9] Duplicate uniqueId 6401
+[26/7/2012 10:9:9] Duplicate uniqueId 6401
+[26/7/2012 10:9:11] Duplicate uniqueId 6401
+[26/7/2012 10:9:11] Duplicate uniqueId 6401
+[26/7/2012 10:9:12] Duplicate uniqueId 2004
+[26/7/2012 10:9:12] Duplicate uniqueId 2005
+[26/7/2012 10:9:12] Duplicate uniqueId 2006
+[26/7/2012 10:9:12] Duplicate uniqueId 2007
+[26/7/2012 10:9:13] Duplicate uniqueId 6401
+[26/7/2012 10:9:13] Duplicate uniqueId 6401
+[26/7/2012 10:9:13] Duplicate uniqueId 6401
+[26/7/2012 10:9:14] Duplicate uniqueId 6400
+[26/7/2012 10:9:14] Duplicate uniqueId 6401
+[26/7/2012 10:9:14] Duplicate uniqueId 2056
+[26/7/2012 10:9:14] Duplicate uniqueId 2057
+[26/7/2012 10:9:14] Duplicate uniqueId 2058
+[26/7/2012 10:9:14] Duplicate uniqueId 2051
+[26/7/2012 10:9:14] Duplicate uniqueId 2052
+[26/7/2012 10:9:14] Duplicate uniqueId 2053
+[26/7/2012 10:9:14] Duplicate uniqueId 2054
+[26/7/2012 10:9:14] > Map loading time: 8.388 seconds.
+[26/7/2012 10:9:15] [Spawn::addMonster] Cannot find "Butterfly"
+[26/7/2012 10:9:15] [Spawn::addMonster] Cannot find "Butterfly"
+[26/7/2012 10:9:15] > Data parsing time: 1.034 seconds.
+[26/7/2012 10:9:31] > Houses synchronization time: 15.63 seconds.
+[26/7/2012 10:9:31] > Content unserialization time: 0.07 seconds.
+[26/7/2012 10:9:31] >> Checking world type... Open PvP
+[26/7/2012 10:9:31] >> Initializing game state and binding services...
+[26/7/2012 10:9:32] > Global IP address: 184.173.128.212
+[26/7/2012 10:9:32] > Bound ports: 7577	7578	9215	
+[26/7/2012 10:9:32] >> Everything smells good, server is starting up...
+[26/7/2012 10:9:32] >> UltraX server Online!
+[DDOS EMERGENCY] Enabled
+[26/7/2012 10:9:32] >> UltraX server Online!
+[DDOS EMERGENCY] Enabled
+
+[26/7/2012 10:17:2] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.32.85.65)
+
+[26/7/2012 10:32:53] [Error - Action Interface] 
+[26/7/2012 10:32:53] data/actions/scripts/tools/pick.lua:onUse
+[26/7/2012 10:32:53] Description: 
+[26/7/2012 10:32:53] (luaGetThingFromPos) Tile not found
+
+[26/7/2012 10:34:13] [Error - Action Interface] 
+[26/7/2012 10:34:13] data/actions/scripts/tools/pick.lua:onUse
+[26/7/2012 10:34:13] Description: 
+[26/7/2012 10:34:13] (luaGetThingFromPos) Tile not found
+
+[26/7/2012 10:34:37] [Error - Action Interface] 
+[26/7/2012 10:34:37] data/actions/scripts/tools/pick.lua:onUse
+[26/7/2012 10:34:37] Description: 
+[26/7/2012 10:34:37] (luaGetThingFromPos) Tile not found
+
+[26/7/2012 10:34:38] [Error - Action Interface] 
+[26/7/2012 10:34:38] data/actions/scripts/tools/pick.lua:onUse
+[26/7/2012 10:34:38] Description: 
+[26/7/2012 10:34:38] (luaGetThingFromPos) Tile not found
+
+[26/7/2012 10:34:38] [Error - Action Interface] 
+[26/7/2012 10:34:38] data/actions/scripts/tools/pick.lua:onUse
+[26/7/2012 10:34:38] Description: 
+[26/7/2012 10:34:38] (luaGetThingFromPos) Tile not found
+
+[26/7/2012 10:34:40] [Error - Action Interface] 
+[26/7/2012 10:34:40] data/actions/scripts/tools/pick.lua:onUse
+[26/7/2012 10:34:40] Description: 
+[26/7/2012 10:34:40] (luaGetThingFromPos) Tile not found
+[26/7/2012 10:53:10] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 187.32.85.65)
+[26/7/2012 11:3:17] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.14.135.93)
+[26/7/2012 11:11:4] > Saving server...
+[26/7/2012 11:11:10] > SAVE: Complete in 5.982 seconds using binary-tilebased house storage.
+[26/7/2012 11:42:23] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.13.162.58)
+[26/7/2012 12:11:4] > Saving server...
+[26/7/2012 12:11:12] > SAVE: Complete in 7.296 seconds using binary-tilebased house storage.
+[26/7/2012 13:1:25] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.32.85.65)
+[26/7/2012 13:11:4] > Saving server...
+[26/7/2012 13:11:12] > SAVE: Complete in 7.318 seconds using binary-tilebased house storage.
+
+[26/7/2012 14:0:9] [Error - Spell Interface] 
+[26/7/2012 14:0:9] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:0:9] Description: 
+[26/7/2012 14:0:9] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:0:9] stack traceback:
+[26/7/2012 14:0:9] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:0:13] [Error - Spell Interface] 
+[26/7/2012 14:0:13] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:0:13] Description: 
+[26/7/2012 14:0:13] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:0:13] stack traceback:
+[26/7/2012 14:0:13] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:0:14] [Error - Spell Interface] 
+[26/7/2012 14:0:14] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:0:14] Description: 
+[26/7/2012 14:0:14] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:0:14] stack traceback:
+[26/7/2012 14:0:14] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:0:18] [Error - Spell Interface] 
+[26/7/2012 14:0:18] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:0:18] Description: 
+[26/7/2012 14:0:18] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:0:18] stack traceback:
+[26/7/2012 14:0:18] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:0:19] [Error - Spell Interface] 
+[26/7/2012 14:0:19] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:0:19] Description: 
+[26/7/2012 14:0:19] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:0:19] stack traceback:
+[26/7/2012 14:0:19] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:0:20] [Error - Spell Interface] 
+[26/7/2012 14:0:20] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:0:20] Description: 
+[26/7/2012 14:0:20] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:0:20] stack traceback:
+[26/7/2012 14:0:20] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:0:23] [Error - Spell Interface] 
+[26/7/2012 14:0:23] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:0:23] Description: 
+[26/7/2012 14:0:23] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:0:23] stack traceback:
+[26/7/2012 14:0:23] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:0:30] [Error - Spell Interface] 
+[26/7/2012 14:0:30] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:0:30] Description: 
+[26/7/2012 14:0:30] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:0:30] stack traceback:
+[26/7/2012 14:0:30] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:0:32] [Error - Spell Interface] 
+[26/7/2012 14:0:32] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:0:32] Description: 
+[26/7/2012 14:0:32] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:0:32] stack traceback:
+[26/7/2012 14:0:32] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+[26/7/2012 14:11:4] > Saving server...
+[26/7/2012 14:11:12] > SAVE: Complete in 7.244 seconds using binary-tilebased house storage.
+
+[26/7/2012 14:23:29] [Error - Spell Interface] 
+[26/7/2012 14:23:29] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:23:29] Description: 
+[26/7/2012 14:23:29] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:23:29] stack traceback:
+[26/7/2012 14:23:29] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:23:31] [Error - Spell Interface] 
+[26/7/2012 14:23:31] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:23:31] Description: 
+[26/7/2012 14:23:31] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:23:31] stack traceback:
+[26/7/2012 14:23:31] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:46:37] [Error - Spell Interface] 
+[26/7/2012 14:46:37] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:46:37] Description: 
+[26/7/2012 14:46:37] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:46:37] stack traceback:
+[26/7/2012 14:46:37] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:46:40] [Error - Spell Interface] 
+[26/7/2012 14:46:40] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:46:40] Description: 
+[26/7/2012 14:46:40] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:46:40] stack traceback:
+[26/7/2012 14:46:40] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:46:41] [Error - Spell Interface] 
+[26/7/2012 14:46:41] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:46:41] Description: 
+[26/7/2012 14:46:41] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:46:41] stack traceback:
+[26/7/2012 14:46:41] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:48:0] [Error - Spell Interface] 
+[26/7/2012 14:48:0] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[26/7/2012 14:48:0] Description: 
+[26/7/2012 14:48:0] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[26/7/2012 14:48:0] stack traceback:
+[26/7/2012 14:48:0] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[26/7/2012 14:56:5] [Error - Spell Interface] 
+[26/7/2012 14:56:5] data/spells/scripts/support/destroy_field_rune.lua:onCastSpell
+[26/7/2012 14:56:5] Description: 
+[26/7/2012 14:56:5] (luaDoRemoveItem) Item not found
+
+[26/7/2012 14:56:6] [Error - Spell Interface] 
+[26/7/2012 14:56:6] data/spells/scripts/support/destroy_field_rune.lua:onCastSpell
+[26/7/2012 14:56:6] Description: 
+[26/7/2012 14:56:6] (luaDoRemoveItem) Item not found
+
+[26/7/2012 14:56:13] [Error - Spell Interface] 
+[26/7/2012 14:56:13] data/spells/scripts/support/destroy_field_rune.lua:onCastSpell
+[26/7/2012 14:56:13] Description: 
+[26/7/2012 14:56:13] (luaDoRemoveItem) Item not found
+
+[26/7/2012 14:59:6] [Error - Action Interface] 
+[26/7/2012 14:59:6] data/actions/scripts/liquids/containers.lua:onUse
+[26/7/2012 14:59:6] Description: 
+[26/7/2012 14:59:6] (luaHasItemProperty) Item not found
+
+[26/7/2012 14:59:6] [Error - Action Interface] 
+[26/7/2012 14:59:6] data/actions/scripts/liquids/containers.lua:onUse
+[26/7/2012 14:59:6] Description: 
+[26/7/2012 14:59:6] (luaDoCreateItem) Tile not found
+
+[26/7/2012 14:59:6] [Error - Action Interface] 
+[26/7/2012 14:59:6] data/actions/scripts/liquids/containers.lua:onUse
+[26/7/2012 14:59:6] Description: 
+[26/7/2012 14:59:6] (luaDoDecayItem) Item not found
+[26/7/2012 15:11:4] > Saving server...
+[26/7/2012 15:11:13] > SAVE: Complete in 8.932 seconds using binary-tilebased house storage.
+[26/7/2012 16:11:4] > Saving server...
+[26/7/2012 16:11:13] > SAVE: Complete in 8.563 seconds using binary-tilebased house storage.
+[26/7/2012 17:11:4] > Saving server...
+[26/7/2012 17:11:13] > SAVE: Complete in 8.913 seconds using binary-tilebased house storage.
+
+[26/7/2012 17:37:32] [Error - Action Interface] 
+[26/7/2012 17:37:32] data/actions/scripts/tools/pick.lua:onUse
+[26/7/2012 17:37:32] Description: 
+[26/7/2012 17:37:32] (luaGetThingFromPos) Tile not found
+[26/7/2012 18:11:4] > Saving server...
+[26/7/2012 18:11:13] > SAVE: Complete in 8.192 seconds using binary-tilebased house storage.
+[26/7/2012 19:11:4] > Saving server...
+[26/7/2012 19:11:14] > SAVE: Complete in 9.272 seconds using binary-tilebased house storage.
+[26/7/2012 20:11:4] > Saving server...
+[26/7/2012 20:11:15] > SAVE: Complete in 10.766 seconds using binary-tilebased house storage.
+[26/7/2012 21:11:4] > Saving server...
+[26/7/2012 21:11:16] > SAVE: Complete in 11.519 seconds using binary-tilebased house storage.
+[26/7/2012 22:11:4] > Saving server...
+[26/7/2012 22:11:16] > SAVE: Complete in 11.28 seconds using binary-tilebased house storage.
+
+[26/7/2012 22:33:5] [Error - Action Interface] 
+[26/7/2012 22:33:5] data/actions/scripts/tools/rope.lua:onUse
+[26/7/2012 22:33:5] Description: 
+[26/7/2012 22:33:5] (luaGetThingFromPos) Tile not found
+[26/7/2012 23:1:35] > Broadcasted message: "As senhoritas rebeldes planejam um ataque a quendor...".
+[26/7/2012 23:2:35] > Broadcasted message: "As amazonas estão atacando Quendor!".
+[26/7/2012 23:11:4] > Saving server...
+[26/7/2012 23:11:16] > SAVE: Complete in 11.244 seconds using binary-tilebased house storage.
+
+[26/7/2012 23:25:6] [Error - NpcScript Interface] 
+[26/7/2012 23:25:6] In a timer event called from: 
+[26/7/2012 23:25:6] data/npc/scripts/game/default.lua:onCreatureSay
+[26/7/2012 23:25:6] Description: 
+[26/7/2012 23:25:6] (luaOpenShopWindow) Creature not found
+
+[26/7/2012 23:38:12] [Error - Action Interface] 
+[26/7/2012 23:38:12] data/actions/scripts/tools/rope.lua:onUse
+[26/7/2012 23:38:12] Description: 
+[26/7/2012 23:38:12] (luaGetThingFromPos) Tile not found
+
+[26/7/2012 23:38:45] [Error - Action Interface] 
+[26/7/2012 23:38:45] data/actions/scripts/tools/rope.lua:onUse
+[26/7/2012 23:38:45] Description: 
+[26/7/2012 23:38:45] (luaGetThingFromPos) Tile not found
+[27/7/2012 0:11:5] > Saving server...
+[27/7/2012 0:11:15] > SAVE: Complete in 10.256 seconds using binary-tilebased house storage.
+[27/7/2012 1:11:5] > Saving server...
+[27/7/2012 1:11:13] > SAVE: Complete in 7.905 seconds using binary-tilebased house storage.
+[27/7/2012 2:11:5] > Saving server...
+[27/7/2012 2:11:11] > SAVE: Complete in 6.664 seconds using binary-tilebased house storage.

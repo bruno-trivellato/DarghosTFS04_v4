@@ -1,0 +1,1518 @@
+[13/7/2012 10:9:1] > Using MD5 encryption
+[13/7/2012 10:9:1] >> Loading RSA key
+[13/7/2012 10:9:1] >> Starting SQL connection
+
+[13/7/2012 10:9:1] > WARNING: Outdated MySQL server detected, consider upgrading to a newer version.
+[13/7/2012 10:9:1] >> Running Database Manager
+[13/7/2012 10:9:1] >> Loading items (OTB)
+[13/7/2012 10:9:2] >> Loading items (XML)
+[13/7/2012 10:9:2] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[13/7/2012 10:9:2] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[13/7/2012 10:9:2] >> Loading groups
+[13/7/2012 10:9:2] >> Loading vocations
+[13/7/2012 10:9:2] >> Loading outfits
+[13/7/2012 10:9:2] >> Loading chat channels
+[13/7/2012 10:9:2] >> Loading script systems
+[13/7/2012 10:9:3] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[13/7/2012 10:9:3] >> Loading mods...
+[13/7/2012 10:9:3] > 0 mods were loaded.
+[13/7/2012 10:9:3] >> Loading experience stages
+[13/7/2012 10:9:3] >> Loading monsters
+[13/7/2012 10:9:5] >> Loading map and spawns...
+[13/7/2012 10:9:7] > Map size: 5000x5000.
+[13/7/2012 10:9:7] > Map descriptions: 
+[13/7/2012 10:9:7] "Saved with Remere's Map Editor 2.1"
+[13/7/2012 10:9:7] "SimOne MapEditor 0.5.5"
+[13/7/2012 10:9:7] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1070/1121/6
+[13/7/2012 10:9:7] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1070/1129/6
+[13/7/2012 10:9:7] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1073/1121/6
+[13/7/2012 10:9:7] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1073/1129/6
+[13/7/2012 10:9:8] Duplicate uniqueId 6401
+[13/7/2012 10:9:8] Duplicate uniqueId 6401
+[13/7/2012 10:9:9] Duplicate uniqueId 6401
+[13/7/2012 10:9:9] Duplicate uniqueId 6401
+[13/7/2012 10:9:9] Duplicate uniqueId 6401
+[13/7/2012 10:9:9] Duplicate uniqueId 6401
+[13/7/2012 10:9:10] Duplicate uniqueId 6401
+[13/7/2012 10:9:10] Duplicate uniqueId 6401
+[13/7/2012 10:9:11] Duplicate uniqueId 2004
+[13/7/2012 10:9:11] Duplicate uniqueId 2005
+[13/7/2012 10:9:11] Duplicate uniqueId 2006
+[13/7/2012 10:9:11] Duplicate uniqueId 2007
+[13/7/2012 10:9:13] Duplicate uniqueId 6401
+[13/7/2012 10:9:13] Duplicate uniqueId 6401
+[13/7/2012 10:9:13] Duplicate uniqueId 6401
+[13/7/2012 10:9:13] Duplicate uniqueId 6400
+[13/7/2012 10:9:13] Duplicate uniqueId 6401
+[13/7/2012 10:9:13] Duplicate uniqueId 2056
+[13/7/2012 10:9:13] Duplicate uniqueId 2057
+[13/7/2012 10:9:13] Duplicate uniqueId 2058
+[13/7/2012 10:9:13] Duplicate uniqueId 2051
+[13/7/2012 10:9:13] Duplicate uniqueId 2052
+[13/7/2012 10:9:13] Duplicate uniqueId 2053
+[13/7/2012 10:9:13] Duplicate uniqueId 2054
+[13/7/2012 10:9:13] > Map loading time: 8.312 seconds.
+[13/7/2012 10:9:14] [Spawn::addMonster] Cannot find "Butterfly"
+[13/7/2012 10:9:14] [Spawn::addMonster] Cannot find "Butterfly"
+[13/7/2012 10:9:14] > Data parsing time: 0.495 seconds.
+[13/7/2012 10:9:29] > Houses synchronization time: 15.452 seconds.
+[13/7/2012 10:9:29] > Content unserialization time: 0.073 seconds.
+[13/7/2012 10:9:29] >> Checking world type... Open PvP
+[13/7/2012 10:9:29] >> Initializing game state and binding services...
+[13/7/2012 10:9:32] > Global IP address: 184.173.128.212
+[13/7/2012 10:9:32] > Bound ports: 7577	7578	
+[13/7/2012 10:9:32] >> Everything smells good, server is starting up...
+[13/7/2012 10:9:32] [DDOS EMERGENCY] Enabled
+>> UltraX server Online!
+[13/7/2012 10:9:32] [DDOS EMERGENCY] Enabled
+>> UltraX server Online!
+[13/7/2012 10:44:20] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 200.202.209.60)
+[13/7/2012 10:52:56] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.216.102.139)
+[13/7/2012 11:11:3] > Saving server...
+[13/7/2012 11:11:7] > SAVE: Complete in 4.021 seconds using binary-tilebased house storage.
+[13/7/2012 12:11:3] > Saving server...
+[13/7/2012 12:11:7] > SAVE: Complete in 3.835 seconds using binary-tilebased house storage.
+[13/7/2012 13:11:3] > Saving server...
+[13/7/2012 13:11:8] > SAVE: Complete in 4.323 seconds using binary-tilebased house storage.
+[13/7/2012 14:11:3] > Saving server...
+[13/7/2012 14:11:9] > SAVE: Complete in 5.702 seconds using binary-tilebased house storage.
+[13/7/2012 14:47:31] > Broadcasted message: "É possivel ouvir fortes rugidos vindos de Quendor...".
+[13/7/2012 14:48:31] > Broadcasted message: "Dragões de fogo estão sobrevoando Quendor!".
+[13/7/2012 14:49:11] > Broadcasted message: "Dragoes poem Quendor em chamas!".
+
+[13/7/2012 14:57:37] [Error - MoveEvents Interface] 
+[13/7/2012 14:57:37] In a timer event called from: 
+[13/7/2012 14:57:37] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 14:57:37] Description: 
+[13/7/2012 14:57:37] (luaDoPlayerSendTextMessage) Player not found
+
+[13/7/2012 14:57:37] [Error - MoveEvents Interface] 
+[13/7/2012 14:57:37] In a timer event called from: 
+[13/7/2012 14:57:37] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 14:57:37] Description: 
+[13/7/2012 14:57:37] (luaDoTeleportThing) Thing not found
+
+[13/7/2012 14:57:37] [Error - MoveEvents Interface] 
+[13/7/2012 14:57:37] In a timer event called from: 
+[13/7/2012 14:57:37] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 14:57:37] Description: 
+[13/7/2012 14:57:37] (luaGetThingPosition) Thing not found
+
+[13/7/2012 14:57:38] [Error - MoveEvents Interface] 
+[13/7/2012 14:57:38] In a timer event called from: 
+[13/7/2012 14:57:38] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 14:57:38] Description: 
+[13/7/2012 14:57:38] (luaGetCreatureStorage) Creature not found
+
+[13/7/2012 14:57:38] [Error - MoveEvents Interface] 
+[13/7/2012 14:57:38] In a timer event called from: 
+[13/7/2012 14:57:38] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 14:57:38] Description: 
+[13/7/2012 14:57:38] (luaGetCreatureStorage) Creature not found
+
+[13/7/2012 14:57:38] [Error - MoveEvents Interface] 
+[13/7/2012 14:57:38] In a timer event called from: 
+[13/7/2012 14:57:38] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 14:57:38] Description: 
+[13/7/2012 14:57:38] data/lib/darghos/arena.lua:130: attempt to index field '?' (a nil value)
+[13/7/2012 14:57:38] stack traceback:
+[13/7/2012 14:57:38] 	data/lib/darghos/arena.lua:130: in function 'onLeave'
+[13/7/2012 14:57:38] 	data/lib/darghos/arena.lua:175: in function <data/lib/darghos/arena.lua:170>
+[13/7/2012 15:11:3] > Saving server...
+[13/7/2012 15:11:8] > SAVE: Complete in 5.15 seconds using binary-tilebased house storage.
+
+[13/7/2012 15:16:22] [Error - Action Interface] 
+[13/7/2012 15:16:22] data/actions/scripts/tools/rope.lua:onUse
+[13/7/2012 15:16:22] Description: 
+[13/7/2012 15:16:22] (luaGetThingFromPos) Tile not found
+[13/7/2012 16:11:4] > Saving server...
+[13/7/2012 16:11:11] > SAVE: Complete in 7.085 seconds using binary-tilebased house storage.
+[13/7/2012 16:16:44] [DDOS EMERGENCY] Current avarage RX packet per second 78969 is greater then limit 70000. Emergency ENABLED.
+[13/7/2012 16:16:44] > Broadcasted message: "Estamos tendo problemas de conexï¿½o. Para evitar prejuizos, nenhuma morte receberï¿½ qualquer tipo de penalidade atï¿½ que nossa conexï¿½o se normalize.".
+[13/7/2012 16:17:14] [DDOS EMERGENCY] Current avarage RX packet per second 15020 is fine. Emergency disabled.
+[13/7/2012 16:17:14] > Broadcasted message: "Conexï¿½o normalizada. Penalidades nas mortes agora estï¿½o novamente validas. Obrigado pela sua compreensï¿½o e bom jogo.".
+[13/7/2012 17:11:3] > Saving server...
+[13/7/2012 17:11:9] > SAVE: Complete in 5.645 seconds using binary-tilebased house storage.
+[13/7/2012 18:11:3] > Saving server...
+[13/7/2012 18:11:10] > SAVE: Complete in 6.536 seconds using binary-tilebased house storage.
+
+[13/7/2012 18:17:48] [Error - MoveEvents Interface] 
+[13/7/2012 18:17:48] In a timer event called from: 
+[13/7/2012 18:17:48] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 18:17:48] Description: 
+[13/7/2012 18:17:48] (luaDoPlayerSendTextMessage) Player not found
+
+[13/7/2012 18:17:48] [Error - MoveEvents Interface] 
+[13/7/2012 18:17:48] In a timer event called from: 
+[13/7/2012 18:17:48] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 18:17:48] Description: 
+[13/7/2012 18:17:48] (luaDoTeleportThing) Thing not found
+
+[13/7/2012 18:17:48] [Error - MoveEvents Interface] 
+[13/7/2012 18:17:48] In a timer event called from: 
+[13/7/2012 18:17:48] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 18:17:48] Description: 
+[13/7/2012 18:17:48] (luaGetThingPosition) Thing not found
+
+[13/7/2012 18:17:48] [Error - MoveEvents Interface] 
+[13/7/2012 18:17:48] In a timer event called from: 
+[13/7/2012 18:17:48] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 18:17:48] Description: 
+[13/7/2012 18:17:48] (luaGetCreatureStorage) Creature not found
+
+[13/7/2012 18:17:48] [Error - MoveEvents Interface] 
+[13/7/2012 18:17:48] In a timer event called from: 
+[13/7/2012 18:17:48] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 18:17:48] Description: 
+[13/7/2012 18:17:48] (luaGetCreatureStorage) Creature not found
+
+[13/7/2012 18:17:48] [Error - MoveEvents Interface] 
+[13/7/2012 18:17:48] In a timer event called from: 
+[13/7/2012 18:17:48] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 18:17:48] Description: 
+[13/7/2012 18:17:48] data/lib/darghos/arena.lua:130: attempt to index field '?' (a nil value)
+[13/7/2012 18:17:48] stack traceback:
+[13/7/2012 18:17:48] 	data/lib/darghos/arena.lua:130: in function 'onLeave'
+[13/7/2012 18:17:48] 	data/lib/darghos/arena.lua:175: in function <data/lib/darghos/arena.lua:170>
+[13/7/2012 19:11:3] > Saving server...
+[13/7/2012 19:11:10] > SAVE: Complete in 6.096 seconds using binary-tilebased house storage.
+
+[13/7/2012 19:32:1] [Error - Action Interface] 
+[13/7/2012 19:32:1] data/actions/scripts/tools/rope.lua:onUse
+[13/7/2012 19:32:1] Description: 
+[13/7/2012 19:32:1] (luaGetThingFromPos) Tile not found
+
+[13/7/2012 19:35:53] [Error - Action Interface] 
+[13/7/2012 19:35:53] data/actions/scripts/tools/rope.lua:onUse
+[13/7/2012 19:35:53] Description: 
+[13/7/2012 19:35:53] (luaGetThingFromPos) Tile not found
+
+[13/7/2012 19:39:40] [Error - Action Interface] 
+[13/7/2012 19:39:40] data/actions/scripts/tools/rope.lua:onUse
+[13/7/2012 19:39:40] Description: 
+[13/7/2012 19:39:40] (luaGetThingFromPos) Tile not found
+[13/7/2012 20:8:6] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:8:6] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:8:33] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:8:33] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:10:47] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:11:3] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:11:3] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:11:3] > Saving server...
+[13/7/2012 20:11:10] > SAVE: Complete in 6.074 seconds using binary-tilebased house storage.
+[13/7/2012 20:11:23] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:11:56] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:11:56] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:12:1] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:12:1] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:12:1] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:51:10] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:51:10] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 20:52:25] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.177.73)
+[13/7/2012 21:11:3] > Saving server...
+[13/7/2012 21:11:9] > SAVE: Complete in 5.48 seconds using binary-tilebased house storage.
+[13/7/2012 21:12:23] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.189.221)
+[13/7/2012 21:25:19] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.78.177.73)
+[13/7/2012 22:11:4] > Saving server...
+[13/7/2012 22:11:8] > SAVE: Complete in 4.343 seconds using binary-tilebased house storage.
+[13/7/2012 23:11:4] > Saving server...
+[13/7/2012 23:11:9] > SAVE: Complete in 5.1 seconds using binary-tilebased house storage.
+
+[13/7/2012 23:19:6] [Error - MoveEvents Interface] 
+[13/7/2012 23:19:6] In a timer event called from: 
+[13/7/2012 23:19:6] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 23:19:6] Description: 
+[13/7/2012 23:19:6] (luaDoPlayerSendTextMessage) Player not found
+
+[13/7/2012 23:19:6] [Error - MoveEvents Interface] 
+[13/7/2012 23:19:6] In a timer event called from: 
+[13/7/2012 23:19:6] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 23:19:6] Description: 
+[13/7/2012 23:19:6] (luaDoTeleportThing) Thing not found
+
+[13/7/2012 23:19:6] [Error - MoveEvents Interface] 
+[13/7/2012 23:19:6] In a timer event called from: 
+[13/7/2012 23:19:6] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 23:19:6] Description: 
+[13/7/2012 23:19:6] (luaGetThingPosition) Thing not found
+
+[13/7/2012 23:19:6] [Error - MoveEvents Interface] 
+[13/7/2012 23:19:6] In a timer event called from: 
+[13/7/2012 23:19:6] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 23:19:6] Description: 
+[13/7/2012 23:19:6] (luaGetCreatureStorage) Creature not found
+
+[13/7/2012 23:19:6] [Error - MoveEvents Interface] 
+[13/7/2012 23:19:6] In a timer event called from: 
+[13/7/2012 23:19:6] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 23:19:6] Description: 
+[13/7/2012 23:19:6] (luaGetCreatureStorage) Creature not found
+
+[13/7/2012 23:19:6] [Error - MoveEvents Interface] 
+[13/7/2012 23:19:6] In a timer event called from: 
+[13/7/2012 23:19:6] data/movements/scripts/game/teleport.lua:onStepIn
+[13/7/2012 23:19:6] Description: 
+[13/7/2012 23:19:6] data/lib/darghos/arena.lua:130: attempt to index field '?' (a nil value)
+[13/7/2012 23:19:6] stack traceback:
+[13/7/2012 23:19:6] 	data/lib/darghos/arena.lua:130: in function 'onLeave'
+[13/7/2012 23:19:6] 	data/lib/darghos/arena.lua:175: in function <data/lib/darghos/arena.lua:170>
+[13/7/2012 23:35:52] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.82.246.115)
+[14/7/2012 0:4:5] > 0 mods were loaded.
+[14/7/2012 0:6:27] > 0 mods were loaded.
+[14/7/2012 0:6:58] > 0 mods were loaded.
+[14/7/2012 0:11:4] > Saving server...
+[14/7/2012 0:11:10] > SAVE: Complete in 6.282 seconds using binary-tilebased house storage.
+[14/7/2012 0:58:33] > Broadcasted message: "Uma escura e medonha fumaça negra começa a surgir em Quendor...".
+[14/7/2012 0:59:33] > Broadcasted message: "Morte aos mortos vivos! Preparem-se para lutar contra a morte!".
+[14/7/2012 1:0:13] > Broadcasted message: "Guerreiros saem do chão e fantasmas assombram os lares! Os mortos vivos atacam a cidade de Quendor!".
+[14/7/2012 1:11:4] > Saving server...
+[14/7/2012 1:11:10] > SAVE: Complete in 6.079 seconds using binary-tilebased house storage.
+[14/7/2012 2:11:4] > Saving server...
+[14/7/2012 2:11:8] > SAVE: Complete in 4.758 seconds using binary-tilebased house storage.
+
+[14/7/2012 2:30:35] [Error - MoveEvents Interface] 
+[14/7/2012 2:30:35] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 2:30:35] Description: 
+[14/7/2012 2:30:35] data/lib/darghos/arena.lua:130: attempt to index field '?' (a nil value)
+[14/7/2012 2:30:35] stack traceback:
+[14/7/2012 2:30:35] 	data/lib/darghos/arena.lua:130: in function 'onLeave'
+[14/7/2012 2:30:35] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 2:30:35] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+[14/7/2012 2:31:51] > 0 mods were loaded.
+[14/7/2012 3:11:4] > Saving server...
+[14/7/2012 3:11:8] > SAVE: Complete in 4.767 seconds using binary-tilebased house storage.
+[14/7/2012 4:11:4] > Saving server...
+[14/7/2012 4:11:7] > SAVE: Complete in 3.789 seconds using binary-tilebased house storage.
+[14/7/2012 4:28:26] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[14/7/2012 4:28:26] > 0 mods were loaded.
+[14/7/2012 5:30:26] > Saving server...
+[14/7/2012 5:30:30] > SAVE: Complete in 3.478 seconds using binary-tilebased house storage.
+[14/7/2012 6:30:27] > Saving server...
+[14/7/2012 6:30:30] > SAVE: Complete in 3.277 seconds using binary-tilebased house storage.
+[14/7/2012 7:11:33] > Broadcasted message: "Elf Scouts have been sighted near Thorn!".
+[14/7/2012 7:14:33] > Broadcasted message: "The elves are comming to Thorn, seams to be a huge attack!".
+[14/7/2012 7:16:33] > Broadcasted message: "Thorn is under attack!".
+[14/7/2012 7:30:27] > Saving server...
+[14/7/2012 7:30:30] > SAVE: Complete in 3.254 seconds using binary-tilebased house storage.
+[14/7/2012 8:2:16] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 201.94.163.171)
+[14/7/2012 8:2:16] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 201.94.163.171)
+[14/7/2012 8:30:27] > Saving server...
+[14/7/2012 8:30:31] > SAVE: Complete in 4.194 seconds using binary-tilebased house storage.
+[14/7/2012 9:30:27] > Saving server...
+[14/7/2012 9:30:31] > SAVE: Complete in 4.486 seconds using binary-tilebased house storage.
+
+[14/7/2012 10:2:39] [Error - MoveEvents Interface] 
+[14/7/2012 10:2:39] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 10:2:39] Description: 
+[14/7/2012 10:2:39] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 10:2:39] stack traceback:
+[14/7/2012 10:2:39] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 10:2:39] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 10:2:39] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 10:2:42] [Error - MoveEvents Interface] 
+[14/7/2012 10:2:42] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 10:2:42] Description: 
+[14/7/2012 10:2:42] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 10:2:42] stack traceback:
+[14/7/2012 10:2:42] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 10:2:42] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 10:2:42] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 10:2:45] [Error - MoveEvents Interface] 
+[14/7/2012 10:2:45] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 10:2:45] Description: 
+[14/7/2012 10:2:45] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 10:2:45] stack traceback:
+[14/7/2012 10:2:45] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 10:2:45] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 10:2:45] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 10:3:22] [Error - MoveEvents Interface] 
+[14/7/2012 10:3:22] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 10:3:22] Description: 
+[14/7/2012 10:3:22] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 10:3:22] stack traceback:
+[14/7/2012 10:3:22] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 10:3:22] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 10:3:22] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 10:3:24] [Error - MoveEvents Interface] 
+[14/7/2012 10:3:24] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 10:3:24] Description: 
+[14/7/2012 10:3:24] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 10:3:24] stack traceback:
+[14/7/2012 10:3:24] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 10:3:24] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 10:3:24] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 10:3:36] [Error - MoveEvents Interface] 
+[14/7/2012 10:3:36] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 10:3:36] Description: 
+[14/7/2012 10:3:36] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 10:3:36] stack traceback:
+[14/7/2012 10:3:36] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 10:3:36] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 10:3:36] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 10:3:38] [Error - MoveEvents Interface] 
+[14/7/2012 10:3:38] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 10:3:38] Description: 
+[14/7/2012 10:3:38] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 10:3:38] stack traceback:
+[14/7/2012 10:3:38] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 10:3:38] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 10:3:38] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 10:3:42] [Error - MoveEvents Interface] 
+[14/7/2012 10:3:42] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 10:3:42] Description: 
+[14/7/2012 10:3:42] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 10:3:42] stack traceback:
+[14/7/2012 10:3:42] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 10:3:42] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 10:3:42] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 10:5:49] [Error - MoveEvents Interface] 
+[14/7/2012 10:5:49] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 10:5:49] Description: 
+[14/7/2012 10:5:49] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 10:5:49] stack traceback:
+[14/7/2012 10:5:49] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 10:5:49] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 10:5:49] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 10:5:53] [Error - MoveEvents Interface] 
+[14/7/2012 10:5:53] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 10:5:53] Description: 
+[14/7/2012 10:5:53] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 10:5:53] stack traceback:
+[14/7/2012 10:5:53] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 10:5:53] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 10:5:53] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 10:5:57] [Error - MoveEvents Interface] 
+[14/7/2012 10:5:57] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 10:5:57] Description: 
+[14/7/2012 10:5:57] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 10:5:57] stack traceback:
+[14/7/2012 10:5:57] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 10:5:57] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 10:5:57] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 10:22:19] [Error - MoveEvents Interface] 
+[14/7/2012 10:22:19] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 10:22:19] Description: 
+[14/7/2012 10:22:19] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 10:22:19] stack traceback:
+[14/7/2012 10:22:19] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 10:22:19] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 10:22:19] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+[14/7/2012 10:30:27] > Saving server...
+[14/7/2012 10:30:31] > SAVE: Complete in 4.695 seconds using binary-tilebased house storage.
+
+[14/7/2012 11:23:6] [Error - MoveEvents Interface] 
+[14/7/2012 11:23:6] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 11:23:6] Description: 
+[14/7/2012 11:23:6] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 11:23:6] stack traceback:
+[14/7/2012 11:23:6] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 11:23:6] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 11:23:6] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+[14/7/2012 11:30:27] > Saving server...
+[14/7/2012 11:30:32] > SAVE: Complete in 5.295 seconds using binary-tilebased house storage.
+[14/7/2012 11:41:17] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 201.94.163.171)
+[14/7/2012 11:41:17] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 201.94.163.171)
+
+[14/7/2012 12:14:13] [Error - MoveEvents Interface] 
+[14/7/2012 12:14:13] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:14:13] Description: 
+[14/7/2012 12:14:13] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:14:13] stack traceback:
+[14/7/2012 12:14:13] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:14:13] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:14:13] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:14:14] [Error - MoveEvents Interface] 
+[14/7/2012 12:14:14] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:14:14] Description: 
+[14/7/2012 12:14:14] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:14:14] stack traceback:
+[14/7/2012 12:14:14] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:14:14] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:14:14] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:14:55] [Error - MoveEvents Interface] 
+[14/7/2012 12:14:55] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:14:55] Description: 
+[14/7/2012 12:14:55] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:14:55] stack traceback:
+[14/7/2012 12:14:55] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:14:55] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:14:55] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:15:0] [Error - MoveEvents Interface] 
+[14/7/2012 12:15:0] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:15:0] Description: 
+[14/7/2012 12:15:0] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:15:0] stack traceback:
+[14/7/2012 12:15:0] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:15:0] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:15:0] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:18:6] [Error - MoveEvents Interface] 
+[14/7/2012 12:18:6] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:18:6] Description: 
+[14/7/2012 12:18:6] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:18:6] stack traceback:
+[14/7/2012 12:18:6] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:18:6] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:18:6] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:18:8] [Error - MoveEvents Interface] 
+[14/7/2012 12:18:8] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:18:8] Description: 
+[14/7/2012 12:18:8] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:18:8] stack traceback:
+[14/7/2012 12:18:8] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:18:8] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:18:8] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:22:25] [Error - MoveEvents Interface] 
+[14/7/2012 12:22:25] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:22:25] Description: 
+[14/7/2012 12:22:25] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:22:25] stack traceback:
+[14/7/2012 12:22:25] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:22:25] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:22:25] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:22:28] [Error - MoveEvents Interface] 
+[14/7/2012 12:22:28] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:22:28] Description: 
+[14/7/2012 12:22:28] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:22:28] stack traceback:
+[14/7/2012 12:22:28] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:22:28] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:22:28] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+[14/7/2012 12:30:27] > Saving server...
+[14/7/2012 12:30:32] > SAVE: Complete in 5.45 seconds using binary-tilebased house storage.
+
+[14/7/2012 12:35:37] [Error - MoveEvents Interface] 
+[14/7/2012 12:35:37] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:35:37] Description: 
+[14/7/2012 12:35:37] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:35:37] stack traceback:
+[14/7/2012 12:35:37] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:35:37] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:35:37] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:35:40] [Error - MoveEvents Interface] 
+[14/7/2012 12:35:40] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:35:40] Description: 
+[14/7/2012 12:35:40] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:35:40] stack traceback:
+[14/7/2012 12:35:40] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:35:40] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:35:40] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:35:42] [Error - MoveEvents Interface] 
+[14/7/2012 12:35:42] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:35:42] Description: 
+[14/7/2012 12:35:42] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:35:42] stack traceback:
+[14/7/2012 12:35:42] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:35:42] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:35:42] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:36:51] [Error - MoveEvents Interface] 
+[14/7/2012 12:36:51] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:36:51] Description: 
+[14/7/2012 12:36:51] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:36:51] stack traceback:
+[14/7/2012 12:36:51] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:36:51] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:36:51] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:40:37] [Error - MoveEvents Interface] 
+[14/7/2012 12:40:37] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:40:37] Description: 
+[14/7/2012 12:40:37] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:40:37] stack traceback:
+[14/7/2012 12:40:37] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:40:37] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:40:37] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:57:38] [Error - MoveEvents Interface] 
+[14/7/2012 12:57:38] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:57:38] Description: 
+[14/7/2012 12:57:38] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:57:38] stack traceback:
+[14/7/2012 12:57:38] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:57:38] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:57:38] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:57:39] [Error - MoveEvents Interface] 
+[14/7/2012 12:57:39] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:57:39] Description: 
+[14/7/2012 12:57:39] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:57:39] stack traceback:
+[14/7/2012 12:57:39] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:57:39] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:57:39] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:58:17] [Error - MoveEvents Interface] 
+[14/7/2012 12:58:17] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:58:17] Description: 
+[14/7/2012 12:58:17] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:58:17] stack traceback:
+[14/7/2012 12:58:17] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:58:17] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:58:17] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:58:18] [Error - MoveEvents Interface] 
+[14/7/2012 12:58:18] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:58:18] Description: 
+[14/7/2012 12:58:18] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:58:18] stack traceback:
+[14/7/2012 12:58:18] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:58:18] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:58:18] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:58:20] [Error - MoveEvents Interface] 
+[14/7/2012 12:58:20] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:58:20] Description: 
+[14/7/2012 12:58:20] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:58:20] stack traceback:
+[14/7/2012 12:58:20] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:58:20] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:58:20] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 12:59:7] [Error - MoveEvents Interface] 
+[14/7/2012 12:59:7] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 12:59:7] Description: 
+[14/7/2012 12:59:7] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 12:59:7] stack traceback:
+[14/7/2012 12:59:7] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 12:59:7] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 12:59:7] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:0:13] [Error - MoveEvents Interface] 
+[14/7/2012 13:0:13] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:0:13] Description: 
+[14/7/2012 13:0:13] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:0:13] stack traceback:
+[14/7/2012 13:0:13] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:0:13] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:0:13] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:0:15] [Error - MoveEvents Interface] 
+[14/7/2012 13:0:15] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:0:15] Description: 
+[14/7/2012 13:0:15] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:0:15] stack traceback:
+[14/7/2012 13:0:15] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:0:15] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:0:15] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:2:28] [Error - MoveEvents Interface] 
+[14/7/2012 13:2:28] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:2:28] Description: 
+[14/7/2012 13:2:28] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:2:28] stack traceback:
+[14/7/2012 13:2:28] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:2:28] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:2:28] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:2:30] [Error - MoveEvents Interface] 
+[14/7/2012 13:2:30] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:2:30] Description: 
+[14/7/2012 13:2:30] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:2:30] stack traceback:
+[14/7/2012 13:2:30] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:2:30] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:2:30] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:2:38] [Error - MoveEvents Interface] 
+[14/7/2012 13:2:38] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:2:38] Description: 
+[14/7/2012 13:2:38] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:2:38] stack traceback:
+[14/7/2012 13:2:38] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:2:38] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:2:38] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:2:43] [Error - MoveEvents Interface] 
+[14/7/2012 13:2:43] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:2:43] Description: 
+[14/7/2012 13:2:43] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:2:43] stack traceback:
+[14/7/2012 13:2:43] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:2:43] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:2:43] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:2:46] [Error - MoveEvents Interface] 
+[14/7/2012 13:2:46] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:2:46] Description: 
+[14/7/2012 13:2:46] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:2:46] stack traceback:
+[14/7/2012 13:2:46] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:2:46] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:2:46] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:2:48] [Error - MoveEvents Interface] 
+[14/7/2012 13:2:48] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:2:48] Description: 
+[14/7/2012 13:2:48] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:2:48] stack traceback:
+[14/7/2012 13:2:48] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:2:48] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:2:48] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:2:50] [Error - MoveEvents Interface] 
+[14/7/2012 13:2:50] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:2:50] Description: 
+[14/7/2012 13:2:50] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:2:50] stack traceback:
+[14/7/2012 13:2:50] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:2:50] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:2:50] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:2:56] [Error - MoveEvents Interface] 
+[14/7/2012 13:2:56] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:2:56] Description: 
+[14/7/2012 13:2:56] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:2:56] stack traceback:
+[14/7/2012 13:2:56] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:2:56] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:2:56] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:3:1] [Error - MoveEvents Interface] 
+[14/7/2012 13:3:1] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:3:1] Description: 
+[14/7/2012 13:3:1] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:3:1] stack traceback:
+[14/7/2012 13:3:1] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:3:1] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:3:1] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:3:2] [Error - MoveEvents Interface] 
+[14/7/2012 13:3:2] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:3:2] Description: 
+[14/7/2012 13:3:2] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:3:2] stack traceback:
+[14/7/2012 13:3:2] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:3:2] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:3:2] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:3:8] [Error - MoveEvents Interface] 
+[14/7/2012 13:3:8] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:3:8] Description: 
+[14/7/2012 13:3:8] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:3:8] stack traceback:
+[14/7/2012 13:3:8] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:3:8] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:3:8] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:3:9] [Error - MoveEvents Interface] 
+[14/7/2012 13:3:9] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:3:9] Description: 
+[14/7/2012 13:3:9] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:3:9] stack traceback:
+[14/7/2012 13:3:9] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:3:9] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:3:9] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:3:11] [Error - MoveEvents Interface] 
+[14/7/2012 13:3:11] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:3:11] Description: 
+[14/7/2012 13:3:11] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:3:11] stack traceback:
+[14/7/2012 13:3:11] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:3:11] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:3:11] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:13:30] [Error - MoveEvents Interface] 
+[14/7/2012 13:13:30] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:13:30] Description: 
+[14/7/2012 13:13:30] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:13:30] stack traceback:
+[14/7/2012 13:13:30] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:13:30] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:13:30] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:19:14] [Error - MoveEvents Interface] 
+[14/7/2012 13:19:14] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:19:14] Description: 
+[14/7/2012 13:19:14] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:19:14] stack traceback:
+[14/7/2012 13:19:14] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:19:14] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:19:14] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:22:13] [Error - MoveEvents Interface] 
+[14/7/2012 13:22:13] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:22:13] Description: 
+[14/7/2012 13:22:13] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:22:13] stack traceback:
+[14/7/2012 13:22:13] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:22:13] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:22:13] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:22:16] [Error - MoveEvents Interface] 
+[14/7/2012 13:22:16] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:22:16] Description: 
+[14/7/2012 13:22:16] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:22:16] stack traceback:
+[14/7/2012 13:22:16] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:22:16] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:22:16] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:22:17] [Error - MoveEvents Interface] 
+[14/7/2012 13:22:17] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:22:17] Description: 
+[14/7/2012 13:22:17] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:22:17] stack traceback:
+[14/7/2012 13:22:17] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:22:17] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:22:17] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:22:19] [Error - MoveEvents Interface] 
+[14/7/2012 13:22:19] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:22:19] Description: 
+[14/7/2012 13:22:19] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:22:19] stack traceback:
+[14/7/2012 13:22:19] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:22:19] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:22:19] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:22:21] [Error - MoveEvents Interface] 
+[14/7/2012 13:22:21] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:22:21] Description: 
+[14/7/2012 13:22:21] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:22:21] stack traceback:
+[14/7/2012 13:22:21] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:22:21] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:22:21] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:22:22] [Error - MoveEvents Interface] 
+[14/7/2012 13:22:22] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:22:22] Description: 
+[14/7/2012 13:22:22] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:22:22] stack traceback:
+[14/7/2012 13:22:22] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:22:22] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:22:22] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:22:23] [Error - MoveEvents Interface] 
+[14/7/2012 13:22:23] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:22:23] Description: 
+[14/7/2012 13:22:23] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:22:23] stack traceback:
+[14/7/2012 13:22:23] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:22:23] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:22:23] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:22:24] [Error - MoveEvents Interface] 
+[14/7/2012 13:22:24] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:22:24] Description: 
+[14/7/2012 13:22:24] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:22:24] stack traceback:
+[14/7/2012 13:22:24] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:22:24] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:22:24] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:22:26] [Error - MoveEvents Interface] 
+[14/7/2012 13:22:26] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:22:26] Description: 
+[14/7/2012 13:22:26] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:22:26] stack traceback:
+[14/7/2012 13:22:26] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:22:26] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:22:26] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:23:12] [Error - MoveEvents Interface] 
+[14/7/2012 13:23:12] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:23:12] Description: 
+[14/7/2012 13:23:12] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:23:12] stack traceback:
+[14/7/2012 13:23:12] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:23:12] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:23:12] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:23:14] [Error - MoveEvents Interface] 
+[14/7/2012 13:23:14] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:23:14] Description: 
+[14/7/2012 13:23:14] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:23:14] stack traceback:
+[14/7/2012 13:23:14] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:23:14] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:23:14] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:23:17] [Error - MoveEvents Interface] 
+[14/7/2012 13:23:17] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:23:17] Description: 
+[14/7/2012 13:23:17] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:23:17] stack traceback:
+[14/7/2012 13:23:17] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:23:17] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:23:17] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+[14/7/2012 13:30:27] > Saving server...
+[14/7/2012 13:30:33] > SAVE: Complete in 6.186 seconds using binary-tilebased house storage.
+
+[14/7/2012 13:48:3] [Error - MoveEvents Interface] 
+[14/7/2012 13:48:3] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:48:3] Description: 
+[14/7/2012 13:48:3] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:48:3] stack traceback:
+[14/7/2012 13:48:3] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:48:3] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:48:3] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:48:3] [Error - MoveEvents Interface] 
+[14/7/2012 13:48:3] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:48:3] Description: 
+[14/7/2012 13:48:3] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:48:3] stack traceback:
+[14/7/2012 13:48:3] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:48:3] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:48:3] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:48:5] [Error - MoveEvents Interface] 
+[14/7/2012 13:48:5] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:48:5] Description: 
+[14/7/2012 13:48:5] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:48:5] stack traceback:
+[14/7/2012 13:48:5] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:48:5] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:48:5] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 13:48:7] [Error - MoveEvents Interface] 
+[14/7/2012 13:48:7] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 13:48:7] Description: 
+[14/7/2012 13:48:7] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 13:48:7] stack traceback:
+[14/7/2012 13:48:7] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 13:48:7] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 13:48:7] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+[14/7/2012 14:4:49] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.18.207.221)
+
+[14/7/2012 14:7:34] [Error - MoveEvents Interface] 
+[14/7/2012 14:7:34] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:7:34] Description: 
+[14/7/2012 14:7:34] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:7:34] stack traceback:
+[14/7/2012 14:7:34] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:7:34] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:7:34] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:8:2] [Error - MoveEvents Interface] 
+[14/7/2012 14:8:2] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:8:2] Description: 
+[14/7/2012 14:8:2] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:8:2] stack traceback:
+[14/7/2012 14:8:2] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:8:2] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:8:2] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:10:22] [Error - MoveEvents Interface] 
+[14/7/2012 14:10:22] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:10:22] Description: 
+[14/7/2012 14:10:22] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:10:22] stack traceback:
+[14/7/2012 14:10:22] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:10:22] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:10:22] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:10:38] [Error - MoveEvents Interface] 
+[14/7/2012 14:10:38] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:10:38] Description: 
+[14/7/2012 14:10:38] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:10:38] stack traceback:
+[14/7/2012 14:10:38] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:10:38] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:10:38] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:10:54] [Error - MoveEvents Interface] 
+[14/7/2012 14:10:54] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:10:54] Description: 
+[14/7/2012 14:10:54] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:10:54] stack traceback:
+[14/7/2012 14:10:54] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:10:54] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:10:54] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:11:59] [Error - MoveEvents Interface] 
+[14/7/2012 14:11:59] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:11:59] Description: 
+[14/7/2012 14:11:59] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:11:59] stack traceback:
+[14/7/2012 14:11:59] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:11:59] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:11:59] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:16:13] [Error - MoveEvents Interface] 
+[14/7/2012 14:16:13] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:16:13] Description: 
+[14/7/2012 14:16:13] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:16:13] stack traceback:
+[14/7/2012 14:16:13] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:16:13] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:16:13] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:17:49] [Error - MoveEvents Interface] 
+[14/7/2012 14:17:49] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:17:49] Description: 
+[14/7/2012 14:17:49] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:17:49] stack traceback:
+[14/7/2012 14:17:49] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:17:49] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:17:49] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:18:18] [Error - MoveEvents Interface] 
+[14/7/2012 14:18:18] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:18:18] Description: 
+[14/7/2012 14:18:18] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:18:18] stack traceback:
+[14/7/2012 14:18:18] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:18:18] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:18:18] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:18:20] [Error - MoveEvents Interface] 
+[14/7/2012 14:18:20] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:18:20] Description: 
+[14/7/2012 14:18:20] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:18:20] stack traceback:
+[14/7/2012 14:18:20] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:18:20] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:18:20] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:18:53] [Error - MoveEvents Interface] 
+[14/7/2012 14:18:53] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:18:53] Description: 
+[14/7/2012 14:18:53] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:18:53] stack traceback:
+[14/7/2012 14:18:53] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:18:53] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:18:53] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:18:55] [Error - MoveEvents Interface] 
+[14/7/2012 14:18:55] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:18:55] Description: 
+[14/7/2012 14:18:55] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:18:55] stack traceback:
+[14/7/2012 14:18:55] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:18:55] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:18:55] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:18:56] [Error - MoveEvents Interface] 
+[14/7/2012 14:18:56] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:18:56] Description: 
+[14/7/2012 14:18:56] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:18:56] stack traceback:
+[14/7/2012 14:18:56] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:18:56] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:18:56] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:19:1] [Error - MoveEvents Interface] 
+[14/7/2012 14:19:1] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:19:1] Description: 
+[14/7/2012 14:19:1] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:19:1] stack traceback:
+[14/7/2012 14:19:1] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:19:1] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:19:1] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:19:4] [Error - MoveEvents Interface] 
+[14/7/2012 14:19:4] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:19:4] Description: 
+[14/7/2012 14:19:4] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:19:4] stack traceback:
+[14/7/2012 14:19:4] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:19:4] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:19:4] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+[14/7/2012 14:30:27] > Saving server...
+[14/7/2012 14:30:33] > SAVE: Complete in 6.202 seconds using binary-tilebased house storage.
+
+[14/7/2012 14:35:34] [Error - MoveEvents Interface] 
+[14/7/2012 14:35:34] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:35:34] Description: 
+[14/7/2012 14:35:34] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:35:34] stack traceback:
+[14/7/2012 14:35:34] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:35:34] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:35:34] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:38:5] [Error - MoveEvents Interface] 
+[14/7/2012 14:38:5] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:38:5] Description: 
+[14/7/2012 14:38:5] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:38:5] stack traceback:
+[14/7/2012 14:38:5] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:38:5] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:38:5] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:38:7] [Error - MoveEvents Interface] 
+[14/7/2012 14:38:7] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:38:7] Description: 
+[14/7/2012 14:38:7] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:38:7] stack traceback:
+[14/7/2012 14:38:7] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:38:7] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:38:7] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:38:8] [Error - MoveEvents Interface] 
+[14/7/2012 14:38:8] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:38:8] Description: 
+[14/7/2012 14:38:8] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:38:8] stack traceback:
+[14/7/2012 14:38:8] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:38:8] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:38:8] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+[14/7/2012 14:38:40] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.70.206.147)
+
+[14/7/2012 14:41:9] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:9] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:9] Description: 
+[14/7/2012 14:41:9] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:9] stack traceback:
+[14/7/2012 14:41:9] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:9] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:9] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:10] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:10] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:10] Description: 
+[14/7/2012 14:41:10] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:10] stack traceback:
+[14/7/2012 14:41:10] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:10] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:10] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:12] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:12] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:12] Description: 
+[14/7/2012 14:41:12] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:12] stack traceback:
+[14/7/2012 14:41:12] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:12] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:12] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:13] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:13] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:13] Description: 
+[14/7/2012 14:41:13] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:13] stack traceback:
+[14/7/2012 14:41:13] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:13] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:13] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:14] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:14] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:14] Description: 
+[14/7/2012 14:41:14] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:14] stack traceback:
+[14/7/2012 14:41:14] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:14] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:14] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:16] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:16] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:16] Description: 
+[14/7/2012 14:41:16] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:16] stack traceback:
+[14/7/2012 14:41:16] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:16] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:16] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:25] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:25] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:25] Description: 
+[14/7/2012 14:41:25] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:25] stack traceback:
+[14/7/2012 14:41:25] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:25] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:25] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:26] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:26] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:26] Description: 
+[14/7/2012 14:41:26] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:26] stack traceback:
+[14/7/2012 14:41:26] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:26] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:26] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:27] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:27] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:27] Description: 
+[14/7/2012 14:41:27] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:27] stack traceback:
+[14/7/2012 14:41:27] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:27] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:27] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:28] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:28] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:28] Description: 
+[14/7/2012 14:41:28] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:28] stack traceback:
+[14/7/2012 14:41:28] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:28] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:28] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:29] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:29] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:29] Description: 
+[14/7/2012 14:41:29] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:29] stack traceback:
+[14/7/2012 14:41:29] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:29] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:29] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:30] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:30] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:30] Description: 
+[14/7/2012 14:41:30] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:30] stack traceback:
+[14/7/2012 14:41:30] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:30] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:30] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:32] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:32] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:32] Description: 
+[14/7/2012 14:41:32] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:32] stack traceback:
+[14/7/2012 14:41:32] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:32] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:32] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:34] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:34] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:34] Description: 
+[14/7/2012 14:41:34] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:34] stack traceback:
+[14/7/2012 14:41:34] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:34] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:34] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:36] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:36] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:36] Description: 
+[14/7/2012 14:41:36] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:36] stack traceback:
+[14/7/2012 14:41:36] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:36] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:36] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:37] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:37] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:37] Description: 
+[14/7/2012 14:41:37] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:37] stack traceback:
+[14/7/2012 14:41:37] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:37] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:37] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:38] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:38] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:38] Description: 
+[14/7/2012 14:41:38] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:38] stack traceback:
+[14/7/2012 14:41:38] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:38] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:38] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:41] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:41] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:41] Description: 
+[14/7/2012 14:41:41] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:41] stack traceback:
+[14/7/2012 14:41:41] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:41] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:41] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:42] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:42] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:42] Description: 
+[14/7/2012 14:41:42] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:42] stack traceback:
+[14/7/2012 14:41:42] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:42] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:42] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:51] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:51] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:51] Description: 
+[14/7/2012 14:41:51] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:51] stack traceback:
+[14/7/2012 14:41:51] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:51] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:51] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:55] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:55] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:55] Description: 
+[14/7/2012 14:41:55] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:55] stack traceback:
+[14/7/2012 14:41:55] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:55] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:55] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:57] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:57] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:57] Description: 
+[14/7/2012 14:41:57] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:57] stack traceback:
+[14/7/2012 14:41:57] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:57] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:57] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:41:58] [Error - MoveEvents Interface] 
+[14/7/2012 14:41:58] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:41:58] Description: 
+[14/7/2012 14:41:58] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:41:58] stack traceback:
+[14/7/2012 14:41:58] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:41:58] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:41:58] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:42:2] [Error - MoveEvents Interface] 
+[14/7/2012 14:42:2] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:42:2] Description: 
+[14/7/2012 14:42:2] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:42:2] stack traceback:
+[14/7/2012 14:42:2] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:42:2] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:42:2] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:42:5] [Error - MoveEvents Interface] 
+[14/7/2012 14:42:5] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:42:5] Description: 
+[14/7/2012 14:42:5] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:42:5] stack traceback:
+[14/7/2012 14:42:5] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:42:5] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:42:5] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:42:6] [Error - MoveEvents Interface] 
+[14/7/2012 14:42:6] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:42:6] Description: 
+[14/7/2012 14:42:6] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:42:6] stack traceback:
+[14/7/2012 14:42:6] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:42:6] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:42:6] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:42:7] [Error - MoveEvents Interface] 
+[14/7/2012 14:42:7] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:42:7] Description: 
+[14/7/2012 14:42:7] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:42:7] stack traceback:
+[14/7/2012 14:42:7] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:42:7] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:42:7] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 14:42:19] [Error - MoveEvents Interface] 
+[14/7/2012 14:42:19] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 14:42:19] Description: 
+[14/7/2012 14:42:19] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 14:42:19] stack traceback:
+[14/7/2012 14:42:19] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 14:42:19] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 14:42:19] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+[14/7/2012 14:56:32] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 177.143.233.48)
+[14/7/2012 14:56:32] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 177.143.233.48)
+
+[14/7/2012 15:2:22] [Error - Action Interface] 
+[14/7/2012 15:2:22] data/actions/scripts/tools/rope.lua:onUse
+[14/7/2012 15:2:22] Description: 
+[14/7/2012 15:2:22] (luaGetThingFromPos) Tile not found
+[14/7/2012 15:13:36] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 177.143.233.48)
+[14/7/2012 15:13:36] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 177.143.233.48)
+[14/7/2012 15:18:26] > 0 mods were loaded.
+[14/7/2012 15:30:27] > Saving server...
+[14/7/2012 15:30:33] > SAVE: Complete in 6.284 seconds using binary-tilebased house storage.
+
+[14/7/2012 15:58:43] [Error - MoveEvents Interface] 
+[14/7/2012 15:58:43] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 15:58:43] Description: 
+[14/7/2012 15:58:43] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 15:58:43] stack traceback:
+[14/7/2012 15:58:43] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 15:58:43] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 15:58:43] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 15:58:45] [Error - MoveEvents Interface] 
+[14/7/2012 15:58:45] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 15:58:45] Description: 
+[14/7/2012 15:58:45] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 15:58:45] stack traceback:
+[14/7/2012 15:58:45] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 15:58:45] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 15:58:45] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+
+[14/7/2012 15:58:46] [Error - MoveEvents Interface] 
+[14/7/2012 15:58:46] data/movements/scripts/game/teleport.lua:onStepIn
+[14/7/2012 15:58:46] Description: 
+[14/7/2012 15:58:46] data/lib/darghos/arena.lua:136: attempt to index field '?' (a nil value)
+[14/7/2012 15:58:46] stack traceback:
+[14/7/2012 15:58:46] 	data/lib/darghos/arena.lua:136: in function 'onLeave'
+[14/7/2012 15:58:46] 	data/lib/darghos/arena.lua:120: in function 'onEnterTeleport'
+[14/7/2012 15:58:46] 	data/movements/scripts/game/teleport.lua:40: in function <data/movements/scripts/game/teleport.lua:9>
+[14/7/2012 16:30:12] > 0 mods were loaded.
+[14/7/2012 16:30:27] > Saving server...
+[14/7/2012 16:30:34] > SAVE: Complete in 6.899 seconds using binary-tilebased house storage.
+[14/7/2012 17:20:27] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 177.143.233.48)
+[14/7/2012 17:20:27] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 177.143.233.48)
+[14/7/2012 17:30:27] > Saving server...
+[14/7/2012 17:30:33] > SAVE: Complete in 5.947 seconds using binary-tilebased house storage.
+[14/7/2012 17:37:19] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.83.197.107)
+[14/7/2012 17:37:36] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.83.197.107)
+[14/7/2012 17:38:31] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.83.197.107)
+[14/7/2012 17:54:20] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.83.197.107)
+[14/7/2012 18:30:27] > Saving server...
+[14/7/2012 18:30:33] > SAVE: Complete in 6.451 seconds using binary-tilebased house storage.
+[14/7/2012 19:30:27] > Saving server...
+[14/7/2012 19:30:33] > SAVE: Complete in 6.206 seconds using binary-tilebased house storage.
+[14/7/2012 19:32:37] > Broadcasted message: "Disturbios foram detectados aos redores de Quendor...".
+[14/7/2012 19:35:57] > Broadcasted message: "Os Trolls estão planejando algum ataque a Quendor!".
+[14/7/2012 19:39:17] > Broadcasted message: "Os Trolls estão atacando Quendor! Esmaguem estas ridiculas criaturas!".
+
+[14/7/2012 19:53:3] [Error - Action Interface] 
+[14/7/2012 19:53:3] data/actions/scripts/tools/rope.lua:onUse
+[14/7/2012 19:53:3] Description: 
+[14/7/2012 19:53:3] (luaGetThingFromPos) Tile not found
+
+[14/7/2012 19:53:3] [Error - Action Interface] 
+[14/7/2012 19:53:3] data/actions/scripts/tools/rope.lua:onUse
+[14/7/2012 19:53:3] Description: 
+[14/7/2012 19:53:3] (luaGetThingFromPos) Tile not found
+[14/7/2012 20:30:27] > Saving server...
+[14/7/2012 20:30:33] > SAVE: Complete in 6.183 seconds using binary-tilebased house storage.
+[14/7/2012 21:30:27] > Saving server...
+[14/7/2012 21:30:34] > SAVE: Complete in 6.59 seconds using binary-tilebased house storage.
+
+[14/7/2012 22:0:11] [Error - Spell Interface] 
+[14/7/2012 22:0:11] data/spells/scripts/support/destroy_field_rune.lua:onCastSpell
+[14/7/2012 22:0:11] Description: 
+[14/7/2012 22:0:11] (luaDoRemoveItem) Item not found
+[14/7/2012 22:30:27] > Saving server...
+[14/7/2012 22:30:33] > SAVE: Complete in 5.743 seconds using binary-tilebased house storage.
+[14/7/2012 22:35:1] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.83.197.107)
+[14/7/2012 22:35:17] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.83.197.107)
+[14/7/2012 23:30:27] > Saving server...
+[14/7/2012 23:30:33] > SAVE: Complete in 6.256 seconds using binary-tilebased house storage.
+
+[14/7/2012 23:48:10] [Error - Action Interface] 
+[14/7/2012 23:48:10] data/actions/scripts/tools/rope.lua:onUse
+[14/7/2012 23:48:10] Description: 
+[14/7/2012 23:48:10] (luaGetThingFromPos) Tile not found
+
+[14/7/2012 23:48:10] [Error - Action Interface] 
+[14/7/2012 23:48:10] data/actions/scripts/tools/rope.lua:onUse
+[14/7/2012 23:48:10] Description: 
+[14/7/2012 23:48:10] (luaGetThingFromPos) Tile not found
+
+[14/7/2012 23:48:10] [Error - Action Interface] 
+[14/7/2012 23:48:10] data/actions/scripts/tools/rope.lua:onUse
+[14/7/2012 23:48:10] Description: 
+[14/7/2012 23:48:10] (luaGetThingFromPos) Tile not found
+
+[14/7/2012 23:48:19] [Error - Action Interface] 
+[14/7/2012 23:48:19] data/actions/scripts/tools/rope.lua:onUse
+[14/7/2012 23:48:19] Description: 
+[14/7/2012 23:48:19] (luaGetThingFromPos) Tile not found
+[15/7/2012 0:0:44] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.32.85.65)
+[15/7/2012 0:1:30] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.32.85.65)
+[15/7/2012 0:11:38] > Broadcasted message: "Disturbios foram detectados aos redores de Quendor...".
+[15/7/2012 0:14:57] > Broadcasted message: "Os Trolls estão planejando algum ataque a Quendor!".
+[15/7/2012 0:18:17] > Broadcasted message: "Os Trolls estão atacando Quendor! Esmaguem estas ridiculas criaturas!".
+[15/7/2012 0:30:27] > Saving server...
+[15/7/2012 0:30:35] > SAVE: Complete in 7.521 seconds using binary-tilebased house storage.
+[15/7/2012 1:21:24] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 189.110.177.161)
+[15/7/2012 1:30:27] > Saving server...
+[15/7/2012 1:30:33] > SAVE: Complete in 5.635 seconds using binary-tilebased house storage.
+[15/7/2012 2:20:43] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 189.110.177.161)
+[15/7/2012 2:30:27] > Saving server...
+[15/7/2012 2:30:32] > SAVE: Complete in 5.162 seconds using binary-tilebased house storage.
+[15/7/2012 3:30:27] > Saving server...
+[15/7/2012 3:30:32] > SAVE: Complete in 4.942 seconds using binary-tilebased house storage.
+[15/7/2012 4:30:27] > Saving server...
+[15/7/2012 4:30:32] > SAVE: Complete in 4.79 seconds using binary-tilebased house storage.
+[15/7/2012 4:39:38] > Broadcasted message: "The Mastersmiths Cyclops are too close from our Capital Thorn. Stay alert.".
+[15/7/2012 4:42:58] > Broadcasted message: "Help in the Thorn Western Gate! Cyclops are taking the city!".
+[15/7/2012 5:30:27] > Saving server...
+[15/7/2012 5:30:31] > SAVE: Complete in 4.231 seconds using binary-tilebased house storage.
+[15/7/2012 6:30:27] > Saving server...
+[15/7/2012 6:30:31] > SAVE: Complete in 3.318 seconds using binary-tilebased house storage.
+[15/7/2012 7:30:27] > Saving server...
+[15/7/2012 7:30:31] > SAVE: Complete in 3.769 seconds using binary-tilebased house storage.
+[15/7/2012 8:30:27] > Saving server...
+[15/7/2012 8:30:31] > SAVE: Complete in 3.737 seconds using binary-tilebased house storage.
+[15/7/2012 9:30:27] > Saving server...
+[15/7/2012 9:30:32] > SAVE: Complete in 4.934 seconds using binary-tilebased house storage.
+[15/7/2012 10:30:27] > Saving server...
+[15/7/2012 10:30:32] > SAVE: Complete in 4.271 seconds using binary-tilebased house storage.
+[15/7/2012 11:30:27] > Saving server...
+[15/7/2012 11:30:32] > SAVE: Complete in 5.102 seconds using binary-tilebased house storage.
+
+[15/7/2012 11:47:39] [Error - MoveEvents Interface] 
+[15/7/2012 11:47:39] In a timer event called from: 
+[15/7/2012 11:47:39] data/movements/scripts/game/teleport.lua:onStepIn
+[15/7/2012 11:47:39] Description: 
+[15/7/2012 11:47:39] (luaDoPlayerSendTextMessage) Player not found
+
+[15/7/2012 11:47:39] [Error - MoveEvents Interface] 
+[15/7/2012 11:47:39] In a timer event called from: 
+[15/7/2012 11:47:39] data/movements/scripts/game/teleport.lua:onStepIn
+[15/7/2012 11:47:39] Description: 
+[15/7/2012 11:47:39] (luaDoTeleportThing) Thing not found
+
+[15/7/2012 11:47:39] [Error - MoveEvents Interface] 
+[15/7/2012 11:47:39] In a timer event called from: 
+[15/7/2012 11:47:39] data/movements/scripts/game/teleport.lua:onStepIn
+[15/7/2012 11:47:39] Description: 
+[15/7/2012 11:47:39] (luaGetThingPosition) Thing not found
+
+[15/7/2012 11:47:39] [Error - MoveEvents Interface] 
+[15/7/2012 11:47:39] In a timer event called from: 
+[15/7/2012 11:47:39] data/movements/scripts/game/teleport.lua:onStepIn
+[15/7/2012 11:47:39] Description: 
+[15/7/2012 11:47:39] (luaGetCreatureStorage) Creature not found
+
+[15/7/2012 11:47:39] [Error - MoveEvents Interface] 
+[15/7/2012 11:47:39] In a timer event called from: 
+[15/7/2012 11:47:39] data/movements/scripts/game/teleport.lua:onStepIn
+[15/7/2012 11:47:39] Description: 
+[15/7/2012 11:47:39] (luaGetCreatureStorage) Creature not found
+
+[15/7/2012 11:47:39] [Error - MoveEvents Interface] 
+[15/7/2012 11:47:39] In a timer event called from: 
+[15/7/2012 11:47:39] data/movements/scripts/game/teleport.lua:onStepIn
+[15/7/2012 11:47:39] Description: 
+[15/7/2012 11:47:39] data/lib/darghos/arena.lua:138: attempt to index field '?' (a nil value)
+[15/7/2012 11:47:39] stack traceback:
+[15/7/2012 11:47:39] 	data/lib/darghos/arena.lua:138: in function 'onLeave'
+[15/7/2012 11:47:39] 	data/lib/darghos/arena.lua:186: in function <data/lib/darghos/arena.lua:181>
+[15/7/2012 12:30:27] > Saving server...
+[15/7/2012 12:30:34] > SAVE: Complete in 6.791 seconds using binary-tilebased house storage.
+[15/7/2012 13:30:27] > Saving server...
+[15/7/2012 13:30:35] > SAVE: Complete in 7.408 seconds using binary-tilebased house storage.
+[15/7/2012 14:30:27] > Saving server...
+[15/7/2012 14:30:36] > SAVE: Complete in 8.301 seconds using binary-tilebased house storage.
+[15/7/2012 14:53:38] > Broadcasted message: "A terra esta tremendo no cemiterio de Quendor!".
+[15/7/2012 14:54:38] > Broadcasted message: "Exercitos de criaturas feitas de ossos marcham para Quendor!".
+[15/7/2012 14:55:18] > Broadcasted message: "Quendor está sob ataques!".
+[15/7/2012 15:20:35] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 200.199.41.129)
+[15/7/2012 15:30:27] > Saving server...
+[15/7/2012 15:30:37] > SAVE: Complete in 9.243 seconds using binary-tilebased house storage.
+
+[15/7/2012 15:36:46] [Error - Action Interface] 
+[15/7/2012 15:36:46] data/actions/scripts/tools/rope.lua:onUse
+[15/7/2012 15:36:46] Description: 
+[15/7/2012 15:36:46] (luaGetThingFromPos) Tile not found
+[15/7/2012 16:30:27] > Saving server...
+[15/7/2012 16:30:37] > SAVE: Complete in 9.079 seconds using binary-tilebased house storage.
+[15/7/2012 17:2:56] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.62.48.149)

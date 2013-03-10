@@ -1,0 +1,2774 @@
+[1/7/2012 10:10:2] > Using MD5 encryption
+[1/7/2012 10:10:2] >> Loading RSA key
+[1/7/2012 10:10:2] >> Starting SQL connection
+
+[1/7/2012 10:10:2] > WARNING: Outdated MySQL server detected, consider upgrading to a newer version.
+[1/7/2012 10:10:2] >> Running Database Manager
+[1/7/2012 10:10:2] >> Loading items (OTB)
+[1/7/2012 10:10:2] >> Loading items (XML)
+[1/7/2012 10:10:2] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[1/7/2012 10:10:2] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[1/7/2012 10:10:2] >> Loading groups
+[1/7/2012 10:10:2] >> Loading vocations
+[1/7/2012 10:10:2] >> Loading outfits
+[1/7/2012 10:10:2] >> Loading chat channels
+[1/7/2012 10:10:2] >> Loading script systems
+
+[1/7/2012 10:10:3] [Error - Weapon Interface] 
+[1/7/2012 10:10:3] data/lib/darghos.lua
+[1/7/2012 10:10:3] Description: 
+[1/7/2012 10:10:3] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:3] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:3] [Error - Spell Interface] 
+[1/7/2012 10:10:3] data/lib/darghos.lua
+[1/7/2012 10:10:3] Description: 
+[1/7/2012 10:10:3] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:3] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:3] [Error - Action Interface] 
+[1/7/2012 10:10:3] data/lib/darghos.lua
+[1/7/2012 10:10:3] Description: 
+[1/7/2012 10:10:3] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:3] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:3] [Error - TalkAction Interface] 
+[1/7/2012 10:10:3] data/lib/darghos.lua
+[1/7/2012 10:10:3] Description: 
+[1/7/2012 10:10:3] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:3] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:3] [Error - MoveEvents Interface] 
+[1/7/2012 10:10:3] data/lib/darghos.lua
+[1/7/2012 10:10:3] Description: 
+[1/7/2012 10:10:3] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:3] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:3] [Error - CreatureScript Interface] 
+[1/7/2012 10:10:3] data/lib/darghos.lua
+[1/7/2012 10:10:3] Description: 
+[1/7/2012 10:10:3] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:3] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:3] [Error - GlobalEvent Interface] 
+[1/7/2012 10:10:3] data/lib/darghos.lua
+[1/7/2012 10:10:3] Description: 
+[1/7/2012 10:10:3] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:3] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:3] [Error - CreatureScript Interface] 
+[1/7/2012 10:10:3] data/creaturescripts/lib/creaturescripts.lua
+[1/7/2012 10:10:3] Description: 
+[1/7/2012 10:10:3] data/creaturescripts/lib/creaturescripts.lua:2: attempt to index global 'tasks' (a nil value)
+[1/7/2012 10:10:3] [Warning - BaseEvents::loadFromXml] Cannot load creaturescripts/lib/
+[1/7/2012 10:10:3] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[1/7/2012 10:10:3] >> Loading mods...
+[1/7/2012 10:10:3] > 0 mods were loaded.
+[1/7/2012 10:10:3] >> Loading experience stages
+[1/7/2012 10:10:3] >> Loading monsters
+[1/7/2012 10:10:4] >> Loading map and spawns...
+[1/7/2012 10:10:5] > Map size: 5000x5000.
+[1/7/2012 10:10:5] > Map descriptions: 
+[1/7/2012 10:10:5] "Saved with Remere's Map Editor 2.1"
+[1/7/2012 10:10:5] "SimOne MapEditor 0.5.5"
+[1/7/2012 10:10:5] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1070/1121/6
+[1/7/2012 10:10:5] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1070/1129/6
+[1/7/2012 10:10:5] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1073/1121/6
+[1/7/2012 10:10:5] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1073/1129/6
+[1/7/2012 10:10:6] Duplicate uniqueId 6401
+[1/7/2012 10:10:6] Duplicate uniqueId 6401
+[1/7/2012 10:10:7] Duplicate uniqueId 6401
+[1/7/2012 10:10:7] Duplicate uniqueId 6401
+[1/7/2012 10:10:7] Duplicate uniqueId 6401
+[1/7/2012 10:10:7] Duplicate uniqueId 6401
+[1/7/2012 10:10:9] Duplicate uniqueId 6401
+[1/7/2012 10:10:9] Duplicate uniqueId 6401
+[1/7/2012 10:10:10] Duplicate uniqueId 2004
+[1/7/2012 10:10:10] Duplicate uniqueId 2005
+[1/7/2012 10:10:10] Duplicate uniqueId 2006
+[1/7/2012 10:10:10] Duplicate uniqueId 2007
+[1/7/2012 10:10:12] Duplicate uniqueId 6401
+[1/7/2012 10:10:12] Duplicate uniqueId 6401
+[1/7/2012 10:10:12] Duplicate uniqueId 6401
+[1/7/2012 10:10:13] Duplicate uniqueId 6400
+[1/7/2012 10:10:13] Duplicate uniqueId 6401
+[1/7/2012 10:10:13] Duplicate uniqueId 2056
+[1/7/2012 10:10:13] Duplicate uniqueId 2057
+[1/7/2012 10:10:13] Duplicate uniqueId 2058
+[1/7/2012 10:10:13] Duplicate uniqueId 2051
+[1/7/2012 10:10:13] Duplicate uniqueId 2052
+[1/7/2012 10:10:13] Duplicate uniqueId 2053
+[1/7/2012 10:10:13] Duplicate uniqueId 2054
+[1/7/2012 10:10:13] > Map loading time: 9.448 seconds.
+
+[1/7/2012 10:10:13] [Error - NpcScript Interface] 
+[1/7/2012 10:10:13] data/lib/darghos.lua
+[1/7/2012 10:10:13] Description: 
+[1/7/2012 10:10:13] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:13] [Warning - LuaInterface::initState] Cannot load data/lib/
+[1/7/2012 10:10:14] [Spawn::addMonster] Cannot find "Butterfly"
+[1/7/2012 10:10:14] [Spawn::addMonster] Cannot find "Butterfly"
+
+[1/7/2012 10:10:14] [Error - NpcScript Interface] 
+[1/7/2012 10:10:14] data/npc/scripts/game/isle_of_peace.tasks_sixth.lua
+[1/7/2012 10:10:14] Description: 
+[1/7/2012 10:10:14] data/npc/scripts/game/isle_of_peace.tasks_sixth.lua:6: attempt to index global 'CAP_ONE' (a nil value)
+[1/7/2012 10:10:14] [Warning - NpcEvents::NpcEvents] Cannot load script: data/npc/scripts/game/isle_of_peace.tasks_sixth.lua
+
+
+[1/7/2012 10:10:14] [Error - NpcScript Interface] 
+[1/7/2012 10:10:14] data/npc/scripts/game/isle_of_peace.tasks_seventh.lua
+[1/7/2012 10:10:14] Description: 
+[1/7/2012 10:10:14] ...ata/npc/scripts/game/isle_of_peace.tasks_seventh.lua:6: attempt to index global 'CAP_ONE' (a nil value)
+[1/7/2012 10:10:14] [Warning - NpcEvents::NpcEvents] Cannot load script: data/npc/scripts/game/isle_of_peace.tasks_seventh.lua
+
+
+[1/7/2012 10:10:14] [Error - NpcScript Interface] 
+[1/7/2012 10:10:14] data/npc/scripts/game/isle_of_peace.tasks_third.lua
+[1/7/2012 10:10:14] Description: 
+[1/7/2012 10:10:14] data/npc/scripts/game/isle_of_peace.tasks_third.lua:6: attempt to index global 'CAP_ONE' (a nil value)
+[1/7/2012 10:10:14] [Warning - NpcEvents::NpcEvents] Cannot load script: data/npc/scripts/game/isle_of_peace.tasks_third.lua
+
+
+[1/7/2012 10:10:14] [Error - NpcScript Interface] 
+[1/7/2012 10:10:14] data/npc/scripts/game/isle_of_peace.tasks_first.lua
+[1/7/2012 10:10:14] Description: 
+[1/7/2012 10:10:14] data/npc/scripts/game/isle_of_peace.tasks_first.lua:6: attempt to index global 'CAP_ONE' (a nil value)
+[1/7/2012 10:10:14] [Warning - NpcEvents::NpcEvents] Cannot load script: data/npc/scripts/game/isle_of_peace.tasks_first.lua
+
+
+[1/7/2012 10:10:14] [Error - NpcScript Interface] 
+[1/7/2012 10:10:14] data/npc/scripts/game/isle_of_peace.tasks_fourth.lua
+[1/7/2012 10:10:14] Description: 
+[1/7/2012 10:10:14] data/npc/scripts/game/isle_of_peace.tasks_fourth.lua:6: attempt to index global 'CAP_ONE' (a nil value)
+[1/7/2012 10:10:14] [Warning - NpcEvents::NpcEvents] Cannot load script: data/npc/scripts/game/isle_of_peace.tasks_fourth.lua
+
+
+[1/7/2012 10:10:14] [Error - NpcScript Interface] 
+[1/7/2012 10:10:14] data/npc/scripts/game/isle_of_peace.tasks_fifth.lua
+[1/7/2012 10:10:14] Description: 
+[1/7/2012 10:10:14] data/npc/scripts/game/isle_of_peace.tasks_fifth.lua:6: attempt to index global 'CAP_ONE' (a nil value)
+[1/7/2012 10:10:14] [Warning - NpcEvents::NpcEvents] Cannot load script: data/npc/scripts/game/isle_of_peace.tasks_fifth.lua
+
+
+[1/7/2012 10:10:14] [Error - NpcScript Interface] 
+[1/7/2012 10:10:14] data/npc/scripts/game/isle_of_peace.tasks_second.lua
+[1/7/2012 10:10:14] Description: 
+[1/7/2012 10:10:14] data/npc/scripts/game/isle_of_peace.tasks_second.lua:6: attempt to index global 'CAP_ONE' (a nil value)
+[1/7/2012 10:10:14] [Warning - NpcEvents::NpcEvents] Cannot load script: data/npc/scripts/game/isle_of_peace.tasks_second.lua
+
+[1/7/2012 10:10:14] > Data parsing time: 0.82 seconds.
+[1/7/2012 10:10:30] > Houses synchronization time: 16.175 seconds.
+[1/7/2012 10:10:30] > Content unserialization time: 0.023 seconds.
+[1/7/2012 10:10:30] >> Checking world type... Open PvP
+[1/7/2012 10:10:30] >> Initializing game state and binding services...
+
+[1/7/2012 10:10:30] [Error - Raid Interface] 
+[1/7/2012 10:10:30] data/lib/darghos.lua
+[1/7/2012 10:10:30] Description: 
+[1/7/2012 10:10:30] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:30] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+
+[1/7/2012 10:10:31] [Error - Raid Interface] 
+[1/7/2012 10:10:31] data/lib/darghos.lua
+[1/7/2012 10:10:31] Description: 
+[1/7/2012 10:10:31] data/lib/darghos/lib_actions.lua:357: 'end' expected (to close 'function' at line 353) near 'if'
+[1/7/2012 10:10:31] [Warning - LuaInterface::initState] Cannot load data/lib/
+[1/7/2012 10:10:31] > Global IP address: 184.173.128.212
+[1/7/2012 10:10:31] > Bound ports: 7577	7578	
+[1/7/2012 10:10:31] >> Everything smells good, server is starting up...
+[1/7/2012 10:10:31] [DDOS EMERGENCY] Enabled
+>> UltraX server Online!
+[1/7/2012 10:10:31] [DDOS EMERGENCY] Enabled
+>> UltraX server Online!
+[1/7/2012 10:10:31] [DDOS EMERGENCY] Enabled
+>> UltraX server Online!
+
+[1/7/2012 10:15:1] > Using MD5 encryption
+[1/7/2012 10:15:1] >> Loading RSA key
+[1/7/2012 10:15:1] >> Starting SQL connection
+
+[1/7/2012 10:15:1] > WARNING: Outdated MySQL server detected, consider upgrading to a newer version.
+[1/7/2012 10:15:1] >> Running Database Manager
+[1/7/2012 10:15:1] >> Loading items (OTB)
+[1/7/2012 10:15:1] >> Loading items (XML)
+[1/7/2012 10:15:1] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[1/7/2012 10:15:1] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[1/7/2012 10:15:1] >> Loading groups
+[1/7/2012 10:15:1] >> Loading vocations
+[1/7/2012 10:15:1] >> Loading outfits
+[1/7/2012 10:15:1] >> Loading chat channels
+[1/7/2012 10:15:1] >> Loading script systems
+[1/7/2012 10:15:2] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[1/7/2012 10:15:2] >> Loading mods...
+[1/7/2012 10:15:2] > 0 mods were loaded.
+[1/7/2012 10:15:2] >> Loading experience stages
+[1/7/2012 10:15:2] >> Loading monsters
+[1/7/2012 10:15:2] >> Loading map and spawns...
+[1/7/2012 10:15:3] > Map size: 5000x5000.
+[1/7/2012 10:15:3] > Map descriptions: 
+[1/7/2012 10:15:3] "Saved with Remere's Map Editor 2.1"
+[1/7/2012 10:15:3] "SimOne MapEditor 0.5.5"
+[1/7/2012 10:15:4] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1070/1121/6
+[1/7/2012 10:15:4] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1070/1129/6
+[1/7/2012 10:15:4] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1073/1121/6
+[1/7/2012 10:15:4] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1073/1129/6
+[1/7/2012 10:15:4] Duplicate uniqueId 6401
+[1/7/2012 10:15:4] Duplicate uniqueId 6401
+[1/7/2012 10:15:6] Duplicate uniqueId 6401
+[1/7/2012 10:15:6] Duplicate uniqueId 6401
+[1/7/2012 10:15:6] Duplicate uniqueId 6401
+[1/7/2012 10:15:6] Duplicate uniqueId 6401
+[1/7/2012 10:15:8] Duplicate uniqueId 6401
+[1/7/2012 10:15:8] Duplicate uniqueId 6401
+[1/7/2012 10:15:8] Duplicate uniqueId 2004
+[1/7/2012 10:15:8] Duplicate uniqueId 2005
+[1/7/2012 10:15:8] Duplicate uniqueId 2006
+[1/7/2012 10:15:8] Duplicate uniqueId 2007
+[1/7/2012 10:15:10] Duplicate uniqueId 6401
+[1/7/2012 10:15:10] Duplicate uniqueId 6401
+[1/7/2012 10:15:10] Duplicate uniqueId 6401
+[1/7/2012 10:15:10] Duplicate uniqueId 6400
+[1/7/2012 10:15:10] Duplicate uniqueId 6401
+[1/7/2012 10:15:11] Duplicate uniqueId 2056
+[1/7/2012 10:15:11] Duplicate uniqueId 2057
+[1/7/2012 10:15:11] Duplicate uniqueId 2058
+[1/7/2012 10:15:11] Duplicate uniqueId 2051
+[1/7/2012 10:15:11] Duplicate uniqueId 2052
+[1/7/2012 10:15:11] Duplicate uniqueId 2053
+[1/7/2012 10:15:11] Duplicate uniqueId 2054
+[1/7/2012 10:15:11] > Map loading time: 8.833 seconds.
+[1/7/2012 10:15:11] [Spawn::addMonster] Cannot find "Butterfly"
+[1/7/2012 10:15:11] [Spawn::addMonster] Cannot find "Butterfly"
+[1/7/2012 10:15:12] > Data parsing time: 0.484 seconds.
+[1/7/2012 10:15:27] > Houses synchronization time: 15.099 seconds.
+[1/7/2012 10:15:27] > Content unserialization time: 0.005 seconds.
+[1/7/2012 10:15:27] >> Checking world type... Open PvP
+[1/7/2012 10:15:27] >> Initializing game state and binding services...
+[1/7/2012 10:15:28] > Global IP address: 184.173.128.212
+[1/7/2012 10:15:28] > Bound ports: 7577	7578	
+[1/7/2012 10:15:28] >> Everything smells good, server is starting up...
+[1/7/2012 10:15:28] [DDOS EMERGENCY] Enabled
+>> UltraX server Online!
+[1/7/2012 10:15:28] [DDOS EMERGENCY] Enabled
+>> UltraX server Online!
+
+
+[1/7/2012 10:15:28] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:28] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:28] Description: 
+[1/7/2012 10:15:28] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:28] stack traceback:
+[1/7/2012 10:15:28] 	[C]: in function 'pairs'
+[1/7/2012 10:15:28] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:28] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:28] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:28] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:28] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:28] Description: 
+[1/7/2012 10:15:28] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:28] stack traceback:
+[1/7/2012 10:15:28] 	[C]: in function 'pairs'
+[1/7/2012 10:15:28] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:28] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:28] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:29] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:29] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:29] Description: 
+[1/7/2012 10:15:29] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:29] stack traceback:
+[1/7/2012 10:15:29] 	[C]: in function 'pairs'
+[1/7/2012 10:15:29] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:29] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:29] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:29] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:29] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:29] Description: 
+[1/7/2012 10:15:29] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:29] stack traceback:
+[1/7/2012 10:15:29] 	[C]: in function 'pairs'
+[1/7/2012 10:15:29] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:29] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:29] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:29] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:29] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:29] Description: 
+[1/7/2012 10:15:29] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:29] stack traceback:
+[1/7/2012 10:15:29] 	[C]: in function 'pairs'
+[1/7/2012 10:15:29] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:29] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:29] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:30] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:30] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:30] Description: 
+[1/7/2012 10:15:30] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:30] stack traceback:
+[1/7/2012 10:15:30] 	[C]: in function 'pairs'
+[1/7/2012 10:15:30] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:30] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:30] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:30] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:30] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:30] Description: 
+[1/7/2012 10:15:30] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:30] stack traceback:
+[1/7/2012 10:15:30] 	[C]: in function 'pairs'
+[1/7/2012 10:15:30] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:30] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:30] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:30] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:30] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:30] Description: 
+[1/7/2012 10:15:30] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:30] stack traceback:
+[1/7/2012 10:15:30] 	[C]: in function 'pairs'
+[1/7/2012 10:15:30] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:30] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:30] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:30] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:30] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:30] Description: 
+[1/7/2012 10:15:30] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:30] stack traceback:
+[1/7/2012 10:15:30] 	[C]: in function 'pairs'
+[1/7/2012 10:15:30] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:30] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:30] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:31] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:31] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:31] Description: 
+[1/7/2012 10:15:31] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:31] stack traceback:
+[1/7/2012 10:15:31] 	[C]: in function 'pairs'
+[1/7/2012 10:15:31] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:31] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:31] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:31] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:31] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:31] Description: 
+[1/7/2012 10:15:31] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:31] stack traceback:
+[1/7/2012 10:15:31] 	[C]: in function 'pairs'
+[1/7/2012 10:15:31] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:31] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:31] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:31] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:31] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:31] Description: 
+[1/7/2012 10:15:31] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:31] stack traceback:
+[1/7/2012 10:15:31] 	[C]: in function 'pairs'
+[1/7/2012 10:15:31] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:31] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:31] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:32] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:32] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:32] Description: 
+[1/7/2012 10:15:32] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:32] stack traceback:
+[1/7/2012 10:15:32] 	[C]: in function 'pairs'
+[1/7/2012 10:15:32] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:32] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:32] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:33] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:33] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:33] Description: 
+[1/7/2012 10:15:33] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:33] stack traceback:
+[1/7/2012 10:15:33] 	[C]: in function 'pairs'
+[1/7/2012 10:15:33] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:33] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:33] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:34] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:34] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:34] Description: 
+[1/7/2012 10:15:34] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:34] stack traceback:
+[1/7/2012 10:15:34] 	[C]: in function 'pairs'
+[1/7/2012 10:15:34] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:34] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:34] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:34] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:34] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:34] Description: 
+[1/7/2012 10:15:34] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:34] stack traceback:
+[1/7/2012 10:15:34] 	[C]: in function 'pairs'
+[1/7/2012 10:15:34] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:34] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:34] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:35] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:35] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:35] Description: 
+[1/7/2012 10:15:35] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:35] stack traceback:
+[1/7/2012 10:15:35] 	[C]: in function 'pairs'
+[1/7/2012 10:15:35] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:35] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:35] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:35] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:35] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:35] Description: 
+[1/7/2012 10:15:35] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:35] stack traceback:
+[1/7/2012 10:15:35] 	[C]: in function 'pairs'
+[1/7/2012 10:15:35] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:35] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:35] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:36] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:36] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:36] Description: 
+[1/7/2012 10:15:36] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:36] stack traceback:
+[1/7/2012 10:15:36] 	[C]: in function 'pairs'
+[1/7/2012 10:15:36] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:36] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:36] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:36] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:36] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:36] Description: 
+[1/7/2012 10:15:36] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:36] stack traceback:
+[1/7/2012 10:15:36] 	[C]: in function 'pairs'
+[1/7/2012 10:15:36] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:36] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:36] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:36] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:36] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:36] Description: 
+[1/7/2012 10:15:36] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:36] stack traceback:
+[1/7/2012 10:15:36] 	[C]: in function 'pairs'
+[1/7/2012 10:15:36] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:36] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:36] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:36] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:36] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:36] Description: 
+[1/7/2012 10:15:36] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:36] stack traceback:
+[1/7/2012 10:15:36] 	[C]: in function 'pairs'
+[1/7/2012 10:15:36] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:36] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:36] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:39] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:39] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:39] Description: 
+[1/7/2012 10:15:39] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:39] stack traceback:
+[1/7/2012 10:15:39] 	[C]: in function 'pairs'
+[1/7/2012 10:15:39] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:39] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:39] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:39] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:39] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:39] Description: 
+[1/7/2012 10:15:39] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:39] stack traceback:
+[1/7/2012 10:15:39] 	[C]: in function 'pairs'
+[1/7/2012 10:15:39] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:39] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:39] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:39] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:39] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:39] Description: 
+[1/7/2012 10:15:39] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:39] stack traceback:
+[1/7/2012 10:15:39] 	[C]: in function 'pairs'
+[1/7/2012 10:15:39] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:39] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:39] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:40] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:40] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:40] Description: 
+[1/7/2012 10:15:40] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:40] stack traceback:
+[1/7/2012 10:15:40] 	[C]: in function 'pairs'
+[1/7/2012 10:15:40] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:40] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:40] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:40] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:40] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:40] Description: 
+[1/7/2012 10:15:40] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:40] stack traceback:
+[1/7/2012 10:15:40] 	[C]: in function 'pairs'
+[1/7/2012 10:15:40] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:40] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:40] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:42] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:42] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:42] Description: 
+[1/7/2012 10:15:42] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:42] stack traceback:
+[1/7/2012 10:15:42] 	[C]: in function 'pairs'
+[1/7/2012 10:15:42] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:42] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:42] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:42] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:42] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:42] Description: 
+[1/7/2012 10:15:42] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:42] stack traceback:
+[1/7/2012 10:15:42] 	[C]: in function 'pairs'
+[1/7/2012 10:15:42] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:42] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:42] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:42] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:42] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:42] Description: 
+[1/7/2012 10:15:42] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:42] stack traceback:
+[1/7/2012 10:15:42] 	[C]: in function 'pairs'
+[1/7/2012 10:15:42] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:42] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:42] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:42] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:42] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:42] Description: 
+[1/7/2012 10:15:42] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:42] stack traceback:
+[1/7/2012 10:15:42] 	[C]: in function 'pairs'
+[1/7/2012 10:15:42] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:42] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:42] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:43] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:43] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:43] Description: 
+[1/7/2012 10:15:43] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:43] stack traceback:
+[1/7/2012 10:15:43] 	[C]: in function 'pairs'
+[1/7/2012 10:15:43] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:43] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:43] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:43] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:43] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:43] Description: 
+[1/7/2012 10:15:43] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:43] stack traceback:
+[1/7/2012 10:15:43] 	[C]: in function 'pairs'
+[1/7/2012 10:15:43] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:43] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:43] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:44] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:44] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:44] Description: 
+[1/7/2012 10:15:44] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:44] stack traceback:
+[1/7/2012 10:15:44] 	[C]: in function 'pairs'
+[1/7/2012 10:15:44] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:44] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:44] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:46] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:46] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:46] Description: 
+[1/7/2012 10:15:46] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:46] stack traceback:
+[1/7/2012 10:15:46] 	[C]: in function 'pairs'
+[1/7/2012 10:15:46] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:46] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:46] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:47] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:47] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:47] Description: 
+[1/7/2012 10:15:47] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:47] stack traceback:
+[1/7/2012 10:15:47] 	[C]: in function 'pairs'
+[1/7/2012 10:15:47] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:47] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:47] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:48] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:48] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:48] Description: 
+[1/7/2012 10:15:48] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:48] stack traceback:
+[1/7/2012 10:15:48] 	[C]: in function 'pairs'
+[1/7/2012 10:15:48] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:48] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:48] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:48] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:48] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:48] Description: 
+[1/7/2012 10:15:48] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:48] stack traceback:
+[1/7/2012 10:15:48] 	[C]: in function 'pairs'
+[1/7/2012 10:15:48] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:48] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:48] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:48] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:48] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:48] Description: 
+[1/7/2012 10:15:48] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:48] stack traceback:
+[1/7/2012 10:15:48] 	[C]: in function 'pairs'
+[1/7/2012 10:15:48] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:48] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:48] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:49] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:49] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:49] Description: 
+[1/7/2012 10:15:49] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:49] stack traceback:
+[1/7/2012 10:15:49] 	[C]: in function 'pairs'
+[1/7/2012 10:15:49] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:49] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:49] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:49] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:49] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:49] Description: 
+[1/7/2012 10:15:49] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:49] stack traceback:
+[1/7/2012 10:15:49] 	[C]: in function 'pairs'
+[1/7/2012 10:15:49] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:49] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:49] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:49] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:49] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:49] Description: 
+[1/7/2012 10:15:49] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:49] stack traceback:
+[1/7/2012 10:15:49] 	[C]: in function 'pairs'
+[1/7/2012 10:15:49] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:49] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:49] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:49] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:49] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:49] Description: 
+[1/7/2012 10:15:49] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:49] stack traceback:
+[1/7/2012 10:15:49] 	[C]: in function 'pairs'
+[1/7/2012 10:15:49] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:49] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:49] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:50] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:50] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:50] Description: 
+[1/7/2012 10:15:50] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:50] stack traceback:
+[1/7/2012 10:15:50] 	[C]: in function 'pairs'
+[1/7/2012 10:15:50] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:50] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:50] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:51] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:51] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:51] Description: 
+[1/7/2012 10:15:51] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:51] stack traceback:
+[1/7/2012 10:15:51] 	[C]: in function 'pairs'
+[1/7/2012 10:15:51] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:51] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:51] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:52] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:52] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:52] Description: 
+[1/7/2012 10:15:52] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:52] stack traceback:
+[1/7/2012 10:15:52] 	[C]: in function 'pairs'
+[1/7/2012 10:15:52] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:52] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:52] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:52] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:52] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:52] Description: 
+[1/7/2012 10:15:52] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:52] stack traceback:
+[1/7/2012 10:15:52] 	[C]: in function 'pairs'
+[1/7/2012 10:15:52] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:52] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:52] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:52] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:52] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:52] Description: 
+[1/7/2012 10:15:52] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:52] stack traceback:
+[1/7/2012 10:15:52] 	[C]: in function 'pairs'
+[1/7/2012 10:15:52] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:52] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:52] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:54] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:54] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:54] Description: 
+[1/7/2012 10:15:54] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:54] stack traceback:
+[1/7/2012 10:15:54] 	[C]: in function 'pairs'
+[1/7/2012 10:15:54] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:54] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:54] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:54] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:54] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:54] Description: 
+[1/7/2012 10:15:54] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:54] stack traceback:
+[1/7/2012 10:15:54] 	[C]: in function 'pairs'
+[1/7/2012 10:15:54] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:54] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:54] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:54] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:54] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:54] Description: 
+[1/7/2012 10:15:54] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:54] stack traceback:
+[1/7/2012 10:15:54] 	[C]: in function 'pairs'
+[1/7/2012 10:15:54] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:54] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:54] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:55] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:55] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:55] Description: 
+[1/7/2012 10:15:55] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:55] stack traceback:
+[1/7/2012 10:15:55] 	[C]: in function 'pairs'
+[1/7/2012 10:15:55] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:55] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:55] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:55] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:55] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:55] Description: 
+[1/7/2012 10:15:55] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:55] stack traceback:
+[1/7/2012 10:15:55] 	[C]: in function 'pairs'
+[1/7/2012 10:15:55] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:55] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:55] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:56] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:56] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:56] Description: 
+[1/7/2012 10:15:56] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:56] stack traceback:
+[1/7/2012 10:15:56] 	[C]: in function 'pairs'
+[1/7/2012 10:15:56] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:56] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:56] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:56] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:56] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:56] Description: 
+[1/7/2012 10:15:56] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:56] stack traceback:
+[1/7/2012 10:15:56] 	[C]: in function 'pairs'
+[1/7/2012 10:15:56] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:56] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:56] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:57] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:57] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:57] Description: 
+[1/7/2012 10:15:57] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:57] stack traceback:
+[1/7/2012 10:15:57] 	[C]: in function 'pairs'
+[1/7/2012 10:15:57] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:57] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:57] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:57] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:57] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:57] Description: 
+[1/7/2012 10:15:57] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:57] stack traceback:
+[1/7/2012 10:15:57] 	[C]: in function 'pairs'
+[1/7/2012 10:15:57] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:57] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:57] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+
+[1/7/2012 10:15:58] [Error - CreatureScript Interface] 
+[1/7/2012 10:15:58] data/creaturescripts/scripts/game/login.lua:onLogin
+[1/7/2012 10:15:58] Description: 
+[1/7/2012 10:15:58] data/lib/darghos/stages.lua:110: bad argument #1 to 'pairs' (table expected, got nil)
+[1/7/2012 10:15:58] stack traceback:
+[1/7/2012 10:15:58] 	[C]: in function 'pairs'
+[1/7/2012 10:15:58] 	data/lib/darghos/stages.lua:110: in function 'getPlayerMultiple'
+[1/7/2012 10:15:58] 	data/lib/darghos/stages.lua:203: in function 'setStagesOnLogin'
+[1/7/2012 10:15:58] 	data/creaturescripts/scripts/game/login.lua:40: in function <data/creaturescripts/scripts/game/login.lua:1>
+[1/7/2012 10:16:53] > Using MD5 encryption
+[1/7/2012 10:16:53] >> Loading RSA key
+[1/7/2012 10:16:53] >> Starting SQL connection
+
+[1/7/2012 10:16:53] > WARNING: Outdated MySQL server detected, consider upgrading to a newer version.
+[1/7/2012 10:16:53] >> Running Database Manager
+[1/7/2012 10:16:53] >> Loading items (OTB)
+[1/7/2012 10:16:53] >> Loading items (XML)
+[1/7/2012 10:16:54] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[1/7/2012 10:16:54] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[1/7/2012 10:16:54] >> Loading groups
+[1/7/2012 10:16:54] >> Loading vocations
+[1/7/2012 10:16:54] >> Loading outfits
+[1/7/2012 10:16:54] >> Loading chat channels
+[1/7/2012 10:16:54] >> Loading script systems
+[1/7/2012 10:16:54] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[1/7/2012 10:16:54] >> Loading mods...
+[1/7/2012 10:16:54] > 0 mods were loaded.
+[1/7/2012 10:16:54] >> Loading experience stages
+[1/7/2012 10:16:54] >> Loading monsters
+[1/7/2012 10:16:54] >> Loading map and spawns...
+[1/7/2012 10:16:55] > Map size: 5000x5000.
+[1/7/2012 10:16:55] > Map descriptions: 
+[1/7/2012 10:16:55] "Saved with Remere's Map Editor 2.1"
+[1/7/2012 10:16:55] "SimOne MapEditor 0.5.5"
+[1/7/2012 10:16:56] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1070/1121/6
+[1/7/2012 10:16:56] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1070/1129/6
+[1/7/2012 10:16:56] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1073/1121/6
+[1/7/2012 10:16:56] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1073/1129/6
+[1/7/2012 10:16:56] Duplicate uniqueId 6401
+[1/7/2012 10:16:56] Duplicate uniqueId 6401
+[1/7/2012 10:16:58] Duplicate uniqueId 6401
+[1/7/2012 10:16:58] Duplicate uniqueId 6401
+[1/7/2012 10:16:58] Duplicate uniqueId 6401
+[1/7/2012 10:16:58] Duplicate uniqueId 6401
+[1/7/2012 10:17:0] Duplicate uniqueId 6401
+[1/7/2012 10:17:0] Duplicate uniqueId 6401
+[1/7/2012 10:17:1] Duplicate uniqueId 2004
+[1/7/2012 10:17:1] Duplicate uniqueId 2005
+[1/7/2012 10:17:1] Duplicate uniqueId 2006
+[1/7/2012 10:17:1] Duplicate uniqueId 2007
+[1/7/2012 10:17:4] Duplicate uniqueId 6401
+[1/7/2012 10:17:4] Duplicate uniqueId 6401
+[1/7/2012 10:17:4] Duplicate uniqueId 6401
+[1/7/2012 10:17:4] Duplicate uniqueId 6400
+[1/7/2012 10:17:4] Duplicate uniqueId 6401
+[1/7/2012 10:17:4] Duplicate uniqueId 2056
+[1/7/2012 10:17:4] Duplicate uniqueId 2057
+[1/7/2012 10:17:4] Duplicate uniqueId 2058
+[1/7/2012 10:17:5] Duplicate uniqueId 2051
+[1/7/2012 10:17:5] Duplicate uniqueId 2052
+[1/7/2012 10:17:5] Duplicate uniqueId 2053
+[1/7/2012 10:17:5] Duplicate uniqueId 2054
+[1/7/2012 10:17:5] > Map loading time: 10.918 seconds.
+[1/7/2012 10:17:5] [Spawn::addMonster] Cannot find "Butterfly"
+[1/7/2012 10:17:5] [Spawn::addMonster] Cannot find "Butterfly"
+[1/7/2012 10:17:6] > Data parsing time: 0.639 seconds.
+[1/7/2012 10:17:21] > Houses synchronization time: 15.465 seconds.
+[1/7/2012 10:17:21] > Content unserialization time: 0.005 seconds.
+[1/7/2012 10:17:21] >> Checking world type... Open PvP
+[1/7/2012 10:17:21] >> Initializing game state and binding services...
+[1/7/2012 10:17:22] > Global IP address: 184.173.128.212
+[1/7/2012 10:17:22] > Bound ports: 7577	7578	
+[1/7/2012 10:17:22] >> Everything smells good, server is starting up...
+[1/7/2012 10:17:22] >> UltraX server Online!
+[DDOS EMERGENCY] Enabled
+[1/7/2012 10:17:22] >> UltraX server Online!
+[DDOS EMERGENCY] Enabled
+
+[1/7/2012 10:18:20] > Saving server...
+[1/7/2012 10:18:20] > SAVE: Complete in 0.309 seconds using binary-tilebased house storage.
+[1/7/2012 10:19:55] > Saving server...
+[1/7/2012 10:19:56] > SAVE: Complete in 0.392 seconds using binary-tilebased house storage.
+[1/7/2012 10:19:59] > Paying houses...
+[1/7/2012 10:19:59] Houses paid in 0 seconds.
+[1/7/2012 10:19:59] > Saving server...
+[1/7/2012 10:20:0] > SAVE: Complete in 0.623 seconds using binary-tilebased house storage.
+[1/7/2012 10:20:0] Preparing to shutdown the server- done.
+[1/7/2012 10:20:32] > Using MD5 encryption
+[1/7/2012 10:20:32] >> Loading RSA key
+[1/7/2012 10:20:32] >> Starting SQL connection
+
+[1/7/2012 10:20:32] > WARNING: Outdated MySQL server detected, consider upgrading to a newer version.
+[1/7/2012 10:20:32] >> Running Database Manager
+[1/7/2012 10:20:32] >> Loading items (OTB)
+[1/7/2012 10:20:32] >> Loading items (XML)
+[1/7/2012 10:20:32] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[1/7/2012 10:20:32] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[1/7/2012 10:20:32] >> Loading groups
+[1/7/2012 10:20:32] >> Loading vocations
+[1/7/2012 10:20:32] >> Loading outfits
+[1/7/2012 10:20:32] >> Loading chat channels
+[1/7/2012 10:20:32] >> Loading script systems
+[1/7/2012 10:20:32] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[1/7/2012 10:20:32] >> Loading mods...
+[1/7/2012 10:20:32] > 0 mods were loaded.
+[1/7/2012 10:20:32] >> Loading experience stages
+[1/7/2012 10:20:32] >> Loading monsters
+[1/7/2012 10:20:33] >> Loading map and spawns...
+[1/7/2012 10:20:33] > Map size: 5000x5000.
+[1/7/2012 10:20:33] > Map descriptions: 
+[1/7/2012 10:20:33] "Saved with Remere's Map Editor 2.1"
+[1/7/2012 10:20:33] "SimOne MapEditor 0.5.5"
+[1/7/2012 10:20:34] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1070/1121/6
+[1/7/2012 10:20:34] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1070/1129/6
+[1/7/2012 10:20:34] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1073/1121/6
+[1/7/2012 10:20:34] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1073/1129/6
+[1/7/2012 10:20:34] Duplicate uniqueId 6401
+[1/7/2012 10:20:34] Duplicate uniqueId 6401
+[1/7/2012 10:20:35] Duplicate uniqueId 6401
+[1/7/2012 10:20:35] Duplicate uniqueId 6401
+[1/7/2012 10:20:35] Duplicate uniqueId 6401
+[1/7/2012 10:20:35] Duplicate uniqueId 6401
+[1/7/2012 10:20:37] Duplicate uniqueId 6401
+[1/7/2012 10:20:37] Duplicate uniqueId 6401
+[1/7/2012 10:20:38] Duplicate uniqueId 2004
+[1/7/2012 10:20:38] Duplicate uniqueId 2005
+[1/7/2012 10:20:38] Duplicate uniqueId 2006
+[1/7/2012 10:20:38] Duplicate uniqueId 2007
+[1/7/2012 10:20:40] Duplicate uniqueId 6401
+[1/7/2012 10:20:40] Duplicate uniqueId 6401
+[1/7/2012 10:20:40] Duplicate uniqueId 6401
+[1/7/2012 10:20:40] Duplicate uniqueId 6400
+[1/7/2012 10:20:40] Duplicate uniqueId 6401
+[1/7/2012 10:20:40] Duplicate uniqueId 2056
+[1/7/2012 10:20:40] Duplicate uniqueId 2057
+[1/7/2012 10:20:40] Duplicate uniqueId 2058
+[1/7/2012 10:20:40] Duplicate uniqueId 2051
+[1/7/2012 10:20:40] Duplicate uniqueId 2052
+[1/7/2012 10:20:40] Duplicate uniqueId 2053
+[1/7/2012 10:20:40] Duplicate uniqueId 2054
+[1/7/2012 10:20:41] > Map loading time: 7.91 seconds.
+[1/7/2012 10:20:41] [Spawn::addMonster] Cannot find "Butterfly"
+[1/7/2012 10:20:41] [Spawn::addMonster] Cannot find "Butterfly"
+[1/7/2012 10:20:41] > Data parsing time: 0.502 seconds.
+[1/7/2012 10:20:57] > Houses synchronization time: 15.84 seconds.
+[1/7/2012 10:20:57] > Content unserialization time: 0.012 seconds.
+[1/7/2012 10:20:57] >> Checking world type... Open PvP
+[1/7/2012 10:20:57] >> Initializing game state and binding services...
+[1/7/2012 10:20:58] > Global IP address: 184.173.128.212
+[1/7/2012 10:20:58] > Bound ports: 7577	7578	
+[1/7/2012 10:20:58] >> Everything smells good, server is starting up...
+[1/7/2012 10:20:58] [DDOS EMERGENCY] Enabled
+[1/7/2012 10:20:58] [DDOS EMERGENCY] Enabled
+>> UltraX server Online!
+
+
+[1/7/2012 10:23:36] [Error - NpcScript Interface] 
+[1/7/2012 10:23:36] (Unknown script file)
+[1/7/2012 10:23:36] Description: 
+[1/7/2012 10:23:36] attempt to call a nil value
+[1/7/2012 10:23:36] stack traceback:
+
+[1/7/2012 10:28:50] [Error - NpcScript Interface] 
+[1/7/2012 10:28:50] (Unknown script file)
+[1/7/2012 10:28:50] Description: 
+[1/7/2012 10:28:50] attempt to call a nil value
+[1/7/2012 10:28:50] stack traceback:
+
+[1/7/2012 10:30:51] [Error - NpcScript Interface] 
+[1/7/2012 10:30:51] (Unknown script file)
+[1/7/2012 10:30:51] Description: 
+[1/7/2012 10:30:51] attempt to call a nil value
+[1/7/2012 10:30:51] stack traceback:
+[1/7/2012 10:30:51] 	[C]: in function 'closeShopWindow'
+[1/7/2012 10:30:51] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 10:30:51] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 10:30:51] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 10:30:51] 	data/npc/scripts/game/rashid.lua:9: in function <data/npc/scripts/game/rashid.lua:9>
+
+[1/7/2012 10:38:16] [Error - NpcScript Interface] 
+[1/7/2012 10:38:16] (Unknown script file)
+[1/7/2012 10:38:16] Description: 
+[1/7/2012 10:38:16] attempt to call a nil value
+[1/7/2012 10:38:16] stack traceback:
+[1/7/2012 10:38:16] 	[C]: in function 'closeShopWindow'
+[1/7/2012 10:38:16] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 10:38:16] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 10:38:16] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 10:38:16] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 11:8:19] [Error - NpcScript Interface] 
+[1/7/2012 11:8:19] (Unknown script file)
+[1/7/2012 11:8:19] Description: 
+[1/7/2012 11:8:19] attempt to call a nil value
+[1/7/2012 11:8:19] stack traceback:
+
+[1/7/2012 11:13:5] [Error - NpcScript Interface] 
+[1/7/2012 11:13:5] (Unknown script file)
+[1/7/2012 11:13:5] Description: 
+[1/7/2012 11:13:5] attempt to call a nil value
+[1/7/2012 11:13:5] stack traceback:
+
+[1/7/2012 11:14:56] [Error - TalkAction Interface] 
+[1/7/2012 11:14:56] data/talkactions/scripts/skill.lua:onSay
+[1/7/2012 11:14:56] Description: 
+[1/7/2012 11:14:56] data/talkactions/scripts/skill.lua:29: attempt to compare number with nil
+[1/7/2012 11:14:56] stack traceback:
+[1/7/2012 11:14:56] 	data/talkactions/scripts/skill.lua:29: in function <data/talkactions/scripts/skill.lua:1>
+[1/7/2012 11:22:32] > Saving server...
+[1/7/2012 11:22:36] > SAVE: Complete in 3.12 seconds using binary-tilebased house storage.
+
+[1/7/2012 11:29:19] [Error - NpcScript Interface] 
+[1/7/2012 11:29:19] (Unknown script file)
+[1/7/2012 11:29:19] Description: 
+[1/7/2012 11:29:19] attempt to call a nil value
+[1/7/2012 11:29:19] stack traceback:
+[1/7/2012 11:29:19] 	[C]: in function 'closeShopWindow'
+[1/7/2012 11:29:19] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 11:29:19] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 11:29:19] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 11:29:19] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 11:32:15] [Error - TalkAction Interface] 
+[1/7/2012 11:32:15] data/talkactions/scripts/skill.lua:onSay
+[1/7/2012 11:32:15] Description: 
+[1/7/2012 11:32:15] data/talkactions/scripts/skill.lua:29: attempt to compare number with nil
+[1/7/2012 11:32:15] stack traceback:
+[1/7/2012 11:32:15] 	data/talkactions/scripts/skill.lua:29: in function <data/talkactions/scripts/skill.lua:1>
+
+[1/7/2012 11:39:16] [Error - NpcScript Interface] 
+[1/7/2012 11:39:16] (Unknown script file)
+[1/7/2012 11:39:16] Description: 
+[1/7/2012 11:39:16] attempt to call a nil value
+[1/7/2012 11:39:16] stack traceback:
+[1/7/2012 11:39:16] 	[C]: in function 'closeShopWindow'
+[1/7/2012 11:39:16] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 11:39:16] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 11:39:16] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 11:39:16] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[1/7/2012 11:39:34] [Error - NpcScript Interface] 
+[1/7/2012 11:39:34] (Unknown script file)
+[1/7/2012 11:39:34] Description: 
+[1/7/2012 11:39:34] attempt to call a nil value
+[1/7/2012 11:39:34] stack traceback:
+[1/7/2012 11:39:34] 	[C]: in function 'closeShopWindow'
+[1/7/2012 11:39:34] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 11:39:34] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 11:39:34] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 11:39:34] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 12:2:14] [Error - NpcScript Interface] 
+[1/7/2012 12:2:14] (Unknown script file)
+[1/7/2012 12:2:14] Description: 
+[1/7/2012 12:2:14] attempt to call a nil value
+[1/7/2012 12:2:14] stack traceback:
+
+[1/7/2012 12:3:29] [Error - NpcScript Interface] 
+[1/7/2012 12:3:29] (Unknown script file)
+[1/7/2012 12:3:29] Description: 
+[1/7/2012 12:3:29] attempt to call a nil value
+[1/7/2012 12:3:29] stack traceback:
+[1/7/2012 12:12:3] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.105.81.30)
+[1/7/2012 12:14:45] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.124.218.225)
+[1/7/2012 12:15:17] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.124.218.225)
+[1/7/2012 12:22:32] > Saving server...
+[1/7/2012 12:22:37] > SAVE: Complete in 4.29 seconds using binary-tilebased house storage.
+
+[1/7/2012 12:31:16] [Error - NpcScript Interface] 
+[1/7/2012 12:31:16] (Unknown script file)
+[1/7/2012 12:31:16] Description: 
+[1/7/2012 12:31:16] attempt to call a nil value
+[1/7/2012 12:31:16] stack traceback:
+[1/7/2012 12:31:16] 	[C]: in function 'closeShopWindow'
+[1/7/2012 12:31:16] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 12:31:16] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 12:31:16] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 12:31:16] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[1/7/2012 12:43:26] [Error - NpcScript Interface] 
+[1/7/2012 12:43:26] (Unknown script file)
+[1/7/2012 12:43:26] Description: 
+[1/7/2012 12:43:26] attempt to call a nil value
+[1/7/2012 12:43:26] stack traceback:
+[1/7/2012 12:43:46] > 0 mods were loaded.
+
+[1/7/2012 12:44:7] [Error - NpcScript Interface] 
+[1/7/2012 12:44:7] (Unknown script file)
+[1/7/2012 12:44:7] Description: 
+[1/7/2012 12:44:7] attempt to call a nil value
+[1/7/2012 12:44:7] stack traceback:
+
+[1/7/2012 12:45:24] [Error - NpcScript Interface] 
+[1/7/2012 12:45:24] (Unknown script file)
+[1/7/2012 12:45:24] Description: 
+[1/7/2012 12:45:24] attempt to call a nil value
+[1/7/2012 12:45:24] stack traceback:
+[1/7/2012 12:45:43] > 0 mods were loaded.
+
+[1/7/2012 12:45:55] [Error - NpcScript Interface] 
+[1/7/2012 12:45:55] (Unknown script file)
+[1/7/2012 12:45:55] Description: 
+[1/7/2012 12:45:55] attempt to call a nil value
+[1/7/2012 12:45:55] stack traceback:
+[1/7/2012 12:45:55] 	[C]: in function 'closeShopWindow'
+[1/7/2012 12:45:55] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 12:45:55] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 12:45:55] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 12:45:55] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[1/7/2012 12:55:55] [Error - NpcScript Interface] 
+[1/7/2012 12:55:55] (Unknown script file)
+[1/7/2012 12:55:55] Description: 
+[1/7/2012 12:55:55] attempt to call a nil value
+[1/7/2012 12:55:55] stack traceback:
+
+[1/7/2012 13:0:19] [Error - NpcScript Interface] 
+[1/7/2012 13:0:19] (Unknown script file)
+[1/7/2012 13:0:19] Description: 
+[1/7/2012 13:0:19] attempt to call a nil value
+[1/7/2012 13:0:19] stack traceback:
+
+[1/7/2012 13:0:20] [Error - NpcScript Interface] 
+[1/7/2012 13:0:20] (Unknown script file)
+[1/7/2012 13:0:20] Description: 
+[1/7/2012 13:0:20] attempt to call a nil value
+[1/7/2012 13:0:20] stack traceback:
+
+[1/7/2012 13:9:30] [Error - NpcScript Interface] 
+[1/7/2012 13:9:30] (Unknown script file)
+[1/7/2012 13:9:30] Description: 
+[1/7/2012 13:9:30] attempt to call a nil value
+[1/7/2012 13:9:30] stack traceback:
+[1/7/2012 13:9:30] 	[C]: in function 'closeShopWindow'
+[1/7/2012 13:9:30] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 13:9:30] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 13:9:30] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 13:9:30] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 13:11:37] [Error - NpcScript Interface] 
+[1/7/2012 13:11:37] (Unknown script file)
+[1/7/2012 13:11:37] Description: 
+[1/7/2012 13:11:37] attempt to call a nil value
+[1/7/2012 13:11:37] stack traceback:
+[1/7/2012 13:11:37] 	[C]: in function 'closeShopWindow'
+[1/7/2012 13:11:37] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 13:11:37] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 13:11:37] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 13:11:37] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 13:19:9] [Error - NpcScript Interface] 
+[1/7/2012 13:19:9] (Unknown script file)
+[1/7/2012 13:19:9] Description: 
+[1/7/2012 13:19:9] attempt to call a nil value
+[1/7/2012 13:19:9] stack traceback:
+[1/7/2012 13:19:9] 	[C]: in function 'closeShopWindow'
+[1/7/2012 13:19:9] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 13:19:9] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 13:19:9] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 13:19:9] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 13:20:1] [Error - NpcScript Interface] 
+[1/7/2012 13:20:1] (Unknown script file)
+[1/7/2012 13:20:1] Description: 
+[1/7/2012 13:20:1] attempt to call a nil value
+[1/7/2012 13:20:1] stack traceback:
+[1/7/2012 13:20:1] 	[C]: in function 'closeShopWindow'
+[1/7/2012 13:20:1] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 13:20:1] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 13:20:1] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 13:20:1] 	data/npc/scripts/game/bless/bless4.lua:9: in function <data/npc/scripts/game/bless/bless4.lua:9>
+
+[1/7/2012 13:20:4] [Error - NpcScript Interface] 
+[1/7/2012 13:20:4] (Unknown script file)
+[1/7/2012 13:20:4] Description: 
+[1/7/2012 13:20:4] attempt to call a nil value
+[1/7/2012 13:20:4] stack traceback:
+[1/7/2012 13:22:33] > Saving server...
+[1/7/2012 13:22:37] > SAVE: Complete in 4.157 seconds using binary-tilebased house storage.
+
+[1/7/2012 13:41:52] [Error - NpcScript Interface] 
+[1/7/2012 13:41:52] (Unknown script file)
+[1/7/2012 13:41:52] Description: 
+[1/7/2012 13:41:52] attempt to call a nil value
+[1/7/2012 13:41:52] stack traceback:
+[1/7/2012 13:41:52] 	[C]: in function 'closeShopWindow'
+[1/7/2012 13:41:52] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 13:41:52] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 13:41:52] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 13:41:52] 	data/npc/scripts/game/salazart.joia.lua:9: in function <data/npc/scripts/game/salazart.joia.lua:9>
+
+[1/7/2012 13:42:36] [Error - NpcScript Interface] 
+[1/7/2012 13:42:36] (Unknown script file)
+[1/7/2012 13:42:36] Description: 
+[1/7/2012 13:42:36] attempt to call a nil value
+[1/7/2012 13:42:36] stack traceback:
+[1/7/2012 13:42:36] 	[C]: in function 'closeShopWindow'
+[1/7/2012 13:42:36] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 13:42:36] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 13:42:36] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 13:42:36] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 13:46:2] [Error - NpcScript Interface] 
+[1/7/2012 13:46:2] (Unknown script file)
+[1/7/2012 13:46:2] Description: 
+[1/7/2012 13:46:2] attempt to call a nil value
+[1/7/2012 13:46:2] stack traceback:
+[1/7/2012 13:46:2] 	[C]: in function 'closeShopWindow'
+[1/7/2012 13:46:2] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 13:46:2] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 13:46:2] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 13:46:2] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 13:46:43] [Error - NpcScript Interface] 
+[1/7/2012 13:46:43] (Unknown script file)
+[1/7/2012 13:46:43] Description: 
+[1/7/2012 13:46:43] attempt to call a nil value
+[1/7/2012 13:46:43] stack traceback:
+[1/7/2012 13:46:43] 	[C]: in function 'closeShopWindow'
+[1/7/2012 13:46:43] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 13:46:43] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 13:46:43] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 13:46:43] 	data/npc/scripts/game/rashid.lua:9: in function <data/npc/scripts/game/rashid.lua:9>
+
+[1/7/2012 13:54:19] [Error - NpcScript Interface] 
+[1/7/2012 13:54:19] (Unknown script file)
+[1/7/2012 13:54:19] Description: 
+[1/7/2012 13:54:19] attempt to call a nil value
+[1/7/2012 13:54:19] stack traceback:
+[1/7/2012 13:54:19] 	[C]: in function 'closeShopWindow'
+[1/7/2012 13:54:19] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 13:54:19] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 13:54:19] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 13:54:19] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[1/7/2012 13:54:23] [Error - Raid Interface] 
+[1/7/2012 13:54:23] 	startRaid("necropharus")
+[1/7/2012 13:54:23] 	
+[1/7/2012 13:54:23] Description: 
+[1/7/2012 13:54:23] data/lib/darghos/functions.lua:693: attempt to index local 'file' (a nil value)
+
+[1/7/2012 13:58:30] [Error - NpcScript Interface] 
+[1/7/2012 13:58:30] (Unknown script file)
+[1/7/2012 13:58:30] Description: 
+[1/7/2012 13:58:30] attempt to call a nil value
+[1/7/2012 13:58:30] stack traceback:
+[1/7/2012 13:58:30] 	[C]: in function 'closeShopWindow'
+[1/7/2012 13:58:30] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 13:58:30] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 13:58:30] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 13:58:30] 	data/npc/scripts/game/salazart.joia.lua:9: in function <data/npc/scripts/game/salazart.joia.lua:9>
+
+[1/7/2012 14:3:48] [Error - NpcScript Interface] 
+[1/7/2012 14:3:48] (Unknown script file)
+[1/7/2012 14:3:48] Description: 
+[1/7/2012 14:3:48] attempt to call a nil value
+[1/7/2012 14:3:48] stack traceback:
+[1/7/2012 14:3:48] 	[C]: in function 'closeShopWindow'
+[1/7/2012 14:3:48] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 14:3:48] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 14:3:48] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 14:3:48] 	data/npc/scripts/game/rashid.lua:9: in function <data/npc/scripts/game/rashid.lua:9>
+
+[1/7/2012 14:11:15] [Error - NpcScript Interface] 
+[1/7/2012 14:11:15] (Unknown script file)
+[1/7/2012 14:11:15] Description: 
+[1/7/2012 14:11:15] attempt to call a nil value
+[1/7/2012 14:11:15] stack traceback:
+[1/7/2012 14:11:15] 	[C]: in function 'closeShopWindow'
+[1/7/2012 14:11:15] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 14:11:15] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 14:11:15] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 14:11:15] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[1/7/2012 14:11:32] > Paying houses...
+[1/7/2012 14:11:32] Houses paid in 0.01 seconds.
+[1/7/2012 14:11:32] > Saving server...
+[1/7/2012 14:11:32] > SAVE: Complete in 0.424 seconds using binary-tilebased house storage.
+[1/7/2012 14:11:32] Preparing to shutdown the server- done.
+[1/7/2012 14:41:0] > Using MD5 encryption
+[1/7/2012 14:41:0] >> Loading RSA key
+[1/7/2012 14:41:0] >> Starting SQL connection
+
+[1/7/2012 14:41:0] > WARNING: Outdated MySQL server detected, consider upgrading to a newer version.
+[1/7/2012 14:41:0] >> Running Database Manager
+[1/7/2012 14:41:0] >> Loading items (OTB)
+[1/7/2012 14:41:1] >> Loading items (XML)
+[1/7/2012 14:41:1] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[1/7/2012 14:41:1] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[1/7/2012 14:41:1] >> Loading groups
+[1/7/2012 14:41:1] >> Loading vocations
+[1/7/2012 14:41:1] >> Loading outfits
+[1/7/2012 14:41:1] >> Loading chat channels
+[1/7/2012 14:41:1] >> Loading script systems
+[1/7/2012 14:41:3] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[1/7/2012 14:41:3] >> Loading mods...
+[1/7/2012 14:41:3] > 0 mods were loaded.
+[1/7/2012 14:41:3] >> Loading experience stages
+[1/7/2012 14:41:3] >> Loading monsters
+[1/7/2012 14:41:4] >> Loading map and spawns...
+[1/7/2012 14:41:6] > Map size: 5000x5000.
+[1/7/2012 14:41:6] > Map descriptions: 
+[1/7/2012 14:41:6] "Saved with Remere's Map Editor 2.1"
+[1/7/2012 14:41:6] "SimOne MapEditor 0.5.5"
+[1/7/2012 14:41:7] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1070/1121/6
+[1/7/2012 14:41:7] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1070/1129/6
+[1/7/2012 14:41:7] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1073/1121/6
+[1/7/2012 14:41:7] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1073/1129/6
+[1/7/2012 14:41:7] Duplicate uniqueId 6401
+[1/7/2012 14:41:7] Duplicate uniqueId 6401
+[1/7/2012 14:41:8] Duplicate uniqueId 6401
+[1/7/2012 14:41:8] Duplicate uniqueId 6401
+[1/7/2012 14:41:8] Duplicate uniqueId 6401
+[1/7/2012 14:41:8] Duplicate uniqueId 6401
+[1/7/2012 14:41:10] Duplicate uniqueId 6401
+[1/7/2012 14:41:10] Duplicate uniqueId 6401
+[1/7/2012 14:41:11] Duplicate uniqueId 2004
+[1/7/2012 14:41:11] Duplicate uniqueId 2005
+[1/7/2012 14:41:11] Duplicate uniqueId 2006
+[1/7/2012 14:41:11] Duplicate uniqueId 2007
+[1/7/2012 14:41:12] Duplicate uniqueId 6401
+[1/7/2012 14:41:12] Duplicate uniqueId 6401
+[1/7/2012 14:41:12] Duplicate uniqueId 6401
+[1/7/2012 14:41:13] Duplicate uniqueId 6400
+[1/7/2012 14:41:13] Duplicate uniqueId 6401
+[1/7/2012 14:41:13] Duplicate uniqueId 2056
+[1/7/2012 14:41:13] Duplicate uniqueId 2057
+[1/7/2012 14:41:13] Duplicate uniqueId 2058
+[1/7/2012 14:41:13] Duplicate uniqueId 2051
+[1/7/2012 14:41:13] Duplicate uniqueId 2052
+[1/7/2012 14:41:13] Duplicate uniqueId 2053
+[1/7/2012 14:41:13] Duplicate uniqueId 2054
+[1/7/2012 14:41:13] > Map loading time: 8.667 seconds.
+[1/7/2012 14:41:13] [Spawn::addMonster] Cannot find "Butterfly"
+[1/7/2012 14:41:13] [Spawn::addMonster] Cannot find "Butterfly"
+[1/7/2012 14:41:14] > Data parsing time: 0.778 seconds.
+[1/7/2012 14:41:39] > Houses synchronization time: 25.525 seconds.
+[1/7/2012 14:41:39] > Content unserialization time: 0.016 seconds.
+[1/7/2012 14:41:39] >> Checking world type... Open PvP
+[1/7/2012 14:41:39] >> Initializing game state and binding services...
+[1/7/2012 14:41:42] > Global IP address: 184.173.128.212
+[1/7/2012 14:41:42] > Bound ports: 7577	7578	
+[1/7/2012 14:41:42] >> Everything smells good, server is starting up...
+[1/7/2012 14:41:42] [DDOS EMERGENCY] Enabled
+>> UltraX server Online!
+[1/7/2012 14:41:42] [DDOS EMERGENCY] Enabled
+>> UltraX server Online!
+
+
+[1/7/2012 14:44:37] [Error - NpcScript Interface] 
+[1/7/2012 14:44:37] (Unknown script file)
+[1/7/2012 14:44:37] Description: 
+[1/7/2012 14:44:37] attempt to call a nil value
+[1/7/2012 14:44:37] stack traceback:
+
+[1/7/2012 14:48:10] [Error - NpcScript Interface] 
+[1/7/2012 14:48:10] (Unknown script file)
+[1/7/2012 14:48:10] Description: 
+[1/7/2012 14:48:10] attempt to call a nil value
+[1/7/2012 14:48:10] stack traceback:
+[1/7/2012 14:48:10] 	[C]: in function 'closeShopWindow'
+[1/7/2012 14:48:10] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 14:48:10] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 14:48:10] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 14:48:10] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 14:52:59] [Error - NpcScript Interface] 
+[1/7/2012 14:52:59] (Unknown script file)
+[1/7/2012 14:52:59] Description: 
+[1/7/2012 14:52:59] attempt to call a nil value
+[1/7/2012 14:52:59] stack traceback:
+[1/7/2012 14:52:59] 	[C]: in function 'closeShopWindow'
+[1/7/2012 14:52:59] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 14:52:59] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 14:52:59] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 14:52:59] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[1/7/2012 14:59:42] [Error - NpcScript Interface] 
+[1/7/2012 14:59:42] (Unknown script file)
+[1/7/2012 14:59:42] Description: 
+[1/7/2012 14:59:42] attempt to call a nil value
+[1/7/2012 14:59:42] stack traceback:
+[1/7/2012 14:59:42] 	[C]: in function 'closeShopWindow'
+[1/7/2012 14:59:42] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 14:59:42] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 14:59:42] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 14:59:42] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[1/7/2012 15:2:33] [Error - NpcScript Interface] 
+[1/7/2012 15:2:33] (Unknown script file)
+[1/7/2012 15:2:33] Description: 
+[1/7/2012 15:2:33] attempt to call a nil value
+[1/7/2012 15:2:33] stack traceback:
+[1/7/2012 15:2:33] 	[C]: in function 'closeShopWindow'
+[1/7/2012 15:2:33] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 15:2:33] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 15:2:33] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 15:2:33] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 15:9:50] [Error - NpcScript Interface] 
+[1/7/2012 15:9:50] (Unknown script file)
+[1/7/2012 15:9:50] Description: 
+[1/7/2012 15:9:50] attempt to call a nil value
+[1/7/2012 15:9:50] stack traceback:
+[1/7/2012 15:9:50] 	[C]: in function 'closeShopWindow'
+[1/7/2012 15:9:50] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 15:9:50] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 15:9:50] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 15:9:50] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 15:11:3] [Error - NpcScript Interface] 
+[1/7/2012 15:11:3] (Unknown script file)
+[1/7/2012 15:11:3] Description: 
+[1/7/2012 15:11:3] attempt to call a nil value
+[1/7/2012 15:11:3] stack traceback:
+[1/7/2012 15:11:3] 	[C]: in function 'closeShopWindow'
+[1/7/2012 15:11:3] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 15:11:3] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 15:11:3] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 15:11:3] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 15:38:5] [Error - NpcScript Interface] 
+[1/7/2012 15:38:5] (Unknown script file)
+[1/7/2012 15:38:5] Description: 
+[1/7/2012 15:38:5] attempt to call a nil value
+[1/7/2012 15:38:5] stack traceback:
+[1/7/2012 15:38:5] 	[C]: in function 'closeShopWindow'
+[1/7/2012 15:38:5] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 15:38:5] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 15:38:5] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 15:38:5] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[1/7/2012 15:43:3] > Saving server...
+[1/7/2012 15:43:6] > SAVE: Complete in 3.254 seconds using binary-tilebased house storage.
+
+[1/7/2012 15:48:49] [Error - NpcScript Interface] 
+[1/7/2012 15:48:49] (Unknown script file)
+[1/7/2012 15:48:49] Description: 
+[1/7/2012 15:48:49] attempt to call a nil value
+[1/7/2012 15:48:49] stack traceback:
+[1/7/2012 15:48:49] 	[C]: in function 'closeShopWindow'
+[1/7/2012 15:48:49] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 15:48:49] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 15:48:49] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 15:48:49] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 16:5:35] [Error - NpcScript Interface] 
+[1/7/2012 16:5:35] (Unknown script file)
+[1/7/2012 16:5:35] Description: 
+[1/7/2012 16:5:35] attempt to call a nil value
+[1/7/2012 16:5:35] stack traceback:
+
+[1/7/2012 16:9:44] [Error - NpcScript Interface] 
+[1/7/2012 16:9:44] (Unknown script file)
+[1/7/2012 16:9:44] Description: 
+[1/7/2012 16:9:44] attempt to call a nil value
+[1/7/2012 16:9:44] stack traceback:
+
+[1/7/2012 16:12:59] [Error - NpcScript Interface] 
+[1/7/2012 16:12:59] (Unknown script file)
+[1/7/2012 16:12:59] Description: 
+[1/7/2012 16:12:59] attempt to call a nil value
+[1/7/2012 16:12:59] stack traceback:
+
+[1/7/2012 16:14:52] [Error - NpcScript Interface] 
+[1/7/2012 16:14:52] (Unknown script file)
+[1/7/2012 16:14:52] Description: 
+[1/7/2012 16:14:52] attempt to call a nil value
+[1/7/2012 16:14:52] stack traceback:
+[1/7/2012 16:14:52] 	[C]: in function 'closeShopWindow'
+[1/7/2012 16:14:52] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 16:14:52] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 16:14:52] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 16:14:52] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[1/7/2012 16:23:40] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[1/7/2012 16:23:40] > 0 mods were loaded.
+
+[1/7/2012 16:33:4] [Error - NpcScript Interface] 
+[1/7/2012 16:33:4] (Unknown script file)
+[1/7/2012 16:33:4] Description: 
+[1/7/2012 16:33:4] attempt to call a nil value
+[1/7/2012 16:33:4] stack traceback:
+
+[1/7/2012 16:39:0] [Error - NpcScript Interface] 
+[1/7/2012 16:39:0] (Unknown script file)
+[1/7/2012 16:39:0] Description: 
+[1/7/2012 16:39:0] attempt to call a nil value
+[1/7/2012 16:39:0] stack traceback:
+[1/7/2012 16:39:0] 	[C]: in function 'closeShopWindow'
+[1/7/2012 16:39:0] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 16:39:0] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 16:39:0] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 16:39:0] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[1/7/2012 16:43:40] [Error - GlobalEvent Interface] 
+[1/7/2012 16:43:40] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 16:43:40] Description: 
+[1/7/2012 16:43:40] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 16:43:40] stack traceback:
+[1/7/2012 16:43:40] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 16:43:40] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 16:43:40] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 17:0:45] [Error - Raid Interface] 
+[1/7/2012 17:0:45] 	raidLog("dracola (POI)")
+[1/7/2012 17:0:45] 	
+[1/7/2012 17:0:45] Description: 
+[1/7/2012 17:0:45] data/lib/darghos/functions.lua:693: attempt to index local 'file' (a nil value)
+
+[1/7/2012 17:2:46] [Error - NpcScript Interface] 
+[1/7/2012 17:2:46] (Unknown script file)
+[1/7/2012 17:2:46] Description: 
+[1/7/2012 17:2:46] attempt to call a nil value
+[1/7/2012 17:2:46] stack traceback:
+[1/7/2012 17:2:46] 	[C]: in function 'closeShopWindow'
+[1/7/2012 17:2:46] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 17:2:46] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 17:2:46] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 17:2:46] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 17:3:40] [Error - GlobalEvent Interface] 
+[1/7/2012 17:3:40] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 17:3:40] Description: 
+[1/7/2012 17:3:40] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 17:3:40] stack traceback:
+[1/7/2012 17:3:40] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 17:3:40] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 17:3:40] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 17:23:38] [Error - NpcScript Interface] 
+[1/7/2012 17:23:38] (Unknown script file)
+[1/7/2012 17:23:38] Description: 
+[1/7/2012 17:23:38] attempt to call a nil value
+[1/7/2012 17:23:38] stack traceback:
+[1/7/2012 17:23:38] 	[C]: in function 'closeShopWindow'
+[1/7/2012 17:23:38] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 17:23:38] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 17:23:38] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 17:23:38] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+[1/7/2012 17:25:40] > Saving server...
+[1/7/2012 17:25:44] > SAVE: Complete in 4.295 seconds using binary-tilebased house storage.
+
+[1/7/2012 17:27:15] [Error - NpcScript Interface] 
+[1/7/2012 17:27:15] (Unknown script file)
+[1/7/2012 17:27:15] Description: 
+[1/7/2012 17:27:15] attempt to call a nil value
+[1/7/2012 17:27:15] stack traceback:
+[1/7/2012 17:27:15] 	[C]: in function 'closeShopWindow'
+[1/7/2012 17:27:15] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 17:27:15] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 17:27:15] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 17:27:15] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[1/7/2012 17:29:17] [Error - NpcScript Interface] 
+[1/7/2012 17:29:17] (Unknown script file)
+[1/7/2012 17:29:17] Description: 
+[1/7/2012 17:29:17] attempt to call a nil value
+[1/7/2012 17:29:17] stack traceback:
+[1/7/2012 17:29:17] 	[C]: in function 'closeShopWindow'
+[1/7/2012 17:29:17] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 17:29:17] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 17:29:17] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 17:29:17] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 17:36:48] [Error - NpcScript Interface] 
+[1/7/2012 17:36:48] (Unknown script file)
+[1/7/2012 17:36:48] Description: 
+[1/7/2012 17:36:48] attempt to call a nil value
+[1/7/2012 17:36:48] stack traceback:
+[1/7/2012 17:36:48] 	[C]: in function 'closeShopWindow'
+[1/7/2012 17:36:48] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 17:36:48] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 17:36:48] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 17:36:48] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 17:43:40] [Error - GlobalEvent Interface] 
+[1/7/2012 17:43:40] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 17:43:40] Description: 
+[1/7/2012 17:43:40] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 17:43:40] stack traceback:
+[1/7/2012 17:43:40] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 17:43:40] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 17:43:40] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 17:52:18] [Error - NpcScript Interface] 
+[1/7/2012 17:52:18] (Unknown script file)
+[1/7/2012 17:52:18] Description: 
+[1/7/2012 17:52:18] attempt to call a nil value
+[1/7/2012 17:52:18] stack traceback:
+[1/7/2012 17:52:18] 	[C]: in function 'closeShopWindow'
+[1/7/2012 17:52:18] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 17:52:18] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 17:52:18] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 17:52:18] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 18:1:21] [Error - NpcScript Interface] 
+[1/7/2012 18:1:21] (Unknown script file)
+[1/7/2012 18:1:21] Description: 
+[1/7/2012 18:1:21] attempt to call a nil value
+[1/7/2012 18:1:21] stack traceback:
+
+[1/7/2012 18:2:2] [Error - NpcScript Interface] 
+[1/7/2012 18:2:2] (Unknown script file)
+[1/7/2012 18:2:2] Description: 
+[1/7/2012 18:2:2] attempt to call a nil value
+[1/7/2012 18:2:2] stack traceback:
+[1/7/2012 18:2:2] 	[C]: in function 'closeShopWindow'
+[1/7/2012 18:2:2] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 18:2:2] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 18:2:2] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 18:2:2] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 18:3:40] [Error - GlobalEvent Interface] 
+[1/7/2012 18:3:40] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 18:3:40] Description: 
+[1/7/2012 18:3:40] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 18:3:40] stack traceback:
+[1/7/2012 18:3:40] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 18:3:40] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 18:3:40] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 18:3:48] [Error - TalkAction Interface] 
+[1/7/2012 18:3:48] data/talkactions/scripts/game/accept_teleport.lua:onSay
+[1/7/2012 18:3:48] Description: 
+[1/7/2012 18:3:48] data/talkactions/scripts/game/accept_teleport.lua:3: attempt to call global 'GetTpRequest' (a nil value)
+[1/7/2012 18:3:48] stack traceback:
+[1/7/2012 18:3:48] 	data/talkactions/scripts/game/accept_teleport.lua:3: in function <data/talkactions/scripts/game/accept_teleport.lua:1>
+
+[1/7/2012 18:20:40] [Error - NpcScript Interface] 
+[1/7/2012 18:20:40] (Unknown script file)
+[1/7/2012 18:20:40] Description: 
+[1/7/2012 18:20:40] attempt to call a nil value
+[1/7/2012 18:20:40] stack traceback:
+[1/7/2012 18:20:40] 	[C]: in function 'closeShopWindow'
+[1/7/2012 18:20:40] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 18:20:40] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 18:20:40] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 18:20:40] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+[1/7/2012 18:22:44] > 0 mods were loaded.
+
+[1/7/2012 18:23:40] [Error - GlobalEvent Interface] 
+[1/7/2012 18:23:40] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 18:23:40] Description: 
+[1/7/2012 18:23:40] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 18:23:40] stack traceback:
+[1/7/2012 18:23:40] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 18:23:40] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 18:23:40] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 18:24:27] [Error - NpcScript Interface] 
+[1/7/2012 18:24:27] (Unknown script file)
+[1/7/2012 18:24:27] Description: 
+[1/7/2012 18:24:27] attempt to call a nil value
+[1/7/2012 18:24:27] stack traceback:
+[1/7/2012 18:25:40] > Saving server...
+[1/7/2012 18:25:44] > SAVE: Complete in 4.488 seconds using binary-tilebased house storage.
+
+[1/7/2012 18:39:55] [Error - NpcScript Interface] 
+[1/7/2012 18:39:55] (Unknown script file)
+[1/7/2012 18:39:55] Description: 
+[1/7/2012 18:39:55] attempt to call a nil value
+[1/7/2012 18:39:55] stack traceback:
+[1/7/2012 18:39:55] 	[C]: ?
+
+[1/7/2012 18:43:40] [Error - GlobalEvent Interface] 
+[1/7/2012 18:43:40] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 18:43:40] Description: 
+[1/7/2012 18:43:40] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 18:43:40] stack traceback:
+[1/7/2012 18:43:40] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 18:43:40] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 18:43:40] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 18:50:12] [Error - NpcScript Interface] 
+[1/7/2012 18:50:12] (Unknown script file)
+[1/7/2012 18:50:12] Description: 
+[1/7/2012 18:50:12] attempt to call a nil value
+[1/7/2012 18:50:12] stack traceback:
+
+[1/7/2012 18:50:43] [Error - Action Interface] 
+[1/7/2012 18:50:43] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 18:50:43] Description: 
+[1/7/2012 18:50:43] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 18:51:56] [Error - NpcScript Interface] 
+[1/7/2012 18:51:56] (Unknown script file)
+[1/7/2012 18:51:56] Description: 
+[1/7/2012 18:51:56] attempt to call a nil value
+[1/7/2012 18:51:56] stack traceback:
+
+[1/7/2012 18:58:2] [Error - NpcScript Interface] 
+[1/7/2012 18:58:2] (Unknown script file)
+[1/7/2012 18:58:2] Description: 
+[1/7/2012 18:58:2] attempt to call a nil value
+[1/7/2012 18:58:2] stack traceback:
+[1/7/2012 18:58:2] 	[C]: in function 'closeShopWindow'
+[1/7/2012 18:58:2] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 18:58:2] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 18:58:2] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 18:58:2] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 19:3:40] [Error - GlobalEvent Interface] 
+[1/7/2012 19:3:40] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 19:3:40] Description: 
+[1/7/2012 19:3:40] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 19:3:40] stack traceback:
+[1/7/2012 19:3:40] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 19:3:40] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 19:3:40] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 19:7:12] [Error - NpcScript Interface] 
+[1/7/2012 19:7:12] (Unknown script file)
+[1/7/2012 19:7:12] Description: 
+[1/7/2012 19:7:12] attempt to call a nil value
+[1/7/2012 19:7:12] stack traceback:
+
+[1/7/2012 19:23:12] [Error - Action Interface] 
+[1/7/2012 19:23:12] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:23:12] Description: 
+[1/7/2012 19:23:12] (luaGetThingFromPos) Tile not found
+[1/7/2012 19:25:40] > Saving server...
+[1/7/2012 19:25:44] > SAVE: Complete in 4.594 seconds using binary-tilebased house storage.
+
+[1/7/2012 19:29:29] [Error - Action Interface] 
+[1/7/2012 19:29:29] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:29] Description: 
+[1/7/2012 19:29:29] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:30] [Error - Action Interface] 
+[1/7/2012 19:29:30] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:30] Description: 
+[1/7/2012 19:29:30] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:31] [Error - Action Interface] 
+[1/7/2012 19:29:31] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:31] Description: 
+[1/7/2012 19:29:31] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:32] [Error - Action Interface] 
+[1/7/2012 19:29:32] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:32] Description: 
+[1/7/2012 19:29:32] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:33] [Error - Action Interface] 
+[1/7/2012 19:29:33] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:33] Description: 
+[1/7/2012 19:29:33] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:34] [Error - Action Interface] 
+[1/7/2012 19:29:34] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:34] Description: 
+[1/7/2012 19:29:34] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:35] [Error - Action Interface] 
+[1/7/2012 19:29:35] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:35] Description: 
+[1/7/2012 19:29:35] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:36] [Error - Action Interface] 
+[1/7/2012 19:29:36] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:36] Description: 
+[1/7/2012 19:29:36] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:37] [Error - Action Interface] 
+[1/7/2012 19:29:37] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:37] Description: 
+[1/7/2012 19:29:37] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:38] [Error - Action Interface] 
+[1/7/2012 19:29:38] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:38] Description: 
+[1/7/2012 19:29:38] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:39] [Error - Action Interface] 
+[1/7/2012 19:29:39] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:39] Description: 
+[1/7/2012 19:29:39] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:40] [Error - Action Interface] 
+[1/7/2012 19:29:40] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:40] Description: 
+[1/7/2012 19:29:40] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:41] [Error - Action Interface] 
+[1/7/2012 19:29:41] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:41] Description: 
+[1/7/2012 19:29:41] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:42] [Error - Action Interface] 
+[1/7/2012 19:29:42] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:42] Description: 
+[1/7/2012 19:29:42] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:43] [Error - Action Interface] 
+[1/7/2012 19:29:43] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:43] Description: 
+[1/7/2012 19:29:43] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:44] [Error - Action Interface] 
+[1/7/2012 19:29:44] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:44] Description: 
+[1/7/2012 19:29:44] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:45] [Error - Action Interface] 
+[1/7/2012 19:29:45] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:45] Description: 
+[1/7/2012 19:29:45] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:46] [Error - Action Interface] 
+[1/7/2012 19:29:46] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:46] Description: 
+[1/7/2012 19:29:46] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:47] [Error - Action Interface] 
+[1/7/2012 19:29:47] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:47] Description: 
+[1/7/2012 19:29:47] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:48] [Error - Action Interface] 
+[1/7/2012 19:29:48] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:48] Description: 
+[1/7/2012 19:29:48] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:49] [Error - Action Interface] 
+[1/7/2012 19:29:49] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:49] Description: 
+[1/7/2012 19:29:49] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:50] [Error - Action Interface] 
+[1/7/2012 19:29:50] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:50] Description: 
+[1/7/2012 19:29:50] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:51] [Error - Action Interface] 
+[1/7/2012 19:29:51] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:51] Description: 
+[1/7/2012 19:29:51] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:52] [Error - Action Interface] 
+[1/7/2012 19:29:52] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:52] Description: 
+[1/7/2012 19:29:52] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:29:53] [Error - Action Interface] 
+[1/7/2012 19:29:53] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:29:53] Description: 
+[1/7/2012 19:29:53] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:31:4] [Error - NpcScript Interface] 
+[1/7/2012 19:31:4] (Unknown script file)
+[1/7/2012 19:31:4] Description: 
+[1/7/2012 19:31:4] attempt to call a nil value
+[1/7/2012 19:31:4] stack traceback:
+
+[1/7/2012 19:31:30] [Error - Action Interface] 
+[1/7/2012 19:31:30] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:31:30] Description: 
+[1/7/2012 19:31:30] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:34:16] [Error - Action Interface] 
+[1/7/2012 19:34:16] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:34:16] Description: 
+[1/7/2012 19:34:16] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:34:16] [Error - Action Interface] 
+[1/7/2012 19:34:16] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:34:16] Description: 
+[1/7/2012 19:34:16] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:34:17] [Error - Action Interface] 
+[1/7/2012 19:34:17] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:34:17] Description: 
+[1/7/2012 19:34:17] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:36:7] [Error - Action Interface] 
+[1/7/2012 19:36:7] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:36:7] Description: 
+[1/7/2012 19:36:7] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:39:43] [Error - Action Interface] 
+[1/7/2012 19:39:43] data/actions/scripts/tools/rope.lua:onUse
+[1/7/2012 19:39:43] Description: 
+[1/7/2012 19:39:43] (luaGetThingFromPos) Tile not found
+
+[1/7/2012 19:43:40] [Error - GlobalEvent Interface] 
+[1/7/2012 19:43:40] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 19:43:40] Description: 
+[1/7/2012 19:43:40] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 19:43:40] stack traceback:
+[1/7/2012 19:43:40] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 19:43:40] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 19:43:40] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 20:3:40] [Error - GlobalEvent Interface] 
+[1/7/2012 20:3:40] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 20:3:40] Description: 
+[1/7/2012 20:3:40] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 20:3:40] stack traceback:
+[1/7/2012 20:3:40] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 20:3:40] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 20:3:40] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 20:21:6] [Error - NpcScript Interface] 
+[1/7/2012 20:21:6] (Unknown script file)
+[1/7/2012 20:21:6] Description: 
+[1/7/2012 20:21:6] attempt to call a nil value
+[1/7/2012 20:21:6] stack traceback:
+[1/7/2012 20:21:6] 	[C]: in function 'closeShopWindow'
+[1/7/2012 20:21:6] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 20:21:6] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 20:21:6] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 20:21:6] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[1/7/2012 20:25:40] > Saving server...
+[1/7/2012 20:25:44] > SAVE: Complete in 4.013 seconds using binary-tilebased house storage.
+
+[1/7/2012 20:39:0] [Error - NpcScript Interface] 
+[1/7/2012 20:39:0] (Unknown script file)
+[1/7/2012 20:39:0] Description: 
+[1/7/2012 20:39:0] attempt to call a nil value
+[1/7/2012 20:39:0] stack traceback:
+[1/7/2012 20:39:0] 	[C]: in function 'closeShopWindow'
+[1/7/2012 20:39:0] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 20:39:0] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 20:39:0] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 20:39:0] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 20:40:28] [Error - NpcScript Interface] 
+[1/7/2012 20:40:28] (Unknown script file)
+[1/7/2012 20:40:28] Description: 
+[1/7/2012 20:40:28] attempt to call a nil value
+[1/7/2012 20:40:28] stack traceback:
+
+[1/7/2012 20:45:21] [Error - NpcScript Interface] 
+[1/7/2012 20:45:21] (Unknown script file)
+[1/7/2012 20:45:21] Description: 
+[1/7/2012 20:45:21] attempt to call a nil value
+[1/7/2012 20:45:21] stack traceback:
+
+[1/7/2012 20:49:44] [Error - NpcScript Interface] 
+[1/7/2012 20:49:44] (Unknown script file)
+[1/7/2012 20:49:44] Description: 
+[1/7/2012 20:49:44] attempt to call a nil value
+[1/7/2012 20:49:44] stack traceback:
+
+[1/7/2012 20:55:25] [Error - NpcScript Interface] 
+[1/7/2012 20:55:25] (Unknown script file)
+[1/7/2012 20:55:25] Description: 
+[1/7/2012 20:55:25] attempt to call a nil value
+[1/7/2012 20:55:25] stack traceback:
+
+[1/7/2012 21:1:45] [Error - Raid Interface] 
+[1/7/2012 21:1:45] 	raidLog("undeads (quendor)")
+[1/7/2012 21:1:45] 		
+[1/7/2012 21:1:45] Description: 
+[1/7/2012 21:1:45] data/lib/darghos/functions.lua:693: attempt to index local 'file' (a nil value)
+[1/7/2012 21:1:45] > Broadcasted message: "Uma escura e medonha fumaça negra começa a surgir em Quendor...".
+[1/7/2012 21:2:45] > Broadcasted message: "Morte aos mortos vivos! Preparem-se para lutar contra a morte!".
+[1/7/2012 21:3:25] > Broadcasted message: "Guerreiros saem do chão e fantasmas assombram os lares! Os mortos vivos atacam a cidade de Quendor!".
+
+[1/7/2012 21:25:2] [Error - NpcScript Interface] 
+[1/7/2012 21:25:2] (Unknown script file)
+[1/7/2012 21:25:2] Description: 
+[1/7/2012 21:25:2] attempt to call a nil value
+[1/7/2012 21:25:2] stack traceback:
+[1/7/2012 21:25:40] > Saving server...
+[1/7/2012 21:25:45] > SAVE: Complete in 4.985 seconds using binary-tilebased house storage.
+
+[1/7/2012 21:26:42] [Error - NpcScript Interface] 
+[1/7/2012 21:26:42] (Unknown script file)
+[1/7/2012 21:26:42] Description: 
+[1/7/2012 21:26:42] attempt to call a nil value
+[1/7/2012 21:26:42] stack traceback:
+[1/7/2012 21:26:42] 	[C]: in function 'closeShopWindow'
+[1/7/2012 21:26:42] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 21:26:42] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 21:26:42] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 21:26:42] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 21:27:49] [Error - NpcScript Interface] 
+[1/7/2012 21:27:49] (Unknown script file)
+[1/7/2012 21:27:49] Description: 
+[1/7/2012 21:27:49] attempt to call a nil value
+[1/7/2012 21:27:49] stack traceback:
+[1/7/2012 21:27:49] 	[C]: in function 'closeShopWindow'
+[1/7/2012 21:27:49] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 21:27:49] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 21:27:49] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 21:27:49] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 21:33:40] [Error - GlobalEvent Interface] 
+[1/7/2012 21:33:40] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 21:33:40] Description: 
+[1/7/2012 21:33:40] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 21:33:40] stack traceback:
+[1/7/2012 21:33:40] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 21:33:40] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 21:33:40] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 21:36:18] [Error - NpcScript Interface] 
+[1/7/2012 21:36:18] (Unknown script file)
+[1/7/2012 21:36:18] Description: 
+[1/7/2012 21:36:18] attempt to call a nil value
+[1/7/2012 21:36:18] stack traceback:
+[1/7/2012 21:36:18] 	[C]: in function 'closeShopWindow'
+[1/7/2012 21:36:18] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 21:36:18] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 21:36:18] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 21:36:18] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[1/7/2012 21:43:3] [Error - NpcScript Interface] 
+[1/7/2012 21:43:3] (Unknown script file)
+[1/7/2012 21:43:3] Description: 
+[1/7/2012 21:43:3] attempt to call a nil value
+[1/7/2012 21:43:3] stack traceback:
+
+[1/7/2012 21:58:27] [Error - NpcScript Interface] 
+[1/7/2012 21:58:27] (Unknown script file)
+[1/7/2012 21:58:27] Description: 
+[1/7/2012 21:58:27] attempt to call a nil value
+[1/7/2012 21:58:27] stack traceback:
+[1/7/2012 21:58:27] 	[C]: in function 'closeShopWindow'
+[1/7/2012 21:58:27] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 21:58:27] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 21:58:27] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 21:58:27] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 21:59:40] [Error - NpcScript Interface] 
+[1/7/2012 21:59:40] (Unknown script file)
+[1/7/2012 21:59:40] Description: 
+[1/7/2012 21:59:40] attempt to call a nil value
+[1/7/2012 21:59:40] stack traceback:
+
+[1/7/2012 22:22:28] [Error - NpcScript Interface] 
+[1/7/2012 22:22:28] (Unknown script file)
+[1/7/2012 22:22:28] Description: 
+[1/7/2012 22:22:28] attempt to call a nil value
+[1/7/2012 22:22:28] stack traceback:
+[1/7/2012 22:22:28] 	[C]: in function 'closeShopWindow'
+[1/7/2012 22:22:28] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 22:22:28] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 22:22:28] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 22:22:28] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[1/7/2012 22:25:40] > Saving server...
+[1/7/2012 22:25:44] > SAVE: Complete in 4.167 seconds using binary-tilebased house storage.
+
+[1/7/2012 22:31:38] [Error - NpcScript Interface] 
+[1/7/2012 22:31:38] (Unknown script file)
+[1/7/2012 22:31:38] Description: 
+[1/7/2012 22:31:38] attempt to call a nil value
+[1/7/2012 22:31:38] stack traceback:
+
+[1/7/2012 22:33:41] [Error - GlobalEvent Interface] 
+[1/7/2012 22:33:41] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 22:33:41] Description: 
+[1/7/2012 22:33:41] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 22:33:41] stack traceback:
+[1/7/2012 22:33:41] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 22:33:41] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 22:33:41] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 22:45:2] [Error - NpcScript Interface] 
+[1/7/2012 22:45:2] (Unknown script file)
+[1/7/2012 22:45:2] Description: 
+[1/7/2012 22:45:2] attempt to call a nil value
+[1/7/2012 22:45:2] stack traceback:
+[1/7/2012 22:45:2] 	[C]: in function 'closeShopWindow'
+[1/7/2012 22:45:2] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 22:45:2] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 22:45:2] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 22:45:2] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 22:54:57] [Error - NpcScript Interface] 
+[1/7/2012 22:54:57] (Unknown script file)
+[1/7/2012 22:54:57] Description: 
+[1/7/2012 22:54:57] attempt to call a nil value
+[1/7/2012 22:54:57] stack traceback:
+[1/7/2012 22:54:57] 	[C]: in function 'closeShopWindow'
+[1/7/2012 22:54:57] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 22:54:57] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 22:54:57] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 22:54:57] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 22:55:27] [Error - NpcScript Interface] 
+[1/7/2012 22:55:27] (Unknown script file)
+[1/7/2012 22:55:27] Description: 
+[1/7/2012 22:55:27] attempt to call a nil value
+[1/7/2012 22:55:27] stack traceback:
+[1/7/2012 22:55:27] 	[C]: in function 'closeShopWindow'
+[1/7/2012 22:55:27] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 22:55:27] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 22:55:27] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 22:55:27] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 22:59:7] [Error - NpcScript Interface] 
+[1/7/2012 22:59:7] (Unknown script file)
+[1/7/2012 22:59:7] Description: 
+[1/7/2012 22:59:7] attempt to call a nil value
+[1/7/2012 22:59:7] stack traceback:
+
+[1/7/2012 23:3:22] [Error - NpcScript Interface] 
+[1/7/2012 23:3:22] (Unknown script file)
+[1/7/2012 23:3:22] Description: 
+[1/7/2012 23:3:22] attempt to call a nil value
+[1/7/2012 23:3:22] stack traceback:
+[1/7/2012 23:3:22] 	[C]: in function 'closeShopWindow'
+[1/7/2012 23:3:22] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 23:3:22] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 23:3:22] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 23:3:22] 	data/npc/scripts/game/quendor.postman.lua:8: in function <data/npc/scripts/game/quendor.postman.lua:8>
+
+[1/7/2012 23:3:41] [Error - GlobalEvent Interface] 
+[1/7/2012 23:3:41] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 23:3:41] Description: 
+[1/7/2012 23:3:41] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 23:3:41] stack traceback:
+[1/7/2012 23:3:41] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 23:3:41] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 23:3:41] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 23:3:47] [Error - NpcScript Interface] 
+[1/7/2012 23:3:47] (Unknown script file)
+[1/7/2012 23:3:47] Description: 
+[1/7/2012 23:3:47] attempt to call a nil value
+[1/7/2012 23:3:47] stack traceback:
+
+[1/7/2012 23:9:6] [Error - NpcScript Interface] 
+[1/7/2012 23:9:6] (Unknown script file)
+[1/7/2012 23:9:6] Description: 
+[1/7/2012 23:9:6] attempt to call a nil value
+[1/7/2012 23:9:6] stack traceback:
+
+[1/7/2012 23:10:27] [Error - NpcScript Interface] 
+[1/7/2012 23:10:27] (Unknown script file)
+[1/7/2012 23:10:27] Description: 
+[1/7/2012 23:10:27] attempt to call a nil value
+[1/7/2012 23:10:27] stack traceback:
+
+[1/7/2012 23:11:24] [Error - NpcScript Interface] 
+[1/7/2012 23:11:24] (Unknown script file)
+[1/7/2012 23:11:24] Description: 
+[1/7/2012 23:11:24] attempt to call a nil value
+[1/7/2012 23:11:24] stack traceback:
+[1/7/2012 23:11:24] 	[C]: in function 'closeShopWindow'
+[1/7/2012 23:11:24] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 23:11:24] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 23:11:24] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 23:11:24] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[1/7/2012 23:11:41] [Error - NpcScript Interface] 
+[1/7/2012 23:11:41] (Unknown script file)
+[1/7/2012 23:11:41] Description: 
+[1/7/2012 23:11:41] attempt to call a nil value
+[1/7/2012 23:11:41] stack traceback:
+
+[1/7/2012 23:14:22] [Error - NpcScript Interface] 
+[1/7/2012 23:14:22] (Unknown script file)
+[1/7/2012 23:14:22] Description: 
+[1/7/2012 23:14:22] attempt to call a nil value
+[1/7/2012 23:14:22] stack traceback:
+[1/7/2012 23:14:22] 	[C]: in function 'closeShopWindow'
+[1/7/2012 23:14:22] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 23:14:22] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 23:14:22] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 23:14:22] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[1/7/2012 23:16:35] [Error - NpcScript Interface] 
+[1/7/2012 23:16:35] (Unknown script file)
+[1/7/2012 23:16:35] Description: 
+[1/7/2012 23:16:35] attempt to call a nil value
+[1/7/2012 23:16:35] stack traceback:
+[1/7/2012 23:16:35] 	[C]: in function 'closeShopWindow'
+[1/7/2012 23:16:35] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 23:16:35] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 23:16:35] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 23:16:35] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+[1/7/2012 23:25:40] > Saving server...
+[1/7/2012 23:25:45] > SAVE: Complete in 4.923 seconds using binary-tilebased house storage.
+
+[1/7/2012 23:26:54] [Error - NpcScript Interface] 
+[1/7/2012 23:26:54] (Unknown script file)
+[1/7/2012 23:26:54] Description: 
+[1/7/2012 23:26:54] attempt to call a nil value
+[1/7/2012 23:26:54] stack traceback:
+[1/7/2012 23:26:54] 	[C]: in function 'closeShopWindow'
+[1/7/2012 23:26:54] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 23:26:54] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 23:26:54] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 23:26:54] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[1/7/2012 23:40:46] [Error - Raid Interface] 
+[1/7/2012 23:40:46] 	startRaid("necropharus")
+[1/7/2012 23:40:46] 	
+[1/7/2012 23:40:46] Description: 
+[1/7/2012 23:40:46] data/lib/darghos/functions.lua:693: attempt to index local 'file' (a nil value)
+
+[1/7/2012 23:43:41] [Error - GlobalEvent Interface] 
+[1/7/2012 23:43:41] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 23:43:41] Description: 
+[1/7/2012 23:43:41] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 23:43:41] stack traceback:
+[1/7/2012 23:43:41] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 23:43:41] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 23:43:41] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 23:47:13] [Error - NpcScript Interface] 
+[1/7/2012 23:47:13] (Unknown script file)
+[1/7/2012 23:47:13] Description: 
+[1/7/2012 23:47:13] attempt to call a nil value
+[1/7/2012 23:47:13] stack traceback:
+[1/7/2012 23:47:13] 	[C]: in function 'closeShopWindow'
+[1/7/2012 23:47:13] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 23:47:13] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 23:47:13] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 23:47:13] 	data/npc/scripts/game/salazart.joia.lua:9: in function <data/npc/scripts/game/salazart.joia.lua:9>
+
+[1/7/2012 23:53:41] [Error - GlobalEvent Interface] 
+[1/7/2012 23:53:41] data/globalevents/scripts/game/announcements.lua:onThink
+[1/7/2012 23:53:41] Description: 
+[1/7/2012 23:53:41] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[1/7/2012 23:53:41] stack traceback:
+[1/7/2012 23:53:41] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[1/7/2012 23:53:41] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[1/7/2012 23:53:41] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[1/7/2012 23:55:48] [Error - NpcScript Interface] 
+[1/7/2012 23:55:48] (Unknown script file)
+[1/7/2012 23:55:48] Description: 
+[1/7/2012 23:55:48] attempt to call a nil value
+[1/7/2012 23:55:48] stack traceback:
+[1/7/2012 23:55:48] 	[C]: in function 'closeShopWindow'
+[1/7/2012 23:55:48] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[1/7/2012 23:55:48] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[1/7/2012 23:55:48] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[1/7/2012 23:55:48] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[2/7/2012 0:0:24] [Error - NpcScript Interface] 
+[2/7/2012 0:0:24] (Unknown script file)
+[2/7/2012 0:0:24] Description: 
+[2/7/2012 0:0:24] attempt to call a nil value
+[2/7/2012 0:0:24] stack traceback:
+
+[2/7/2012 0:2:12] [Error - NpcScript Interface] 
+[2/7/2012 0:2:12] (Unknown script file)
+[2/7/2012 0:2:12] Description: 
+[2/7/2012 0:2:12] attempt to call a nil value
+[2/7/2012 0:2:12] stack traceback:
+[2/7/2012 0:2:12] 	[C]: in function 'closeShopWindow'
+[2/7/2012 0:2:12] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 0:2:12] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 0:2:12] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 0:2:12] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[2/7/2012 0:4:45] [Error - NpcScript Interface] 
+[2/7/2012 0:4:45] (Unknown script file)
+[2/7/2012 0:4:45] Description: 
+[2/7/2012 0:4:45] attempt to call a nil value
+[2/7/2012 0:4:45] stack traceback:
+[2/7/2012 0:22:7] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 201.68.254.248)
+[2/7/2012 0:25:40] > Saving server...
+[2/7/2012 0:25:44] > SAVE: Complete in 3.862 seconds using binary-tilebased house storage.
+
+[2/7/2012 0:30:10] [Error - NpcScript Interface] 
+[2/7/2012 0:30:10] (Unknown script file)
+[2/7/2012 0:30:10] Description: 
+[2/7/2012 0:30:10] attempt to call a nil value
+[2/7/2012 0:30:10] stack traceback:
+[2/7/2012 0:30:10] 	[C]: in function 'closeShopWindow'
+[2/7/2012 0:30:10] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 0:30:10] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 0:30:10] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 0:30:10] 	data/npc/scripts/game/bless/bless4.lua:9: in function <data/npc/scripts/game/bless/bless4.lua:9>
+
+[2/7/2012 0:32:32] [Error - NpcScript Interface] 
+[2/7/2012 0:32:32] (Unknown script file)
+[2/7/2012 0:32:32] Description: 
+[2/7/2012 0:32:32] attempt to call a nil value
+[2/7/2012 0:32:32] stack traceback:
+
+[2/7/2012 0:33:41] [Error - GlobalEvent Interface] 
+[2/7/2012 0:33:41] data/globalevents/scripts/game/announcements.lua:onThink
+[2/7/2012 0:33:41] Description: 
+[2/7/2012 0:33:41] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[2/7/2012 0:33:41] stack traceback:
+[2/7/2012 0:33:41] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[2/7/2012 0:33:41] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[2/7/2012 0:33:41] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[2/7/2012 0:41:13] [Error - NpcScript Interface] 
+[2/7/2012 0:41:13] (Unknown script file)
+[2/7/2012 0:41:13] Description: 
+[2/7/2012 0:41:13] attempt to call a nil value
+[2/7/2012 0:41:13] stack traceback:
+
+[2/7/2012 0:43:41] [Error - GlobalEvent Interface] 
+[2/7/2012 0:43:41] data/globalevents/scripts/game/announcements.lua:onThink
+[2/7/2012 0:43:41] Description: 
+[2/7/2012 0:43:41] data/globalevents/scripts/game/announcements.lua:17: attempt to index global 'message' (a nil value)
+[2/7/2012 0:43:41] stack traceback:
+[2/7/2012 0:43:41] 	data/globalevents/scripts/game/announcements.lua:17: in function 'autoBroadcast'
+[2/7/2012 0:43:41] 	data/globalevents/scripts/game/announcements.lua:2: in function <data/globalevents/scripts/game/announcements.lua:1>
+[2/7/2012 0:43:41] [Error - GlobalEvents::think] Couldn't execute event: announcements
+
+[2/7/2012 0:46:4] [Error - NpcScript Interface] 
+[2/7/2012 0:46:4] (Unknown script file)
+[2/7/2012 0:46:4] Description: 
+[2/7/2012 0:46:4] attempt to call a nil value
+[2/7/2012 0:46:4] stack traceback:
+[2/7/2012 0:46:4] 	[C]: in function 'closeShopWindow'
+[2/7/2012 0:46:4] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 0:46:4] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 0:46:4] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 0:46:4] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[2/7/2012 0:46:16] [Error - NpcScript Interface] 
+[2/7/2012 0:46:16] (Unknown script file)
+[2/7/2012 0:46:16] Description: 
+[2/7/2012 0:46:16] attempt to call a nil value
+[2/7/2012 0:46:16] stack traceback:
+[2/7/2012 0:46:16] 	[C]: in function 'closeShopWindow'
+[2/7/2012 0:46:16] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 0:46:16] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 0:46:16] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 0:46:16] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[2/7/2012 0:55:6] [Error - NpcScript Interface] 
+[2/7/2012 0:55:6] (Unknown script file)
+[2/7/2012 0:55:6] Description: 
+[2/7/2012 0:55:6] attempt to call a nil value
+[2/7/2012 0:55:6] stack traceback:
+
+[2/7/2012 1:1:28] [Error - NpcScript Interface] 
+[2/7/2012 1:1:28] (Unknown script file)
+[2/7/2012 1:1:28] Description: 
+[2/7/2012 1:1:28] attempt to call a nil value
+[2/7/2012 1:1:28] stack traceback:
+[2/7/2012 1:1:28] 	[C]: in function 'closeShopWindow'
+[2/7/2012 1:1:28] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 1:1:28] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 1:1:28] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 1:1:28] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[2/7/2012 1:18:37] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[2/7/2012 1:18:37] > 0 mods were loaded.
+
+[2/7/2012 1:20:4] [Error - NpcScript Interface] 
+[2/7/2012 1:20:4] (Unknown script file)
+[2/7/2012 1:20:4] Description: 
+[2/7/2012 1:20:4] attempt to call a nil value
+[2/7/2012 1:20:4] stack traceback:
+[2/7/2012 1:20:4] 	[C]: in function 'closeShopWindow'
+[2/7/2012 1:20:4] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 1:20:4] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 1:20:4] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 1:20:4] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[2/7/2012 1:21:2] [Error - NpcScript Interface] 
+[2/7/2012 1:21:2] (Unknown script file)
+[2/7/2012 1:21:2] Description: 
+[2/7/2012 1:21:2] attempt to call a nil value
+[2/7/2012 1:21:2] stack traceback:
+
+[2/7/2012 1:32:39] [Error - NpcScript Interface] 
+[2/7/2012 1:32:39] (Unknown script file)
+[2/7/2012 1:32:39] Description: 
+[2/7/2012 1:32:39] attempt to call a nil value
+[2/7/2012 1:32:39] stack traceback:
+
+[2/7/2012 1:36:45] [Error - NpcScript Interface] 
+[2/7/2012 1:36:45] (Unknown script file)
+[2/7/2012 1:36:45] Description: 
+[2/7/2012 1:36:45] attempt to call a nil value
+[2/7/2012 1:36:45] stack traceback:
+[2/7/2012 1:36:45] 	[C]: in function 'closeShopWindow'
+[2/7/2012 1:36:45] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 1:36:45] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 1:36:45] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 1:36:45] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[2/7/2012 1:42:2] [Error - NpcScript Interface] 
+[2/7/2012 1:42:2] (Unknown script file)
+[2/7/2012 1:42:2] Description: 
+[2/7/2012 1:42:2] attempt to call a nil value
+[2/7/2012 1:42:2] stack traceback:
+[2/7/2012 1:42:2] 	[C]: in function 'closeShopWindow'
+[2/7/2012 1:42:2] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 1:42:2] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 1:42:2] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 1:42:2] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[2/7/2012 1:45:38] [Error - NpcScript Interface] 
+[2/7/2012 1:45:38] (Unknown script file)
+[2/7/2012 1:45:38] Description: 
+[2/7/2012 1:45:38] attempt to call a nil value
+[2/7/2012 1:45:38] stack traceback:
+[2/7/2012 1:45:38] 	[C]: in function 'closeShopWindow'
+[2/7/2012 1:45:38] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 1:45:38] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 1:45:38] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 1:45:38] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[2/7/2012 1:45:55] [Error - NpcScript Interface] 
+[2/7/2012 1:45:55] (Unknown script file)
+[2/7/2012 1:45:55] Description: 
+[2/7/2012 1:45:55] attempt to call a nil value
+[2/7/2012 1:45:55] stack traceback:
+
+[2/7/2012 1:58:28] [Error - NpcScript Interface] 
+[2/7/2012 1:58:28] (Unknown script file)
+[2/7/2012 1:58:28] Description: 
+[2/7/2012 1:58:28] attempt to call a nil value
+[2/7/2012 1:58:28] stack traceback:
+
+[2/7/2012 2:2:39] [Error - NpcScript Interface] 
+[2/7/2012 2:2:39] (Unknown script file)
+[2/7/2012 2:2:39] Description: 
+[2/7/2012 2:2:39] attempt to call a nil value
+[2/7/2012 2:2:39] stack traceback:
+[2/7/2012 2:2:39] 	[C]: in function 'closeShopWindow'
+[2/7/2012 2:2:39] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 2:2:39] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 2:2:39] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 2:2:39] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+[2/7/2012 2:20:37] > Saving server...
+[2/7/2012 2:20:41] > SAVE: Complete in 3.614 seconds using binary-tilebased house storage.
+
+[2/7/2012 3:6:16] [Error - NpcScript Interface] 
+[2/7/2012 3:6:16] (Unknown script file)
+[2/7/2012 3:6:16] Description: 
+[2/7/2012 3:6:16] attempt to call a nil value
+[2/7/2012 3:6:16] stack traceback:
+[2/7/2012 3:6:16] 	[C]: in function 'closeShopWindow'
+[2/7/2012 3:6:16] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 3:6:16] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 3:6:16] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 3:6:16] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[2/7/2012 3:20:12] [Error - NpcScript Interface] 
+[2/7/2012 3:20:12] (Unknown script file)
+[2/7/2012 3:20:12] Description: 
+[2/7/2012 3:20:12] attempt to call a nil value
+[2/7/2012 3:20:12] stack traceback:
+[2/7/2012 3:20:12] 	[C]: in function 'closeShopWindow'
+[2/7/2012 3:20:12] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 3:20:12] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 3:20:12] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 3:20:12] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+[2/7/2012 3:20:37] > Saving server...
+[2/7/2012 3:20:40] > SAVE: Complete in 2.707 seconds using binary-tilebased house storage.
+
+[2/7/2012 3:52:47] [Error - NpcScript Interface] 
+[2/7/2012 3:52:47] (Unknown script file)
+[2/7/2012 3:52:47] Description: 
+[2/7/2012 3:52:47] attempt to call a nil value
+[2/7/2012 3:52:47] stack traceback:
+[2/7/2012 3:52:47] 	[C]: in function 'closeShopWindow'
+[2/7/2012 3:52:47] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 3:52:47] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 3:52:47] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 3:52:47] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[2/7/2012 4:20:37] > Saving server...
+[2/7/2012 4:20:39] > SAVE: Complete in 2.261 seconds using binary-tilebased house storage.
+
+[2/7/2012 4:44:46] [Error - Raid Interface] 
+[2/7/2012 4:44:46] 	startRaid("the horned fox")
+[2/7/2012 4:44:46] 	
+[2/7/2012 4:44:46] Description: 
+[2/7/2012 4:44:46] data/lib/darghos/functions.lua:693: attempt to index local 'file' (a nil value)
+[2/7/2012 5:20:37] > Saving server...
+[2/7/2012 5:20:39] > SAVE: Complete in 2.18 seconds using binary-tilebased house storage.
+[2/7/2012 6:20:37] > Saving server...
+[2/7/2012 6:20:40] > SAVE: Complete in 3.129 seconds using binary-tilebased house storage.
+[2/7/2012 7:20:37] > Saving server...
+[2/7/2012 7:20:40] > SAVE: Complete in 2.635 seconds using binary-tilebased house storage.
+[2/7/2012 8:20:37] > Saving server...
+[2/7/2012 8:20:40] > SAVE: Complete in 2.765 seconds using binary-tilebased house storage.
+
+[2/7/2012 8:25:8] [Error - NpcScript Interface] 
+[2/7/2012 8:25:8] (Unknown script file)
+[2/7/2012 8:25:8] Description: 
+[2/7/2012 8:25:8] attempt to call a nil value
+[2/7/2012 8:25:8] stack traceback:
+[2/7/2012 8:25:8] 	[C]: in function 'closeShopWindow'
+[2/7/2012 8:25:8] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 8:25:8] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 8:25:8] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 8:25:8] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[2/7/2012 8:39:25] [Error - NpcScript Interface] 
+[2/7/2012 8:39:25] (Unknown script file)
+[2/7/2012 8:39:25] Description: 
+[2/7/2012 8:39:25] attempt to call a nil value
+[2/7/2012 8:39:25] stack traceback:
+[2/7/2012 8:39:25] 	[C]: in function 'closeShopWindow'
+[2/7/2012 8:39:25] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[2/7/2012 8:39:25] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[2/7/2012 8:39:25] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[2/7/2012 8:39:25] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[2/7/2012 9:10:14] [Error - NpcScript Interface] 
+[2/7/2012 9:10:14] (Unknown script file)
+[2/7/2012 9:10:14] Description: 
+[2/7/2012 9:10:14] attempt to call a nil value
+[2/7/2012 9:10:14] stack traceback:
+
+[2/7/2012 9:17:28] [Error - NpcScript Interface] 
+[2/7/2012 9:17:28] (Unknown script file)
+[2/7/2012 9:17:28] Description: 
+[2/7/2012 9:17:28] attempt to call a nil value
+[2/7/2012 9:17:28] stack traceback:
+[2/7/2012 9:20:37] > Saving server...
+[2/7/2012 9:20:40] > SAVE: Complete in 2.974 seconds using binary-tilebased house storage.
+
+[2/7/2012 9:34:41] [Error - NpcScript Interface] 
+[2/7/2012 9:34:41] (Unknown script file)
+[2/7/2012 9:34:41] Description: 
+[2/7/2012 9:34:41] attempt to call a nil value
+[2/7/2012 9:34:41] stack traceback:
+
+[2/7/2012 9:40:46] [Error - Raid Interface] 
+[2/7/2012 9:40:46] 	raidLog("globins (quendor)")
+[2/7/2012 9:40:46] 		
+[2/7/2012 9:40:46] Description: 
+[2/7/2012 9:40:46] data/lib/darghos/functions.lua:693: attempt to index local 'file' (a nil value)
+[2/7/2012 9:40:46] > Broadcasted message: "Um estranho exercito de Goblins está a fazer baderna no portão ao Oeste de Quendor! Mostrem a nossa força a estas pateticas criaturas!".
+[2/7/2012 10:0:9] > Paying houses...
+[2/7/2012 10:0:9] Houses paid in 0.01 seconds.
+[2/7/2012 10:0:9] > Saving server...
+[2/7/2012 10:0:9] > SAVE: Complete in 0.373 seconds using binary-tilebased house storage.
+[2/7/2012 10:0:9] Preparing to shutdown the server- done.

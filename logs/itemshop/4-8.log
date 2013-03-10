@@ -1,0 +1,51 @@
+01:17:14 | Player [Piripaky Duchavs] | Processando 1 itens a entregar....
+01:17:14 | Player [Piripaky Duchavs] | Item Data: {"log_id":203,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+01:17:14 | Player [Piripaky Duchavs] | Item Data Entregue com sucesso: {"log_id":203,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+01:17:14 | Player [Piripaky Duchavs] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+01:17:14 | Player [Piripaky Duchavs] | --------------------------------------.
+01:18:02 | Player [Daredevil Aquelemsm] | Processando 1 itens a entregar....
+01:18:02 | Player [Daredevil Aquelemsm] | Item Data: {"log_id":204,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+01:18:02 | Player [Daredevil Aquelemsm] | Item Data Entregue com sucesso: {"log_id":204,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+01:18:03 | Player [Daredevil Aquelemsm] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+01:18:03 | Player [Daredevil Aquelemsm] | --------------------------------------.
+01:18:25 | Player [Piripaky Duchavs] | Processando 1 itens a entregar....
+01:18:25 | Player [Piripaky Duchavs] | Item Data: {"log_id":205,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+01:18:25 | Player [Piripaky Duchavs] | Item Data Entregue com sucesso: {"log_id":205,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+01:18:25 | Player [Piripaky Duchavs] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+01:18:25 | Player [Piripaky Duchavs] | --------------------------------------.
+02:50:01 | Player [Bechedejijiop] | Processando 2 itens a entregar....
+02:50:01 | Player [Bechedejijiop] | Item Data: {"log_id":206,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+02:50:01 | Player [Bechedejijiop] | Item Data: {"log_id":207,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+02:50:01 | Player [Bechedejijiop] | Impossivel colocar no inventario {"log_id":206,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+02:50:01 | Player [Bechedejijiop] | Impossivel adicionar mais itens, processo abortado. Itens restantes : [{"log_id":206,"item_count":1,"item_name":"Premium Ticket - 1 semana","item_id":12696,"use_present":true,"item_action_id":0},{"log_id":207,"item_count":1,"item_name":"Premium Ticket - 1 semana","item_id":12696,"use_present":true,"item_action_id":0}].
+02:50:01 | Player [Bechedejijiop] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 2, Itens a Receber 2..
+02:50:01 | Player [Bechedejijiop] | --------------------------------------.
+02:50:24 | Player [Bechedejijiop] | Processando 2 itens a entregar....
+02:50:24 | Player [Bechedejijiop] | Item Data: {"log_id":206,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+02:50:24 | Player [Bechedejijiop] | Item Data: {"log_id":207,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+02:50:24 | Player [Bechedejijiop] | Item Data Entregue com sucesso: {"log_id":206,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+02:50:25 | Player [Bechedejijiop] | Item Data Entregue com sucesso: {"log_id":207,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+02:50:25 | Player [Bechedejijiop] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+02:50:25 | Player [Bechedejijiop] | --------------------------------------.
+05:17:59 | Player [Wax Druid] | Processando 1 itens a entregar....
+05:17:59 | Player [Wax Druid] | Item Data: {"log_id":208,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+05:17:59 | Player [Wax Druid] | Item Data Entregue com sucesso: {"log_id":208,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+05:18:00 | Player [Wax Druid] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+05:18:00 | Player [Wax Druid] | --------------------------------------.
+07:39:12 | Player [Phoeniks] | Processando 1 itens a entregar....
+07:39:12 | Player [Phoeniks] | Item Data: {"log_id":209,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+07:39:12 | Player [Phoeniks] | Item Data Entregue com sucesso: {"log_id":209,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+07:39:12 | Player [Phoeniks] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+07:39:12 | Player [Phoeniks] | --------------------------------------.
+10:21:31 | Player [Mage Underworld] | Processando 2 itens a entregar....
+10:21:31 | Player [Mage Underworld] | Item Data: {"log_id":211,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+10:21:31 | Player [Mage Underworld] | Item Data: {"log_id":212,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+10:21:31 | Player [Mage Underworld] | Item Data Entregue com sucesso: {"log_id":211,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+10:21:31 | Player [Mage Underworld] | Item Data Entregue com sucesso: {"log_id":212,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+10:21:31 | Player [Mage Underworld] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+10:21:31 | Player [Mage Underworld] | --------------------------------------.
+17:20:29 | Player [ChefeDeQuadrilhaCrew] | Processando 1 itens a entregar....
+17:20:29 | Player [ChefeDeQuadrilhaCrew] | Item Data: {"log_id":213,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:20:29 | Player [ChefeDeQuadrilhaCrew] | Item Data Entregue com sucesso: {"log_id":213,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:20:29 | Player [ChefeDeQuadrilhaCrew] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+17:20:29 | Player [ChefeDeQuadrilhaCrew] | --------------------------------------.

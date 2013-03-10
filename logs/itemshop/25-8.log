@@ -1,0 +1,10 @@
+04:41:43 | Player [Gummy Bear] | Processando 1 itens a entregar....
+04:41:43 | Player [Gummy Bear] | Item Data: {"log_id":369,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+04:41:43 | Player [Gummy Bear] | Item Data Entregue com sucesso: {"log_id":369,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+04:41:43 | Player [Gummy Bear] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+04:41:43 | Player [Gummy Bear] | --------------------------------------.
+13:36:57 | Player [Looney Ironic] | Processando 1 itens a entregar....
+13:36:57 | Player [Looney Ironic] | Item Data: {"log_id":370,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+13:36:57 | Player [Looney Ironic] | Item Data Entregue com sucesso: {"log_id":370,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+13:36:57 | Player [Looney Ironic] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+13:36:57 | Player [Looney Ironic] | --------------------------------------.

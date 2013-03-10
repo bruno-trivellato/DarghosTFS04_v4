@@ -1,0 +1,135 @@
+[15/9/2012 10:9:2] > Using MD5 encryption
+[15/9/2012 10:9:2] >> Loading RSA key
+[15/9/2012 10:9:2] >> Starting SQL connection
+
+[15/9/2012 10:9:2] > WARNING: Outdated MySQL server detected, consider upgrading to a newer version.
+[15/9/2012 10:9:2] >> Running Database Manager
+[15/9/2012 10:9:2] >> Loading items (OTB)
+[15/9/2012 10:9:2] >> Loading items (XML)
+[15/9/2012 10:9:2] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[15/9/2012 10:9:2] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[15/9/2012 10:9:2] >> Loading groups
+[15/9/2012 10:9:2] >> Loading vocations
+[15/9/2012 10:9:2] >> Loading outfits
+[15/9/2012 10:9:2] >> Loading chat channels
+[15/9/2012 10:9:2] >> Loading script systems
+[15/9/2012 10:9:4] [Error - LuaInterface::loadFile] data/globalevents/scripts/game/announcements.lua:9: unexpected symbol near ','
+[15/9/2012 10:9:4] [Warning - Event::loadScript] Cannot load script (data/globalevents/scripts/game/announcements.lua)
+[15/9/2012 10:9:4] data/globalevents/scripts/game/announcements.lua:9: unexpected symbol near ','
+[15/9/2012 10:9:4] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[15/9/2012 10:9:4] >> Loading mods...
+[15/9/2012 10:9:4] > 0 mods were loaded.
+[15/9/2012 10:9:4] >> Loading experience stages
+[15/9/2012 10:9:4] >> Loading monsters
+[15/9/2012 10:9:4] [Warning - Monsters::deserializeSpell] Frost Dragon - Unknown areaEffect: smallice
+[15/9/2012 10:9:5] >> Loading map and spawns...
+[15/9/2012 10:9:7] > Map size: 5000x5000.
+[15/9/2012 10:9:7] > Map descriptions: 
+[15/9/2012 10:9:7] "Saved with Remere's Map Editor 2.2"
+[15/9/2012 10:9:7] "SimOne MapEditor 0.5.5"
+[15/9/2012 10:9:8] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1070/1121/6
+[15/9/2012 10:9:8] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1070/1129/6
+[15/9/2012 10:9:8] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1073/1121/6
+[15/9/2012 10:9:8] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1073/1129/6
+[15/9/2012 10:9:9] Duplicate uniqueId 6401
+[15/9/2012 10:9:9] Duplicate uniqueId 6401
+[15/9/2012 10:9:12] Duplicate uniqueId 6401
+[15/9/2012 10:9:12] Duplicate uniqueId 6401
+[15/9/2012 10:9:12] Duplicate uniqueId 6401
+[15/9/2012 10:9:12] Duplicate uniqueId 6401
+[15/9/2012 10:9:16] Duplicate uniqueId 6401
+[15/9/2012 10:9:16] Duplicate uniqueId 6401
+[15/9/2012 10:9:18] Duplicate uniqueId 2004
+[15/9/2012 10:9:18] Duplicate uniqueId 2005
+[15/9/2012 10:9:18] Duplicate uniqueId 2006
+[15/9/2012 10:9:18] Duplicate uniqueId 2007
+[15/9/2012 10:9:22] Duplicate uniqueId 6401
+[15/9/2012 10:9:22] Duplicate uniqueId 6401
+[15/9/2012 10:9:22] Duplicate uniqueId 6401
+[15/9/2012 10:9:23] Duplicate uniqueId 6400
+[15/9/2012 10:9:23] Duplicate uniqueId 6401
+[15/9/2012 10:9:23] Duplicate uniqueId 2056
+[15/9/2012 10:9:23] Duplicate uniqueId 2057
+[15/9/2012 10:9:23] Duplicate uniqueId 2058
+[15/9/2012 10:9:23] Duplicate uniqueId 2051
+[15/9/2012 10:9:23] Duplicate uniqueId 2052
+[15/9/2012 10:9:23] Duplicate uniqueId 2053
+[15/9/2012 10:9:23] Duplicate uniqueId 2054
+[15/9/2012 10:9:23] > Map loading time: 18.884 seconds.
+[15/9/2012 10:9:24] [Spawn::addMonster] Cannot find "Butterfly"
+[15/9/2012 10:9:24] [Spawn::addMonster] Cannot find "Butterfly"
+[15/9/2012 10:9:25] > Data parsing time: 1.378 seconds.
+[15/9/2012 10:9:40] > Houses synchronization time: 15.617 seconds.
+[15/9/2012 10:9:41] > Content unserialization time: 0.138 seconds.
+[15/9/2012 10:9:41] >> Checking world type... Open PvP
+[15/9/2012 10:9:41] >> Initializing game state and binding services...
+[15/9/2012 10:9:42] > Global IP address: 184.173.128.212
+[15/9/2012 10:9:42] > Bound ports: 7577	7578	9215	
+[15/9/2012 10:9:42] >> Everything smells good, server is starting up...
+[15/9/2012 10:9:42] >> UltraX server Online!
+[15/9/2012 10:9:42] >> UltraX server Online!
+[DDOS EMERGENCY] Enabled
+[15/9/2012 11:11:4] > Saving server...
+[15/9/2012 11:11:4] > SAVE: Complete in 0.583 seconds using binary-tilebased house storage.
+[15/9/2012 12:11:4] > Saving server...
+[15/9/2012 12:11:5] > SAVE: Complete in 1.156 seconds using binary-tilebased house storage.
+[15/9/2012 13:11:4] > Saving server...
+[15/9/2012 13:11:5] > SAVE: Complete in 1.053 seconds using binary-tilebased house storage.
+[15/9/2012 14:11:4] > Saving server...
+[15/9/2012 14:11:5] > SAVE: Complete in 1.022 seconds using binary-tilebased house storage.
+[15/9/2012 15:11:4] > Saving server...
+[15/9/2012 15:11:5] > SAVE: Complete in 1.036 seconds using binary-tilebased house storage.
+[15/9/2012 16:11:4] > Saving server...
+[15/9/2012 16:11:5] > SAVE: Complete in 0.917 seconds using binary-tilebased house storage.
+[15/9/2012 17:11:4] > Saving server...
+[15/9/2012 17:11:5] > SAVE: Complete in 1.052 seconds using binary-tilebased house storage.
+
+[15/9/2012 17:21:39] [Error - Spell Interface] 
+[15/9/2012 17:21:39] data/spells/scripts/support/destroy_field_rune.lua:onCastSpell
+[15/9/2012 17:21:39] Description: 
+[15/9/2012 17:21:39] (luaDoRemoveItem) Item not found
+[15/9/2012 18:11:4] > Saving server...
+[15/9/2012 18:11:5] > SAVE: Complete in 1.145 seconds using binary-tilebased house storage.
+[15/9/2012 19:11:4] > Saving server...
+[15/9/2012 19:11:5] > SAVE: Complete in 1.181 seconds using binary-tilebased house storage.
+[15/9/2012 20:11:4] > Saving server...
+[15/9/2012 20:11:5] > SAVE: Complete in 1.157 seconds using binary-tilebased house storage.
+[15/9/2012 21:11:4] > Saving server...
+[15/9/2012 21:11:5] > SAVE: Complete in 0.723 seconds using binary-tilebased house storage.
+[15/9/2012 22:10:43] > Broadcasted message: "As senhoritas rebeldes planejam um ataque a quendor...".
+[15/9/2012 22:11:4] > Saving server...
+[15/9/2012 22:11:4] > SAVE: Complete in 0.513 seconds using binary-tilebased house storage.
+[15/9/2012 22:11:43] > Broadcasted message: "As amazonas estão atacando Quendor!".
+[15/9/2012 23:11:4] > Saving server...
+[15/9/2012 23:11:5] > SAVE: Complete in 1.428 seconds using binary-tilebased house storage.
+[16/9/2012 0:11:4] > Saving server...
+[16/9/2012 0:11:5] > SAVE: Complete in 0.837 seconds using binary-tilebased house storage.
+[16/9/2012 1:11:4] > Saving server...
+[16/9/2012 1:11:4] > SAVE: Complete in 0.395 seconds using binary-tilebased house storage.
+[16/9/2012 2:11:4] > Saving server...
+[16/9/2012 2:11:5] > SAVE: Complete in 0.539 seconds using binary-tilebased house storage.
+[16/9/2012 2:31:43] > Broadcasted message: "Elf Scouts have been sighted near Thorn!".
+[16/9/2012 2:34:43] > Broadcasted message: "The elves are comming to Thorn, seams to be a huge attack!".
+[16/9/2012 2:36:43] > Broadcasted message: "Thorn is under attack!".
+[16/9/2012 3:11:4] > Saving server...
+[16/9/2012 3:11:5] > SAVE: Complete in 0.51 seconds using binary-tilebased house storage.
+[16/9/2012 4:11:4] > Saving server...
+[16/9/2012 4:11:5] > SAVE: Complete in 0.582 seconds using binary-tilebased house storage.
+[16/9/2012 5:11:4] > Saving server...
+[16/9/2012 5:11:5] > SAVE: Complete in 0.47 seconds using binary-tilebased house storage.
+[16/9/2012 6:11:4] > Saving server...
+[16/9/2012 6:11:5] > SAVE: Complete in 0.568 seconds using binary-tilebased house storage.
+[16/9/2012 7:11:4] > Saving server...
+[16/9/2012 7:11:5] > SAVE: Complete in 0.463 seconds using binary-tilebased house storage.
+[16/9/2012 8:11:4] > Saving server...
+[16/9/2012 8:11:5] > SAVE: Complete in 0.618 seconds using binary-tilebased house storage.
+[16/9/2012 9:11:4] > Saving server...
+[16/9/2012 9:11:5] > SAVE: Complete in 0.498 seconds using binary-tilebased house storage.
+[16/9/2012 9:38:44] > Broadcasted message: "Uma escura e medonha fumaça negra começa a surgir em Quendor...".
+[16/9/2012 9:39:44] > Broadcasted message: "Morte aos mortos vivos! Preparem-se para lutar contra a morte!".
+[16/9/2012 9:40:24] > Broadcasted message: "Guerreiros saem do chão e fantasmas assombram os lares! Os mortos vivos atacam a cidade de Quendor!".
+[16/9/2012 10:0:0] > Paying houses...
+[16/9/2012 10:0:1] Houses paid in 0.334 seconds.
+[16/9/2012 10:0:1] > Saving server...
+[16/9/2012 10:0:1] > SAVE: Complete in 0.384 seconds using binary-tilebased house storage.
+[16/9/2012 10:0:1] Preparing to shutdown the server- done.

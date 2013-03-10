@@ -1,0 +1,56 @@
+07:02:07 | Player [Lava Brutal] | Processando 1 itens a entregar....
+07:02:07 | Player [Lava Brutal] | Item Data: {"log_id":23,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+07:02:07 | Player [Lava Brutal] | Item Data Entregue com sucesso: {"log_id":23,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+07:02:07 | Player [Lava Brutal] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+07:02:07 | Player [Lava Brutal] | --------------------------------------.
+07:03:00 | Player [Lava Brutal] | Processando 1 itens a entregar....
+07:03:00 | Player [Lava Brutal] | Item Data: {"log_id":24,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+07:03:00 | Player [Lava Brutal] | Item Data Entregue com sucesso: {"log_id":24,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+07:03:00 | Player [Lava Brutal] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+07:03:00 | Player [Lava Brutal] | --------------------------------------.
+11:39:51 | Player [Diretoria Iguin] | Processando 1 itens a entregar....
+11:39:51 | Player [Diretoria Iguin] | Item Data: {"log_id":19,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+11:39:51 | Player [Diretoria Iguin] | Item Data Entregue com sucesso: {"log_id":19,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+11:39:51 | Player [Diretoria Iguin] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+11:39:51 | Player [Diretoria Iguin] | --------------------------------------.
+13:03:36 | Player [Wax Sorcer] | Processando 1 itens a entregar....
+13:03:36 | Player [Wax Sorcer] | Item Data: {"log_id":25,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+13:03:36 | Player [Wax Sorcer] | Item Data Entregue com sucesso: {"log_id":25,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+13:03:36 | Player [Wax Sorcer] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+13:03:36 | Player [Wax Sorcer] | --------------------------------------.
+16:01:40 | Player [Wax Sorcer] | Processando 1 itens a entregar....
+16:01:40 | Player [Wax Sorcer] | Item Data: {"log_id":26,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+16:01:40 | Player [Wax Sorcer] | Item Data Entregue com sucesso: {"log_id":26,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+16:01:40 | Player [Wax Sorcer] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+16:01:40 | Player [Wax Sorcer] | --------------------------------------.
+17:04:50 | Player [Mister Phodon] | Processando 5 itens a entregar....
+17:04:50 | Player [Mister Phodon] | Item Data: {"log_id":27,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:04:50 | Player [Mister Phodon] | Item Data: {"log_id":28,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:04:50 | Player [Mister Phodon] | Item Data: {"log_id":29,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:04:50 | Player [Mister Phodon] | Item Data: {"log_id":30,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:04:50 | Player [Mister Phodon] | Item Data: {"log_id":31,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:04:50 | Player [Mister Phodon] | Item Data Entregue com sucesso: {"log_id":27,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:04:50 | Player [Mister Phodon] | Item Data Entregue com sucesso: {"log_id":28,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:04:50 | Player [Mister Phodon] | Impossivel colocar no inventario {"log_id":29,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:04:50 | Player [Mister Phodon] | Impossivel adicionar mais itens, processo abortado. Itens restantes : [null,null,{"log_id":29,"item_count":1,"item_name":"Premium Ticket - 1 semana","item_id":12696,"use_present":true,"item_action_id":0},{"log_id":30,"item_count":1,"item_name":"Premium Ticket - 1 semana","item_id":12696,"use_present":true,"item_action_id":0},{"log_id":31,"item_count":1,"item_name":"Premium Ticket - 1 semana","item_id":12696,"use_present":true,"item_action_id":0}].
+17:04:50 | Player [Mister Phodon] | Processo concluido. Resultado: Total de itens 5, Itens não recebidos 5, Itens a Receber 5..
+17:04:50 | Player [Mister Phodon] | --------------------------------------.
+17:07:01 | Player [Mister Phodon] | Processando 3 itens a entregar....
+17:07:01 | Player [Mister Phodon] | Item Data: {"log_id":29,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:07:01 | Player [Mister Phodon] | Item Data: {"log_id":30,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:07:01 | Player [Mister Phodon] | Item Data: {"log_id":31,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:07:01 | Player [Mister Phodon] | Item Data Entregue com sucesso: {"log_id":29,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:07:01 | Player [Mister Phodon] | Item Data Entregue com sucesso: {"log_id":30,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:07:01 | Player [Mister Phodon] | Item Data Entregue com sucesso: {"log_id":31,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+17:07:01 | Player [Mister Phodon] | Processo concluido. Resultado: Total de itens 3, Itens não recebidos 0, Itens a Receber 3..
+17:07:01 | Player [Mister Phodon] | --------------------------------------.
+21:13:29 | Player [Lava Brutal] | Processando 1 itens a entregar....
+21:13:29 | Player [Lava Brutal] | Item Data: {"log_id":32,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+21:13:29 | Player [Lava Brutal] | Item Data Entregue com sucesso: {"log_id":32,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+21:13:29 | Player [Lava Brutal] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+21:13:29 | Player [Lava Brutal] | --------------------------------------.
+21:29:05 | Player [Terykzot] | Processando 1 itens a entregar....
+21:29:05 | Player [Terykzot] | Item Data: {"log_id":33,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+21:29:05 | Player [Terykzot] | Item Data Entregue com sucesso: {"log_id":33,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+21:29:05 | Player [Terykzot] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+21:29:05 | Player [Terykzot] | --------------------------------------.

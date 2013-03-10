@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Sen Gan Hydra" nameDescription="a sen gan hydra" race="blood" experience="84250" speed="450" manacost="0">
+  <health now="103500" max="103500"/>
+  <look type="121" head="20" body="30" legs="40" feet="50" corpse="6048"/>
+  <targetchange interval="4000" chance="10"/>
+  <strategy attack="70" defense="30"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+	<flag lureable="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="390" attack="90"/>
+    <attack name="speed" interval="2000" chance="25" range="8" radius="6" target="1" speedchange="-300" duration="20000">
+      <attribute key="shootEffect" value="poison"/>
+      <attribute key="areaEffect" value="greenbubble"/>
+    </attack>
+    <attack name="ice" interval="2000" chance="30" length="8" spread="3" min="-435" max="-740">
+      <attribute key="areaEffect" value="bluebubble"/>
+    </attack>
+    <attack name="manadrain" interval="2000" chance="20" radius="5" target="0" min="-1115" max="-1780">
+      <attribute key="areaEffect" value="purpleenergy"/>
+    </attack>
+    <attack name="skills" interval="2000" chance="5" length="1" spread="0" maxhealthPercent="-25" duration="10000">
+      <attribute key="areaEffect" value="stun"/>
+    </attack>	
+    <attack name="earth" interval="2000" chance="30" length="8" spread="3" min="-663" max="-970">
+      <attribute key="areaEffect" value="plantattack"/>
+    </attack>
+    <attack name="ice" interval="2000" chance="30" range="7" target="1" min="-325" max="-560">
+      <attribute key="shootEffect" value="smallice"/>
+    </attack>
+  </attacks>
+  <defenses armor="65" defense="70">
+    <defense name="healing" interval="2000" chance="33" min="4300" max="6300">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+    <element physicalPercent="-5"/>
+    <element holyPercent="30"/>
+    <element icePercent="50"/>
+    <element energyPercent="-10"/>
+  </elements>
+  <immunities>
+    <immunity earth="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="FCHHHHH"/>
+    <voice sentence="HISSSS"/>
+  </voices>
+  <loot>
+	<!--
+	2.4k gps	
+	zaoan legs
+	blade of corruption
+	nightmare shield
+	necromancer shield
+	zaoan helmet
+	windborn colossus armor
+	earthborn titan armor
+	great axe
+	calamity
+	skullcrusher
+	yalahari armor
+	magic plate armor
+	royal draken mail
+	elite draken mail
+	yalahari leg piece
+	elite draken helmet
+	the devileye
+	yol's bow
+	the ironworker	
+	guardian boots
+	draken boots
+	swamplair armor
+	twiceslicer
+	shield of corruption
+	boots of haste
+	yalahari mask
+	snakegod wrist guard
+	zaoan robe
+	royal axe	
+	-->
+    <item id="2152" countmax="24" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="11304" chance="2000">
+      <!--zaoan legs-->
+    </item>
+    <item id="12649" chance="1500">
+      <!--blade of corruption-->
+    </item>
+    <item id="6433" chance="1000">
+      <!--necromancer shield-->
+    </item>
+    <item id="6391" chance="1000">
+      <!--nightmare shield-->
+    </item>		
+    <item id="11302" chance="4000">
+      <!--zaoan helmet-->
+    </item>
+    <item id="8882" chance="300">
+      <!--earthborn titan armor-->
+    </item>
+    <item id="8883" chance="300">
+      <!--windborn colossus armor-->
+    </item>		
+    <item id="8932" chance="300">
+      <!--calamity-->
+    </item>
+    <item id="9777" chance="300">
+      <!--yalahari leg piece-->
+    </item>
+    <item id="8853" chance="6000">
+      <!--ironworker-->
+    </item>
+    <item id="8852" chance="1000">
+      <!--devileye-->
+    </item>
+    <item id="8856" chance="50">
+      <!--yol's bow-->
+    </item>
+    <item id="9776" chance="600">
+      <!--yalahari armor-->
+    </item>
+    <item id="2415" chance="600">
+      <!--great axe-->
+    </item>	
+    <item id="2472" chance="10000">
+      <!--magic plate armor-->
+    </item>
+    <item id="12642" chance="1000">
+      <!--royal draken mail-->
+    </item>
+    <item id="12607" chance="2500">
+      <!--elite draken mail-->
+    </item>
+    <item id="11240" chance="1500">
+      <!--guardian boots-->
+    </item>
+    <item id="12646" chance="2000">
+      <!--draken boots-->
+    </item>
+    <item id="8880" chance="3000">
+      <!--swamplair armor-->
+    </item>
+    <item id="12613" chance="5000">
+      <!--twiceslicer-->
+    </item>
+    <item id="7434" chance="6000">
+      <!--royal axe-->
+    </item>
+    <item id="11118" chance="100">
+      <!--dragon scale boots-->
+    </item>
+   <item id="2195" chance="10000">
+      <!--boots of haste-->
+    </item>
+   <item id="9778" chance="800">
+      <!--yalahari mask-->
+    </item>
+   <item id="12647" chance="600">
+      <!--snake god's wristguard-->
+    </item>
+   <item id="11356" chance="1000">
+      <!--zaoan robe-->
+    </item>
+    <item id="12644" chance="200">
+      <!--shield of corruption-->
+    </item>
+    <item id="2214" chance="10000">
+      <!--ring of healing-->
+    </item>
+    <item id="2197" chance="8000">
+      <!--stone skin amulet-->
+    </item>
+    <item id="2155" chance="8000">
+      <!--green gem-->
+    </item>
+    <item id="2147" countmax="17" chance="7000">
+      <!--small ruby-->
+    </item>
+    <item id="2146" countmax="33" chance="11000">
+      <!--small sapphire-->
+    </item>
+  </loot>
+</monster>

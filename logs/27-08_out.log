@@ -1,0 +1,422 @@
+[27/8/2012 10:9:2] > Using MD5 encryption
+[27/8/2012 10:9:2] >> Loading RSA key
+[27/8/2012 10:9:2] >> Starting SQL connection
+
+[27/8/2012 10:9:2] > WARNING: Outdated MySQL server detected, consider upgrading to a newer version.
+[27/8/2012 10:9:2] >> Running Database Manager
+[27/8/2012 10:9:3] >> Loading items (OTB)
+[27/8/2012 10:9:3] >> Loading items (XML)
+[27/8/2012 10:9:3] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[27/8/2012 10:9:3] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[27/8/2012 10:9:3] >> Loading groups
+[27/8/2012 10:9:3] >> Loading vocations
+[27/8/2012 10:9:3] >> Loading outfits
+[27/8/2012 10:9:3] >> Loading chat channels
+[27/8/2012 10:9:3] >> Loading script systems
+[27/8/2012 10:9:5] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[27/8/2012 10:9:5] >> Loading mods...
+[27/8/2012 10:9:5] > 0 mods were loaded.
+[27/8/2012 10:9:5] >> Loading experience stages
+[27/8/2012 10:9:5] >> Loading monsters
+[27/8/2012 10:9:5] [Warning - Monsters::deserializeSpell] Frost Dragon - Unknown areaEffect: smallice
+[27/8/2012 10:9:6] >> Loading map and spawns...
+[27/8/2012 10:9:10] > Map size: 5000x5000.
+[27/8/2012 10:9:10] > Map descriptions: 
+[27/8/2012 10:9:10] "Saved with Remere's Map Editor 2.2"
+[27/8/2012 10:9:10] "SimOne MapEditor 0.5.5"
+[27/8/2012 10:9:11] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1070/1121/6
+[27/8/2012 10:9:11] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1070/1129/6
+[27/8/2012 10:9:11] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1073/1121/6
+[27/8/2012 10:9:11] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1073/1129/6
+[27/8/2012 10:9:12] Duplicate uniqueId 6401
+[27/8/2012 10:9:12] Duplicate uniqueId 6401
+[27/8/2012 10:9:15] Duplicate uniqueId 6401
+[27/8/2012 10:9:15] Duplicate uniqueId 6401
+[27/8/2012 10:9:15] Duplicate uniqueId 6401
+[27/8/2012 10:9:15] Duplicate uniqueId 6401
+[27/8/2012 10:9:20] Duplicate uniqueId 6401
+[27/8/2012 10:9:20] Duplicate uniqueId 6401
+[27/8/2012 10:9:22] Duplicate uniqueId 2004
+[27/8/2012 10:9:22] Duplicate uniqueId 2005
+[27/8/2012 10:9:22] Duplicate uniqueId 2006
+[27/8/2012 10:9:22] Duplicate uniqueId 2007
+[27/8/2012 10:9:26] Duplicate uniqueId 6401
+[27/8/2012 10:9:26] Duplicate uniqueId 6401
+[27/8/2012 10:9:26] Duplicate uniqueId 6401
+[27/8/2012 10:9:27] Duplicate uniqueId 6400
+[27/8/2012 10:9:27] Duplicate uniqueId 6401
+[27/8/2012 10:9:27] Duplicate uniqueId 2056
+[27/8/2012 10:9:27] Duplicate uniqueId 2057
+[27/8/2012 10:9:27] Duplicate uniqueId 2058
+[27/8/2012 10:9:27] Duplicate uniqueId 2051
+[27/8/2012 10:9:27] Duplicate uniqueId 2052
+[27/8/2012 10:9:27] Duplicate uniqueId 2053
+[27/8/2012 10:9:27] Duplicate uniqueId 2054
+[27/8/2012 10:9:28] > Map loading time: 21.484 seconds.
+[27/8/2012 10:9:28] [Spawn::addMonster] Cannot find "Butterfly"
+[27/8/2012 10:9:28] [Spawn::addMonster] Cannot find "Butterfly"
+[27/8/2012 10:9:29] > Data parsing time: 1.079 seconds.
+[27/8/2012 10:9:45] > Houses synchronization time: 15.977 seconds.
+[27/8/2012 10:9:45] > Content unserialization time: 0.156 seconds.
+[27/8/2012 10:9:45] >> Checking world type... Open PvP
+[27/8/2012 10:9:45] >> Initializing game state and binding services...
+[27/8/2012 10:9:48] > Global IP address: 184.173.128.212
+[27/8/2012 10:9:48] > Bound ports: 7577	7578	9215	
+[27/8/2012 10:9:48] >> Everything smells good, server is starting up...
+[27/8/2012 10:9:48] [DDOS EMERGENCY] Enabled>> 
+UltraX server Online!
+[27/8/2012 10:9:48] [DDOS EMERGENCY] Enabled>> 
+UltraX server Online!
+
+[27/8/2012 10:10:10] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 177.80.231.195)
+[27/8/2012 11:11:5] > Saving server...
+[27/8/2012 11:11:7] > SAVE: Complete in 2.642 seconds using binary-tilebased house storage.
+[27/8/2012 11:12:25] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.32.225.121)
+[27/8/2012 12:11:5] > Saving server...
+[27/8/2012 12:11:8] > SAVE: Complete in 3.316 seconds using binary-tilebased house storage.
+[27/8/2012 13:11:5] > Saving server...
+[27/8/2012 13:11:8] > SAVE: Complete in 3.327 seconds using binary-tilebased house storage.
+[27/8/2012 13:14:12] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 177.80.231.195)
+
+[27/8/2012 13:16:34] [Error - MoveEvents Interface] 
+[27/8/2012 13:16:34] In a timer event called from: 
+[27/8/2012 13:16:34] data/movements/scripts/game/teleport.lua:onStepIn
+[27/8/2012 13:16:34] Description: 
+[27/8/2012 13:16:34] (luaDoPlayerSendTextMessage) Player not found
+
+[27/8/2012 13:16:34] [Error - MoveEvents Interface] 
+[27/8/2012 13:16:34] In a timer event called from: 
+[27/8/2012 13:16:34] data/movements/scripts/game/teleport.lua:onStepIn
+[27/8/2012 13:16:34] Description: 
+[27/8/2012 13:16:34] (luaDoTeleportThing) Thing not found
+
+[27/8/2012 13:16:34] [Error - MoveEvents Interface] 
+[27/8/2012 13:16:34] In a timer event called from: 
+[27/8/2012 13:16:34] data/movements/scripts/game/teleport.lua:onStepIn
+[27/8/2012 13:16:34] Description: 
+[27/8/2012 13:16:34] (luaGetThingPosition) Thing not found
+
+[27/8/2012 13:16:34] [Error - MoveEvents Interface] 
+[27/8/2012 13:16:34] In a timer event called from: 
+[27/8/2012 13:16:34] data/movements/scripts/game/teleport.lua:onStepIn
+[27/8/2012 13:16:34] Description: 
+[27/8/2012 13:16:34] (luaGetCreatureStorage) Creature not found
+
+[27/8/2012 13:16:34] [Error - MoveEvents Interface] 
+[27/8/2012 13:16:34] In a timer event called from: 
+[27/8/2012 13:16:34] data/movements/scripts/game/teleport.lua:onStepIn
+[27/8/2012 13:16:34] Description: 
+[27/8/2012 13:16:34] (luaGetCreatureStorage) Creature not found
+
+[27/8/2012 13:16:34] [Error - MoveEvents Interface] 
+[27/8/2012 13:16:34] In a timer event called from: 
+[27/8/2012 13:16:34] data/movements/scripts/game/teleport.lua:onStepIn
+[27/8/2012 13:16:34] Description: 
+[27/8/2012 13:16:34] data/lib/darghos/arena.lua:138: attempt to index field '?' (a nil value)
+[27/8/2012 13:16:34] stack traceback:
+[27/8/2012 13:16:34] 	data/lib/darghos/arena.lua:138: in function 'onLeave'
+[27/8/2012 13:16:34] 	data/lib/darghos/arena.lua:186: in function <data/lib/darghos/arena.lua:181>
+[27/8/2012 14:11:5] > Saving server...
+[27/8/2012 14:11:9] > SAVE: Complete in 4.682 seconds using binary-tilebased house storage.
+[27/8/2012 15:11:5] > Saving server...
+[27/8/2012 15:11:9] > SAVE: Complete in 4.741 seconds using binary-tilebased house storage.
+[27/8/2012 16:11:5] > Saving server...
+[27/8/2012 16:11:10] > SAVE: Complete in 4.736 seconds using binary-tilebased house storage.
+[27/8/2012 17:11:5] > Saving server...
+[27/8/2012 17:11:10] > SAVE: Complete in 5.382 seconds using binary-tilebased house storage.
+[27/8/2012 17:39:26] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.32.225.121)
+[27/8/2012 18:10:56] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.107.182.181)
+[27/8/2012 18:11:5] > Saving server...
+[27/8/2012 18:11:12] > SAVE: Complete in 7.248 seconds using binary-tilebased house storage.
+[27/8/2012 18:11:45] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.107.182.181)
+[27/8/2012 18:12:15] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.107.182.181)
+[27/8/2012 19:11:5] > Saving server...
+[27/8/2012 19:11:14] > SAVE: Complete in 9.459 seconds using binary-tilebased house storage.
+[27/8/2012 19:12:43] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.112.210.199)
+[27/8/2012 19:13:14] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.112.210.199)
+[27/8/2012 19:13:37] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.112.210.199)
+[27/8/2012 19:14:27] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.112.210.199)
+[27/8/2012 19:14:31] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 189.112.210.199)
+
+[27/8/2012 19:17:8] [Error - Action Interface] 
+[27/8/2012 19:17:8] data/actions/scripts/tools/rope.lua:onUse
+[27/8/2012 19:17:8] Description: 
+[27/8/2012 19:17:8] (luaGetThingFromPos) Tile not found
+[27/8/2012 20:11:5] > Saving server...
+[27/8/2012 20:11:12] > SAVE: Complete in 7.175 seconds using binary-tilebased house storage.
+
+[27/8/2012 20:49:57] [Error - Action Interface] 
+[27/8/2012 20:49:57] data/actions/scripts/tools/rope.lua:onUse
+[27/8/2012 20:49:57] Description: 
+[27/8/2012 20:49:57] (luaGetThingFromPos) Tile not found
+[27/8/2012 21:11:5] > Saving server...
+[27/8/2012 21:11:11] > SAVE: Complete in 6.439 seconds using binary-tilebased house storage.
+
+[27/8/2012 21:11:27] [Error - Action Interface] 
+[27/8/2012 21:11:27] data/actions/scripts/other/windows.lua:onUse
+[27/8/2012 21:11:27] Description: 
+[27/8/2012 21:11:27] (luaGetHouseFromPos) Tile not found
+
+[27/8/2012 21:21:28] [Error - Spell Interface] 
+[27/8/2012 21:21:28] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[27/8/2012 21:21:28] Description: 
+[27/8/2012 21:21:28] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[27/8/2012 21:21:28] stack traceback:
+[27/8/2012 21:21:28] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[27/8/2012 21:21:31] [Error - Spell Interface] 
+[27/8/2012 21:21:31] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[27/8/2012 21:21:31] Description: 
+[27/8/2012 21:21:31] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[27/8/2012 21:21:31] stack traceback:
+[27/8/2012 21:21:31] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[27/8/2012 21:24:27] [Error - Spell Interface] 
+[27/8/2012 21:24:27] data/spells/scripts/support/desintegrate_rune.lua:onCastSpell
+[27/8/2012 21:24:27] Description: 
+[27/8/2012 21:24:27] data/spells/scripts/support/desintegrate_rune.lua:13: attempt to call global 'doCleanTileItemsByPos' (a nil value)
+[27/8/2012 21:24:27] stack traceback:
+[27/8/2012 21:24:27] 	data/spells/scripts/support/desintegrate_rune.lua:13: in function <data/spells/scripts/support/desintegrate_rune.lua:5>
+
+[27/8/2012 21:29:50] [Error - Action Interface] 
+[27/8/2012 21:29:50] data/actions/scripts/other/windows.lua:onUse
+[27/8/2012 21:29:50] Description: 
+[27/8/2012 21:29:50] (luaGetHouseFromPos) Tile not found
+[27/8/2012 22:11:5] > Saving server...
+[27/8/2012 22:11:12] > SAVE: Complete in 7.234 seconds using binary-tilebased house storage.
+[27/8/2012 22:23:11] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.32.225.121)
+[27/8/2012 23:11:5] > Saving server...
+[27/8/2012 23:11:11] > SAVE: Complete in 5.948 seconds using binary-tilebased house storage.
+
+[27/8/2012 23:50:18] [Error - Action Interface] 
+[27/8/2012 23:50:18] data/actions/scripts/tools/rope.lua:onUse
+[27/8/2012 23:50:18] Description: 
+[27/8/2012 23:50:18] (luaGetThingFromPos) Tile not found
+[28/8/2012 0:11:5] > Saving server...
+[28/8/2012 0:11:11] > SAVE: Complete in 5.677 seconds using binary-tilebased house storage.
+
+[28/8/2012 0:17:41] [Error - Action Interface] 
+[28/8/2012 0:17:41] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 0:17:41] Description: 
+[28/8/2012 0:17:41] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 0:22:29] [Error - Action Interface] 
+[28/8/2012 0:22:29] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 0:22:29] Description: 
+[28/8/2012 0:22:29] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 0:29:20] [Error - Action Interface] 
+[28/8/2012 0:29:20] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 0:29:20] Description: 
+[28/8/2012 0:29:20] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 0:34:26] [Error - Action Interface] 
+[28/8/2012 0:34:26] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 0:34:26] Description: 
+[28/8/2012 0:34:26] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 0:39:13] [Error - Action Interface] 
+[28/8/2012 0:39:13] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 0:39:13] Description: 
+[28/8/2012 0:39:13] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 0:45:45] [Error - Action Interface] 
+[28/8/2012 0:45:45] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 0:45:45] Description: 
+[28/8/2012 0:45:45] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 0:51:41] [Error - Action Interface] 
+[28/8/2012 0:51:41] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 0:51:41] Description: 
+[28/8/2012 0:51:41] (luaGetThingFromPos) Tile not found
+[28/8/2012 0:57:41] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 189.107.182.181)
+[28/8/2012 0:57:41] [Failure - Protocol::XTEA_decrypt] Not valid unencrypted message size (IP: 189.107.182.181)
+
+[28/8/2012 1:2:56] [Error - Action Interface] 
+[28/8/2012 1:2:56] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 1:2:56] Description: 
+[28/8/2012 1:2:56] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 1:7:58] [Error - Action Interface] 
+[28/8/2012 1:7:58] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 1:7:58] Description: 
+[28/8/2012 1:7:58] (luaGetThingFromPos) Tile not found
+[28/8/2012 1:11:5] > Saving server...
+[28/8/2012 1:11:11] > SAVE: Complete in 6.369 seconds using binary-tilebased house storage.
+
+[28/8/2012 1:12:40] [Error - Action Interface] 
+[28/8/2012 1:12:40] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 1:12:40] Description: 
+[28/8/2012 1:12:40] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 1:19:22] [Error - Action Interface] 
+[28/8/2012 1:19:22] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 1:19:22] Description: 
+[28/8/2012 1:19:22] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 1:24:24] [Error - Action Interface] 
+[28/8/2012 1:24:24] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 1:24:24] Description: 
+[28/8/2012 1:24:24] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 1:35:20] [Error - Action Interface] 
+[28/8/2012 1:35:20] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 1:35:20] Description: 
+[28/8/2012 1:35:20] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 1:57:54] [Error - Action Interface] 
+[28/8/2012 1:57:54] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 1:57:54] Description: 
+[28/8/2012 1:57:54] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 2:1:15] [Error - Action Interface] 
+[28/8/2012 2:1:15] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 2:1:15] Description: 
+[28/8/2012 2:1:15] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 2:9:46] [Error - Action Interface] 
+[28/8/2012 2:9:46] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 2:9:46] Description: 
+[28/8/2012 2:9:46] (luaGetThingFromPos) Tile not found
+[28/8/2012 2:11:5] > Saving server...
+[28/8/2012 2:11:11] > SAVE: Complete in 6.32 seconds using binary-tilebased house storage.
+
+[28/8/2012 2:43:44] [Error - Action Interface] 
+[28/8/2012 2:43:44] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 2:43:44] Description: 
+[28/8/2012 2:43:44] (luaGetThingFromPos) Tile not found
+[28/8/2012 3:11:5] > Saving server...
+[28/8/2012 3:11:11] > SAVE: Complete in 5.853 seconds using binary-tilebased house storage.
+[28/8/2012 4:11:5] > Saving server...
+[28/8/2012 4:11:10] > SAVE: Complete in 5.415 seconds using binary-tilebased house storage.
+
+[28/8/2012 4:44:18] [Error - Action Interface] 
+[28/8/2012 4:44:18] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 4:44:18] Description: 
+[28/8/2012 4:44:18] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 4:50:4] [Error - Action Interface] 
+[28/8/2012 4:50:4] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 4:50:4] Description: 
+[28/8/2012 4:50:4] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 4:54:28] [Error - Action Interface] 
+[28/8/2012 4:54:28] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 4:54:28] Description: 
+[28/8/2012 4:54:28] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 4:58:24] [Error - Action Interface] 
+[28/8/2012 4:58:24] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 4:58:24] Description: 
+[28/8/2012 4:58:24] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 5:3:42] [Error - Action Interface] 
+[28/8/2012 5:3:42] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 5:3:42] Description: 
+[28/8/2012 5:3:42] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 5:9:2] [Error - Action Interface] 
+[28/8/2012 5:9:2] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 5:9:2] Description: 
+[28/8/2012 5:9:2] (luaGetThingFromPos) Tile not found
+[28/8/2012 5:11:5] > Saving server...
+[28/8/2012 5:11:10] > SAVE: Complete in 5.122 seconds using binary-tilebased house storage.
+
+[28/8/2012 5:14:36] [Error - Action Interface] 
+[28/8/2012 5:14:36] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 5:14:36] Description: 
+[28/8/2012 5:14:36] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 5:25:15] [Error - Action Interface] 
+[28/8/2012 5:25:15] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 5:25:15] Description: 
+[28/8/2012 5:25:15] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 5:29:31] [Error - Action Interface] 
+[28/8/2012 5:29:31] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 5:29:31] Description: 
+[28/8/2012 5:29:31] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 5:33:58] [Error - Action Interface] 
+[28/8/2012 5:33:58] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 5:33:58] Description: 
+[28/8/2012 5:33:58] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 5:40:12] [Error - Action Interface] 
+[28/8/2012 5:40:12] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 5:40:12] Description: 
+[28/8/2012 5:40:12] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 5:44:51] [Error - Action Interface] 
+[28/8/2012 5:44:51] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 5:44:51] Description: 
+[28/8/2012 5:44:51] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 5:50:50] [Error - Action Interface] 
+[28/8/2012 5:50:50] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 5:50:50] Description: 
+[28/8/2012 5:50:50] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 5:54:59] [Error - Action Interface] 
+[28/8/2012 5:54:59] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 5:54:59] Description: 
+[28/8/2012 5:54:59] (luaGetThingFromPos) Tile not found
+
+[28/8/2012 6:1:46] [Error - Action Interface] 
+[28/8/2012 6:1:46] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 6:1:46] Description: 
+[28/8/2012 6:1:46] (luaGetThingFromPos) Tile not found
+[28/8/2012 6:2:13] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:4:14] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+
+[28/8/2012 6:5:56] [Error - Action Interface] 
+[28/8/2012 6:5:56] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 6:5:56] Description: 
+[28/8/2012 6:5:56] (luaGetThingFromPos) Tile not found
+[28/8/2012 6:6:16] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:8:18] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:10:19] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:11:5] > Saving server...
+[28/8/2012 6:11:10] > SAVE: Complete in 5.049 seconds using binary-tilebased house storage.
+
+[28/8/2012 6:12:7] [Error - Action Interface] 
+[28/8/2012 6:12:7] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 6:12:7] Description: 
+[28/8/2012 6:12:7] (luaGetThingFromPos) Tile not found
+[28/8/2012 6:12:21] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:14:22] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:16:24] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:18:25] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:20:27] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:22:29] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+
+[28/8/2012 6:22:46] [Error - Action Interface] 
+[28/8/2012 6:22:46] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 6:22:46] Description: 
+[28/8/2012 6:22:46] (luaGetThingFromPos) Tile not found
+[28/8/2012 6:24:31] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:26:33] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:28:35] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+
+[28/8/2012 6:28:36] [Error - Action Interface] 
+[28/8/2012 6:28:36] data/actions/scripts/tools/rope.lua:onUse
+[28/8/2012 6:28:36] Description: 
+[28/8/2012 6:28:36] (luaGetThingFromPos) Tile not found
+[28/8/2012 6:30:36] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:32:38] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:34:40] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:36:42] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:38:43] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:40:46] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 6:42:47] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 186.199.136.156)
+[28/8/2012 7:11:5] > Saving server...
+[28/8/2012 7:11:10] > SAVE: Complete in 4.877 seconds using binary-tilebased house storage.
+[28/8/2012 8:11:5] > Saving server...
+[28/8/2012 8:11:10] > SAVE: Complete in 5.352 seconds using binary-tilebased house storage.
+[28/8/2012 9:11:5] > Saving server...
+[28/8/2012 9:11:11] > SAVE: Complete in 6.121 seconds using binary-tilebased house storage.
+[28/8/2012 10:0:20] > Paying houses...
+[28/8/2012 10:0:22] Houses paid in 2.111 seconds.
+[28/8/2012 10:0:22] > Saving server...
+[28/8/2012 10:0:23] > SAVE: Complete in 0.369 seconds using binary-tilebased house storage.
+[28/8/2012 10:0:23] Preparing to shutdown the server- done.

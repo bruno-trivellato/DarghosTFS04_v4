@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monster speed="260" race="blood" skull="red" experience="17000" name="dark mage" nameDescription="an mage of dark forces">
+  <health max="17400" now="17400"/>
+  <look head="113" body="114" addons="1" legs="114" type="145" corpse="6080" feet="79"/>
+  <targetchange chance="10" interval="5000"/>
+  <strategy defense="0" attack="100"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="1"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag staticattack="70"/>
+    <flag targetdistance="5"/>
+    <flag runonhealth="600"/>
+  </flags>
+  <attacks>
+    <attack target="1" chance="26" radius="2" interval="2000" range="3" min="-120" name="fire" max="-430">
+      <attribute key="shootEffect" value="burstarrow"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack target="1" chance="10" radius="2" interval="2000" name="firefield">
+      <attribute key="shootEffect" value="burstarrow"/>
+    </attack>
+    <attack target="1" chance="35" radius="1" interval="2000" range="3" min="-170" name="energy" max="-430">
+      <attribute key="shootEffect" value="flasharrow"/>
+      <attribute key="areaEffect" value="energyarea"/>
+    </attack>
+    <attack target="1" chance="20" radius="1" interval="2000" name="energyfield">
+      <attribute key="shootEffect" value="burstarrow"/>
+    </attack>
+    <attack chance="75" interval="2000" range="5" min="-620" name="death" max="-800">
+      <attribute key="shootEffect" value="suddendeath"/>
+    </attack>
+    <attack chance="21" spread="3" interval="2000" length="5" min="-550" name="ice" max="-695">
+      <attribute key="areaEffect" value="icearea"/>
+    </attack>
+    <attack target="1" chance="44" radius="4" interval="2000" min="-260" name="earth" max="-495">
+      <attribute key="areaEffect" value="bigplants"/>
+    </attack>
+  </attacks>
+  <defenses defense="10" armor="5">
+    <defense target="1" chance="10" inteval="4000" script="monsters/random_teleport.lua"/>
+    <defense duration="6000" chance="12" interval="3000" name="invisible">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity fire="1"/>
+    <immunity lifedrain="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <elements>
+    <element earthPercent="20"/>
+    <element icePercent="20"/>
+    <element holyPercent="-15"/>
+    <element physicalPercent="-30"/>
+    <element energyPercent="25"/>
+    <element firePercent="25"/>
+    <element deathPercent="10"/>
+  </elements>
+  <voices chance="40" interval="7000">
+    <voice sentence="Pelos magos da armada negra!" yell="1"/>
+    <voice sentence="Feitiçeiros de Quendor são pateticos!"/>
+  </voices>
+  <loot>
+    <item chance="100000" id="7589" countmax="25"/>
+    <item chance="50000" id="2152" countmax="19"/>
+    <item chance="25000" id="2150" countmax="39"/>
+    <item chance="20000" id="7891"/>
+    <item chance="20000" id="2146" countmax="25"/>
+    <item chance="3333" id="7440"/>
+    <item chance="12500" id="2147" countmax="14"/>
+    <item chance="12500" id="7900"/>
+    <item chance="10000" id="7894"/>
+    <item chance="1562" id="11356"/>
+    <item chance="1562" id="11355"/>
+    <item chance="584" id="8918"/>
+    <item chance="3846" id="9933"/>
+    <item chance="2000" id="12643"/>
+  </loot>
+</monster>

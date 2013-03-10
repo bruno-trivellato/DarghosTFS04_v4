@@ -1,0 +1,59 @@
+01:19:27 | Player [Megha Mage] | Processando 9 itens a entregar....
+01:19:27 | Player [Megha Mage] | Item Data: {"log_id":117,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+01:19:27 | Player [Megha Mage] | Item Data: {"log_id":118,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+01:19:27 | Player [Megha Mage] | Item Data: {"log_id":119,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+01:19:27 | Player [Megha Mage] | Item Data: {"log_id":120,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+01:19:27 | Player [Megha Mage] | Item Data: {"log_id":121,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+01:19:27 | Player [Megha Mage] | Item Data: {"log_id":122,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+01:19:27 | Player [Megha Mage] | Item Data: {"log_id":124,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+01:19:27 | Player [Megha Mage] | Item Data: {"log_id":125,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+01:19:27 | Player [Megha Mage] | Item Data: {"log_id":126,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+01:19:27 | Player [Megha Mage] | Item Data Entregue com sucesso: {"log_id":117,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+01:19:27 | Player [Megha Mage] | Impossivel colocar no inventario {"log_id":118,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+01:19:27 | Player [Megha Mage] | Impossivel adicionar mais itens, processo abortado. Itens restantes : [null,{"log_id":118,"item_count":1,"item_name":"Premium Ticket - 1 mes","item_id":12690,"use_present":true,"item_action_id":0},{"log_id":119,"item_count":1,"item_name":"Premium Ticket - 1 mes","item_id":12690,"use_present":true,"item_action_id":0},{"log_id":120,"item_count":1,"item_name":"Premium Ticket - 1 mes","item_id":12690,"use_present":true,"item_action_id":0},{"log_id":121,"item_count":1,"item_name":"Premium Ticket - 1 mes","item_id":12690,"use_present":true,"item_action_id":0},{"log_id":122,"item_count":1,"item_name":"Premium Ticket - 1 semana","item_id":12696,"use_present":true,"item_action_id":0},{"log_id":124,"item_count":1,"item_name":"Premium Ticket - 1 semana","item_id":12696,"use_present":true,"item_action_id":0},{"log_id":125,"item_count":1,"item_name":"Premium Ticket - 1 semana","item_id":12696,"use_present":true,"item_action_id":0},{"log_id":126,"item_count":1,"item_name":"Premium Ticket - 1 semana","item_id":12696,"use_present":true,"item_action_id":0}].
+01:19:27 | Player [Megha Mage] | Processo concluido. Resultado: Total de itens 9, Itens não recebidos 9, Itens a Receber 9..
+01:19:27 | Player [Megha Mage] | --------------------------------------.
+11:39:55 | Player [Megha Mage] | Processando 8 itens a entregar....
+11:39:55 | Player [Megha Mage] | Item Data: {"log_id":118,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+11:39:55 | Player [Megha Mage] | Item Data: {"log_id":119,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+11:39:55 | Player [Megha Mage] | Item Data: {"log_id":120,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+11:39:55 | Player [Megha Mage] | Item Data: {"log_id":121,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+11:39:55 | Player [Megha Mage] | Item Data: {"log_id":122,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+11:39:55 | Player [Megha Mage] | Item Data: {"log_id":124,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+11:39:55 | Player [Megha Mage] | Item Data: {"log_id":125,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+11:39:55 | Player [Megha Mage] | Item Data: {"log_id":126,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+11:39:55 | Player [Megha Mage] | Item Data Entregue com sucesso: {"log_id":118,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+11:39:55 | Player [Megha Mage] | Item Data Entregue com sucesso: {"log_id":119,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+11:39:55 | Player [Megha Mage] | Item Data Entregue com sucesso: {"log_id":120,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+11:39:55 | Player [Megha Mage] | Item Data Entregue com sucesso: {"log_id":121,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+11:39:55 | Player [Megha Mage] | Item Data Entregue com sucesso: {"log_id":122,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+11:39:56 | Player [Megha Mage] | Item Data Entregue com sucesso: {"log_id":124,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+11:39:56 | Player [Megha Mage] | Item Data Entregue com sucesso: {"log_id":125,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+11:39:56 | Player [Megha Mage] | Item Data Entregue com sucesso: {"log_id":126,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+11:39:56 | Player [Megha Mage] | Processo concluido. Resultado: Total de itens 8, Itens não recebidos 0, Itens a Receber 8..
+11:39:56 | Player [Megha Mage] | --------------------------------------.
+13:47:09 | Player [Black Fusion] | Processando 1 itens a entregar....
+13:47:09 | Player [Black Fusion] | Item Data: {"log_id":127,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+13:47:09 | Player [Black Fusion] | Item Data Entregue com sucesso: {"log_id":127,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+13:47:09 | Player [Black Fusion] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+13:47:09 | Player [Black Fusion] | --------------------------------------.
+17:43:41 | Player [Gambazin] | Processando 1 itens a entregar....
+17:43:41 | Player [Gambazin] | Item Data: {"log_id":128,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+17:43:41 | Player [Gambazin] | Item Data Entregue com sucesso: {"log_id":128,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+17:43:42 | Player [Gambazin] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+17:43:42 | Player [Gambazin] | --------------------------------------.
+19:55:47 | Player [-Anonymous-] | Processando 1 itens a entregar....
+19:55:47 | Player [-Anonymous-] | Item Data: {"log_id":129,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+19:55:47 | Player [-Anonymous-] | Item Data Entregue com sucesso: {"log_id":129,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+19:55:47 | Player [-Anonymous-] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+19:55:47 | Player [-Anonymous-] | --------------------------------------.
+22:47:47 | Player [Mizarkowzin] | Processando 1 itens a entregar....
+22:47:47 | Player [Mizarkowzin] | Item Data: {"log_id":130,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+22:47:47 | Player [Mizarkowzin] | Item Data Entregue com sucesso: {"log_id":130,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+22:47:47 | Player [Mizarkowzin] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+22:47:47 | Player [Mizarkowzin] | --------------------------------------.
+23:04:30 | Player [Andre Imortal] | Processando 1 itens a entregar....
+23:04:30 | Player [Andre Imortal] | Item Data: {"log_id":131,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+23:04:30 | Player [Andre Imortal] | Item Data Entregue com sucesso: {"log_id":131,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+23:04:30 | Player [Andre Imortal] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+23:04:30 | Player [Andre Imortal] | --------------------------------------.

@@ -1,0 +1,32 @@
+01:23:19 | Player [Shark Boy] | Processando 1 itens a entregar....
+01:23:19 | Player [Shark Boy] | Item Data: {"log_id":110,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+01:23:19 | Player [Shark Boy] | Item Data Entregue com sucesso: {"log_id":110,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+01:23:19 | Player [Shark Boy] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+01:23:19 | Player [Shark Boy] | --------------------------------------.
+12:06:41 | Player [Dardon Star Rusha] | Processando 1 itens a entregar....
+12:06:41 | Player [Dardon Star Rusha] | Item Data: {"log_id":111,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+12:06:41 | Player [Dardon Star Rusha] | Item Data Entregue com sucesso: {"log_id":111,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+12:06:42 | Player [Dardon Star Rusha] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+12:06:42 | Player [Dardon Star Rusha] | --------------------------------------.
+15:36:37 | Player [Black Fusion] | Processando 2 itens a entregar....
+15:36:37 | Player [Black Fusion] | Item Data: {"log_id":112,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+15:36:37 | Player [Black Fusion] | Item Data: {"log_id":113,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+15:36:37 | Player [Black Fusion] | Item Data Entregue com sucesso: {"log_id":112,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+15:36:37 | Player [Black Fusion] | Item Data Entregue com sucesso: {"log_id":113,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+15:36:37 | Player [Black Fusion] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+15:36:37 | Player [Black Fusion] | --------------------------------------.
+18:27:24 | Player [Lift Lift] | Processando 1 itens a entregar....
+18:27:24 | Player [Lift Lift] | Item Data: {"log_id":114,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+18:27:24 | Player [Lift Lift] | Item Data Entregue com sucesso: {"log_id":114,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+18:27:24 | Player [Lift Lift] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+18:27:24 | Player [Lift Lift] | --------------------------------------.
+23:37:01 | Player [Waxkzin] | Processando 1 itens a entregar....
+23:37:01 | Player [Waxkzin] | Item Data: {"log_id":115,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+23:37:01 | Player [Waxkzin] | Item Data Entregue com sucesso: {"log_id":115,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+23:37:01 | Player [Waxkzin] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+23:37:01 | Player [Waxkzin] | --------------------------------------.
+23:40:40 | Player [Wax Druid] | Processando 1 itens a entregar....
+23:40:40 | Player [Wax Druid] | Item Data: {"log_id":116,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+23:40:40 | Player [Wax Druid] | Item Data Entregue com sucesso: {"log_id":116,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+23:40:40 | Player [Wax Druid] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+23:40:40 | Player [Wax Druid] | --------------------------------------.

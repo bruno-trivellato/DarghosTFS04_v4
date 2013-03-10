@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<npc name="Cryser" floorchange="0" walkinterval="2000" speed="220" script="|DATA|/game/default.lua">
+	<health now="150" max="150"/>
+	<look type="153" head="55" body="96" legs="127" feet="55" addons="3"/>
+  
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. On my {trade} you can found soft pillows for your house." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+		<parameter key="use_trade_lists" value="beds;pillows" />
+	</parameters>  
+</npc>

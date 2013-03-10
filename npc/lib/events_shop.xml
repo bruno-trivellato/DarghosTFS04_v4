@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+<interaction>
+
+    <interact event="onPlayerShopSell">
+		<response>
+			<action name="price" value="|SELLPRICE|"/>
+			<action name="script">
+			<![CDATA[
+			if(doPlayerRemoveItem(cid, _state.itemid, _state.amount) == TRUE and doPlayerAddMoney(cid, _state.price * _state.amount) == TRUE) then
+				selfSay("Here you are.", cid)
+			else
+				selfSay("Sorry, you do not have one.", cid)
+			end
+			]]>
+			</action>
+		</response>
+    </interact>
+
+	<interact event="onPlayerShopBuy">
+		<response>
+			<action name="price" value="|BUYPRICE|"/>
+			<action name="script">
+			<![CDATA[
+			if(getPlayerMoney(cid) >= _state.amount * _state.price) then
+		
+				local npcname = getNpcName()
+				
+				local inBackpack = (_state.inbackpacks == 1) and true or false
+				
+				local container = nil
+				
+				if(inBackpack) then
+					container = doCreateItemEx(1988, 1)
+				end
+				
+				if(isItemStackable(_state.itemid) == FALSE) then
+				
+					local total = _state.amount
+					local slot = 0
+					
+					if(inBackpack) then
+						local usedbackpacks = 1
+					end
+					
+					while(total > 0) do
+							
+						local itemEx = doCreateItemEx(_state.itemid)
+						
+						if(inBackpack) then
+							if(doAddContainerItemEx(container, itemEx) == LUA_ERROR) then
+								consoleLog(T_LOG_ERROR, npcname, "EventShop:parseBuyingWithBackpacks", "Cant add a item to container.", {player=getCreatureName(cid), itemid=_state.itemid, amount=_state.amount, pos=total})	
+							end
+							
+							slot = slot + 1	
+						end						
+						
+						total = total - 1
+						
+						if(inBackpack and slot == 20) then
+							doPlayerAddItemEx(cid, container, TRUE)
+							container = doCreateItemEx(1988, 1)
+							slot = 0
+							usedbackpacks = usedbackpacks + 1
+						elseif(not inBackpack) then
+						
+							doPlayerAddItemEx(cid, itemEx, TRUE)
+						end			
+					end
+					
+					if(inBackpack and slot ~= 0) then
+						doPlayerAddItemEx(cid, container, TRUE)
+					end
+				else
+							
+					local itemEx = doCreateItemEx(_state.itemid, _state.amount)
+					
+					if(inBackpack) then
+						if(doAddContainerItemEx(container, itemEx) == LUA_ERROR) then
+							consoleLog(T_LOG_ERROR, npcname, "EventShop:parseBuyingWithBackpacks", "Cant add a item (stack) to container.", {player=getCreatureName(cid), itemid=_state.itemid, amount=_state.amount})	
+						end
+					
+						doPlayerAddItemEx(cid, container, TRUE)	
+					else
+						doPlayerAddItemEx(cid, itemEx, TRUE)
+					end											
+				end
+		
+				selfSay("Here you are.", cid)
+				doPlayerRemoveMoney(cid, _state.price * _state.amount)						
+			else
+			
+				selfSay("Sorry, you do not have enough gold.", cid)
+			end	
+			]]>
+			</action>
+		</response>
+	</interact>
+	
+    <interact event="onPlayerShopClose">
+		<response text="It was a pleasure to help you."/>
+    </interact>	
+</interaction>

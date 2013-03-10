@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Ghazran" nameDescription="a ghazran" race="blood" experience="725800" speed="600" manacost="0">
+  <health now="376330" max="376330"/>
+  <look type="334" corpse="11107"/>
+  <targetchange interval="2000" chance="7"/>
+  <strategy attack="70" defense="30"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+	<flag staticattack="60"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="1200" skill="390" attack="90"/>
+    <attack name="speed" interval="2000" chance="40" range="10" radius="10" target="1" speedchange="-900" duration="20000">
+      <attribute key="areaEffect" value="sleep"/>
+    </attack>
+    <attack name="earth" interval="1200" chance="23" radius="9" target="0" min="-512" max="-754">
+      <attribute key="areaEffect" value="poison"/>
+    </attack>
+	<attack name="skills" interval="2000" chance="10" radius="7" target="1" magiclevelPercent="15" duration="20000"/>
+    <attack name="earth" interval="1200" chance="21" length="9" spread="4" min="-936" max="-1635">
+      <attribute key="areaEffect" value="plantattack"/>
+    </attack>
+    <attack name="earth" interval="1200" chance="18" radius="5" target="0" min="-775" max="-1234">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+    <attack name="manadrain" interval="1200" chance="22" radius="6" target="0" min="-1115" max="-2750">
+      <attribute key="areaEffect" value="purpleenergy"/>
+    </attack>	
+    <!-- Jamais fique de frente pro bixo -->
+    <attack name="death" interval="1200" chance="15" length="1" spread="0" min="-2430" max="-3010">
+      <attribute key="shootEffect" value="suddendeath"/>
+    </attack>
+  </attacks>
+  <defenses armor="70" defense="75">
+    <defense name="healing" interval="2000" chance="35" min="5600" max="8300">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="healing" interval="20000" chance="25" min="15000" max="20000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>	
+    <defense name="speed" interval="1000" chance="15" speedchange="900" duration="10000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+    <element physicalPercent="10"/>
+    <element deathPercent="15"/>
+    <element icePercent="-10"/>
+    <element firePercent="-20"/>
+  </elements>
+  <immunities>
+	<immunity earth="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drown="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="2000" chance="15">
+    <voice sentence="FCHHHHH"/>
+    <voice sentence="HISSSS"/>
+  </voices>
+  <loot>
+	<!--
+	8.5k gps	
+	zaoan legs
+	blade of corruption
+	nightmare shield
+	necromancer shield
+	zaoan helmet
+	windborn colossus armor
+	earthborn titan armor
+	great axe
+	demonwing axe
+	calamity
+	warlord sword
+	skullcrusher
+	yalahari armor
+	magic plate armor
+	royal draken mail
+	elite draken mail
+	yalahari leg piece
+	elite draken helmet
+	the devileye
+	yol's bow
+	the ironworker	
+	guardian boots
+	draken boots
+	swamplair armor
+	twiceslicer
+	shield of corruption
+	great shield
+	yalahari mask
+	cobra crown
+	snakegod wrist guard
+	spellbook of dark mysteries
+	zaoan robe
+	royal axe
+	royal scale robe
+	robe of ice queen
+	spellweaver's robe
+	-->	  
+    <item id="2152" countmax="85" chance1="100000">
+      <!--gold coin-->
+    </item>
+   <item id="12712" chance="1666">
+      <!--hot death legs-->
+    </item>
+   <item id="12713" chance="1666">
+      <!--hot death tiara-->
+    </item>
+   <item id="12714" chance="833">
+      <!--hot death robe-->
+    </item>
+   <item id="12715" chance="1666">
+      <!--magic cold legs-->
+    </item>
+   <item id="12716" chance="1666">
+      <!--magic cold mask-->
+    </item>
+   <item id="12717" chance="833">
+      <!--magic cold robe-->
+    </item>
+   <item id="12718" chance="1666">
+      <!--dream archer's legs-->
+    </item>
+   <item id="12719" chance="1666">
+      <!--dream archer's helmet-->
+    </item>
+   <item id="12720" chance="833">
+      <!--dream archer's armor-->
+    </item>
+   <item id="12721" chance="1666">
+      <!--heavy stomper legs-->
+    </item>
+   <item id="12722" chance="1666">
+      <!--heavy stomper helmet-->
+    </item>
+   <item id="12723" chance="833">
+      <!--heavy stomper armor-->
+    </item>	
+    <item id="11304" chance="15000">
+      <!--zaoan legs-->
+    </item>
+    <item id="12649" chance="10000">
+      <!--blade of corruption-->
+    </item>
+    <item id="6433" chance="5000">
+      <!--necromancer shield-->
+    </item>
+    <item id="6391" chance="5000">
+      <!--nightmare shield-->
+    </item>		
+    <item id="11302" chance="20000">
+      <!--zaoan helmet-->
+    </item>
+    <item id="8882" chance="1200">
+      <!--earthborn titan armor-->
+    </item>
+    <item id="8883" chance="1200">
+      <!--windborn colossus armor-->
+    </item>		
+    <item id="8932" chance="1600">
+      <!--calamity-->
+    </item>
+    <item id="2415" chance="1600">
+      <!--great axe-->
+    </item>
+    <item id="8926" chance="700">
+      <!--demonwing axe-->
+    </item>
+    <item id="2408" chance="200">
+      <!--warlord sword-->
+    </item>
+    <item id="7423" chance="1600">
+      <!--skullcrusher-->
+    </item>
+    <item id="12645" chance="1200">
+      <!--elite draken helmet-->
+    </item>
+    <item id="2522" chance="800">
+      <!--great shield-->
+    </item>
+    <item id="2523" chance="100">
+      <!--blessed shield-->
+    </item>
+    <item id="9777" chance="1600">
+      <!--yalahari leg piece-->
+    </item>
+    <item id="9776" chance="3000">
+      <!--yalahari armor-->
+    </item>	
+    <item id="8853" chance="8000">
+      <!--ironworker-->
+    </item>
+    <item id="8852" chance="3000">
+      <!--devileye-->
+    </item>
+    <item id="8856" chance="400">
+      <!--yol's bow-->
+    </item>	
+    <item id="2472" chance="33333">
+      <!--magic plate armor-->
+    </item>
+    <item id="12642" chance="5000">
+      <!--royal draken mail-->
+    </item>
+    <item id="12607" chance="8000">
+      <!--elite draken mail-->
+    </item>
+    <item id="11240" chance="7000">
+      <!--guardian boots-->
+    </item>
+    <item id="12646" chance="12000">
+      <!--draken boots-->
+    </item>
+    <item id="8880" chance="8000">
+      <!--swamplair armor-->
+    </item>
+    <item id="12613" chance="10000">
+      <!--twiceslicer-->
+    </item>
+    <item id="7434" chance="10000">
+      <!--royal axe-->
+    </item>
+    <item id="11118" chance="400">
+      <!--dragon scale boots-->
+    </item>	
+    <item id="12644" chance="400">
+      <!--shield of corruption-->
+    </item>
+   <item id="9778" chance="4000">
+      <!--yalahari mask-->
+    </item>
+   <item id="12630" chance="1200">
+      <!--cobra crown-->
+    </item>
+   <item id="12647" chance="2000">
+      <!--snake god's wristguard-->
+    </item>
+   <item id="8918" chance="5000">
+      <!--spellbook of dark mysteries-->
+    </item>
+   <item id="12643" chance="1200">
+      <!--royal scale robe-->
+    </item>
+   <item id="8866" chance="1000">
+      <!--robe of ice queen-->
+    </item>
+   <item id="11355" chance="4000">
+      <!--spellweaver robe-->
+    </item>
+   <item id="11356" chance="3000">
+      <!--zaoan robe-->
+    </item>
+   <item id="9970" countmax="11" chance="12000">
+      <!--small topaz-->
+    </item>
+   <item id="2153" chance="10000">
+      <!--violet gem-->
+    </item>
+  </loot>
+</monster>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Sen Gan Shaman" nameDescription="a sen gan shaman" race="VENOM" experience="22450" speed="420" manacost="1">
+  <health now="19475" max="19475"/>
+  <look type="340" corpse="11316"/>
+  <targetchange interval="1000" chance="10"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="4"/>
+	<flag lureable="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="5000"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="35" attack="12"/>
+    <attack name="energy" interval="500" chance="7" range="7" min="-15" max="-40">
+      <attribute key="shootEffect" value="energy"/>
+    </attack>
+    <attack name="fire" interval="500" chance="7" range="7" min="-25" max="-40">
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+    <attack name="death" interval="200" chance="20" range="7" min="-225" max="-365">
+      <attribute key="shootEffect" value="suddendeath"/>
+      <attribute key="areaEffect" value="mortarea"/>
+    </attack>
+    <attack name="poison" interval="1000" chance="8" range="7" min="-5" max="-40">
+      <attribute key="shootEffect" value="poison"/>
+    </attack>
+    <attack name="lifedrain" interval="500" chance="6" range="7" min="-35" max="-40">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="manadrain" interval="2000" chance="34" radius="6" target="1" min="-300" max="-500">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+  </attacks>
+  <defenses armor="20" defense="25">
+    <defense name="healing" interval="2000" chance="16" min="800" max="1400">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>  
+  </defenses>
+  <elements>
+    <element physicalPercent="-15"/>
+	<element icePercent="20"/>
+	<element deathPercent="10"/>
+  </elements>
+  <immunities>
+		<immunity earth="1"/>
+	<immunity energy="1"/>
+    <immunity invisible="1"/>
+	<immunity paralyze="1"/>
+  </immunities>
+  <summons maxSummons="3">
+    <summon name="Shaman Totem" interval="500" chance="100" max="4"/>
+  </summons>
+  <voices interval="5000" chance="50">
+    <voice sentence="Shadralar!"/>
+    <voice sentence="Ariadne gime your power!"/>
+    <voice sentence="Spirits fill this totem with fire!"/>
+  </voices>
+  <loot>
+	<!--
+	700 gps
+	spellbook of lost souls
+	spellweaver's robe
+	snake god's wristguard
+	yalahari mask
+	spellscroll of prophecies
+	jade hat
+	greenwood coat
+	terra mantle
+	-->
+    <item id="2152" countmax="7" chance1="100000">
+      <!--gold coin-->
+    </item>
+   <item id="11355" chance="500">
+      <!--spellweaver robe-->
+    </item>
+   <item id="12647" chance="300">
+      <!--snake god's wristguard-->
+    </item>
+   <item id="9778" chance="500">
+      <!--yalahari mask-->
+    </item>
+   <item id="8904" chance="5000">
+      <!--spellscroll of prophecies-->
+    </item>
+   <item id="8903" chance="10000">
+      <!--spellbook of lost souls-->
+    </item>
+   <item id="11368" chance="5000">
+      <!--jade hat-->
+    </item>
+   <item id="8869" chance="4000">
+      <!--greenwood coat-->
+    </item>
+   <item id="7884" chance="8000">
+      <!--terra mantle-->
+    </item>
+   <item id="7885" chance="8000">
+      <!--terra legs-->
+    </item>
+   <item id="2123" chance="2000">
+      <!--ring of the skies-->
+    </item>
+   <item id="12410" chance="8000">
+      <!--luminous orb"-->
+    </item>
+   <item id="2149" countmax="21" chance="12000">
+      <!--small emerald-->
+    </item>
+   <item id="2147" countmax="24" chance="12000">
+      <!--small ruby-->
+    </item>
+   <item id="9970" countmax="11" chance="12000">
+      <!--small topaz-->
+    </item>
+  </loot>
+</monster>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monster speed="210" manacost="0" race="blood" skull="red" experience="17000" name="dark summoner" nameDescription="a summoner of dark forces">
+  <health max="15900" now="15900"/>
+  <look head="79" body="114" addons="3" legs="114" type="133" corpse="6080" feet="94"/>
+  <targetchange chance="8" interval="5000"/>
+  <strategy defense="0" attack="100"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="1"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag staticattack="70"/>
+    <flag targetdistance="5"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack target="1" chance="17" radius="2" interval="2000" min="-138" name="lifedrain" max="-335">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack target="1" chance="26" radius="3" interval="2000" min="-263" name="manadrain" max="-430">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </attack>
+    <attack duration="20000" target="1" chance="21" radius="4" interval="2000" name="speed" speedchange="-700">
+      <attribute key="areaEffect" value="bluebubble"/>
+    </attack>
+    <attack duration="20000" target="1" chance="13" interval="2000" name="speed" speedchange="-950">
+      <attribute key="areaEffect" value="stun"/>
+    </attack>
+    <attack duration="10000" chance="16" radius="7" magiclevelPercent="-60" interval="2000" name="skills">
+      <attribute key="areaEffect" value="groundshaker"/>
+    </attack>
+  </attacks>
+  <defenses defense="10" armor="15"/>
+  <immunities>
+    <immunity energy="1"/>
+    <immunity lifedrain="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <elements>
+    <element earthPercent="10"/>
+    <element icePercent="10"/>
+    <element holyPercent="-20"/>
+    <element physicalPercent="-15"/>
+    <element firePercent="-10"/>
+    <element deathPercent="20"/>
+  </elements>
+  <summons maxSummons="4">
+    <summon chance="7" interval="2000" name="dark mage" max="2"/>
+    <summon chance="7" interval="2000" name="dark archer" max="2"/>
+    <summon chance="10" interval="2000" name="dark warrior" max="2"/>
+    <summon chance="1" interval="4000" name="dark priestess" max="1"/>
+  </summons>
+  <voices chance="10" interval="5000">
+    <voice sentence="Invoco reforços para a armada!"/>
+    <voice sentence="Vocês não tem a minima chance Quendorianos!"/>
+  </voices>
+  <loot>
+    <item chance="100000" id="2175"/>
+    <item chance="100000" id="2152" countmax="37"/>
+    <item chance="50000" id="2150" countmax="39"/>
+    <item chance="33333" id="7589" countmax="16"/>
+    <item chance="10000" id="10220"/>
+    <item chance="25000" id="8904"/>
+    <item chance="33333" id="7896"/>
+    <item chance="3333" id="7440"/>
+    <item chance="1562" id="11356"/>
+    <item chance="980" id="11117"/>
+    <item chance="3000" id="9778"/>
+  </loot>
+</monster>

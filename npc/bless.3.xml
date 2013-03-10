@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<npc name="Mith, the Havengk" script="|DATA|/game/bless/bless3.lua" floorchange="0" walkinterval="2000" speed="220">
+	<health now="150" max="150"/>
+	<look type="158" head="25" body="34" legs="55" feet="98" addons="0"/>
+  
+ 	<parameters>
+		<parameter key="module_keywords" value="1" />
+       	<parameter key="message_greet" value="Hello. How may I help you |PLAYERNAME|? I can {bless} you." />
+		<parameter key="keywords" value="job;name" />
+		
+		<parameter key="keyword_reply1" value="I am apprendice of the white magic, of the gods. My job is {bless} anyone who needs it." />
+		<parameter key="keyword_reply2" value="My name is |NPCNAME|." />		
+	</parameters>   
+</npc>

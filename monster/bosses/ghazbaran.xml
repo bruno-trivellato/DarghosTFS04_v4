@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monster speed="400" manacost="0" race="UNDEAD" experience="15000" name="Ghazbaran" nameDescription="Ghazbaran">
+  <health max="60000" now="60000"/>
+  <look head="0" body="123" legs="97" type="12" corpse="6068" feet="94"/>
+  <targetchange chance="20" interval="10000"/>
+  <strategy defense="30" attack="70"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag staticattack="98"/>
+    <flag targetdistance="1"/>
+    <flag runonhealth="3500"/>
+  </flags>
+  <attacks>
+    <attack interval="2000" attack="150" skill="400" name="melee"/>
+    <attack target="1" chance="16" interval="3000" range="7" min="-400" name="melee" max="-2200">
+      <attribute key="shootEffect" value="whirlwindsword"/>
+    </attack>
+    <attack duration="30000" target="0" chance="30" radius="5" interval="4000" range="14" name="speed" speedchange="-800">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+    <attack target="0" chance="20" radius="5" interval="3000" range="14" min="-200" name="ice" max="-480">
+      <attribute key="areaEffect" value="teleport"/>
+    </attack>
+    <attack target="0" chance="30" radius="12" interval="3000" range="14" min="-500" name="ice" max="-1200">
+      <attribute key="areaEffect" value="bigplants"/>
+    </attack>
+    <attack target="0" chance="12" spread="0" interval="4000" length="6" min="-200" name="death" max="-400">
+      <attribute key="areaEffect" value="mortarea"/>
+    </attack>
+    <attack target="0" chance="15" radius="12" interval="7000" range="7" min="-100" name="drowncondition" max="-12000" start="-100" tick="1000">
+      <attribute key="areaEffect" value="yellowspark"/>
+    </attack>
+    <attack target="0" chance="33" radius="14" interval="4000" min="-200" name="manadrain" max="-1000">
+      <attribute key="areaEffect" value="bluebubble"/>
+    </attack>
+  </attacks>
+  <defenses defense="90" armor="90">
+    <defense chance="35" interval="1000" min="400" name="healing" max="700">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense chance="20" interval="4000" min="3000" name="healing" max="7000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense duration="6000" chance="80" interval="4000" name="speed" speedchange="440">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <elements>
+    <element deathPercent="80"/>
+    <element physicalPercent="40"/>
+    <element holyPercent="-10"/>
+  </elements>
+  <summons maxSummons="4">
+    <summon chance="25" interval="2000" name="deathslicer" max="4"/>
+  </summons>
+  <voices chance="30" interval="5000">
+    <voice sentence="VENHA PARA A MORTE!"/>
+    <voice sentence="VENHÃO E ME DEEM ALGUMA DIVERSÃO!" yell="1"/>
+    <voice sentence="ISSO É TUDO QUE VOCÊS CONSEGUEM DARGHONIANOS? PATÉTICO!" yell="1"/>
+    <voice sentence="EU SOU GHAZBARAN DO TRIANGULO... E VIM DESAFIAR A TODOS VOCÊS!" yell="1"/>
+    <voice sentence="MINHA VITÓRIA É INCONTESTÁVEL!"/>
+  </voices>
+  <loot>
+    <item chance="12500" id="7368" countmax="44"/>
+    <item chance="11111" id="2144" countmax="14"/>
+    <item chance="14285" id="2158"/>
+    <item chance="20000" id="1984"/>
+    <item chance="12500" id="8878"/>
+    <item chance="8333" id="2124"/>
+    <item chance="25000" id="6301"/>
+    <item chance="33333" id="5954" countmax="2"/>
+    <item chance="100000" id="6500" countmax="1"/>
+    <item chance="12500" id="2520"/>
+    <item chance="8333" id="8887"/>
+    <item chance="8333" id="7896"/>
+    <item chance="8333" id="2466"/>
+    <item chance="8333" id="2646"/>
+    <item chance="20000" id="2179"/>
+    <item chance="25000" id="7591"/>
+    <item chance="20000" id="7590"/>
+    <item chance="25000" id="8472"/>
+    <item chance="20000" id="2155"/>
+    <item chance="16666" id="7405"/>
+    <item chance="12500" id="2177"/>
+    <item chance="8333" id="2472"/>
+    <item chance="12500" id="2164"/>
+    <item chance="20000" id="2178"/>
+    <item chance="5555" id="7455"/>
+    <item chance="16666" id="8884"/>
+    <item chance="20000" id="2176"/>
+    <item chance="100000" id="2152" countmax="69"/>
+    <item chance="14285" id="7433"/>
+    <item chance="20000" id="2214"/>
+    <item chance="1428" id="8866"/>
+    <item chance="14285" id="6553"/>
+    <item chance="20000" id="2150"/>
+    <item chance="25000" id="2145" countmax="5"/>
+    <item chance="20000" id="2149" countmax="10"/>
+    <item chance="20000" id="2146" countmax="10"/>
+    <item chance="20000" id="8918"/>
+    <item chance="16666" id="8903"/>
+    <item chance="11111" id="8902"/>
+    <item chance="20000" id="8901"/>
+    <item chance="25000" id="8904"/>
+    <item chance="12500" id="2165"/>
+    <item chance="11111" id="2174"/>
+    <item chance="12500" id="2151" countmax="7"/>
+    <item chance="12500" id="2112"/>
+    <item chance="2222" id="2421"/>
+    <item chance="11111" id="2447"/>
+    <item chance="20000" id="8473"/>
+    <item chance="25000" id="2143" countmax="15"/>
+  </loot>
+</monster>

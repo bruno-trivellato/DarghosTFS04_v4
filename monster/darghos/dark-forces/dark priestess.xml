@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monster speed="210" manacost="0" race="blood" skull="red" experience="17000" name="Dark Priestess" nameDescription="a priestess of dark forces">
+  <health max="16800" now="16800"/>
+  <look head="116" body="114" addons="3" legs="38" type="138" corpse="6081" feet="79"/>
+  <targetchange chance="8" interval="5000"/>
+  <strategy defense="50" attack="50"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="1"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag staticattack="60"/>
+    <flag targetdistance="4"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks/>
+  <defenses defense="40" armor="40">
+    <defense chance="30" interval="1000" min="1200" name="healing" max="2800">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense chance="25" interval="1000" script="monsters/dark priestess/heal_area.lua"/>
+    <defense chance="20" interval="1000" script="monsters/dark priestess/heal_general.lua"/>
+  </defenses>
+  <elements>
+    <element earthPercent="-10"/>
+    <element icePercent="-10"/>
+    <element holyPercent="50"/>
+    <element physicalPercent="20"/>
+    <element energyPercent="10"/>
+    <element firePercent="10"/>
+    <element deathPercent="-15"/>
+  </elements>
+  <voices chance="10" interval="5000">
+    <voice sentence="Ao combate armada negra! Eu os curo!"/>
+    <voice sentence="Quendor será arrasada!"/>
+  </voices>
+  <loot>
+    <item chance="50000" id="2152" countmax="21"/>
+    <item chance="50000" id="7589" countmax="17"/>
+    <item chance="50000" id="9970" countmax="12"/>
+    <item chance="33333" id="2145" countmax="34"/>
+    <item chance="25000" id="2150" countmax="27"/>
+    <item chance="16666" id="8903"/>
+    <item chance="1562" id="11355"/>
+    <item chance="641" id="12646"/>
+    <item chance="3000" id="12647"/>
+    <item chance="990" id="12630"/>
+    <item chance="495" id="8866"/>
+  </loot>
+</monster>

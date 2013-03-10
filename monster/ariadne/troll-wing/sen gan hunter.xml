@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Sen Gan Hunter" nameDescription="a sen gan hunter" race="blood" experience="8200" speed="750" manacost="0">
+  <health now="12255" max="12255"/>
+  <look type="342" corpse="11254"/>
+  <targetchange interval="1000" chance="20"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="6"/>
+    <flag staticattack="90"/>
+	<flag lureable="1"/>
+    <flag runonhealth="500"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="40" attack="40"/>
+    <attack name="physical" interval="2000" chance="35" range="7" min="-543" max="-666">
+      <attribute key="shootEffect" value="enchantedspear"/>
+    </attack>
+    <attack name="physical" interval="2000" chance="46" range="7" min="-95" max="-484">
+      <attribute key="shootEffect" value="greenstar"/>
+    </attack>
+    <attack name="physical" interval="2000" chance="42" range="7" min="-95" max="-321">
+      <attribute key="shootEffect" value="greenstar"/>
+    </attack>	
+  </attacks>
+  <defenses armor="25" defense="18">
+    <defense name="speed" interval="1000" chance="12" speedchange="950" duration="6000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+    <element energyPercent="20"/>
+    <element holyPercent="10"/>
+    <element earthPercent="-10"/>
+    <element deathPercent="-5"/>
+  </elements>
+  <immunities>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Me put spear on your chest!"/>
+  </voices>
+  <loot>
+	<!--
+	600 gps
+	the ironworker
+	the devileye
+	amazon armor
+	zaoan armor
+	draken boots
+	-->	  
+    <item id="2152" countmax="6" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="11240" chance="600">
+      <!--guardian boots-->
+    </item>
+    <item id="12646" chance="1200">
+      <!--draken boots-->
+    </item>
+    <item id="11301" chance="6000">
+      <!--zaoan armor-->
+    </item>
+    <item id="5741" chance="6000">
+      <!--skull helmet-->
+    </item>
+    <item id="8853" chance="2000">
+      <!--ironworker-->
+    </item>
+    <item id="8852" chance="400">
+      <!--devileye-->
+    </item>
+    <item id="2500" chance="700">
+      <!--amazon armor-->
+    </item>
+    <item id="8857" chance="2000">
+      <!--silkweaver bow-->
+    </item>
+    <item id="2455" chance="20000">
+      <!--crossbow-->
+    </item>	
+    <item id="2456" chance="33333">
+      <!--bow-->
+    </item>
+    <item id="2547" countmax="78" chance="40000">
+      <!--power bolt-->
+    </item>
+    <item id="6529" countmax="23" chance="10000">
+      <!--infernal bolt-->
+    </item>	
+  </loot>
+</monster>

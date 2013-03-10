@@ -1,0 +1,1694 @@
+[29/8/2012 10:9:2] > Using MD5 encryption
+[29/8/2012 10:9:2] >> Loading RSA key
+[29/8/2012 10:9:2] >> Starting SQL connection
+
+[29/8/2012 10:9:2] > WARNING: Outdated MySQL server detected, consider upgrading to a newer version.
+[29/8/2012 10:9:2] >> Running Database Manager
+[29/8/2012 10:9:2] >> Loading items (OTB)
+[29/8/2012 10:9:2] >> Loading items (XML)
+[29/8/2012 10:9:2] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[29/8/2012 10:9:2] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[29/8/2012 10:9:2] >> Loading groups
+[29/8/2012 10:9:2] >> Loading vocations
+[29/8/2012 10:9:2] >> Loading outfits
+[29/8/2012 10:9:2] >> Loading chat channels
+[29/8/2012 10:9:2] >> Loading script systems
+[29/8/2012 10:9:4] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[29/8/2012 10:9:4] >> Loading mods...
+[29/8/2012 10:9:4] > 0 mods were loaded.
+[29/8/2012 10:9:4] >> Loading experience stages
+[29/8/2012 10:9:4] >> Loading monsters
+[29/8/2012 10:9:5] [Warning - Monsters::deserializeSpell] Frost Dragon - Unknown areaEffect: smallice
+[29/8/2012 10:9:6] >> Loading map and spawns...
+[29/8/2012 10:9:11] > Map size: 5000x5000.
+[29/8/2012 10:9:11] > Map descriptions: 
+[29/8/2012 10:9:11] "Saved with Remere's Map Editor 2.2"
+[29/8/2012 10:9:11] "SimOne MapEditor 0.5.5"
+[29/8/2012 10:9:12] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1070/1121/6
+[29/8/2012 10:9:12] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1070/1129/6
+[29/8/2012 10:9:12] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1073/1121/6
+[29/8/2012 10:9:12] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1073/1129/6
+[29/8/2012 10:9:13] Duplicate uniqueId 6401
+[29/8/2012 10:9:13] Duplicate uniqueId 6401
+[29/8/2012 10:9:16] Duplicate uniqueId 6401
+[29/8/2012 10:9:16] Duplicate uniqueId 6401
+[29/8/2012 10:9:16] Duplicate uniqueId 6401
+[29/8/2012 10:9:16] Duplicate uniqueId 6401
+[29/8/2012 10:9:20] Duplicate uniqueId 6401
+[29/8/2012 10:9:20] Duplicate uniqueId 6401
+[29/8/2012 10:9:22] Duplicate uniqueId 2004
+[29/8/2012 10:9:22] Duplicate uniqueId 2005
+[29/8/2012 10:9:22] Duplicate uniqueId 2006
+[29/8/2012 10:9:22] Duplicate uniqueId 2007
+[29/8/2012 10:9:26] Duplicate uniqueId 6401
+[29/8/2012 10:9:26] Duplicate uniqueId 6401
+[29/8/2012 10:9:26] Duplicate uniqueId 6401
+[29/8/2012 10:9:27] Duplicate uniqueId 6400
+[29/8/2012 10:9:27] Duplicate uniqueId 6401
+[29/8/2012 10:9:27] Duplicate uniqueId 2056
+[29/8/2012 10:9:27] Duplicate uniqueId 2057
+[29/8/2012 10:9:27] Duplicate uniqueId 2058
+[29/8/2012 10:9:27] Duplicate uniqueId 2051
+[29/8/2012 10:9:27] Duplicate uniqueId 2052
+[29/8/2012 10:9:27] Duplicate uniqueId 2053
+[29/8/2012 10:9:27] Duplicate uniqueId 2054
+[29/8/2012 10:9:28] > Map loading time: 21.725 seconds.
+[29/8/2012 10:9:28] [Spawn::addMonster] Cannot find "Butterfly"
+[29/8/2012 10:9:28] [Spawn::addMonster] Cannot find "Butterfly"
+[29/8/2012 10:9:29] > Data parsing time: 1.243 seconds.
+[29/8/2012 10:9:46] > Houses synchronization time: 17.588 seconds.
+[29/8/2012 10:9:47] > Content unserialization time: 0.109 seconds.
+[29/8/2012 10:9:47] >> Checking world type... Open PvP
+[29/8/2012 10:9:47] >> Initializing game state and binding services...
+[29/8/2012 10:9:49] > Global IP address: 184.173.128.212
+[29/8/2012 10:9:49] > Bound ports: 7577	7578	9215	
+[29/8/2012 10:9:49] >> Everything smells good, server is starting up...
+[29/8/2012 10:9:49] [DDOS EMERGENCY] Enabled
+>> UltraX server Online!
+[29/8/2012 10:9:49] [DDOS EMERGENCY] Enabled
+>> UltraX server Online!
+
+
+[29/8/2012 10:27:6] [Error - NpcScript Interface] 
+[29/8/2012 10:27:6] (Unknown script file)
+[29/8/2012 10:27:6] Description: 
+[29/8/2012 10:27:6] attempt to call a nil value
+[29/8/2012 10:27:6] stack traceback:
+[29/8/2012 10:27:6] 	[C]: in function 'closeShopWindow'
+[29/8/2012 10:27:6] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 10:27:6] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 10:27:6] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 10:27:6] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 10:33:34] [Error - NpcScript Interface] 
+[29/8/2012 10:33:34] (Unknown script file)
+[29/8/2012 10:33:34] Description: 
+[29/8/2012 10:33:34] attempt to call a nil value
+[29/8/2012 10:33:34] stack traceback:
+
+[29/8/2012 10:33:59] [Error - NpcScript Interface] 
+[29/8/2012 10:33:59] (Unknown script file)
+[29/8/2012 10:33:59] Description: 
+[29/8/2012 10:33:59] attempt to call a nil value
+[29/8/2012 10:33:59] stack traceback:
+[29/8/2012 10:33:59] 	[C]: in function 'closeShopWindow'
+[29/8/2012 10:33:59] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 10:33:59] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 10:33:59] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 10:33:59] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[29/8/2012 10:42:49] [Error - NpcScript Interface] 
+[29/8/2012 10:42:49] (Unknown script file)
+[29/8/2012 10:42:49] Description: 
+[29/8/2012 10:42:49] attempt to call a nil value
+[29/8/2012 10:42:49] stack traceback:
+[29/8/2012 10:42:49] 	[C]: in function 'closeShopWindow'
+[29/8/2012 10:42:49] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 10:42:49] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 10:42:49] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 10:42:49] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 10:44:4] [Error - NpcScript Interface] 
+[29/8/2012 10:44:4] (Unknown script file)
+[29/8/2012 10:44:4] Description: 
+[29/8/2012 10:44:4] attempt to call a nil value
+[29/8/2012 10:44:4] stack traceback:
+[29/8/2012 10:44:4] 	[C]: in function 'closeShopWindow'
+[29/8/2012 10:44:4] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 10:44:4] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 10:44:4] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 10:44:4] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 10:52:42] [Error - NpcScript Interface] 
+[29/8/2012 10:52:42] (Unknown script file)
+[29/8/2012 10:52:42] Description: 
+[29/8/2012 10:52:42] attempt to call a nil value
+[29/8/2012 10:52:42] stack traceback:
+
+[29/8/2012 10:54:15] [Error - NpcScript Interface] 
+[29/8/2012 10:54:15] (Unknown script file)
+[29/8/2012 10:54:15] Description: 
+[29/8/2012 10:54:15] attempt to call a nil value
+[29/8/2012 10:54:15] stack traceback:
+[29/8/2012 11:11:4] > Saving server...
+[29/8/2012 11:11:7] > SAVE: Complete in 2.483 seconds using binary-tilebased house storage.
+
+[29/8/2012 11:37:3] [Error - NpcScript Interface] 
+[29/8/2012 11:37:3] (Unknown script file)
+[29/8/2012 11:37:3] Description: 
+[29/8/2012 11:37:3] attempt to call a nil value
+[29/8/2012 11:37:3] stack traceback:
+[29/8/2012 11:38:40] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.95.4.16)
+
+[29/8/2012 11:54:55] [Error - NpcScript Interface] 
+[29/8/2012 11:54:55] (Unknown script file)
+[29/8/2012 11:54:55] Description: 
+[29/8/2012 11:54:55] attempt to call a nil value
+[29/8/2012 11:54:55] stack traceback:
+
+[29/8/2012 11:56:18] [Error - NpcScript Interface] 
+[29/8/2012 11:56:18] (Unknown script file)
+[29/8/2012 11:56:18] Description: 
+[29/8/2012 11:56:18] attempt to call a nil value
+[29/8/2012 11:56:18] stack traceback:
+[29/8/2012 12:11:4] > Saving server...
+[29/8/2012 12:11:8] > SAVE: Complete in 3.417 seconds using binary-tilebased house storage.
+
+[29/8/2012 12:38:22] [Error - NpcScript Interface] 
+[29/8/2012 12:38:22] (Unknown script file)
+[29/8/2012 12:38:22] Description: 
+[29/8/2012 12:38:22] attempt to call a nil value
+[29/8/2012 12:38:22] stack traceback:
+[29/8/2012 12:38:22] 	[C]: in function 'closeShopWindow'
+[29/8/2012 12:38:22] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 12:38:22] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 12:38:22] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 12:38:22] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[29/8/2012 12:39:18] [Error - NpcScript Interface] 
+[29/8/2012 12:39:18] (Unknown script file)
+[29/8/2012 12:39:18] Description: 
+[29/8/2012 12:39:18] attempt to call a nil value
+[29/8/2012 12:39:18] stack traceback:
+
+[29/8/2012 12:41:3] [Error - NpcScript Interface] 
+[29/8/2012 12:41:3] (Unknown script file)
+[29/8/2012 12:41:3] Description: 
+[29/8/2012 12:41:3] attempt to call a nil value
+[29/8/2012 12:41:3] stack traceback:
+[29/8/2012 12:41:3] 	[C]: in function 'closeShopWindow'
+[29/8/2012 12:41:3] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 12:41:3] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 12:41:3] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 12:41:3] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 12:54:22] [Error - NpcScript Interface] 
+[29/8/2012 12:54:22] (Unknown script file)
+[29/8/2012 12:54:22] Description: 
+[29/8/2012 12:54:22] attempt to call a nil value
+[29/8/2012 12:54:22] stack traceback:
+[29/8/2012 12:54:22] 	[C]: in function 'closeShopWindow'
+[29/8/2012 12:54:22] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 12:54:22] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 12:54:22] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 12:54:22] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 12:58:46] [Error - NpcScript Interface] 
+[29/8/2012 12:58:46] (Unknown script file)
+[29/8/2012 12:58:46] Description: 
+[29/8/2012 12:58:46] attempt to call a nil value
+[29/8/2012 12:58:46] stack traceback:
+[29/8/2012 12:58:46] 	[C]: in function 'closeShopWindow'
+[29/8/2012 12:58:46] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 12:58:46] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 12:58:46] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 12:58:46] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 13:3:39] [Error - NpcScript Interface] 
+[29/8/2012 13:3:39] (Unknown script file)
+[29/8/2012 13:3:39] Description: 
+[29/8/2012 13:3:39] attempt to call a nil value
+[29/8/2012 13:3:39] stack traceback:
+[29/8/2012 13:11:4] > Saving server...
+[29/8/2012 13:11:10] > SAVE: Complete in 5.261 seconds using binary-tilebased house storage.
+
+[29/8/2012 13:43:41] [Error - NpcScript Interface] 
+[29/8/2012 13:43:41] (Unknown script file)
+[29/8/2012 13:43:41] Description: 
+[29/8/2012 13:43:41] attempt to call a nil value
+[29/8/2012 13:43:41] stack traceback:
+
+[29/8/2012 13:56:35] [Error - NpcScript Interface] 
+[29/8/2012 13:56:35] (Unknown script file)
+[29/8/2012 13:56:35] Description: 
+[29/8/2012 13:56:35] attempt to call a nil value
+[29/8/2012 13:56:35] stack traceback:
+[29/8/2012 13:56:35] 	[C]: in function 'closeShopWindow'
+[29/8/2012 13:56:35] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 13:56:35] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 13:56:35] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 13:56:35] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 13:57:39] [Error - NpcScript Interface] 
+[29/8/2012 13:57:39] (Unknown script file)
+[29/8/2012 13:57:39] Description: 
+[29/8/2012 13:57:39] attempt to call a nil value
+[29/8/2012 13:57:39] stack traceback:
+
+[29/8/2012 13:59:8] [Error - Spell Interface] 
+[29/8/2012 13:59:8] data/spells/scripts/support/destroy_field_rune.lua:onCastSpell
+[29/8/2012 13:59:8] Description: 
+[29/8/2012 13:59:8] (luaDoRemoveItem) Item not found
+
+[29/8/2012 14:3:36] [Error - NpcScript Interface] 
+[29/8/2012 14:3:36] (Unknown script file)
+[29/8/2012 14:3:36] Description: 
+[29/8/2012 14:3:36] attempt to call a nil value
+[29/8/2012 14:3:36] stack traceback:
+[29/8/2012 14:11:4] > Saving server...
+[29/8/2012 14:11:10] > SAVE: Complete in 5.226 seconds using binary-tilebased house storage.
+
+[29/8/2012 14:22:44] [Error - NpcScript Interface] 
+[29/8/2012 14:22:44] (Unknown script file)
+[29/8/2012 14:22:44] Description: 
+[29/8/2012 14:22:44] attempt to call a nil value
+[29/8/2012 14:22:44] stack traceback:
+[29/8/2012 14:22:44] 	[C]: in function 'closeShopWindow'
+[29/8/2012 14:22:44] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 14:22:44] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[29/8/2012 14:22:44] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[29/8/2012 14:22:44] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[29/8/2012 14:22:44] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[29/8/2012 14:22:44] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[29/8/2012 14:22:44] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[29/8/2012 14:22:44] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[29/8/2012 14:22:44] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+
+[29/8/2012 14:22:51] [Error - NpcScript Interface] 
+[29/8/2012 14:22:51] (Unknown script file)
+[29/8/2012 14:22:51] Description: 
+[29/8/2012 14:22:51] attempt to call a nil value
+[29/8/2012 14:22:51] stack traceback:
+[29/8/2012 14:22:51] 	[C]: in function 'closeShopWindow'
+[29/8/2012 14:22:51] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 14:22:51] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 14:22:51] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 14:22:51] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 14:24:40] [Error - NpcScript Interface] 
+[29/8/2012 14:24:40] (Unknown script file)
+[29/8/2012 14:24:40] Description: 
+[29/8/2012 14:24:40] attempt to call a nil value
+[29/8/2012 14:24:40] stack traceback:
+[29/8/2012 14:24:40] 	[C]: in function 'closeShopWindow'
+[29/8/2012 14:24:40] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 14:24:40] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 14:24:40] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 14:24:40] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 14:29:34] [Error - NpcScript Interface] 
+[29/8/2012 14:29:34] (Unknown script file)
+[29/8/2012 14:29:34] Description: 
+[29/8/2012 14:29:34] attempt to call a nil value
+[29/8/2012 14:29:34] stack traceback:
+[29/8/2012 14:29:34] 	[C]: in function 'closeShopWindow'
+[29/8/2012 14:29:34] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 14:29:34] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 14:29:34] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 14:29:34] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 14:33:55] [Error - NpcScript Interface] 
+[29/8/2012 14:33:55] (Unknown script file)
+[29/8/2012 14:33:55] Description: 
+[29/8/2012 14:33:55] attempt to call a nil value
+[29/8/2012 14:33:55] stack traceback:
+
+[29/8/2012 14:38:15] [Error - NpcScript Interface] 
+[29/8/2012 14:38:15] (Unknown script file)
+[29/8/2012 14:38:15] Description: 
+[29/8/2012 14:38:15] attempt to call a nil value
+[29/8/2012 14:38:15] stack traceback:
+
+[29/8/2012 14:43:22] [Error - NpcScript Interface] 
+[29/8/2012 14:43:22] (Unknown script file)
+[29/8/2012 14:43:22] Description: 
+[29/8/2012 14:43:22] attempt to call a nil value
+[29/8/2012 14:43:22] stack traceback:
+
+[29/8/2012 15:1:3] [Error - NpcScript Interface] 
+[29/8/2012 15:1:3] (Unknown script file)
+[29/8/2012 15:1:3] Description: 
+[29/8/2012 15:1:3] attempt to call a nil value
+[29/8/2012 15:1:3] stack traceback:
+[29/8/2012 15:1:3] 	[C]: in function 'closeShopWindow'
+[29/8/2012 15:1:3] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 15:1:3] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 15:1:3] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 15:1:3] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[29/8/2012 15:11:4] > Saving server...
+[29/8/2012 15:11:11] > SAVE: Complete in 7.015 seconds using binary-tilebased house storage.
+
+[29/8/2012 15:15:24] [Error - NpcScript Interface] 
+[29/8/2012 15:15:24] (Unknown script file)
+[29/8/2012 15:15:24] Description: 
+[29/8/2012 15:15:24] attempt to call a nil value
+[29/8/2012 15:15:24] stack traceback:
+[29/8/2012 15:15:24] 	[C]: in function 'closeShopWindow'
+[29/8/2012 15:15:24] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 15:15:24] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 15:15:24] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 15:15:24] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 15:24:33] [Error - Spell Interface] 
+[29/8/2012 15:24:33] data/spells/scripts/support/destroy_field_rune.lua:onCastSpell
+[29/8/2012 15:24:33] Description: 
+[29/8/2012 15:24:33] (luaDoRemoveItem) Item not found
+
+[29/8/2012 15:38:1] [Error - NpcScript Interface] 
+[29/8/2012 15:38:1] (Unknown script file)
+[29/8/2012 15:38:1] Description: 
+[29/8/2012 15:38:1] attempt to call a nil value
+[29/8/2012 15:38:1] stack traceback:
+[29/8/2012 15:38:1] 	[C]: in function 'closeShopWindow'
+[29/8/2012 15:38:1] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 15:38:1] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 15:38:1] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 15:38:1] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 15:45:24] [Error - NpcScript Interface] 
+[29/8/2012 15:45:24] (Unknown script file)
+[29/8/2012 15:45:24] Description: 
+[29/8/2012 15:45:24] attempt to call a nil value
+[29/8/2012 15:45:24] stack traceback:
+[29/8/2012 15:45:24] 	[C]: in function 'closeShopWindow'
+[29/8/2012 15:45:24] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 15:45:24] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 15:45:24] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 15:45:24] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 15:59:57] [Error - NpcScript Interface] 
+[29/8/2012 15:59:57] (Unknown script file)
+[29/8/2012 15:59:57] Description: 
+[29/8/2012 15:59:57] attempt to call a nil value
+[29/8/2012 15:59:57] stack traceback:
+[29/8/2012 15:59:57] 	[C]: in function 'closeShopWindow'
+[29/8/2012 15:59:57] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 15:59:57] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 15:59:57] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 15:59:57] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 16:3:50] [Error - NpcScript Interface] 
+[29/8/2012 16:3:50] (Unknown script file)
+[29/8/2012 16:3:50] Description: 
+[29/8/2012 16:3:50] attempt to call a nil value
+[29/8/2012 16:3:50] stack traceback:
+[29/8/2012 16:3:50] 	[C]: in function 'closeShopWindow'
+[29/8/2012 16:3:50] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 16:3:50] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 16:3:50] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 16:3:50] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[29/8/2012 16:11:5] > Saving server...
+[29/8/2012 16:11:12] > SAVE: Complete in 7.008 seconds using binary-tilebased house storage.
+
+[29/8/2012 16:22:20] [Error - NpcScript Interface] 
+[29/8/2012 16:22:20] (Unknown script file)
+[29/8/2012 16:22:20] Description: 
+[29/8/2012 16:22:20] attempt to call a nil value
+[29/8/2012 16:22:20] stack traceback:
+[29/8/2012 16:22:20] 	[C]: in function 'closeShopWindow'
+[29/8/2012 16:22:20] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 16:22:20] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 16:22:20] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 16:22:20] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 16:42:5] [Error - NpcScript Interface] 
+[29/8/2012 16:42:5] (Unknown script file)
+[29/8/2012 16:42:5] Description: 
+[29/8/2012 16:42:5] attempt to call a nil value
+[29/8/2012 16:42:5] stack traceback:
+
+[29/8/2012 16:52:40] [Error - NpcScript Interface] 
+[29/8/2012 16:52:40] (Unknown script file)
+[29/8/2012 16:52:40] Description: 
+[29/8/2012 16:52:40] attempt to call a nil value
+[29/8/2012 16:52:40] stack traceback:
+[29/8/2012 16:52:40] 	[C]: in function 'closeShopWindow'
+[29/8/2012 16:52:40] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 16:52:40] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 16:52:40] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 16:52:40] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 16:54:25] [Error - NpcScript Interface] 
+[29/8/2012 16:54:25] (Unknown script file)
+[29/8/2012 16:54:25] Description: 
+[29/8/2012 16:54:25] attempt to call a nil value
+[29/8/2012 16:54:25] stack traceback:
+[29/8/2012 16:54:25] 	[C]: in function 'closeShopWindow'
+[29/8/2012 16:54:25] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 16:54:25] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 16:54:25] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 16:54:25] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 17:1:57] [Error - NpcScript Interface] 
+[29/8/2012 17:1:57] (Unknown script file)
+[29/8/2012 17:1:57] Description: 
+[29/8/2012 17:1:57] attempt to call a nil value
+[29/8/2012 17:1:57] stack traceback:
+[29/8/2012 17:1:57] 	[C]: in function 'closeShopWindow'
+[29/8/2012 17:1:57] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 17:1:57] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 17:1:57] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 17:1:57] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 17:2:18] [Error - NpcScript Interface] 
+[29/8/2012 17:2:18] (Unknown script file)
+[29/8/2012 17:2:18] Description: 
+[29/8/2012 17:2:18] attempt to call a nil value
+[29/8/2012 17:2:18] stack traceback:
+
+[29/8/2012 17:7:22] [Error - NpcScript Interface] 
+[29/8/2012 17:7:22] (Unknown script file)
+[29/8/2012 17:7:22] Description: 
+[29/8/2012 17:7:22] attempt to call a nil value
+[29/8/2012 17:7:22] stack traceback:
+
+[29/8/2012 17:7:31] [Error - NpcScript Interface] 
+[29/8/2012 17:7:31] (Unknown script file)
+[29/8/2012 17:7:31] Description: 
+[29/8/2012 17:7:31] attempt to call a nil value
+[29/8/2012 17:7:31] stack traceback:
+[29/8/2012 17:7:31] 	[C]: in function 'closeShopWindow'
+[29/8/2012 17:7:31] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 17:7:31] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 17:7:31] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 17:7:31] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+[29/8/2012 17:11:4] > Saving server...
+[29/8/2012 17:11:12] > SAVE: Complete in 7.444 seconds using binary-tilebased house storage.
+
+[29/8/2012 17:14:30] [Error - NpcScript Interface] 
+[29/8/2012 17:14:30] (Unknown script file)
+[29/8/2012 17:14:30] Description: 
+[29/8/2012 17:14:30] attempt to call a nil value
+[29/8/2012 17:14:30] stack traceback:
+[29/8/2012 17:14:30] 	[C]: in function 'closeShopWindow'
+[29/8/2012 17:14:30] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 17:14:30] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[29/8/2012 17:14:30] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[29/8/2012 17:14:30] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[29/8/2012 17:14:30] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[29/8/2012 17:14:30] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[29/8/2012 17:14:30] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[29/8/2012 17:14:30] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[29/8/2012 17:14:30] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+
+[29/8/2012 17:17:19] [Error - NpcScript Interface] 
+[29/8/2012 17:17:19] (Unknown script file)
+[29/8/2012 17:17:19] Description: 
+[29/8/2012 17:17:19] attempt to call a nil value
+[29/8/2012 17:17:19] stack traceback:
+
+[29/8/2012 17:38:47] [Error - NpcScript Interface] 
+[29/8/2012 17:38:47] (Unknown script file)
+[29/8/2012 17:38:47] Description: 
+[29/8/2012 17:38:47] attempt to call a nil value
+[29/8/2012 17:38:47] stack traceback:
+[29/8/2012 17:38:47] 	[C]: in function 'closeShopWindow'
+[29/8/2012 17:38:47] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 17:38:47] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 17:38:47] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 17:38:47] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 17:39:42] [Error - NpcScript Interface] 
+[29/8/2012 17:39:42] (Unknown script file)
+[29/8/2012 17:39:42] Description: 
+[29/8/2012 17:39:42] attempt to call a nil value
+[29/8/2012 17:39:42] stack traceback:
+[29/8/2012 17:39:42] 	[C]: in function 'closeShopWindow'
+[29/8/2012 17:39:42] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 17:39:42] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 17:39:42] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 17:39:42] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 17:44:25] [Error - NpcScript Interface] 
+[29/8/2012 17:44:25] (Unknown script file)
+[29/8/2012 17:44:25] Description: 
+[29/8/2012 17:44:25] attempt to call a nil value
+[29/8/2012 17:44:25] stack traceback:
+[29/8/2012 17:44:25] 	[C]: in function 'closeShopWindow'
+[29/8/2012 17:44:25] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 17:44:25] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 17:44:25] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 17:44:25] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 17:44:44] [Error - NpcScript Interface] 
+[29/8/2012 17:44:44] (Unknown script file)
+[29/8/2012 17:44:44] Description: 
+[29/8/2012 17:44:44] attempt to call a nil value
+[29/8/2012 17:44:44] stack traceback:
+
+[29/8/2012 18:4:20] [Error - NpcScript Interface] 
+[29/8/2012 18:4:20] (Unknown script file)
+[29/8/2012 18:4:20] Description: 
+[29/8/2012 18:4:20] attempt to call a nil value
+[29/8/2012 18:4:20] stack traceback:
+[29/8/2012 18:11:4] > Saving server...
+[29/8/2012 18:11:12] > SAVE: Complete in 8.099 seconds using binary-tilebased house storage.
+
+[29/8/2012 18:25:40] [Error - NpcScript Interface] 
+[29/8/2012 18:25:40] (Unknown script file)
+[29/8/2012 18:25:40] Description: 
+[29/8/2012 18:25:40] attempt to call a nil value
+[29/8/2012 18:25:40] stack traceback:
+[29/8/2012 18:25:40] 	[C]: in function 'closeShopWindow'
+[29/8/2012 18:25:40] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 18:25:40] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 18:25:40] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 18:25:40] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[29/8/2012 18:29:10] [Error - NpcScript Interface] 
+[29/8/2012 18:29:10] (Unknown script file)
+[29/8/2012 18:29:10] Description: 
+[29/8/2012 18:29:10] attempt to call a nil value
+[29/8/2012 18:29:10] stack traceback:
+[29/8/2012 18:29:10] 	[C]: in function 'closeShopWindow'
+[29/8/2012 18:29:10] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 18:29:10] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 18:29:10] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 18:29:10] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 18:40:46] [Error - NpcScript Interface] 
+[29/8/2012 18:40:46] (Unknown script file)
+[29/8/2012 18:40:46] Description: 
+[29/8/2012 18:40:46] attempt to call a nil value
+[29/8/2012 18:40:46] stack traceback:
+
+[29/8/2012 18:42:16] [Error - NpcScript Interface] 
+[29/8/2012 18:42:16] (Unknown script file)
+[29/8/2012 18:42:16] Description: 
+[29/8/2012 18:42:16] attempt to call a nil value
+[29/8/2012 18:42:16] stack traceback:
+[29/8/2012 18:42:16] 	[C]: in function 'closeShopWindow'
+[29/8/2012 18:42:16] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 18:42:16] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 18:42:16] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 18:42:16] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 18:45:57] [Error - NpcScript Interface] 
+[29/8/2012 18:45:57] (Unknown script file)
+[29/8/2012 18:45:57] Description: 
+[29/8/2012 18:45:57] attempt to call a nil value
+[29/8/2012 18:45:57] stack traceback:
+
+[29/8/2012 18:49:2] [Error - NpcScript Interface] 
+[29/8/2012 18:49:2] (Unknown script file)
+[29/8/2012 18:49:2] Description: 
+[29/8/2012 18:49:2] attempt to call a nil value
+[29/8/2012 18:49:2] stack traceback:
+[29/8/2012 18:57:50] > Broadcasted message: "Uma escura e medonha fumaça negra começa a surgir em Quendor...".
+[29/8/2012 18:58:50] > Broadcasted message: "Morte aos mortos vivos! Preparem-se para lutar contra a morte!".
+[29/8/2012 18:59:30] > Broadcasted message: "Guerreiros saem do chão e fantasmas assombram os lares! Os mortos vivos atacam a cidade de Quendor!".
+
+[29/8/2012 19:3:13] [Error - NpcScript Interface] 
+[29/8/2012 19:3:13] (Unknown script file)
+[29/8/2012 19:3:13] Description: 
+[29/8/2012 19:3:13] attempt to call a nil value
+[29/8/2012 19:3:13] stack traceback:
+[29/8/2012 19:3:13] 	[C]: in function 'closeShopWindow'
+[29/8/2012 19:3:13] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 19:3:13] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 19:3:13] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 19:3:13] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 19:7:4] [Error - NpcScript Interface] 
+[29/8/2012 19:7:4] (Unknown script file)
+[29/8/2012 19:7:4] Description: 
+[29/8/2012 19:7:4] attempt to call a nil value
+[29/8/2012 19:7:4] stack traceback:
+
+[29/8/2012 19:10:10] [Error - NpcScript Interface] 
+[29/8/2012 19:10:10] (Unknown script file)
+[29/8/2012 19:10:10] Description: 
+[29/8/2012 19:10:10] attempt to call a nil value
+[29/8/2012 19:10:10] stack traceback:
+[29/8/2012 19:10:10] 	[C]: in function 'closeShopWindow'
+[29/8/2012 19:10:10] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 19:10:10] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 19:10:10] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 19:10:10] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[29/8/2012 19:11:4] > Saving server...
+[29/8/2012 19:11:13] > SAVE: Complete in 8.545 seconds using binary-tilebased house storage.
+
+[29/8/2012 19:11:51] [Error - NpcScript Interface] 
+[29/8/2012 19:11:51] (Unknown script file)
+[29/8/2012 19:11:51] Description: 
+[29/8/2012 19:11:51] attempt to call a nil value
+[29/8/2012 19:11:51] stack traceback:
+[29/8/2012 19:11:51] 	[C]: in function 'closeShopWindow'
+[29/8/2012 19:11:51] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 19:11:51] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[29/8/2012 19:11:51] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[29/8/2012 19:11:51] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[29/8/2012 19:11:51] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[29/8/2012 19:11:51] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[29/8/2012 19:11:51] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[29/8/2012 19:11:51] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[29/8/2012 19:11:51] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+
+[29/8/2012 19:19:40] [Error - NpcScript Interface] 
+[29/8/2012 19:19:40] (Unknown script file)
+[29/8/2012 19:19:40] Description: 
+[29/8/2012 19:19:40] attempt to call a nil value
+[29/8/2012 19:19:40] stack traceback:
+[29/8/2012 19:19:40] 	[C]: in function 'closeShopWindow'
+[29/8/2012 19:19:40] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 19:19:40] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 19:19:40] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 19:19:40] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 19:20:40] [Error - NpcScript Interface] 
+[29/8/2012 19:20:40] (Unknown script file)
+[29/8/2012 19:20:40] Description: 
+[29/8/2012 19:20:40] attempt to call a nil value
+[29/8/2012 19:20:40] stack traceback:
+
+[29/8/2012 19:21:21] [Error - NpcScript Interface] 
+[29/8/2012 19:21:21] (Unknown script file)
+[29/8/2012 19:21:21] Description: 
+[29/8/2012 19:21:21] attempt to call a nil value
+[29/8/2012 19:21:21] stack traceback:
+
+[29/8/2012 19:28:32] [Error - NpcScript Interface] 
+[29/8/2012 19:28:32] (Unknown script file)
+[29/8/2012 19:28:32] Description: 
+[29/8/2012 19:28:32] attempt to call a nil value
+[29/8/2012 19:28:32] stack traceback:
+
+[29/8/2012 19:46:16] [Error - NpcScript Interface] 
+[29/8/2012 19:46:16] (Unknown script file)
+[29/8/2012 19:46:16] Description: 
+[29/8/2012 19:46:16] attempt to call a nil value
+[29/8/2012 19:46:16] stack traceback:
+[29/8/2012 19:46:16] 	[C]: in function 'closeShopWindow'
+[29/8/2012 19:46:16] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 19:46:16] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 19:46:16] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 19:46:16] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 19:53:1] [Error - NpcScript Interface] 
+[29/8/2012 19:53:1] (Unknown script file)
+[29/8/2012 19:53:1] Description: 
+[29/8/2012 19:53:1] attempt to call a nil value
+[29/8/2012 19:53:1] stack traceback:
+[29/8/2012 19:53:1] 	[C]: in function 'closeShopWindow'
+[29/8/2012 19:53:1] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 19:53:1] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 19:53:1] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 19:53:1] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 19:57:53] [Error - NpcScript Interface] 
+[29/8/2012 19:57:53] (Unknown script file)
+[29/8/2012 19:57:53] Description: 
+[29/8/2012 19:57:53] attempt to call a nil value
+[29/8/2012 19:57:53] stack traceback:
+[29/8/2012 19:57:53] 	[C]: in function 'closeShopWindow'
+[29/8/2012 19:57:53] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 19:57:53] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[29/8/2012 19:57:53] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[29/8/2012 19:57:53] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[29/8/2012 19:57:53] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[29/8/2012 19:57:53] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[29/8/2012 19:57:53] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[29/8/2012 19:57:53] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[29/8/2012 19:57:53] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+
+[29/8/2012 19:59:0] [Error - NpcScript Interface] 
+[29/8/2012 19:59:0] (Unknown script file)
+[29/8/2012 19:59:0] Description: 
+[29/8/2012 19:59:0] attempt to call a nil value
+[29/8/2012 19:59:0] stack traceback:
+[29/8/2012 19:59:0] 	[C]: in function 'closeShopWindow'
+[29/8/2012 19:59:0] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 19:59:0] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[29/8/2012 19:59:0] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[29/8/2012 19:59:0] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[29/8/2012 19:59:0] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[29/8/2012 19:59:0] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[29/8/2012 19:59:0] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[29/8/2012 19:59:0] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[29/8/2012 19:59:0] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+
+[29/8/2012 20:6:36] [Error - Action Interface] 
+[29/8/2012 20:6:36] data/actions/scripts/game/koshei.lua:onUse
+[29/8/2012 20:6:36] Description: 
+[29/8/2012 20:6:36] (luaGetItemAttribute) Item not found
+
+[29/8/2012 20:7:26] [Error - NpcScript Interface] 
+[29/8/2012 20:7:26] (Unknown script file)
+[29/8/2012 20:7:26] Description: 
+[29/8/2012 20:7:26] attempt to call a nil value
+[29/8/2012 20:7:26] stack traceback:
+[29/8/2012 20:11:4] > Saving server...
+[29/8/2012 20:11:12] > SAVE: Complete in 7.394 seconds using binary-tilebased house storage.
+
+[29/8/2012 20:18:46] [Error - NpcScript Interface] 
+[29/8/2012 20:18:46] (Unknown script file)
+[29/8/2012 20:18:46] Description: 
+[29/8/2012 20:18:46] attempt to call a nil value
+[29/8/2012 20:18:46] stack traceback:
+[29/8/2012 20:18:46] 	[C]: in function 'closeShopWindow'
+[29/8/2012 20:18:46] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 20:18:46] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 20:18:46] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 20:18:46] 	data/npc/scripts/game/bless/bless4.lua:9: in function <data/npc/scripts/game/bless/bless4.lua:9>
+
+[29/8/2012 20:18:55] [Error - Action Interface] 
+[29/8/2012 20:18:55] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:18:55] Description: 
+[29/8/2012 20:18:55] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:19:1] [Error - Action Interface] 
+[29/8/2012 20:19:1] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:19:1] Description: 
+[29/8/2012 20:19:1] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:19:9] [Error - Action Interface] 
+[29/8/2012 20:19:9] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:19:9] Description: 
+[29/8/2012 20:19:9] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:19:15] [Error - Action Interface] 
+[29/8/2012 20:19:15] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:19:15] Description: 
+[29/8/2012 20:19:15] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:25:32] [Error - Action Interface] 
+[29/8/2012 20:25:32] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:25:32] Description: 
+[29/8/2012 20:25:32] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:25:34] [Error - Action Interface] 
+[29/8/2012 20:25:34] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:25:34] Description: 
+[29/8/2012 20:25:34] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:25:36] [Error - Action Interface] 
+[29/8/2012 20:25:36] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:25:36] Description: 
+[29/8/2012 20:25:36] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:25:39] [Error - Action Interface] 
+[29/8/2012 20:25:39] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:25:39] Description: 
+[29/8/2012 20:25:39] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:25:41] [Error - Action Interface] 
+[29/8/2012 20:25:41] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:25:41] Description: 
+[29/8/2012 20:25:41] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:25:44] [Error - Action Interface] 
+[29/8/2012 20:25:44] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:25:44] Description: 
+[29/8/2012 20:25:44] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:25:46] [Error - Action Interface] 
+[29/8/2012 20:25:46] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:25:46] Description: 
+[29/8/2012 20:25:46] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:25:48] [Error - Action Interface] 
+[29/8/2012 20:25:48] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:25:48] Description: 
+[29/8/2012 20:25:48] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:25:51] [Error - Action Interface] 
+[29/8/2012 20:25:51] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:25:51] Description: 
+[29/8/2012 20:25:51] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:25:53] [Error - Action Interface] 
+[29/8/2012 20:25:53] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:25:53] Description: 
+[29/8/2012 20:25:53] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:25:55] [Error - Action Interface] 
+[29/8/2012 20:25:55] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:25:55] Description: 
+[29/8/2012 20:25:55] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:25:57] [Error - Action Interface] 
+[29/8/2012 20:25:57] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:25:57] Description: 
+[29/8/2012 20:25:57] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:26:0] [Error - Action Interface] 
+[29/8/2012 20:26:0] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:26:0] Description: 
+[29/8/2012 20:26:0] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:26:2] [Error - Action Interface] 
+[29/8/2012 20:26:2] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:26:2] Description: 
+[29/8/2012 20:26:2] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:26:5] [Error - Action Interface] 
+[29/8/2012 20:26:5] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:26:5] Description: 
+[29/8/2012 20:26:5] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:26:7] [Error - Action Interface] 
+[29/8/2012 20:26:7] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 20:26:7] Description: 
+[29/8/2012 20:26:7] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 20:41:22] [Error - NpcScript Interface] 
+[29/8/2012 20:41:22] (Unknown script file)
+[29/8/2012 20:41:22] Description: 
+[29/8/2012 20:41:22] attempt to call a nil value
+[29/8/2012 20:41:22] stack traceback:
+[29/8/2012 20:41:22] 	[C]: in function 'closeShopWindow'
+[29/8/2012 20:41:22] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 20:41:22] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[29/8/2012 20:41:22] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[29/8/2012 20:41:22] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[29/8/2012 20:41:22] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[29/8/2012 20:41:22] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[29/8/2012 20:41:22] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[29/8/2012 20:41:22] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[29/8/2012 20:41:22] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+
+[29/8/2012 20:49:5] [Error - NpcScript Interface] 
+[29/8/2012 20:49:5] (Unknown script file)
+[29/8/2012 20:49:5] Description: 
+[29/8/2012 20:49:5] attempt to call a nil value
+[29/8/2012 20:49:5] stack traceback:
+
+[29/8/2012 20:50:9] [Error - NpcScript Interface] 
+[29/8/2012 20:50:9] (Unknown script file)
+[29/8/2012 20:50:9] Description: 
+[29/8/2012 20:50:9] attempt to call a nil value
+[29/8/2012 20:50:9] stack traceback:
+[29/8/2012 20:50:9] 	[C]: in function 'closeShopWindow'
+[29/8/2012 20:50:9] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 20:50:9] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 20:50:9] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 20:50:9] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[29/8/2012 21:1:10] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 200.216.188.35)
+
+[29/8/2012 21:2:46] [Error - NpcScript Interface] 
+[29/8/2012 21:2:46] (Unknown script file)
+[29/8/2012 21:2:46] Description: 
+[29/8/2012 21:2:46] attempt to call a nil value
+[29/8/2012 21:2:46] stack traceback:
+[29/8/2012 21:11:4] > Saving server...
+[29/8/2012 21:11:12] > SAVE: Complete in 7.466 seconds using binary-tilebased house storage.
+
+[29/8/2012 21:18:11] [Error - Action Interface] 
+[29/8/2012 21:18:11] data/actions/scripts/tools/rope.lua:onUse
+[29/8/2012 21:18:11] Description: 
+[29/8/2012 21:18:11] (luaGetThingFromPos) Tile not found
+
+[29/8/2012 21:27:33] [Error - NpcScript Interface] 
+[29/8/2012 21:27:33] (Unknown script file)
+[29/8/2012 21:27:33] Description: 
+[29/8/2012 21:27:33] attempt to call a nil value
+[29/8/2012 21:27:33] stack traceback:
+
+[29/8/2012 21:32:37] [Error - NpcScript Interface] 
+[29/8/2012 21:32:37] (Unknown script file)
+[29/8/2012 21:32:37] Description: 
+[29/8/2012 21:32:37] attempt to call a nil value
+[29/8/2012 21:32:37] stack traceback:
+[29/8/2012 21:32:37] 	[C]: in function 'closeShopWindow'
+[29/8/2012 21:32:37] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 21:32:37] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 21:32:37] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 21:32:37] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 21:36:12] [Error - NpcScript Interface] 
+[29/8/2012 21:36:12] (Unknown script file)
+[29/8/2012 21:36:12] Description: 
+[29/8/2012 21:36:12] attempt to call a nil value
+[29/8/2012 21:36:12] stack traceback:
+[29/8/2012 21:36:12] 	[C]: in function 'closeShopWindow'
+[29/8/2012 21:36:12] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 21:36:12] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[29/8/2012 21:36:12] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[29/8/2012 21:36:12] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[29/8/2012 21:36:12] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[29/8/2012 21:36:12] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[29/8/2012 21:36:12] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[29/8/2012 21:36:12] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[29/8/2012 21:36:12] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+
+[29/8/2012 21:41:27] [Error - NpcScript Interface] 
+[29/8/2012 21:41:27] (Unknown script file)
+[29/8/2012 21:41:27] Description: 
+[29/8/2012 21:41:27] attempt to call a nil value
+[29/8/2012 21:41:27] stack traceback:
+[29/8/2012 21:41:27] 	[C]: in function 'closeShopWindow'
+[29/8/2012 21:41:27] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 21:41:27] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 21:41:27] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 21:41:27] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 21:42:34] [Error - NpcScript Interface] 
+[29/8/2012 21:42:34] (Unknown script file)
+[29/8/2012 21:42:34] Description: 
+[29/8/2012 21:42:34] attempt to call a nil value
+[29/8/2012 21:42:34] stack traceback:
+[29/8/2012 21:42:34] 	[C]: in function 'closeShopWindow'
+[29/8/2012 21:42:34] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 21:42:34] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 21:42:34] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 21:42:34] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 21:47:10] [Error - NpcScript Interface] 
+[29/8/2012 21:47:10] (Unknown script file)
+[29/8/2012 21:47:10] Description: 
+[29/8/2012 21:47:10] attempt to call a nil value
+[29/8/2012 21:47:10] stack traceback:
+[29/8/2012 21:47:10] 	[C]: in function 'closeShopWindow'
+[29/8/2012 21:47:10] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 21:47:10] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 21:47:10] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 21:47:10] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 21:50:38] [Error - NpcScript Interface] 
+[29/8/2012 21:50:38] (Unknown script file)
+[29/8/2012 21:50:38] Description: 
+[29/8/2012 21:50:38] attempt to call a nil value
+[29/8/2012 21:50:38] stack traceback:
+[29/8/2012 21:50:38] 	[C]: in function 'closeShopWindow'
+[29/8/2012 21:50:38] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 21:50:38] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 21:50:38] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 21:50:38] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 21:50:58] [Error - NpcScript Interface] 
+[29/8/2012 21:50:58] (Unknown script file)
+[29/8/2012 21:50:58] Description: 
+[29/8/2012 21:50:58] attempt to call a nil value
+[29/8/2012 21:50:58] stack traceback:
+
+[29/8/2012 21:54:0] [Error - NpcScript Interface] 
+[29/8/2012 21:54:0] (Unknown script file)
+[29/8/2012 21:54:0] Description: 
+[29/8/2012 21:54:0] attempt to call a nil value
+[29/8/2012 21:54:0] stack traceback:
+[29/8/2012 21:54:0] 	[C]: in function 'closeShopWindow'
+[29/8/2012 21:54:0] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 21:54:0] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 21:54:0] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 21:54:0] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[29/8/2012 22:11:4] > Saving server...
+[29/8/2012 22:11:12] > SAVE: Complete in 7.228 seconds using binary-tilebased house storage.
+
+[29/8/2012 22:13:49] [Error - NpcScript Interface] 
+[29/8/2012 22:13:49] (Unknown script file)
+[29/8/2012 22:13:49] Description: 
+[29/8/2012 22:13:49] attempt to call a nil value
+[29/8/2012 22:13:49] stack traceback:
+
+[29/8/2012 22:26:39] [Error - NpcScript Interface] 
+[29/8/2012 22:26:39] (Unknown script file)
+[29/8/2012 22:26:39] Description: 
+[29/8/2012 22:26:39] attempt to call a nil value
+[29/8/2012 22:26:39] stack traceback:
+[29/8/2012 22:26:39] 	[C]: in function 'closeShopWindow'
+[29/8/2012 22:26:39] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 22:26:39] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 22:26:39] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 22:26:39] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 22:34:23] [Error - NpcScript Interface] 
+[29/8/2012 22:34:23] (Unknown script file)
+[29/8/2012 22:34:23] Description: 
+[29/8/2012 22:34:23] attempt to call a nil value
+[29/8/2012 22:34:23] stack traceback:
+
+[29/8/2012 22:34:27] [Error - NpcScript Interface] 
+[29/8/2012 22:34:27] (Unknown script file)
+[29/8/2012 22:34:27] Description: 
+[29/8/2012 22:34:27] attempt to call a nil value
+[29/8/2012 22:34:27] stack traceback:
+[29/8/2012 22:34:27] 	[C]: ?
+
+[29/8/2012 22:34:40] [Error - NpcScript Interface] 
+[29/8/2012 22:34:40] (Unknown script file)
+[29/8/2012 22:34:40] Description: 
+[29/8/2012 22:34:40] attempt to call a nil value
+[29/8/2012 22:34:40] stack traceback:
+[29/8/2012 22:34:40] 	[C]: in function 'closeShopWindow'
+[29/8/2012 22:34:40] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 22:34:40] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 22:34:40] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 22:34:40] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[29/8/2012 22:38:35] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.32.225.121)
+[29/8/2012 22:39:20] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.32.225.121)
+
+[29/8/2012 22:39:34] [Error - NpcScript Interface] 
+[29/8/2012 22:39:34] (Unknown script file)
+[29/8/2012 22:39:34] Description: 
+[29/8/2012 22:39:34] attempt to call a nil value
+[29/8/2012 22:39:34] stack traceback:
+[29/8/2012 22:39:50] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.32.225.121)
+
+[29/8/2012 22:44:58] [Error - NpcScript Interface] 
+[29/8/2012 22:44:58] (Unknown script file)
+[29/8/2012 22:44:58] Description: 
+[29/8/2012 22:44:58] attempt to call a nil value
+[29/8/2012 22:44:58] stack traceback:
+[29/8/2012 22:44:58] 	[C]: in function 'closeShopWindow'
+[29/8/2012 22:44:58] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 22:44:58] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 22:44:58] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 22:44:58] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 22:49:58] [Error - NpcScript Interface] 
+[29/8/2012 22:49:58] (Unknown script file)
+[29/8/2012 22:49:58] Description: 
+[29/8/2012 22:49:58] attempt to call a nil value
+[29/8/2012 22:49:58] stack traceback:
+[29/8/2012 22:49:58] 	[C]: in function 'closeShopWindow'
+[29/8/2012 22:49:58] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 22:49:58] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[29/8/2012 22:49:58] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[29/8/2012 22:49:58] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[29/8/2012 22:49:58] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[29/8/2012 22:49:58] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[29/8/2012 22:49:58] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[29/8/2012 22:49:58] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[29/8/2012 22:49:58] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+
+[29/8/2012 22:51:0] [Error - NpcScript Interface] 
+[29/8/2012 22:51:0] (Unknown script file)
+[29/8/2012 22:51:0] Description: 
+[29/8/2012 22:51:0] attempt to call a nil value
+[29/8/2012 22:51:0] stack traceback:
+[29/8/2012 22:51:0] 	[C]: in function 'closeShopWindow'
+[29/8/2012 22:51:0] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 22:51:0] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 22:51:0] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 22:51:0] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 22:55:6] [Error - NpcScript Interface] 
+[29/8/2012 22:55:6] (Unknown script file)
+[29/8/2012 22:55:6] Description: 
+[29/8/2012 22:55:6] attempt to call a nil value
+[29/8/2012 22:55:6] stack traceback:
+[29/8/2012 22:55:6] 	[C]: in function 'closeShopWindow'
+[29/8/2012 22:55:6] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 22:55:6] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 22:55:6] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 22:55:6] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[29/8/2012 23:6:41] [Error - NpcScript Interface] 
+[29/8/2012 23:6:41] (Unknown script file)
+[29/8/2012 23:6:41] Description: 
+[29/8/2012 23:6:41] attempt to call a nil value
+[29/8/2012 23:6:41] stack traceback:
+
+[29/8/2012 23:10:46] [Error - NpcScript Interface] 
+[29/8/2012 23:10:46] (Unknown script file)
+[29/8/2012 23:10:46] Description: 
+[29/8/2012 23:10:46] attempt to call a nil value
+[29/8/2012 23:10:46] stack traceback:
+[29/8/2012 23:10:46] 	[C]: in function 'closeShopWindow'
+[29/8/2012 23:10:46] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[29/8/2012 23:10:46] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[29/8/2012 23:10:46] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[29/8/2012 23:10:46] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[29/8/2012 23:11:4] > Saving server...
+[29/8/2012 23:11:15] > SAVE: Complete in 10.293 seconds using binary-tilebased house storage.
+
+[30/8/2012 0:4:28] [Error - NpcScript Interface] 
+[30/8/2012 0:4:28] (Unknown script file)
+[30/8/2012 0:4:28] Description: 
+[30/8/2012 0:4:28] attempt to call a nil value
+[30/8/2012 0:4:28] stack traceback:
+[30/8/2012 0:4:28] 	[C]: in function 'closeShopWindow'
+[30/8/2012 0:4:28] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 0:4:28] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 0:4:28] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 0:4:28] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 0:7:46] [Error - NpcScript Interface] 
+[30/8/2012 0:7:46] (Unknown script file)
+[30/8/2012 0:7:46] Description: 
+[30/8/2012 0:7:46] attempt to call a nil value
+[30/8/2012 0:7:46] stack traceback:
+[30/8/2012 0:11:5] > Saving server...
+[30/8/2012 0:11:11] > SAVE: Complete in 6.441 seconds using binary-tilebased house storage.
+
+[30/8/2012 0:15:47] [Error - NpcScript Interface] 
+[30/8/2012 0:15:47] (Unknown script file)
+[30/8/2012 0:15:47] Description: 
+[30/8/2012 0:15:47] attempt to call a nil value
+[30/8/2012 0:15:47] stack traceback:
+[30/8/2012 0:15:47] 	[C]: in function 'closeShopWindow'
+[30/8/2012 0:15:47] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 0:15:47] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 0:15:47] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 0:15:47] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 0:32:29] [Error - NpcScript Interface] 
+[30/8/2012 0:32:29] (Unknown script file)
+[30/8/2012 0:32:29] Description: 
+[30/8/2012 0:32:29] attempt to call a nil value
+[30/8/2012 0:32:29] stack traceback:
+
+[30/8/2012 0:55:36] [Error - NpcScript Interface] 
+[30/8/2012 0:55:36] (Unknown script file)
+[30/8/2012 0:55:36] Description: 
+[30/8/2012 0:55:36] attempt to call a nil value
+[30/8/2012 0:55:36] stack traceback:
+
+[30/8/2012 0:56:17] [Error - NpcScript Interface] 
+[30/8/2012 0:56:17] (Unknown script file)
+[30/8/2012 0:56:17] Description: 
+[30/8/2012 0:56:17] attempt to call a nil value
+[30/8/2012 0:56:17] stack traceback:
+
+[30/8/2012 0:57:34] [Error - NpcScript Interface] 
+[30/8/2012 0:57:34] (Unknown script file)
+[30/8/2012 0:57:34] Description: 
+[30/8/2012 0:57:34] attempt to call a nil value
+[30/8/2012 0:57:34] stack traceback:
+
+[30/8/2012 1:2:39] [Error - NpcScript Interface] 
+[30/8/2012 1:2:39] (Unknown script file)
+[30/8/2012 1:2:39] Description: 
+[30/8/2012 1:2:39] attempt to call a nil value
+[30/8/2012 1:2:39] stack traceback:
+[30/8/2012 1:2:39] 	[C]: in function 'closeShopWindow'
+[30/8/2012 1:2:39] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 1:2:39] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 1:2:39] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 1:2:39] 	data/npc/scripts/game/oldrak.lua:8: in function <data/npc/scripts/game/oldrak.lua:8>
+
+[30/8/2012 1:9:6] [Error - NpcScript Interface] 
+[30/8/2012 1:9:6] (Unknown script file)
+[30/8/2012 1:9:6] Description: 
+[30/8/2012 1:9:6] attempt to call a nil value
+[30/8/2012 1:9:6] stack traceback:
+
+[30/8/2012 1:9:47] [Error - NpcScript Interface] 
+[30/8/2012 1:9:47] (Unknown script file)
+[30/8/2012 1:9:47] Description: 
+[30/8/2012 1:9:47] attempt to call a nil value
+[30/8/2012 1:9:47] stack traceback:
+[30/8/2012 1:9:47] 	[C]: in function 'closeShopWindow'
+[30/8/2012 1:9:47] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 1:9:47] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 1:9:47] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 1:9:47] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[30/8/2012 1:11:5] > Saving server...
+[30/8/2012 1:11:12] > SAVE: Complete in 7.41 seconds using binary-tilebased house storage.
+
+[30/8/2012 1:14:9] [Error - CreatureScript Interface] 
+[30/8/2012 1:14:9] data/creaturescripts/scripts/game/inquisition.lua:onKill
+[30/8/2012 1:14:9] Description: 
+[30/8/2012 1:14:9] (luaAddEvent) Callback parameter should be a function.
+
+[30/8/2012 1:14:9] [Error - CreatureScript Interface] 
+[30/8/2012 1:14:9] data/creaturescripts/scripts/game/inquisition.lua:onKill
+[30/8/2012 1:14:9] Description: 
+[30/8/2012 1:14:9] (luaAddEvent) Callback parameter should be a function.
+
+[30/8/2012 1:14:9] [Error - CreatureScript Interface] 
+[30/8/2012 1:14:9] data/creaturescripts/scripts/game/inquisition.lua:onKill
+[30/8/2012 1:14:9] Description: 
+[30/8/2012 1:14:9] (luaAddEvent) Callback parameter should be a function.
+
+[30/8/2012 1:14:9] [Error - CreatureScript Interface] 
+[30/8/2012 1:14:9] data/creaturescripts/scripts/game/inquisition.lua:onKill
+[30/8/2012 1:14:9] Description: 
+[30/8/2012 1:14:9] (luaAddEvent) Callback parameter should be a function.
+
+[30/8/2012 1:14:9] [Error - CreatureScript Interface] 
+[30/8/2012 1:14:9] data/creaturescripts/scripts/game/inquisition.lua:onKill
+[30/8/2012 1:14:9] Description: 
+[30/8/2012 1:14:9] (luaAddEvent) Callback parameter should be a function.
+
+[30/8/2012 1:14:9] [Error - CreatureScript Interface] 
+[30/8/2012 1:14:9] data/creaturescripts/scripts/game/inquisition.lua:onKill
+[30/8/2012 1:14:9] Description: 
+[30/8/2012 1:14:9] (luaAddEvent) Callback parameter should be a function.
+
+[30/8/2012 1:14:9] [Error - CreatureScript Interface] 
+[30/8/2012 1:14:9] data/creaturescripts/scripts/game/inquisition.lua:onKill
+[30/8/2012 1:14:9] Description: 
+[30/8/2012 1:14:9] (luaAddEvent) Callback parameter should be a function.
+
+[30/8/2012 1:14:9] [Error - CreatureScript Interface] 
+[30/8/2012 1:14:9] data/creaturescripts/scripts/game/inquisition.lua:onKill
+[30/8/2012 1:14:9] Description: 
+[30/8/2012 1:14:9] (luaAddEvent) Callback parameter should be a function.
+
+[30/8/2012 1:14:9] [Error - CreatureScript Interface] 
+[30/8/2012 1:14:9] data/creaturescripts/scripts/game/inquisition.lua:onKill
+[30/8/2012 1:14:9] Description: 
+[30/8/2012 1:14:9] (luaAddEvent) Callback parameter should be a function.
+
+[30/8/2012 1:14:9] [Error - CreatureScript Interface] 
+[30/8/2012 1:14:9] data/creaturescripts/scripts/game/inquisition.lua:onKill
+[30/8/2012 1:14:9] Description: 
+[30/8/2012 1:14:9] (luaAddEvent) Callback parameter should be a function.
+
+[30/8/2012 1:15:22] [Error - NpcScript Interface] 
+[30/8/2012 1:15:22] (Unknown script file)
+[30/8/2012 1:15:22] Description: 
+[30/8/2012 1:15:22] attempt to call a nil value
+[30/8/2012 1:15:22] stack traceback:
+[30/8/2012 1:15:22] 	[C]: in function 'closeShopWindow'
+[30/8/2012 1:15:22] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 1:15:22] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 1:15:22] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 1:15:22] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 1:27:13] [Error - NpcScript Interface] 
+[30/8/2012 1:27:13] (Unknown script file)
+[30/8/2012 1:27:13] Description: 
+[30/8/2012 1:27:13] attempt to call a nil value
+[30/8/2012 1:27:13] stack traceback:
+[30/8/2012 1:27:13] 	[C]: in function 'closeShopWindow'
+[30/8/2012 1:27:13] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 1:27:13] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 1:27:13] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 1:27:13] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 1:30:7] [Error - NpcScript Interface] 
+[30/8/2012 1:30:7] (Unknown script file)
+[30/8/2012 1:30:7] Description: 
+[30/8/2012 1:30:7] attempt to call a nil value
+[30/8/2012 1:30:7] stack traceback:
+[30/8/2012 1:30:7] 	[C]: in function 'closeShopWindow'
+[30/8/2012 1:30:7] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 1:30:7] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 1:30:7] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 1:30:7] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 1:32:39] [Error - NpcScript Interface] 
+[30/8/2012 1:32:39] (Unknown script file)
+[30/8/2012 1:32:39] Description: 
+[30/8/2012 1:32:39] attempt to call a nil value
+[30/8/2012 1:32:39] stack traceback:
+[30/8/2012 1:32:39] 	[C]: in function 'closeShopWindow'
+[30/8/2012 1:32:39] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 1:32:39] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[30/8/2012 1:32:39] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[30/8/2012 1:32:39] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[30/8/2012 1:32:39] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[30/8/2012 1:32:39] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[30/8/2012 1:32:39] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[30/8/2012 1:32:39] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[30/8/2012 1:32:39] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+
+[30/8/2012 1:38:5] [Error - NpcScript Interface] 
+[30/8/2012 1:38:5] (Unknown script file)
+[30/8/2012 1:38:5] Description: 
+[30/8/2012 1:38:5] attempt to call a nil value
+[30/8/2012 1:38:5] stack traceback:
+[30/8/2012 1:38:5] 	[C]: in function 'closeShopWindow'
+[30/8/2012 1:38:5] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 1:38:5] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 1:38:5] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 1:38:5] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 1:38:16] [Error - NpcScript Interface] 
+[30/8/2012 1:38:16] (Unknown script file)
+[30/8/2012 1:38:16] Description: 
+[30/8/2012 1:38:16] attempt to call a nil value
+[30/8/2012 1:38:16] stack traceback:
+[30/8/2012 1:38:16] 	[C]: in function 'closeShopWindow'
+[30/8/2012 1:38:16] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 1:38:16] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 1:38:16] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 1:38:16] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 1:39:45] [Error - NpcScript Interface] 
+[30/8/2012 1:39:45] (Unknown script file)
+[30/8/2012 1:39:45] Description: 
+[30/8/2012 1:39:45] attempt to call a nil value
+[30/8/2012 1:39:45] stack traceback:
+
+[30/8/2012 1:51:4] [Error - NpcScript Interface] 
+[30/8/2012 1:51:4] (Unknown script file)
+[30/8/2012 1:51:4] Description: 
+[30/8/2012 1:51:4] attempt to call a nil value
+[30/8/2012 1:51:4] stack traceback:
+[30/8/2012 2:11:5] > Saving server...
+[30/8/2012 2:11:12] > SAVE: Complete in 7.292 seconds using binary-tilebased house storage.
+
+[30/8/2012 2:26:16] [Error - NpcScript Interface] 
+[30/8/2012 2:26:16] (Unknown script file)
+[30/8/2012 2:26:16] Description: 
+[30/8/2012 2:26:16] attempt to call a nil value
+[30/8/2012 2:26:16] stack traceback:
+[30/8/2012 2:26:16] 	[C]: in function 'closeShopWindow'
+[30/8/2012 2:26:16] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 2:26:16] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 2:26:16] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 2:26:16] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 2:37:8] [Error - NpcScript Interface] 
+[30/8/2012 2:37:8] (Unknown script file)
+[30/8/2012 2:37:8] Description: 
+[30/8/2012 2:37:8] attempt to call a nil value
+[30/8/2012 2:37:8] stack traceback:
+
+[30/8/2012 2:53:43] [Error - NpcScript Interface] 
+[30/8/2012 2:53:43] (Unknown script file)
+[30/8/2012 2:53:43] Description: 
+[30/8/2012 2:53:43] attempt to call a nil value
+[30/8/2012 2:53:43] stack traceback:
+[30/8/2012 2:53:43] 	[C]: in function 'closeShopWindow'
+[30/8/2012 2:53:43] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 2:53:43] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 2:53:43] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 2:53:43] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 2:55:23] [Error - NpcScript Interface] 
+[30/8/2012 2:55:23] (Unknown script file)
+[30/8/2012 2:55:23] Description: 
+[30/8/2012 2:55:23] attempt to call a nil value
+[30/8/2012 2:55:23] stack traceback:
+[30/8/2012 3:11:5] > Saving server...
+[30/8/2012 3:11:11] > SAVE: Complete in 6.373 seconds using binary-tilebased house storage.
+
+[30/8/2012 3:24:6] [Error - NpcScript Interface] 
+[30/8/2012 3:24:6] (Unknown script file)
+[30/8/2012 3:24:6] Description: 
+[30/8/2012 3:24:6] attempt to call a nil value
+[30/8/2012 3:24:6] stack traceback:
+[30/8/2012 3:24:6] 	[C]: in function 'closeShopWindow'
+[30/8/2012 3:24:6] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 3:24:6] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 3:24:6] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 3:24:6] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 3:31:32] [Error - NpcScript Interface] 
+[30/8/2012 3:31:32] (Unknown script file)
+[30/8/2012 3:31:32] Description: 
+[30/8/2012 3:31:32] attempt to call a nil value
+[30/8/2012 3:31:32] stack traceback:
+
+[30/8/2012 3:34:16] [Error - NpcScript Interface] 
+[30/8/2012 3:34:16] (Unknown script file)
+[30/8/2012 3:34:16] Description: 
+[30/8/2012 3:34:16] attempt to call a nil value
+[30/8/2012 3:34:16] stack traceback:
+
+[30/8/2012 3:37:51] [Error - NpcScript Interface] 
+[30/8/2012 3:37:51] (Unknown script file)
+[30/8/2012 3:37:51] Description: 
+[30/8/2012 3:37:51] attempt to call a nil value
+[30/8/2012 3:37:51] stack traceback:
+[30/8/2012 3:37:51] 	[C]: in function 'closeShopWindow'
+[30/8/2012 3:37:51] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 3:37:51] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 3:37:51] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 3:37:51] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 3:48:21] [Error - NpcScript Interface] 
+[30/8/2012 3:48:21] (Unknown script file)
+[30/8/2012 3:48:21] Description: 
+[30/8/2012 3:48:21] attempt to call a nil value
+[30/8/2012 3:48:21] stack traceback:
+[30/8/2012 3:48:21] 	[C]: in function 'closeShopWindow'
+[30/8/2012 3:48:21] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 3:48:21] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 3:48:21] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 3:48:21] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 3:49:23] [Error - NpcScript Interface] 
+[30/8/2012 3:49:23] (Unknown script file)
+[30/8/2012 3:49:23] Description: 
+[30/8/2012 3:49:23] attempt to call a nil value
+[30/8/2012 3:49:23] stack traceback:
+
+[30/8/2012 3:49:32] [Error - NpcScript Interface] 
+[30/8/2012 3:49:32] (Unknown script file)
+[30/8/2012 3:49:32] Description: 
+[30/8/2012 3:49:32] attempt to call a nil value
+[30/8/2012 3:49:32] stack traceback:
+[30/8/2012 3:49:32] 	[C]: in function 'closeShopWindow'
+[30/8/2012 3:49:32] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 3:49:32] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 3:49:32] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 3:49:32] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[30/8/2012 4:11:5] > Saving server...
+[30/8/2012 4:11:11] > SAVE: Complete in 6.648 seconds using binary-tilebased house storage.
+
+[30/8/2012 4:16:39] [Error - NpcScript Interface] 
+[30/8/2012 4:16:39] (Unknown script file)
+[30/8/2012 4:16:39] Description: 
+[30/8/2012 4:16:39] attempt to call a nil value
+[30/8/2012 4:16:39] stack traceback:
+[30/8/2012 4:16:39] 	[C]: in function 'closeShopWindow'
+[30/8/2012 4:16:39] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 4:16:39] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 4:16:39] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 4:16:39] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 4:24:15] [Error - NpcScript Interface] 
+[30/8/2012 4:24:15] (Unknown script file)
+[30/8/2012 4:24:15] Description: 
+[30/8/2012 4:24:15] attempt to call a nil value
+[30/8/2012 4:24:15] stack traceback:
+[30/8/2012 4:24:15] 	[C]: in function 'closeShopWindow'
+[30/8/2012 4:24:15] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 4:24:15] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 4:24:15] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 4:24:15] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 4:26:28] [Error - NpcScript Interface] 
+[30/8/2012 4:26:28] (Unknown script file)
+[30/8/2012 4:26:28] Description: 
+[30/8/2012 4:26:28] attempt to call a nil value
+[30/8/2012 4:26:28] stack traceback:
+[30/8/2012 4:26:28] 	[C]: in function 'closeShopWindow'
+[30/8/2012 4:26:28] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 4:26:28] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 4:26:28] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 4:26:28] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 4:28:2] [Error - NpcScript Interface] 
+[30/8/2012 4:28:2] (Unknown script file)
+[30/8/2012 4:28:2] Description: 
+[30/8/2012 4:28:2] attempt to call a nil value
+[30/8/2012 4:28:2] stack traceback:
+[30/8/2012 4:28:2] 	[C]: in function 'closeShopWindow'
+[30/8/2012 4:28:2] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 4:28:2] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[30/8/2012 4:28:2] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[30/8/2012 4:28:2] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[30/8/2012 4:28:2] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[30/8/2012 4:28:2] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[30/8/2012 4:28:2] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[30/8/2012 4:28:2] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[30/8/2012 4:28:2] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+
+[30/8/2012 4:32:19] [Error - NpcScript Interface] 
+[30/8/2012 4:32:19] (Unknown script file)
+[30/8/2012 4:32:19] Description: 
+[30/8/2012 4:32:19] attempt to call a nil value
+[30/8/2012 4:32:19] stack traceback:
+
+[30/8/2012 4:37:29] [Error - NpcScript Interface] 
+[30/8/2012 4:37:29] (Unknown script file)
+[30/8/2012 4:37:29] Description: 
+[30/8/2012 4:37:29] attempt to call a nil value
+[30/8/2012 4:37:29] stack traceback:
+[30/8/2012 5:11:5] > Saving server...
+[30/8/2012 5:11:10] > SAVE: Complete in 5.645 seconds using binary-tilebased house storage.
+
+[30/8/2012 5:21:18] [Error - NpcScript Interface] 
+[30/8/2012 5:21:18] (Unknown script file)
+[30/8/2012 5:21:18] Description: 
+[30/8/2012 5:21:18] attempt to call a nil value
+[30/8/2012 5:21:18] stack traceback:
+
+[30/8/2012 5:22:15] [Error - NpcScript Interface] 
+[30/8/2012 5:22:15] (Unknown script file)
+[30/8/2012 5:22:15] Description: 
+[30/8/2012 5:22:15] attempt to call a nil value
+[30/8/2012 5:22:15] stack traceback:
+[30/8/2012 5:22:15] 	[C]: in function 'closeShopWindow'
+[30/8/2012 5:22:15] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 5:22:15] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 5:22:15] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 5:22:15] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 5:22:23] [Error - NpcScript Interface] 
+[30/8/2012 5:22:23] (Unknown script file)
+[30/8/2012 5:22:23] Description: 
+[30/8/2012 5:22:23] attempt to call a nil value
+[30/8/2012 5:22:23] stack traceback:
+
+[30/8/2012 5:35:39] [Error - NpcScript Interface] 
+[30/8/2012 5:35:39] (Unknown script file)
+[30/8/2012 5:35:39] Description: 
+[30/8/2012 5:35:39] attempt to call a nil value
+[30/8/2012 5:35:39] stack traceback:
+[30/8/2012 5:35:39] 	[C]: in function 'closeShopWindow'
+[30/8/2012 5:35:39] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 5:35:39] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[30/8/2012 5:35:39] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[30/8/2012 5:35:39] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[30/8/2012 5:35:39] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[30/8/2012 5:35:39] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[30/8/2012 5:35:39] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[30/8/2012 5:35:39] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[30/8/2012 5:35:39] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+[30/8/2012 6:11:5] > Saving server...
+[30/8/2012 6:11:10] > SAVE: Complete in 4.83 seconds using binary-tilebased house storage.
+
+[30/8/2012 6:25:37] [Error - NpcScript Interface] 
+[30/8/2012 6:25:37] (Unknown script file)
+[30/8/2012 6:25:37] Description: 
+[30/8/2012 6:25:37] attempt to call a nil value
+[30/8/2012 6:25:37] stack traceback:
+[30/8/2012 6:25:37] 	[C]: in function 'closeShopWindow'
+[30/8/2012 6:25:37] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 6:25:37] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[30/8/2012 6:25:37] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[30/8/2012 6:25:37] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[30/8/2012 6:25:37] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[30/8/2012 6:25:37] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[30/8/2012 6:25:37] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[30/8/2012 6:25:37] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[30/8/2012 6:25:37] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+
+[30/8/2012 6:44:35] [Error - NpcScript Interface] 
+[30/8/2012 6:44:35] (Unknown script file)
+[30/8/2012 6:44:35] Description: 
+[30/8/2012 6:44:35] attempt to call a nil value
+[30/8/2012 6:44:35] stack traceback:
+
+[30/8/2012 6:45:2] [Error - NpcScript Interface] 
+[30/8/2012 6:45:2] (Unknown script file)
+[30/8/2012 6:45:2] Description: 
+[30/8/2012 6:45:2] attempt to call a nil value
+[30/8/2012 6:45:2] stack traceback:
+[30/8/2012 6:45:2] 	[C]: in function 'closeShopWindow'
+[30/8/2012 6:45:2] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 6:45:2] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[30/8/2012 6:45:2] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[30/8/2012 6:45:2] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[30/8/2012 6:45:2] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[30/8/2012 6:45:2] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[30/8/2012 6:45:2] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[30/8/2012 6:45:2] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[30/8/2012 6:45:2] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+[30/8/2012 6:48:52] > Broadcasted message: "Uma escura e medonha fumaça negra começa a surgir em Quendor...".
+
+[30/8/2012 6:48:56] [Error - NpcScript Interface] 
+[30/8/2012 6:48:56] (Unknown script file)
+[30/8/2012 6:48:56] Description: 
+[30/8/2012 6:48:56] attempt to call a nil value
+[30/8/2012 6:48:56] stack traceback:
+[30/8/2012 6:49:52] > Broadcasted message: "Morte aos mortos vivos! Preparem-se para lutar contra a morte!".
+[30/8/2012 6:50:32] > Broadcasted message: "Guerreiros saem do chão e fantasmas assombram os lares! Os mortos vivos atacam a cidade de Quendor!".
+[30/8/2012 6:50:53] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.33.76.34)
+[30/8/2012 6:52:54] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.33.76.34)
+
+[30/8/2012 6:58:45] [Error - NpcScript Interface] 
+[30/8/2012 6:58:45] (Unknown script file)
+[30/8/2012 6:58:45] Description: 
+[30/8/2012 6:58:45] attempt to call a nil value
+[30/8/2012 6:58:45] stack traceback:
+[30/8/2012 7:11:5] > Saving server...
+[30/8/2012 7:11:10] > SAVE: Complete in 5.774 seconds using binary-tilebased house storage.
+
+[30/8/2012 7:13:9] [Error - NpcScript Interface] 
+[30/8/2012 7:13:9] (Unknown script file)
+[30/8/2012 7:13:9] Description: 
+[30/8/2012 7:13:9] attempt to call a nil value
+[30/8/2012 7:13:9] stack traceback:
+
+[30/8/2012 7:18:58] [Error - NpcScript Interface] 
+[30/8/2012 7:18:58] (Unknown script file)
+[30/8/2012 7:18:58] Description: 
+[30/8/2012 7:18:58] attempt to call a nil value
+[30/8/2012 7:18:58] stack traceback:
+[30/8/2012 7:18:58] 	[C]: in function 'closeShopWindow'
+[30/8/2012 7:18:58] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 7:18:58] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[30/8/2012 7:18:58] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[30/8/2012 7:18:58] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[30/8/2012 7:18:58] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[30/8/2012 7:18:58] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[30/8/2012 7:18:58] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[30/8/2012 7:18:58] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[30/8/2012 7:18:58] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+[30/8/2012 8:11:5] > Saving server...
+[30/8/2012 8:11:10] > SAVE: Complete in 5.147 seconds using binary-tilebased house storage.
+
+[30/8/2012 8:15:55] [Error - NpcScript Interface] 
+[30/8/2012 8:15:55] (Unknown script file)
+[30/8/2012 8:15:55] Description: 
+[30/8/2012 8:15:55] attempt to call a nil value
+[30/8/2012 8:15:55] stack traceback:
+
+[30/8/2012 8:27:52] [Error - Raid Interface] 
+[30/8/2012 8:27:52] 	startRaid("demodras")
+[30/8/2012 8:27:52] 	
+[30/8/2012 8:27:52] Description: 
+[30/8/2012 8:27:52] (luaDoCreateMonster) Cannot create monster: Dragon Lord
+
+[30/8/2012 8:27:52] [Error - Raid Interface] 
+[30/8/2012 8:27:52] 	startRaid("demodras")
+[30/8/2012 8:27:52] 	
+[30/8/2012 8:27:52] Description: 
+[30/8/2012 8:27:52] (luaDoCreateMonster) Cannot create monster: Demodras
+
+[30/8/2012 8:38:8] [Error - NpcScript Interface] 
+[30/8/2012 8:38:8] (Unknown script file)
+[30/8/2012 8:38:8] Description: 
+[30/8/2012 8:38:8] attempt to call a nil value
+[30/8/2012 8:38:8] stack traceback:
+[30/8/2012 8:38:8] 	[C]: in function 'closeShopWindow'
+[30/8/2012 8:38:8] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 8:38:8] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 8:38:8] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 8:38:8] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 8:46:23] [Error - NpcScript Interface] 
+[30/8/2012 8:46:23] (Unknown script file)
+[30/8/2012 8:46:23] Description: 
+[30/8/2012 8:46:23] attempt to call a nil value
+[30/8/2012 8:46:23] stack traceback:
+
+[30/8/2012 9:7:29] [Error - NpcScript Interface] 
+[30/8/2012 9:7:29] (Unknown script file)
+[30/8/2012 9:7:29] Description: 
+[30/8/2012 9:7:29] attempt to call a nil value
+[30/8/2012 9:7:29] stack traceback:
+[30/8/2012 9:11:5] > Saving server...
+[30/8/2012 9:11:12] > SAVE: Complete in 6.965 seconds using binary-tilebased house storage.
+
+[30/8/2012 9:17:15] [Error - NpcScript Interface] 
+[30/8/2012 9:17:15] (Unknown script file)
+[30/8/2012 9:17:15] Description: 
+[30/8/2012 9:17:15] attempt to call a nil value
+[30/8/2012 9:17:15] stack traceback:
+[30/8/2012 9:17:15] 	[C]: in function 'closeShopWindow'
+[30/8/2012 9:17:15] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 9:17:15] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[30/8/2012 9:17:15] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[30/8/2012 9:17:15] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[30/8/2012 9:17:15] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[30/8/2012 9:17:15] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[30/8/2012 9:17:15] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[30/8/2012 9:17:15] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[30/8/2012 9:17:15] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+
+[30/8/2012 9:23:12] [Error - NpcScript Interface] 
+[30/8/2012 9:23:12] (Unknown script file)
+[30/8/2012 9:23:12] Description: 
+[30/8/2012 9:23:12] attempt to call a nil value
+[30/8/2012 9:23:12] stack traceback:
+[30/8/2012 9:23:12] 	[C]: in function 'closeShopWindow'
+[30/8/2012 9:23:12] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[30/8/2012 9:23:12] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[30/8/2012 9:23:12] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[30/8/2012 9:23:12] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[30/8/2012 9:53:23] [Error - NpcScript Interface] 
+[30/8/2012 9:53:23] (Unknown script file)
+[30/8/2012 9:53:23] Description: 
+[30/8/2012 9:53:23] attempt to call a nil value
+[30/8/2012 9:53:23] stack traceback:
+
+[30/8/2012 9:59:41] [Error - NpcScript Interface] 
+[30/8/2012 9:59:41] (Unknown script file)
+[30/8/2012 9:59:41] Description: 
+[30/8/2012 9:59:41] attempt to call a nil value
+[30/8/2012 9:59:41] stack traceback:
+[30/8/2012 10:0:20] > Paying houses...
+[30/8/2012 10:0:22] Houses paid in 1.597 seconds.
+[30/8/2012 10:0:22] > Saving server...
+[30/8/2012 10:0:22] > SAVE: Complete in 0.418 seconds using binary-tilebased house storage.
+[30/8/2012 10:0:22] Preparing to shutdown the server- done.

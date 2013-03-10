@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<npc name="Edalia" floorchange="0" walkinterval="2000" speed="220" script="|DATA|/game/blacksmith.lua">
+	<health now="150" max="150"/>
+	<look type="137" head="113" body="114" legs="19" feet="0" addons="3"/>
+  
+	<parameters>
+		<parameter key="message_greet" value="Olá |PLAYERNAME|. Em meu {trade} podemos negociar algumas armas de distancia e também munições." />
+		<parameter key="message_decline" value="|TOTALCOST| moedas de ouro é muito para você?" />
+		<parameter key="use_trade_lists" value="ranged;ammunition" />
+	</parameters>  
+</npc>

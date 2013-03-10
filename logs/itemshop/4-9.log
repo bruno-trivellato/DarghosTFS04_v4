@@ -1,0 +1,12 @@
+18:45:08 | Player [Mantus Infernalty] | Processando 1 itens a entregar....
+18:45:08 | Player [Mantus Infernalty] | Item Data: {"log_id":419,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+18:45:08 | Player [Mantus Infernalty] | Item Data Entregue com sucesso: {"log_id":419,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+18:45:08 | Player [Mantus Infernalty] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+18:45:08 | Player [Mantus Infernalty] | --------------------------------------.
+20:25:31 | Player [Kukis] | Processando 2 itens a entregar....
+20:25:31 | Player [Kukis] | Item Data: {"log_id":420,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+20:25:31 | Player [Kukis] | Item Data: {"log_id":421,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+20:25:31 | Player [Kukis] | Item Data Entregue com sucesso: {"log_id":420,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+20:25:31 | Player [Kukis] | Item Data Entregue com sucesso: {"log_id":421,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+20:25:31 | Player [Kukis] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+20:25:31 | Player [Kukis] | --------------------------------------.

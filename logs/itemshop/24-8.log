@@ -1,0 +1,27 @@
+00:52:15 | Player [Apoliptique] | Processando 1 itens a entregar....
+00:52:15 | Player [Apoliptique] | Item Data: {"log_id":365,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+00:52:15 | Player [Apoliptique] | Item Data Entregue com sucesso: {"log_id":365,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+00:52:15 | Player [Apoliptique] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+00:52:15 | Player [Apoliptique] | --------------------------------------.
+03:57:46 | Player [Leo Rlz] | Processando 1 itens a entregar....
+03:57:46 | Player [Leo Rlz] | Item Data: {"log_id":366,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+03:57:46 | Player [Leo Rlz] | Item Data Entregue com sucesso: {"log_id":366,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+03:57:47 | Player [Leo Rlz] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+03:57:47 | Player [Leo Rlz] | --------------------------------------.
+14:14:31 | Player [Mulek Piranha] | Processando 1 itens a entregar....
+14:14:31 | Player [Mulek Piranha] | Item Data: {"log_id":367,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+14:14:31 | Player [Mulek Piranha] | Item Data Entregue com sucesso: {"log_id":367,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+14:14:31 | Player [Mulek Piranha] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+14:14:31 | Player [Mulek Piranha] | --------------------------------------.
+14:30:46 | Player [Big Low] | Processando 1 itens a entregar....
+14:30:46 | Player [Big Low] | Item Data: {"log_id":368,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+14:30:46 | Player [Big Low] | Item Data Entregue com sucesso: {"log_id":368,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+14:30:46 | Player [Big Low] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+14:30:46 | Player [Big Low] | --------------------------------------.
+16:28:16 | Player [Kurd Axwell] | Processando 2 itens a entregar....
+16:28:16 | Player [Kurd Axwell] | Item Data: {"log_id":357,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+16:28:16 | Player [Kurd Axwell] | Item Data: {"log_id":358,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+16:28:16 | Player [Kurd Axwell] | Item Data Entregue com sucesso: {"log_id":357,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+16:28:16 | Player [Kurd Axwell] | Item Data Entregue com sucesso: {"log_id":358,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+16:28:16 | Player [Kurd Axwell] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+16:28:16 | Player [Kurd Axwell] | --------------------------------------.

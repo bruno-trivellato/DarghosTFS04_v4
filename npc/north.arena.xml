@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<npc name="Boutrog" floorchange="0" walkradius="2" walkinterval="4000" speed="220" script="|DATA|/game/north.arena.lua">
+	<health now="665" max="665"/>
+    <look type="143" head="114" body="77" legs="114" feet="0" addons="3"/>
+ 
+ 	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I'm the arena master. Do you consider yourself strong? Then show it to all challenging to {fight} against our arena gladiators!" />
+	</parameters>
+</npc>

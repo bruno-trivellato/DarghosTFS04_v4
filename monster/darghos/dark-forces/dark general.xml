@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monster speed="60" manacost="0" race="blood" skull="black" experience="700000" name="Dark General" nameDescription="a general of dark forces">
+  <health max="210000" now="210000"/>
+  <look head="114" body="95" addons="3" legs="94" type="268" corpse="6080" feet="114"/>
+  <targetchange chance="0" interval="5000"/>
+  <strategy defense="0" attack="100"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="100"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack interval="1500" attack="140" skill="210" name="melee"/>
+    <attack chance="25" radius="2" interval="2000" min="-750" name="physical" max="-1200">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+    <attack chance="51" interval="2000" range="7" min="-650" name="physical" max="-900">
+      <attribute key="shootEffect" value="whirlwindaxe"/>
+    </attack>
+  </attacks>
+  <defenses defense="50" armor="100"/>
+  <immunities>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <elements>
+    <element icePercent="-10"/>
+    <element holyPercent="-15"/>
+    <element physicalPercent="50"/>
+	<element deathPercent="35"/>
+    <element energyPercent="10"/>
+  </elements>
+  <summons maxSummons="6">
+    <summon chance="7" interval="1000" name="dark priestess"/>
+  </summons>
+  <voices chance="50" interval="5000">
+    <voice sentence="O esforço de vocês Quendorianos é inutil!"/>
+    <voice sentence="Tropas! Me curem!"/>
+    <voice sentence="Sou o general das tropas negras! Vim para lhe causar muito sofrimento!" yell="1"/>
+  </voices>
+  <loot>
+    <item chance="100000" id="8473" countmax="40"/>
+    <item chance="100000" id="2152" countmax="100"/>
+    <item chance="100000" id="5944"/>
+    <item chance="50000" id="6500" countmax="5"/>
+    <item chance="50000" id="11240"/>
+    <item chance="50000" id="11302"/>
+    <item chance="33333" id="12642"/>
+    <item chance="50000" id="7439" countmax="5"/>
+    <item chance="50000" id="11305"/>
+    <item chance="50000" id="2160" countmax="5"/>
+    <item chance="16666" id="2646"/>
+    <item chance="33333" id="12649"/>
+    <item chance="12500" id="2522"/>
+    <item chance="16666" id="8932"/>
+    <item chance="3000" id="2408"/>
+    <item chance="2083" id="2523"/>
+  </loot>
+</monster>

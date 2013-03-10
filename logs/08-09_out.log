@@ -1,0 +1,376 @@
+[8/9/2012 10:9:2] > Using MD5 encryption
+[8/9/2012 10:9:2] >> Loading RSA key
+[8/9/2012 10:9:2] >> Starting SQL connection
+
+[8/9/2012 10:9:2] > WARNING: Outdated MySQL server detected, consider upgrading to a newer version.
+[8/9/2012 10:9:2] >> Running Database Manager
+[8/9/2012 10:9:3] >> Loading items (OTB)
+[8/9/2012 10:9:3] >> Loading items (XML)
+[8/9/2012 10:9:3] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[8/9/2012 10:9:3] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[8/9/2012 10:9:3] >> Loading groups
+[8/9/2012 10:9:3] >> Loading vocations
+[8/9/2012 10:9:3] >> Loading outfits
+[8/9/2012 10:9:3] >> Loading chat channels
+[8/9/2012 10:9:3] >> Loading script systems
+[8/9/2012 10:9:4] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[8/9/2012 10:9:4] >> Loading mods...
+[8/9/2012 10:9:4] > 0 mods were loaded.
+[8/9/2012 10:9:4] >> Loading experience stages
+[8/9/2012 10:9:4] >> Loading monsters
+[8/9/2012 10:9:5] [Warning - Monsters::deserializeSpell] Frost Dragon - Unknown areaEffect: smallice
+[8/9/2012 10:9:5] >> Loading map and spawns...
+[8/9/2012 10:9:7] > Map size: 5000x5000.
+[8/9/2012 10:9:7] > Map descriptions: 
+[8/9/2012 10:9:7] "Saved with Remere's Map Editor 2.2"
+[8/9/2012 10:9:7] "SimOne MapEditor 0.5.5"
+[8/9/2012 10:9:9] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1070/1121/6
+[8/9/2012 10:9:9] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1070/1129/6
+[8/9/2012 10:9:9] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1073/1121/6
+[8/9/2012 10:9:9] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1073/1129/6
+[8/9/2012 10:9:10] Duplicate uniqueId 6401
+[8/9/2012 10:9:10] Duplicate uniqueId 6401
+[8/9/2012 10:9:13] Duplicate uniqueId 6401
+[8/9/2012 10:9:13] Duplicate uniqueId 6401
+[8/9/2012 10:9:13] Duplicate uniqueId 6401
+[8/9/2012 10:9:13] Duplicate uniqueId 6401
+[8/9/2012 10:9:17] Duplicate uniqueId 6401
+[8/9/2012 10:9:17] Duplicate uniqueId 6401
+[8/9/2012 10:9:19] Duplicate uniqueId 2004
+[8/9/2012 10:9:19] Duplicate uniqueId 2005
+[8/9/2012 10:9:19] Duplicate uniqueId 2006
+[8/9/2012 10:9:19] Duplicate uniqueId 2007
+[8/9/2012 10:9:24] Duplicate uniqueId 6401
+[8/9/2012 10:9:24] Duplicate uniqueId 6401
+[8/9/2012 10:9:24] Duplicate uniqueId 6401
+[8/9/2012 10:9:25] Duplicate uniqueId 6400
+[8/9/2012 10:9:25] Duplicate uniqueId 6401
+[8/9/2012 10:9:25] Duplicate uniqueId 2056
+[8/9/2012 10:9:25] Duplicate uniqueId 2057
+[8/9/2012 10:9:25] Duplicate uniqueId 2058
+[8/9/2012 10:9:25] Duplicate uniqueId 2051
+[8/9/2012 10:9:25] Duplicate uniqueId 2052
+[8/9/2012 10:9:25] Duplicate uniqueId 2053
+[8/9/2012 10:9:25] Duplicate uniqueId 2054
+[8/9/2012 10:9:25] > Map loading time: 19.889 seconds.
+[8/9/2012 10:9:26] [Spawn::addMonster] Cannot find "Butterfly"
+[8/9/2012 10:9:26] [Spawn::addMonster] Cannot find "Butterfly"
+[8/9/2012 10:9:27] > Data parsing time: 1.244 seconds.
+[8/9/2012 10:9:41] > Houses synchronization time: 14.962 seconds.
+[8/9/2012 10:9:42] > Content unserialization time: 0.116 seconds.
+[8/9/2012 10:9:42] >> Checking world type... Open PvP
+[8/9/2012 10:9:42] >> Initializing game state and binding services...
+[8/9/2012 10:9:43] > Global IP address: 184.173.128.212
+[8/9/2012 10:9:43] > Bound ports: 7577	7578	9215	
+[8/9/2012 10:9:43] >> Everything smells good, server is starting up...
+[8/9/2012 10:9:43] >> UltraX server Online!
+[8/9/2012 10:9:43] >> UltraX server Online!
+[DDOS EMERGENCY] Enabled
+
+[8/9/2012 11:11:4] > Saving server...
+[8/9/2012 11:11:5] > SAVE: Complete in 0.519 seconds using binary-tilebased house storage.
+[8/9/2012 12:11:4] > Saving server...
+[8/9/2012 12:11:5] > SAVE: Complete in 0.523 seconds using binary-tilebased house storage.
+
+[8/9/2012 12:32:20] [Error - NpcScript Interface] 
+[8/9/2012 12:32:20] (Unknown script file)
+[8/9/2012 12:32:20] Description: 
+[8/9/2012 12:32:20] attempt to call a nil value
+[8/9/2012 12:32:20] stack traceback:
+[8/9/2012 13:11:4] > Saving server...
+[8/9/2012 13:11:6] > SAVE: Complete in 1.966 seconds using binary-tilebased house storage.
+
+[8/9/2012 13:12:35] [Error - NpcScript Interface] 
+[8/9/2012 13:12:35] (Unknown script file)
+[8/9/2012 13:12:35] Description: 
+[8/9/2012 13:12:35] attempt to call a nil value
+[8/9/2012 13:12:35] stack traceback:
+
+[8/9/2012 13:15:49] [Error - NpcScript Interface] 
+[8/9/2012 13:15:49] (Unknown script file)
+[8/9/2012 13:15:49] Description: 
+[8/9/2012 13:15:49] attempt to call a nil value
+[8/9/2012 13:15:49] stack traceback:
+[8/9/2012 13:15:49] 	[C]: in function 'closeShopWindow'
+[8/9/2012 13:15:49] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[8/9/2012 13:15:49] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[8/9/2012 13:15:49] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[8/9/2012 13:15:49] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[8/9/2012 13:17:48] [Error - NpcScript Interface] 
+[8/9/2012 13:17:48] (Unknown script file)
+[8/9/2012 13:17:48] Description: 
+[8/9/2012 13:17:48] attempt to call a nil value
+[8/9/2012 13:17:48] stack traceback:
+[8/9/2012 13:17:48] 	[C]: in function 'closeShopWindow'
+[8/9/2012 13:17:48] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[8/9/2012 13:17:48] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[8/9/2012 13:17:48] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[8/9/2012 13:17:48] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[8/9/2012 13:31:45] [Error - NpcScript Interface] 
+[8/9/2012 13:31:45] (Unknown script file)
+[8/9/2012 13:31:45] Description: 
+[8/9/2012 13:31:45] attempt to call a nil value
+[8/9/2012 13:31:45] stack traceback:
+
+[8/9/2012 13:41:10] [Error - NpcScript Interface] 
+[8/9/2012 13:41:10] (Unknown script file)
+[8/9/2012 13:41:10] Description: 
+[8/9/2012 13:41:10] attempt to call a nil value
+[8/9/2012 13:41:10] stack traceback:
+
+[8/9/2012 13:54:11] [Error - NpcScript Interface] 
+[8/9/2012 13:54:11] (Unknown script file)
+[8/9/2012 13:54:11] Description: 
+[8/9/2012 13:54:11] attempt to call a nil value
+[8/9/2012 13:54:11] stack traceback:
+
+[8/9/2012 13:55:9] [Error - NpcScript Interface] 
+[8/9/2012 13:55:9] (Unknown script file)
+[8/9/2012 13:55:9] Description: 
+[8/9/2012 13:55:9] attempt to call a nil value
+[8/9/2012 13:55:9] stack traceback:
+[8/9/2012 13:55:9] 	[C]: in function 'closeShopWindow'
+[8/9/2012 13:55:9] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[8/9/2012 13:55:9] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[8/9/2012 13:55:9] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[8/9/2012 13:55:9] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+
+[8/9/2012 14:5:35] [Error - NpcScript Interface] 
+[8/9/2012 14:5:35] (Unknown script file)
+[8/9/2012 14:5:35] Description: 
+[8/9/2012 14:5:35] attempt to call a nil value
+[8/9/2012 14:5:35] stack traceback:
+[8/9/2012 14:10:50] [DDOS EMERGENCY] Current avarage RX packet per second 102387 is greater then limit 70000. Emergency ENABLED.
+[8/9/2012 14:10:50] > Broadcasted message: "Estamos tendo problemas de conexï¿½o. Para evitar prejuizos, nenhuma morte receberï¿½ qualquer tipo de penalidade atï¿½ que nossa conexï¿½o se normalize.".
+[8/9/2012 14:11:4] > Saving server...
+[8/9/2012 14:11:9] > SAVE: Complete in 4.64 seconds using binary-tilebased house storage.
+[8/9/2012 14:45:6] [DDOS EMERGENCY] Current avarage RX packet per second 37030 is fine. Emergency disabled.
+[8/9/2012 14:45:7] > Broadcasted message: "Conexï¿½o normalizada. Penalidades nas mortes agora estï¿½o novamente validas. Obrigado pela sua compreensï¿½o e bom jogo.".
+[8/9/2012 14:57:34] [DDOS EMERGENCY] Current avarage RX packet per second 160585 is greater then limit 70000. Emergency ENABLED.
+[8/9/2012 14:57:34] > Broadcasted message: "Estamos tendo problemas de conexï¿½o. Para evitar prejuizos, nenhuma morte receberï¿½ qualquer tipo de penalidade atï¿½ que nossa conexï¿½o se normalize.".
+[8/9/2012 15:11:4] > Saving server...
+[8/9/2012 15:11:6] > SAVE: Complete in 1.194 seconds using binary-tilebased house storage.
+[8/9/2012 15:34:45] [DDOS EMERGENCY] Current avarage RX packet per second 56815 is fine. Emergency disabled.
+[8/9/2012 15:34:45] > Broadcasted message: "Conexï¿½o normalizada. Penalidades nas mortes agora estï¿½o novamente validas. Obrigado pela sua compreensï¿½o e bom jogo.".
+[8/9/2012 15:57:43] > Broadcasted message: "As senhoritas rebeldes planejam um ataque a quendor...".
+[8/9/2012 15:58:43] > Broadcasted message: "As amazonas estão atacando Quendor!".
+[8/9/2012 16:11:4] > Saving server...
+[8/9/2012 16:11:8] > SAVE: Complete in 3.869 seconds using binary-tilebased house storage.
+
+[8/9/2012 16:54:39] [Error - NpcScript Interface] 
+[8/9/2012 16:54:39] (Unknown script file)
+[8/9/2012 16:54:39] Description: 
+[8/9/2012 16:54:39] attempt to call a nil value
+[8/9/2012 16:54:39] stack traceback:
+[8/9/2012 17:11:4] > Saving server...
+[8/9/2012 17:11:9] > SAVE: Complete in 5.09 seconds using binary-tilebased house storage.
+
+[8/9/2012 17:26:0] [Error - NpcScript Interface] 
+[8/9/2012 17:26:0] (Unknown script file)
+[8/9/2012 17:26:0] Description: 
+[8/9/2012 17:26:0] attempt to call a nil value
+[8/9/2012 17:26:0] stack traceback:
+
+[8/9/2012 17:44:21] [Error - Action Interface] 
+[8/9/2012 17:44:21] data/actions/scripts/tools/rope.lua:onUse
+[8/9/2012 17:44:21] Description: 
+[8/9/2012 17:44:21] (luaGetThingFromPos) Tile not found
+
+[8/9/2012 17:44:22] [Error - Action Interface] 
+[8/9/2012 17:44:22] data/actions/scripts/tools/rope.lua:onUse
+[8/9/2012 17:44:22] Description: 
+[8/9/2012 17:44:22] (luaGetThingFromPos) Tile not found
+[8/9/2012 17:53:25] [DDOS EMERGENCY] Current avarage RX packet per second 74376 is greater then limit 70000. Emergency ENABLED.
+[8/9/2012 17:53:25] > Broadcasted message: "Estamos tendo problemas de conexï¿½o. Para evitar prejuizos, nenhuma morte receberï¿½ qualquer tipo de penalidade atï¿½ que nossa conexï¿½o se normalize.".
+[8/9/2012 18:11:4] > Saving server...
+[8/9/2012 18:11:7] > SAVE: Complete in 2.257 seconds using binary-tilebased house storage.
+[8/9/2012 18:56:57] [DDOS EMERGENCY] Current avarage RX packet per second 55417 is fine. Emergency disabled.
+[8/9/2012 18:56:57] > Broadcasted message: "Conexï¿½o normalizada. Penalidades nas mortes agora estï¿½o novamente validas. Obrigado pela sua compreensï¿½o e bom jogo.".
+[8/9/2012 19:11:4] > Saving server...
+[8/9/2012 19:11:7] > SAVE: Complete in 2.984 seconds using binary-tilebased house storage.
+
+[8/9/2012 19:36:13] [Error - NpcScript Interface] 
+[8/9/2012 19:36:13] (Unknown script file)
+[8/9/2012 19:36:13] Description: 
+[8/9/2012 19:36:13] attempt to call a nil value
+[8/9/2012 19:36:13] stack traceback:
+
+[8/9/2012 19:38:11] [Error - NpcScript Interface] 
+[8/9/2012 19:38:11] (Unknown script file)
+[8/9/2012 19:38:11] Description: 
+[8/9/2012 19:38:11] attempt to call a nil value
+[8/9/2012 19:38:11] stack traceback:
+[8/9/2012 19:38:11] 	[C]: in function 'closeShopWindow'
+[8/9/2012 19:38:11] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[8/9/2012 19:38:11] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[8/9/2012 19:38:11] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[8/9/2012 19:38:11] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+[8/9/2012 20:11:4] > Saving server...
+[8/9/2012 20:11:8] > SAVE: Complete in 3.337 seconds using binary-tilebased house storage.
+[8/9/2012 21:11:4] > Saving server...
+[8/9/2012 21:11:8] > SAVE: Complete in 3.629 seconds using binary-tilebased house storage.
+[8/9/2012 21:16:35] [DDOS EMERGENCY] Current avarage RX packet per second 112216 is greater then limit 70000. Emergency ENABLED.
+[8/9/2012 21:16:35] > Broadcasted message: "Estamos tendo problemas de conexï¿½o. Para evitar prejuizos, nenhuma morte receberï¿½ qualquer tipo de penalidade atï¿½ que nossa conexï¿½o se normalize.".
+[8/9/2012 21:32:0] [DDOS EMERGENCY] Current avarage RX packet per second 48907 is fine. Emergency disabled.
+[8/9/2012 21:32:0] > Broadcasted message: "Conexï¿½o normalizada. Penalidades nas mortes agora estï¿½o novamente validas. Obrigado pela sua compreensï¿½o e bom jogo.".
+[8/9/2012 21:40:44] > Broadcasted message: "Um estranho exercito de Goblins está a fazer baderna no portão ao Oeste de Quendor! Mostrem a nossa força a estas pateticas criaturas!".
+
+[8/9/2012 22:10:45] [Error - Spell Interface] 
+[8/9/2012 22:10:45] data/spells/scripts/support/destroy_field_rune.lua:onCastSpell
+[8/9/2012 22:10:45] Description: 
+[8/9/2012 22:10:45] (luaDoRemoveItem) Item not found
+[8/9/2012 22:11:4] > Saving server...
+[8/9/2012 22:11:8] > SAVE: Complete in 3.568 seconds using binary-tilebased house storage.
+[8/9/2012 22:12:2] [DDOS EMERGENCY] Current avarage RX packet per second 96281 is greater then limit 70000. Emergency ENABLED.
+[8/9/2012 22:12:2] > Broadcasted message: "Estamos tendo problemas de conexï¿½o. Para evitar prejuizos, nenhuma morte receberï¿½ qualquer tipo de penalidade atï¿½ que nossa conexï¿½o se normalize.".
+
+[8/9/2012 22:15:55] [Error - NpcScript Interface] 
+[8/9/2012 22:15:55] (Unknown script file)
+[8/9/2012 22:15:55] Description: 
+[8/9/2012 22:15:55] attempt to call a nil value
+[8/9/2012 22:15:55] stack traceback:
+[8/9/2012 22:15:55] 	[C]: in function 'closeShopWindow'
+[8/9/2012 22:15:55] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[8/9/2012 22:15:55] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[8/9/2012 22:15:55] 	data/npc/lib/npcsystem/npchandler.lua:464: in function 'onPlayerCloseChannel'
+[8/9/2012 22:15:55] 	data/npc/scripts/game/rashid.lua:11: in function <data/npc/scripts/game/rashid.lua:11>
+
+[8/9/2012 22:32:49] [Error - NpcScript Interface] 
+[8/9/2012 22:32:49] (Unknown script file)
+[8/9/2012 22:32:49] Description: 
+[8/9/2012 22:32:49] attempt to call a nil value
+[8/9/2012 22:32:49] stack traceback:
+[8/9/2012 22:32:49] 	[C]: in function 'closeShopWindow'
+[8/9/2012 22:32:49] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[8/9/2012 22:32:49] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[8/9/2012 22:32:49] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[8/9/2012 22:32:49] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[8/9/2012 23:11:4] > Saving server...
+[8/9/2012 23:11:7] > SAVE: Complete in 2.899 seconds using binary-tilebased house storage.
+
+[8/9/2012 23:48:4] [Error - NpcScript Interface] 
+[8/9/2012 23:48:4] (Unknown script file)
+[8/9/2012 23:48:4] Description: 
+[8/9/2012 23:48:4] attempt to call a nil value
+[8/9/2012 23:48:4] stack traceback:
+[8/9/2012 23:48:4] 	[C]: in function 'closeShopWindow'
+[8/9/2012 23:48:4] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[8/9/2012 23:48:4] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[8/9/2012 23:48:4] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[8/9/2012 23:48:4] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[9/9/2012 0:11:4] > Saving server...
+[9/9/2012 0:11:7] > SAVE: Complete in 2.392 seconds using binary-tilebased house storage.
+[9/9/2012 0:29:45] [Warning - Protocol::RSA_decrypt] Not valid packet size (IP: 187.34.44.64)
+[9/9/2012 0:36:40] [DDOS EMERGENCY] Current avarage RX packet per second 40011 is fine. Emergency disabled.
+[9/9/2012 0:36:40] > Broadcasted message: "Conexï¿½o normalizada. Penalidades nas mortes agora estï¿½o novamente validas. Obrigado pela sua compreensï¿½o e bom jogo.".
+[9/9/2012 1:11:5] > Saving server...
+[9/9/2012 1:11:8] > SAVE: Complete in 3.843 seconds using binary-tilebased house storage.
+
+[9/9/2012 1:27:12] [Error - NpcScript Interface] 
+[9/9/2012 1:27:12] (Unknown script file)
+[9/9/2012 1:27:12] Description: 
+[9/9/2012 1:27:12] attempt to call a nil value
+[9/9/2012 1:27:12] stack traceback:
+[9/9/2012 1:27:12] 	[C]: in function 'closeShopWindow'
+[9/9/2012 1:27:12] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[9/9/2012 1:27:12] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[9/9/2012 1:27:12] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[9/9/2012 1:27:12] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[9/9/2012 2:11:5] > Saving server...
+[9/9/2012 2:11:8] > SAVE: Complete in 3.901 seconds using binary-tilebased house storage.
+
+[9/9/2012 2:30:6] [Error - NpcScript Interface] 
+[9/9/2012 2:30:6] (Unknown script file)
+[9/9/2012 2:30:6] Description: 
+[9/9/2012 2:30:6] attempt to call a nil value
+[9/9/2012 2:30:6] stack traceback:
+[9/9/2012 2:30:6] 	[C]: in function 'closeShopWindow'
+[9/9/2012 2:30:6] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[9/9/2012 2:30:6] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[9/9/2012 2:30:6] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[9/9/2012 2:30:6] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[9/9/2012 2:35:28] [Error - NpcScript Interface] 
+[9/9/2012 2:35:28] (Unknown script file)
+[9/9/2012 2:35:28] Description: 
+[9/9/2012 2:35:28] attempt to call a nil value
+[9/9/2012 2:35:28] stack traceback:
+[9/9/2012 2:35:28] 	[C]: in function 'closeShopWindow'
+[9/9/2012 2:35:28] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[9/9/2012 2:35:28] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[9/9/2012 2:35:28] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[9/9/2012 2:35:28] 	data/npc/scripts/game/default.lua:9: in function <data/npc/scripts/game/default.lua:9>
+[9/9/2012 3:11:5] > Saving server...
+[9/9/2012 3:11:8] > SAVE: Complete in 3.796 seconds using binary-tilebased house storage.
+
+[9/9/2012 3:29:38] [Error - NpcScript Interface] 
+[9/9/2012 3:29:38] (Unknown script file)
+[9/9/2012 3:29:38] Description: 
+[9/9/2012 3:29:38] attempt to call a nil value
+[9/9/2012 3:29:38] stack traceback:
+[9/9/2012 3:29:38] 	[C]: in function 'closeShopWindow'
+[9/9/2012 3:29:38] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[9/9/2012 3:29:38] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[9/9/2012 3:29:38] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[9/9/2012 3:29:38] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+
+[9/9/2012 3:45:25] [Error - NpcScript Interface] 
+[9/9/2012 3:45:25] (Unknown script file)
+[9/9/2012 3:45:25] Description: 
+[9/9/2012 3:45:25] attempt to call a nil value
+[9/9/2012 3:45:25] stack traceback:
+[9/9/2012 4:11:5] > Saving server...
+[9/9/2012 4:11:9] > SAVE: Complete in 3.933 seconds using binary-tilebased house storage.
+[9/9/2012 5:11:5] > Saving server...
+[9/9/2012 5:11:7] > SAVE: Complete in 2.795 seconds using binary-tilebased house storage.
+
+[9/9/2012 5:57:43] [Error - NpcScript Interface] 
+[9/9/2012 5:57:43] (Unknown script file)
+[9/9/2012 5:57:43] Description: 
+[9/9/2012 5:57:43] attempt to call a nil value
+[9/9/2012 5:57:43] stack traceback:
+[9/9/2012 5:57:43] 	[C]: in function 'closeShopWindow'
+[9/9/2012 5:57:43] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[9/9/2012 5:57:43] 	data/npc/lib/npcsystem/npchandler.lua:363: in function 'unGreet'
+[9/9/2012 5:57:43] 	data/npc/lib/npcsystem/npchandler.lua:576: in function 'onFarewell'
+[9/9/2012 5:57:43] 	data/npc/lib/npcsystem/modules.lua:251: in function 'callback'
+[9/9/2012 5:57:43] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[9/9/2012 5:57:43] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[9/9/2012 5:57:43] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[9/9/2012 5:57:43] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[9/9/2012 5:57:43] 	data/npc/scripts/game/default.lua:8: in function <data/npc/scripts/game/default.lua:8>
+[9/9/2012 6:11:5] > Saving server...
+[9/9/2012 6:11:8] > SAVE: Complete in 3.436 seconds using binary-tilebased house storage.
+[9/9/2012 7:11:5] > Saving server...
+[9/9/2012 7:11:8] > SAVE: Complete in 3.713 seconds using binary-tilebased house storage.
+[9/9/2012 8:9:44] > Broadcasted message: "Elf Scouts have been sighted near Thorn!".
+[9/9/2012 8:11:5] > Saving server...
+[9/9/2012 8:11:8] > SAVE: Complete in 3.508 seconds using binary-tilebased house storage.
+[9/9/2012 8:12:44] > Broadcasted message: "The elves are comming to Thorn, seams to be a huge attack!".
+[9/9/2012 8:14:45] > Broadcasted message: "Thorn is under attack!".
+
+[9/9/2012 8:30:24] [Error - NpcScript Interface] 
+[9/9/2012 8:30:24] (Unknown script file)
+[9/9/2012 8:30:24] Description: 
+[9/9/2012 8:30:24] attempt to call a nil value
+[9/9/2012 8:30:24] stack traceback:
+
+[9/9/2012 9:8:7] [Error - NpcScript Interface] 
+[9/9/2012 9:8:7] (Unknown script file)
+[9/9/2012 9:8:7] Description: 
+[9/9/2012 9:8:7] attempt to call a nil value
+[9/9/2012 9:8:7] stack traceback:
+[9/9/2012 9:8:7] 	[C]: in function 'closeShopWindow'
+[9/9/2012 9:8:7] 	data/npc/lib/npcsystem/npchandler.lua:225: in function 'releaseFocus'
+[9/9/2012 9:8:7] 	data/npc/lib/npcsystem/npchandler.lua:591: in function 'onWalkAway'
+[9/9/2012 9:8:7] 	data/npc/lib/npcsystem/npchandler.lua:523: in function 'onThink'
+[9/9/2012 9:8:7] 	data/npc/scripts/game/blacksmith.lua:9: in function <data/npc/scripts/game/blacksmith.lua:9>
+[9/9/2012 9:11:5] > Saving server...
+[9/9/2012 9:11:9] > SAVE: Complete in 4.354 seconds using binary-tilebased house storage.
+[9/9/2012 10:0:10] > Paying houses...
+[9/9/2012 10:0:11] Houses paid in 1.247 seconds.
+[9/9/2012 10:0:11] > Saving server...
+[9/9/2012 10:0:12] > SAVE: Complete in 0.45 seconds using binary-tilebased house storage.
+[9/9/2012 10:0:12] Preparing to shutdown the server- done.

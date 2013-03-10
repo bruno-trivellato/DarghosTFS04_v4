@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monster speed="320" manacost="0" race="VENOM" experience="12000" name="Ferumbras" nameDescription="Ferumbras">
+  <health max="35000" now="35000"/>
+  <look head="20" body="30" legs="40" type="229" corpse="6078" feet="50"/>
+  <targetchange chance="8" interval="5000"/>
+  <strategy defense="0" attack="100"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="2"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="2500"/>
+  </flags>
+  <attacks>
+    <attack interval="2000" attack="50" poison="200" skill="80" name="melee"/>
+    <!-- Mana Drain -->
+    <attack chance="20" interval="2000" range="7" min="-500" name="manadrain" max="-700">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <!-- Great Life Bomb -->
+    <attack target="0" chance="21" radius="6" interval="2000" min="-250" name="lifedrain" max="-350">
+      <attribute key="areaEffect" value="redspark"/>
+    </attack>
+    <!-- Great Smoke Bomb -->
+    <attack target="0" chance="20" radius="6" interval="2000" min="-350" name="physical" max="-470">
+      <attribute key="areaEffect" value="poff"/>
+    </attack>
+    <!-- Poison Explosion -->
+    <attack target="0" chance="20" radius="6" interval="2000" min="-350" name="poison" max="-550">
+      <attribute key="areaEffect" value="poison"/>
+    </attack>
+    <!-- Great Berserk -->
+    <attack target="0" chance="15" radius="5" interval="2000" min="0" name="physical" max="-900">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+    <!-- Energy Explosion -->
+    <attack target="0" chance="18" radius="10" interval="2000" min="-300" name="energy" max="-400">
+      <attribute key="areaEffect" value="energy"/>
+    </attack>
+  </attacks>
+  <defenses defense="50" armor="50">
+    <defense chance="10" interval="2000" min="200" name="healing" max="400">
+      <attribute key="areaEffect" value="greenshimmer"/>
+    </defense>
+    <defense duration="5000" chance="20" interval="4000" name="invisible">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+    <element firePercent="90"/>
+  </elements>
+  <immunities>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="3">
+    <summon chance="12" interval="3000" name="demon" max="3"/>
+  </summons>
+  <voices chance="20" interval="5000">
+    <voice sentence="NO ONE WILL STOP ME THIS TIME!" yell="1"/>
+    <voice sentence="THE POWER IS MINE!" yell="1"/>
+    <voice sentence="I returned from death and you dream about defeating me?" yell="1"/>
+    <voice sentence="Witness the first seconds of my eternal world domination!" yell="1"/>
+    <voice sentence="Even in my weakened state I will crush you all!" yell="1"/>
+  </voices>
+  <loot>
+    <item chance="7142" id="2144" countmax="83"/>
+    <item chance="12500" id="7427"/>
+    <item chance="7142" id="7382"/>
+    <item chance="20000" id="2520"/>
+    <item chance="10000" id="8926"/>
+    <item chance="20000" id="8885"/>
+    <item chance="20000" id="2127"/>
+    <item chance="16666" id="8930"/>
+    <item chance="100000" id="5903"/>
+    <item chance="16666" id="7896"/>
+    <item chance="50000" id="2148" countmax="100"/>
+    <item chance="50000" id="2148" countmax="84"/>
+    <item chance="20000" id="2466"/>
+    <item chance="25000" id="2470"/>
+    <item chance="50000" id="9971" countmax="2"/>
+    <item chance="25000" id="2522"/>
+    <item chance="10000" id="8869"/>
+    <item chance="10000" id="7407"/>
+    <item chance="16666" id="7405"/>
+    <item chance="12500" id="8924"/>
+    <item chance="10000" id="7422"/>
+    <item chance="20000" id="7895"/>
+    <item chance="16666" id="2472"/>
+    <item chance="16666" id="7894"/>
+    <item chance="14285" id="2514"/>
+    <item chance="7142" id="7418"/>
+    <item chance="7142" id="8928"/>
+    <item chance="16666" id="2539"/>
+    <item chance="10000" id="2152" countmax="58"/>
+    <item chance="12500" id="7410"/>
+    <item chance="10000" id="7417"/>
+    <item chance="20000" id="7451"/>
+    <item chance="10000" id="7423"/>
+    <item chance="12500" id="2150" countmax="54"/>
+    <item chance="20000" id="2149" countmax="100"/>
+    <item chance="12500" id="2146" countmax="78"/>
+    <item chance="12500" id="9970" countmax="87"/>
+    <item chance="12500" id="8918"/>
+    <item chance="20000" id="8903"/>
+    <item chance="25000" id="8902"/>
+    <item chance="14285" id="8904"/>
+    <item chance="20000" id="2542"/>
+    <item chance="16666" id="7885"/>
+    <item chance="20000" id="8868"/>
+    <item chance="14285" id="2143" countmax="88"/>
+  </loot>
+</monster>

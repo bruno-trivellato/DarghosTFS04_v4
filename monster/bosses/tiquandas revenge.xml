@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="tiquandas revenge" nameDescription="a tiquandas revenge" race="venom" experience="2635" speed="440" manacost="0">
+	<health now="1800" max="1800" />
+	<look type="120" head="20" body="30" legs="40" feet="50" corpse="6047" />
+	<targetchange interval="5000" chance="8" />
+	<strategy attack="100" defense="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="400" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="100" attack="40" poison="95" />
+		<attack name="poison" interval="1000" chance="25" range="7" min="-10" max="-250">
+			<attribute key="shootEffect" value="poison" />
+			<attribute key="areaEffect" value="greenspark" />
+		</attack>
+		<attack name="speed" interval="1000" chance="8" range="7" speedchange="-600" duration="10000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		<attack name="poison" interval="1000" chance="12" target="1" min="-10" max="-440">
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+	</attacks>
+	
+	<defenses armor="30" defense="31">
+	    <defense name="healing" interval="1000" chance="35" min="150" max="250">
+	      <attribute key="areaEffect" value="blueshimmer"/>
+	    </defense>
+		
+	    <defense name="speed" interval="1000" chance="6" speedchange="660" duration="20000">
+	      <attribute key="areaEffect" value="redshimmer"/>
+	    </defense>		
+	</defenses>
+	<elements>
+		<element icePercent="10"/>
+		<element deathPercent="10"/>
+		<element physicalPercent="25"/>
+		<element firePercent="-20"/>
+		<element holyPercent="10"/>
+	</elements>
+	<immunities>
+		<immunity earth="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<loot>
+		<item id="2148" countmax="50" chance="100000">
+			<!--gold coin-->
+		</item>
+		<item id="2148" countmax="70" chance="100000">
+			<!--gold coin-->
+		</item>
+		<item id="2666" countmax="25" chance="100000">
+			<!--meat-->
+		</item>
+		<item id="2671" countmax="8" chance="50000">
+			<!--ham-->
+		</item>
+		<item id="7732" chance="100000">
+			<!--seeds-->
+		</item>
+		<item id="5015" chance="100000">
+			<!--mandrake-->
+		</item>
+		<item id="2792" countmax="1" chance1="25000">
+			<!--dark mushroom-->
+		</item>
+	</loot>
+</monster>

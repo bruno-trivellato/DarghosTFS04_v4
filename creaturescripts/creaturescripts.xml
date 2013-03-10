@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creaturescripts>
+	<event type="login" name="PlayerLogin" event="script" value="login.lua"/>
+
+	<event type="joinchannel" name="GuildMotd" event="script" value="guildmotd.lua"/>
+	<event type="receivemail" name="Mail" event="script" value="mail.lua"/>
+	<event type="reportbug" name="SaveReportBug" script="reportbug.lua"/>
+	<event type="advance" name="AdvanceSave" event="script" value="advancesave.lua"/>
+
+	<event type="think" name="Idle" event="script" value="idle.lua"/>
+	<event type="think" name="SkullCheck" event="script" value="skullcheck.lua"/>
+	
+	<!-- DARGHOS -->
+	<event type="leavechannel" name="onLeaveChannel" event="script" value="game/channel.lua"/>
+	
+	<!-- <event type="statschange" name="onLeaveChannel" event="script" value="game/onstatschange.lua"/> -->
+	
+	<event type="push" name="onPush" event="script" value="game/push.lua"/>
+	<event type="look" name="lookItem" event="script" value="game/look.lua"/>
+	<event type="login" name="CustomPlayerLogin" event="script" value="game/login.lua"/>
+	<event type="combat" name="CustomPlayerCombat" event="script" value="game/combat.lua"/>
+	<event type="target" name="CustomPlayerTarget" event="script" value="game/target.lua"/>
+	<event type="death" name="CustomPlayerDeath" event="script" value="game/death.lua"/>
+	<event type="death" name="monsterDeath" event="script" value="game/death.lua"/>
+	<event type="death" name="inquisitionReplaceDemons" event="script" value="game/inquisition/death.lua"/>
+	<event type="kill" name="Inquisition" event="script" value="game/inquisition.lua"/>
+	<event type="logout" name="CustomPlayerLogout" event="script" value="game/logout.lua"/>
+	<event type="kill" name="CustomBonartesTasks" event="script" value="game/onkillmission.lua"/>
+	<event type="kill" name="onKill" event="script" value="game/kill.lua"/>
+	<event type="kill" name="CustomTasks" event="script" value="game/tasks.lua"/>
+	<event type="advance" name="CustomStages" event="script" value="game/stages.lua"/>
+	<event type="think" name="Hacks" event="script" value="game/hacks.lua"/>
+	<event type="think" name="GainStamina" event="script" value="game/stamina.lua"/>
+	<event type="statschange" name="onStateChange" event="script" value="game/onstatechange.lua"/>
+	
+	<!-- DARGHOS SOURCE SCRIPTED EVENTS -->
+	
+	<event type="moveitem" name="onMoveItem" event="script" value="game/move_item.lua"/>
+</creaturescripts>

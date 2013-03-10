@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<npc name="Suria" floorchange="0" walkinterval="2000" speed="220" script="|DATA|/game/default.lua">
+	<health now="150" max="150" />
+	<look type="324" head="19" body="48" legs="69" feet="0" addons="0"/>
+
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I sell runes, potions, wands and rods." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+		<parameter key="use_trade_lists" value="runes;potions;wands;rods" />
+	</parameters>
+</npc>

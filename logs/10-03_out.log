@@ -1,0 +1,343 @@
+[10/3/2013 1:57:1] > Using MD5 encryption
+[10/3/2013 1:57:1] >> Loading RSA key
+[10/3/2013 1:57:1] >> Starting SQL connection
+
+[10/3/2013 1:57:1] > WARNING: Outdated MySQL server detected, consider upgrading to a newer version.
+[10/3/2013 1:57:1] >> Running Database Manager
+[10/3/2013 1:57:1] >> Loading items (OTB)
+[10/3/2013 1:57:1] >> Loading items (XML)
+[10/3/2013 1:57:1] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[10/3/2013 1:57:1] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[10/3/2013 1:57:1] >> Loading groups
+[10/3/2013 1:57:1] >> Loading vocations
+[10/3/2013 1:57:1] >> Loading outfits
+[10/3/2013 1:57:1] >> Loading chat channels
+[10/3/2013 1:57:1] >> Loading script systems
+[10/3/2013 1:57:1] [Error - LuaInterface::loadFile] data/globalevents/scripts/game/announcements.lua:9: unexpected symbol near ','
+[10/3/2013 1:57:1] [Warning - Event::loadScript] Cannot load script (data/globalevents/scripts/game/announcements.lua)
+[10/3/2013 1:57:1] data/globalevents/scripts/game/announcements.lua:9: unexpected symbol near ','
+[10/3/2013 1:57:1] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[10/3/2013 1:57:1] >> Loading mods...
+[10/3/2013 1:57:1] > 0 mods were loaded.
+[10/3/2013 1:57:1] >> Loading experience stages
+[10/3/2013 1:57:1] >> Loading monsters
+[10/3/2013 1:57:1] [Warning - Monsters::deserializeSpell] Frost Dragon - Unknown areaEffect: smallice
+[10/3/2013 1:57:1] >> Loading map and spawns...
+[10/3/2013 1:57:2] > Map size: 5000x5000.
+[10/3/2013 1:57:2] > Map descriptions: 
+[10/3/2013 1:57:2] "Saved with Remere's Map Editor 2.2"
+[10/3/2013 1:57:2] "SimOne MapEditor 0.5.5"
+[10/3/2013 1:57:3] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1070/1121/6
+[10/3/2013 1:57:3] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1070/1129/6
+[10/3/2013 1:57:3] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1073/1121/6
+[10/3/2013 1:57:3] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1073/1129/6
+[10/3/2013 1:57:4] Duplicate uniqueId 6401
+[10/3/2013 1:57:4] Duplicate uniqueId 6401
+[10/3/2013 1:57:6] Duplicate uniqueId 6401
+[10/3/2013 1:57:6] Duplicate uniqueId 6401
+[10/3/2013 1:57:6] Duplicate uniqueId 6401
+[10/3/2013 1:57:6] Duplicate uniqueId 6401
+[10/3/2013 1:57:9] Duplicate uniqueId 6401
+[10/3/2013 1:57:9] Duplicate uniqueId 6401
+[10/3/2013 1:57:10] Duplicate uniqueId 2004
+[10/3/2013 1:57:10] Duplicate uniqueId 2005
+[10/3/2013 1:57:10] Duplicate uniqueId 2006
+[10/3/2013 1:57:10] Duplicate uniqueId 2007
+[10/3/2013 1:57:13] Duplicate uniqueId 6401
+[10/3/2013 1:57:13] Duplicate uniqueId 6401
+[10/3/2013 1:57:13] Duplicate uniqueId 6401
+[10/3/2013 1:57:14] Duplicate uniqueId 6400
+[10/3/2013 1:57:14] Duplicate uniqueId 6401
+[10/3/2013 1:57:14] Duplicate uniqueId 2056
+[10/3/2013 1:57:14] Duplicate uniqueId 2057
+[10/3/2013 1:57:14] Duplicate uniqueId 2058
+[10/3/2013 1:57:14] Duplicate uniqueId 2051
+[10/3/2013 1:57:14] Duplicate uniqueId 2052
+[10/3/2013 1:57:14] Duplicate uniqueId 2053
+[10/3/2013 1:57:14] Duplicate uniqueId 2054
+[10/3/2013 1:57:14] > Map loading time: 13.176 seconds.
+[10/3/2013 1:57:15] [Spawn::addMonster] Cannot find "Butterfly"
+[10/3/2013 1:57:15] [Spawn::addMonster] Cannot find "Butterfly"
+[10/3/2013 1:57:15] > Data parsing time: 0.439 seconds.
+[10/3/2013 1:57:15] > Houses synchronization time: 0.157 seconds.
+[10/3/2013 1:57:17] > Content unserialization time: 1.485 seconds.
+[10/3/2013 1:57:17] >> Checking world type... Open PvP
+[10/3/2013 1:57:17] >> Initializing game state and binding services...
+[10/3/2013 1:57:17] > Global IP address: 177.103.221.232
+[10/3/2013 1:57:17] > Local IP address(es): 127.0.1.1	
+[10/3/2013 1:57:17] > Bound ports: 7171	7172	9215	
+[10/3/2013 1:57:17] >> Everything smells good, server is starting up...
+[10/3/2013 1:57:17] >> Darghos server Online!
+
+[10/3/2013 2:0:9] > Using MD5 encryption
+[10/3/2013 2:0:9] >> Loading RSA key
+[10/3/2013 2:0:9] >> Starting SQL connection
+
+[10/3/2013 2:0:9] > WARNING: Outdated MySQL server detected, consider upgrading to a newer version.
+[10/3/2013 2:0:9] >> Running Database Manager
+[10/3/2013 2:0:9] >> Loading items (OTB)
+[10/3/2013 2:0:9] >> Loading items (XML)
+[10/3/2013 2:0:9] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[10/3/2013 2:0:9] [Warning - Items::loadFromXml] Unknown key value blocksolid
+[10/3/2013 2:0:9] >> Loading groups
+[10/3/2013 2:0:9] >> Loading vocations
+[10/3/2013 2:0:9] >> Loading outfits
+[10/3/2013 2:0:9] >> Loading chat channels
+[10/3/2013 2:0:9] >> Loading script systems
+[10/3/2013 2:0:9] [Error - LuaInterface::loadFile] data/globalevents/scripts/game/announcements.lua:9: unexpected symbol near ','
+[10/3/2013 2:0:9] [Warning - Event::loadScript] Cannot load script (data/globalevents/scripts/game/announcements.lua)
+[10/3/2013 2:0:9] data/globalevents/scripts/game/announcements.lua:9: unexpected symbol near ','
+[10/3/2013 2:0:9] [Warning - Event::loadScript] Event onTime not found (data/globalevents/scripts/clean.lua)
+[10/3/2013 2:0:9] >> Loading mods...
+[10/3/2013 2:0:9] > 0 mods were loaded.
+[10/3/2013 2:0:9] >> Loading experience stages
+[10/3/2013 2:0:9] >> Loading monsters
+[10/3/2013 2:0:9] [Warning - Monsters::deserializeSpell] Frost Dragon - Unknown areaEffect: smallice
+[10/3/2013 2:0:9] >> Loading map and spawns...
+[10/3/2013 2:0:10] > Map size: 5000x5000.
+[10/3/2013 2:0:10] > Map descriptions: 
+[10/3/2013 2:0:10] "Saved with Remere's Map Editor 2.2"
+[10/3/2013 2:0:10] "SimOne MapEditor 0.5.5"
+[10/3/2013 2:0:11] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1070/1121/6
+[10/3/2013 2:0:11] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1070/1129/6
+[10/3/2013 2:0:11] [Warning - IOMap::loadMap] Movable item in house: 517, item type: 2741, pos 1073/1121/6
+[10/3/2013 2:0:11] [Warning - IOMap::loadMap] Movable item in house: 518, item type: 2741, pos 1073/1129/6
+[10/3/2013 2:0:12] Duplicate uniqueId 6401
+[10/3/2013 2:0:12] Duplicate uniqueId 6401
+[10/3/2013 2:0:14] Duplicate uniqueId 6401
+[10/3/2013 2:0:14] Duplicate uniqueId 6401
+[10/3/2013 2:0:14] Duplicate uniqueId 6401
+[10/3/2013 2:0:14] Duplicate uniqueId 6401
+[10/3/2013 2:0:17] Duplicate uniqueId 6401
+[10/3/2013 2:0:17] Duplicate uniqueId 6401
+[10/3/2013 2:0:18] Duplicate uniqueId 2004
+[10/3/2013 2:0:18] Duplicate uniqueId 2005
+[10/3/2013 2:0:18] Duplicate uniqueId 2006
+[10/3/2013 2:0:18] Duplicate uniqueId 2007
+[10/3/2013 2:0:21] Duplicate uniqueId 6401
+[10/3/2013 2:0:21] Duplicate uniqueId 6401
+[10/3/2013 2:0:21] Duplicate uniqueId 6401
+[10/3/2013 2:0:22] Duplicate uniqueId 6400
+[10/3/2013 2:0:22] Duplicate uniqueId 6401
+[10/3/2013 2:0:22] Duplicate uniqueId 2056
+[10/3/2013 2:0:22] Duplicate uniqueId 2057
+[10/3/2013 2:0:22] Duplicate uniqueId 2058
+[10/3/2013 2:0:22] Duplicate uniqueId 2051
+[10/3/2013 2:0:22] Duplicate uniqueId 2052
+[10/3/2013 2:0:22] Duplicate uniqueId 2053
+[10/3/2013 2:0:22] Duplicate uniqueId 2054
+[10/3/2013 2:0:22] > Map loading time: 13.219 seconds.
+[10/3/2013 2:0:23] [Spawn::addMonster] Cannot find "Butterfly"
+[10/3/2013 2:0:23] [Spawn::addMonster] Cannot find "Butterfly"
+[10/3/2013 2:0:23] > Data parsing time: 0.439 seconds.
+[10/3/2013 2:0:23] > Houses synchronization time: 0.15 seconds.
+[10/3/2013 2:0:24] > Content unserialization time: 1.342 seconds.
+[10/3/2013 2:0:24] >> Checking world type... Open PvP
+[10/3/2013 2:0:24] >> Initializing game state and binding services...
+[10/3/2013 2:0:25] > Global IP address: 177.103.221.232
+[10/3/2013 2:0:25] > Local IP address(es): 127.0.1.1	
+[10/3/2013 2:0:25] > Bound ports: 7171	7172	9215	
+[10/3/2013 2:0:25] >> Everything smells good, server is starting up...
+[10/3/2013 2:0:25] >> Darghos server Online!
+
+
+[10/3/2013 2:14:54] [Error - NpcScript Interface] 
+[10/3/2013 2:14:54] data/npc/scripts/game/boats/island_of_peace.lua:onCreatureSay
+[10/3/2013 2:14:54] Description: 
+[10/3/2013 2:14:54] data/npc/lib/destinations.lua:271: attempt to call global 'doPlayerEnablePvp' (a nil value)
+[10/3/2013 2:14:54] stack traceback:
+[10/3/2013 2:14:54] 	data/npc/lib/destinations.lua:271: in function 'callback'
+[10/3/2013 2:14:54] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[10/3/2013 2:14:54] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[10/3/2013 2:14:54] 	data/npc/lib/npcsystem/keywordhandler.lua:133: in function 'processMessage'
+[10/3/2013 2:14:54] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[10/3/2013 2:14:54] 	data/npc/scripts/game/boats/island_of_peace.lua:8: in function <data/npc/scripts/game/boats/island_of_peace.lua:8>
+
+[10/3/2013 2:15:0] [Error - NpcScript Interface] 
+[10/3/2013 2:15:0] data/npc/scripts/game/boats/island_of_peace.lua:onCreatureSay
+[10/3/2013 2:15:0] Description: 
+[10/3/2013 2:15:0] data/npc/lib/destinations.lua:271: attempt to call global 'doPlayerEnablePvp' (a nil value)
+[10/3/2013 2:15:0] stack traceback:
+[10/3/2013 2:15:0] 	data/npc/lib/destinations.lua:271: in function 'callback'
+[10/3/2013 2:15:0] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[10/3/2013 2:15:0] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[10/3/2013 2:15:0] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[10/3/2013 2:15:0] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[10/3/2013 2:15:0] 	data/npc/scripts/game/boats/island_of_peace.lua:8: in function <data/npc/scripts/game/boats/island_of_peace.lua:8>
+
+[10/3/2013 2:15:7] [Error - NpcScript Interface] 
+[10/3/2013 2:15:7] data/npc/scripts/game/boats/island_of_peace.lua:onCreatureSay
+[10/3/2013 2:15:7] Description: 
+[10/3/2013 2:15:7] data/npc/lib/destinations.lua:271: attempt to call global 'doPlayerEnablePvp' (a nil value)
+[10/3/2013 2:15:7] stack traceback:
+[10/3/2013 2:15:7] 	data/npc/lib/destinations.lua:271: in function 'callback'
+[10/3/2013 2:15:7] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[10/3/2013 2:15:7] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[10/3/2013 2:15:7] 	data/npc/lib/npcsystem/keywordhandler.lua:133: in function 'processMessage'
+[10/3/2013 2:15:7] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[10/3/2013 2:15:7] 	data/npc/scripts/game/boats/island_of_peace.lua:8: in function <data/npc/scripts/game/boats/island_of_peace.lua:8>
+
+[10/3/2013 2:15:12] [Error - NpcScript Interface] 
+[10/3/2013 2:15:12] data/npc/scripts/game/boats/island_of_peace.lua:onCreatureSay
+[10/3/2013 2:15:12] Description: 
+[10/3/2013 2:15:12] data/npc/lib/destinations.lua:271: attempt to call global 'doPlayerEnablePvp' (a nil value)
+[10/3/2013 2:15:12] stack traceback:
+[10/3/2013 2:15:12] 	data/npc/lib/destinations.lua:271: in function 'callback'
+[10/3/2013 2:15:12] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[10/3/2013 2:15:12] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[10/3/2013 2:15:12] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[10/3/2013 2:15:12] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[10/3/2013 2:15:12] 	data/npc/scripts/game/boats/island_of_peace.lua:8: in function <data/npc/scripts/game/boats/island_of_peace.lua:8>
+
+[10/3/2013 2:15:13] [Error - NpcScript Interface] 
+[10/3/2013 2:15:13] data/npc/scripts/game/boats/island_of_peace.lua:onCreatureSay
+[10/3/2013 2:15:13] Description: 
+[10/3/2013 2:15:13] data/npc/lib/destinations.lua:271: attempt to call global 'doPlayerEnablePvp' (a nil value)
+[10/3/2013 2:15:13] stack traceback:
+[10/3/2013 2:15:13] 	data/npc/lib/destinations.lua:271: in function 'callback'
+[10/3/2013 2:15:13] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[10/3/2013 2:15:13] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[10/3/2013 2:15:13] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[10/3/2013 2:15:13] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[10/3/2013 2:15:13] 	data/npc/scripts/game/boats/island_of_peace.lua:8: in function <data/npc/scripts/game/boats/island_of_peace.lua:8>
+
+[10/3/2013 2:15:18] [Error - NpcScript Interface] 
+[10/3/2013 2:15:18] data/npc/scripts/game/boats/island_of_peace.lua:onCreatureSay
+[10/3/2013 2:15:18] Description: 
+[10/3/2013 2:15:18] data/npc/lib/destinations.lua:271: attempt to call global 'doPlayerEnablePvp' (a nil value)
+[10/3/2013 2:15:18] stack traceback:
+[10/3/2013 2:15:18] 	data/npc/lib/destinations.lua:271: in function 'callback'
+[10/3/2013 2:15:18] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[10/3/2013 2:15:18] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[10/3/2013 2:15:18] 	data/npc/lib/npcsystem/keywordhandler.lua:140: in function 'processMessage'
+[10/3/2013 2:15:18] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[10/3/2013 2:15:18] 	data/npc/scripts/game/boats/island_of_peace.lua:8: in function <data/npc/scripts/game/boats/island_of_peace.lua:8>
+
+[10/3/2013 2:15:39] [Error - NpcScript Interface] 
+[10/3/2013 2:15:39] data/npc/scripts/game/boats/island_of_peace.lua:onCreatureSay
+[10/3/2013 2:15:39] Description: 
+[10/3/2013 2:15:39] data/npc/lib/destinations.lua:271: attempt to call global 'doPlayerEnablePvp' (a nil value)
+[10/3/2013 2:15:39] stack traceback:
+[10/3/2013 2:15:39] 	data/npc/lib/destinations.lua:271: in function 'callback'
+[10/3/2013 2:15:39] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[10/3/2013 2:15:39] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[10/3/2013 2:15:39] 	data/npc/lib/npcsystem/keywordhandler.lua:133: in function 'processMessage'
+[10/3/2013 2:15:39] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[10/3/2013 2:15:39] 	data/npc/scripts/game/boats/island_of_peace.lua:8: in function <data/npc/scripts/game/boats/island_of_peace.lua:8>
+
+[10/3/2013 2:16:8] [Error - NpcScript Interface] 
+[10/3/2013 2:16:8] data/npc/scripts/game/boats/island_of_peace.lua:onCreatureSay
+[10/3/2013 2:16:8] Description: 
+[10/3/2013 2:16:8] data/npc/lib/destinations.lua:271: attempt to call global 'doPlayerEnablePvp' (a nil value)
+[10/3/2013 2:16:8] stack traceback:
+[10/3/2013 2:16:8] 	data/npc/lib/destinations.lua:271: in function 'callback'
+[10/3/2013 2:16:8] 	data/npc/lib/npcsystem/keywordhandler.lua:41: in function 'processMessage'
+[10/3/2013 2:16:8] 	data/npc/lib/npcsystem/keywordhandler.lua:181: in function 'processNodeMessage'
+[10/3/2013 2:16:8] 	data/npc/lib/npcsystem/keywordhandler.lua:133: in function 'processMessage'
+[10/3/2013 2:16:8] 	data/npc/lib/npcsystem/npchandler.lua:423: in function 'onCreatureSay'
+[10/3/2013 2:16:8] 	data/npc/scripts/game/boats/island_of_peace.lua:8: in function <data/npc/scripts/game/boats/island_of_peace.lua:8>
+
+[10/3/2013 2:50:50] [Error - NpcScript Interface] 
+[10/3/2013 2:50:50] data/npc/scripts/game/isle_of_peace.tasks_first.lua:onCreatureSay
+[10/3/2013 2:50:50] Description: 
+[10/3/2013 2:50:50] data/lib/darghos/functions.lua:892: attempt to index local 'file' (a nil value)
+[10/3/2013 2:50:50] stack traceback:
+[10/3/2013 2:50:50] 	data/lib/darghos/functions.lua:892: in function 'consoleLog'
+[10/3/2013 2:50:50] 	data/npc/lib/npc_tasks.lua:54: in function 'responseTask'
+[10/3/2013 2:50:50] 	data/npc/scripts/game/isle_of_peace.tasks_first.lua:71: in function <data/npc/scripts/game/isle_of_peace.tasks_first.lua:47>
+
+[10/3/2013 2:50:58] [Error - NpcScript Interface] 
+[10/3/2013 2:50:58] data/npc/scripts/game/isle_of_peace.tasks_first.lua:onCreatureSay
+[10/3/2013 2:50:58] Description: 
+[10/3/2013 2:50:58] data/lib/darghos/functions.lua:892: attempt to index local 'file' (a nil value)
+[10/3/2013 2:50:58] stack traceback:
+[10/3/2013 2:50:58] 	data/lib/darghos/functions.lua:892: in function 'consoleLog'
+[10/3/2013 2:50:58] 	data/npc/lib/npc_tasks.lua:54: in function 'responseTask'
+[10/3/2013 2:50:58] 	data/npc/scripts/game/isle_of_peace.tasks_first.lua:71: in function <data/npc/scripts/game/isle_of_peace.tasks_first.lua:47>
+
+[10/3/2013 2:51:6] [Error - NpcScript Interface] 
+[10/3/2013 2:51:6] data/npc/scripts/game/isle_of_peace.tasks_first.lua:onCreatureSay
+[10/3/2013 2:51:6] Description: 
+[10/3/2013 2:51:6] data/lib/darghos/functions.lua:892: attempt to index local 'file' (a nil value)
+[10/3/2013 2:51:6] stack traceback:
+[10/3/2013 2:51:6] 	data/lib/darghos/functions.lua:892: in function 'consoleLog'
+[10/3/2013 2:51:6] 	data/npc/lib/npc_tasks.lua:54: in function 'responseTask'
+[10/3/2013 2:51:6] 	data/npc/scripts/game/isle_of_peace.tasks_first.lua:71: in function <data/npc/scripts/game/isle_of_peace.tasks_first.lua:47>
+
+[10/3/2013 2:51:16] [Error - NpcScript Interface] 
+[10/3/2013 2:51:16] data/npc/scripts/game/isle_of_peace.tasks_first.lua:onCreatureSay
+[10/3/2013 2:51:16] Description: 
+[10/3/2013 2:51:16] data/lib/darghos/functions.lua:892: attempt to index local 'file' (a nil value)
+[10/3/2013 2:51:16] stack traceback:
+[10/3/2013 2:51:16] 	data/lib/darghos/functions.lua:892: in function 'consoleLog'
+[10/3/2013 2:51:16] 	data/npc/lib/npc_tasks.lua:54: in function 'responseTask'
+[10/3/2013 2:51:16] 	data/npc/scripts/game/isle_of_peace.tasks_first.lua:71: in function <data/npc/scripts/game/isle_of_peace.tasks_first.lua:47>
+
+[10/3/2013 2:51:28] [Error - NpcScript Interface] 
+[10/3/2013 2:51:28] data/npc/scripts/game/isle_of_peace.tasks_first.lua:onCreatureSay
+[10/3/2013 2:51:28] Description: 
+[10/3/2013 2:51:28] data/lib/darghos/functions.lua:892: attempt to index local 'file' (a nil value)
+[10/3/2013 2:51:28] stack traceback:
+[10/3/2013 2:51:28] 	data/lib/darghos/functions.lua:892: in function 'consoleLog'
+[10/3/2013 2:51:28] 	data/npc/lib/npc_tasks.lua:54: in function 'responseTask'
+[10/3/2013 2:51:28] 	data/npc/scripts/game/isle_of_peace.tasks_first.lua:71: in function <data/npc/scripts/game/isle_of_peace.tasks_first.lua:47>
+
+[10/3/2013 2:51:48] [Error - NpcScript Interface] 
+[10/3/2013 2:51:48] data/npc/scripts/game/isle_of_peace.tasks_first.lua:onCreatureSay
+[10/3/2013 2:51:48] Description: 
+[10/3/2013 2:51:48] data/lib/darghos/functions.lua:892: attempt to index local 'file' (a nil value)
+[10/3/2013 2:51:48] stack traceback:
+[10/3/2013 2:51:48] 	data/lib/darghos/functions.lua:892: in function 'consoleLog'
+[10/3/2013 2:51:48] 	data/npc/lib/npc_tasks.lua:54: in function 'responseTask'
+[10/3/2013 2:51:48] 	data/npc/scripts/game/isle_of_peace.tasks_first.lua:71: in function <data/npc/scripts/game/isle_of_peace.tasks_first.lua:47>
+
+[10/3/2013 2:53:2] [Error - NpcScript Interface] 
+[10/3/2013 2:53:2] data/npc/scripts/game/isle_of_peace.tasks_first.lua:onCreatureSay
+[10/3/2013 2:53:2] Description: 
+[10/3/2013 2:53:2] data/lib/darghos/functions.lua:892: attempt to index local 'file' (a nil value)
+[10/3/2013 2:53:2] stack traceback:
+[10/3/2013 2:53:2] 	data/lib/darghos/functions.lua:892: in function 'consoleLog'
+[10/3/2013 2:53:2] 	data/npc/lib/npc_tasks.lua:54: in function 'responseTask'
+[10/3/2013 2:53:2] 	data/npc/scripts/game/isle_of_peace.tasks_first.lua:71: in function <data/npc/scripts/game/isle_of_peace.tasks_first.lua:47>
+
+[10/3/2013 2:53:30] [Error - NpcScript Interface] 
+[10/3/2013 2:53:30] data/npc/scripts/game/isle_of_peace.tasks_first.lua:onCreatureSay
+[10/3/2013 2:53:30] Description: 
+[10/3/2013 2:53:30] data/lib/darghos/functions.lua:892: attempt to index local 'file' (a nil value)
+[10/3/2013 2:53:30] stack traceback:
+[10/3/2013 2:53:30] 	data/lib/darghos/functions.lua:892: in function 'consoleLog'
+[10/3/2013 2:53:30] 	data/npc/lib/npc_tasks.lua:54: in function 'responseTask'
+[10/3/2013 2:53:30] 	data/npc/scripts/game/isle_of_peace.tasks_first.lua:71: in function <data/npc/scripts/game/isle_of_peace.tasks_first.lua:47>
+
+[10/3/2013 2:54:41] [Error - NpcScript Interface] 
+[10/3/2013 2:54:41] (Unknown script file)
+[10/3/2013 2:54:41] Description: 
+[10/3/2013 2:54:41] attempt to call a nil value
+[10/3/2013 2:54:41] stack traceback:
+
+[10/3/2013 2:55:28] [Error - NpcScript Interface] 
+[10/3/2013 2:55:28] data/npc/scripts/game/isle_of_peace.tasks_first.lua:onCreatureSay
+[10/3/2013 2:55:28] Description: 
+[10/3/2013 2:55:28] data/lib/darghos/functions.lua:892: attempt to index local 'file' (a nil value)
+[10/3/2013 2:55:28] stack traceback:
+[10/3/2013 2:55:28] 	data/lib/darghos/functions.lua:892: in function 'consoleLog'
+[10/3/2013 2:55:28] 	data/npc/lib/npc_tasks.lua:54: in function 'responseTask'
+[10/3/2013 2:55:28] 	data/npc/scripts/game/isle_of_peace.tasks_first.lua:71: in function <data/npc/scripts/game/isle_of_peace.tasks_first.lua:47>
+
+[10/3/2013 2:55:34] [Error - NpcScript Interface] 
+[10/3/2013 2:55:34] data/npc/scripts/game/isle_of_peace.tasks_first.lua:onCreatureSay
+[10/3/2013 2:55:34] Description: 
+[10/3/2013 2:55:34] data/lib/darghos/functions.lua:892: attempt to index local 'file' (a nil value)
+[10/3/2013 2:55:34] stack traceback:
+[10/3/2013 2:55:34] 	data/lib/darghos/functions.lua:892: in function 'consoleLog'
+[10/3/2013 2:55:34] 	data/npc/lib/npc_tasks.lua:54: in function 'responseTask'
+[10/3/2013 2:55:34] 	data/npc/scripts/game/isle_of_peace.tasks_first.lua:71: in function <data/npc/scripts/game/isle_of_peace.tasks_first.lua:47>
+
+[10/3/2013 2:55:45] [Error - NpcScript Interface] 
+[10/3/2013 2:55:45] data/npc/scripts/game/isle_of_peace.tasks_first.lua:onCreatureSay
+[10/3/2013 2:55:45] Description: 
+[10/3/2013 2:55:45] data/lib/darghos/functions.lua:892: attempt to index local 'file' (a nil value)
+[10/3/2013 2:55:45] stack traceback:
+[10/3/2013 2:55:45] 	data/lib/darghos/functions.lua:892: in function 'consoleLog'
+[10/3/2013 2:55:45] 	data/npc/lib/npc_tasks.lua:54: in function 'responseTask'
+[10/3/2013 2:55:45] 	data/npc/scripts/game/isle_of_peace.tasks_first.lua:71: in function <data/npc/scripts/game/isle_of_peace.tasks_first.lua:47>

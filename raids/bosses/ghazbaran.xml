@@ -1,0 +1,18 @@
+<raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("ghazbaran")
+	]]>
+	</script>
+
+	<announce delay="0" type="event" message="O mal ancião está despertando no fundo das minas de Northrend..."/>
+	<announce delay="600000" type="event" message="Entidades demoniacas estão proximas de nosso mundo, nas minas de Northrend..."/>
+	<announce delay="1200000" type="event" message="O demônio supremo re-surgiu no fundo das minas de Northrend!"/>
+
+	<areaspawn delay="260000" centerx="1972" centery="1251" centerz="15" radius="3">
+		<monster name="Ghazbaran" minamount="1" maxamount="1"/>
+		<monster name="Demon" minamount="1" maxamount="1"/>
+		<monster name="Fury" minamount="2" maxamount="2"/>
+	</areaspawn>
+	
+</raid>

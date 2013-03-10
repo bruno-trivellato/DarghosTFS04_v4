@@ -1,0 +1,51 @@
+10:27:55 | Player [Piinotii] | Processando 1 itens a entregar....
+10:27:55 | Player [Piinotii] | Item Data: {"log_id":333,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+10:27:55 | Player [Piinotii] | Item Data Entregue com sucesso: {"log_id":333,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+10:27:55 | Player [Piinotii] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+10:27:55 | Player [Piinotii] | --------------------------------------.
+14:38:51 | Player [Abnadabe] | Processando 1 itens a entregar....
+14:38:51 | Player [Abnadabe] | Item Data: {"log_id":334,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+14:38:51 | Player [Abnadabe] | Item Data Entregue com sucesso: {"log_id":334,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+14:38:51 | Player [Abnadabe] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+14:38:51 | Player [Abnadabe] | --------------------------------------.
+19:15:36 | Player [Big Low] | Processando 2 itens a entregar....
+19:15:36 | Player [Big Low] | Item Data: {"log_id":335,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+19:15:36 | Player [Big Low] | Item Data: {"log_id":336,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+19:15:36 | Player [Big Low] | Item Data Entregue com sucesso: {"log_id":335,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+19:15:36 | Player [Big Low] | Item Data Entregue com sucesso: {"log_id":336,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+19:15:36 | Player [Big Low] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+19:15:36 | Player [Big Low] | --------------------------------------.
+19:49:46 | Player [Quero Mais] | Processando 1 itens a entregar....
+19:49:46 | Player [Quero Mais] | Item Data: {"log_id":337,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+19:49:46 | Player [Quero Mais] | Item Data Entregue com sucesso: {"log_id":337,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+19:49:46 | Player [Quero Mais] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+19:49:46 | Player [Quero Mais] | --------------------------------------.
+20:55:48 | Player [Jack Wariv] | Processando 1 itens a entregar....
+20:55:49 | Player [Jack Wariv] | Item Data: {"log_id":338,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+20:55:49 | Player [Jack Wariv] | Item Data Entregue com sucesso: {"log_id":338,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+20:55:49 | Player [Jack Wariv] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+20:55:49 | Player [Jack Wariv] | --------------------------------------.
+21:19:34 | Player [Wartank] | Processando 1 itens a entregar....
+21:19:34 | Player [Wartank] | Item Data: {"log_id":339,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+21:19:34 | Player [Wartank] | Item Data Entregue com sucesso: {"log_id":339,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+21:19:34 | Player [Wartank] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+21:19:34 | Player [Wartank] | --------------------------------------.
+21:33:40 | Player [Wartank] | Processando 3 itens a entregar....
+21:33:40 | Player [Wartank] | Item Data: {"log_id":340,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+21:33:40 | Player [Wartank] | Item Data: {"log_id":341,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+21:33:40 | Player [Wartank] | Item Data: {"log_id":342,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+21:33:40 | Player [Wartank] | Item Data Entregue com sucesso: {"log_id":340,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+21:33:40 | Player [Wartank] | Item Data Entregue com sucesso: {"log_id":341,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+21:33:40 | Player [Wartank] | Item Data Entregue com sucesso: {"log_id":342,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+21:33:40 | Player [Wartank] | Processo concluido. Resultado: Total de itens 3, Itens não recebidos 0, Itens a Receber 3..
+21:33:40 | Player [Wartank] | --------------------------------------.
+21:52:36 | Player [Wartank] | Processando 1 itens a entregar....
+21:52:36 | Player [Wartank] | Item Data: {"log_id":343,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+21:52:36 | Player [Wartank] | Item Data Entregue com sucesso: {"log_id":343,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+21:52:36 | Player [Wartank] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+21:52:36 | Player [Wartank] | --------------------------------------.
+22:47:50 | Player [Stylle knight] | Processando 1 itens a entregar....
+22:47:50 | Player [Stylle knight] | Item Data: {"log_id":344,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+22:47:50 | Player [Stylle knight] | Item Data Entregue com sucesso: {"log_id":344,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
+22:47:50 | Player [Stylle knight] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+22:47:50 | Player [Stylle knight] | --------------------------------------.

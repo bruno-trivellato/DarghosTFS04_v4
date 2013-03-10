@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Big Ooze" nameDescription="a big ooze" race="venom" experience="53600" speed="400" manacost="0">
+  <health now="51650" max="51650"/>
+  <look type="238" corpse="6532"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag lureable="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="465" attack="90" poison="465"/>
+    <attack name="poisonfield" interval="2000" chance="30" radius="7">
+      <attribute key="areaEffect" value="poison"/>
+    </attack>	
+  </attacks>
+  <defenses armor="50" defense="75">
+    <defense name="healing" interval="2000" chance="50" min="320" max="923">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+    <element energyPercent="50"/>
+    <element icePercent="40"/>
+    <element firePercent="-15"/>
+  </elements>
+  <summons maxSummons="2">
+    <summon name="Ooze" interval="500" chance="10" max="2"/>
+  </summons>
+  <immunities>
+	<immunity earth="1"/>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Blubb"/>
+  </voices>
+  <loot>
+	<!--
+	1.2k gps
+	zaoan legs
+	blade of corruption
+	necromancer shield
+	zaoan helmet
+	earthborn titan armor
+	calamity
+	magic plate armor
+	royal draken mail
+	elite draken mail
+	guardian boots
+	draken boots
+	swamplair armor
+	twiceslicer
+	jade hammer
+	royal axe
+	-->
+    <item id="2152" countmax="12" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="11304" chance="900">
+      <!--zaoan legs-->
+    </item>
+    <item id="12649" chance="700">
+      <!--blade of corruption-->
+    </item>
+    <item id="6433" chance="600">
+      <!--necromancer shield-->
+    </item>
+    <item id="11302" chance="900">
+      <!--zaoan helmet-->
+    </item>
+    <item id="8882" chance="100">
+      <!--earthborn titan armor-->
+    </item>
+    <item id="8932" chance="100">
+      <!--calamity-->
+    </item>
+    <item id="2472" chance="2000">
+      <!--magic plate armor-->
+    </item>
+    <item id="12642" chance="600">
+      <!--royal draken mail-->
+    </item>
+    <item id="12607" chance="900">
+      <!--elite draken mail-->
+    </item>
+    <item id="11240" chance="700">
+      <!--guardian boots-->
+    </item>
+    <item id="12646" chance="1000">
+      <!--draken boots-->
+    </item>
+    <item id="8880" chance="800">
+      <!--swamplair armor-->
+    </item>
+    <item id="12613" chance="1800">
+      <!--twiceslicer-->
+    </item>
+    <item id="7422" chance="4000">
+      <!--jade hammer-->
+    </item>
+    <item id="7434" chance="3000">
+      <!--royal axe-->
+    </item>
+    <item id="2168" chance="12000">
+      <!--life ring-->
+    </item>	
+  </loot>
+</monster>

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monster speed="280" manacost="0" race="blood" skull="red" experience="1000" name="dark archer" nameDescription="an archer of dark forces">
+  <health max="21650" now="21650"/>
+  <look head="79" body="95" addons="3" legs="19" type="129" corpse="6080" feet="95"/>
+  <targetchange chance="20" interval="5000"/>
+  <strategy defense="0" attack="100"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="5"/>
+    <flag staticattack="70"/>
+    <flag runonhealth="1500"/>
+  </flags>
+  <attacks>
+    <attack chance="16" interval="2000" range="7" min="-525" name="physical" max="-850">
+      <attribute key="shootEffect" value="infernalbolt"/>
+    </attack>
+    <attack chance="41" interval="2000" range="7" min="-315" name="physical" max="-450">
+      <attribute key="shootEffect" value="etherealspear"/>
+    </attack>
+    <attack target="1" chance="25" inteval="2000" script="monsters/multi_shot.lua"/>
+    <attack chance="75" interval="2000" range="5" min="-200" name="physical" max="-630">
+      <attribute key="shootEffect" value="redstar"/>
+    </attack>
+  </attacks>
+  <defenses defense="10" armor="8">
+    <defense duration="3000" chance="6" interval="5000" name="invisible">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="0"/>
+    <immunity drunk="0"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <elements>
+    <element deathPercent="10"/>
+    <element energyPercent="10"/>
+    <element icePercent="10"/>
+    <element firePercent="-10"/>
+    <element physicalPercent="-20"/>
+  </elements>
+  <voices chance="40" interval="7000">
+    <voice sentence="Pelos arqueiros da armada negra!" yell="1"/>
+    <voice sentence="Nossas flechas atravessarão seus escudos!"/>
+  </voices>
+  <loot>
+    <item chance="100000" id="7365" countmax="100"/>
+    <item chance="100000" id="5944"/>
+    <item chance="50000" id="8472" countmax="10"/>
+    <item chance="50000" id="7368" countmax="100"/>
+    <item chance="6666" id="7443"/>
+    <item chance="33333" id="6529" countmax="100"/>
+    <item chance="33333" id="2152" countmax="29"/>
+    <item chance="25000" id="7368" countmax="100"/>	
+    <item chance="2400" id="11304"/>
+    <item chance="2400" id="11301"/>
+    <item chance="641" id="12646"/>
+    <item chance="961" id="11302"/>
+    <item chance="480" id="12607"/>
+    <item chance="312" id="8852"/>
+    <item chance="160" id="8856"/>
+    <item chance="2400" id="9777"/>
+	<item chance="641" id="8851"/>
+  </loot>
+</monster>

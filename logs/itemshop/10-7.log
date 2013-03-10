@@ -1,0 +1,5 @@
+15:30:03 | Player [Ordinario] | Processando 1 itens a entregar....
+15:30:03 | Player [Ordinario] | Item Data: {"log_id":5,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+15:30:03 | Player [Ordinario] | Item Data Entregue com sucesso: {"log_id":5,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+15:30:03 | Player [Ordinario] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+15:30:03 | Player [Ordinario] | --------------------------------------.

@@ -1,0 +1,22 @@
+02:34:44 | Player [KserLP] | Processando 2 itens a entregar....
+02:34:44 | Player [KserLP] | Item Data: {"log_id":223,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+02:34:44 | Player [KserLP] | Item Data: {"log_id":224,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+02:34:44 | Player [KserLP] | Item Data Entregue com sucesso: {"log_id":223,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+02:34:44 | Player [KserLP] | Item Data Entregue com sucesso: {"log_id":224,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+02:34:45 | Player [KserLP] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+02:34:45 | Player [KserLP] | --------------------------------------.
+15:13:02 | Player [Ansyx] | Processando 1 itens a entregar....
+15:13:02 | Player [Ansyx] | Item Data: {"log_id":225,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+15:13:02 | Player [Ansyx] | Item Data Entregue com sucesso: {"log_id":225,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+15:13:02 | Player [Ansyx] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+15:13:02 | Player [Ansyx] | --------------------------------------.
+16:50:41 | Player [Elite Tchuuzinha] | Processando 1 itens a entregar....
+16:50:41 | Player [Elite Tchuuzinha] | Item Data: {"log_id":226,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+16:50:41 | Player [Elite Tchuuzinha] | Item Data Entregue com sucesso: {"log_id":226,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+16:50:41 | Player [Elite Tchuuzinha] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+16:50:41 | Player [Elite Tchuuzinha] | --------------------------------------.
+18:21:57 | Player [Iguin Topdelicia] | Processando 1 itens a entregar....
+18:21:57 | Player [Iguin Topdelicia] | Item Data: {"log_id":227,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+18:21:57 | Player [Iguin Topdelicia] | Item Data Entregue com sucesso: {"log_id":227,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
+18:21:57 | Player [Iguin Topdelicia] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+18:21:57 | Player [Iguin Topdelicia] | --------------------------------------.
