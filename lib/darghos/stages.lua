@@ -202,8 +202,16 @@ end
 
 function setStagesOnLogin(cid)
 
-	changeStage(cid, SKILL__LEVEL, getPlayerMultiple(cid, STAGES_EXPERIENCE))
-	changeStage(cid, SKILL__MAGLEVEL, getPlayerMultiple(cid, STAGES_MAGIC))
+	local v = getPlayerMultiple(cid, STAGES_EXPERIENCE)
+	if v ~= 0 then
+		changeStage(cid, SKILL__LEVEL, v)
+	end
+	
+	v = getPlayerMultiple(cid, STAGES_MAGIC)
+	
+	if v ~= 0 then
+		changeStage(cid, SKILL__MAGLEVEL, v)
+	end
 	
 	for i = SKILL_CLUB, SKILL_SHIELD do
 		changeStage(cid, i, getPlayerMultiple(cid, STAGES_SKILLS, i))
