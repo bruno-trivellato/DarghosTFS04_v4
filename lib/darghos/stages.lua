@@ -83,7 +83,7 @@ function getPlayerMultiple(cid, stagetype, skilltype)
 	
 	if(_stages == nil) then
 		-- skip?
-		return 0
+		return 1
 	end
 	
 	if(getPlayerTown(cid) == towns.ISLAND_OF_PEACE and darghos_use_protected_stages and stagetype == STAGES_EXPERIENCE) then
@@ -137,7 +137,7 @@ function getPlayerMultiple(cid, stagetype, skilltype)
 		end
 	end
 	
-	return 0
+	return 1
 end
 
 function isStagedSkill(skilltype, includeMagic)
