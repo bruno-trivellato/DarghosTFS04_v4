@@ -16,6 +16,7 @@ stages = {
 		{start_level = 220, multipler = 1}
 	},
 	
+	--[[
 	[STAGES_SKILLS] = {
 		knight = {
 			{end_level = 39, multipler = 300}, 
@@ -67,6 +68,7 @@ stages = {
 			{start_level = 12, multipler = 2}
 		}
 	},
+	]]
 	
 	[STAGES_EXP_PROTECTED] = {
 		{end_level = 39, multipler = 50}, 
