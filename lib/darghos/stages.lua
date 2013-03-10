@@ -81,6 +81,11 @@ function getPlayerMultiple(cid, stagetype, skilltype)
 
 	local _stages = stages[stagetype]
 	
+	if(_stages == nil) then
+		-- skip?
+		return 0
+	end
+	
 	if(getPlayerTown(cid) == towns.ISLAND_OF_PEACE and darghos_use_protected_stages and stagetype == STAGES_EXPERIENCE) then
 		_stages = stages[STAGES_EXP_PROTECTED]
 	end
