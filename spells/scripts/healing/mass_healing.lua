@@ -7,6 +7,7 @@ setCombatParam(combat, COMBAT_PARAM_DISPEL, CONDITION_PARALYZE)
 function onGetFormulaValues(cid, level, maglevel)
 	local min = ((level*0.2)+(maglevel*5.7)+26)
 	local max = ((level*0.2)+(maglevel*10.43)+62)
+	min, max = increasePremiumSpells(cid, min, max)	
 	return min, max
 end
 

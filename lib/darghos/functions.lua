@@ -1,3 +1,12 @@
+function increasePremiumSpells(cid, min, max)
+	if(isPremium(cid)) then
+		min = floor(min * 1.1)
+		max = floor(max * 1.1)
+	end
+	
+	return min, max
+end
+
 function isPlayerMale(cid)
 	return getPlayerSex(cid) == 1
 end

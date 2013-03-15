@@ -9,6 +9,7 @@ if(darghos_distro == DISTROS_TFS) then
 		local min = (((weaponSkill+weaponAttack)/2)+(level/5))
 		local max = (((weaponSkill+weaponAttack)*1.1)+(level/5))
 	
+		min, max = increasePremiumSpells(cid, min, max)	
 		return -min, -max
 	end
 elseif(darghos_distro == DISTROS_OPENTIBIA) then

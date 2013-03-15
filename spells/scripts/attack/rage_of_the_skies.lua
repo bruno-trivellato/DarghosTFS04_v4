@@ -8,6 +8,8 @@ function onGetFormulaValues(cid, level, maglevel)
 
     local minDmg = -((level / 3) + (maglevel * minMult))
     local maxDmg = -((level / 3) + (maglevel * maxMult))
+	
+	minDmg, maxDmg = increasePremiumSpells(cid, minDmg, maxDmg)	
 
     return minDmg, maxDmg
 end

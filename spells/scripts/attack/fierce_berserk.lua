@@ -8,6 +8,8 @@ if(darghos_distro == DISTROS_TFS) then
 	function getSpellDamage(cid, level, weaponSkill, weaponAttack, attackStrength)	
 		local min = ((weaponSkill+weaponAttack*2)*1.1+(level/5))
 		local max = ((weaponSkill+weaponAttack*2)*3+(level/5))
+		
+		min, max = increasePremiumSpells(cid, min, max)	
 	
 		return -min, -max
 	end
