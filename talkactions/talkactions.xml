@@ -3,7 +3,7 @@
 
 	<talkaction log="yes" words="/storagevalue" channel="65534" access="5" event="script" value="game/playerstorage.lua"/>
 	<talkaction log="yes" words="/specialexp" channel="65534" access="5" event="script" value="game/special_exp.lua"/>
-	<talkaction log="yes" words="/outfit" channel="65534" access="5" event="script" value="game/alter_outfit.lua"/>
+	<talkaction log="yes" words="/getoutfit" channel="65534" access="5" event="script" value="game/alter_outfit.lua"/>
 	<talkaction log="yes" words="/help" channel="65534" access="1" event="script" value="game/help_manager.lua"/>
 	<talkaction words="/getoutfit" channel="65534" access="4" event="script" value="game/getoutfit.lua"/>
 	<talkaction log="yes" words="/poll" channel="65534" logged="1" access="5" event="script" value="game/createpoll.lua"/>
@@ -18,6 +18,7 @@
 	<talkaction words="!voteinfo" access="0" event="script" value="game/voteinfo.lua"/>
 	<talkaction words="!aceitotp" access="0" event="script" value="game/accept_teleport.lua"/>
 	<talkaction words="!online;/online" event="script" value="game/online.lua"/>
+	<talkaction words="!outfit" channel="65534" event="script" value="game/outfit.lua"/>
 	
 	<talkaction default="true" event="script" value="game/channels.lua"/> <!-- Help Channel -->	
 
@@ -89,7 +90,7 @@
 	<!-- <talkaction words="!pvp;/pvp" event="script" value="pvp.lua"/>  -->
 	<talkaction words="!q" event="script" channel="65534" value="money.lua"/>
 	<talkaction words="!serverinfo;/serverinfo" channel="65534" event="script" value="serverinfo.lua"/>
-	<talkaction words="!commands;/commands" channel="65534" event="script" value="commands.lua"/>
+	<talkaction words="!commands;/commands" channel="65534" event="script" value="commands.lua"/
 	<!-- <talkaction words="!software;/software" event="function" value="software"/> -->
 
 	<!-- Houses -->
