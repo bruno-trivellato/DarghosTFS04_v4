@@ -90,7 +90,7 @@
 	<!-- <talkaction words="!pvp;/pvp" event="script" value="pvp.lua"/>  -->
 	<talkaction words="!q" event="script" channel="65534" value="money.lua"/>
 	<talkaction words="!serverinfo;/serverinfo" channel="65534" event="script" value="serverinfo.lua"/>
-	<talkaction words="!commands;/commands" channel="65534" event="script" value="commands.lua"/
+	<talkaction words="!commands;/commands" channel="65534" event="script" value="commands.lua"/>
 	<!-- <talkaction words="!software;/software" event="function" value="software"/> -->
 
 	<!-- Houses -->
