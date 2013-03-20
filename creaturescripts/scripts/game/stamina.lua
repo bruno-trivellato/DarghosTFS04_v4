@@ -8,7 +8,7 @@ function onThink(cid, interval)
 		return
 	end
 	
-	if(getCreatureName(target) ~= "monk") then
+	if(getCreatureName(target) ~= "marksman target" and getCreatureName(target) ~= "hitdoll") then
 		return
 	end
 	

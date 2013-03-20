@@ -19,7 +19,7 @@
 		local outfit_id = OUTFIT_ID_MAGE_SUMMONER
 		local addon = 1
 		
-		if(isPlayerFemale(cid)) then
+		if(not isPlayerFemale(cid)) then
 			items  	= {{5904,10} , {2193,20} , {5809,1}}
 			outfit_id = OUTFIT_ID_MAGE_SUMMONER_HAT
 			addon = 1
