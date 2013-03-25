@@ -90,6 +90,8 @@
 	<monster name="Scorpion" file="aracnids/scorpion.xml"/>
 	<monster name="Spider" file="aracnids/spider.xml"/>
 	<monster name="Tarantula" file="aracnids/tarantula.xml"/>
+        <monster name="Giant Spoke" file="aracnids/giant spoke.xml"/>
+        <monster name="Wailing Widow" file="aracnids/wailing widow.xml"/>
 
 	<!-- Northrend Arena -->
 	<monster name="Achad" file="bosses-arena/achad.xml"/>
@@ -140,6 +142,8 @@
 	<monster name="Elder Beholder" file="beholders/elder beholder.xml"/>
 	<monster name="Gazer" file="beholders/gazer.xml"/>
 	<monster name="Eye of the seven" file="beholders/Eye of the seven.xml"/>
+	<monster name="Gran Brain" file="beholders/gran brain.xml"/>
+	<monster name="The Evil Eye" file="beholders/the evil eye.xml"/>
 	
 	<!-- Birds -->
 	<monster name="Chicken" file="birds/chicken.xml"/>
@@ -273,12 +277,19 @@
 	<monster name="Frost Dragon Hatchling" file="dragons/frost dragon hatchling.xml"/>
 	<monster name="Hydra" file="dragons/hydra.xml"/>
 	<monster name="Wyrm" file="dragons/wyrm.xml"/>
+	<monster name="Ghastly Dragon" file="dragons/Ghastly Dragon.xml"/>
 
 	<!-- Dwarves -->
 	<monster name="Dwarf Geomancer" file="dwarves/dwarf geomancer.xml"/>
 	<monster name="Dwarf Guard" file="dwarves/dwarf guard.xml"/>
 	<monster name="Dwarf Soldier" file="dwarves/dwarf soldier.xml"/>
 	<monster name="Dwarf" file="dwarves/dwarf.xml"/>
+
+        <!-- Drakens -->
+	<monster name="Draken Abomination" file="Drakens/draken abomination.xml"/>
+	<monster name="Dwarf Guard" file="Drakens/draken elite.xml"/>
+	<monster name="Dwarf Soldier" file="Drakens/draken spellweaver.xml"/>
+	<monster name="Dwarf" file="Drakens/draken warmaster.xml"/>
 
 	<!-- Dworcs -->
 	<monster name="Dworc fleshhunter" file="dworcs/dworc fleshhunter.xml"/>
@@ -356,11 +367,22 @@
 	<monster name="Scarab" file="insects/scarab.xml"/>
 	<monster name="Wasp" file="insects/wasp.xml"/>
 	<monster name="Yellow Butterfly" file="insects/yellow butterfly.xml"/>
+	<monster name="Insect Swarm" file="insects/insect swarm.xml"/>
+	<monster name="Lancer Beetle" file="insects/Lancer Beetle.xml"/>
+	<monster name="Terramite" file="insects/terramite.xml"/>
 
 	<!-- Lizards -->
 	<monster name="Lizard Sentinel" file="lizards/lizard sentinel.xml"/>
 	<monster name="Lizard Snakecharmer" file="lizards/lizard snakecharmer.xml"/>
 	<monster name="Lizard Templar" file="lizards/lizard templar.xml"/>
+	<monster name="Battlemaster Zunzu" file="lizards/Battlemaster Zunzu.xml"/>
+	<monster name="Lizard Abomination" file="lizards/lizard abomination.xml"/>
+	<monster name="Lizard Chosen" file="lizards/lizard chosen.xml"/>
+	<monster name="Lizard Dragon Priest" file="lizards/lizard dragon priest.xml"/>
+	<monster name="Lizard High Guard" file="lizards/lizard high guard.xml"/>
+	<monster name="Lizard Legionnaire" file="lizards/lizard legionnaire.xml"/>
+	<monster name="Lizard Zaogun" file="lizards/lizard zaogun.xml"/>
+
 
 	<!-- Machines -->
 	<monster name="Damaged Worker Golem" file="machines/damaged worker golem.xml"/>
@@ -554,6 +576,7 @@
 	<monster name="Serpent Spawn" file="reptiles/serpent spawn.xml"/>
 	<monster name="Snake" file="reptiles/snake.xml"/>
 	<monster name="Wyvern" file="reptiles/wyvern.xml"/>
+	<monster name="Killer Caiman" file="reptiles/killer caiman.xml"/>
 
 	<!-- Sheeps -->
 	<monster name="Black Sheep" file="sheeps/black sheep.xml"/>
@@ -624,6 +647,14 @@
 	<monster name="Vampire" file="undead humanoids/vampire.xml"/>
 	<monster name="Vampire Bride" file="undead humanoids/vampire bride.xml"/>
 	<monster name="Zombie" file="undead humanoids/zombie.xml"/>
+	<monster name="Souleater" file="undead humanoids/souleater.xml"/>
+	<monster name="Undead Prospector" file="undead humanoids/undead prospector.xml"/>
+
+	<!-- Yalahari Quest -->
+	<monster name="Azerus" file="yalahari quest/Azerus.xml"/>
+	<monster name="Rift Brood" file="yalahari quest/rift brood.xml"/>
+	<monster name="Rift scythe" file="yalahari quest/Rift scythe.xml"/>
+	<monster name="rift worm" file="yalahari quest/rift worm.xml"/>
 	
 	<!-- Ariadne -->
 	<monster name="Thorn Citizen" file="ariadne/thorn citizen.xml"/>
