@@ -7,6 +7,22 @@ function onSay(cid, words, param, channel)
 			return true
 		end
 	else
+	
+		local t = string.explode(param, ",")
+		
+		if(t[1] == "mcs" and getPlayerAccess(cid) == ACCESS_ADMIN) then
+			
+			if(t2[2] ~= nil and type(t[2]) == "number") then
+				mcs.toDrop = t2[2]
+			end
+			
+			mcs.buildList()
+			mcs.dropOne()
+			
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Droping...")
+			return true		
+		end
+	
 		pid = getPlayerByNameWildcard(param)
 	end
 
