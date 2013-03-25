@@ -588,6 +588,14 @@ local quests =
 			rewardId = 7390,
 			count = 1
 		},
+		[uid.MERMAID_COMB_QUEST] = {
+			storageId = sid.MERMAID_COMB_REWARD,
+			rewardContainer = 1998,
+			rewardContainerItems = { 
+				{ itemid = 5945, count = 1 }, -- mermaid comb
+				{ itemid = 12541, count = 1 } -- helmet of the deep
+			}	
+		},		
 		
 	}
 
