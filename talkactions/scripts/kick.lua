@@ -12,8 +12,8 @@ function onSay(cid, words, param, channel)
 		
 		if(t[1] == "mcs" and getPlayerAccess(cid) == ACCESS_ADMIN) then
 			
-			if(t2[2] ~= nil and type(t[2]) == "number") then
-				mcs.toDrop = t2[2]
+			if(t[2] ~= nil and type(t[2]) == "number") then
+				mcs.toDrop = t[2]
 			end
 			
 			mcs.buildList()

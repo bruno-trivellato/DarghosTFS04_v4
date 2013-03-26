@@ -26,6 +26,7 @@ function onStartup()
 	end
 	
 	db.executeQuery("UPDATE `players` SET `afk` = 0 WHERE `world_id` = " .. getConfigValue('worldId') .. " AND `afk` > 0;")
+	db.executeQuery("UPDATE `players` SET `conditions` = 0;")
 	
 	local today = os.date("*t")
 	

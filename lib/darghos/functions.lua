@@ -49,25 +49,29 @@ mcs.toDrop = 60
 
 function mcs.buildList()
 
-	local onlineList = getPlayersOnlineList()
+	local onlineList = getPlayersOnline()
 	
 	for i, uid in ipairs(onlineList) do
 	
-		if getPlayerFlagValue(uid, PLAYERFLAG_CANALWAYSLOGIN) == true and getPlayerAccess(uid) == 0 then
+		if getPlayerGroupId(uid) == 8 then
 			table.insert(mcs.list, uid)
 		end
 	end
+	
+	print("Mcs list builded with " .. #mcs.list .. " characters")
 end
 
 function mcs.dropOne()
 
 	local stop = false
+	
+	print("Kicking one of " .. mcs.toDrop .. " mcs.")
 
 	if(#mcs.list > 0) then
 		local mc_pos = math.random(1, #mcs.list)
 		
 		if(isPlayer(mcs.list[mc_pos])) then
-			print("Kicking mc " .. getPlayerName(mcs.list[mc_pos]) .. ".")
+			print(getPlayerName(mcs.list[mc_pos]) .. " kicked.")
 			doRemoveCreature(mcs.list[mc_pos])
 			table.remove(mcs.list, mc_pos)
 		else

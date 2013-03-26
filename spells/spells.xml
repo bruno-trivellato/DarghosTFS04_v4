@@ -260,7 +260,7 @@
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>
 		<vocation name="Paladin"/>  <vocation name="Royal Paladin"/>
 	</instant>
-	<instant name="Haste" words="utani hur" lvl="14" mana="60" exhaustion="2000" selftarget="1" aggressive="0" script="support/haste.lua">
+	<instant name="Haste" words="utani hur" lvl="14" mana="60" exhaustion="1000" selftarget="1" aggressive="0" script="support/haste.lua">
 	</instant>
 	<instant name="Flame Strike" words="exori flam" lvl="14" range="3" mana="20" exhaustion="2000" prem="0" casterTargetOrDirection="1" script="attack/flame_strike.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>
@@ -291,7 +291,7 @@
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>
 		<vocation name="Paladin"/>  <vocation name="Royal Paladin"/>
 	</instant>
-	<instant name="Strong Haste" words="utani gran hur" prem="0" lvl="20" mana="100" exhaustion="2000" selftarget="1" aggressive="0" script="support/strong_haste.lua">
+	<instant name="Strong Haste" words="utani gran hur" prem="0" lvl="20" mana="100" exhaustion="1000" selftarget="1" aggressive="0" script="support/strong_haste.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>
 	</instant>
