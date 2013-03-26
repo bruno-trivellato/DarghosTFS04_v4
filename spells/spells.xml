@@ -301,7 +301,7 @@
 	<instant name="Energy Beam" words="exevo vis lux" lvl="23" mana="40" exhaustion="2000" direction="1" script="attack/energy_beam.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>
 	</instant>
-	<instant name="Creature Illusion" words="utevo res ina" lvl="23" mana="100" exhaustion="2000" params="1" function="illusion">
+		<instant name="Creature Illusion" words="utevo res ina" lvl="23" mana="100" aggressive="0" params="1" exhaustion="1000" needlearn="0" function="Illusion">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>
 	</instant>

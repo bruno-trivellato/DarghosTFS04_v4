@@ -28,19 +28,19 @@
     <element firePercent="-10"/>
   </elements>
   <loot>
-    <item id="2148" countmax="30" chance="100000">
+    <item id="2148" countmax="30" chance="30000">
       <!--gold coin-->
     </item>
-    <item id="2667" countmax="1" chance="6666">
+    <item id="2667" countmax="1" chance="4000">
       <!--fish-->
     </item>
-    <item id="5899" countmax="1" chance="800">
+    <item id="5899" countmax="1" chance="1300">
       <!--turtle shell-->
     </item>
     <item id="5678" countmax="2" chance="1500">
       <!--tortoise egg-->
     </item>
-    <item id="6131" chance="400">
+    <item id="6131" chance="450">
       <!--tortoise shield-->
     </item>
     <item id="2671" countmax="2" chance1="20000">
