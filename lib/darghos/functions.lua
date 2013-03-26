@@ -42,6 +42,58 @@ function getChangePvpPrice(cid)
 	return 0
 end
 
+mcs = {}
+
+mcs.list = {}
+mcs.toDrop = 60
+
+function mcs.buildList()
+
+	local onlineList = getPlayersOnline()
+	
+	for i, uid in ipairs(onlineList) do
+	
+		if getPlayerGroupId(uid) == 8 then
+			table.insert(mcs.list, uid)
+		end
+	end
+	
+	print("Mcs list builded with " .. #mcs.list .. " characters")
+end
+
+function mcs.dropOne()
+
+	local stop = false
+	
+	print("Kicking one of " .. mcs.toDrop .. " mcs.")
+
+	if(#mcs.list > 0) then
+		local mc_pos = math.random(1, #mcs.list)
+		
+		if(isPlayer(mcs.list[mc_pos])) then
+			print(getPlayerName(mcs.list[mc_pos]) .. " kicked.")
+			doRemoveCreature(mcs.list[mc_pos])
+			table.remove(mcs.list, mc_pos)
+		else
+			print("Creature at key  " .. mc_pos .. " is not a player!")
+		end
+	else
+		stop = true
+	end
+	
+	if(mcs.toDrop > 0) then
+		if(mcs.toDrop == 1) then
+			stop = true
+		end
+		
+		mcs.toDrop = mcs.toDrop - 1
+	end
+	
+	if(not stop) then
+		addEvent(mcs.dropOne, 1000 * 60)
+	end
+end
+
 function getMinMaxClassicFormula(level, maglevel, minFactor, maxFactor, _min, _max)
 	
 	local min = ((level / 3) + (maglevel / 2)) * minFactor
