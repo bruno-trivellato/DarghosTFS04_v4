@@ -287,9 +287,10 @@
 
         <!-- Drakens -->
 	<monster name="Draken Abomination" file="Drakens/draken abomination.xml"/>
-	<monster name="Dwarf Guard" file="Drakens/draken elite.xml"/>
-	<monster name="Dwarf Soldier" file="Drakens/draken spellweaver.xml"/>
-	<monster name="Dwarf" file="Drakens/draken warmaster.xml"/>
+	<monster name="Draken Elite" file="Drakens/draken elite.xml"/>
+	<monster name="Draken Spellweaver" file="Drakens/draken spellweaver.xml"/>
+	<monster name="draken warmaster" file="Drakens/draken warmaster.xml"/>
+	<monster name="Snake God Essence" file="Drakens/Snake God Essence.xml"/>
 
 	<!-- Dworcs -->
 	<monster name="Dworc fleshhunter" file="dworcs/dworc fleshhunter.xml"/>
@@ -370,6 +371,8 @@
 	<monster name="Insect Swarm" file="insects/insect swarm.xml"/>
 	<monster name="Lancer Beetle" file="insects/Lancer Beetle.xml"/>
 	<monster name="Terramite" file="insects/terramite.xml"/>
+	<monster name="Brimstone Bug" file="insects/Brimstone Bug.xml"/>
+
 
 	<!-- Lizards -->
 	<monster name="Lizard Sentinel" file="lizards/lizard sentinel.xml"/>
@@ -382,6 +385,7 @@
 	<monster name="Lizard High Guard" file="lizards/lizard high guard.xml"/>
 	<monster name="Lizard Legionnaire" file="lizards/lizard legionnaire.xml"/>
 	<monster name="Lizard Zaogun" file="lizards/lizard zaogun.xml"/>
+	<monster name="Eternal Guardian" file="lizards/Eternal Guardian.xml"/>
 
 
 	<!-- Machines -->
@@ -436,6 +440,7 @@
 	<monster name="Orc Warlord" file="orcs/orc warlord.xml"/>
 	<monster name="Orc Warrior" file="orcs/orc warrior.xml"/>
 	<monster name="Orc" file="orcs/orc.xml"/>
+	<monster name="Orc" file="Orc Marauder/Orc Marauder.xml"/>
 
 	<!-- Outlaws -->
 	<monster name="Assassin" file="outlaws/assassin.xml"/>

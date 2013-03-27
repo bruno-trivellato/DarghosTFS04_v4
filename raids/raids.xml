@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <raids>
 	<!--
 		executed on average once every 2 minutes
@@ -11,6 +11,7 @@
 			
 		1440 = em media a cada 1 dia
 		2880 = em media a cada 2 dias
+                4320 = em media a cada 3 dias
 		7200 = em media a cada 5 dias
 		10080 = em media a cada 1 semana
 		21600 = em media a cada 15 dias
@@ -55,9 +56,9 @@
 		-- BOSSES
 		<raid name="demodras" file="bosses/demodras.xml" interval2="2880" margin="0"/>
 		<raid name="the_old_widow" file="bosses/the_old_widow.xml" interval2="2880" margin="0"/>
-		<raid name="the_horned_fox" file="bosses/the_horned_fox.xml" interval2="10080" margin="0"/>
-		<raid name="tiquadas_revenge" file="bosses/tiquandas_revenge.xml" interval2="10080" margin="0"/>
-		<raid name="necropharus" file="bosses/necropharus.xml" interval2="14400" margin="0"/>
+		<raid name="the_horned_fox" file="bosses/the_horned_fox.xml" interval2="4320" margin="0"/>
+		<raid name="tiquadas_revenge" file="bosses/tiquandas_revenge.xml" interval2="4320" margin="0"/>
+		<raid name="necropharus" file="bosses/necropharus.xml" interval2="4320" margin="0"/>
 		<raid name="ferumbras" file="bosses/ferumbras.xml" interval2="129600" margin="0"/>
 		<raid name="orshabaal" file="bosses/orshabaal.xml" interval2="43200" margin="0"/>			
 		<raid name="morgaroth" file="bosses/morgaroth.xml" interval2="129600" margin="0"/>	

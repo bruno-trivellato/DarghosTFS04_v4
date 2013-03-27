@@ -482,7 +482,10 @@
 		<vocation id="2"/> <vocation id="6" showInDescription="0"/> 
 		
 	</movevent>
-	<movevent type="DeEquip" itemid="7890" slot="necklace" event="function" value="onDeEquipItem"/>
+        <movevent type="Equip" itemid="8266" slot="necklace" event="function" value="onEquipItem"/>
+        <movevent type="DeEquip" itemid="8266" slot="necklace" event="function" value="onDeEquipItem"/>
+		<!-- Koshei Necklace -->
+         <movevent type="DeEquip" itemid="7890" slot="necklace" event="function" value="onDeEquipItem"/>
 		<!-- Sacred Tree Amulet/Leviathan's Amulet/Shockwave Amulet -->
 	<movevent type="Equip" fromid="10218" toid="10221" slot="necklace" level="80" event="function" value="onEquipItem"/>
 	<movevent type="DeEquip" fromid="10218" toid="10221" slot="necklace" event="function" value="onDeEquipItem"/>
