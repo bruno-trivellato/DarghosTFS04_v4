@@ -8,10 +8,16 @@ function onThink(cid, interval)
 		return
 	end
 	
-	if(string.lower(getCreatureName(target)) ~= "marksman target" and string.lower(getCreatureName(target)) ~= "hitdoll") then
+	local check = false
+	if(string.lower(getCreatureName(target)) == "marksman target" or string.lower(getCreatureName(target)) == "hitdoll") then
+		check = true
+	end
+	
+	if(not check) then
 		return
 	end
 	
+	--[[
 	local master = getCreatureMaster(target)
 	if(not master) then
 		return
@@ -21,7 +27,7 @@ function onThink(cid, interval)
 		return
 	end
 	
-	--[[
+	
 	local tile = getTileInfo(getCreaturePosition(cid))
 	
 	if(not tile.optional) then
