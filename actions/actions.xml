@@ -42,7 +42,7 @@
 
 	
 	<!-- Quests -->
-	<action uniqueid="2001-2106" script="game/quests/chest.lua"/>
+	<action uniqueid="2001-2108" script="game/quests/chest.lua"/>
 
 	<!-- Quests -->
 	<!--  
