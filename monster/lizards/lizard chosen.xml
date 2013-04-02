@@ -18,20 +18,16 @@
 <flag runonhealth="50"/>
 </flags>
 <attacks>
-<attack name="melee" interval="2000" skill="80" attack="80"/>
-<attack name="poison" interval="3000" chance="15" length="8" spread="3" min="-90" max="-180">
+	<attack name="melee" interval="2000" skill="55" attack="90"/>
+<attack name="poison" interval="2000" chance="18" length="8" spread="3" min="-30" max="-120">
 <attribute key="areaEffect" value="poison"/>
 </attack>
 </attacks>
-<defenses armor="25" defense="25">
-<defense name="healing" interval="2000" chance="20" max="100">
-<attribute key="areaEffect" value="blueshimmer"/>
-</defense>
-</defenses>
+<defenses armor="16" defense="19"/>
 <elements>
-<element firePercent="10"/>
 <element energyPercent="20"/>
 <element icePercent="10"/>
+<element firePercent="10"/>
 </elements>
 <immunities>
 <immunity earth="1"/>
@@ -41,19 +37,17 @@
 <voice sentence="Grzzzzzzz!"/>
 </voices>
 <loot>
-<item id="2148" countmax="90" chance="25000"/><!-- gold coin -->
-<item id="2148" countmax="70" chance="25000"/><!-- gold coin -->
-<item id="2148" countmax="64" chance="25000"/><!-- gold coin -->
-<item id="11319" chance="10000"/><!-- spiked iron ball -->
-<item id="11321" chance="8500"/><!-- cursed shoulder spikes -->
-<item id="7591" chance="7000"/><!-- great health potion -->
-<item id="1987" chance="100000"><!-- bag -->
+<item id="2148" countmax="224" chance="100000"/>
+<item id="11319" chance="9000"/>
+<item id="11321" chance="7000"/>
+<item id="7591" chance="8500"/>
+<item id="11320" chance="6000"/>
+<item id="5876" chance="4000"/>
+<item id="5881" chance="5000"/>
+<item id="1987" chance="100000">
 <inside>
-<item id="11320" chance="4000"/><!-- corrupted flag -->
-<item id="5876" chance="1000"/><!-- lizard leather -->
-<item id="5881" chance="1250"/><!-- lizard scale -->
-<item id="11297" chance="750"/><!-- zaoan shoes -->
-<item id="11296" chance="400"/><!-- zaoan helmet -->
+<item id="11297" chance="600"/>
+<item id="11296" chance="500"/>
 </inside>
 </item>
 </loot>
