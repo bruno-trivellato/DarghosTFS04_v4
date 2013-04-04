@@ -32,6 +32,7 @@
 	<talkaction log="yes" words="/skill;/addskill" channel="65534" access="5" event="script" value="skill.lua"/>
 	<talkaction log="yes" words="/shutdown" access="5" channel="65534" event="script" value="shutdown.lua"/>
 	<talkaction log="yes" access="5" words="/mode" channel="65534" event="script" value="mode.lua"/>
+	<talkaction log="yes" words="/i" channel="65534" access="5" event="script" value="createitem.lua"/>
 
 	<!-- Community Managers -->
 	<talkaction log="yes" words="/s" channel="65534" access="4" event="script" value="summon.lua"/>
@@ -44,7 +45,6 @@
 	<talkaction log="yes" words="/owner" channel="65534" access="4" event="script" value="owner.lua"/>
 	<talkaction log="yes" words="/storage" channel="65534" access="4" event="script" value="storage.lua"/>
 	<talkaction log="yes" words="/config" channel="65534" access="4" event="script" value="configinfo.lua"/>
-	<talkaction log="yes" words="/i" channel="65534" access="4" event="script" value="createitem.lua"/>
 	<talkaction access="4" words="/z" channel="65534" event="script" value="magiceffect.lua"/>
 	<talkaction access="4" words="/x" channel="65534" event="script" value="animationeffect.lua"/>
 	<talkaction access="4" words="/y" channel="65534" event="script" value="animatedtext.lua"/>
