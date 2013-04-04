@@ -7931,6 +7931,12 @@
     <monster name="Cyclops Drone" x="0" y="0" z="7" spawntime="60"/>
     <monster name="Cyclops Smith" x="1" y="1" z="7" spawntime="60"/>
   </spawn>
+  <spawn centerx="2488" centery="1941" centerz="7" radius="1">
+    <monster name="Cyclops" x="1" y="-1" z="7" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2493" centery="1941" centerz="7" radius="1">
+    <monster name="Cyclops Drone" x="0" y="-1" z="7" spawntime="60"/>
+  </spawn>
   <spawn centerx="1991" centery="1942" centerz="7" radius="5">
     <monster name="Minotaur guard" x="5" y="-5" z="7" spawntime="60"/>
     <monster name="Minotaur" x="1" y="-4" z="7" spawntime="60"/>
@@ -7947,9 +7953,6 @@
     <monster name="Wasp" x="2" y="2" z="7" spawntime="60"/>
     <monster name="Wasp" x="-3" y="3" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="2490" centery="1942" centerz="7" radius="1">
-    <monster name="Cyclops" x="1" y="0" z="7" spawntime="60"/>
-  </spawn>
   <spawn centerx="3312" centery="1942" centerz="7" radius="5">
     <monster name="Minotaur" x="0" y="-2" z="7" spawntime="60"/>
     <monster name="Minotaur" x="-1" y="0" z="7" spawntime="60"/>
@@ -7958,9 +7961,6 @@
   <spawn centerx="2430" centery="1943" centerz="7" radius="5">
     <monster name="Wasp" x="-5" y="2" z="7" spawntime="60"/>
     <monster name="Wasp" x="-1" y="4" z="7" spawntime="60"/>
-  </spawn>
-  <spawn centerx="2485" centery="1944" centerz="7" radius="1">
-    <monster name="Cyclops Drone" x="1" y="0" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="2378" centery="1946" centerz="7" radius="5">
     <monster name="Cyclops" x="-2" y="-2" z="7" spawntime="60"/>
@@ -11782,6 +11782,10 @@
     <monster name="Swamp Troll" x="-4" y="2" z="8" spawntime="60"/>
     <monster name="Swamp Troll" x="-1" y="2" z="8" spawntime="60"/>
   </spawn>
+  <spawn centerx="2572" centery="1817" centerz="8" radius="5">
+    <monster name="Dragon" x="-3" y="1" z="8" spawntime="60"/>
+    <monster name="dragon hatchling" x="3" y="1" z="8" spawntime="60"/>
+  </spawn>
   <spawn centerx="2157" centery="1820" centerz="8" radius="5">
     <monster name="Troll" x="1" y="-1" z="8" spawntime="60"/>
     <monster name="Troll" x="-2" y="0" z="8" spawntime="60"/>
@@ -11798,6 +11802,10 @@
     <monster name="Swamp Troll" x="-1" y="1" z="8" spawntime="60"/>
     <monster name="Swamp Troll" x="1" y="4" z="8" spawntime="60"/>
   </spawn>
+  <spawn centerx="2562" centery="1821" centerz="8" radius="5">
+    <monster name="dragon hatchling" x="1" y="-2" z="8" spawntime="60"/>
+    <monster name="Dragon" x="-3" y="1" z="8" spawntime="60"/>
+  </spawn>
   <spawn centerx="2195" centery="1823" centerz="8" radius="5">
     <monster name="troll champion" x="0" y="-2" z="8" spawntime="60"/>
     <monster name="Troll" x="-2" y="-1" z="8" spawntime="60"/>
@@ -11811,6 +11819,14 @@
     <monster name="Troll" x="0" y="2" z="8" spawntime="60"/>
     <monster name="Troll" x="2" y="3" z="8" spawntime="60"/>
   </spawn>
+  <spawn centerx="2584" centery="1825" centerz="8" radius="5">
+    <monster name="Dragon" x="-3" y="-2" z="8" spawntime="60"/>
+    <monster name="dragon hatchling" x="1" y="1" z="8" spawntime="60"/>
+    <monster name="Dragon" x="3" y="4" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2599" centery="1826" centerz="8" radius="5">
+    <monster name="Dragon" x="3" y="0" z="8" spawntime="60"/>
+  </spawn>
   <spawn centerx="2232" centery="1827" centerz="8" radius="5">
     <monster name="troll champion" x="-1" y="-1" z="8" spawntime="60"/>
     <monster name="Troll" x="2" y="-1" z="8" spawntime="60"/>
@@ -11818,10 +11834,29 @@
     <monster name="Troll" x="3" y="1" z="8" spawntime="60"/>
     <monster name="troll champion" x="1" y="3" z="8" spawntime="60"/>
   </spawn>
+  <spawn centerx="2613" centery="1828" centerz="8" radius="5">
+    <monster name="Dragon" x="-2" y="-1" z="8" spawntime="60"/>
+    <monster name="dragon hatchling" x="3" y="1" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2551" centery="1829" centerz="8" radius="5">
+    <monster name="dragon hatchling" x="3" y="-2" z="8" spawntime="60"/>
+    <monster name="Dragon" x="0" y="2" z="8" spawntime="60"/>
+  </spawn>
   <spawn centerx="2209" centery="1830" centerz="8" radius="5">
     <monster name="troll champion" x="-2" y="-2" z="8" spawntime="60"/>
     <monster name="troll champion" x="1" y="-1" z="8" spawntime="60"/>
     <monster name="troll champion" x="-1" y="1" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2619" centery="1830" centerz="8" radius="5">
+    <monster name="Dragon" x="3" y="1" z="8" spawntime="60"/>
+    <monster name="dragon hatchling" x="4" y="1" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2628" centery="1830" centerz="8" radius="5">
+    <monster name="Dragon" x="3" y="-1" z="8" spawntime="60"/>
+    <monster name="dragon hatchling" x="4" y="-1" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2635" centery="1831" centerz="8" radius="5">
+    <monster name="dragon hatchling" x="2" y="5" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="2245" centery="1833" centerz="8" radius="5">
     <monster name="troll champion" x="3" y="-1" z="8" spawntime="60"/>
@@ -11837,13 +11872,26 @@
     <monster name="Orc" x="1" y="2" z="8" spawntime="60"/>
     <monster name="Troll" x="-1" y="3" z="8" spawntime="60"/>
   </spawn>
+  <spawn centerx="2598" centery="1834" centerz="8" radius="5">
+    <monster name="dragon hatchling" x="-1" y="-2" z="8" spawntime="60"/>
+    <monster name="Dragon" x="-2" y="3" z="8" spawntime="60"/>
+  </spawn>
   <spawn centerx="2222" centery="1835" centerz="8" radius="5">
     <monster name="Orc" x="0" y="1" z="8" spawntime="60"/>
     <monster name="Orc" x="-2" y="2" z="8" spawntime="60"/>
     <monster name="Orc Spearman" x="0" y="2" z="8" spawntime="60"/>
   </spawn>
+  <spawn centerx="2586" centery="1835" centerz="8" radius="5">
+    <monster name="Dragon" x="2" y="0" z="8" spawntime="60"/>
+    <monster name="dragon hatchling" x="-5" y="4" z="8" spawntime="60"/>
+  </spawn>
   <spawn centerx="2406" centery="1836" centerz="8" radius="2">
     <npc name="thorn.train" x="-2" y="0" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2544" centery="1836" centerz="8" radius="5">
+    <monster name="Dragon" x="-3" y="-2" z="8" spawntime="60"/>
+    <monster name="dragon hatchling" x="2" y="0" z="8" spawntime="60"/>
+    <monster name="Dragon" x="-1" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="2513" centery="1837" centerz="8" radius="1">
     <monster name="Giant Spider" x="-1" y="-1" z="8" spawntime="60"/>
@@ -11852,8 +11900,24 @@
     <npc name="global.soft" x="1" y="-1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="2509" centery="1840" centerz="8" radius="1"/>
+  <spawn centerx="2639" centery="1840" centerz="8" radius="5">
+    <monster name="Dragon" x="1" y="-3" z="8" spawntime="60"/>
+    <monster name="dragon hatchling" x="-2" y="4" z="8" spawntime="60"/>
+    <monster name="Dragon" x="-4" y="5" z="8" spawntime="60"/>
+  </spawn>
   <spawn centerx="2518" centery="1841" centerz="8" radius="1">
     <monster name="Giant Spider" x="-1" y="0" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2556" centery="1841" centerz="8" radius="5">
+    <monster name="Dragon" x="0" y="-2" z="8" spawntime="60"/>
+    <monster name="dragon hatchling" x="4" y="3" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2575" centery="1842" centerz="8" radius="5">
+    <monster name="Dragon" x="3" y="-2" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2603" centery="1842" centerz="8" radius="5">
+    <monster name="dragon hatchling" x="-2" y="0" z="8" spawntime="60"/>
+    <monster name="Dragon" x="0" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="2210" centery="1843" centerz="8" radius="5">
     <monster name="troll champion" x="3" y="-3" z="8" spawntime="60"/>
@@ -11884,6 +11948,18 @@
     <monster name="Giant Spider" x="-1" y="-1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="2521" centery="1844" centerz="8" radius="1"/>
+  <spawn centerx="2563" centery="1844" centerz="8" radius="5">
+    <monster name="Dragon" x="1" y="-1" z="8" spawntime="60"/>
+    <monster name="dragon hatchling" x="4" y="-1" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2614" centery="1844" centerz="8" radius="5">
+    <monster name="dragon hatchling" x="-3" y="0" z="8" spawntime="60"/>
+    <monster name="Dragon" x="0" y="1" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2627" centery="1845" centerz="8" radius="5">
+    <monster name="dragon hatchling" x="-3" y="-1" z="8" spawntime="60"/>
+    <monster name="Dragon" x="0" y="-1" z="8" spawntime="60"/>
+  </spawn>
   <spawn centerx="2507" centery="1846" centerz="8" radius="1">
     <monster name="Giant Spider" x="0" y="1" z="8" spawntime="60"/>
   </spawn>
