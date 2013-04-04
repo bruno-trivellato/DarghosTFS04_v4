@@ -19,17 +19,17 @@
     <flag runonhealth="5000"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="1000" attack="80" skill="200"/>
-    <attack name="physical" interval="1000" chance="40" range="7" min="-400" max="-700">
+    <attack name="melee" interval="2000" skill="120" attack="160"/>
+    <attack name="physical" interval="1000" chance="12" range="7" min="-400" max="-700">
       <attribute key="shootEffect" value="largerock"/>
     </attack>
-    <attack name="earth" interval="1000" chance="33" radius="5" target="0" min="-295" max="-465">
+    <attack name="earth" interval="1000" chance="18" radius="5" target="0" min="-295" max="-465">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
     <attack name="speed" interval="1000" chance="6" range="7" speedchange="-1000" duration="20000">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="earth" interval="1000" chance="42" radius="7" target="0" min="-265" max="-465">
+    <attack name="earth" interval="1000" chance="18" radius="7" target="0" min="-265" max="-465">
       <attribute key="areaEffect" value="plantattack"/>
     </attack>
     <attack name="manadrain" interval="1000" chance="14" radius="4" target="1" min="-765" max="-1250">
