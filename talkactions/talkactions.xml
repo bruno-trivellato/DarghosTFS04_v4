@@ -18,8 +18,6 @@
 	<talkaction words="!voteinfo" access="0" event="script" value="game/voteinfo.lua"/>
 	<talkaction words="!aceitotp" access="0" event="script" value="game/accept_teleport.lua"/>
 	<talkaction words="!online;/online" event="script" value="game/online.lua"/>
-	<talkaction words="!outfit" access="" event="script" value="game/outfit.lua"/>
-	
 	<talkaction default="true" event="script" value="game/channels.lua"/> <!-- Help Channel -->	
 
 
@@ -92,6 +90,7 @@
 	<talkaction words="!serverinfo;/serverinfo" channel="65534" event="script" value="serverinfo.lua"/>
 	<talkaction words="!commands;/commands" channel="65534" event="script" value="commands.lua"/>
 	<!-- <talkaction words="!software;/software" event="function" value="software"/> -->
+	<talkaction words="!outfit" channel="65534" event="function" value="outfit.lua"/>
 
 	<!-- Houses -->
 	<talkaction words="alevo grav;!buyhouse" channel="65534" filter="word-spaced" event="function" value="houseBuy"/>
