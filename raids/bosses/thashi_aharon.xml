@@ -29,5 +29,5 @@
 		<monster name="Elf Scout" minamount="6" maxamount="12"/>
 	</areaspawn>
 	
-	<singlespawn delay="390000" name="Thashi Aharon" x="2388" y="1777" z="7" />
+	<singlespawn delay="390000" name="Thashi Aharon" x="2390" y="1785" z="9" />
 </raid>

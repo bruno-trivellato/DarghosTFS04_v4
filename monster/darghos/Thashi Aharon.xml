@@ -101,5 +101,42 @@
     <item id="6529" countmax="1" chance="6000">
       <!--infernal bolt-->
     </item>
+    <item id="5947" countmax="1" chance="2000">
+      <!--Elane's Crossbow-->
+    </item>
+    <item id="8851" countmax="1" chance="5000">
+      <!--royal crossbow-->
+    </item>
+    <item id="8888" countmax="1" chance="5000">
+      <!--master archer's armor-->
+    </item>
+    <item id="9777" countmax="1" chance="4000">
+      <!--yalahari leg piece -->
+    </item>
+    <item id="10515" countmax="1" chance="3500">
+      <!--whacking driller of fate -->
+    </item>
+    <item id="5922" countmax="1" chance="8000">
+      <!--holy orchid-->
+    </item>
+    <item id="2535" countmax="1" chance="4000">
+      <!--casttle shield-->
+    </item>
+   <item id="1987" chance="100000">
+      <inside>
+    <item id="5922" countmax="4" chance="9000">
+      <!--holy orchid-->
+   </item>
+    <item id="2543" countmax="80" chance="10000">
+      <!--bolt-->
+    </item>
+    <item id="2547" countmax="75" chance="9000">
+      <!--power bolt-->
+    </item>
+    <item id="2547" countmax="75" chance="9000">
+      <!--power bolt-->
+    </item>
+
+
   </loot>
 </monster>
