@@ -4455,6 +4455,16 @@ bool Game::combatChangeHealth(CombatType_t combatType, Creature* attacker, Creat
 		if(!force && target->getHealth() <= 0)
 			return false;
 
+#ifdef __DARGHOS_CUSTOM__
+		Player* p_attacker = NULL;
+		if(attacker && target && (p_attacker = attacker->getPlayer()))
+		{
+		    //nenhum player pode healar monstros mais...
+		    if(!g_config.getBool(ConfigManager::PLAYERS_CAN_HEAL_MONSTERS) && target->getMonster() && !target->isPlayerSummon())
+                return false;
+		}
+#endif
+
 		bool deny = false;
 		CreatureEventList statsChangeEvents = target->getCreatureEvents(CREATURE_EVENT_STATSCHANGE);
 		for(CreatureEventList::iterator it = statsChangeEvents.begin(); it != statsChangeEvents.end(); ++it)

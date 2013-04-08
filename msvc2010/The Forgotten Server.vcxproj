@@ -232,10 +232,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <GenerateManifest>true</GenerateManifest>
-    <IncludePath>D:\MSVC\include\boost\;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\MSVC\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
-    <LinkIncremental>
-    </LinkIncremental>
+    <IncludePath>E:\MSVC\include\boost\;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\MSVC\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
     <OutDir>..\..</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -310,12 +309,12 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>__USE_MYSQL__;__ENABLE_SERVER_DIAGNOSTIC__;__EXCEPTION_TRACER__;__USE_LUALIBRARIES__;__DARGHOS_CUSTOM__;__DARGHOS_SPOOF__;__TFS_NEWEST_REVS_FIXIES__;__NO_CRYPTOPP__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__USE_MYSQL__;__ENABLE_SERVER_DIAGNOSTIC__;__EXCEPTION_TRACER__;__USE_LUALIBRARIES__;__DARGHOS_CUSTOM__;__TFS_NEWEST_REVS_FIXIES__;__NO_CRYPTOPP__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>otpch.h</PrecompiledHeaderFile>
       <MultiProcessorCompilation>false</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>..\lib\sqlite3\include;..\lib\openssl\include;..\lib\mysql\include;..\lib\luajit\src;..\lib\win32\libxml2\include;..\lib\win32\iconv\include;D:\MSVC\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\lib\sqlite3\include;..\lib\openssl\include;..\lib\mysql\include;..\lib\luajit\src;..\lib\win32\libxml2\include;..\lib\win32\iconv\include;E:\MSVC\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MinimalRebuild>true</MinimalRebuild>
     </ClCompile>
     <Link>
@@ -325,7 +324,7 @@
       <AdditionalDependencies>lua5.1.lib;mpir.lib;libxml2.lib;dbghelp.lib;libmysql.lib;sqlite.lib;libeay32MT.lib</AdditionalDependencies>
       <SubSystem>NotSet</SubSystem>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <AdditionalLibraryDirectories>D:\MSVC\lib;..\lib\win32;..\lib\win32\libxml2\lib;..\lib\win32\iconv\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\MSVC\lib;..\lib\win32;..\lib\win32\libxml2\lib;..\lib\win32\iconv\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
   </ItemDefinitionGroup>
