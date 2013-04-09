@@ -386,6 +386,9 @@
 	<monster name="Lizard Legionnaire" file="lizards/lizard legionnaire.xml"/>
 	<monster name="Lizard Zaogun" file="lizards/lizard zaogun.xml"/>
 	<monster name="Eternal Guardian" file="lizards/Eternal Guardian.xml"/>
+	<monster name="Lizard Gate Guardian" file="lizards/lizard gate guardian.xml"/>
+	<monster name="Lizard Magistratus" file="lizards/lizard magistratus.xml"/>
+	<monster name="Lizard Noble" file="lizards/lizard noble.xml"/>
 
 
 	<!-- Machines -->

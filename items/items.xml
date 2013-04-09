@@ -1982,12 +1982,17 @@
 		<attribute key="showduration" value="1" />
 		<attribute key="duration" value="3000" />
 	</item>
-	<item id="2164" article="a" name="might ring">
+    <item id="2164" article="a" name="might ring">
 		<attribute key="weight" value="100" />
 		<attribute key="slotType" value="ring" />
 		<attribute key="charges" value="20" />
 		<attribute key="showcharges" value="1" />
-		<attribute key="absorbPercentAll" value="20" />
+		<attribute key="absorbPercentEnergy" value="20" />
+		<attribute key="absorbPercentFire" value="20" />
+		<attribute key="absorbPercentIce" value="20" />
+		<attribute key="absorbPercentEarth" value="20" />
+		<attribute key="absorbPercentPhysical" value="20" />
+		<attribute key="absorbPercentHoly" value="20" />
 	</item>
 	<item id="2165" article="a" name="stealth ring">
 		<attribute key="weight" value="100" />
