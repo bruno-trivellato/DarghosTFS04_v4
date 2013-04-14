@@ -30,8 +30,7 @@ local POTIONS = {
 }
 
 local exhaust = createConditionObject(CONDITION_EXHAUST)
-setConditionParam(exhaust, CONDITION_PARAM_TICKS, 1000)
-setConditionParam(exhaust, CONDITION_PARAM_SUBID, EXHAUST_OTHER)
+setConditionParam(exhaust, CONDITION_PARAM_TICKS, (getConfigInfo('timeBetweenExActions') - 100))
 
 function onUse(cid, item, fromPosition, itemEx, toPosition)
 	local potion = POTIONS[item.itemid]
