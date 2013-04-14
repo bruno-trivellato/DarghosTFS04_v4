@@ -19,6 +19,11 @@ function onSay(cid, words, param, channel)
 			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Player " .. t[(master and 1 or 2)] .. " not found.")
 			return true
 		end
+		
+		if(isPlayerPzLocked(tid)) then
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You can not send to temple players with pz-locked state.")
+			return true	
+		end		
 	end
 
 	local tmp = getPlayerTown(cid)

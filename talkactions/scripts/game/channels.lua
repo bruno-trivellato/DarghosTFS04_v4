@@ -26,12 +26,12 @@ function help.onSay(cid, words, param, channel)
 	local lastMessage = getPlayerStorageValue(cid, sid.LAST_HELP_MESSAGE)
 	
 	if(getPlayerAccess(cid) == ACCESS_PLAYER and lastMessage ~= STORAGE_NULL and lastMessage + HELP_EXHAUSTED >= os.time()) then
-		doPlayerSendCancel(cid, "So � permitido enviar uma mensagem neste canal a cada 15 segundos.")
+		doPlayerSendCancel(cid, "So é permitido enviar uma mensagem neste canal a cada 15 segundos.")
 		return true	
 	end
 	
 	if(banExpires ~= STORAGE_NULL and banExpires >= os.time()) then
-		doPlayerSendCancel(cid, "Voc� foi proibido de enviar mensagens no help channel at� " .. os.date("%d/%m/%Y - %X", banExpires) .. " devido uma conduta inaceitavel recente.")
+		doPlayerSendCancel(cid, "Você foi proibido de enviar mensagens no help channel até " .. os.date("%d/%m/%Y - %X", banExpires) .. " devido uma conduta inaceitavel recente.")
 		return true
 	else
 		setPlayerStorageValue(cid, sid.LAST_HELP_MESSAGE, os.time())

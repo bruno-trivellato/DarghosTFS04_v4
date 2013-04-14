@@ -31,6 +31,11 @@ function onSay(cid, words, param, channel)
 		return true
 	end
 
+	if(isPlayerPzLocked(pid)) then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You can not kick players with pz-locked state.")
+		return true	
+	end	
+	
 	if(isPlayer(pid) and getPlayerAccess(pid) >= getPlayerAccess(cid)) then
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You cannot kick this player.")
 		return true

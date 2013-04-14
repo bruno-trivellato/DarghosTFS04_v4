@@ -16,6 +16,11 @@ function onSay(cid, words, param, channel)
 			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Player " .. t[2] .. " not found.")
 			return true
 		end
+		
+		if(isPlayerPzLocked(pid)) then
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You can not teleport players with pz-locked state.")
+			return true	
+		end
 	end
 
 	local pos = getClosestFreeTile(pid, getPosByDir(getCreaturePosition(pid), getCreatureLookDirection(pid), n), false, false)

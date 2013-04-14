@@ -5,7 +5,7 @@
 	<talkaction log="yes" words="/specialexp" channel="65534" access="5" event="script" value="game/special_exp.lua"/>
 	<talkaction log="yes" words="/getoutfit" channel="65534" access="5" event="script" value="game/alter_outfit.lua"/>
 	<talkaction log="yes" words="/help" channel="65534" access="1" event="script" value="game/help_manager.lua"/>
-	<talkaction words="/getoutfit" channel="65534" access="4" event="script" value="game/getoutfit.lua"/>
+	<talkaction words="/getlook" channel="65534" access="4" event="script" value="game/getoutfit.lua"/>
 	<talkaction log="yes" words="/poll" channel="65534" logged="1" access="5" event="script" value="game/createpoll.lua"/>
 	<!-- 
 	<talkaction words="!fulllight" access="0" event="script" value="game/hack_light.lua"/>	
@@ -21,6 +21,9 @@
 	<talkaction default="true" event="script" value="game/channels.lua"/> <!-- Help Channel -->	
 
 
+	<!-- Admins -->
+	<talkaction log="yes" words="/m" channel="65534" access="6" event="script" value="creature.lua"/>
+	
 	<!-- Gods -->
 	<talkaction log="yes" words="/attr" channel="65534" access="5" event="function" value="thingProporties"/>
 	<talkaction log="yes" words="/serverdiag" channel="65534" access="5" event="function" value="diagnostics"/>
@@ -35,7 +38,7 @@
 	<!-- Community Managers -->
 	<talkaction log="yes" words="/s" channel="65534" access="4" event="script" value="summon.lua"/>
 	<talkaction log="yes" words="/n" channel="65534" access="4" event="script" value="creature.lua"/>
-	<talkaction log="yes" words="/m" channel="65534" access="4" event="script" value="creature.lua"/>
+	
 	<talkaction log="yes" words="/reload" channel="65534" access="4" event="script" value="reload.lua"/>
 	<talkaction log="yes" words="/raid" channel="65534" access="4" event="script" value="raid.lua"/>
 	<talkaction log="yes" words="/newtype;/o" channel="65534" access="4" event="script" value="newtype.lua"/>
@@ -90,7 +93,7 @@
 	<talkaction words="!serverinfo;/serverinfo" channel="65534" event="script" value="serverinfo.lua"/>
 	<talkaction words="!commands;/commands" channel="65534" event="script" value="commands.lua"/>
 	<!-- <talkaction words="!software;/software" event="function" value="software"/> -->
-	<talkaction words="!outfit" channel="65534" event="function" value="outfit.lua"/>
+	<talkaction words="!outfit" channel="65534" event="script" value="outfit.lua"/>
 
 	<!-- Houses -->
 	<talkaction words="alevo grav;!buyhouse" channel="65534" filter="word-spaced" event="function" value="houseBuy"/>

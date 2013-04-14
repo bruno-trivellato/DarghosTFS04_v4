@@ -15,6 +15,11 @@ function onSay(cid, words, param, channel)
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Player " .. t[1] .. " not found.")
 		return true
 	end
+	
+	if(isPlayerPzLocked(pid)) then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You can not teleport players with pz-locked state.")
+		return true	
+	end		
 
 	local creature = getCreatureByName(t[2])
 	local player = getPlayerByNameWildcard(t[2])
