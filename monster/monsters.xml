@@ -9,6 +9,7 @@
 	<monster name="Dark Mage" file="darghos/dark-forces/dark mage.xml" />
 	<monster name="Dark Priestess" file="darghos/dark-forces/dark priestess.xml" />
 	<monster name="Dark Summoner" file="darghos/dark-forces/dark summoner.xml" />
+	
 	-->
 	
 	<monster name="Demon Oak" file="darghos/demon_oak.xml"/>
