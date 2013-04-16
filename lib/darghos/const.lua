@@ -323,3 +323,40 @@
 	ITEM_RARITY_EPIC = 3
 	ITEM_RARITY_LEGENDARY = 4
 	
+	------------------------------
+	----[[ by Bruno | Storm ]]----
+	------------------------------
+	
+	-- Kashmir Quest
+	KASHMIR_TP_IN_SELF_POSITION		= { x=1118, y=1155, z=9 }
+	KASHMIR_TP_IN_DESTINATION		= { x=1118, y=1152, z=10 }
+	KASHMIR_TP_OUT_SELF_POSITION		= { x=1117, y=1153, z=10 }
+	KASHMIR_TP_OUT_DESTINATION		= { x=1116, y=1157, z=9 }
+	KASHMIR_GLOBE_POSITION			= { x=1117, y=1144, z=10 }
+	KASHMIR_ROOM_TOP_LEFT_POSITION		= { x=1110, y=1136, z=10 }
+	KASHMIR_ROOM_BOTTOM_RIGHT_POSITION	= { x=1124, y=1153, z=10 }
+	KASHMIR_ROOM_BLIND_FIELD_POSITION	= { x=1115, y=1135, z=10, stackpos=1 }
+	KASHMIR_TTIME				= { 10, 30 }
+	KASHMIR_LAST_TILE_POSITION		= { x=1077, y=1132, z=11, stackpos=253 }
+	
+	DEMONA_TP_DESTINATION			= { x=1439, y=1536, z=8 }
+	
+	------------------------------
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

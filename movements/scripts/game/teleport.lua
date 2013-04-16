@@ -20,7 +20,7 @@ function onStepIn(cid, item, position, fromPosition)
 		local town_id = item.actionid - 30100
 		
 		if(town_id == towns.ARACURA and not doPlayerIsPvpEnable(cid)) then
-			doPlayerSendCancel(cid, "Somente jogadores com PvP ativo podem viajar para estÃ¡ cidade.")
+			doPlayerSendCancel(cid, "Somente jogadores com PvP ativo podem viajar para está cidade.")
 			pushBack(cid, position, fromPosition)
 			return false
 		end
@@ -37,7 +37,17 @@ function onStepIn(cid, item, position, fromPosition)
 		return false
 	end
 	
-	if(item.actionid == sid.DEMONA_SHORTCUT_ACCESS and getPlayerStorageValue(cid, sid.DEMONA_SHORTCUT_ACCESS) == -1) then
+	if(item.actionid == aid.DEMONA_SHORTCUT_ACCESS_TP_IN) then
+		if getPlayerStorageValue(cid,sid.DEMONA_SHORTCUT_ACCESS) == 1 then
+			doTeleportThing(cid, DEMONA_TP_DESTINATION, TRUE)
+			doSendMagicEffect(DEMONA_TP_DESTINATION,CONST_ME_TELEPORT)
+		else
+			doPlayerSendTextMessage(cid, 22, "Você precisa enfrentar o labirinto pelo menos uma vez.")
+			doTeleportThing(cid, fromPosition, true)
+		end
+	end
+	
+	if(item.actionid == aid.DEMONA_SHORTCUT_ACCESS_TP_OUT and getPlayerStorageValue(cid, sid.DEMONA_SHORTCUT_ACCESS) == -1) then
 		setPlayerStorageValue(cid, sid.DEMONA_SHORTCUT_ACCESS, 1)
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Congratulations! Now that you have defeated the maze and know the way to the secret place of the arcane power you can go back to Demona through an shortcut before the maze!")
 	end

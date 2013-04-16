@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Eternal Guardian" nameDescription="a eternal guardian" race="blood" experience="1800" speed="420" manacost="0">
 <health now="2500" max="2500"/>
-<look type="345" corpse="11278"/>
+<look type="345" corpse="6040"/>
 <targetchange interval="2000" chance="5"/>
 <strategy attack="100" defense="0"/>
 <flags>

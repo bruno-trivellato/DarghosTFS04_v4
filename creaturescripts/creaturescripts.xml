@@ -36,4 +36,8 @@
 	<!-- DARGHOS SOURCE SCRIPTED EVENTS -->
 	
 	<event type="moveitem" name="onMoveItem" event="script" value="game/move_item.lua"/>
+	
+	<!-- Kashmir Quest -->
+	<event type="death" name="Azerus" event="script" value="game/azerus.lua"/>
+	
 </creaturescripts>

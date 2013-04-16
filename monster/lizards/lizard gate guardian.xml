@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Lizard Gate Guardian" nameDescription="a lizard gate guardian" race="blood" experience="2000" speed="420" manacost="0">
 <health now="2955" max="2955"/>
-<look type="343" corpse="11278"/>
+<look type="343" corpse="11284"/>
 <targetchange interval="5000" chance="8"/>
 <strategy attack="100" defense="0"/>
 <flags>

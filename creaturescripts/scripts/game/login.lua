@@ -153,11 +153,11 @@ function onLogin(cid)
 		if(uid.MM_BAG) then
 			addMapMarksByUids(cid, uid.MM_BAG, MAPMARK_BAG)
 		end
-		
+		--[[ debuga o client
 		if(uid.MM_SKULL) then
 			addMapMarksByUids(cid, uid.MM_SKULL, MAPMARK_SKULL)
 		end
-		
+		]]
 		if(uid.MM_DOLLAR) then
 			addMapMarksByUids(cid, uid.MM_DOLLAR, MAPMARK_DOLLAR)
 		end

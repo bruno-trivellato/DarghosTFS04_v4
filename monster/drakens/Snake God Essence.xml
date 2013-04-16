@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Snake God Essence" nameDescription="a Snake God Essence" race="venom" experience="900" speed="220" manacost="0">
 <health now="1300" max="1300"/>
-<look type="356" corpse="8593"/>
+<look type="356" corpse="8964"/>
 <targetchange interval="5000" chance="12"/>
 <strategy attack="100" defense="0"/>
 <flags>

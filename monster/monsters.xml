@@ -90,7 +90,7 @@
 	<monster name="Scorpion" file="aracnids/scorpion.xml"/>
 	<monster name="Spider" file="aracnids/spider.xml"/>
 	<monster name="Tarantula" file="aracnids/tarantula.xml"/>
-        <monster name="Giant Spoke" file="aracnids/giant spoke.xml"/>
+       <!--  <monster name="Giant Spoke" file="aracnids/giant spoke.xml"/> -->
         <monster name="Wailing Widow" file="aracnids/wailing widow.xml"/>
 
 	<!-- Northrend Arena -->
@@ -142,8 +142,7 @@
 	<monster name="Elder Beholder" file="beholders/elder beholder.xml"/>
 	<monster name="Gazer" file="beholders/gazer.xml"/>
 	<monster name="Eye of the seven" file="beholders/Eye of the seven.xml"/>
-	<monster name="Gran Brain" file="beholders/gran brain.xml"/>
-	<monster name="The Evil Eye" file="beholders/the evil eye.xml"/>
+	<!-- <monster name="Gran Brain" file="beholders/gran brain.xml"/> -->
 	
 	<!-- Birds -->
 	<monster name="Chicken" file="birds/chicken.xml"/>
@@ -372,6 +371,7 @@
 	<monster name="Lancer Beetle" file="insects/Lancer Beetle.xml"/>
 	<monster name="Terramite" file="insects/terramite.xml"/>
 	<monster name="Brimstone Bug" file="insects/Brimstone Bug.xml"/>
+	<monster name="Butterfly" file="insects/butterfly.xml"/>
 
 
 	<!-- Lizards -->
@@ -386,9 +386,9 @@
 	<monster name="Lizard Legionnaire" file="lizards/lizard legionnaire.xml"/>
 	<monster name="Lizard Zaogun" file="lizards/lizard zaogun.xml"/>
 	<monster name="Eternal Guardian" file="lizards/Eternal Guardian.xml"/>
-	<monster name="Lizard Gate Guardian" file="lizards/lizard gate guardian.xml"/>
-	<monster name="Lizard Magistratus" file="lizards/lizard magistratus.xml"/>
 	<monster name="Lizard Noble" file="lizards/lizard noble.xml"/>
+	<monster name="Lizard Magistratus" file="lizards/lizard magistratus.xml"/>
+	<monster name="Lizard Gate Guardian" file="lizards/lizard gate guardian.xml"/>
 
 
 	<!-- Machines -->
@@ -443,7 +443,7 @@
 	<monster name="Orc Warlord" file="orcs/orc warlord.xml"/>
 	<monster name="Orc Warrior" file="orcs/orc warrior.xml"/>
 	<monster name="Orc" file="orcs/orc.xml"/>
-	<monster name="Orc" file="Orc Marauder/Orc Marauder.xml"/>
+	<monster name="Orc Marauder" file="orcs/Orc Marauder.xml"/>
 
 	<!-- Outlaws -->
 	<monster name="Assassin" file="outlaws/assassin.xml"/>
@@ -657,12 +657,6 @@
 	<monster name="Zombie" file="undead humanoids/zombie.xml"/>
 	<monster name="Souleater" file="undead humanoids/souleater.xml"/>
 	<monster name="Undead Prospector" file="undead humanoids/undead prospector.xml"/>
-
-	<!-- Yalahari Quest -->
-	<monster name="Azerus" file="yalahari quest/Azerus.xml"/>
-	<monster name="Rift Brood" file="yalahari quest/rift brood.xml"/>
-	<monster name="Rift scythe" file="yalahari quest/Rift scythe.xml"/>
-	<monster name="rift worm" file="yalahari quest/rift worm.xml"/>
 	
 	<!-- Ariadne -->
 	<monster name="Thorn Citizen" file="ariadne/thorn citizen.xml"/>
@@ -698,4 +692,13 @@
 	<monster name="Lord Vankyner" file="darghos/lord vankyner.xml"/>
 	<monster name="Reborn Vampire" file="darghos/reborn_vampire.xml"/>
 	<monster name="Reborn Ghoul" file="darghos/reborn_ghoul.xml"/>
+	
+	<!-- Kashmir Quest -->
+	<monster name="Rift Brood" file="kashmir quest/rift brood.xml"/>
+	<monster name="Rift scythe" file="kashmir quest/Rift scythe.xml"/>
+	<monster name="rift worm" file="kashmir quest/rift worm.xml"/>
+	<monster name="Azerus" file="kashmir quest/azerus.xml"/> 
+   	<monster name="Azerus1" file="kashmir quest/azerus1.xml"/> 
+  	<monster name="Azerus2" file="kashmir quest/azerus2.xml"/> 
+   	<monster name="Azerus3" file="kashmir quest/azerus3.xml"/>
 </monsters>

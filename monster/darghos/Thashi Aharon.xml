@@ -121,22 +121,22 @@
     </item>
     <item id="2535" countmax="1" chance="4000">
       <!--casttle shield-->
-    </item>
-   <item id="1987" chance="100000">
-      <inside>
-    <item id="5922" countmax="4" chance="9000">
-      <!--holy orchid-->
-   </item>
-    <item id="2543" countmax="80" chance="10000">
-      <!--bolt-->
-    </item>
-    <item id="2547" countmax="75" chance="9000">
-      <!--power bolt-->
-    </item>
-    <item id="2547" countmax="75" chance="9000">
-      <!--power bolt-->
-    </item>
-
-
-  </loot>
+	</item>
+		<item id="1987" chance="100000">
+			<inside>
+				<item id="5922" countmax="4" chance="9000">
+				<!--holy orchid-->
+				</item>
+				<item id="2543" countmax="80" chance="10000">
+				<!--bolt-->
+				</item>
+				<item id="2547" countmax="75" chance="9000">
+				<!--power bolt-->
+				</item>
+				<item id="2547" countmax="75" chance="9000">
+				<!--power bolt-->
+				</item>
+			</inside>
+		</item>
+	</loot>
 </monster>

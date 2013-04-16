@@ -396,7 +396,16 @@
 		
 	-- 1900 ~ 1999 (green south)
 	--MM_GREEN_SOUTH = {}
-		
+	
+	------------------------------
+	----[[ by Bruno | Storm ]]----
+	------------------------------
+	
+	-- Kashmir Quest
+	KASHMIR_TP_IN			= 7501,
+	KASHMIR_TP_OUT			= 7502,
+	
+	------------------------------
 	
 	-- pvp systems
 	ARENA_TEAM_ONE_WALLS		= {3301, 3302},

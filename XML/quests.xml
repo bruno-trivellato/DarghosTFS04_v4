@@ -135,5 +135,11 @@
 			<missionstate id="0" description="Constantino lhe entregou um frasco com um liquido sagrado e quer que você vá ao lugar aonde nasce toda força demoniaca em Aaragon e derrame-o todo na fonte e volte a falar com ele." />
 			<missionstate id="1" description="Você derramou todo frasco com o liguido sagrado na fonte de toda força demoniaca, como recompensa Constantino lhe concedeu o 'demon hunter, 2o addon', acesso a sala ao norte e pode lhe abençoar." />
 		</mission>				
-	</quest>		
+	</quest>
+	<quest name="A Serviço de Kashmir" startstorageid="4125" startstoragevalue="0">
+		<mission name="Azerus e seu Exército" storageid="4125" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Você precisa derrotar Azerus e garantir que seu exército foi impedido de invadir o Darghos. Palimuth frisou a importância de checar o lugar para onde o mecanismo de Azerus vai te teleportar." />
+			<missionstate id="1" description="Você derrotou Azerus e garantiu que seu exército apodreça naquele lugar medonho! Agora pegue a recompensa na sala ao lado do palácio." />
+		</mission>
+	</quest>
 </quests>

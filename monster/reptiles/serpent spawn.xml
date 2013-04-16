@@ -94,7 +94,4 @@
 			</inside>
 		</item>
 	</loot>
-<script>
- <event name="KillingInTheNameOf"/>
-</script>
 </monster>

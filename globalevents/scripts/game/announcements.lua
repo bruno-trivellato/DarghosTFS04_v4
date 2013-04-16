@@ -6,7 +6,7 @@ end
 function autoBroadcast()
 
 	local messages = {
-		,{text = "Com o fim do Darghos você ja esta procurando um novo OTServ? Conheça o Prime OTServ! Um servidor com mapa global de grande qualidade! Confira! -> www.primeotserv.com", chance = 33}
+		{text = "Com o fim do Darghos você ja esta procurando um novo OTServ? Conheça o Prime OTServ! Um servidor com mapa global de grande qualidade! Confira! -> www.primeotserv.com", chance = 33}
 	}
 	
 	for k,v in pairs(messages) do

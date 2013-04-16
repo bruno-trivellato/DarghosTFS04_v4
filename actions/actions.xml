@@ -415,4 +415,13 @@
 	<action itemid="8110" event="script" value="other/present.lua"/>
 	<action itemid="7735" event="script" value="other/spellwand.lua"/>
 	<action itemid="7537" script="other/spideregg.lua" />
+	
+	<!--
+	by Bruno | Storm
+	-->
+	
+	<!-- Kashmir Quest -->
+	<action fromaid="7507" toaid="7508" event="script" value="game/kashmir.quest/doors.lua"/>
+	<action fromaid="7502" toaid="7503" event="script" value="game/kashmir.quest/azerus.lua"/>
+	<action fromaid="7504" toaid="7506" event="script" value="game/kashmir.quest/azeruschest.lua"/>
 </actions>

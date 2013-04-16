@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Lizard Chosen" nameDescription="a lizard chosen" race="blood" experience="2200" speed="240" manacost="0">
 <health now="3050" max="3050"/>
-<look type="344" corpse="11279"/>
+<look type="344" corpse="11288"/>
 <targetchange interval="5000" chance="8"/>
 <strategy attack="100" defense="0"/>
 <flags>

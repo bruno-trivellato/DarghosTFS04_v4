@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<movements>	
+<movements>
 
+	*Kashmir Quest
+	<movevent type="StepIn" itemid="9738" event="script" value="game/kashmir.quest/azerusdeath.lua"/>
+	<movevent type="StepIn" actionid="7501" event="script" value="game/kashmir.quest/azerusarmy.lua"/>
+	<movevent type="StepIn" fromuid="7501" touid="7502" event="script" value="game/kashmir.quest/tp_in_out.lua"/>
+	<movevent type="StepOut" fromaid="7507" toaid="7508" event="script" value="game/kashmir.quest/closingdoor.lua"/>
 	
 	*DEMON OAK
 	<movevent type="StepIn" actionid="4066" event="script" value="game/demon_oak.lua"/>
@@ -68,6 +73,7 @@
 	<movevent type="StepIn" itemid="1387" event="script" value="game/teleport.lua"/>
 	<movevent type="StepIn" itemid="1397" event="script" value="game/teleport.lua"/>
 	<movevent type="StepIn" actionid="30101-30110" event="script" value="game/teleport.lua"/>
+	<movevent type="StepIn" fromaid="7520" toaid="7521" event="script" value="game/teleport.lua"/>
 
 	<!-- Decaying tiles -->
 	<movevent type="StepIn" itemid="293" event="script" value="decay.lua"/>
@@ -561,10 +567,11 @@
 	<movevent type="Equip" itemid="2502" slot="head" event="function" value="onEquipItem"/>
 	<movevent type="DeEquip" itemid="2502" slot="head" event="function" value="onDeEquipItem"/>
 		<!-- Helmet of the Deep -->
+	<movevent type="DeEquip" itemid="12541" slot="head" event="function" value="onDeEquipItem"/>
 	<!--
+	wtf?
 	<movevent type="Equip" itemid="5461" slot="head" event="script" value="hotd.lua"/>
 	<movevent type="Equip" itemid="12541" slot="head" event="script" value="hotd.lua"/>
-	<movevent type="DeEquip" itemid="12541" slot="head" event="function" value="onDeEquipItem"/>
 	-->
 		<!-- Earmuffs -->
 	<movevent type="Equip" itemid="7459" slot="head" event="function" value="onEquipItem"/>

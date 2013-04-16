@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Lizard Dragon Priest" nameDescription="a lizard dragon priest" race="blood" experience="1200" speed="320" manacost="0">
 <health now="1450" max="1450"/>
-<look type="339" corpse="11271"/>
+<look type="339" corpse="11280"/>
 <targetchange interval="5000" chance="8"/>
 <strategy attack="100" defense="0"/>
 <flags>
@@ -49,7 +49,7 @@
 <item id="5876" countmax="1" chance="2000"/>
 <item id="2181" chance="3500"/>
 <item id="7590" chance="6000"/>
-<item id="11239" chance="7000"/>
+<item id="11245" chance="7000"/>
 
 <item id="1987" chance="100000">
 <inside>

@@ -39,6 +39,11 @@ function onStartup()
 	
 	db.executeQuery("UPDATE `player_storage` SET `value` = -1 WHERE `key` = '" .. sid.WEBSITE_POLL_NOTIFY .. "'")
 	
+	-- reseta Kashmir Quest Status (executando/ou não), caso o server "crashe" bem no meio da quest e o estado "ativado" fique salvo.
+	
+	doSetStorage(gid.KASHMIR_QUEST_RUNNING,-1)
+	print("[onStartup] Resetando Kashmir Quest")
+	
 	return true
 end
 

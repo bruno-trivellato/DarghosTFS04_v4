@@ -118,7 +118,7 @@
 		-- Dungeons (7400~7500)
 		DUNGEONS_DEMON_HELMET		= 7400,
 		DUNGEONS_ARIADNE_GHAZRAN	= 7401,
-		
+			
 
 		--@ POI LABIRINTO | Used small numbers for aids, because its better1!!
 		POI_MOVE_TP1			= 250,
@@ -134,6 +134,23 @@
 		
 		-- MINI GAME
 		MINI_GAME_TP		= 261,
-		MINI_GAME_TILE		= 262
+		MINI_GAME_TILE		= 262,
+		
+		------------------------------
+		----[[ by Bruno | Storm ]]----
+		------------------------------
+		
+		-- Kashmir Quest
+		KASHMIR_LAST_TILE		= 7501, 
+		KASHMIR_GLOBE_READY		= 7502,
+		KASHMIR_GLOBE_WAITING		= 7503,
+		KASHMIR_REWARD_CHEST_MASK	= 7504,
+		KASHMIR_REWARD_CHEST_ARMOR	= 7505,
+		KASHMIR_REWARD_CHEST_LEGS	= 7506,
+		KASHMIR_DOOR_1			= 7507,
+		KASHMIR_DOOR_2			= 7508,
+		
+		DEMONA_SHORTCUT_ACCESS_TP_IN	= 7520,
+		DEMONA_SHORTCUT_ACCESS_TP_OUT	= 7521,
 	
 	}
