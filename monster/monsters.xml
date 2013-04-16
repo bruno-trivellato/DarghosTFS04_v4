@@ -694,11 +694,11 @@
 	<monster name="Reborn Ghoul" file="darghos/reborn_ghoul.xml"/>
 	
 	<!-- Kashmir Quest -->
-	<monster name="Rift Brood" file="kashmir quest/rift brood.xml"/>
-	<monster name="Rift scythe" file="kashmir quest/Rift scythe.xml"/>
-	<monster name="rift worm" file="kashmir quest/rift worm.xml"/>
-	<monster name="Azerus" file="kashmir quest/azerus.xml"/> 
-   	<monster name="Azerus1" file="kashmir quest/azerus1.xml"/> 
-  	<monster name="Azerus2" file="kashmir quest/azerus2.xml"/> 
-   	<monster name="Azerus3" file="kashmir quest/azerus3.xml"/>
+	<monster name="Rift Brood" file="kashmir.quest/rift brood.xml"/>
+	<monster name="Rift scythe" file="kashmir.quest/rift scythe.xml"/>
+	<monster name="rift worm" file="kashmir.quest/rift worm.xml"/>
+	<monster name="Azerus" file="kashmir.quest/azerus.xml"/> 
+   	<monster name="Azerus1" file="kashmir.quest/azerus1.xml"/> 
+  	<monster name="Azerus2" file="kashmir.quest/azerus2.xml"/> 
+   	<monster name="Azerus3" file="kashmir.quest/azerus3.xml"/>
 </monsters>
