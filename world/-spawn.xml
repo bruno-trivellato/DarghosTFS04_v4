@@ -26563,7 +26563,6 @@
     <monster name="Ghost" x="0" y="-2" z="12" spawntime="60"/>
     <monster name="Rift Worm" x="2" y="-2" z="12" spawntime="60"/>
     <monster name="Rift Scythe" x="3" y="-2" z="12" spawntime="60"/>
-    <monster name="Zugurosh" x="6" y="-2" z="12" spawntime="60"/>
     <monster name="Rift Worm" x="8" y="-2" z="12" spawntime="60"/>
     <monster name="Ghost" x="6" y="-1" z="12" spawntime="60"/>
     <monster name="Rift Scythe" x="-7" y="0" z="12" spawntime="60"/>
@@ -26580,8 +26579,6 @@
     <monster name="Rift Worm" x="-5" y="3" z="12" spawntime="60"/>
     <monster name="Ghost" x="-3" y="3" z="12" spawntime="60"/>
     <monster name="Rift Worm" x="-1" y="3" z="12" spawntime="60"/>
-    <monster name="Zugurosh" x="7" y="3" z="12" spawntime="60"/>
-    <monster name="Zugurosh" x="-4" y="4" z="12" spawntime="60"/>
     <monster name="Rift Brood" x="-1" y="4" z="12" spawntime="60"/>
     <monster name="Rift Scythe" x="6" y="4" z="12" spawntime="60"/>
   </spawn>
