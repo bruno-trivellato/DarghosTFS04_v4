@@ -185,12 +185,12 @@ TOOLS.SHOVEL = function(cid, item, fromPosition, itemEx, toPosition)
 		doDecayItem(itemEx.uid)
 		return true
 	elseif(isInArray(SAND,itemEx.itemid) and not isRookie(cid)) then
-		local rand = math.random(1, 1000)
+		--[[local rand = math.random(1, 1000)
 		if(rand >= 10 and rand <= 20) then
 			doCreateItem(ITEM_SCARAB_COIN, 1, toPosition)
 		elseif(rand >= 990) then
 			doCreateMonster("Scarab", toPosition, false)
-		end
+		end]]
 
 		doSendMagicEffect(toPosition, CONST_ME_POFF)
 		return true
