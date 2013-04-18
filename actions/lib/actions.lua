@@ -167,7 +167,17 @@ TOOLS.MACHETE = function(cid, item, fromPosition, itemEx, toPosition, destroy)
 	return destroy and destroyItem(cid, itemEx, toPosition) or false
 end
 
+local exhaust = createConditionObject(CONDITION_EXHAUST)
+setConditionParam(exhaust, CONDITION_PARAM_TICKS, 1000)
+setConditionParam(exhaust, CONDITION_PARAM_SUBID, EXHAUST_OTHER)
+
 TOOLS.SHOVEL = function(cid, item, fromPosition, itemEx, toPosition)
+
+	if(hasCondition(cid, CONDITION_EXHAUST, EXHAUST_OTHER)) then
+		doPlayerSendDefaultCancel(cid, RETURNVALUE_YOUAREEXHAUSTED)
+		return true
+	end
+
 	if(isInArray(HOLES, itemEx.itemid)) then
 		if(itemEx.itemid ~= 8579) then
 			itemEx.itemid = itemEx.itemid + 1
@@ -177,22 +187,25 @@ TOOLS.SHOVEL = function(cid, item, fromPosition, itemEx, toPosition)
 
 		doTransformItem(itemEx.uid, itemEx.itemid)
 		doDecayItem(itemEx.uid)
+		doAddCondition(cid, exhaust)
 		return true
 	elseif(SAND_HOLES[itemEx.itemid] ~= nil) then
 		doSendMagicEffect(toPosition, CONST_ME_POFF)
 		doTransformItem(itemEx.uid, SAND_HOLES[itemEx.itemid])
 
 		doDecayItem(itemEx.uid)
+		doAddCondition(cid, exhaust)
 		return true
 	elseif(isInArray(SAND,itemEx.itemid) and not isRookie(cid)) then
-		--[[local rand = math.random(1, 1000)
-		if(rand >= 10 and rand <= 20) then
+		local rand = math.random(1, 100)
+		if(rand >= 1 and rand <= 5) then
 			doCreateItem(ITEM_SCARAB_COIN, 1, toPosition)
-		elseif(rand >= 990) then
+		elseif(rand > 85) then
 			doCreateMonster("Scarab", toPosition, false)
-		end]]
+		end
 
 		doSendMagicEffect(toPosition, CONST_ME_POFF)
+		doAddCondition(cid, exhaust)
 		return true
 	end
 
