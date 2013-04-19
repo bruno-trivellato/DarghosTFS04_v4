@@ -16,6 +16,8 @@
 	<!-- <event type="statschange" name="onLeaveChannel" event="script" value="game/onstatschange.lua"/> -->
 	
 	<event type="push" name="onPush" event="script" value="game/push.lua"/>
+	<event type="tradeaccept" name="onTradeAccept" event="script" value="game/trade.lua"/>
+	<event type="traderequest" name="onTradeRequest" event="script" value="game/trade.lua"/>
 	<event type="look" name="lookItem" event="script" value="game/look.lua"/>
 	<event type="login" name="CustomPlayerLogin" event="script" value="game/login.lua"/>
 	<event type="combat" name="CustomPlayerCombat" event="script" value="game/combat.lua"/>

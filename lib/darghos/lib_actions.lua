@@ -329,7 +329,12 @@ function premiumScroll.onUse(cid, item, frompos, item2, topos)
 	local log_id = getItemAttribute(item.uid, "itemShopLogId")
 	
 	if(not log_id or not doLogItemShopUse(cid, log_id)) then
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_SMALL, "The benefit of this item has already been provided. Issue reported.")
+	
+		local log_id = getItemAttribute(item.uid, "itemShopLogId") or 0
+		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Este item foi detectado como duplicado e ilegal e foi APAGADO do servidor.")
+		std.clog("[Warning - Item Destroyed] Duplicated itemid " .. item.itemid .. " from log shop id #" .. log_id .. " destroyed on try to use of " .. getPlayerName(cid) .. ".")
+		doRemoveItem(item.uid)
+		
 		return true
 	end
 	
