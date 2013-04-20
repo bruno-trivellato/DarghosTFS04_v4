@@ -109,6 +109,7 @@ end
 
 function onTradeRequest(cid, target, item)
 	
+	local foundItems = 0
 	if(not canTradeItem(item) --[[or not canTradeItem(targetItem)]]) then
 		foundItems = 1
 	end
