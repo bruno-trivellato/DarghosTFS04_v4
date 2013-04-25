@@ -623,6 +623,8 @@ class Game
         void emergencyDDoSLoop();
         uint32_t checkDDoS(RxPpsRecords& rxPpsRecords);
         int64_t getCurrentRxPackets();
+        int64_t getCurrentRxBytes();
+        int64_t getCurrentTxBytes();
         bool isUnderDDoS() { return m_underDDoS; }
 #endif
 		void addMagicEffect(const Position& pos, uint8_t effect, bool ghostMode = false);

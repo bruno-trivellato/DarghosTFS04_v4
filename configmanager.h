@@ -197,6 +197,8 @@ class ConfigManager
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
             DDOS_EMERGENCY_PPS_TO_ENABLE,
+            DDOS_EMERGENCY_RX_BPS_TO_ENABLE,
+            DDOS_EMERGENCY_TX_BPS_TO_ENABLE,			
             DDOS_EMERGENCY_MIN_TIME,
 #endif
 

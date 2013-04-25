@@ -340,6 +340,8 @@ bool ConfigManager::load()
 #ifdef __DARGHOS_EMERGENCY_DDOS__
     m_confString[DDOS_EMERGENCY_PUBLIC_INTERFACE] = getGlobalString("ddosEmergencyPublicIface", "eth1");
     m_confNumber[DDOS_EMERGENCY_PPS_TO_ENABLE] = getGlobalNumber("ddosEmergencyPpsToEnable", 120000);
+    m_confNumber[DDOS_EMERGENCY_RX_BPS_TO_ENABLE] = getGlobalNumber("ddosEmergencyRxBpsToEnable", 25000000);
+    m_confNumber[DDOS_EMERGENCY_TX_BPS_TO_ENABLE] = getGlobalNumber("ddosEmergencyTxBpsToEnable", 10000000);	
     m_confNumber[DDOS_EMERGENCY_MIN_TIME] = getGlobalNumber("ddosEmergencyMinTime", 30);
 #endif
 

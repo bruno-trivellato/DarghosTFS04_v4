@@ -1516,7 +1516,7 @@ bool Game::playerMoveItem(uint32_t playerId, const Position& fromPos,
 #ifdef __TFS_NEWEST_REVS_FIXIES__
 	if(ret == RET_NOERROR)
 	{
-		player->setNextAction(OTSYS_TIME() + g_config.getNumber(ConfigManager::ACTIONS_DELAY_INTERVAL) - 10);
+		player->setNextAction(OTSYS_TIME() + g_config.getNumber(ConfigManager::PUSH_CREATURE_DELAY) - 10);
 		return true;
 	}
 #else
@@ -4499,6 +4499,11 @@ bool Game::combatChangeHealth(CombatType_t combatType, Creature* attacker, Creat
 			return true;
 		}
 
+#ifdef __DARGHOS_CUSTOM__
+		if(attacker && target && (attacker->getMonster() && !attacker->isPlayerSummon()) && (target->getMonster() && !target->isPlayerSummon()))
+            return false;
+#endif
+
 		int32_t damage = -healthChange;
 		if(damage != 0)
 		{
@@ -6516,16 +6521,18 @@ void Game::emergencyDDoSLoop()
 
     uint32_t tick_interval = 1000;
 
-    RxPpsRecords rxPpsRecords;
+    RxPpsRecords rxPpsRecords, rxBpsRecords, txBpsRecords;
 
     uint64_t lastRxPackets = getCurrentRxPackets();
+	uint64_t lastRxBytes = getCurrentRxBytes();
+	uint64_t lastTxBytes = getCurrentTxBytes();
 
     bool loop = true;
 
     while(loop)
     {
+		//current PPS
         int64_t currentRxPackets = getCurrentRxPackets();
-
         int32_t currentPps = currentRxPackets - lastRxPackets;
 
         rxPpsRecords.push_front(currentPps);
@@ -6536,23 +6543,65 @@ void Game::emergencyDDoSLoop()
         }
 
         uint32_t avgPps = checkDDoS(rxPpsRecords);
+		
+		//current BPS rx
+		int64_t currentRxBytes = getCurrentRxBytes();
+		int32_t currentRxBps = currentRxBytes - lastRxBytes;
+		
+		rxBpsRecords.push_front(currentRxBps);
+		
+        if(rxBpsRecords.size() > 3)
+        {
+            rxBpsRecords.pop_back();
+        }
 
-        if(!m_underDDoS && avgPps >= g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE))
+        uint32_t avgRxBps = checkDDoS(rxBpsRecords);
+		
+		//current BPS tx
+		int64_t currentTxBytes = getCurrentTxBytes();
+		int32_t currentTxBps = currentTxBytes - lastTxBytes;
+		
+		txBpsRecords.push_front(currentTxBps);
+		
+        if(txBpsRecords.size() > 3)
+        {
+            txBpsRecords.pop_back();
+        }
+
+        uint32_t avgTxBps = checkDDoS(txBpsRecords);			
+
+		bool brokenPps, brokenRxBps, brokenTxBps;
+		brokenPps = brokenRxBps = brokenTxBps = false;
+		
+		if(avgPps >= g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE))
+			brokenPps = true;
+		if(avgRxBps >= g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE))
+			brokenRxBps = true;
+		if(avgTxBps >= g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE))
+			brokenTxBps = true;
+		
+        if(!m_underDDoS && (brokenPps || brokenRxBps || brokenTxBps))
         {
             //ok, we are under DDoS attacks
             m_underDDoS = true;
             m_lastDDoS = time(NULL);
-            std::clog << "[DDOS EMERGENCY] Current avarage RX packet per second " << avgPps << " is greater then limit " << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) << ". Emergency ENABLED." << std::endl;
-            broadcastMessage("Estamos tendo problemas de conex�o. Para evitar prejuizos, nenhuma morte receber� qualquer tipo de penalidade at� que nossa conex�o se normalize.", MSG_STATUS_WARNING);
+            std::clog << "[DDOS EMERGENCY] Emergency ENABLED." << std::endl;
+            std::clog << "RX PPS " << avgPps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) << ")." << std::endl;
+            std::clog << "RX BPS " << avgRxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE) << ")." << std::endl;
+            std::clog << "TX BPS " << avgTxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE) << ")." << std::endl;
+            broadcastMessage("The server are under connection issues. If you die you will not lost notthing for while.", MSG_STATUS_WARNING);
         }
-        else if(m_underDDoS && avgPps < g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) && time(NULL) >= m_lastDDoS + g_config.getNumber(ConfigManager::DDOS_EMERGENCY_MIN_TIME))
+        else if(m_underDDoS && !brokenPps && !brokenRxBps && !brokenTxBps && time(NULL) >= m_lastDDoS + g_config.getNumber(ConfigManager::DDOS_EMERGENCY_MIN_TIME))
         {
             m_underDDoS = false;
-            std::clog << "[DDOS EMERGENCY] Current avarage RX packet per second " << avgPps << " is fine. Emergency disabled." << std::endl;
-            broadcastMessage("Conex�o normalizada. Penalidades nas mortes agora est�o novamente validas. Obrigado pela sua compreens�o e bom jogo.", MSG_STATUS_WARNING);
-        }
-
+            std::clog << "[DDOS EMERGENCY] Emergency disabled." << std::endl;
+            broadcastMessage("Our connection is fine. Warning: If you die you will lost items and stats normally.", MSG_STATUS_WARNING);
+        }	
+		
         lastRxPackets = currentRxPackets;
+        lastRxBytes = currentRxBytes;
+        lastTxBytes = currentTxBytes;
+		
         boost::this_thread::sleep(boost::posix_time::milliseconds(tick_interval));
     }
 }
@@ -6587,10 +6636,58 @@ int64_t Game::getCurrentRxPackets()
     buffer = new char[length];
     handler.read(buffer, length);
 
-    int64_t rx_packets = std::atol(buffer);
+    int64_t value = std::atol(buffer);
     delete[] buffer;
 
-    return rx_packets;
+    return value;
+}
+
+/* RX = Download | TX = Upload */
+
+int64_t Game::getCurrentRxBytes()
+{
+    std::string rx_statistics_patch;
+    rx_statistics_patch = "/sys/class/net/" + g_config.getString(ConfigManager::DDOS_EMERGENCY_PUBLIC_INTERFACE) + "/statistics/rx_bytes";
+
+    std::ifstream handler;
+    handler.open(rx_statistics_patch.c_str(), std::ios::binary);
+
+    uint64_t length;
+    handler.seekg (0, std::ios::end);
+    length = handler.tellg();
+    handler.seekg (0, std::ios::beg);
+
+    char* buffer;
+    buffer = new char[length];
+    handler.read(buffer, length);
+
+    int64_t value = std::atol(buffer);
+    delete[] buffer;
+
+    return value;
+}
+
+int64_t Game::getCurrentTxBytes()
+{
+    std::string rx_statistics_patch;
+    rx_statistics_patch = "/sys/class/net/" + g_config.getString(ConfigManager::DDOS_EMERGENCY_PUBLIC_INTERFACE) + "/statistics/tx_bytes";
+
+    std::ifstream handler;
+    handler.open(rx_statistics_patch.c_str(), std::ios::binary);
+
+    uint64_t length;
+    handler.seekg (0, std::ios::end);
+    length = handler.tellg();
+    handler.seekg (0, std::ios::beg);
+
+    char* buffer;
+    buffer = new char[length];
+    handler.read(buffer, length);
+
+    int64_t value = std::atol(buffer);
+    delete[] buffer;
+
+    return value;
 }
 #endif
 
