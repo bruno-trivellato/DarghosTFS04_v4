@@ -374,8 +374,11 @@ bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLo
 	<< "`lookfeet`, `lookhead`, `looklegs`, `looktype`, `lookaddons`, `posx`, `posy`, `posz`, `cap`, "
 	<< "`lastlogin`, `lastlogout`, `lastip`, `conditions`, `skull`, `skulltime`, `guildnick`, `rank_id`, "
 	<< "`town_id`, `balance`, `stamina`, `direction`, `loss_experience`, `loss_mana`, `loss_skills`, "
+#ifdef __DARGHOS_CUSTOM__
+	<< "`pvpEnabled`, "
 #ifdef __DARGHOS_PVP_SYSTEM__
     << "`battleground_rating`, "
+#endif
 #endif
 	<< "`loss_containers`, `loss_items`, `marriage`, `promotion`, `description` FROM `players` WHERE "
 	<< "`name` " << db->getStringComparer() << db->escapeString(name) << " AND `world_id` = "
@@ -440,8 +443,11 @@ bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLo
 	uint64_t conditionsSize = 0;
 	const char* conditions = result->getDataStream("conditions", conditionsSize);
 
+#ifdef __DARGHOS_CUSTOM__
+	player->pvpStatus = (bool)result->getDataInt("pvpEnabled");
 #ifdef __DARGHOS_PVP_SYSTEM__
 	player->battlegroundRating = result->getDataInt("battleground_rating");
+#endif
 #endif
 
 	PropStream propStream;
@@ -924,8 +930,11 @@ bool IOLoginData::savePlayer(Player* player, DBInsert& query_insert, bool preSav
 		query << "`rank_id` = " << IOGuild::getInstance()->getRankIdByLevel(player->getGuildId(), player->getGuildLevel()) << ", ";
 	}
 
+#ifdef __DARGHOS_CUSTOM__
+	query << "`pvpEnabled` = " << (player->pvpStatus ? 1 : 0) << ", ";
 #ifdef __DARGHOS_PVP__
 	query << "`battleground_rating` = " << player->battlegroundRating << ", ";
+#endif
 #endif
 
 	Vocation* tmpVoc = player->vocation;

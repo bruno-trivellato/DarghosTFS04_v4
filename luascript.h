@@ -728,6 +728,9 @@ class LuaInterface
 		static int32_t luaDoSayInPosition(lua_State* L);
 		static int32_t luaWordsIsSpell(lua_State* L);
 		static int32_t luaGetHouseAccessLevel(lua_State* L);
+		static int32_t luaDoPlayerEnablePvp(lua_State* L);
+		static int32_t luaDoPlayerDisablePvp(lua_State* L);
+		static int32_t luaDoPlayerIsPvpEnable(lua_State* L);
 		static int32_t luaGetPlayerCurrentPing(lua_State* L);
 		static int32_t luaSpawnCreaturesByName(lua_State* L);
 		#endif

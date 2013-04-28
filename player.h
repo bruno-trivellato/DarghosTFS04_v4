@@ -240,6 +240,8 @@ class Player : public Creature, public Cylinder
 		bool hasPvpBlessing() const;
 		void removePvpBlessing();
 		void removeBlessing(int16_t value);
+		void setPvpStatus(bool status) { pvpStatus = status; }
+		bool isPvpEnabled() const { return pvpStatus; }
 #endif
 
 		uint16_t getBlessings() const;
@@ -906,6 +908,10 @@ class Player : public Creature, public Cylinder
 
 #ifdef __DARGHOS_IGNORE_AFK__
         bool isAfk;
+#endif
+
+#ifdef __DARGHOS_CUSTOM__
+		bool pvpStatus;
 #endif
 
 #ifdef __DARGHOS_PVP_SYSTEM__

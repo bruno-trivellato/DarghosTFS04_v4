@@ -308,7 +308,12 @@ ReturnValue Combat::canDoCombat(const Creature* attacker, const Creature* target
 				checkZones = true;
 				if(g_game.getWorldType() == WORLDTYPE_OPTIONAL && !Combat::isInPvpZone(attacker, target)
 					&& !attackerPlayer->isEnemy(target->getPlayerMaster(), true))
-					return RET_YOUMAYNOTATTACKTHISCREATURE;			
+					return RET_YOUMAYNOTATTACKTHISCREATURE;		
+
+#ifdef __DARGHOS_CUSTOM__
+                if(!attackerPlayer->isPvpEnabled() && !Combat::isInPvpZone(attacker, target))
+                    return RET_YOUMAYNOTATTACKTHISCREATURE;
+#endif	
 			}
 		}
 	}
@@ -390,6 +395,11 @@ bool Combat::isProtected(Player* attacker, Player* target)
 	uint32_t protectionLevel = g_config.getNumber(ConfigManager::PROTECTION_LEVEL);
 	if(target->getLevel() < protectionLevel || attacker->getLevel() < protectionLevel)
 		return true;
+
+#ifdef __DARGHOS_CUSTOM__
+	if(!target->isPvpEnabled() || !attacker->isPvpEnabled())
+		return true;
+#endif
 
 #ifdef __DARGHOS_PVP_SYSTEM__
     if(attacker->isInBattleground() && attacker->getBattlegroundTeam() == target->getBattlegroundTeam())
@@ -654,7 +664,11 @@ void Combat::combatTileEffects(const SpectatorVec& list, Creature* caster, Tile*
 		{
 			bool pzLock = false;
 			if((g_game.getWorldType() == WORLDTYPE_OPTIONAL && !tile->hasFlag(
+#ifdef __DARGHOS_CUSTOM__
+				TILESTATE_HARDCOREZONE)) || tile->hasFlag(TILESTATE_OPTIONALZONE) || (!player->isPvpEnabled() && !tile->hasFlag(TILESTATE_HARDCOREZONE)))
+#else
 				TILESTATE_HARDCOREZONE)) || tile->hasFlag(TILESTATE_OPTIONALZONE))
+#endif
 			{
 				switch(itemId)
 				{

@@ -2514,6 +2514,15 @@ void LuaInterface::registerFunctions()
 	//getHouseAccessLevel(house_id, cid)
 	lua_register(m_luaState, "getHouseAccessLevel", LuaInterface::luaGetHouseAccessLevel);
 
+	//doPlayerEnablePvp(cid)
+	lua_register(m_luaState, "doPlayerEnablePvp", LuaInterface::luaDoPlayerEnablePvp);
+
+	//doPlayerDisablePvp(cid)
+	lua_register(m_luaState, "doPlayerDisablePvp", LuaInterface::luaDoPlayerDisablePvp);
+
+	//doPlayerIsPvpEnable(cid)
+	lua_register(m_luaState, "doPlayerIsPvpEnable", LuaInterface::luaDoPlayerIsPvpEnable);
+
     //getPlayerCurrentPing(cid)
     lua_register(m_luaState, "getPlayerCurrentPing", LuaInterface::luaGetPlayerCurrentPing);
 
@@ -10573,6 +10582,59 @@ int32_t LuaInterface::luaGetHouseAccessLevel(lua_State* L)
 	{
 		errorEx(getError(LUA_ERROR_HOUSE_NOT_FOUND));
 		lua_pushnil(L);
+	}
+
+	return 1;
+}
+
+int32_t LuaInterface::luaDoPlayerEnablePvp(lua_State* L)
+{
+	//doPlayerEnablePvp(cid)
+	ScriptEnviroment* env = getEnv();
+	if(Player* player = env->getPlayerByUID(popNumber(L)))
+	{
+		player->setPvpStatus(true);
+		lua_pushboolean(L, true);
+	}
+	else
+	{
+		errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
+		lua_pushboolean(L, false);
+	}
+
+	return 1;
+}
+
+int32_t LuaInterface::luaDoPlayerDisablePvp(lua_State* L)
+{
+	//doPlayerDisablePvp(cid)
+	ScriptEnviroment* env = getEnv();
+	if(Player* player = env->getPlayerByUID(popNumber(L)))
+	{
+		player->setPvpStatus(false);
+		lua_pushboolean(L, true);
+	}
+	else
+	{
+		errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
+		lua_pushboolean(L, false);
+	}
+
+	return 1;
+}
+
+int32_t LuaInterface::luaDoPlayerIsPvpEnable(lua_State* L)
+{
+	//doPlayerIsPvpEnable(cid)
+	ScriptEnviroment* env = getEnv();
+	if(Player* player = env->getPlayerByUID(popNumber(L)))
+	{
+		lua_pushboolean(L, player->isPvpEnabled());
+	}
+	else
+	{
+		errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
+		lua_pushboolean(L, false);
 	}
 
 	return 1;

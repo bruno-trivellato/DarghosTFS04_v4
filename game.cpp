@@ -1191,6 +1191,16 @@ bool Game::playerMoveCreature(uint32_t playerId, uint32_t movingCreatureId,
 			}
 
 			uint32_t protectionLevel = g_config.getNumber(ConfigManager::PROTECTION_LEVEL);
+
+#ifdef __DARGHOS_CUSTOM__
+			if((toTile->ground && !Item::items[toTile->ground->getID()].walkStack)
+               || (movingCreature->getTile() && movingCreature->getTile()->ground && !Item::items[movingCreature->getTile()->ground->getID()].walkStack))
+            {
+				player->sendCancelMessage(RET_NOTPOSSIBLE);
+				return false;
+            }
+#endif
+
 			if(player->getLevel() < protectionLevel && player->getVocation()->isAttackable())
 			{
                 Player* movingPlayer = movingCreature->getPlayer();
@@ -4462,6 +4472,23 @@ bool Game::combatChangeHealth(CombatType_t combatType, Creature* attacker, Creat
 		    //nenhum player pode healar monstros mais...
 		    if(!g_config.getBool(ConfigManager::PLAYERS_CAN_HEAL_MONSTERS) && target->getMonster() && !target->isPlayerSummon())
                 return false;
+
+			Player* p_target = NULL;
+			if(!(p_target = target->getPlayer()))
+			{
+			    if(target->isPlayerSummon())
+                    p_target = target->getPlayerMaster();
+			}
+
+			//o target é um player, ou um summon de um player e com pvp ativo, está em area de pvp aberto, e não é ele mesmo
+			//ou está na Battleground, e o target é um inimigo
+			if(p_target
+                && ((p_attacker->getZone() == ZONE_OPEN && !p_attacker->isPvpEnabled() && p_target->isPvpEnabled() && p_target != p_attacker)
+				|| (!p_attacker->isPvpEnabled() && p_target->isPvpEnabled() && p_target->getZone() == ZONE_OPEN && p_target != p_attacker))
+            )
+			{
+				return false;
+			}
 		}
 #endif
 
