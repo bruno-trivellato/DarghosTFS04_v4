@@ -33,11 +33,9 @@
 	<talkaction log="yes" access="5" words="/mode" channel="65534" event="script" value="mode.lua"/>
 
 	<!-- Community Managers -->
-	<talkaction log="yes" words="/s" channel="65534" access="4" event="script" value="summon.lua"/>
 	<talkaction log="yes" words="/n" channel="65534" access="4" event="script" value="creature.lua"/>
 	<talkaction log="yes" words="/m" channel="65534" access="4" event="script" value="creature.lua"/>
 	<talkaction log="yes" words="/reload" channel="65534" access="4" event="script" value="reload.lua"/>
-	<talkaction log="yes" words="/raid" channel="65534" access="4" event="script" value="raid.lua"/>
 	<talkaction log="yes" words="/newtype;/o" channel="65534" access="4" event="script" value="newtype.lua"/>
 	<talkaction log="yes" words="/r" channel="65534" access="4" event="script" value="remove.lua"/>
 	<talkaction log="yes" words="/owner" channel="65534" access="4" event="script" value="owner.lua"/>
@@ -68,6 +66,8 @@
 	<talkaction log="yes" words="/mc" channel="65534" access="3" event="script" value="multicheck.lua"/>
 	<talkaction log="yes" words="/mute" channel="65534" access="3" event="script" value="mute.lua"/>
 	<talkaction log="yes" access="3" words="/wp" channel="65534" event="script" value="waypoints.lua"/>
+	<talkaction log="yes" words="/raid" channel="65534" access="3" event="script" value="raid.lua"/>
+	<talkaction log="yes" words="/s" channel="65534" access="3" event="script" value="summon.lua"/>
 
 	<!-- Senior Tutors -->
 	<talkaction log="yes" words="/notations" access="2" channel="65534" event="script" value="notations.lua"/>

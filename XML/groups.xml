@@ -84,7 +84,7 @@
 	<group id="2" name="Non-PvP Player" flags="2" customFlags="16779264"/>
 	<group id="3" name="Tutor" flags="17867080728576" customFlags="2" access="1"/>
 	<group id="4" name="Senior Tutor" flags="68736352256" customFlags="14" access="2" violationReasons="10" nameViolationFlags="2" statementViolationFlags="63" maxVips="200"/>
-	<group id="5" name="Gamemaster" flags="21400745013087" customFlags="50588735" access="3" violationReasons="19" nameViolationFlags="10" statementViolationFlags="69" depotLimit="3000" maxVips="300" outfit="75"/>
+	<group id="5" name="Gamemaster" flags="21400744996703" customFlags="50588735" access="3" violationReasons="19" nameViolationFlags="10" statementViolationFlags="69" depotLimit="3000" maxVips="300" outfit="75"/>
 	<group id="6" name="Community Manager" flags="21432960397306" customFlags="51113343" access="4" violationReasons="23" nameViolationFlags="42" statementViolationFlags="213" depotLimit="4000" maxVips="400" outfit="266"/>
 	<group id="7" name="Administrator" flags="21437255364603" customFlags="100662655" access="5" violationReasons="23" nameViolationFlags="426" statementViolationFlags="469" depotLimit="5000" maxVips="500" outfit="302"/>
 	<group id="8" name="Player" customFlags="67111936"/>
