@@ -206,8 +206,8 @@ function boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
 				return false	
 			end
 		elseif(darghos_world_configuration == WORLD_CONF_AGRESSIVE_ONLY) then
-			npcHandler:say('Quendor é uma maravilhosa cidade! Mais saiba que por lá e por todo o resto do mundo do Darghos o seu PvP e de todos outras é sempre ativo, assim você poderá  <...>', cid)
-			npcHandler:say('atacar e ser atacado por outras pessoas... Também esteja ciente que uma vez abandonando esta ilha você se tornará cidadão de Quendor não será mais possivel retornar <...>', cid)
+			npcHandler:say('Quendor é uma maravilhosa cidade! Mais saiba que por lá e por todo o resto do mundo do Darghos não é um local seguro, assim você poderá  <...>', cid)
+			npcHandler:say('atacar e ser atacado por outras pessoas... Também esteja ciente que uma vez abandonando esta ilha você se tornará cidadão de Quendor e não será mais possivel retornar <...>', cid)
 			npcHandler:say('E então, deseja mesmo embarcar para Quendor?', cid)		
 		end
 		

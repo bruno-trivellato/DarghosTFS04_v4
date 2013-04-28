@@ -73,7 +73,8 @@ stages = {
 	[STAGES_EXP_PROTECTED] = {
 		{end_level = 39, multipler = 50}, 
 		{start_level = 40, end_level = 79, multipler = 20}, 
-		{start_level = 80, multipler = 1},
+		{start_level = 80, end_level = 99, multipler = 5},
+		{start_level = 100, multipler = 1},
 	},	
 }
 
@@ -175,8 +176,6 @@ function changeStage(cid, skilltype, multiple)
 				expSpecialBonus = darghos_kill_dark_general_exp_bonus_percent
 			end
 		end	
-		
-		
 		
 		local expSpecialBonusEnd = getPlayerStorageValue(cid, sid.EXP_MOD_ESPECIAL_END)
 		
