@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Durin" nameDescription="The King of Dwarfs" race="blood" experience="100000" speed="700" manacost="650">
-  <health now="60000" max="60000"/>
+<monster name="Durin" nameDescription="The King of Dwarfs" race="blood" experience="3500000" speed="700" manacost="650">
+  <health now="150000" max="150000"/>
   <look type="70" head="20" body="30" legs="40" feet="50" corpse="6013"/>
   <targetchange interval="2000" chance="8"/>
   <strategy attack="100" defense="0"/>
@@ -18,14 +18,14 @@
     <flag runonhealth="400"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="1000" min="-300" max="-800"/>
-    <attack name="melee" interval="2000" chance="90" range="7" radius="3" target="0" min="-100" max="-300">
+    <attack name="melee" interval="1000" min="-300" max="-1000"/>
+    <attack name="melee" interval="2000" chance="90" range="7" radius="3" target="0" min="-150" max="-900">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack name="melee" interval="2000" chance="95" range="7" radius="5" target="0" min="-100" max="-300">
+    <attack name="melee" interval="2000" chance="95" range="7" radius="5" target="0" min="-230" max="-700">
       <attribute key="areaEffect" value="groundshaker"/>
     </attack>
-    <attack name="melee" interval="2000" chance="90" range="7" target="1" min="-100" max="-150">
+    <attack name="melee" interval="2000" chance="90" range="7" target="1" min="-170" max="-800">
       <attribute key="shootEffect" value="whirlwindclub"/>
     </attack>
   </attacks>
@@ -78,11 +78,53 @@
         <item id="2513" chance="6666">
           <!--battle shield-->
         </item>
-        <item id="2415" countmax="1" chance="6000">
+        <item id="2415" countmax="1" chance="2000">
           <!--great axe-->
         </item>
         <item id="2208" chance="6000">
           <!--axe ring-->
+        </item>
+        <item id="2472" chance="5000">
+          <!--magic plate armor-->
+        </item>
+        <item id="2470" chance="15000">
+          <!--golden legs-->
+        </item>
+        <item id="2520" chance="30000">
+          <!--demon shield-->
+        </item>
+        <item id="2514" chance="9000">
+          <!--mastermind shield-->
+        </item>
+        <item id="2502" chance="6000">
+          <!--dwarven helmet-->
+        </item>
+        <item id="2504" chance="6000">
+          <!--dwarven legs-->
+        </item>
+        <item id="2503" chance="6000">
+          <!--dwarven armor-->
+        </item>
+        <item id="8930" chance="15590">
+          <!--esmerald sword-->
+        </item>
+        <item id="8928" chance="17330">
+          <!--obsidian truncheon-->
+        </item>
+        <item id="8877" chance="3000">
+          <!--lavos armor-->
+        </item>
+        <item id="6528" chance="20000">
+          <!--avenger-->
+        </item>
+        <item id="5803" chance="15000">
+          <!--arbalest-->
+        </item>
+        <item id="2474" chance="1600">
+          <!--winged helmet-->
+        </item>
+        <item id="5880" countmax="100" chance1="100000" chancemax="0">
+          <!--iron ore-->
         </item>
       </inside>
       <!--backpack-->
