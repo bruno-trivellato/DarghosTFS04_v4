@@ -19,34 +19,34 @@
   </flags>
   <attacks>
     <attack name="melee" interval="2000" min="-390" max="-960"/>
-    <attack name="manadrain" interval="2000" chance="20" range="7" min="-900" max="-2000">
+    <attack name="manadrain" interval="2000" chance="20" range="7" min="-100" max="-900">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="poison" interval="3000" chance="20" radius="6" target="0" min="-1150" max="-1850">
+    <attack name="poison" interval="3000" chance="20" radius="6" target="0" min="-150" max="-850">
       <attribute key="areaEffect" value="poison"/>
     </attack>
-    <attack name="energy" interval="2000" chance="18" radius="6" target="0" min="-700" max="-1100">
+    <attack name="energy" interval="2000" chance="18" radius="6" target="0" min="-300" max="-800">
       <attribute key="areaEffect" value="energy"/>
     </attack>
-    <attack name="manadrain" interval="2000" chance="16" radius="6" target="0" min="-1125" max="-1475">
+    <attack name="manadrain" interval="2000" chance="16" radius="6" target="0" min="-125" max="-475">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="lifedrain" interval="2000" chance="21" radius="6" target="0" min="-700" max="-1400">
+    <attack name="lifedrain" interval="2000" chance="21" radius="6" target="0" min="-170" max="-700">
       <attribute key="areaEffect" value="poff"/>
     </attack>
-    <attack name="strength" interval="3000" chance="20" radius="5" target="0" min="-900" max="-1380">
+    <attack name="strength" interval="3000" chance="20" radius="5" target="0" min="-700" max="-1380">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack name="firecondition" interval="3000" chance="20" range="7" radius="7" target="1" min="-200" max="-1500">
+    <attack name="firecondition" interval="3000" chance="20" range="7" radius="7" target="1" min="-200" max="-1100">
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
     </attack>
-    <attack name="lifedrain" interval="2000" chance="25" length="8" spread="0" min="-50" max="-900">
+    <attack name="lifedrain" interval="2000" chance="25" length="8" spread="0" min="-50" max="-750">
       <attribute key="areaEffect" value="greenspark"/>
     </attack>
   </attacks>
   <defenses armor="100" defense="120">
-    <defense name="healing" interval="2000" chance="40" min="25000" max="30000">
+    <defense name="healing" interval="2000" chance="40" min="10000" max="15000">
       <attribute key="areaEffect" value="greenshimmer"/>
     </defense>
     <defense name="speed" interval="3000" chance="30" speedchange="960" duration="15000">
@@ -68,7 +68,7 @@
     <immunity invisible="1"/>
   </immunities>
   <summons maxSummons="2">
-    <summon name="behemoth king" interval="3000" chance="50" max="2"/>
+    <summon name="ferumbras" interval="3000" chance="50" max="2"/>
   </summons>
   <voices interval="5000" chance="20">
     <voice sentence="FERUMBRAS IS JUST A KID!" yell="1"/>
