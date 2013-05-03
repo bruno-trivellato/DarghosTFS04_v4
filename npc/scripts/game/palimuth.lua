@@ -73,16 +73,36 @@ function creatureSayCallback(cid, type, msg)
 		return false
 	elseif tellingAStory == 0 then
 		if  talkState[cid] == 0 then
-			if msgcontains(msg, {'mission', 'missao', 'missão'}) then
+			if msgcontains(msg, {'mission', 'missao', 'missão', 'ajuda'}) then
 				if getPlayerStorageValue(cid, sid.KASHMIR_QUEST_PROGRESS) == -1 then
 					npcMessagesWithDelay(cid, messagesTable.mission_firstTalk, 4000, 1, {id=sid.KASHMIR_QUEST_PROGRESS})
 				elseif getPlayerStorageValue(cid, sid.KASHMIR_QUEST_PROGRESS) == 0 then
 					selfSay("Já lhe dei permissão para acessar a sala. Vá e impeça-o enquanto há tempo!", cid)
 					talkState[cid] = 0
-				elseif getPlayerStorageValue(cid, sid.KASHMIR_QUEST_PROGRESS) == 1 then
-					selfSay("Você salvou Kashmir! Seremos eternamente gratos!", cid)
+				elseif getPlayerStorageValue(cid, sid.KASHMIR_QUEST_PROGRESS) >= 1 then
+					if canPlayerWearOutfitId(cid, 21) then
+						selfSay("Não tenho palavras para agradecer, mas posso lhe dar mais uma recompensa: uma {vestimenta} digna de um cidadão de Kashmir!", cid)
+					else
+						selfSay("Você salvou Kashmir! Seremos eternamente gratos!", cid)
+					end
 					talkState[cid] = 0
 				end
+			elseif msgcontains(msg, {'outfit', 'outfits', 'vestimenta', 'vestes'}) then
+				if getPlayerStorageValue(cid, sid.KASHMIR_QUEST_PROGRESS) >= 1 then 
+					if getPlayerStorageValue(cid, sid.KASHMIR_QUEST_OUTFIT) ~= 1 then
+						selfSay("Aqui está! Para que se lembre que Kashmir sempre lembrará da sua bravura.", cid)
+						doPlayerAddOutfitId(cid, 21, 3)
+						setPlayerStorageValue(cid, sid.KASHMIR_QUEST_OUTFIT, 1)
+					else
+						selfSay("Você já possui as vestes de Kashmir! Use-as com orgulho!", cid)
+					end
+				elseif getPlayerStorageValue(cid, sid.KASHMIR_QUEST_PROGRESS) < 1 then
+					selfSay("Você não merece essa recompensa... Mas Kashmir precisa de {ajuda}, se você se juntar a nossa causa talvez eu mude de ideia.", cid)
+				end
+				talkState[cid] = 0
+			elseif msgcontains(msg, {'addon'}) then
+				selfSay("Não sei nada sobre addons... mas posso lhe dar como recompensa {vestes} especiais.", cid)
+				talkState[cid] = 0
 			end
 		elseif talkState[cid] == 1 then
 			if msgcontains(msg, {'yes', 'sim'}) then
