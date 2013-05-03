@@ -68,6 +68,7 @@
 		<raid name="high_inquisitor" file="bosses/high_inquisitor.xml" interval2="9999999" margin="0"/>
 		<raid name="durin" file="bosses/durin.xml" interval2="9999999" margin="0"/>
 		<raid name="behemoth_king" file="bosses/behemoth_king.xml" interval2="9999999" margin="0"/>
+		<raid name="onyxia" file="bosses/onyxia.xml" interval2="9999999" margin="0"/>
 		
 		-- POI BOSSES
 		<raid name="poi_dracola" file="bosses/poi_dracola.xml" interval2="7200" margin="0"/>

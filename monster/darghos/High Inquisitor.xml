@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="High Inquisitor" nameDescription="monk" race="VENOM" experience="100000" speed="320" manacost="0">
+<monster name="High Inquisitor" nameDescription="monk" race="VENOM" experience="5000000" speed="680" manacost="0">
   <health now="500000" max="500000"/>
   <look type="9" head="100" body="150" legs="10" feet="150" corpse="3058"/>
   <targetchange interval="5000" chance="8"/>
@@ -18,41 +18,41 @@
     <flag runonhealth="2500"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" min="-100" max="-350"/>
-    <attack name="manadrain" interval="2000" chance="20" range="7" min="-600" max="-1000">
+    <attack name="melee" interval="2000" min="-390" max="-960"/>
+    <attack name="manadrain" interval="2000" chance="20" range="7" min="-100" max="-900">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="poison" interval="3000" chance="20" radius="6" target="0" min="-550" max="-750">
+    <attack name="poison" interval="3000" chance="20" radius="6" target="0" min="-150" max="-850">
       <attribute key="areaEffect" value="poison"/>
     </attack>
-    <attack name="energy" interval="2000" chance="18" radius="6" target="0" min="-400" max="-600">
+    <attack name="energy" interval="2000" chance="18" radius="6" target="0" min="-300" max="-800">
       <attribute key="areaEffect" value="energy"/>
     </attack>
-    <attack name="manadrain" interval="2000" chance="16" radius="6" target="0" min="-225" max="-1075">
+    <attack name="manadrain" interval="2000" chance="16" radius="6" target="0" min="-125" max="-475">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="lifedrain" interval="2000" chance="21" radius="6" target="0" min="-200" max="-1050">
+    <attack name="lifedrain" interval="2000" chance="21" radius="6" target="0" min="-170" max="-700">
       <attribute key="areaEffect" value="poff"/>
     </attack>
-    <attack name="strength" interval="3000" chance="20" radius="5" target="0" min="-200" max="-800">
+    <attack name="strength" interval="3000" chance="20" radius="5" target="0" min="-700" max="-1380">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack name="firecondition" interval="3000" chance="20" range="7" radius="7" target="1" min="-200" max="-800">
+    <attack name="firecondition" interval="3000" chance="20" range="7" radius="7" target="1" min="-200" max="-1100">
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
     </attack>
-    <attack name="lifedrain" interval="2000" chance="25" length="8" spread="0" min="-50" max="-250">
+    <attack name="lifedrain" interval="2000" chance="25" length="8" spread="0" min="-50" max="-750">
       <attribute key="areaEffect" value="greenspark"/>
     </attack>
   </attacks>
   <defenses armor="100" defense="120">
-    <defense name="healing" interval="2000" chance="10" min="900" max="1500">
+    <defense name="healing" interval="2000" chance="40" min="10000" max="15000">
       <attribute key="areaEffect" value="greenshimmer"/>
     </defense>
-    <defense name="speed" interval="3000" chance="30" speedchange="360" duration="7000">
+    <defense name="speed" interval="3000" chance="30" speedchange="960" duration="15000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
-    <defense name="invisible" interval="4000" chance="20" duration="5000">
+    <defense name="invisible" interval="4000" chance="20" duration="30000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>
@@ -67,8 +67,8 @@
     <immunity drunk="1"/>
     <immunity invisible="1"/>
   </immunities>
-  <summons maxSummons="1">
-    <summon name="behemoth king" interval="3000" chance="50" max="3"/>
+  <summons maxSummons="2">
+    <summon name="ferumbras" interval="3000" chance="50" max="2"/>
   </summons>
   <voices interval="5000" chance="20">
     <voice sentence="FERUMBRAS IS JUST A KID!" yell="1"/>
@@ -86,43 +86,31 @@
     <item id="2148" countmax="25" chance1="100000" chancemax="0">
       <!--gold coin-->
     </item>
-    <item id="2421" chance="1000">
-      <!--thunder hammer-->
-    </item>
-    <item id="2471" chance="1000">
-      <!--golden helmet-->
-    </item>
-    <item id="2493" chance="1000">
-      <!--demon helmet-->
-    </item>
-    <item id="2195" chance="1000">
+    <item id="2195" chance="20000">
       <!--boots of haste-->
     </item>
-    <item id="2195" chance="1000">
+    <item id="2195" chance="19000">
       <!--boots of haste-->
     </item>
-    <item id="2656" chance="1000">
+    <item id="2656" chance="28000">
       <!--blue robe-->
     </item>
-    <item id="2656" chance="1000">
+    <item id="2656" chance="28000">
       <!--blue robe-->
     </item>
-    <item id="2488" chance="1500">
+    <item id="2488" chance="12000">
       <!--crown legs-->
     </item>
-    <item id="2491" chance="34700">
+    <item id="2491" chance="12000">
       <!--crown helmet-->
     </item>
-    <item id="2488" chance="34700">
+    <item id="2488" chance="12000">
       <!--crown legs-->
     </item>
-    <item id="2519" chance="34700">
+    <item id="2519" chance="12000">
       <!--crown shield-->
     </item>
-    <item id="2494" chance="500">
-      <!--demon armor-->
-    </item>
-    <item id="1987" chance="100000">
+    <item id="1988" chance="100000">
       <inside>
         <item id="2268" countmax="100" chance1="24600" chancemax="0">
           <!--sudden death rune-->
@@ -147,6 +135,54 @@
         </item>
         <item id="2268" countmax="70" chance1="24600" chancemax="0">
           <!--sudden death rune-->
+    </item>
+    <item id="2471" chance="100">
+      <!--golden helmet-->
+    </item>
+    <item id="2493" chance="9000">
+      <!--demon helmet-->
+    </item>
+    <item id="2421" chance="7000">
+      <!--thunder hammer-->
+    </item>
+    <item id="2494" chance="10000">
+      <!--demon armor-->
+    </item>
+    <item id="9778" chance="4000">
+      <!--yalahari mask-->
+    </item>
+    <item id="8904" chance="12000">
+      <!--spellscroll of prophecies-->
+    </item>
+    <item id="8878" chance="8000">
+      <!--crystalline armor-->
+    </item>
+    <item id="8890" chance="7000">
+      <!--robe of the underworld-->
+    </item>
+    <item id="8918" chance="8000">
+      <!--spellbook of dark mysteries-->
+    </item>
+    <item id="7405" chance="8000">
+      <!--havoc blade-->
+    </item>
+    <item id="2542" chance="15000">
+      <!--tempest shield-->
+    </item>
+    <item id="8887" chance="5000">
+      <!--frozen plate-->
+    </item>
+    <item id="8868" chance="10000">
+      <!--velvet mantle-->
+    </item>
+    <item id="5809" chance="10">
+      <!--soul stone-->
+    </item>
+    <item id="2646" chance="6000">
+      <!--golden boots-->
+    </item>
+    <item id="2522" chance="10000">
+      <!--great shield-->
         </item>
       </inside>
       <!--bag-->

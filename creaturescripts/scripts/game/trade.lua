@@ -76,12 +76,16 @@ function onTradeAccept(cid, target, item, targetItem)
 			foundItems = foundItems + 1
 		end
 	end	
-	]]--
+	
 	
 	if(doPlayerIsPvpEnable(cid) and not doPlayerIsPvpEnable(target) and hasCondition(cid, CONDITION_INFIGHT)) then
 		doPlayerSendCancel(cid, "Você não pode trocar um item com um jogador Pacifico enquanto estiver em combate.")
 		return false
 	end	
+	
+	]]--
+	
+	--print("Trade!")
 	
 	if(not canTradeItem(item) or not canTradeItem(targetItem)) then
 		foundItems = 1
@@ -89,10 +93,13 @@ function onTradeAccept(cid, target, item, targetItem)
 	
 	if(foundItems > 0) then
 	
-		local msg = "ATENÇÃO: Você ou seu parceiro de troca colocou um item irregular, desativado e fora de funcionamento! Remova este(s) items e tente novamente."
+		--local msg = "ATENÇÃO: Você ou seu parceiro de troca colocou um item irregular, desativado e fora de funcionamento! Remova este(s) items e tente novamente."
 	
-		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, msg)
-		doPlayerSendTextMessage(target, MESSAGE_INFO_DESCR, msg)
+		--doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, msg)
+		--doPlayerSendTextMessage(target, MESSAGE_INFO_DESCR, msg)
+	
+		doPlayerSendTextMessage(target, MESSAGE_INFO_DESCR, "Este item foi detectado como duplicado e ilegal e foi APAGADO do servidor.")
+		--doRemoveItem(item.uid)
 
 		return false
 	end
@@ -101,6 +108,26 @@ function onTradeAccept(cid, target, item, targetItem)
 end
 
 function onTradeRequest(cid, target, item)
+	
+	local foundItems = 0
+	if(not canTradeItem(item) --[[or not canTradeItem(targetItem)]]) then
+		foundItems = 1
+	end
+	
+	if(foundItems > 0) then
+	
+		--local msg = "ATENÇÃO: Você ou seu parceiro de troca colocou um item irregular, desativado e fora de funcionamento! Remova este(s) items e tente novamente."
+	
+		--doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, msg)
+		--doPlayerSendTextMessage(target, MESSAGE_INFO_DESCR, msg)
+		
+		local log_id = getItemAttribute(item.uid, "itemShopLogId") or 0
+		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Este item foi detectado como duplicado e ilegal e foi APAGADO do servidor.")
+		std.clog("[Warning - Item Destroyed] Duplicated itemid " .. item.itemid .. " from log shop id #" .. log_id .. " destroyed on trade request of " .. getPlayerName(cid) .. " to " .. getPlayerName(target	) .. ".")
+		doRemoveItem(item.uid)
+
+		return false
+	end	
 	
 	local sameLookItems = {
 		[CUSTOM_ITEMS.PREMIUM_SCROLL_MONTLY] = {}

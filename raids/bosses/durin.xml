@@ -7,8 +7,8 @@
 
 	<announce delay="0" type="event" message="Os Anoes de Kazmodan estao agitados!"/>
 	<announce delay="60000" type="event" message="O antigo rei dos anoes esta prestes a sair de sua cidade e vir para superficie!"/>
-	<announce delay="120000" type="event" message="Durin voltou! A area de kazmodan precisa de ajuda para derruba-lo"/>
+	<announce delay="120000" type="event" message="Durin voltou! Quendor precisa de ajuda para derruba-lo! Ele se encontra ao Portao norte de Quendor"/>
 
-	<singlespawn delay="120000" name="Durin" x="2075" y="1929" z="7" />
+	<singlespawn delay="120000" name="Durin" x="1986" y="1807" z="7" />
 	
 </raid>
