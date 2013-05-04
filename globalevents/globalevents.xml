@@ -3,7 +3,7 @@
 	<!-- DARGHOS -->
 	<!-- <globalevent name="spoof" interval="150000" event="script" value="game/spoof.lua"/> a cada 2 minutos e meio -->
 	<globalevent name="custom_init" type="startup" event="script" value="game/init.lua"/>
-	<globalevent name="custom_globalsave" time="9:50:00" event="script" value="game/globalsave.lua"/>
+	<globalevent name="custom_globalsave" time="4:50:00" event="script" value="game/globalsave.lua"/>
 	<globalevent name="announcements" interval="600000" event="script" value="game/announcements.lua"/>
 	
 	<!-- Darghos Raids -->
