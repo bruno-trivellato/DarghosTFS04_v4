@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Thashi Aharon" nameDescription="an loyal elf" race="blood" experience="300000" speed="170" manacost="0">
+<monster name="Thashi Aharon" nameDescription="an loyal elf" race="blood" experience="4000000" speed="170" manacost="0">
   <health now="400000" max="400000"/>
   <look type="63" head="20" body="30" legs="40" feet="50" corpse="6011"/>
   <targetchange interval="2000" chance="100"/>
@@ -43,7 +43,7 @@
     </attack>
   </attacks>
   <defenses armor="45" defense="60">
-    <defense name="healing" interval="1000" chance="100" min="2" max="5">
+    <defense name="healing" interval="1000" chance="50" min="500" max="700">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
     <defense name="speed" interval="1000" chance="8" speedchange="280" duration="6000">
@@ -67,64 +67,46 @@
   <voices interval="5000" chance="10">
     <voice sentence="Who is the real one?!"/>
   </voices>
-  <loot capacity="400">
-    <item id="6529" countmax="1" chance="100">
+  <loot capacity="1500">
+    <item id="6529" countmax="100" chance="100000">
       <!--infernal bolt-->
     </item>
-    <item id="6529" countmax="1" chance="100">
-      <!--infernal bolt-->
-    </item>
-    <item id="6529" countmax="24" chance="90000">
-      <!--infernal bolt-->
-    </item>
-    <item id="6529" countmax="32" chance="80000">
-      <!--infernal bolt-->
-    </item>
-    <item id="6529" countmax="35" chance="70000">
-      <!--infernal bolt-->
-    </item>
-    <item id="6529" countmax="1" chance="12000">
+    <item id="6529" countmax="100" chance="100000">
       <!--infernal bolt-->
     </item>
     <item id="7438" countmax="1" chance="12000">
       <!--elvish bow-->
     </item>
-    <item id="2394" countmax="1" chance="10000">
-      <!--morning star-->
-    </item>
-    <item id="6529" countmax="1" chance="1000">
+    <item id="6529" countmax="100" chance="100000">
       <!--infernal bolt-->
     </item>
-    <item id="6529" countmax="1" chance="6000">
+    <item id="6529" countmax="100" chance="100000">
       <!--infernal bolt-->
     </item>
-    <item id="6529" countmax="1" chance="6000">
+    <item id="6529" countmax="100" chance="100000">
       <!--infernal bolt-->
     </item>
-    <item id="5947" countmax="1" chance="2000">
+    <item id="5947" countmax="1" chance="1000">
       <!--Elane's Crossbow-->
     </item>
-    <item id="8851" countmax="1" chance="5000">
+    <item id="8851" countmax="1" chance="11000">
       <!--royal crossbow-->
     </item>
-    <item id="8888" countmax="1" chance="5000">
+    <item id="8888" countmax="1" chance="11000">
       <!--master archer's armor-->
     </item>
-    <item id="9777" countmax="1" chance="4000">
+    <item id="9777" countmax="1" chance="5000">
       <!--yalahari leg piece -->
     </item>
-    <item id="10515" countmax="1" chance="3500">
+    <item id="10515" countmax="1" chance="1600">
       <!--whacking driller of fate -->
     </item>
-    <item id="5922" countmax="1" chance="8000">
+    <item id="5922" countmax="25" chance="100000">
       <!--holy orchid-->
-    </item>
-    <item id="2535" countmax="1" chance="4000">
-      <!--casttle shield-->
 	</item>
-		<item id="1987" chance="100000">
+		<item id="2365" chance="100000">
 			<inside>
-				<item id="5922" countmax="4" chance="9000">
+				<item id="5922" countmax="25" chance="100000">
 				<!--holy orchid-->
 				</item>
 				<item id="2543" countmax="80" chance="10000">
@@ -135,6 +117,60 @@
 				</item>
 				<item id="2547" countmax="75" chance="9000">
 				<!--power bolt-->
+                                </item>
+                                <item id="8891" countmax="1" chance="20000">
+                                <!--paladin armor-->
+                                </item>
+                                <item id="8869" countmax="1" chance="10000">
+                                <!--greenwood coat-->
+                                </item>
+                                <item id="2500" countmax="1" chance="15000">
+                                <!--amazon armor-->
+                                </item>
+                                <item id="8885" countmax="1" chance="15000">
+                                <!--divine plate-->
+                                </item>
+                                <item id="8877" countmax="1" chance="7000">
+                                <!--lavos armor-->
+                                </item>
+                                <item id="2400" countmax="1" chance="9000">
+                                <!--magic sword-->
+                                </item>
+                                <item id="7405" countmax="1" chance="6000">
+                                <!--havoc blade-->
+                                </item>
+                                <item id="7368" countmax="100" chance="100000">
+                                <!--assassin star-->
+                                </item>
+                                <item id="8857" countmax="1" chance="2000">
+                                <!--silkwaver bow-->
+                                </item>
+                                <item id="8855" countmax="1" chance="1400">
+                                <!--composite hornbow-->
+                                </item>
+                                <item id="8849" countmax="1" chance="2800">
+                                <!--Modified Crossbow-->
+				</item>
+                                <item id="8858" countmax="1" chance="500">
+                                <!--elethriel's elemental bow-->
+				</item>
+                                <item id="8854" countmax="1" chance="11000">
+                                <!--warsinger bow-->
+				</item>
+                                <item id="5803" countmax="1" chance="18000">
+                                <!--arbalest-->
+				</item>
+                                <item id="8853" countmax="1" chance="1700">
+                                <!--the ironworker-->
+				</item>
+                                <item id="8850" countmax="1" chance="4000">
+                                <!--chain bolter-->
+				</item>
+                                <item id="8852" countmax="1" chance="500">
+                                <!--the devileye-->
+				</item>
+                                <item id="8856" countmax="1" chance="2300">
+                                <!--yol's bow-->
 				</item>
 			</inside>
 		</item>
