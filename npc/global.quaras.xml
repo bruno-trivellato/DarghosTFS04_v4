@@ -101,6 +101,37 @@
         </interact>
 
         </response>
+    </interact>	
+	
+	<!-- INICIO - TROCAR SOUL ORB POR INFERNAL BOLTS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+    <interact keywords="infernal;bolt">
+      <response text="Oh, I know something about that... I need a soul orb to forge that for you... You want?">
+        <action name="topic" value="1"/>
+    
+    <interact keywords="yes" topic="1">
+       <response>
+        <action name="script">
+        <![CDATA[
+			
+			sk = getItemIdByName("soul orb")
+			
+			if getPlayerItemCount(cid,sk) >= 1 then
+					doPlayerRemoveItem(cid,sk,1)
+					bolts = math.random(3,10)
+					doPlayerAddItem(cid, 6529, bolts)
+					selfSay("Here, " .. bolts .. " infernal bolts for you! Come back if you get some more orbs!",cid)
+			else
+				selfSay("Sorry, but you dont have a soul orb.",cid)
+			end
+        ]]>
+        </action>
+      </response>
+    </interact>
+        <interact keywords="|*|">
+          <response text="Maybe some other time."/>
+        </interact>
+
+        </response>
     </interact>
 
 	<!-- INICIO - PEGANDO OB KNIFE @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
