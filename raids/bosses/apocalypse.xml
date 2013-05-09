@@ -5,8 +5,8 @@
 	]]>
 	</script>
 
-	<announce delay="0" type="event" message="Uma Grande ameaça pode ser sentida em aracura! Uma nuvem de maldade toma posse da cave demoniaca!."/>
-	<announce delay="180000" type="event" message="O surgimento da criatura antiga está próxima, subordinanos Desta criatura nascem aguardando anciosamente seu retorno."/>
+	<announce delay="0" type="event" message="Uma Grande ameaÃ§a pode ser sentida em aracura! Uma nuvem de maldade toma posse da cave demoniaca!."/>
+	<announce delay="180000" type="event" message="O surgimento da criatura antiga estÃ¡ prÃ³xima, subordinanos Desta criatura nascem aguardando anciosamente seu retorno."/>
 	<announce delay="600000" type="event" message="Apocalypse retorna das trevas! A cave de demonios de aracura ao sul foi tomada! Cuidado cidadoes!."/>
 
 	
