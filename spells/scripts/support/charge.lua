@@ -8,5 +8,10 @@ setConditionFormula(condition, 0.9, -81, 0.9, -81)
 setCombatCondition(combat, condition)
 
 function onCastSpell(cid, var)
+	
+	if(hasCondition(cid, CONDITION_EXHAUST, EXHAUSTED_PARALYZE)) then 
+		return false 
+	end
+
         return doCombat(cid, combat, var)
 end
