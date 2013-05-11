@@ -15,19 +15,27 @@ function onSay(cid, words, param, channel)
 	toPos.stackpos = STACKPOS_TOP_MOVEABLE_ITEM_OR_CREATURE
 	local tmp = getThingFromPos(toPos)
 	if(tmp.uid ~= 0) then
+		local done = true
+	
 		if(isCreature(tmp.uid)) then
 			doRemoveCreature(tmp.uid)
 		else
-			doRemoveItem(tmp.uid, math.min(math.max(1, tmp.type), amount))
+			if(getPlayerAccess(cid) < access.COMMUNITY_MANAGER) then
+				done = false
+			else
+				doRemoveItem(tmp.uid, math.min(math.max(1, tmp.type), amount))
+			end
 		end
 
-		doSendMagicEffect(toPos, CONST_ME_MAGIC_RED)
-		return true
+		if(done) then
+			doSendMagicEffect(toPos, CONST_ME_MAGIC_RED)	
+			return true			
+		end		
 	end
 
 	toPos.stackpos = STACKPOS_TOP_FIELD
 	tmp = getThingFromPos(toPos)
-	if(tmp.uid ~= 0) then
+	if(tmp.uid ~= 0 and getPlayerAccess(cid) >= access.COMMUNITY_MANAGER) then
 		doRemoveItem(tmp.uid, math.min(math.max(1, tmp.type), amount))
 		doSendMagicEffect(toPos, CONST_ME_MAGIC_RED)
 		return true
@@ -45,14 +53,21 @@ function onSay(cid, words, param, channel)
 		toPos.stackpos = i
 		tmp = getThingFromPos(toPos)
 		if(tmp.uid ~= 0) then
+			local done = true
 			if(isCreature(tmp.uid)) then
 				doRemoveCreature(tmp.uid)
 			else
-				doRemoveItem(tmp.uid, math.min(math.max(1, tmp.type), amount))
+				if(getPlayerAccess(cid) < access.COMMUNITY_MANAGER) then
+					done = false
+				else
+					doRemoveItem(tmp.uid, math.min(math.max(1, tmp.type), amount))
+				end
 			end
 
-			doSendMagicEffect(toPos, CONST_ME_MAGIC_RED)
-			return true
+			if(done) then
+				doSendMagicEffect(toPos, CONST_ME_MAGIC_RED)
+				return true
+			end
 		end
 	end
 

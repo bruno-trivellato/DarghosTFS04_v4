@@ -3,8 +3,8 @@ setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_ICEDAMAGE)
 setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_ICETORNADO)
 
 function onGetFormulaValues(cid, level, maglevel)
-    local minMult = 7.5
-    local maxMult = 12
+    local minMult = 6.2
+    local maxMult = 10
 
     local minDmg = -((level / 3) + (maglevel * minMult))
     local maxDmg = -((level / 3) + (maglevel * maxMult))

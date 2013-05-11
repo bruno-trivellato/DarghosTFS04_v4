@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Apocalypse" nameDescription="Apocalypse" race="fire" experience="30000" speed="430" manacost="0">
-  <health now="60000" max="60000"/>
+<monster name="Apocalypse" nameDescription="Apocalypse" race="fire" experience="3000000" speed="430" manacost="0">
+  <health now="160000" max="160000"/>
   <look type="12" head="38" body="114" legs="0" feet="94" corpse="6068"/>
   <targetchange interval="5000" chance="20"/>
   <strategy attack="65" defense="5"/>
@@ -18,8 +18,8 @@
     <flag runonhealth="0"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" min="-1000" max="-2600"/>
-    <attack name="physical" interval="1000" chance="13" radius="8" target="0" min="-400" max="-1400">
+    <attack name="melee" interval="2000" min="-300" max="-1000"/>
+    <attack name="physical" interval="1000" chance="33" radius="8" target="0" min="-700" max="-1000">
       <attribute key="areaEffect" value="mortarea"/>
     </attack>
     <attack name="speed" interval="1000" chance="12" radius="6" target="0" speedchange="-850" duration="60000">
@@ -28,35 +28,36 @@
     <attack name="strength" interval="1000" chance="12" radius="3" target="0">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack name="fire" interval="1000" chance="34" range="7" radius="7" target="1" min="-100" max="-900">
+    <attack name="fire" interval="1000" chance="10" range="7" radius="7" target="1" min="-300" max="-700">
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
     </attack>
     <attack name="manadrain" interval="1000" chance="7" length="0" spread="3" min="-600" max="-1100">
       <attribute key="areaEffect" value="energyarea"/>
     </attack>
-    <attack name="physical" interval="1000" chance="7" length="8" spread="3" min="-300" max="-900"/>
-    <attack name="energy" interval="1000" chance="9" length="8" spread="0" min="-400" max="-600">
+    <attack name="physical" interval="1000" chance="19" length="8" spread="3" min="-170" max="-500"/>
+    <attack name="energy" interval="1000" chance="100" length="8" spread="0" min="-700" max="-1200">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="poisoncondition" interval="1000" chance="10" length="0" spread="0" min="-1000" max="-2000">
+    <attack name="poisoncondition" interval="1000" chance="10" length="0" spread="0" min="-300" max="-700">
       <attribute key="areaEffect" value="greenspark"/>
     </attack>
-    <attack name="lifedrain" interval="1000" chance="15" length="8" spread="0" min="-500" max="-1000">
+    <attack name="lifedrain" interval="1000" chance="15" length="8" spread="0" min="-100" max="-300">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
   </attacks>
   <defenses armor="188" defense="145">
-    <defense name="healing" interval="1000" chance="15" min="1000" max="3000">
+    <defense name="healing" interval="1000" chance="25" min="3000" max="5000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
-    <defense name="speed" interval="2000" chance="8" speedchange="480" duration="6000">
+    <defense name="speed" interval="2000" chance="8" speedchange="680" duration="60000">
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>
   <immunities>
     <immunity physical="0"/>
-    <immunity energy="1"/>
+    <immunity death="1"/>
+    <immunity energy="0"/>
     <immunity fire="1"/>
     <immunity poison="1"/>
     <immunity lifedrain="1"/>
@@ -65,6 +66,12 @@
     <immunity drunk="1"/>
     <immunity invisible="1"/>
   </immunities>
+  <elements>
+    <element holyPercent="-5"/>
+    <element icePercent="30"/>
+    <element energyPercent="-60"/>
+    <element firePercent="-5"/>
+  </elements>
   <voices interval="5000" chance="10">
     <voice sentence="BOW TO THE POWER OF THE RUTHLESS SEVEN!" yell="1"/>
     <voice sentence="DESTRUCTION!" yell="1"/>
@@ -74,15 +81,6 @@
   <loot capacity="5000">
     <item id="2142" countmax="1" chance="3500">
       <!--ancient amulet-->
-    </item>
-    <item id="2231" countmax="1" chance="9000">
-      <!--big bone-->
-    </item>
-    <item id="2144" countmax="15" chance="15000">
-      <!--black pearl-->
-    </item>
-    <item id="2158" countmax="1" chance="1500">
-      <!--blue gem-->
     </item>
     <item id="2195" countmax="1" chance="4000">
       <!--boots of haste-->
@@ -99,59 +97,11 @@
     <item id="2520" countmax="1" chance="15500">
       <!--demon shield-->
     </item>
-    <item id="2462" countmax="1" chance="11000">
-      <!--devil helmet-->
-    </item>
-    <item id="2387" countmax="1" chance="20000">
-      <!--double axe-->
-    </item>
-    <item id="2434" countmax="1" chance="4500">
-      <!--dragon hammer-->
-    </item>
-    <item id="2167" countmax="1" chance="13500">
-      <!--energy ring-->
-    </item>
-    <item id="2432" countmax="1" chance="17000">
-      <!--fire axe-->
-    </item>
-    <item id="2393" countmax="1" chance="12500">
-      <!--giant sword-->
-    </item>
-    <item id="2148" countmax="100" chance="99900">
-      <!--gold coin-->
-    </item>
-    <item id="2148" countmax="100" chance="88800">
-      <!--gold coin-->
-    </item>
-    <item id="2148" countmax="100" chance="77700">
-      <!--gold coin-->
-    </item>
-    <item id="2148" countmax="100" chance="66600">
-      <!--gold coin-->
-    </item>
-    <item id="2179" countmax="1" chance="8000">
-      <!--gold ring-->
+    <item id="2160" countmax="100" chance="100000">
+      <!--crystal coin-->
     </item>
     <item id="2470" countmax="1" chance="5000">
       <!--golden legs-->
-    </item>
-    <item id="2033" countmax="1" chance="7500">
-      <!--golden mug-->
-    </item>
-    <item id="2418" countmax="1" chance="4500">
-      <!--golden sickle-->
-    </item>
-    <item id="2155" countmax="1" chance="1500">
-      <!--green gem-->
-    </item>
-    <item id="2396" countmax="1" chance="7500">
-      <!--ice rapier-->
-    </item>
-    <item id="2177" countmax="1" chance="1000">
-      <!--life crystal-->
-    </item>
-    <item id="2162" countmax="1" chance="11500">
-      <!--magic lightwand-->
     </item>
     <item id="2472" countmax="1" chance="3000">
       <!--magic plate armor-->
@@ -162,64 +112,13 @@
     <item id="2164" countmax="1" chance="5000">
       <!--might ring-->
     </item>
-    <item id="2178" countmax="1" chance="4000">
-      <!--mind stone-->
-    </item>
-    <item id="2186" countmax="1" chance="3500">
-      <!--moonlight rod-->
-    </item>
-    <item id="2176" countmax="1" chance="12000">
-      <!--orb-->
-    </item>
-    <item id="2171" countmax="1" chance="4500">
-      <!--platinum amulet-->
-    </item>
-    <item id="2200" countmax="1" chance="4500">
-      <!--protection amulet-->
-    </item>
-    <item id="1982" countmax="1" chance="2600">
-      <!--purple tome-->
-    </item>
-    <item id="2214" countmax="1" chance="13000">
-      <!--ring of healing-->
-    </item>
     <item id="2123" countmax="1" chance="3500">
       <!--ring of the sky-->
-    </item>
-    <item id="2170" countmax="1" chance="13000">
-      <!--silver amulet-->
-    </item>
-    <item id="2402" countmax="1" chance="15500">
-      <!--silver dagger-->
-    </item>
-    <item id="2436" countmax="1" chance="5000">
-      <!--skull staff-->
-    </item>
-    <item id="2150" countmax="20" chance="13500">
-      <!--small amethyst-->
-    </item>
-    <item id="2145" countmax="5" chance="9500">
-      <!--small diamond-->
-    </item>
-    <item id="2149" countmax="10" chance="15500">
-      <!--small emerald-->
-    </item>
-    <item id="2146" countmax="10" chance="13500">
-      <!--small sapphire-->
-    </item>
-    <item id="2182" countmax="1" chance="3500">
-      <!--snakebite rod-->
-    </item>
-    <item id="2165" countmax="1" chance="9500">
-      <!--stealth ring-->
     </item>
     <item id="2197" countmax="1" chance="4000">
       <!--stone skin amulet-->
     </item>
-    <item id="2174" countmax="1" chance="2500">
-      <!--strange symbol-->
-    </item>
-    <item id="2151" countmax="7" chance="14000">
+    <item id="2151" countmax="63" chance="14000">
       <!--talon-->
     </item>
     <item id="2112" countmax="1" chance="14500">
@@ -228,20 +127,67 @@
     <item id="2421" countmax="1" chance="13500">
       <!--thunder hammer-->
     </item>
-    <item id="2377" countmax="1" chance="20000">
-      <!--two handed sword-->
-    </item>
-    <item id="2185" countmax="1" chance="3500">
-      <!--necrotic rod-->
-    </item>
-    <item id="3955" countmax="1" chance="100">
+    <item id="3955" countmax="1" chance="25000">
       <!--voodoo doll-->
     </item>
-    <item id="2188" countmax="1" chance="2500">
-      <!--wand of decay-->
+    <item id="2003" chance="100000">
+      <inside>
+    <item id="2471" chance="250">
+      <!--golden helmet-->
     </item>
-    <item id="2143" countmax="15" chance="12500">
-      <!--white pearl-->
+    <item id="2646" chance="5500">
+      <!--golden boots-->
+    </item>
+    <item id="7423" chance="6000">
+      <!--skullcrusher-->
+    </item>
+    <item id="7414" chance="15000">
+      <!--Abyss Hammer-->
+    </item>
+    <item id="8889" chance="12000">
+      <!--skullcracker armor-->
+    </item>
+    <item id="8879" chance="6000">
+      <!--voltage armor-->
+    </item>
+    <item id="8867" chance="7000">
+      <!--dragon robe-->
+    </item>
+    <item id="11368" chance="10000">
+      <!--jade hat-->
+    </item>
+    <item id="10016" chance="9000">
+      <!--batwing hat-->
+    </item>
+    <item id="9776" chance="6700">
+      <!--yalahari armor-->
+    </item>
+    <item id="7431" chance="9000">
+      <!--demonbone-->
+    </item>
+    <item id="8929" chance="5500">
+      <!--the stomper-->
+    </item>
+    <item id="8924" chance="11000">
+      <!--hellforged axe-->
+    </item>
+    <item id="8928" chance="11000">
+      <!--obsidian truncheon-->
+    </item>
+    <item id="7424" chance="12000">
+      <!--lunar staff-->
+    </item>
+    <item id="8890" chance="11000">
+      <!--robe of the underworld-->
+    </item>
+    <item id="8865" chance="6000">
+      <!--dark lord's cape-->
+    </item>
+    <item id="6391" chance="1600">
+      <!--nightmare shield-->
+    </item>
+      </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

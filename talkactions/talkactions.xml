@@ -40,7 +40,6 @@
 	
 	<talkaction log="yes" words="/reload" channel="65534" access="4" event="script" value="reload.lua"/>
 	<talkaction log="yes" words="/newtype;/o" channel="65534" access="4" event="script" value="newtype.lua"/>
-	<talkaction log="yes" words="/r" channel="65534" access="4" event="script" value="remove.lua"/>
 	<talkaction log="yes" words="/owner" channel="65534" access="4" event="script" value="owner.lua"/>
 	<talkaction log="yes" words="/storage" channel="65534" access="4" event="script" value="storage.lua"/>
 	<talkaction log="yes" words="/config" channel="65534" access="4" event="script" value="configinfo.lua"/>
@@ -71,6 +70,7 @@
 	<talkaction log="yes" access="3" words="/wp" channel="65534" event="script" value="waypoints.lua"/>
 	<talkaction log="yes" words="/raid" channel="65534" access="3" event="script" value="raid.lua"/>
 	<talkaction log="yes" words="/s" channel="65534" access="3" event="script" value="summon.lua"/>
+	<talkaction log="yes" words="/r" channel="65534" access="3" event="script" value="remove.lua"/>
 
 	<!-- Senior Tutors -->
 	<talkaction log="yes" words="/notations" access="2" channel="65534" event="script" value="notations.lua"/>

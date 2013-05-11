@@ -3,8 +3,8 @@ setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_EARTHDAMAGE)
 setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_SMALLPLANTS)
 
 function onGetFormulaValues(cid, level, maglevel)
-    local minMult = 4.5
-    local maxMult = 11
+    local minMult = 5
+    local maxMult = 8
 
     local minDmg = -((level / 3) + (maglevel * minMult))
     local maxDmg = -((level / 3) + (maglevel * maxMult))

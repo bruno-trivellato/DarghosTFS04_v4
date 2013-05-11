@@ -6,6 +6,10 @@ local function checkLight(cid)
 	end	
 end
 
+local castManaExhaust = createConditionObject(CONDITION_EXHAUST)
+setConditionParam(castManaExhaust, CONDITION_PARAM_TICKS, 2000)
+setConditionParam(castManaExhaust, CONDITION_PARAM_SUBID, EXHAUST_HEALING)
+
 local function checkCastMana(cid)
 
 	local tile = getTileInfo(getCreaturePosition(cid))
@@ -20,11 +24,12 @@ local function checkCastMana(cid)
 		local manachange = math.ceil(manamax / 2) -- default is half (50%)
 		local manalimit = manamax - math.ceil(manamax / 4) -- 75%
 
-		if(mana >= manalimit) then
+		if(mana >= manalimit and not hasCondition(cid, CONDITION_EXHAUST, EXHAUST_HEALING)) then
 			doPlayerAddMana(cid, -(manachange), false)
 			doPlayerAddManaSpent(cid, manachange)
 			doSendMagicEffect(getPlayerPosition(cid), CONST_ME_MAGIC_BLUE)
 			doCreatureSay(cid, "Automana...", TALKTYPE_MONSTER)
+			doAddCondition(cid, castManaExhaust)
 		end
 	end	
 end
