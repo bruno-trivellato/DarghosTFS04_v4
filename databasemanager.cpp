@@ -45,19 +45,19 @@ bool DatabaseManager::optimizeTables()
 
 				query.str("");
 				query << "OPTIMIZE TABLE `" << tableName << "`;";
-				if(db->executeQuery(query.str()))
+				if(db->query(query.str()))
 					std::cout << " [success]" << std::endl;
 				else
 					std::cout << " [failed]" << std::endl;
 			}
 			while(result->next());
-			db->freeResult(result);
+			result->free();
 			break;
 		}
 
 		case DATABASE_ENGINE_SQLITE:
 		{
-			if(!db->executeQuery("VACUUM;"))
+			if(!db->query("VACUUM;"))
 				return false;
 
 			std::cout << "> Optimized database." << std::endl;
