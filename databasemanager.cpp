@@ -28,56 +28,49 @@ bool DatabaseManager::optimizeTables()
 {
 	Database* db = Database::getInstance();
 	DBQuery query;
+
 	switch(db->getDatabaseEngine())
 	{
 		case DATABASE_ENGINE_MYSQL:
 		{
-			query << "SELECT `TABLE_NAME` FROM `information_schema`.`tables` WHERE `TABLE_SCHEMA` = " << db->escapeString(g_config.getString(ConfigManager::SQL_DB)) << " AND `DATA_FREE` > 0;";
-			DBResult* result;
-			if(!(result = db->storeQuery(query.str())))
-				break;
+			query << "SELECT `TABLE_NAME` FROM `information_schema`.`TABLES` WHERE `TABLE_SCHEMA` = " << db->escapeString(g_config.getString(ConfigManager::SQL_DB)) << " AND `DATA_FREE` > 0;";
+			DBResult* result = db->storeQuery(query.str());
+			if(!result)
+				return false;
 
-			query.str("");
 			do
 			{
-				std::clog << "> Optimizing table: " << result->getDataString("TABLE_NAME") << "... ";
-				query << "OPTIMIZE TABLE `" << result->getDataString("TABLE_NAME") << "`;";
-				if(db->query(query.str()))
-					std::clog << "[success]" << std::endl;
-				else
-					std::clog << "[failure]" << std::endl;
+				std::string tableName = result->getDataString("TABLE_NAME");
+				std::cout << "> Optimizing table " << tableName << "..." << std::flush;
 
 				query.str("");
+				query << "OPTIMIZE TABLE `" << tableName << "`;";
+				if(db->executeQuery(query.str()))
+					std::cout << " [success]" << std::endl;
+				else
+					std::cout << " [failed]" << std::endl;
 			}
 			while(result->next());
-
-			result->free();
-			return true;
+			db->freeResult(result);
+			break;
 		}
 
 		case DATABASE_ENGINE_SQLITE:
 		{
-			if(!db->query("VACUUM;"))
-				break;
+			if(!db->executeQuery("VACUUM;"))
+				return false;
 
-			std::clog << "> Optimized database." << std::endl;
-			return true;
-		}
-
-		case DATABASE_ENGINE_POSTGRESQL:
-		{
-			if(!db->query("VACUUM FULL;"))
-				break;
-
-			std::clog << "> Optimized database." << std::endl;
-			return true;
+			std::cout << "> Optimized database." << std::endl;
+			break;
 		}
 
 		default:
+		{
+			std::cout << "> Optimization is not supported for this database engine." << std::endl;
 			break;
+		}
 	}
-
-	return false;
+	return true;
 }
 
 bool DatabaseManager::triggerExists(std::string trigger)
