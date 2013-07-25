@@ -68,36 +68,77 @@ function onlinePrivileged(cid, words, param)
 
 	local str = ""
 	
+	local statistics = {
+		ping_min = nil,
+
+		ping_sum = 0,
+		ping_max = nil,	
+		pingT_min = nil,
+		pingT_sum = 0,
+		pingT_max = nil,
+		tunnel = 0,
+	}
+	
+	local skipped = 0	
 	local j = 0
 	for i, uid in ipairs(onlineList) do
 		
-		local addStr = "\n"
-		addStr = addStr .. "Name: " .. getPlayerName(uid) .. ", "
-		addStr = addStr .. "Level: " .. getPlayerLevel(uid) .. ", "
-		addStr = addStr .. "Ping: " .. getPlayerCurrentPing(uid) .. ", "
-		addStr = addStr .. "Premium: " .. (isPremium(uid) and "S" or "N") .. ", "
-		addStr = addStr .. "Mag: " .. getPlayerMagLevel(uid) .. "\n"
+		local attacked = getCreatureTarget(uid)
+		if(getPlayerGroupId(uid) ~= GROUPS_PLAYER_BOT and (not attacked or not isInArray({"Marksman Target", "Hitdoll"}, getCreatureName(attacked)))) then
 
-		if string.len(addStr) + string.len(str) >= 255 then
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, str)
-			str = addStr
-		elseif #onlineList == 1 then
-			str = addStr
+			local addStr = "\n"
+			addStr = addStr .. getPlayerName(uid) .. " ("
+			addStr = addStr .. "lv " .. getPlayerLevel(uid) .. ", "
+			addStr = addStr .. "ml " .. getPlayerMagLevel(uid) .. ", "
+			addStr = addStr .. (isPremium(uid) and "P" or "F") .. ", "
+			addStr = addStr .. getPlayerCurrentPing(uid) .. (isInTunnel(uid) and "*" or "") .. " ms"
+			addStr = addStr .. ")"
+			
+			if(not isInTunnel(uid)) then
+				if(statistics.ping_min == nil or getPlayerCurrentPing(uid) < statistics.ping_min) then
+					statistics.ping_min = getPlayerCurrentPing(uid)
+
+				end		
+				
+				if(statistics.ping_max == nil or getPlayerCurrentPing(uid) > statistics.ping_max) then
+					statistics.ping_max = getPlayerCurrentPing(uid)
+				end
+				
+				statistics.ping_sum = statistics.ping_sum + getPlayerCurrentPing(uid)
+			else
+				if(statistics.pingT_min == nil or getPlayerCurrentPing(uid) < statistics.pingT_min) then
+					statistics.pingT_min = getPlayerCurrentPing(uid)
+				end		
+				
+				if(statistics.pingT_max == nil or getPlayerCurrentPing(uid) > statistics.pingT_max) then
+					statistics.pingT_max = getPlayerCurrentPing(uid)
+				end
+				
+				statistics.pingT_sum = statistics.pingT_sum + getPlayerCurrentPing(uid)		
+				statistics.tunnel = statistics.tunnel + 1		
+			end
+
+			if string.len(addStr) + string.len(str) >= 255 then
+				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, str)
+				str = addStr
+			elseif #onlineList == 1 then
+				str = addStr
+			else
+				str = str .. addStr
+			end
+			j = j + 1
 		else
-			str = str .. addStr
+			skipped = skipped + 1
 		end
-		j = j + 1
 	end
 
 	if str ~= "" then
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, str)
 	end
 
-	if j <= 1 then
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Total: ".. j .." player online.")
-	else
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Total: " .. j .. " players online.")
-	end
+	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Total: " .. #onlineList .. " player's online (" .. skipped .. " skiped, " .. statistics.tunnel .. " via tunnel).")
+	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Ping statistics: min ".. statistics.ping_min .." ms, avg ".. math.floor(statistics.ping_sum / (j - statistics.tunnel)) .." ms, max ".. statistics.ping_max .." ms.")
+	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Ping statistics (tunnel): min ".. statistics.pingT_min .." ms, avg ".. math.floor(statistics.pingT_sum / statistics.tunnel) .." ms, max ".. statistics.pingT_max .." ms.")
 
 	return true
 end

@@ -14,6 +14,8 @@ function onSay(cid, words, param, channel)
 			
 			if(t[2] ~= nil and type(t[2]) == "number") then
 				mcs.toDrop = t[2]
+			else
+				mcs.toDrop = 60				
 			end
 			
 			mcs.buildList()

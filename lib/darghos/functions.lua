@@ -1,3 +1,12 @@
+function isInTunnel(cid)
+	local player_ip_str = doConvertIntegerToIp(getPlayerIp(cid))
+	if(player_ip_str == getConfigValue("ip")) then
+		return true
+	end
+	
+	return false
++end
+
 function increasePremiumSpells(cid, min, max)
 	if(isPremium(cid)) then
 		min = math.floor(min * 1.1)
@@ -45,7 +54,7 @@ end
 mcs = {}
 
 mcs.list = {}
-mcs.toDrop = 60
+mcs.toDrop = 0
 
 function mcs.buildList()
 
@@ -73,7 +82,7 @@ function mcs.dropOne()
 		if(isPlayer(mcs.list[mc_pos])) then
 			print(getPlayerName(mcs.list[mc_pos]) .. " kicked.")
 			doRemoveCreature(mcs.list[mc_pos])
-			table.remove(mcs.list, mc_pos)
+			mcs.list[mc_pos] = nil
 		else
 			print("Creature at key  " .. mc_pos .. " is not a player!")
 		end

@@ -196,6 +196,11 @@ function onLogin(cid)
 		
 		setPlayerStorageValue(cid, sid.FIRST_LOGIN_MAPMARKS, 1)
 	end
+	
+	if(isInTunnel(cid)) then
+ 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Voce está conectado através do Darghos Tunnel!")
+ 	end	
+	
 	return TRUE
 end
 

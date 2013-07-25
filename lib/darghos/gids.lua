@@ -35,6 +35,8 @@
 	
 	LAST_KILL_DARK_GENERAL = 15000,
 	
+	DAILY_START				= 20000,
+	
 	-- Dungeons
 	-- Para cada dungeon estaremos reservando uma range de 100 ids
 	DUNGEONS_ARIADNE_GHAZRAN	= 7400,

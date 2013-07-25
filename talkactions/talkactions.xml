@@ -17,6 +17,7 @@
 	<talkaction words="!vote" access="0" event="script" value="game/vote.lua"/>
 	<talkaction words="!voteinfo" access="0" event="script" value="game/voteinfo.lua"/>
 	<talkaction words="!aceitotp" access="0" event="script" value="game/accept_teleport.lua"/>
+	<talkaction words="!ping;!lag" access="0" event="script" value="game/ping.lua"/>
 	<talkaction words="!online;/online" event="script" value="game/online.lua"/>
 	<talkaction default="true" event="script" value="game/channels.lua"/> <!-- Help Channel -->	
 

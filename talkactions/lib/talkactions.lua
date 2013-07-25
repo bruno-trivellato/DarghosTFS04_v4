@@ -33,7 +33,7 @@ function completeSummonRequest(cid)
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Impossivel concluir a convocação...")
 	end
 	
-	summonRequests[requestBy] = nil
+	summonRequests[cid] = nil
 	return true
 end
 

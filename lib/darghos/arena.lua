@@ -196,7 +196,16 @@ function Arena.onKill(cid, target)
 	
 	local current = getPlayerStorageValue(cid, sid.CURRENT_ARENA)
 	local arenaLevel = getPlayerStorageValue(cid, sid.ARENA_LEVEL)
-	local bossName = ArenaBosses[current][arenaLevel]
+	local bossName = ""
+	
+	if(ArenaBosses[current] ~= nil and ArenaBosses[current][arenaLevel] ~= nil) then
+		bossName = ArenaBosses[current][arenaLevel]
+	else
+		std.clog("Cant find arena data for player " .. getPlayerName(cid) .. ", their data has been reseted, but check this issue. Arena: " .. current .. ", Level:" .. arenaLevel)
+		setPlayerStorageValue(cid, sid.CURRENT_ARENA, -1)
+		setPlayerStorageValue(cid, sid.ARENA_LEVEL, -1)
+		return
+	end
 	
 	local cName = string.lower(getCreatureName(target))
 	

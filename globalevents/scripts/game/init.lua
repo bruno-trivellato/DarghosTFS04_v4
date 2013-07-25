@@ -50,13 +50,15 @@ end
 function summonDynamicNpcs()
 
 	local npcs = {
-		{file = "global.rashid", startUid = uid.NPC_RASHID_START, endUid = uid.NPC_RASHID_END}
+		--{file = "global.rashid", startUid = uid.NPC_RASHID_START, endUid = uid.NPC_RASHID_END}
 	}
 	
-	for k,v in pairs(npcs) do
-		local uid = math.random(v.startUid, v.endUid)
-		local pos = getThingPosition(uid)
-		doCreateNpc(v.file, pos)
+	if(#npcs > 0) then
+		for k,v in pairs(npcs) do
+			local uid = math.random(v.startUid, v.endUid)
+			local pos = getThingPosition(uid)
+			doCreateNpc(v.file, pos)
+		end
 	end
 end
 
