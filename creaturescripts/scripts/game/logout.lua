@@ -4,7 +4,7 @@ function onLogout(cid, forceLogout)
 	local onLoginExperience = tonumber(getPlayerStorageValue(cid, sid.LOGIN_EXPERIENCE))
 	
 	if(onLoginLevel ~= -1 and onLoginExperience ~= -1) then
-		local queryStr = "INSERT INTO `player_activities` VALUES ("
+		local queryStr = "INSERT INTO `player_activities` VALUES (NULL, "
 			
 		queryStr = queryStr .. getPlayerGUID(cid)
 		queryStr = queryStr .. ", " .. getPlayerLastLogin(cid)
