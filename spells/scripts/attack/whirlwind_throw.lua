@@ -15,13 +15,24 @@ if(darghos_distro == DISTROS_TFS) then
 
         -- 8.3 formula
         local maxWeaponDamage = ((weaponSkill * (weaponAttack * 0.0425)) + (weaponAttack * 0.2)) * 2	
-		local missChance = 3
+		
+		local missChance = 10
+		
+		if(level > 75) then
+			missChance = 8
+		elseif(level > 125) then
+			missChance = 5
+		elseif(level > 200) then
+			missChance = 3			
+		elseif(level > 250) then
+			missChance = 1	
+		end
 		
 		if(math.random(1, 100) <= missChance) then	
 			return 0, 0
 		end
 		
-		local avgNormalDmg = math.random(math.floor(maxWeaponDamage / 2)
+		local avgNormalDmg = math.random(math.floor(maxWeaponDamage / 2))
 		local avgFullDmg = maxWeaponDamage
 		
 		local fullHitChance = 20
