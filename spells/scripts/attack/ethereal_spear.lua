@@ -13,10 +13,25 @@ if(darghos_distro == DISTROS_TFS) then
 		]]
 
         -- 8.3 formula
-        local maxWeaponDamage = ((weaponSkill * (weaponAttack * 0.025)) + (weaponAttack * 0.2)) * 2
-        local damage = -(math.random(0, maxWeaponDamage))
-
-        return damage, damage --The random part of the formula has already been made, just return the normal damage
+        local maxWeaponDamage = ((weaponSkill * (weaponAttack * 0.0425)) + (weaponAttack * 0.2)) * 2	
+		local missChance = 3
+		
+		if(math.random(1, 100) <= missChance) then	
+			return 0, 0
+		end
+		
+		local avgNormalDmg = math.random(math.floor(maxWeaponDamage / 2)
+		local avgFullDmg = maxWeaponDamage
+		
+		local fullHitChance = 20
+		local minFullHit = math.floor(maxWeaponDamage * 0.9)
+		local damage = math.random(avgNormalDmg, avgFullDmg)
+		
+		if(damage < minFullHit and math.random(1, 100) <= fullHitChance) then
+			damage = math.random(minFullHit, avgFullDmg)
+		end
+		
+        return -damage, -damage
 	end
 elseif(darghos_distro == DISTROS_OPENTIBIA) then
 	function getSpellDamage(cid, weaponSkill, weaponAttack, attackStrength)
