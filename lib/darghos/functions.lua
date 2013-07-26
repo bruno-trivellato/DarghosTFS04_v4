@@ -5,7 +5,7 @@ function isInTunnel(cid)
 	end
 	
 	return false
-+end
+end
 
 function increasePremiumSpells(cid, min, max)
 	if(isPremium(cid)) then
