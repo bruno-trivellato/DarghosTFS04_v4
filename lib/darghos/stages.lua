@@ -8,12 +8,15 @@ SKILL_STAGE_NON_LOGOUT_PLAYERS = SKILL_STAGE_MAGES
 
 stages = {
 	[STAGES_EXPERIENCE] = {
-		{end_level = 39, multipler = 50},
-		{start_level = 40, end_level = 79, multipler = 20},
-		{start_level = 80, end_level = 119, multipler = 10},
-		{start_level = 120, end_level = 159, multipler = 4},
-		{start_level = 160, end_level = 219, multipler = 2},
-		{start_level = 220, multipler = 1}
+		{end_level = 29, multipler = 20},
+		{start_level = 30, end_level = 54, multipler = 15},
+		{start_level = 55, end_level = 79, multipler = 12},
+		{start_level = 80, end_level = 129, multipler = 8},
+		{start_level = 129, end_level = 159, multipler = 5},
+		{start_level = 160, end_level = 179, multipler = 4},
+		{start_level = 180, end_level = 199, multipler = 3},
+		{start_level = 200, end_level = 269, multipler = 2},
+		{start_level = 270, multipler = 1}
 	},
 	
 	--[[
