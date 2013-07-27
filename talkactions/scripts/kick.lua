@@ -10,7 +10,7 @@ function onSay(cid, words, param, channel)
 	
 		local t = string.explode(param, ",")
 		
-		if(t[1] == "mcs" and getPlayerAccess(cid) == ACCESS_ADMIN) then
+		if(t[1] == "mcs" and getPlayerAccess(cid) == ACCESS_SADMIN) then
 			
 			if(t[2] ~= nil and type(t[2]) == "number") then
 				mcs.toDrop = t[2]
