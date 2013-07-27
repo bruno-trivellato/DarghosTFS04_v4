@@ -41,9 +41,14 @@ function onLogin(cid)
 			doPlayerEnablePvp(cid)
 		else
 			doPlayerDisablePvp(cid)
-		end		
-	end
-	
+		end
+		
+		doPlayerAddBlessing(cid, 1)
+		doPlayerAddBlessing(cid, 2)
+		doPlayerAddBlessing(cid, 3)
+		doPlayerAddBlessing(cid, 4)
+		doPlayerAddBlessing(cid, 5)		
+	end	
 	
 	setStagesOnLogin(cid)
 
@@ -87,7 +92,7 @@ function onLogin(cid)
 	end
 	
 	--Give basic itens after death
-	if getPlayerStorageValue(cid, sid.GIVE_ITEMS_AFTER_DEATH) == 1 then
+	if getPlayerStorageValue(cid, sid.GIVE_ITEMS_AFTER_DEATH) == 1 then	
 		if getPlayerSlotItem(cid, CONST_SLOT_BACKPACK).uid == 0 then
 			local item_backpack = doCreateItemEx(1988, 1) -- backpack
 			
@@ -99,6 +104,19 @@ function onLogin(cid)
 			doPlayerAddItemEx(cid, item_backpack, FALSE, CONST_SLOT_BACKPACK)
 		end
 		setPlayerStorageValue(cid, sid.GIVE_ITEMS_AFTER_DEATH, -1)
+	end
+	
+	-- Bless for low levels
+	if getPlayerStorageValue(cid, sid.GIVE_BLESS_AFTER_DEATH) == 1 then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Você morreu, mas não desanime! Você recebeu todas as blessings de graça. Este benefício continuará até que você chegue no nível 80. Tome mais cuidado! Bom jogo!")
+	
+		doPlayerAddBlessing(cid, 1)
+		doPlayerAddBlessing(cid, 2)
+		doPlayerAddBlessing(cid, 3)
+		doPlayerAddBlessing(cid, 4)
+		doPlayerAddBlessing(cid, 5)
+		
+		setPlayerStorageValue(cid, sid.GIVE_BLESS_AFTER_DEATH, -1)
 	end
 	
 	setPlayerStorageValue(cid, sid.TRAINING_SHIELD, 0)

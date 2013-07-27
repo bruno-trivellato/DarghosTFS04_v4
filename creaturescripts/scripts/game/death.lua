@@ -4,6 +4,10 @@ function onDeath(cid, corpse, deathList)
 		setPlayerStorageValue(cid, sid.GIVE_ITEMS_AFTER_DEATH, 1)
 		deathInDemonOak(cid)
 		Arena.onDeath(cid)
+		
+		if(getPlayerLevel(cid) < 80 and getCreatureSkull(cid) < SKULL_WHITE) then
+			setPlayerStorageValue(cid, sid.GIVE_BLESS_AFTER_DEATH, 1)
+		end
 	end	
 	
 	if(isMonster(cid)) then

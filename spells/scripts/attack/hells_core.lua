@@ -3,8 +3,8 @@ setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_FIREDAMAGE)
 setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_FIREAREA)
 
 function onGetFormulaValues(cid, level, maglevel)
-    local minMult = 7.5
-    local maxMult = 12
+    local minMult = 8.25
+    local maxMult = 13.2
 
     local minDmg = -((level / 3) + (maglevel * minMult))
     local maxDmg = -((level / 3) + (maglevel * maxMult))

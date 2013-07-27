@@ -11,6 +11,11 @@ function onGetFormulaValues(cid, level, maglevel)
     local min = ((level / 3) + (maglevel * minMult))
     local max = ((level / 3) + (maglevel * maxMult))
 	
+	if(isSorcerer(cid)) then
+		min = math.floor(min * 1.1)
+		min = math.floor(max * 1.1)
+	end
+	
 	local baseMin = min
 	local baseMax = max
 	
