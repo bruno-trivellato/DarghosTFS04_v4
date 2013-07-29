@@ -1453,16 +1453,16 @@ end
 
 function addPremiumTest(cid)
 
-	doPlayerAddPremiumDays(cid, 7)
+	doPlayerAddPremiumDays(cid, darghos_premium_test_quanty)
 	local account = getPlayerAccountId(cid)
 	db.executeQuery("INSERT INTO `wb_premiumtest` VALUES ('" .. account .. "', '" .. os.time() .. "');")
-	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Parabens! Este é o seu primeiro personagem a atingir o level 150! No Darghos todos personagens de level inferior a 150 possuem acesso gratuito e sem limitações a todos benéficios de Premium, após este level é necessário possuir Dias de Premium, maiores informações sobre como os adquirir podem ser encontrados em nosso website (www.darghos.com.br).\nPorem, por este ser seu primeiro personagem a atingir level 150 você receberá mais uma semana de benéficios Premium gratuitamente! Boa sorte!")
+	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Parabens! Este é o seu primeiro personagem a atingir o level " .. darghos_premium_test_level .."! No Darghos todos personagens de level inferior a " .. darghos_premium_test_level .." possuem acesso gratuito e sem limitações a todos benéficios de Premium, após este level é necessário possuir Dias de Premium, maiores informações sobre como os adquirir podem ser encontrados em nosso website (www.darghos.com.br).\nPorem, por este ser seu primeiro personagem a atingir level " .. darghos_premium_test_level .." você receberá mais uma semana de benéficios Premium gratuitamente! Boa sorte!")
 	sendEnvolveEffect(cid, CONST_ME_HOLYAREA)
 end
 
 function canReceivePremiumTest(cid, newlevel)
 
-	if(newlevel < darghos_premium_test_level) then
+	if(darghos_premium_test_level == 0 or newlevel < darghos_premium_test_level) then
 		return false
 	end
 
@@ -1515,9 +1515,10 @@ function notifyValidateEmail(cid)
 	local message = "Caro " .. getCreatureName(cid) ..",\n\n"
 	message = message .. "Você ainda não registrou um e-mail valido em sua conta. Lembre-se que por isso\n"
 	message = message .. "sua conta não esta segura e você não conseguirá recuperar-la caso perda seus dados de acesso!\n\n"
-	message = message .. "Os seguintes recursos também estarão disponiveis para sua conta após o registro do e-mail:\n\n"
-	message = message .. " - Obter uma conta Premium.\n"
-	message = message .. " - Receber a Premium Test ao atingir level 150.\n"
+	message = message .. "As seguintes vantagens também serão desbloqueadas em sua conta após o registro do e-mail:\n\n"
+	message = message .. " - Comprar um premium ticket em nossa loja Darghos.\n"
+	message = message .. " - Usar um premium ticket.\n"
+	message = message .. " - Receber instantaneamente 10 dias gratuitos para testar.\n"
 	message = message .. " - Gerar uma chave de recuperação.\n\n"
 	message = message .. "Acesse o website o mais breve possivel e registre o e-mail de sua conta!\n"
 	message = message .. "www.darghos.com.br\n\n"

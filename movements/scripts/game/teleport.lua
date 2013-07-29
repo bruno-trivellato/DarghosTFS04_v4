@@ -32,6 +32,12 @@ function onStepIn(cid, item, position, fromPosition)
 		return TRUE
 	end
 	
+	if(item.actionid == aid.TELEPORT_NO_SKULLS and getCreatureSkull(cid) >= SKULL_WHITE) then
+			doPlayerSendCancel(cid, "You have blood in your hands. The destination of this portal os not for you.")
+			pushBack(cid, position, fromPosition)
+			return false
+	end
+	
 	if(item.actionid == aid.INQ_UNGREEZ_PORTAL and not onEnterInUngreezPortal(cid, position, fromPosition)) then
 		pushBack(cid, position, fromPosition)
 		return false
