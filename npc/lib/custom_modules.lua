@@ -149,6 +149,8 @@ function D_CustomNpcModules.pvpBless(cid, message, keywords, parameters, node)
 
 	if(getPlayerPVPBlessing(cid)) then
 		npcHandler:say("De novo? Os deuses já lhe abençoaram!", cid)
+	elseif(getCreatureSkull(cid) >= SKULL_WHITE) then
+		npcHandler:say("Você tem sangue em suas mãos! Caia fora daqui!", cid)
 	elseif(not doPlayerRemoveMoney(cid, price)) then
 		npcHandler:say("Você não tem moedas sulficientes para a benção...", cid)
 	else
@@ -190,8 +192,10 @@ function D_CustomNpcModules.inquisitionBless(cid, message, keywords, parameters,
 
 		if(getPlayerBlessing(cid, 1) or getPlayerBlessing(cid, 2) or getPlayerBlessing(cid, 3) or getPlayerBlessing(cid, 4) or getPlayerBlessing(cid, 5)) then
 			npcHandler:say("Você já possui uma ou mais benções, eu somente posso abençoar quem não foi abençoado por nenhum Deus.", cid)
+		elseif(getCreatureSkull(cid) >= SKULL_WHITE) then
+			npcHandler:say("Você tem sangue em suas mãos! Caia fora daqui!", cid)				
 		elseif(not doPlayerRemoveMoney(cid, price)) then
-			npcHandler:say("Você não tem dinheiro sulficiente. Em seu level, são necessarios " .. price .. " gold coins.", cid)
+			npcHandler:say("Você não tem dinheiro sulficiente. Em seu level, são necessarios " .. price .. " gold coins.", cid)		
 		else
 			npcHandler:say("Você recebeu todas as benções! Você esta completamente protegido!", cid)
 			
@@ -213,6 +217,10 @@ function D_CustomNpcModules.getBlessPrice(cid, params)
 
 	if(params.cost ~= 0) then
 		return params.cost
+	end
+	
+	if(getCreatureSkull(cid) >= SKULL_WHITE) then
+		params.levelCost = params.levelCost * 1.5
 	end
 
 	local levels = math.max(params.startLevel, math.min(params.endLevel, getPlayerLevel(cid))) - params.startLevel
@@ -306,8 +314,17 @@ function D_CustomNpcModules.parseCustomParameters(keywordHandler, npcHandler)
 	local addon_item = NpcSystem.getParameter("call_addon_item")
 	if(addon_item ~= nil) then
 		local addon_func = ADDON_ITEMS[addon_item]
-		addon_func(keywordHandler, npcHandler)		
+		addon_func(keywordHandler, npcHandler)
 	end
+	
+	local zone_id = tonumber(NpcSystem.getParameter("daily_zone"))
+	if(zone_id ~= nil) then
+		local quest_id = tonumber(NpcSystem.getParameter("daily_quest"))
+		if((quest_id) ~= nil) then
+			local dailyModule = DailyModule:new(npcHandler, keywordHandler, zone_id, quest_id)
+			dailyModule:build()
+		end
+	end	
 end
 
 function D_CustomNpcModules.parseTradeLists(shopModule, trade_lists)

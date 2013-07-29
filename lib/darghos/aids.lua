@@ -96,6 +96,8 @@
 		KOSHEI_STATUE_1				= 4073,
 		KOSHEI_STATUE_2				= 4074,
 		
+		TELEPORT_NO_SKULLS			= 4075,
+		
 		--STORE_TELEPORT_BACK				= 4075,
 		
 		
