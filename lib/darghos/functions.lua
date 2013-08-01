@@ -1456,19 +1456,21 @@ function addPremiumTest(cid)
 	doPlayerAddPremiumDays(cid, darghos_premium_test_quanty)
 	local account = getPlayerAccountId(cid)
 	db.executeQuery("INSERT INTO `wb_premiumtest` VALUES ('" .. account .. "', '" .. os.time() .. "');")
-	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Parabens! Este é o seu primeiro personagem a atingir o level " .. darghos_premium_test_level .."! No Darghos todos personagens de level inferior a " .. darghos_premium_test_level .." possuem acesso gratuito e sem limitações a todos benéficios de Premium, após este level é necessário possuir Dias de Premium, maiores informações sobre como os adquirir podem ser encontrados em nosso website (www.darghos.com.br).\nPorem, por este ser seu primeiro personagem a atingir level " .. darghos_premium_test_level .." você receberá mais uma semana de benéficios Premium gratuitamente! Boa sorte!")
+	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Parabens! Você recebeu 10 dias de conta premium no Darghos gratuitamente! Aproveite e divirta-se!")
 	sendEnvolveEffect(cid, CONST_ME_HOLYAREA)
 end
 
 function canReceivePremiumTest(cid, newlevel)
 
+	--[[
 	if(darghos_premium_test_level == 0 or newlevel < darghos_premium_test_level) then
 		return false
-	end
+	end	
 
 	if(isPremium(cid)) then
 		return false
 	end
+	]]
 
 	local account = getPlayerAccountId(cid)
 	

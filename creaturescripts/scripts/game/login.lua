@@ -60,7 +60,7 @@ function onLogin(cid)
 	--doPlayerOpenChannel(cid, CUSTOM_CHANNEL_PVP)
 	
 	-- premium test
-	if(canReceivePremiumTest(cid, getPlayerLevel(cid))) then
+	if(canReceivePremiumTest(cid)) then
 		addPremiumTest(cid)
 	end	
 	
