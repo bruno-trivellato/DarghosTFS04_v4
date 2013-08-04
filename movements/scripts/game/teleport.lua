@@ -38,6 +38,12 @@ function onStepIn(cid, item, position, fromPosition)
 			return false
 	end
 	
+	if(item.actionid == aid.TELEPORT_NO_SKULLS and not darghos_enable_trainers) then
+			doPlayerSendCancel(cid, "Trainers desativados no momento. Tente novamente mais tarde!")
+			pushBack(cid, position, fromPosition)
+			return false
+	end
+	
 	if(item.actionid == aid.INQ_UNGREEZ_PORTAL and not onEnterInUngreezPortal(cid, position, fromPosition)) then
 		pushBack(cid, position, fromPosition)
 		return false

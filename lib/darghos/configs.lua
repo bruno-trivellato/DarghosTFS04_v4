@@ -23,6 +23,9 @@ darghos_server_save_backup = false
 -- opções: true (ativo), false (desativo)
 darghos_use_record = false
 
+-- Trainers
+darghos_enable_trainers = false
+
 -- Darghos rates (double,  triple,  etc)
 darghos_exp_multipler = 1.0
 darghos_skills_multipler = 1.0
