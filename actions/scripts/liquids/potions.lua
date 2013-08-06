@@ -31,7 +31,7 @@ local POTIONS = {
 
 local exhaust = createConditionObject(CONDITION_EXHAUST)
 setConditionParam(exhaust, CONDITION_PARAM_TICKS, 1000)
-setConditionParam(exhaust, CONDITION_PARAM_SUBID, EXHAUST_OTHER)
+setConditionParam(exhaust, CONDITION_PARAM_SUBID, EXHAUST_HEALING)
 
 function onUse(cid, item, fromPosition, itemEx, toPosition)
 	local potion = POTIONS[item.itemid]
@@ -63,7 +63,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		return true
 	end
 
-	if(hasCondition(cid, CONDITION_EXHAUST, EXHAUST_OTHER)) then
+	if(hasCondition(cid, CONDITION_EXHAUST, EXHAUST_HEALING)) then
 		doPlayerSendDefaultCancel(cid, RETURNVALUE_YOUAREEXHAUSTED)
 		return true
 	end
