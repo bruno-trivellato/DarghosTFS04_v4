@@ -62,7 +62,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		return true
 	end
 
-	if(hasCondition(cid, CONDITION_EXHAUST, EXHAUST_HEALING)) then
+	if(hasCondition(cid, CONDITION_EXHAUST)) then
 		doPlayerSendDefaultCancel(cid, RETURNVALUE_YOUAREEXHAUSTED)
 		return true
 	end
