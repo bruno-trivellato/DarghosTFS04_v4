@@ -335,6 +335,8 @@ bool ConfigManager::load()
 	m_confNumber[RATE_GOLD_LOOT] = getGlobalNumber("rateGoldLoot", 1);
 	m_confBool[PLAYERS_CAN_HEAL_MONSTERS] = getGlobalBool("playersCanHealMonsters", false);
 	m_confNumber[MAX_FREE_PREMIUM_LEVEL] = getGlobalNumber("maxFreePremiumLevel", 150);
+	m_confNumber[IN_PVP_HEALING_DECREASE_PERCENT] = getGlobalNumber("inPvpHealingDecreasePercent", 0);
+	m_confNumber[IN_PVP_HEALING_DECREASE_DURATION] = getGlobalNumber("inPvpHealingDecreaseDuration", 60);
 #endif
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__

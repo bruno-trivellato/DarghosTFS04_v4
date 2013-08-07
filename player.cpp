@@ -3970,6 +3970,20 @@ void Player::onAttackedCreature(Creature* target)
 		pzLocked = true;
 		sendIcons();
 	}
+
+	if(g_config.getNumber(ConfigManager::IN_PVP_HEALING_DECREASE_PERCENT) > 0 && !isPartner(targetPlayer)){
+		if(hasCondition(CONDITION_DECREASE_HEALING))
+			removeCondition(CONDITION_DECREASE_HEALING);
+
+		if(targetPlayer->hasCondition(CONDITION_DECREASE_HEALING))
+			targetPlayer->removeCondition(CONDITION_DECREASE_HEALING);
+
+		if(Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT,
+			CONDITION_DECREASE_HEALING, g_config.getNumber(ConfigManager::IN_PVP_HEALING_DECREASE_DURATION))){
+			addCondition(condition);
+			targetPlayer->addCondition(condition);
+		}
+	}
 	#endif
 	
 	if(Combat::isInPvpZone(this, targetPlayer) || isPartner(targetPlayer) || isAlly(targetPlayer) ||

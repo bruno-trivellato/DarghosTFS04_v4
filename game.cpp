@@ -4469,6 +4469,9 @@ bool Game::combatChangeHealth(CombatType_t combatType, Creature* attacker, Creat
 		Player* p_attacker = NULL;
 		if(attacker && target && (p_attacker = attacker->getPlayer()))
 		{
+			if(p_attacker->hasCondition(CONDITION_DECREASE_HEALING))
+				healthChange -= std::floor((double)healthChange * g_config.getNumber(ConfigManager::IN_PVP_HEALING_DECREASE_PERCENT));
+
 		    //nenhum player pode healar monstros mais...
 		    if(!g_config.getBool(ConfigManager::PLAYERS_CAN_HEAL_MONSTERS) && target->getMonster() && !target->isPlayerSummon())
                 return false;
