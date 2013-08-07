@@ -28,7 +28,7 @@ local function checkCastMana(cid)
 			doPlayerAddMana(cid, -(manachange), false)
 			doPlayerAddManaSpent(cid, manachange)
 			doSendMagicEffect(getPlayerPosition(cid), CONST_ME_MAGIC_BLUE)
-			doCreatureSay(cid, "Automana...", TALKTYPE_MONSTER)
+			--doCreatureSay(cid, "Automana...", TALKTYPE_MONSTER)
 			doAddCondition(cid, castManaExhaust)
 		end
 	end	
