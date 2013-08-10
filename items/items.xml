@@ -15170,6 +15170,7 @@
 		<attribute key="weight" value="2900" />
 		<attribute key="weaponType" value="wand" />
 		<attribute key="shootType" value="death" />
+		<attribute key="attackSpeed" value="1250" />
 		<attribute key="range" value="3" />
 	</item>
 	<item id="8911" article="a" name="northwind rod">
@@ -15214,6 +15215,7 @@
 		<attribute key="weight" value="2850" />
 		<attribute key="weaponType" value="wand" />
 		<attribute key="shootType" value="death" />
+		<attribute key="attackSpeed" value="700" />
 		<attribute key="range" value="3" />
 	</item>
 	<item id="8923" name="ranger legs">

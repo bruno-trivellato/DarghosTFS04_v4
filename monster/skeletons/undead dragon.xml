@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Undead Dragon" nameDescription="a undead dragon" race="undead" experience="7200" speed="300" manacost="0">
+<monster name="Undead Dragon" nameDescription="a undead dragon" race="undead" experience="13600" speed="300" manacost="0">
 	<health now="8350" max="8350"/>
 	<look type="231" corpse="6306"/>
 	<targetchange interval="5000" chance="8"/>
@@ -53,9 +53,9 @@
 		<element deathPercent="100"/>
 		<element earthPercent="100"/>
 		<element firePercent="100"/>
-		<element physicalPercent="10"/>
-		<element icePercent="8"/>
-		<element holyPercent="-20"/>
+		<element physicalPercent="5"/>
+		<element icePercent="50"/>
+		<element holyPercent="-25"/>
 	</elements>
 	<immunities>
 		<immunity paralyze="1"/>
@@ -77,6 +77,7 @@
 		<item id="6300" chance="6750"/><!-- death ring -->
 		<item id="7591" chance="10000"/><!-- great health potion -->
 		<item id="2033" chance="3333"/><!-- golden mug -->
+		<item id="7402" chance="1000"/><!-- dragon slayer -->
 		<item id="7365" countmax="10" chance="22000"/><!-- onyx arrow -->
 		<item id="2547" countmax="6" chance="3000"/><!-- power bolt -->
 		<item id="1987" chance="100000"><!-- bag -->
@@ -85,16 +86,18 @@
 				<item id="5944" chance="7000"/><!-- soul orb -->
 				<item id="9810" chance="2000"/><!-- rusty armor -->
 				<item id="7430" chance="4000"/><!-- dragonbone staff -->
-				<item id="2476" chance="3500"/><!-- knight armor -->
+				<item id="2476" chance="5000"/><!-- knight armor -->
 	
 				<item id="5925" chance="1250"/><!-- hardened bone -->
 				<item id="8910" chance="1000"/><!-- underworld rod -->
 				<item id="9971" chance="900"/><!-- gold ingot -->
-				<item id="2498" chance="1000"/><!-- royal helmet -->
-				<item id="2454" chance="700"/><!-- war axe -->
+				<item id="2498" chance="1600"/><!-- royal helmet -->
+				<item id="2454" chance="1400"/><!-- war axe -->
 				<item id="2492" chance="1000"/><!-- dragon scale mail -->
-				<item id="2466" chance="650"/><!-- golden armor -->
-				<item id="5741" chance="600"/><!-- skull helmet -->
+				<item id="2466" chance="666"/><!-- golden armor -->
+				<item id="5741" chance="666"/><!-- skull helmet -->
+				<item id="8889" chance="150"/><!-- skullcracker armor -->
+				<item id="11355" chance="666"/><!-- spellweaver's robe -->
 				<item id="8885" chance="400"/><!-- divine plate -->	
 			</inside>
 		</item>

@@ -305,7 +305,7 @@
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>
 	</instant>
-	<instant name="Ethereal Spear" words="exori con" lvl="23" range="7" mana="25" exhaustion="1500" prem="0" needtarget="1" aggressive="1" script="attack/ethereal_spear.lua">
+	<instant name="Ethereal Spear" words="exori con" lvl="23" range="7" mana="80" exhaustion="1500" prem="0" needtarget="1" aggressive="1" script="attack/ethereal_spear.lua">
 		<vocation name="Paladin"/>  <vocation name="Royal Paladin"/>
 	</instant>
 	<instant name="Summon Creature" words="utevo res" lvl="25" exhaustion="1500" params="1" function="summonMonster">
