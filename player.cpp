@@ -3972,17 +3972,17 @@ void Player::onAttackedCreature(Creature* target)
 	}
 
 	if(g_config.getNumber(ConfigManager::IN_PVP_HEALING_DECREASE_PERCENT) > 0 && !isPartner(targetPlayer)){
-		if(hasCondition(CONDITION_DECREASE_HEALING))
-			removeCondition(CONDITION_DECREASE_HEALING);
 
-		if(targetPlayer->hasCondition(CONDITION_DECREASE_HEALING))
-			targetPlayer->removeCondition(CONDITION_DECREASE_HEALING);
+		removeCondition(CONDITION_DECREASE_HEALING);
+		targetPlayer->removeCondition(CONDITION_DECREASE_HEALING);
 
 		if(Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT,
-			CONDITION_DECREASE_HEALING, g_config.getNumber(ConfigManager::IN_PVP_HEALING_DECREASE_DURATION))){
+			CONDITION_DECREASE_HEALING, g_config.getNumber(ConfigManager::IN_PVP_HEALING_DECREASE_DURATION)))
 			addCondition(condition);
+
+		if(Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT,
+			CONDITION_DECREASE_HEALING, g_config.getNumber(ConfigManager::IN_PVP_HEALING_DECREASE_DURATION)))
 			targetPlayer->addCondition(condition);
-		}
 	}
 	#endif
 	
@@ -4250,12 +4250,20 @@ void Player::onGainSharedExperience(double& gainExp, bool fromMonster, bool)
 
 bool Player::isImmune(CombatType_t type) const
 {
+#ifdef __DARGHOS_EMERGENCY_DDOS__
+	return g_game.isUnderDDoS() || hasCustomFlag(PlayerCustomFlag_IsImmune) || Creature::isImmune(type);
+#else
 	return hasCustomFlag(PlayerCustomFlag_IsImmune) || Creature::isImmune(type);
+#endif
 }
 
 bool Player::isImmune(ConditionType_t type) const
 {
+#ifdef __DARGHOS_EMERGENCY_DDOS__
+	return g_game.isUnderDDoS() || hasCustomFlag(PlayerCustomFlag_IsImmune) || Creature::isImmune(type);
+#else
 	return hasCustomFlag(PlayerCustomFlag_IsImmune) || Creature::isImmune(type);
+#endif
 }
 
 bool Player::isAttackable() const

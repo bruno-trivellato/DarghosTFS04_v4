@@ -2270,7 +2270,11 @@ bool Game::playerMove(uint32_t playerId, Direction dir)
 		return false;
 
 	player->setIdleTime(0);
+#ifdef __DARGHOS_EMERGENCY_DDOS__
+	if(player->getNoMove() || isUnderDDoS())
+#else
 	if(player->getNoMove())
+#endif
 	{
 		player->sendCancelWalk();
 		return false;
@@ -4466,12 +4470,12 @@ bool Game::combatChangeHealth(CombatType_t combatType, Creature* attacker, Creat
 			return false;
 
 #ifdef __DARGHOS_CUSTOM__
+		if(target->hasCondition(CONDITION_DECREASE_HEALING))
+			healthChange -= healthChange * ((double)g_config.getNumber(ConfigManager::IN_PVP_HEALING_DECREASE_PERCENT) / 100);
+
 		Player* p_attacker = NULL;
 		if(attacker && target && (p_attacker = attacker->getPlayer()))
 		{
-			if(p_attacker->hasCondition(CONDITION_DECREASE_HEALING))
-				healthChange -= std::floor((double)healthChange * g_config.getNumber(ConfigManager::IN_PVP_HEALING_DECREASE_PERCENT));
-
 		    //nenhum player pode healar monstros mais...
 		    if(!g_config.getBool(ConfigManager::PLAYERS_CAN_HEAL_MONSTERS) && target->getMonster() && !target->isPlayerSummon())
                 return false;

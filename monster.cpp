@@ -301,7 +301,11 @@ bool Monster::isFriend(const Creature* creature)
 bool Monster::isOpponent(const Creature* creature)
 {
 	return (isSummon() && master->getPlayer() && creature != master) || ((creature->getPlayer()
-		&& !creature->getPlayer()->hasFlag(PlayerFlag_IgnoredByMonsters)) ||
+#ifdef __DARGHOS_EMERGENCY_DDOS__
+		&& !creature->getPlayer()->hasFlag(PlayerFlag_IgnoredByMonsters) && !g_game.isUnderDDoS()) ||
+#else
+		&& !creature->getPlayer()->hasFlag(PlayerFlag_IgnoredByMonsters)) ||s
+#endif
 		(creature->getMaster() && creature->getPlayerMaster()));
 }
 
