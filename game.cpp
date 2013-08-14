@@ -2496,6 +2496,11 @@ bool Game::playerAutoWalk(uint32_t playerId, std::list<Direction>& listDir)
 	if(!player || player->isRemoved())
 		return false;
 
+#ifdef __DARGHOS_EMERGENCY_DDOS__
+	if(player->getNoMove() || isUnderDDoS())
+		return false;
+#endif
+
 	player->setIdleTime(0);
 	if(player->hasCondition(CONDITION_GAMEMASTER, GAMEMASTER_TELEPORT))
 	{
@@ -6562,6 +6567,7 @@ void Game::emergencyDDoSLoop()
 	uint64_t lastTxBytes = getCurrentTxBytes();
 
     bool loop = true;
+	bool wasNotified = false;
 
     while(loop)
     {
@@ -6613,23 +6619,28 @@ void Game::emergencyDDoSLoop()
 			brokenRxBps = true;
 		if(avgTxBps >= g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE))
 			brokenTxBps = true;
+
+		if(brokenPps || brokenRxBps || brokenTxBps){
+			m_underDDoS = true;
+			m_lastDDoS = time(NULL);
+		}
 		
-        if(!m_underDDoS && (brokenPps || brokenRxBps || brokenTxBps))
+        if(m_underDDoS && !wasNotified)
         {
             //ok, we are under DDoS attacks
-            m_underDDoS = true;
-            m_lastDDoS = time(NULL);
+            wasNotified = true;
             std::clog << "[DDOS EMERGENCY] Emergency ENABLED." << std::endl;
             std::clog << "RX PPS " << avgPps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) << ")." << std::endl;
             std::clog << "RX BPS " << avgRxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE) << ")." << std::endl;
             std::clog << "TX BPS " << avgTxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE) << ")." << std::endl;
-            broadcastMessage("The server are under connection issues. If you die you will not lost notthing for while.", MSG_STATUS_WARNING);
+            broadcastMessage("Connection problems detected. For your security the game is \"PAUSED\" for now... Please wait...", MSG_STATUS_WARNING);
         }
-        else if(m_underDDoS && !brokenPps && !brokenRxBps && !brokenTxBps && time(NULL) >= m_lastDDoS + g_config.getNumber(ConfigManager::DDOS_EMERGENCY_MIN_TIME))
+        else if(m_underDDoS && time(NULL) >= m_lastDDoS + g_config.getNumber(ConfigManager::DDOS_EMERGENCY_MIN_TIME))
         {
             m_underDDoS = false;
+			wasNotified = false;
             std::clog << "[DDOS EMERGENCY] Emergency disabled." << std::endl;
-            broadcastMessage("Our connection is fine. Warning: If you die you will lost items and stats normally.", MSG_STATUS_WARNING);
+            broadcastMessage("Connection now is fine! The game was unpaused. Thanks for your patience!", MSG_STATUS_WARNING);
         }	
 		
         lastRxPackets = currentRxPackets;
