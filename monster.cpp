@@ -488,7 +488,7 @@ BlockType_t Monster::blockHit(Creature* attacker, CombatType_t combatType, int32
 bool Monster::isTarget(Creature* creature)
 {
 #ifdef __DARGHOS_EMERGENCY_DDOS__
-	return (!creature->isRemoved() && !g_game.isUnderDDoS() && creature->isAttackable() && creature->getZone() != ZONE_PROTECTION
+	return (!hasCondition(CONDITION_STUN) && !creature->isRemoved() && !g_game.isUnderDDoS() && creature->isAttackable() && creature->getZone() != ZONE_PROTECTION
 #else
 	return (!creature->isRemoved() && creature->isAttackable() && creature->getZone() != ZONE_PROTECTION
 #endif
@@ -759,6 +759,15 @@ void Monster::onThinkTarget(uint32_t interval)
 
 void Monster::onThinkDefense(uint32_t interval)
 {
+#ifdef __DARGHOS_CUSTOM__
+	if(hasCondition(CONDITION_STUN)){
+		resetTicks = false;
+		defenseTicks = 0;
+
+		return;
+	}
+#endif
+
 	resetTicks = true;
 	defenseTicks += interval;
 	for(SpellList::iterator it = mType->spellDefenseList.begin(); it != mType->spellDefenseList.end(); ++it)

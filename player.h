@@ -628,6 +628,18 @@ class Player : public Creature, public Cylinder
 		virtual Creature* getCreature() {return this;}
 		virtual const Creature* getCreature() const {return this;}
 
+#ifdef __DARGHOS_CUSTOM__
+		virtual void setNoMove(bool _cannotMove)
+		{	
+			if(!cannotMove)
+				sendChangeSpeed(this, 0);
+			else
+				sendChangeSpeed(this, getStepSpeed());
+
+			Creature::setNoMove(_cannotMove);
+		}
+#endif
+
 		//container
 		void onAddContainerItem(const Container* container, const Item* item);
 		void onUpdateContainerItem(const Container* container, uint8_t slot,

@@ -2276,6 +2276,7 @@ bool Game::playerMove(uint32_t playerId, Direction dir)
 	if(player->getNoMove())
 #endif
 	{
+		player->sendCancelMessage(RET_NOTPOSSIBLE);
 		player->sendCancelWalk();
 		return false;
 	}
@@ -2498,7 +2499,11 @@ bool Game::playerAutoWalk(uint32_t playerId, std::list<Direction>& listDir)
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
 	if(player->getNoMove() || isUnderDDoS())
+	{
+		player->sendCancelMessage(RET_NOTPOSSIBLE);
+		player->sendCancelWalk();
 		return false;
+	}
 #endif
 
 	player->setIdleTime(0);
@@ -3586,11 +3591,13 @@ bool Game::playerLookAt(uint32_t playerId, const Position& pos, uint16_t spriteI
 
 	if(player->hasCustomFlag(PlayerCustomFlag_CanSeeCreatureDetails))
 	{
-		if(const Creature* creature = thing->getCreature())
+		if(Creature* creature = thing->getCreature())
 		{
 			ss << std::endl << "Health: [" << creature->getHealth() << " / " << creature->getMaxHealth() << "]";
 			if(creature->getMaxMana() > 0)
 				ss << ", Mana: [" << creature->getMana() << " / " << creature->getMaxMana() << "]";
+
+			ss << ", Speed: [" << creature->getBaseSpeed() << " / " << creature->getSpeed() << "]";
 
 			ss << ".";
 			if(const Player* destPlayer = creature->getPlayer())
