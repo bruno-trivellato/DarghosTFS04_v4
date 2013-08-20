@@ -1399,24 +1399,6 @@ bool Creature::addCondition(Condition* condition)
 	if(!condition)
 		return false;
 
-#ifdef __DARGHOS_CUSTOM__
-	if(condition->getType() == CONDITION_STUN){
-		if(hasCondition(CONDITION_STUN_IMMUNE)){
-			g_game.internalCreatureSay(this, SPEAK_MONSTER_SAY, "Immune!", isGhost());
-			return false;
-		}
-
-		if(getPlayer()){
-			condition->setTicks(condition->getTicks() / 2);
-		}
-
-		Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT, CONDITION_STUN_IMMUNE, (1000 * 15) + condition->getTicks());
-		addCondition(condition);
-
-		setNoMove(true);
-	}
-#endif
-
 	bool hadCondition = hasCondition(condition->getType(), -1, false);
 	if(Condition* previous = getCondition(condition->getType(), condition->getId(), condition->getSubId()))
 	{
