@@ -626,13 +626,6 @@ bool Spell::checkSpell(Player* player) const
 	if(!isEnabled())
 		return false;
 
-#ifdef __DARGHOS_CUSTOM__
-	if(player->hasCondition(CONDITION_STUN)){
-		player->sendCancelMessage(RET_NOTPOSSIBLE);
-		return false;
-	}
-#endif
-
 	bool exhausted = false;
 	if(isAggressive)
 	{

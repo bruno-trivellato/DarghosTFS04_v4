@@ -3865,17 +3865,8 @@ void Player::onAddCombatCondition(ConditionType_t type, bool)
 			tmp = "drunk";
 			break;
 		case CONDITION_PARALYZE:
-#ifdef __DARGHOS_CUSTOM__
-			tmp = "slow";
-#else
-			tmp = "paralyzed";
-#endif
-			break;
-#ifdef __DARGHOS_CUSTOM__
-		case CONDITION_STUN:
 			tmp = "paralyzed";
 			break;
-#endif
 		/*case CONDITION_MANASHIELD:
 			tmp = "protected by a magic shield";
 			break;

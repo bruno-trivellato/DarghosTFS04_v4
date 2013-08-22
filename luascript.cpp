@@ -7053,7 +7053,26 @@ int32_t LuaInterface::luaDoAddCondition(lua_State* L)
 		return 1;
 	}
 
+	#ifdef __DARGHOS_CUSTOM__
+	//hack to Paralyze on players
+	if(condition->getType() == CONDITION_PARALYZE){
+		if(Player* player = creature->getPlayer()){
+	
+			uint32_t speed = player->getSpeed() - 100;
+			Condition* temp_condition = Condition::createCondition(CONDITIONID_DEFAULT, CONDITION_PARALYZE, condition->getTicks(), -speed);
+			creature->addCondition(temp_condition);
+
+			lua_pushboolean(L, true);
+			return 1;
+		}
+	}
+
 	creature->addCondition(condition->clone());
+	#else
+	creature->addCondition(condition->clone());
+	#endif
+
+	
 	lua_pushboolean(L, true);
 	return 1;
 }

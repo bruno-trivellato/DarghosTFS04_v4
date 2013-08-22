@@ -231,8 +231,6 @@ Condition* Condition::createCondition(ConditionId_t _id, ConditionType_t _type, 
 		case CONDITION_GAMEMASTER:
 #ifdef __DARGHOS_CUSTOM__
 		case CONDITION_DECREASE_HEALING:
-		case CONDITION_STUN:
-		case CONDITION_STUN_IMMUNE:
 #endif
 			return new ConditionGeneric(_id, _type, _ticks, _buff, _subId);
 
@@ -1307,13 +1305,8 @@ void ConditionSpeed::setFormulaVars(float _mina, float _minb, float _maxa, float
 
 void ConditionSpeed::getFormulaValues(int32_t var, int32_t& min, int32_t& max) const
 {
-#ifdef __DARGHOS_CUSTOM__
-	min = (int32_t)std::ceil((var + minb) * 1.f * mina);
-	max = (int32_t)std::ceil((var + maxb) * 1.f * maxa);
-#else
 	min = (int32_t)std::ceil(var * 1.f * mina + minb);
 	max = (int32_t)std::ceil(var * 1.f * maxa + maxb);
-#endif
 }
 
 bool ConditionSpeed::setParam(ConditionParam_t param, int32_t value)

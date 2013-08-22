@@ -221,11 +221,6 @@ void Creature::onAttacking(uint32_t interval)
 	if(!attackedCreature)
 		return;
 
-#ifdef __DARGHOS_CUSTOM__
-	if(hasCondition(CONDITION_STUN))
-		return;
-#endif
-
 	CreatureEventList attackEvents = getCreatureEvents(CREATURE_EVENT_ATTACK);
 	for(CreatureEventList::iterator it = attackEvents.begin(); it != attackEvents.end(); ++it)
 	{
@@ -1207,12 +1202,6 @@ void Creature::onEndCondition(ConditionType_t type)
 {
 	if(type == CONDITION_INVISIBLE && !hasCondition(CONDITION_INVISIBLE, -1, false))
 		g_game.internalCreatureChangeVisible(this, VISIBLE_APPEAR);
-
-#ifdef __DARGHOS_CUSTOM__
-	if(type == CONDITION_STUN){
-		setNoMove(false);	
-	}
-#endif
 }
 
 void Creature::onTickCondition(ConditionType_t type, int32_t, bool& _remove)
