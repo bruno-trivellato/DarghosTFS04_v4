@@ -6620,7 +6620,7 @@ void Game::emergencyDDoSLoop()
 		bool brokenPps, brokenRxBps, brokenTxBps;
 		brokenPps = brokenRxBps = brokenTxBps = false;
 		
-		if(rxPpsRecords.size() > 3){
+		if(rxPpsRecords.size() >= 3){
 			if(avgPps >= g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) || avgPps == 0)
 				brokenPps = true;
 			if(avgRxBps >= g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE))
