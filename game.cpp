@@ -6575,6 +6575,7 @@ void Game::emergencyDDoSLoop()
 
     bool loop = true;
 	bool wasNotified = false;
+	uint32_t internal_count = 0;
 
     while(loop)
     {
@@ -6633,6 +6634,19 @@ void Game::emergencyDDoSLoop()
 			m_underDDoS = true;
 			m_lastDDoS = time(NULL);
 		}
+
+		if(internal_count == 30){
+			std::clog << "[CONNECTION LOAD] Periodic statistics." <<  std::endl;
+			std::clog << "RX PPS " << avgPps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) << "), ";
+			std::clog << "RX BPS " << avgRxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE) << "), ";
+			std::clog << "TX BPS " << avgTxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE) << ")." << std::endl;
+
+			internal_count = 0;
+		}
+		else{
+			internal_count++;
+		}
+
 		
         if(m_underDDoS && !wasNotified)
         {
