@@ -76,6 +76,12 @@ Player::Player(const std::string& _name, ProtocolGame* p):
     lastBattlegroundDeath = 0;
 #endif
 
+#ifdef __DARGHOS_CUSTOM__
+    pvpStatus = true;
+    m_lastdeath_experience_loss = 0;
+    m_lastdeath_blessings_loss = m_lastdeath_items_loss = 0;
+#endif
+
 	lastAttackBlockType = BLOCK_NONE;
 	chaseMode = CHASEMODE_STANDSTILL;
 	fightMode = FIGHTMODE_ATTACK;
@@ -880,6 +886,10 @@ void Player::dropLoot(Container* corpse)
 	}
 
 	uint32_t itemLoss = (uint32_t)std::floor((5. + loss) * lossPercent[LOSS_ITEMS] / 1000.);
+
+#ifdef __DARGHOS_CUSTOM__
+    m_lastdeath_items_loss = 0;
+#endif
 	for(int32_t i = SLOT_FIRST; i < SLOT_LAST; ++i)
 	{
 		Item* item = inventory[i];
@@ -891,6 +901,9 @@ void Player::dropLoot(Container* corpse)
 		{
 			g_game.internalMoveItem(NULL, this, corpse, INDEX_WHEREEVER, item, item->getItemCount(), 0);
 			sendRemoveInventoryItem((slots_t)i, inventory[(slots_t)i]);
+#ifdef __DARGHOS_CUSTOM__
+            m_lastdeath_items_loss++;
+#endif
 		}
 	}
 }
@@ -2309,12 +2322,33 @@ bool Player::onDeath()
     {
         setLossSkill(false);
         setDropLoot(LOOT_DROP_NONE);
-        sendTextMessage(MSG_EVENT_ADVANCE, "Voc� morreu enquanto o servidor estava sofrendo ataques DDoS, nenhuma penalidade foi aplicada a sua morte e voc� ser� apenas levado ao templo, desculpe pelo transtorno.");
+        sendTextMessage(MSG_EVENT_ADVANCE, "You died when your server are under connections issues. You was only teleported to the temple with no one death penalty.");
     }
 #endif
 	else if(skull < SKULL_RED)
 	{
 		Item* item = NULL;
+
+#ifdef __DARGHOS_CUSTOM__
+        if(getBlessings() > 0){
+            if(getBlessings() == 5){
+                if(!isSecureDeath()) sendTextMessage(MSG_EVENT_ORANGE, "You died but not worry! You have all blessings and that reduced all losses of experience, magic and skills by 40% and also avoided you loss of any item.");
+                else {
+                    sendTextMessage(MSG_EVENT_ORANGE, "You died but not worry! You are lower level and has been blessed by the Gods reducing all your losses of experience, skills and magic and also avoiding you to loose any items.");
+                    sendTextMessage(MSG_EVENT_ORANGE, "You will continue to receive this special bless when you die since you are with no skulls until you got level 80. After you will need to buy regular blessings with NPCs.");
+                }
+                setDropLoot(LOOT_DROP_PREVENT);
+            }
+            else{
+                uint16_t blessReductionPercent = getBlessings() * g_config.getNumber(ConfigManager::BLESS_REDUCTION);
+                std::stringstream msg_string; msg_string << "You died and have " << getBlessings() << " blessings that reduced all losses of experience, magic and skills by " << blessReductionPercent << "%. Your items losses also has been reduced.";
+                sendTextMessage(MSG_EVENT_ORANGE, msg_string.str());
+            }
+        }
+        else{
+            sendTextMessage(MSG_EVENT_ORANGE, "You died and you don't have ANY blessings and now you loss a lot of experience, magic and skills, also you should lost some of your items... In the next time remember to buy blessings to reduce your losses when die.");
+        }
+#endif
 
 		for(int32_t i = SLOT_FIRST; ((skillLoss || lootDrop == LOOT_DROP_FULL) && i < SLOT_LAST); ++i)
 		{
@@ -2327,6 +2361,10 @@ bool Player::onDeath()
 			{
 				setDropLoot(LOOT_DROP_PREVENT);
 				preventDrop = item;
+#ifdef __DARGHOS_CUSTOM__
+                m_lastdeath_items_loss = -1;
+                sendTextMessage(MSG_EVENT_ORANGE, "You died and an item prevent you to drop all your items (ie: Amulet of Loss).");
+#endif
 			}
 
 			if(skillLoss && !preventLoss && it.abilities.preventLoss)
@@ -2339,7 +2377,7 @@ bool Player::onDeath()
 	uint32_t totalDamage = 0, pvpDamage = 0, enemiesLevelSum = 0, alliesLevelSum = 0;
 	std::map<Player*, uint32_t> enemiesList, alliesList;
 
-	if(skillLoss)
+    if(skillLoss && !isSecureDeath())
 	{
 		alliesList.insert(std::pair<Player*, uint32_t>(this, 1));
 		alliesLevelSum += getLevel();
@@ -2365,13 +2403,31 @@ bool Player::onDeath()
 			}
 		}
 
-		uint8_t pvpPercent = (uint8_t)std::ceil((double)pvpDamage * 100. / std::max(1U, totalDamage));
-		if(hasPvpBlessing() && getBlessings() >= 1 && pvpPercent >= 40)
-		{
-			usePVPBlessing = true;
-			removePvpBlessing();
-		}
+        uint8_t pvpPercent = (uint8_t)std::ceil((double)pvpDamage * 100. / std::max(1U, totalDamage));
+        if(getBlessings() >= 1 && pvpPercent >= 40)
+        {
+            if(hasPvpBlessing())
+            {
+                usePVPBlessing = true;
+                m_lastdeath_blessings_loss = -1;
+                removePvpBlessing();
+                sendTextMessage(MSG_EVENT_ORANGE, "You died in PvP Fight but no worry! The Twist of Fate (PvP Bless) has protected your blessings. But remember to buy Twist of Fate again in any temple again!");
+            }
+            else{
+                sendTextMessage(MSG_EVENT_ORANGE, "Tip: You died in PvP Fight without the Twist of Fate and has lost ALL your blessings. Buy the Twist of Fate Bless in any temple for the next time and avoid loss all your blessings in PvP Fights!");
+            }
+        }
 	}
+
+    uint64_t lossExperience = 0;
+    if(skillLoss) {
+        lossExperience = getLostExperience();
+        m_lastdeath_experience_loss = lossExperience;
+    }
+
+    if(!usePVPBlessing){
+        m_lastdeath_blessings_loss = getBlessings();
+    }
 
 	if(!Creature::onDeath())
 	{
@@ -2423,10 +2479,8 @@ bool Player::onDeath()
 	removeConditions(CONDITIONEND_DEATH);
 	if(skillLoss)
 	{
-		uint64_t lossExperience = getLostExperience();
-
 #ifdef __DARGHOS_CUSTOM__
-        std::stringstream deathStr; deathStr << "Relatórios da morte:\n";
+        std::stringstream deathStr; deathStr << "You loss " << lossExperience << " experience points.";
 
         float extraReduction = 0.;
 
@@ -2437,10 +2491,12 @@ bool Player::onDeath()
                 extraReduction = 0.2;
 
             lossExperience = std::floor(lossExperience * extraReduction);
-            deathStr << "\nRedução extra por combate desleal (unfair fight): " << std::floor(100 - (extraReduction * 100)) << "%";
+            deathStr << "\nUnfair Fight extra reduction: " << std::floor(100 - (extraReduction * 100)) << "%";
         }
 
-        deathStr << "\nExperiencia perdida: " << lossExperience << " pontos.";
+        sendTextMessage(MSG_EVENT_ORANGE, deathStr.str());
+#else
+        uint64_t lossExperience = getLostExperience();
 #endif
 
 		removeExperience(lossExperience, false);
@@ -2495,13 +2551,15 @@ bool Player::onDeath()
 			skills[i][SKILL_TRIES] = std::max((int32_t)0, (int32_t)(skills[i][SKILL_TRIES] - lostSkillTries));
 		}
 
-		#ifdef __DARGHOS_CUSTOM__
-        if(usePVPBlessing)
+#ifdef __DARGHOS_CUSTOM__
+        if(!usePVPBlessing && !isSecureDeath())
         {
-            deathStr << "\nVocê morreu em luta contra outros jogadores e perdeu a benção do PvP (twist of fate)! Suas benções regulares estão vuneraveis!";
+            sendTextMessage(MSG_EVENT_ORANGE, "You lost all your blessings, remember to buy your blessings again to avoid hard losses when you die in the future!");
+            blessings = 0;
         }
-        else
-		#endif
+#else
+        blessings = 0;
+#endif
 		blessings = 0;
 		loginPosition = masterPosition;
 

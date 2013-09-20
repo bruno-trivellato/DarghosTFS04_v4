@@ -242,6 +242,12 @@ class Player : public Creature, public Cylinder
 		void removeBlessing(int16_t value);
 		void setPvpStatus(bool status) { pvpStatus = status; }
 		bool isPvpEnabled() const { return pvpStatus; }
+
+		bool isSecureDeath() const { return level <= 80 && skull < SKULL_WHITE; }
+
+        uint64_t getLastDeathExperienceLoss() { return m_lastdeath_experience_loss; }
+        int16_t getLastDeathBlessingsLoss() { return m_lastdeath_blessings_loss; }
+        int16_t getLastDeathItemsLoss() { return m_lastdeath_items_loss; }
 #endif
 
 		uint16_t getBlessings() const;
@@ -924,6 +930,8 @@ class Player : public Creature, public Cylinder
 
 #ifdef __DARGHOS_CUSTOM__
 		bool pvpStatus;
+        uint64_t m_lastdeath_experience_loss;
+        int16_t m_lastdeath_blessings_loss, m_lastdeath_items_loss;
 #endif
 
 #ifdef __DARGHOS_PVP_SYSTEM__

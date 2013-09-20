@@ -112,6 +112,8 @@ class Connection : public boost::enable_shared_from_this<Connection>, boost::non
 			m_connectionState = CONNECTION_STATE_OPEN;
 			m_receivedFirst = m_writeError = m_readError = false;
 			m_protocol = NULL;
+            m_packetsSent = 0;
+            m_timeConnected = time(NULL);
 
 #ifdef __ENABLE_SERVER_DIAGNOSTIC__
 			connectionCount++;
@@ -162,6 +164,9 @@ class Connection : public boost::enable_shared_from_this<Connection>, boost::non
 
 		void internalSend(OutputMessage_ptr msg);
 		void closeSocket();
+
+        time_t m_timeConnected;
+        uint32_t m_packetsSent;
 
 		NetworkMessage m_msg;
 		Protocol* m_protocol;

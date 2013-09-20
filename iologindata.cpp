@@ -1202,8 +1202,13 @@ bool IOLoginData::playerDeath(Player* _player, const DeathList& dl)
 	if(!trans.begin())
 		return false;
 
-	query << "INSERT INTO `player_deaths` (`player_id`, `date`, `level`) VALUES (" << _player->getGUID()
-		<< ", " << time(NULL) << ", " << _player->getLevel() << ")";
+#ifdef __DARGHOS_CUSTOM__
+    query << "INSERT INTO `player_deaths` (`player_id`, `date`, `level`, `exp_loss`, `bless_loss`, `item_loss`) VALUES (" << _player->getGUID()
+          << ", " << time(NULL) << ", " << _player->getLevel() << ", " << _player->getLastDeathExperienceLoss() << ", " << _player->getLastDeathBlessingsLoss() << ", " << _player->getLastDeathItemsLoss() << ")";
+#else
+    query << "INSERT INTO `player_deaths` (`player_id`, `date`, `level`) VALUES (" << _player->getGUID()
+        << ", " << time(NULL) << ", " << _player->getLevel() << ")";
+#endif
 	if(!db->query(query.str()))
 		return false;
 

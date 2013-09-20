@@ -319,6 +319,7 @@ bool ConfigManager::load()
 	m_confNumber[DEFAULT_DEPOT_SIZE] = getGlobalNumber("defaultDepotSizefree", 500);
 	m_confBool[UNIFIED_SPELLS] = getGlobalBool("unifiedSpells", true);
 	m_confBool[HEAL_PLAYER_ON_LEVEL] = getGlobalBool("healPlayersOnLevelAdvance", true);
+	m_confNumber[MAX_PACKETS_PER_SECOND] = getGlobalNumber("maxPacketsPerSecond", 40);
 
 #ifdef __DARGHOS_SPOOF__
     m_confBool[SPOOF_PLAYERS_ENABLED] = getGlobalBool("spoofPlayersEnabled", true);
@@ -404,6 +405,7 @@ const std::string& ConfigManager::getString(uint32_t _what) const
 bool ConfigManager::getBool(uint32_t _what) const
 {
 	if(m_loaded && _what < LAST_BOOL_CONFIG)
+
 		return m_confBool[_what];
 
 	if(!m_startup)
