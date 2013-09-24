@@ -115,7 +115,7 @@ void Game::start(ServiceManager* servicer)
 		boost::bind(&Game::checkWars, this)));
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
-    boost::thread* thread = new boost::thread(boost::bind(&Game::emergencyDDoSLoop, this));
+    new boost::thread(boost::bind(&Game::emergencyDDoSLoop, this));
 #endif		
 
 	services = servicer;
@@ -4499,8 +4499,8 @@ bool Game::combatChangeHealth(CombatType_t combatType, Creature* attacker, Creat
                     p_target = target->getPlayerMaster();
 			}
 
-			//o target é um player, ou um summon de um player e com pvp ativo, está em area de pvp aberto, e não é ele mesmo
-			//ou está na Battleground, e o target é um inimigo
+			//o target Ã© um player, ou um summon de um player e com pvp ativo, estÃ¡ em area de pvp aberto, e nÃ£o Ã© ele mesmo
+			//ou estÃ¡ na Battleground, e o target Ã© um inimigo
 			if(p_target
                 && ((p_attacker->getZone() == ZONE_OPEN && !p_attacker->isPvpEnabled() && p_target->isPvpEnabled() && p_target != p_attacker)
 				|| (!p_attacker->isPvpEnabled() && p_target->isPvpEnabled() && p_target->getZone() == ZONE_OPEN && p_target != p_attacker))
@@ -6590,7 +6590,7 @@ void Game::emergencyDDoSLoop()
             rxPpsRecords.pop_back();
         }
 
-        uint32_t avgPps = checkDDoS(rxPpsRecords);
+        int32_t avgPps = (int32_t)checkDDoS(rxPpsRecords);
 		
 		//current BPS rx
 		int64_t currentRxBytes = getCurrentRxBytes();
@@ -6603,7 +6603,7 @@ void Game::emergencyDDoSLoop()
             rxBpsRecords.pop_back();
         }
 
-        uint32_t avgRxBps = checkDDoS(rxBpsRecords);
+        int32_t avgRxBps = (int32_t)checkDDoS(rxBpsRecords);
 		
 		//current BPS tx
 		int64_t currentTxBytes = getCurrentTxBytes();
@@ -6616,7 +6616,7 @@ void Game::emergencyDDoSLoop()
             txBpsRecords.pop_back();
         }
 
-        uint32_t avgTxBps = checkDDoS(txBpsRecords);			
+        int32_t avgTxBps = (int32_t)checkDDoS(txBpsRecords);
 
 		bool brokenPps, brokenRxBps, brokenTxBps;
 		brokenPps = brokenRxBps = brokenTxBps = false;

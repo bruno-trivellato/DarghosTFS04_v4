@@ -9442,10 +9442,6 @@ int32_t LuaInterface::luaGetTownName(lua_State* L)
 int32_t LuaInterface::luaGetTownTemplePosition(lua_State* L)
 {
 	//getTownTemplePosition(townId)
-	bool displayError = true;
-	if(lua_gettop(L) >= 2)
-		displayError = popNumber(L);
-
 	uint32_t townId = popNumber(L);
 	if(Town* town = Towns::getInstance()->getTown(townId))
 		pushPosition(L, town->getPosition(), 255);
@@ -10682,8 +10678,6 @@ int32_t LuaInterface::luaGetPlayerCurrentPing(lua_State* L)
 int32_t LuaInterface::luaSpawnCreaturesByName(lua_State* L)
 {
     //spawnCreaturesByName(name)
-    ScriptEnviroment* env = getEnv();
-
 	MonsterType* mType = g_monsters.getMonsterType(popString(L));
 	if(!mType)
 	{

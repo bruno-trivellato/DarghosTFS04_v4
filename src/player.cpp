@@ -5297,7 +5297,7 @@ bool Player::isPremium() const
 
 #ifdef __DARGHOS_CUSTOM__
 	int32_t maxFreePremiumLevel = g_config.getNumber(ConfigManager::MAX_FREE_PREMIUM_LEVEL);
-	if(maxFreePremiumLevel > 0 && level <= maxFreePremiumLevel)
+    if(maxFreePremiumLevel > 0 && level <= (uint32_t)maxFreePremiumLevel)
 		return true;
 #endif
 
