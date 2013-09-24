@@ -733,6 +733,7 @@ class LuaInterface
 		static int32_t luaDoPlayerIsPvpEnable(lua_State* L);
 		static int32_t luaGetPlayerCurrentPing(lua_State* L);
 		static int32_t luaSpawnCreaturesByName(lua_State* L);
+        static int32_t luaDoPlayerWeaponIsDualHand(lua_State* L);
 		#endif
 
 		#ifdef __DARGHOS_PVP_SYSTEM__

@@ -2528,6 +2528,9 @@ void LuaInterface::registerFunctions()
 
 	//spawnCreaturesByName(name)
 	lua_register(m_luaState, "spawnCreaturesByName", LuaInterface::luaSpawnCreaturesByName);
+
+    //doPlayerWeaponIsDualHand(cid)
+    lua_register(m_luaState, "doPlayerWeaponIsDualHand", LuaInterface::luaDoPlayerWeaponIsDualHand);
 #endif
 
 #ifdef __DARGHOS_PVP_SYSTEM__
@@ -5641,7 +5644,7 @@ int32_t LuaInterface::luaGetPlayerWeapon(lua_State* L)
 	ScriptEnviroment* env = getEnv();
 	if(Player* player = env->getPlayerByUID(popNumber(L)))
 	{
-		if(Item* weapon = player->getWeapon(ignoreAmmo))
+        if(Item* weapon = player->getWeapon(ignoreAmmo))
 			pushThing(L, weapon, env->addThing(weapon));
 		else
 			pushThing(L, NULL, 0);
@@ -10694,6 +10697,27 @@ int32_t LuaInterface::luaSpawnCreaturesByName(lua_State* L)
 
     return 1;
 }
+
+int32_t LuaInterface::luaDoPlayerWeaponIsDualHand(lua_State* L)
+{
+    //doPlayerWeaponIsDualHand(cid)
+    ScriptEnviroment* env = getEnv();
+    if(Player* player = env->getPlayerByUID(popNumber(L)))
+    {
+        if(Item* weapon = player->getWeapon(true))
+            lua_pushboolean(L, weapon->getSlotPosition() & SLOTP_TWO_HAND);
+        else
+            lua_pushboolean(L, false);
+    }
+    else
+    {
+        errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
+        lua_pushnil(L);
+    }
+
+    return 1;
+}
+
 #endif
 
 #ifdef __DARGHOS_PVP_SYSTEM__
