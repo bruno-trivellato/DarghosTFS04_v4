@@ -621,64 +621,54 @@ void Monster::onThink(uint32_t interval)
 
 void Monster::doAttacking(uint32_t interval)
 {
-	if(!attackedCreature || (isSummon() && attackedCreature == this))
-		return;
+    if (!attackedCreature || (isSummon() && attackedCreature == this)) {
+        return;
+    }
 
     bool updateLook = true;
-	resetTicks = interval;
-	attackTicks += interval;
 
-	const Position& myPos = getPosition();
-	for(SpellList::iterator it = mType->spellAttackList.begin(); it != mType->spellAttackList.end(); ++it)
-	{
-		if(!attackedCreature || attackedCreature->isRemoved())
-			break;
+    resetTicks = interval != 0;
+    attackTicks += interval;
 
-		const Position& targetPos = attackedCreature->getPosition();
-		if(it->isMelee && isFleeing())
-			continue;
+    const Position& myPos = getPosition();
+    const Position& targetPos = attackedCreature->getPosition();
 
-		bool inRange = false;
-		if(canUseSpell(myPos, targetPos, *it, interval, inRange))
-		{
-			if(it->chance >= (uint32_t)random_range(1, 100))
-			{
-				if(updateLook)
-				{
-					updateLookDirection();
-					updateLook = false;
-				}
+    for (SpellList::iterator it = mType->spellAttackList.begin(); it != mType->spellAttackList.end(); ++it) {
+        bool inRange = false;
 
-				double multiplier;
-				if(maxCombatValue > 0) //defense
-					multiplier = g_config.getDouble(ConfigManager::RATE_MONSTER_DEFENSE);
-				else //attack
-					multiplier = g_config.getDouble(ConfigManager::RATE_MONSTER_ATTACK);
+        if (canUseSpell(myPos, targetPos, *it, interval, inRange)) {
+            if (it->chance >= (uint32_t)random_range(1, 100)) {
+                if (updateLook) {
+                    updateLookDirection();
+                    updateLook = false;
+                }
 
-				minCombatValue = (int32_t)(it->minCombatValue * multiplier);
-				maxCombatValue = (int32_t)(it->maxCombatValue * multiplier);
+                minCombatValue = it->minCombatValue;
+                maxCombatValue = it->maxCombatValue;
+                it->spell->castSpell(this, attackedCreature);
+                if (!attackedCreature) {
+                    break;
+                }
 
-				it->spell->castSpell(this, attackedCreature);
-				if(it->isMelee)
-					extraMeleeAttack = false;
-#ifdef __DEBUG__
+                if (it->isMelee) {
+                    extraMeleeAttack = false;
+                }
+            }
+        }
 
-				static uint64_t prevTicks = OTSYS_TIME();
-				std::clog << "doAttacking ticks: " << OTSYS_TIME() - prevTicks << std::endl;
-				prevTicks = OTSYS_TIME();
-#endif
-			}
-		}
+        if (!inRange && it->isMelee) {
+            //melee swing out of reach
+            extraMeleeAttack = true;
+        }
+    }
 
-        if(it->isMelee) //melee swing out of reach
-			extraMeleeAttack = true;
-	}
+    if (updateLook) {
+        updateLookDirection();
+    }
 
-	if(updateLook)
-		updateLookDirection();
-
-	if(resetTicks)
-		attackTicks = 0;
+    if (resetTicks) {
+        attackTicks = 0;
+    }
 }
 
 bool Monster::canUseAttack(const Position& pos, const Creature* target) const
