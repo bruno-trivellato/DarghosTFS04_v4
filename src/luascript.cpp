@@ -2531,6 +2531,15 @@ void LuaInterface::registerFunctions()
 
     //doPlayerWeaponIsDualHand(cid)
     lua_register(m_luaState, "doPlayerWeaponIsDualHand", LuaInterface::luaDoPlayerWeaponIsDualHand);
+
+    //doPlayerIsVip(cid)
+    lua_register(m_luaState, "doPlayerIsVip", LuaInterface::luaDoPlayerIsVip);
+
+    //doPlayerAddVipDays(cid, vipdays)
+    lua_register(m_luaState, "doPlayerAddVipDays", LuaInterface::luaDoPlayerAddVipDays);
+
+    //getPlayerVipDays(cid)
+    lua_register(m_luaState, "getPlayerVipDays", LuaInterface::luaGetPlayerVipDays);
 #endif
 
 #ifdef __DARGHOS_PVP_SYSTEM__
@@ -2755,6 +2764,11 @@ int32_t LuaInterface::internalGetPlayerInfo(lua_State* L, PlayerInfo_t info)
 		case PlayerInfoPremiumDays:
 			value = player->getPremiumDays();
 			break;
+#ifdef __DARGHOS_CUSTOM__
+        case PlayerInfoIsVip:
+            lua_pushboolean(L, player->isVip());
+            return 1;
+#endif
 		case PlayerInfoFood:
 		{
 			if(Condition* condition = player->getCondition(CONDITION_REGENERATION, CONDITIONID_DEFAULT))
@@ -2972,6 +2986,13 @@ int32_t LuaInterface::luaGetPlayerPremiumDays(lua_State* L)
 {
 	return internalGetPlayerInfo(L, PlayerInfoPremiumDays);
 }
+
+#ifdef __DARGHOS_CUSTOM__
+int32_t LuaInterface::luaDoPlayerIsVip(lua_State* L)
+{
+    return internalGetPlayerInfo(L, PlayerInfoIsVip);
+}
+#endif
 
 int32_t LuaInterface::luaGetPlayerBalance(lua_State* L)
 {
@@ -10712,6 +10733,71 @@ int32_t LuaInterface::luaDoPlayerWeaponIsDualHand(lua_State* L)
     return 1;
 }
 
+int32_t LuaInterface::luaDoPlayerAddVipDays(lua_State* L)
+{
+    //doPlayerAddVipDays(cid, days)
+    int32_t days = popNumber(L);
+    ScriptEnviroment* env = getEnv();
+    if(Player* player = env->getPlayerByUID(popNumber(L)))
+    {
+        Account account = IOLoginData::getInstance()->loadAccount(player->getAccount());
+
+        if(days < 0)
+        {
+            if(account.vipEnd > 0 && account.vipEnd - (days * 60 * 60 * 24) > time(NULL)){
+                account.vipEnd -= days * 60 * 60 * 24;
+            }
+            else{
+                account.vipEnd = 0;
+            }
+        }
+        else
+        {
+            if(account.vipEnd == 0 || account.vipEnd < time(NULL)){
+                account.vipEnd = time(NULL) + (60 * 60 * 24 * days);
+                player->m_isVip = true;
+            }
+            else{
+                account.vipEnd += (60 * 60 * 24 * days);
+            }
+        }
+
+        IOLoginData::getInstance()->saveAccount(account);
+        lua_pushboolean(L, true);
+    }
+    else
+    {
+        errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
+        lua_pushboolean(L, false);
+    }
+
+    return 1;
+}
+
+int32_t LuaInterface::luaGetPlayerVipDays(lua_State* L)
+{
+    //getPlayerVipDays(cid)
+    ScriptEnviroment* env = getEnv();
+    if(Player* player = env->getPlayerByUID(popNumber(L)))
+    {
+        Account account = IOLoginData::getInstance()->loadAccount(player->getAccount());
+
+        if(account.vipEnd == 0 || account.vipEnd < time(NULL)){
+            lua_pushnumber(L, 0);
+        }
+        else{
+            lua_pushnumber(L, std::floor((account.vipEnd - time(NULL)) / 60 / 60 / 24));
+        }
+
+    }
+    else
+    {
+        errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
+        lua_pushboolean(L, false);
+    }
+
+    return 1;
+}
 #endif
 
 #ifdef __DARGHOS_PVP_SYSTEM__

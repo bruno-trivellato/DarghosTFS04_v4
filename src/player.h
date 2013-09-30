@@ -312,6 +312,10 @@ class Player : public Creature, public Cylinder
 		uint64_t getSpentMana() const {return manaSpent;}
 
 		bool isPremium() const;
+#ifdef __DARGHOS_CUSTOM__
+        bool isVip() const;
+        bool hasExpBonus() const;
+#endif
 		int32_t getPremiumDays() const {return premiumDays;}
 
 		bool hasEnemy() const {return !warMap.empty();}
@@ -960,6 +964,9 @@ class Player : public Creature, public Cylinder
 
 		uint16_t mailAttempts;
 
+#ifdef __DARGHOS_CUSTOM__
+        bool m_isVip, m_hasExpBonus;
+#endif
 		int32_t premiumDays;
 		int32_t soul;
 		int32_t soulMax;

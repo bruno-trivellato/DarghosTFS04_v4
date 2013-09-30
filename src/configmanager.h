@@ -187,7 +187,7 @@ class ConfigManager
 			RATE_STAMINA_GAIN,
 			SLOW_RATE_STAMINA_GAIN,
 			STAMINA_EXTRA_EXPERIENCE_DURATION,
-			MAX_PACKETS_PER_SECOND,
+			MAX_PACKETS_PER_SECOND,     
 
 #ifdef __DARGHOS_CUSTOM__
 			DEATH_FRAGGERS,
@@ -196,6 +196,10 @@ class ConfigManager
 			MAX_FREE_PREMIUM_LEVEL,
 			IN_PVP_HEALING_DECREASE_PERCENT,
 			IN_PVP_HEALING_DECREASE_DURATION,
+
+            VIP_EXP_BONUS_DURATION,
+            VIP_DEATH_LESS_LOSS,
+            VIP_REGEN_GAIN_PERCENT,
 #endif
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
@@ -239,6 +243,10 @@ class ConfigManager
 			FORMULA_MAGIC,
 #ifdef __DARGHOS_PVP_SYSTEM__
             BATTLEGROUND_DAMAGE_RATE,
+#endif
+#ifdef __DARGHOS_CUSTOM__
+            VIP_EXP_BONUS,
+            VIP_STATS_BONUS_DEFAULT,
 #endif
 			LAST_DOUBLE_CONFIG /* this must be the last one */
 		};

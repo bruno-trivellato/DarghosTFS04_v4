@@ -734,6 +734,9 @@ class LuaInterface
 		static int32_t luaGetPlayerCurrentPing(lua_State* L);
 		static int32_t luaSpawnCreaturesByName(lua_State* L);
         static int32_t luaDoPlayerWeaponIsDualHand(lua_State* L);
+        static int32_t luaDoPlayerIsVip(lua_State* L);
+        static int32_t luaDoPlayerAddVipDays(lua_State* L);
+        static int32_t luaGetPlayerVipDays(lua_State* L);
 		#endif
 
 		#ifdef __DARGHOS_PVP_SYSTEM__
@@ -805,6 +808,9 @@ class LuaInterface
 			PlayerInfoLastLogin,
 			PlayerInfoAccountManager,
 			PlayerInfoTradeState
+#ifdef __DARGHOS_CUSTOM__
+            ,PlayerInfoIsVip
+#endif
 		};
 		static int32_t internalGetPlayerInfo(lua_State* L, PlayerInfo_t info);
 

@@ -338,6 +338,11 @@ bool ConfigManager::load()
 	m_confNumber[MAX_FREE_PREMIUM_LEVEL] = getGlobalNumber("maxFreePremiumLevel", 150);
 	m_confNumber[IN_PVP_HEALING_DECREASE_PERCENT] = getGlobalNumber("inPvpHealingDecreasePercent", 0);
 	m_confNumber[IN_PVP_HEALING_DECREASE_DURATION] = getGlobalNumber("inPvpHealingDecreaseDuration", 60);
+    m_confNumber[VIP_EXP_BONUS_DURATION] = getGlobalNumber("vipExpBonusDuration", 60 * 60 * 24 * 2);
+    m_confDouble[VIP_EXP_BONUS] = getGlobalDouble("vipExpBonus", 0.5);
+    m_confDouble[VIP_STATS_BONUS_DEFAULT] = getGlobalDouble("vipExpBonusDefault", 0.1);
+    m_confDouble[VIP_DEATH_LESS_LOSS] = getGlobalNumber("vipDeathLessLoss", 10);
+    m_confDouble[VIP_REGEN_GAIN_PERCENT] = getGlobalNumber("vipRegenGainPercent", 25);
 #endif
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__

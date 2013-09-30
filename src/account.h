@@ -29,10 +29,18 @@ typedef std::map<std::string, GameServer*> Characters;
 class Account
 {
 	public:
-		Account() {number = premiumDays = lastDay = warnings = 0;}
+        Account() {
+            number = premiumDays = lastDay = warnings = 0;
+#ifdef __DARGHOS_CUSTOM__
+            vipEnd = lastExpBonus = 0;
+#endif
+        }
 		virtual ~Account() {charList.clear();}
 
-		uint32_t number, premiumDays, lastDay;
+        uint32_t number, premiumDays, lastDay;
+#ifdef __DARGHOS_CUSTOM__
+        time_t vipEnd, lastExpBonus;
+#endif
 		int32_t warnings;
 		std::string name, password, recoveryKey, salt;
 		Characters charList;

@@ -47,7 +47,11 @@ Account IOLoginData::loadAccount(uint32_t accountId, bool preLoad/* = false*/)
 	Database* db = Database::getInstance();
 	DBQuery query;
 
+#ifdef __DARGHOS_CUSTOM__
+    query << "SELECT `name`, `password`, `salt`, `premdays`, `lastday`, `key`, `warnings`, `vipend`, `lastexpbonus` FROM `accounts` WHERE `id` = " << accountId << " LIMIT 1";
+#else
 	query << "SELECT `name`, `password`, `salt`, `premdays`, `lastday`, `key`, `warnings` FROM `accounts` WHERE `id` = " << accountId << " LIMIT 1";
+#endif
 	DBResult* result;
 	if(!(result = db->storeQuery(query.str())))
 		return account;
@@ -60,6 +64,11 @@ Account IOLoginData::loadAccount(uint32_t accountId, bool preLoad/* = false*/)
 	account.lastDay = result->getDataInt("lastday");
 	account.recoveryKey = result->getDataString("key");
 	account.warnings = result->getDataInt("warnings");
+
+#ifdef __DARGHOS_CUSTOM__
+    account.vipEnd = result->getDataInt("vipend");
+    account.lastExpBonus = result->getDataInt("lastexpbonus");
+#endif
 
 	query.str("");
 	result->free();
@@ -99,7 +108,11 @@ bool IOLoginData::saveAccount(Account account)
 {
 	Database* db = Database::getInstance();
 	DBQuery query;
-	query << "UPDATE `accounts` SET `premdays` = " << account.premiumDays << ", `warnings` = " << account.warnings << ", `lastday` = " << account.lastDay << " WHERE `id` = " << account.number << db->getUpdateLimiter();
+#ifdef __DARGHOS_CUSTOM__
+    query << "UPDATE `accounts` SET `premdays` = " << account.premiumDays << ", `warnings` = " << account.warnings << ", `lastday` = " << account.lastDay << ", `vipend` = " << account.vipEnd << " WHERE `id` = " << account.number << db->getUpdateLimiter();
+#else
+    query << "UPDATE `accounts` SET `premdays` = " << account.premiumDays << ", `warnings` = " << account.warnings << ", `lastday` = " << account.lastDay << " WHERE `id` = " << account.number << db->getUpdateLimiter();
+#endif
 	return db->query(query.str());
 }
 
@@ -404,6 +417,11 @@ bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLo
 
 	player->setGUID(result->getDataInt("id"));
 	player->premiumDays = account.premiumDays;
+
+#ifdef __DARGHOS_CUSTOM__
+    player->m_isVip = (account.vipEnd == 0 || time(NULL) > account.vipEnd) ? false : true;
+    player->m_hasExpBonus = (account.lastExpBonus == 0 || time(NULL) > (account.lastExpBonus + g_config.getNumber(ConfigManager::VIP_EXP_BONUS_DURATION))) ? false : true;
+#endif
 
 	nameCacheMap[player->getGUID()] = name;
 	guidCacheMap[name] = player->getGUID();

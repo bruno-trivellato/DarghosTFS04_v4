@@ -89,6 +89,10 @@ Player::Player(const std::string& _name, ProtocolGame* p):
 	accountManager = MANAGER_NONE;
 	guildLevel = GUILDLEVEL_NONE;
 
+#ifdef __DARGHOS_CUSTOM__
+    m_isVip = m_hasExpBonus = false;
+#endif
+
 	promotionLevel = walkTaskEvent = actionTaskEvent = nextStepEvent = bloodHitCount = shieldBlockCount = 0;
 	lastAttack = idleTime = marriage = blessings = balance = premiumDays = mana = manaMax = manaSpent = 0;
 	soul = guildId = levelPercent = magLevelPercent = magLevel = experience = damageImmunities = 0;
@@ -179,10 +183,25 @@ void Player::setVocation(uint32_t id)
 	soulMax = vocation->getGain(GAIN_SOUL);
 	if(Condition* condition = getCondition(CONDITION_REGENERATION, CONDITIONID_DEFAULT))
 	{
-		condition->setParam(CONDITIONPARAM_HEALTHGAIN, vocation->getGainAmount(GAIN_HEALTH));
+#ifdef __DARGHOS_CUSTOM__
+        uint32_t gainHealth = vocation->getGainAmount(GAIN_HEALTH);
+        uint32_t gainMana = vocation->getGainAmount(GAIN_MANA);
+
+        if(isVip()){
+            gainHealth += uint32_t(gainHealth * ((double)g_config.getNumber(ConfigManager::VIP_REGEN_GAIN_PERCENT) / 100));
+            gainMana += uint32_t(gainMana * ((double)g_config.getNumber(ConfigManager::VIP_REGEN_GAIN_PERCENT) / 100));
+        }
+
+        condition->setParam(CONDITIONPARAM_HEALTHGAIN, gainHealth);
 		condition->setParam(CONDITIONPARAM_HEALTHTICKS, (vocation->getGainTicks(GAIN_HEALTH) * 1000));
-		condition->setParam(CONDITIONPARAM_MANAGAIN, vocation->getGainAmount(GAIN_MANA));
+        condition->setParam(CONDITIONPARAM_MANAGAIN, gainMana);
 		condition->setParam(CONDITIONPARAM_MANATICKS, (vocation->getGainTicks(GAIN_MANA) * 1000));
+#else
+        condition->setParam(CONDITIONPARAM_HEALTHGAIN, vocation->getGainAmount(GAIN_HEALTH));
+        condition->setParam(CONDITIONPARAM_HEALTHTICKS, (vocation->getGainTicks(GAIN_HEALTH) * 1000));
+        condition->setParam(CONDITIONPARAM_MANAGAIN, vocation->getGainAmount(GAIN_MANA));
+        condition->setParam(CONDITIONPARAM_MANATICKS, (vocation->getGainTicks(GAIN_MANA) * 1000));
+#endif
 	}
 }
 
@@ -707,6 +726,11 @@ void Player::addSkillAdvance(skills_t skill, uint32_t count, bool useMultiplier/
 
 	if(useMultiplier)
 		count = uint32_t((double)count * rates[skill] * g_config.getDouble(ConfigManager::RATE_SKILL));
+
+#ifdef __DARGHOS_CUSTOM__
+    if(isVip())
+        count += uint32_t(count * g_config.getDouble(ConfigManager::VIP_STATS_BONUS_DEFAULT));
+#endif
 
 	std::stringstream s;
 	while(skills[skill][SKILL_TRIES] + count >= nextReqTries)
@@ -2002,6 +2026,11 @@ void Player::addManaSpent(uint64_t amount, bool useMultiplier/* = true*/)
 	if(useMultiplier)
 		amount = uint64_t((double)amount * rates[SKILL__MAGLEVEL] * g_config.getDouble(ConfigManager::RATE_MAGIC));
 
+#ifdef __DARGHOS_CUSTOM__
+    if(isVip())
+        amount += uint64_t(amount * g_config.getDouble(ConfigManager::VIP_STATS_BONUS_DEFAULT));
+#endif
+
 	bool advance = false;
 	while(manaSpent + amount >= nextReqMana)
 	{
@@ -2710,10 +2739,25 @@ void Player::addDefaultRegeneration(uint32_t addTicks)
 		condition->setTicks(condition->getTicks() + addTicks);
 	else if((condition = Condition::createCondition(CONDITIONID_DEFAULT, CONDITION_REGENERATION, addTicks)))
 	{
-		condition->setParam(CONDITIONPARAM_HEALTHGAIN, vocation->getGainAmount(GAIN_HEALTH));
-		condition->setParam(CONDITIONPARAM_HEALTHTICKS, vocation->getGainTicks(GAIN_HEALTH) * 1000);
-		condition->setParam(CONDITIONPARAM_MANAGAIN, vocation->getGainAmount(GAIN_MANA));
-		condition->setParam(CONDITIONPARAM_MANATICKS, vocation->getGainTicks(GAIN_MANA) * 1000);
+#ifdef __DARGHOS_CUSTOM__
+        uint32_t gainHealth = vocation->getGainAmount(GAIN_HEALTH);
+        uint32_t gainMana = vocation->getGainAmount(GAIN_MANA);
+
+        if(isVip()){
+            gainHealth += uint32_t(gainHealth * (g_config.getNumber(ConfigManager::VIP_REGEN_GAIN_PERCENT) / 100));
+            gainMana += uint32_t(gainMana * (g_config.getNumber(ConfigManager::VIP_REGEN_GAIN_PERCENT) / 100));
+        }
+
+        condition->setParam(CONDITIONPARAM_HEALTHGAIN, gainHealth);
+        condition->setParam(CONDITIONPARAM_HEALTHTICKS, (vocation->getGainTicks(GAIN_HEALTH) * 1000));
+        condition->setParam(CONDITIONPARAM_MANAGAIN, gainMana);
+        condition->setParam(CONDITIONPARAM_MANATICKS, (vocation->getGainTicks(GAIN_MANA) * 1000));
+#else
+        condition->setParam(CONDITIONPARAM_HEALTHGAIN, vocation->getGainAmount(GAIN_HEALTH));
+        condition->setParam(CONDITIONPARAM_HEALTHTICKS, (vocation->getGainTicks(GAIN_HEALTH) * 1000));
+        condition->setParam(CONDITIONPARAM_MANAGAIN, vocation->getGainAmount(GAIN_MANA));
+        condition->setParam(CONDITIONPARAM_MANATICKS, (vocation->getGainTicks(GAIN_MANA) * 1000));
+#endif
 		addCondition(condition);
 	}
 }
@@ -4275,6 +4319,15 @@ bool Player::rateExperience(double& gainExp, bool fromMonster)
 			gainExp += uint64_t(gainExp * g_config.getDouble(ConfigManager::STAMINA_EXTRA_EXPERIENCE_RATE));
 	}
 
+#ifdef __DARGHOS_CUSTOM__
+    if(isVip()){
+        if(hasExpBonus())
+            gainExp += uint64_t(gainExp * g_config.getDouble(ConfigManager::VIP_EXP_BONUS));
+        else
+            gainExp += uint64_t(gainExp * g_config.getDouble(ConfigManager::VIP_STATS_BONUS_DEFAULT));
+    }
+#endif
+
 	if(!hasFlag(PlayerFlag_HasInfiniteStamina)){
 		if(getStaminaMinutes() <= 0){
 			gainExp = 0;
@@ -4671,7 +4724,11 @@ uint64_t Player::getLostExperience() const
 	if(!skillLoss)
 		return 0;
 
+#ifdef __DARGHOS_CUSTOM__
+    double percent = (double)(lossPercent[LOSS_EXPERIENCE] - vocation->getLessLoss() - (isVip() && !hasExpBonus() ? g_config.getNumber(ConfigManager::VIP_DEATH_LESS_LOSS) : 0) - (getBlessings() * g_config.getNumber(
+#else
 	double percent = (double)(lossPercent[LOSS_EXPERIENCE] - vocation->getLessLoss() - (getBlessings() * g_config.getNumber(
+#endif
 		ConfigManager::BLESS_REDUCTION))) / 100.;
 
 	if(level <= 25)
@@ -5303,6 +5360,18 @@ bool Player::isPremium() const
 
 	return premiumDays;
 }
+
+#ifdef __DARGHOS_CUSTOM__
+bool Player::isVip() const
+{
+    return m_isVip;
+}
+
+bool Player::hasExpBonus() const
+{
+    return m_hasExpBonus;
+}
+#endif
 
 bool Player::setGuildLevel(GuildLevel_t newLevel, uint32_t rank/* = 0*/)
 {
