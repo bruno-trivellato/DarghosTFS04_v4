@@ -2589,7 +2589,6 @@ bool Player::onDeath()
 #else
         blessings = 0;
 #endif
-		blessings = 0;
 		loginPosition = masterPosition;
 
 #ifdef __DARGHOS_CUSTOM__
