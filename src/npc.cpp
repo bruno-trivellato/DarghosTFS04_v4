@@ -2464,6 +2464,7 @@ void NpcScript::registerFunctions()
 
 	lua_register(m_luaState, "openShopWindow", NpcScript::luaOpenShopWindow);
 	lua_register(m_luaState, "closeShopWindow", NpcScript::luaCloseShopWindow);
+
 }
 
 int32_t NpcScript::luaActionFocus(lua_State* L)

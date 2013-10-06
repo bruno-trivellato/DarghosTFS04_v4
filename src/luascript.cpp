@@ -1805,7 +1805,7 @@ void LuaInterface::registerFunctions()
 	//doCreateMonster(name, pos[, extend = false[, force = false[, displayError = true]]])
 	lua_register(m_luaState, "doCreateMonster", LuaInterface::luaDoCreateMonster);
 
-	//doCreateNpc(name, pos[, displayError = true])
+    //doCreateNpc(name, pos[, spawnRadius = 3, master = 0, displayError = true])
 	lua_register(m_luaState, "doCreateNpc", LuaInterface::luaDoCreateNpc);
 
 	//doSummonMonster(cid, name)
@@ -5088,18 +5088,22 @@ int32_t LuaInterface::luaDoCreateMonster(lua_State* L)
 int32_t LuaInterface::luaDoCreateNpc(lua_State* L)
 {
 #ifdef __DARGHOS_CUSTOM__
-	//doCreateNpc(name, pos[, spawnRadius = 3, displayError = true])
+    //doCreateNpc(name, pos[, spawnRadius = 3, master = 0, displayError = true])
 #else
 	//doCreateNpc(name, pos[, displayError = true])
 #endif
 	bool displayError = true;
 #ifdef __DARGHOS_CUSTOM__
 	uint32_t radius = 3;
+    uint32_t master = 0;
 
-	if(lua_gettop(L) > 3)
+    if(lua_gettop(L) > 4)
 		displayError = popNumber(L);
 
-	if(lua_gettop(L) > 2)
+    if(lua_gettop(L) > 3)
+        master = popNumber(L);
+
+    if(lua_gettop(L) > 2)
 		radius = popNumber(L);
 #else
 	if(lua_gettop(L) > 2)
@@ -5121,6 +5125,25 @@ int32_t LuaInterface::luaDoCreateNpc(lua_State* L)
 	}
 
 #ifdef __DARGHOS_CUSTOM__
+    if(master != 0){
+        ScriptEnviroment* env = getEnv();
+        if(Creature* creature = env->getCreatureByUID(master))
+        {
+            if(Player* player = creature->getPlayer()){
+                npc->setMaster(player);
+                player->addSummon(npc);
+            }
+            else{
+                errorEx("Only players can be a master of npcs.");
+            }
+        }
+        else
+        {
+            errorEx(getError(LUA_ERROR_CREATURE_NOT_FOUND));
+            lua_pushboolean(L, false);
+        }
+    }
+
 	npc->setMasterPosition(pos, radius);
 #endif
 
