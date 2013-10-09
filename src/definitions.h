@@ -154,7 +154,7 @@
 
 	#define _WIN32_WINNT 0x0501
 #elif defined __GNUC__
-	#define __USE_ZLIB__
+    //#define __USE_ZLIB__
 #endif
 
 #ifdef __MINGW32__

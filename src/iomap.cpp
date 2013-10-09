@@ -88,14 +88,13 @@ Tile* IOMap::createTile(Item*& ground, Item* item, uint16_t px, uint16_t py, uin
 
 bool IOMap::loadMap(Map* map, const std::string& identifier)
 {
-	FileLoader f;
-	if(!f.openFile(identifier.c_str(), false, true))
-	{
-		std::stringstream ss;
-		ss << "Could not open the file " << identifier << ".";
-		setLastErrorString(ss.str());
-		return false;
-	}
+    FileLoader f;
+    if (!f.openFile(identifier.c_str(), "OTBM", false, true)) {
+        std::ostringstream ss;
+        ss << "Could not open the file " << identifier << ".";
+        setLastErrorString(ss.str());
+        return false;
+    }
 
 	uint32_t type = 0;
 	NODE root = f.getChildNode((NODE)NULL, type);

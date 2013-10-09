@@ -92,7 +92,7 @@ class FileLoader
 		FileLoader();
 		virtual ~FileLoader();
 
-		bool openFile(std::string name, bool write, bool caching = false);
+        bool openFile(const char* filename, const char* identifier, bool write, bool caching = false);
 		const uint8_t* getProps(const NODE, uint32_t &size);
 		bool getProps(const NODE, PropStream& props);
 		NODE getChildNode(const NODE& parent, uint32_t &type) const;
