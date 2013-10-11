@@ -2583,8 +2583,14 @@ bool Player::onDeath()
 #ifdef __DARGHOS_CUSTOM__
         if(!usePVPBlessing && !isSecureDeath())
         {
-            sendTextMessage(MSG_EVENT_ORANGE, "You lost all your blessings, remember to buy your blessings again to avoid hard losses when you die in the future!");
-            blessings = 0;
+            sendTextMessage(MSG_EVENT_ORANGE, "You lost all your regular blessings, remember to buy your blessings again to avoid hard losses when you die in the future!");
+
+            if(hasPvpBlessing()){
+                blessings = 0;
+                addBlessing(1 << (g_config.getNumber(ConfigManager::USE_BLESSING_AS_PVP) - 1));
+            }
+            else
+                blessings = 0;
         }
 #else
         blessings = 0;
