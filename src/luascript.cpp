@@ -10809,7 +10809,7 @@ int32_t LuaInterface::luaGetPlayerVipDays(lua_State* L)
             lua_pushnumber(L, 0);
         }
         else{
-            lua_pushnumber(L, std::floor((account.vipEnd - time(NULL)) / 60 / 60 / 24));
+            lua_pushnumber(L, std::floor(float((account.vipEnd - time(NULL)) / 60 / 60 / 24)));
         }
 
     }

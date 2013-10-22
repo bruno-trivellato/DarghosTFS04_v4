@@ -1048,6 +1048,11 @@ bool Game::playerMoveThing(uint32_t playerId, const Position& fromPos,
 	if(!player || player->isRemoved())
 		return false;
 
+#ifdef __DARGHOS_EMERGENCY_DDOS__
+	if(player->getNoMove() || isUnderDDoS())
+		return false;
+#endif
+
 	uint8_t fromIndex = 0;
 	if(fromPos.x == 0xFFFF)
 	{
