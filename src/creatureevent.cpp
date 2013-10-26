@@ -2133,9 +2133,9 @@ uint32_t CreatureEvent::executeBgLeave(Player* player)
 #endif
 
 #ifdef __DARGHOS_CUSTOM__
-uint32_t CreatureEvent::executeMoveItem(Player* player, Item* item, const Position &position)
+uint32_t CreatureEvent::executeMoveItem(Player* player, Item* item, const Position &fromPosition, const Position &toPosition)
 {
-	//onMoveItem(cid, item, position)
+    //onMoveItem(cid, item, fromPos, toPos)
 	if(m_interface->reserveEnv())
 	{
 		ScriptEnviroment* env = m_interface->getEnv();
@@ -2146,7 +2146,8 @@ uint32_t CreatureEvent::executeMoveItem(Player* player, Item* item, const Positi
 
 			scriptstream << "local cid = " << env->addThing(player) << std::endl;
 			env->streamThing(scriptstream, "item", item, env->addThing(item));
-			env->streamPosition(scriptstream, "position", position, 0);
+            env->streamPosition(scriptstream, "fromPos", fromPosition, 0);
+            env->streamPosition(scriptstream, "toPos", toPosition, 0);
 
 			scriptstream << m_scriptData;
 			bool result = true;
@@ -2175,9 +2176,10 @@ uint32_t CreatureEvent::executeMoveItem(Player* player, Item* item, const Positi
 
 			lua_pushnumber(L, env->addThing(player));
 			LuaInterface::pushThing(L, item, env->addThing(item));
-			LuaInterface::pushPosition(L, position, 0);
+            LuaInterface::pushPosition(L, fromPosition, 0);
+            LuaInterface::pushPosition(L, toPosition, 0);
 
-			bool result = m_interface->callFunction(3);
+            bool result = m_interface->callFunction(4);
 			m_interface->releaseEnv();
 			return result;
 		}

@@ -1519,7 +1519,7 @@ bool Game::playerMoveItem(uint32_t playerId, const Position& fromPos,
 	CreatureEventList events = player->getCreatureEvents(CREATURE_EVENT_MOVE_ITEM);
 	for(CreatureEventList::iterator it = events.begin(); it != events.end(); ++it)
 	{
-		if(!(*it)->executeMoveItem(player, item, toPos) && !deny)
+        if(!(*it)->executeMoveItem(player, item, fromPos, toPos) && !deny)
 			deny = true;
 	}
 

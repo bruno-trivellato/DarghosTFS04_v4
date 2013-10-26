@@ -153,7 +153,7 @@ class CreatureEvent : public Event
 		#endif
 
 #ifdef __DARGHOS_CUSTOM__
-		uint32_t executeMoveItem(Player* player, Item* item, const Position &position);
+        uint32_t executeMoveItem(Player* player, Item* item, const Position &fromPosition, const Position &toPosition);
 		uint32_t executePartyPassLeadership(Player* player, Player* newLeader);
 		uint32_t executePartyLeave(Player* player);
 #endif
