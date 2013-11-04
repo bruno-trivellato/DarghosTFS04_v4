@@ -2509,8 +2509,6 @@ bool Player::onDeath()
 	if(skillLoss)
 	{
 #ifdef __DARGHOS_CUSTOM__
-        std::stringstream deathStr; deathStr << "You loss " << lossExperience << " experience points.";
-
         float extraReduction = 0.;
 
         if(g_config.getBool(ConfigManager::UNFAIR_FIGHT) && alliesLevelSum < enemiesLevelSum && getSkull() != SKULL_RED && getSkull() != SKULL_BLACK)
@@ -2522,6 +2520,8 @@ bool Player::onDeath()
             lossExperience = std::floor(lossExperience * extraReduction);
             deathStr << "\nUnfair Fight extra reduction: " << std::floor(100 - (extraReduction * 100)) << "%";
         }
+
+        std::stringstream deathStr; deathStr << "You loss " << lossExperience << " experience points.";
 
         sendTextMessage(MSG_EVENT_ORANGE, deathStr.str());
 #else
