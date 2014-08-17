@@ -1550,7 +1550,7 @@ function hasPollToNotify(cid)
 	result:free()
 	
 	local account = getPlayerAccountId(cid)
-	result = db.getResult("SELECT `user`.`id` FROM `wb_forum_users` `user` LEFT JOIN `wb_forum_user_votes` `vote` ON `vote`.`user_Id` = `user`.`id` LEFT JOIN `wb_forum_polls_opt` `opt` ON `opt`.`id` = `vote`.`opt_id` WHERE `user`.`account_id` = " .. account .. " AND `opt`.`poll_id` = " .. poll.id .. ";")
+	result = db.getResult("SELECT `user`.`id` FROM `wb_forum_users` `user` LEFT JOIN `wb_forum_user_votes` `vote` ON `vote`.`member_id` = `user`.`id` LEFT JOIN `wb_forum_polls_opt` `opt` ON `opt`.`id` = `vote`.`opt_id` WHERE `user`.`account_id` = " .. account .. " AND `opt`.`poll_id` = " .. poll.id .. ";")
 
 	if(result:getID() == -1) then
 		setPlayerStorageValue(cid, sid.WEBSITE_POLL_NOTIFY, 1)
