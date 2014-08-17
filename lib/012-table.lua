@@ -7,6 +7,10 @@ table.size = function (t)
 	return #t
 end
 
+table._insert = function(table, pos, value)
+	table[pos] = value
+end
+
 table.find = function (table, value, sensitive)
 	local sensitive = sensitive or true
 	if(not sensitive and type(value) == "string") then
