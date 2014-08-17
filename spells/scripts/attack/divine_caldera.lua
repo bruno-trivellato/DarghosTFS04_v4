@@ -3,15 +3,9 @@ setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_HOLYDAMAGE)
 setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_HOLYAREA)
 
 function onGetFormulaValues(cid, level, maglevel)
-    local minMult = 4.2
-    local maxMult = 17.8
-
-    local minDmg = -((level / 3) + (maglevel * minMult))
-    local maxDmg = -((level / 3) + (maglevel * maxMult))
-	
-	minDmg, maxDmg = increasePremiumSpells(cid, minDmg, maxDmg)	
-
-    return minDmg, maxDmg
+	local min = ((level/5)+(maglevel*4))
+	local max = ((level/5)+(maglevel*6))
+	return -min, -max
 end
 
 setCombatCallback(combat, CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")

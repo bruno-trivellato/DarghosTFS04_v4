@@ -15,5 +15,12 @@ local area = createCombatArea(AREA_CROSS1X1)
 setCombatArea(combat, area)
 
 function onCastSpell(cid, var)
+	if(doPlayerIsInBattleground(cid) and isDruid(cid)) then
+		local manaCost = math.floor(getCreatureMaxMana(cid) * 0.02) -- 2% base mana para Druids em Battleground...
+	
+		doCreatureAddMana(cid, -manaCost, false)
+		doPlayerAddSpentMana(cid, manaCost)
+	end
+
 	return doCombat(cid, combat, var)
 end

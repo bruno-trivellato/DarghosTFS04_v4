@@ -17,10 +17,5 @@ setConditionParam(exhaust, CONDITION_PARAM_TICKS, 10000)
 setCombatCondition(combat, exhaust)
 
 function onCastSpell(cid, var)
-	
-	if(hasCondition(cid, CONDITION_EXHAUST, EXHAUSTED_PARALYZE)) then 
-		return false 
-	end
-	
         return doCombat(cid, combat, var)
 end

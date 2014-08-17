@@ -3,15 +3,10 @@ setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_EARTHDAMAGE)
 setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_SMALLPLANTS)
 
 function onGetFormulaValues(cid, level, maglevel)
-    local minMult = 5
-    local maxMult = 8
-
-    local minDmg = -((level / 3) + (maglevel * minMult))
-    local maxDmg = -((level / 3) + (maglevel * maxMult))
+	local min = ((level/5)+(maglevel*5))
+	local max = ((level/5)+(maglevel*10))
 	
-	minDmg, maxDmg = increasePremiumSpells(cid, minDmg, maxDmg)	
-
-    return minDmg, maxDmg
+	return -min, -max
 end
 
 setCombatCallback(combat, CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")

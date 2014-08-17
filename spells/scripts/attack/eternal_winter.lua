@@ -3,15 +3,10 @@ setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_ICEDAMAGE)
 setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_ICETORNADO)
 
 function onGetFormulaValues(cid, level, maglevel)
-    local minMult = 6.2
-    local maxMult = 10
-
-    local minDmg = -((level / 3) + (maglevel * minMult))
-    local maxDmg = -((level / 3) + (maglevel * maxMult))
+	local min = ((level/5)+(maglevel*6))
+	local max = ((level/5)+(maglevel*12))
 	
-	minDmg, maxDmg = increasePremiumSpells(cid, minDmg, maxDmg)	
-
-    return minDmg, maxDmg
+	return -min, -max
 end
 
 setCombatCallback(combat, CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")

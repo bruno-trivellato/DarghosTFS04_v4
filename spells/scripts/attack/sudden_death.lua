@@ -5,16 +5,8 @@ setCombatParam(combat, COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_SUDDENDEATH)
 setCombatParam(combat, COMBAT_PARAM_TARGETCASTERORTOPMOST, TRUE)
 
 function onGetFormulaValues(cid, level, maglevel)
-    local minMult = 6
-    local maxMult = 8
-
-    local min = ((level / 3) + (maglevel * minMult))
-    local max = ((level / 3) + (maglevel * maxMult))
-	
-	if(isSorcerer(cid)) then
-		min = math.floor(min * 1.1)
-		min = math.floor(max * 1.1)
-	end
+	local min = ( (level * 0.2) + (maglevel * 4.605) + 28 )
+	local max = ( (level * 0.2) + (maglevel * 7.395) + 46 )
 	
 	local baseMin = min
 	local baseMax = max
@@ -78,5 +70,13 @@ end
 setCombatCallback(combat, CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
 
 function onCastSpell(cid, var)
+
+	if(doPlayerIsInBattleground(cid) and isDruid(cid)) then
+		local manaCost = math.floor(getCreatureMaxMana(cid) * 0.04) -- 4% base mana para Druids em Battleground...
+	
+		doCreatureAddMana(cid, -manaCost, false)
+		doPlayerAddSpentMana(cid, manaCost)
+	end
+
 	return doCombat(cid, combat, var)
 end
