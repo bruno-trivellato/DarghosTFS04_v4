@@ -24,7 +24,7 @@ darghos_server_save_backup = false
 darghos_use_record = false
 
 -- Trainers
-darghos_enable_trainers = false
+darghos_enable_trainers = true
 
 -- Darghos rates (double,  triple,  etc)
 darghos_exp_multipler = 1.0
@@ -55,7 +55,7 @@ darghos_players_to_spoof = getConfigInfo('spoofPlayersCount')
 darghos_spoof_start_in = getConfigInfo('spoofPlayersStarts')
 
 -- Define se é necessario comer para recuperar life/mana
-darghos_need_eat = false
+darghos_need_eat = true
 
 -- Special Events
 darghos_kill_dark_general_exp_bonus_days = 3
