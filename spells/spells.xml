@@ -401,6 +401,7 @@
 	</instant>
 	
 	<!-- CUSTOM AREA -->
+	<!--
 	<conjure name="Conjure Infernal Bolts" words="exevo con vis hur" lvl="107" mana="1100" soul="5" reagentId="5944" conjureId="6529" conjureCount="2" function="conjureItem">
 		<vocation name="Royal Paladin"/>
 	</conjure>	
@@ -427,7 +428,9 @@
 		
 	<rune name="holy rune" id="2270" lvl="54" maglv="3" agressive="0" needtarget="1" charges="20" script="custom/holy_rune.lua"/>
 	<rune name="unholy rune" id="2264" lvl="54" maglv="3" agressive="0" needtarget="1" charges="20" script="custom/unholy_rune.lua"/>
+	-->
 	
 	<instant name="Multi Shot" needtarget="1" aggressive="1" script="monsters/multi_shot.lua"/>
 	<instant name="Random Teleport" words="exori mas con" needtarget="1" aggressive="1" script="monsters/random_teleport.lua"/>
+
 </spells>
