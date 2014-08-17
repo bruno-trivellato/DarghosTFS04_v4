@@ -1580,3 +1580,8 @@ function table.copy(table_to_copy)
 	
 	return _copy
 end
+
+--HACK
+function doPlayerIsInBattleground(cid)
+	return false
+end
