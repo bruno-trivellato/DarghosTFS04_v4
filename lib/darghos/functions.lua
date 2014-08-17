@@ -1532,6 +1532,7 @@ end
 -- se n�o, retorna o resumo da enquete para ser exibido
 function hasPollToNotify(cid)
 
+	--[[
 	local notify = getPlayerStorageValue(cid, sid.WEBSITE_POLL_NOTIFY)
 	
 	if(notify == 1) then
@@ -1558,8 +1559,9 @@ function hasPollToNotify(cid)
 	end
 	
 	result:free()
+	]]
 	
-	return false
+	return true
 end
 
 function getWeekday()
