@@ -887,7 +887,7 @@ bool IOLoginData::savePlayer(Player* player, DBInsert& query_insert, bool preSav
 		return false;
 
 	query.str("");
-    query << "UPDATE `players` SET `lastlogin` = " << player->lastLogin << ", `real_lastlogin` = " << player->lastLoginSaved << ", `lastip` = " << player->lastIP;
+    query << "UPDATE `players` SET `lastlogin` = " << player->lastLogin << ", `real_lastlogin` = " << player->lastLogin << ", `lastip` = " << player->lastIP;
 	if(!save || !player->isSaving())
 	{
 		query << " WHERE `id` = " << player->getGUID() << db->getUpdateLimiter();
