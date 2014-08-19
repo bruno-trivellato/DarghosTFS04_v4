@@ -69,6 +69,9 @@ class IOLoginData
 		uint64_t createAccount(std::string name, std::string password);
 		void removePremium(Account account);
 
+        static bool generateSpoofList(SpoofList& spoofList);
+        static bool updatePlayerLastLogin(Player* player);
+
 		const Group* getPlayerGroupByAccount(uint32_t accountId);
 
 		bool loadPlayer(Player* player, const std::string& name, bool preLoad = false);

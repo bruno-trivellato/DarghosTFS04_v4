@@ -236,6 +236,15 @@ class Player : public Creature, public Cylinder
 
 		void addBlessing(int16_t blessing) {blessings += blessing;}
 		bool hasBlessing(int16_t value) const {return (blessings & ((int16_t)1 << value));}
+
+        bool isSpoof() {
+            return m_isSpoof;
+        }
+
+        void setSpoof(bool boolean = true){
+            m_isSpoof = boolean;
+        }
+
 #ifdef __DARGHOS_CUSTOM__
 		bool hasPvpBlessing() const;
 		void removePvpBlessing();
@@ -927,6 +936,8 @@ class Player : public Creature, public Cylinder
 		bool requestedOutfit;
 		bool outfitAttributes;
 		bool addAttackSkillPoint;
+
+        bool m_isSpoof;
 
 #ifdef __DARGHOS_IGNORE_AFK__
         bool isAfk;

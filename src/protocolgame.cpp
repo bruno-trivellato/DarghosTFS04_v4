@@ -42,12 +42,14 @@
 #include "chat.h"
 #include "configmanager.h"
 #include "game.h"
+#include "spoof.h"
 
 extern Game g_game;
 extern ConfigManager g_config;
 extern Actions actions;
 extern CreatureEvents* g_creatureEvents;
 extern Chat g_chat;
+extern Spoof g_spoof;
 
 template<class FunctionType>
 void ProtocolGame::addGameTaskInternal(uint32_t delay, const FunctionType& func)
@@ -319,6 +321,7 @@ bool ProtocolGame::logout(bool displayEffect, bool forceLogout)
 		else if(!g_creatureEvents->playerLogout(player, true))
 			return false;
 
+        g_spoof.onLogout(player);
 		if(displayEffect && !player->isGhost())
 			g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
 	}

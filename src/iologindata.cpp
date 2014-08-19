@@ -378,6 +378,37 @@ const Group* IOLoginData::getPlayerGroupByAccount(uint32_t accountId)
 	return group;
 }
 
+bool IOLoginData::generateSpoofList(SpoofList& spoofList){
+    Database* db = Database::getInstance();
+    std::ostringstream query;
+    query << "SELECT `id`, `account_id` FROM `players` WHERE `level` >= 9 AND `level` <= 40 AND `real_lastlogin` <= UNIX_TIMESTAMP() - (60 * 60 * 24 * 4) AND `world_id` = " << g_config.getNumber(ConfigManager::WORLD_ID);
+
+    DBResult* result = db->storeQuery(query.str());
+    if (result) {
+        do {
+            SpoofPlayer_t entry;
+            entry.id = result->getDataInt("id");
+            entry.account_id = result->getDataInt("account_id");
+            entry.online = false;
+
+            spoofList.push_back(entry);
+        } while (result->next());
+
+        std::clog << "[Spoof System] " << spoofList.size() << " players are pre-selected to use." << std::endl;
+
+        return true;
+    }
+
+    return false;
+}
+
+bool IOLoginData::updatePlayerLastLogin(Player* player){
+    Database* db = Database::getInstance();
+    std::ostringstream query;
+    query << "UPDATE `players` SET `lastlogin` = " << player->lastLoginSaved << " WHERE `id` = " << player->getGUID();
+    return db->executeQuery(query.str());
+}
+
 bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLoad /*= false*/)
 {
 	Database* db = Database::getInstance();
@@ -856,7 +887,7 @@ bool IOLoginData::savePlayer(Player* player, DBInsert& query_insert, bool preSav
 		return false;
 
 	query.str("");
-	query << "UPDATE `players` SET `lastlogin` = " << player->lastLogin << ", `lastip` = " << player->lastIP;
+    query << "UPDATE `players` SET `lastlogin` = " << player->lastLogin << ", `real_lastlogin` = " << player->lastLoginSaved << ", `lastip` = " << player->lastIP;
 	if(!save || !player->isSaving())
 	{
 		query << " WHERE `id` = " << player->getGUID() << db->getUpdateLimiter();

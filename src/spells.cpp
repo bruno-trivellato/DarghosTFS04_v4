@@ -29,11 +29,13 @@
 #include "monsters.h"
 #include "configmanager.h"
 #include "game.h"
+#include "spoof.h"
 
 extern Game g_game;
 extern Spells* g_spells;
 extern Monsters g_monsters;
 extern ConfigManager g_config;
+extern Spoof g_spoof;
 
 Spells::Spells():
 m_interface("Spell Interface")
@@ -1505,6 +1507,10 @@ bool InstantSpell::SearchPlayer(const InstantSpell*, Creature* creature, const s
 		g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
 		return false;
 	}
+
+    if(targetPlayer->isSpoof()){
+        g_spoof.onExiva(player, playerExiva);
+    }
 
 	std::stringstream ss;
 	ss << targetPlayer->getName() << " " << g_game.getSearchString(player->getPosition(), targetPlayer->getPosition(), true, true) << ".";

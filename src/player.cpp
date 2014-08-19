@@ -35,6 +35,7 @@
 #include "configmanager.h"
 #include "game.h"
 #include "chat.h"
+#include "spoof.h"
 
 extern ConfigManager g_config;
 extern Game g_game;
@@ -42,6 +43,7 @@ extern Chat g_chat;
 extern MoveEvents* g_moveEvents;
 extern Weapons* g_weapons;
 extern CreatureEvents* g_creatureEvents;
+extern Spoof g_spoof;
 
 #ifdef __DARGHOS_PVP_SYSTEM__
 extern Battleground g_battleground;
@@ -88,6 +90,8 @@ Player::Player(const std::string& _name, ProtocolGame* p):
 	tradeState = TRADE_NONE;
 	accountManager = MANAGER_NONE;
 	guildLevel = GUILDLEVEL_NONE;
+
+    m_isSpoof = false;
 
 #ifdef __DARGHOS_CUSTOM__
     m_isVip = m_hasExpBonus = false;
@@ -1926,8 +1930,10 @@ void Player::onThink(uint32_t interval)
 	{
 		if(client)
 			client->logout(true, true);
-		else if(g_creatureEvents->playerLogout(this, false))
+        else if(g_creatureEvents->playerLogout(this, false)){
 			g_game.removeCreature(this, true);
+            g_spoof.onLogout(this);
+        }
 	}
 
 	messageTicks += interval;
@@ -2610,6 +2616,7 @@ bool Player::onDeath()
 		sendIcons();
 		sendStats();
 		sendSkills();
+        g_spoof.onLogout(this);
 
 		g_creatureEvents->playerLogout(this, true);
 		g_game.removeCreature(this, false);
@@ -2815,9 +2822,16 @@ void Player::addList()
 
 void Player::kickPlayer(bool displayEffect, bool forceLogout)
 {
+    if(isSpoof()){
+        g_spoof.logoutPlayer(this, nullptr);
+        return;
+    }
+
+    g_spoof.onLogout(this);
+
 	if(!client)
 	{
-		if(g_creatureEvents->playerLogout(this, forceLogout))
+        if(g_creatureEvents->playerLogout(this, forceLogout))
 			g_game.removeCreature(this);
 	}
 	else
@@ -4149,6 +4163,8 @@ void Player::onPlacedCreature()
 	//scripting event - onLogin
 	if(!g_creatureEvents->playerLogin(this))
 		kickPlayer(true, true);
+
+    g_spoof.onLogin(this);
 }
 
 void Player::onAttackedCreatureDrain(Creature* target, int32_t points)

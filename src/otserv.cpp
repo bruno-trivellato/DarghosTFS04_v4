@@ -80,6 +80,8 @@
 #include "textlogger.h"
 #endif
 
+#include "spoof.h"
+
 #ifdef __NO_BOOST_EXCEPTIONS__
 #include <exception>
 
@@ -89,6 +91,7 @@ inline void boost::throw_exception(std::exception const & e)
 }
 #endif
 
+Spoof g_spoof;
 RSA *g_RSA;
 ConfigManager g_config;
 Game g_game;
@@ -691,6 +694,8 @@ void otserv(StringVec, ServiceManager* services)
 		std::clog << std::endl;
 		startupErrorMessage("Unknown world type: " + g_config.getString(ConfigManager::WORLD_TYPE));
 	}
+
+    g_spoof.onStartup();
 
 	std::clog << ">> Initializing game state and binding services..." << std::endl;
 	g_game.setGameState(GAMESTATE_INIT);

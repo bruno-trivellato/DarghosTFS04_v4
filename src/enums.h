@@ -379,5 +379,13 @@ struct ShopInfo
 		sellPrice(_sellPrice), itemName(_itemName) {}
 };
 
+struct SpoofPlayer_t{
+    uint32_t account_id;
+    uint32_t id;
+    bool online;
+};
+
+typedef std::vector<SpoofPlayer_t> SpoofList;
+
 typedef std::list<ShopInfo> ShopInfoList;
 #endif
