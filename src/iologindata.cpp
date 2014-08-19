@@ -405,7 +405,7 @@ bool IOLoginData::generateSpoofList(SpoofList& spoofList){
 bool IOLoginData::updatePlayerLastLogin(Player* player){
     Database* db = Database::getInstance();
     std::ostringstream query;
-    query << "UPDATE `players` SET `lastlogin` = " << player->lastLoginSaved << " WHERE `id` = " << player->getGUID();
+    query << "UPDATE `players` SET `lastlogin` = " << player->lastLogin << " WHERE `id` = " << player->getGUID();
     return db->executeQuery(query.str());
 }
 
