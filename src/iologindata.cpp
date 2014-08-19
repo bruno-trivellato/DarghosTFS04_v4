@@ -406,7 +406,7 @@ bool IOLoginData::updatePlayerLastLogin(Player* player){
     Database* db = Database::getInstance();
     std::ostringstream query;
     query << "UPDATE `players` SET `lastlogin` = " << player->lastLogin << " WHERE `id` = " << player->getGUID();
-    return db->executeQuery(query.str());
+    return db->query(query.str());
 }
 
 bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLoad /*= false*/)
