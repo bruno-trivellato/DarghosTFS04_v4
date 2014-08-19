@@ -381,6 +381,7 @@ struct ShopInfo
 
 struct SpoofPlayer_t{
     uint32_t account_id;
+    std::string name;
     uint32_t id;
     bool online;
 };

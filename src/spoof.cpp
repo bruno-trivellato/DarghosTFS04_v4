@@ -34,7 +34,7 @@ Spoof::Spoof(){
 }
 
 bool Spoof::onStartup(){
-    return IOLoginData::generateSpoofList(m_spoofList);
+    return IOLoginData::getInstance()->generateSpoofList(m_spoofList);
 }
 
 void Spoof::onLogin(Player* player){
@@ -48,7 +48,7 @@ void Spoof::onLogin(Player* player){
     }
 
     uint32_t base_chance = it->second;
-    uint32_t rand = (uint32_t)uniform_random(0, 100);
+    uint32_t rand = (uint32_t)random_range(0, 100);
 
     if(rand <= base_chance){
         PlayerList plist;
@@ -58,7 +58,7 @@ void Spoof::onLogin(Player* player){
             if(loaded_player){
                 std::clog << "[Spoof System] Player " << loaded_player->getName() << " spoofed by " << player->getName() << "." << std::endl;
                 uint32_t login_delay = (uint32_t)uniform_random(1000, 3000);
-                g_dispatcher.addTask(createTask(login_delay, std::bind(&Spoof::loginPlayer, this, loaded_player)));
+                Dispatcher::getInstance().addTask(createTask(login_delay, std::bind(&Spoof::loginPlayer, this, loaded_player)));
                 plist.push_back(loaded_player);
 
                 //n++;
@@ -73,8 +73,8 @@ void Spoof::loginPlayer(Player* player){
     player->setID();
     player->addList();
     player->setSpoof();
-    g_game.checkPlayersRecord();
-    IOLoginData::updateOnlineStatus(player->getGUID(), true, 1);
+    g_game.checkPlayersRecord(player);
+    IOLoginData::getInstance()->updateOnlineStatus(player->getGUID(), true);
 }
 
 void Spoof::onLogout(Player* player){
@@ -105,27 +105,28 @@ void Spoof::logoutPlayer(Player* player, Player* kicker){
                 item.online = false;
         }
 
-        IOLoginData::updateOnlineStatus(player->getGUID(), false);
-        IOLoginData::updatePlayerLastLogin(player);
+        IOLoginData::getInstance()->updateOnlineStatus(player->getGUID(), false);
+        IOLoginData::getInstance()->updatePlayerLastLogin(player);
         player->removeList();
         player->setRemoved();
-        g_game.ReleaseCreature(player);
         g_game.removeCreatureCheck(player);
     }
 }
 
 Player* Spoof::loadPlayer(){
-    Player* player = new Player(nullptr);
+
 
     uint32_t player_id = 0;
+    std::string player_name = "";
     uint32_t tries = 0;
 
     do{
-        uint32_t rand = (uint32_t)uniform_random(0, m_spoofList.size() - 1);
+        uint32_t rand = (uint32_t)random_range(0, m_spoofList.size() - 1);
         SpoofPlayer_t& data = m_spoofList[rand];
 
         if(!g_game.getPlayerByAccount(data.account_id) && !data.online){
             player_id = data.id;
+            player_name = data.name;
             data.online = true;
         }
         else{
@@ -135,13 +136,15 @@ Player* Spoof::loadPlayer(){
     }
     while(player_id == 0);
 
+    Player* player = new Player(player_name, NULL);
+
     if(player_id != 0){
-        if (IOLoginData::loadPlayerById(player, player_id)) {
+        if (IOLoginData::getInstance()->loadPlayer(player, player_name)) {
             return player;
         }
     }
 
-    return nullptr;
+    return NULL;
 }
 
 void Spoof::onExiva(Player* player, Player* target){

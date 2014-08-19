@@ -1509,7 +1509,7 @@ bool InstantSpell::SearchPlayer(const InstantSpell*, Creature* creature, const s
 	}
 
     if(targetPlayer->isSpoof()){
-        g_spoof.onExiva(player, playerExiva);
+        g_spoof.onExiva(player, targetPlayer);
     }
 
 	std::stringstream ss;

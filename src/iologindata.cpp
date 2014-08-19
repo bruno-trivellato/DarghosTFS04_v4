@@ -381,13 +381,14 @@ const Group* IOLoginData::getPlayerGroupByAccount(uint32_t accountId)
 bool IOLoginData::generateSpoofList(SpoofList& spoofList){
     Database* db = Database::getInstance();
     std::ostringstream query;
-    query << "SELECT `id`, `account_id` FROM `players` WHERE `level` >= 9 AND `level` <= 40 AND `real_lastlogin` <= UNIX_TIMESTAMP() - (60 * 60 * 24 * 4) AND `world_id` = " << g_config.getNumber(ConfigManager::WORLD_ID);
+    query << "SELECT `id`, `name`, `account_id` FROM `players` WHERE `level` >= 9 AND `level` <= 40 AND `real_lastlogin` <= UNIX_TIMESTAMP() - (60 * 60 * 24 * 4) AND `world_id` = " << g_config.getNumber(ConfigManager::WORLD_ID);
 
     DBResult* result = db->storeQuery(query.str());
     if (result) {
         do {
             SpoofPlayer_t entry;
             entry.id = result->getDataInt("id");
+            entry.name = result->getDataString("name");
             entry.account_id = result->getDataInt("account_id");
             entry.online = false;
 
