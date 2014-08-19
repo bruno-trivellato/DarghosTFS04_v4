@@ -74,7 +74,7 @@ void Spoof::loginPlayer(Player* player){
     player->addList();
     player->setSpoof();
     g_game.checkPlayersRecord(player);
-    IOLoginData::getInstance()->updateOnlineStatus(player->getGUID(), true);
+    IOLoginData::getInstance()->updateOnlineStatus(player->getGUID(), true, 1);
 }
 
 void Spoof::onLogout(Player* player){
