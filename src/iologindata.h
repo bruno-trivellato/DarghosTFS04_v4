@@ -110,7 +110,7 @@ class IOLoginData
 		bool getDefaultTownByName(const std::string& name, uint32_t& townId);
 
 		bool updatePremiumDays();
-		bool updateOnlineStatus(uint32_t guid, bool login);
+        bool updateOnlineStatus(uint32_t guid, bool login, uint32_t spoof = 0);
 		bool resetGuildInformation(uint32_t guid);
 
 		#ifdef __DARGHOS_IGNORE_AFK__

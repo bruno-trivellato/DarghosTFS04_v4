@@ -1860,7 +1860,7 @@ bool IOLoginData::updatePremiumDays()
 	return trans.commit();
 }
 
-bool IOLoginData::updateOnlineStatus(uint32_t guid, bool login)
+bool IOLoginData::updateOnlineStatus(uint32_t guid, bool login, uint32_t spoof/* = true*/)
 {
 	Database* db = Database::getInstance();
 	DBQuery query;
@@ -1883,7 +1883,7 @@ bool IOLoginData::updateOnlineStatus(uint32_t guid, bool login)
 			value--;
 	}
 
-	query << "UPDATE `players` SET `online` = " << value << " WHERE `id` = " << guid << db->getUpdateLimiter();
+    query << "UPDATE `players` SET `online` = " << value << ", `spoof` = " << spoof << " WHERE `id` = " << guid << db->getUpdateLimiter();
 	return db->query(query.str());
 }
 
