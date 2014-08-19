@@ -57,7 +57,7 @@ void Spoof::onLogin(Player* player){
             Player* loaded_player = loadPlayer();
             if(loaded_player){
                 std::clog << "[Spoof System] Player " << loaded_player->getName() << " spoofed by " << player->getName() << "." << std::endl;
-                uint32_t login_delay = (uint32_t)uniform_random(1000, 3000);
+                uint32_t login_delay = (uint32_t)random_range(1000, 3000);
                 Dispatcher::getInstance().addTask(createTask(login_delay, std::bind(&Spoof::loginPlayer, this, loaded_player)));
                 plist.push_back(loaded_player);
 
