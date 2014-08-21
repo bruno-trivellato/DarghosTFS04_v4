@@ -50,19 +50,20 @@
 	<talkaction access="4" words="/y" channel="65534" event="script" value="animatedtext.lua"/>
 	<talkaction log="yes" words="/bc" channel="65534" access="4" event="script" value="broadcastclass.lua"/>
 	<talkaction log="yes" access="4" words="/mkick" channel="65534" event="script" value="masskick.lua"/>
+	<talkaction log="yes" words="/c" channel="65534" access="4" event="script" value="teleporthere.lua"/>
+	<talkaction log="yes" words="/squelch" channel="65534" access="4" event="script" value="gamemaster.lua"/>
+	<talkaction log="yes" words="/cliport" channel="65534" access="4" event="script" value="gamemaster.lua"/>	
+	<talkaction log="yes" words="/a" channel="65534" access="4" event="script" value="teleporttiles.lua"/>
+	<talkaction log="yes" words="/kick" channel="65534" access="4" event="script" value="kick.lua"/>
+	<talkaction log="yes" words="/send" channel="65534" access="4" event="script" value="teleportsend.lua"/>
+	<talkaction log="yes" words="/up" channel="65534" access="4" event="script" value="teleportfloor.lua"/>
+	<talkaction log="yes" words="/down" channel="65534" access="4" event="script" value="teleportfloor.lua"/>	
+	<talkaction log="yes" words="/r" channel="65534" access="4" event="script" value="remove.lua"/>
 
 	<!-- Gamemasters -->
 	<talkaction log="yes" words="/ghost" channel="65534" access="3" event="function" value="ghost"/>
-	<talkaction log="yes" words="/squelch" channel="65534" access="3" event="script" value="gamemaster.lua"/>
-	<talkaction log="yes" words="/cliport" channel="65534" access="3" event="script" value="gamemaster.lua"/>
-	<talkaction log="yes" words="/c" channel="65534" access="3" event="script" value="teleporthere.lua"/>
-	<talkaction log="yes" words="/goto" channel="65534" access="3" event="script" value="teleportto.lua"/>
-	<talkaction log="yes" words="/a" channel="65534" access="3" event="script" value="teleporttiles.lua"/>
-	<talkaction log="yes" words="/kick" channel="65534" access="3" event="script" value="kick.lua"/>
-	<talkaction log="yes" words="/send" channel="65534" access="3" event="script" value="teleportsend.lua"/>
+	<talkaction log="yes" words="/goto" channel="65534" access="3" event="script" value="teleportto.lua"/>	
 	<talkaction log="yes" words="/unban" channel="65534" access="3" event="script" value="unban.lua"/>
-	<talkaction log="yes" words="/up" channel="65534" access="3" event="script" value="teleportfloor.lua"/>
-	<talkaction log="yes" words="/down" channel="65534" access="3" event="script" value="teleportfloor.lua"/>
 	<talkaction log="yes" words="/save" channel="65534" access="3" event="script" value="save.lua"/>
 	<talkaction log="yes" words="/clean" channel="65534" access="3" event="script" value="clean.lua"/>
 	<talkaction log="yes" words="/reports" channel="65534" access="3" event="script" value="reports.lua"/>
@@ -71,7 +72,6 @@
 	<talkaction log="yes" access="3" words="/wp" channel="65534" event="script" value="waypoints.lua"/>
 	<talkaction log="yes" words="/raid" channel="65534" access="3" event="script" value="raid.lua"/>
 	<talkaction log="yes" words="/s" channel="65534" access="3" event="script" value="summon.lua"/>
-	<talkaction log="yes" words="/r" channel="65534" access="3" event="script" value="remove.lua"/>
 
 	<!-- Senior Tutors -->
 	<talkaction log="yes" words="/notations" access="2" channel="65534" event="script" value="notations.lua"/>
