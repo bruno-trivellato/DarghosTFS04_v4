@@ -446,9 +446,10 @@ class Creature : public AutoId, virtual public Thing
 		{
 			_tile = dynamic_cast<Tile*>(cylinder);
 			Thing::setParent(cylinder);
+            _position = _tile->getPosition();
 		}
 
-		virtual Position getPosition() const {return _tile->getPosition();}
+        virtual Position getPosition() const {return _position;}
 		virtual Tile* getTile() {return _tile;}
 		virtual const Tile* getTile() const {return _tile;}
 		int32_t getWalkCache(const Position& pos) const;
@@ -463,6 +464,8 @@ class Creature : public AutoId, virtual public Thing
 		bool localMapCache[mapWalkHeight][mapWalkWidth];
 
 		virtual bool useCacheMap() const {return false;}
+
+        Position _position;
 
 		Tile* _tile;
 		uint32_t id;

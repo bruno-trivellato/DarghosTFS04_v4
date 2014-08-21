@@ -6590,7 +6590,7 @@ void Game::emergencyDDoSLoop()
 
         rxPpsRecords.push_front(currentPps);
 
-        if(rxPpsRecords.size() > 3)
+        if(rxPpsRecords.size() > 6)
         {
             rxPpsRecords.pop_back();
         }
@@ -6603,7 +6603,7 @@ void Game::emergencyDDoSLoop()
 		
 		rxBpsRecords.push_front(currentRxBps);
 		
-        if(rxBpsRecords.size() > 3)
+        if(rxBpsRecords.size() > 6)
         {
             rxBpsRecords.pop_back();
         }
@@ -6616,7 +6616,7 @@ void Game::emergencyDDoSLoop()
 		
 		txBpsRecords.push_front(currentTxBps);
 		
-        if(txBpsRecords.size() > 3)
+        if(txBpsRecords.size() > 6)
         {
             txBpsRecords.pop_back();
         }
@@ -6689,7 +6689,7 @@ uint32_t Game::checkDDoS(RxPpsRecords& rxPpsRecords)
         sum += (*it);
     }
 
-    return std::floor(sum / 3);
+    return std::floor(sum / 6);
 }
 
 int64_t Game::getCurrentRxPackets()
