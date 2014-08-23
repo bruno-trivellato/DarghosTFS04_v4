@@ -1,5 +1,5 @@
 function onThink(cid, interval)
-	if(not isCreature(cid) or not isPlayer(cid) or getPlayerPremiumDays(cid) == 0) then
+	if(not isCreature(cid) or not isPlayer(cid)) then
 		return
 	end
 	
