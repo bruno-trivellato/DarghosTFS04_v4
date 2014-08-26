@@ -38,6 +38,10 @@ bool Spoof::onStartup(){
 }
 
 void Spoof::onLogin(Player* player){
+
+    //we will not open any spoof for now
+    return;
+
     time_t current = time(nullptr);
     tm* date = localtime(&current);
 
@@ -107,9 +111,7 @@ void Spoof::logoutPlayer(Player* player, Player* kicker){
 
         IOLoginData::getInstance()->updateOnlineStatus(player->getGUID(), false);
         IOLoginData::getInstance()->updatePlayerLastLogin(player);
-        player->removeList();
-        player->setRemoved();
-        g_game.removeCreatureCheck(player);
+        g_game.removeCreature(player);
     }
 }
 

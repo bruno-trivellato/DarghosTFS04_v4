@@ -15,6 +15,8 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ////////////////////////////////////////////////////////////////////////
 #include "otpch.h"
+
+#include <boost/range/adaptor/reversed.hpp>
 #include <iostream>
 
 #include "tile.h"
@@ -1280,6 +1282,37 @@ void Tile::__removeThing(Thing* thing, uint32_t count)
 
 	std::clog << "[Failure - Tile::__removeThing] thing not found" << std::endl;
 #endif
+}
+
+int32_t Tile::getStackposOfCreature(const Player* player, const Creature* creature) const
+{
+    int32_t n;
+    if (ground) {
+        n = 1;
+    } else {
+        n = 0;
+    }
+
+    const TileItemVector* items = getItemList();
+    if (items) {
+        n += items->getTopItemCount();
+        if (n >= 10) {
+            return -1;
+        }
+    }
+
+    if (const CreatureVector* creatures = getCreatures()) {
+        for (const Creature* c : boost::adaptors::reverse(*creatures)) {
+            if (c == creature) {
+                return n;
+            } else if (player->canSeeCreature(c)) {
+                if (++n >= 10) {
+                    return -1;
+                }
+            }
+        }
+    }
+    return -1;
 }
 
 int32_t Tile::getClientIndexOfThing(const Player* player, const Thing* thing) const

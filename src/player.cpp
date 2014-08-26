@@ -4749,11 +4749,11 @@ uint64_t Player::getLostExperience() const
 		return 0;
 
 #ifdef __DARGHOS_CUSTOM__
-    double percent = (double)(lossPercent[LOSS_EXPERIENCE] - vocation->getLessLoss() - (isVip() && !hasExpBonus() ? g_config.getNumber(ConfigManager::VIP_DEATH_LESS_LOSS) : 0) - (getBlessings() * g_config.getNumber(
+    double percent = (double)(lossPercent[LOSS_EXPERIENCE] - vocation->getLessLoss() - (isVip() && !hasExpBonus() ? g_config.getNumber(ConfigManager::VIP_DEATH_LESS_LOSS) : 0) - (getBlessings() * g_config.getNumber(ConfigManager::BLESS_REDUCTION))) / 100.;
+
+    return (uint64_t)std::floor((double)(experience * percent) / 10.);
 #else
-	double percent = (double)(lossPercent[LOSS_EXPERIENCE] - vocation->getLessLoss() - (getBlessings() * g_config.getNumber(
-#endif
-		ConfigManager::BLESS_REDUCTION))) / 100.;
+    double percent = (double)(lossPercent[LOSS_EXPERIENCE] - vocation->getLessLoss() - (getBlessings() * g_config.getNumber(ConfigManager::BLESS_REDUCTION))) / 100.;
 
 	if(level <= 25)
 		return (uint64_t)std::floor((double)(experience * percent) / 10.);
@@ -4773,6 +4773,7 @@ uint64_t Player::getLostExperience() const
 		lost += (uint64_t)std::floor((double)(getExpForLevel(base) - getExpForLevel(base - 1)) * levels);
 
 	return (uint64_t)std::floor((double)(lost * percent));
+#endif
 }
 
 uint32_t Player::getAttackSpeed() const

@@ -992,43 +992,47 @@ bool Game::removeCreature(Creature* creature, bool isLogout /*= true*/)
 	if(creature->isRemoved())
 		return false;
 
-	Tile* tile = creature->getTile();
-	SpectatorVec list;
+    Player* p = creature->getPlayer();
+    if(!p || !p->isSpoof()){
+        Tile* tile = creature->getTile();
+        SpectatorVec list;
 
-	SpectatorVec::iterator it;
-	getSpectators(list, tile->getPosition(), false, true);
+        SpectatorVec::iterator it;
+        getSpectators(list, tile->getPosition(), false, true);
 
-	Player* player = NULL;
-	std::vector<uint32_t> oldStackPosVector;
-	for(it = list.begin(); it != list.end(); ++it)
-	{
-		if((player = (*it)->getPlayer()) && player->canSeeCreature(creature))
-			oldStackPosVector.push_back(tile->getClientIndexOfThing(player, creature));
-	}
+        Player* player = NULL;
+        std::vector<uint32_t> oldStackPosVector;
+        for(it = list.begin(); it != list.end(); ++it)
+        {
+            if((player = (*it)->getPlayer()) && player->canSeeCreature(creature))
+                oldStackPosVector.push_back(tile->getClientIndexOfThing(player, creature));
+        }
 
-	int32_t oldIndex = tile->__getIndexOfThing(creature);
-	if(!map->removeCreature(creature))
-		return false;
+        int32_t oldIndex = tile->__getIndexOfThing(creature);
+        if(!map->removeCreature(creature))
+            return false;
 
-	//send to client
-	uint32_t i = 0;
-	for(it = list.begin(); it != list.end(); ++it)
-	{
-		if(creature != (*it))
-			(*it)->updateTileCache(tile);
+        //send to client
+        uint32_t i = 0;
+        for(it = list.begin(); it != list.end(); ++it)
+        {
+            if(creature != (*it))
+                (*it)->updateTileCache(tile);
 
-		if(!(player = (*it)->getPlayer()) || !player->canSeeCreature(creature))
-			continue;
+            if(!(player = (*it)->getPlayer()) || !player->canSeeCreature(creature))
+                continue;
 
-		player->sendCreatureDisappear(creature, oldStackPosVector[i]);
-		++i;
-	}
+            player->sendCreatureDisappear(creature, oldStackPosVector[i]);
+            ++i;
+        }
 
-	//event method
-	for(it = list.begin(); it != list.end(); ++it)
-		(*it)->onCreatureDisappear(creature, isLogout);
+        //event method
+        for(it = list.begin(); it != list.end(); ++it)
+            (*it)->onCreatureDisappear(creature, isLogout);
 
-	creature->getParent()->postRemoveNotification(NULL, creature, NULL, oldIndex, true);
+        creature->getParent()->postRemoveNotification(NULL, creature, NULL, oldIndex, true);
+    }
+
 	creature->onRemovedCreature();
 
 	autoList.erase(creature->getID());

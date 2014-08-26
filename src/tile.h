@@ -231,6 +231,7 @@ class Tile : public Cylinder
 
 		bool hasHeight(uint32_t n) const;
 		void moveCreature(Creature* actor, Creature* creature, Cylinder* toCylinder, bool forceTeleport = false);
+        int32_t getStackposOfCreature(const Player* player, const Creature* creature) const;
 		int32_t getClientIndexOfThing(const Player* player, const Thing* thing) const;
 
 		//cylinder implementations
