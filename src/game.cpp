@@ -6586,6 +6586,9 @@ void Game::showHotkeyUseMessage(Player* player, Item* item)
 #ifdef __DARGHOS_EMERGENCY_DDOS__
 void Game::emergencyDDoSLoop()
 {
+    Scheduler::getInstance().addEvent(createSchedulerTask(
+        STATE_DELAY, boost::bind(&Game::emergencyDDoSLoop, this)));
+
     //current PPS
     int64_t currentRxPackets = getCurrentRxPackets();
     int32_t currentPps = currentRxPackets - m_lastRxPackets;
@@ -6618,7 +6621,7 @@ void Game::emergencyDDoSLoop()
 
     m_txBpsRecords.push_front(currentTxBps);
 
-    if(txBpsRecords.size() > 6)
+    if(m_txBpsRecords.size() > 6)
     {
         m_txBpsRecords.pop_back();
     }
