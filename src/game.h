@@ -716,8 +716,14 @@ class Game
 		time_t lastHighscoreCheck;
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
-        bool m_underDDoS;
+        uint32_t checkDDoSEvent;
+        bool m_underDDoS, m_wasNotified;
         time_t m_lastDDoS;
+
+        RxPpsRecords m_rxPpsRecords, m_rxBpsRecords, m_txBpsRecords;
+        uint64_t m_lastRxPackets, m_lastRxBytes, m_lastTxBytes;
+
+        uint32_t m_internalCount;
 #endif
 };
 #endif

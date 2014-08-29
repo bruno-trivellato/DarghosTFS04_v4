@@ -95,6 +95,10 @@ Game::Game()
 
 	lastBucket = checkCreatureLastIndex = checkLightEvent = checkCreatureEvent = checkDecayEvent = saveEvent = 0;
 	checkWarsEvent = 0;
+
+#ifdef __DARGHOS_EMERGENCY_DDOS__
+    checkDDoSEvent = 0;
+#endif
 }
 
 Game::~Game()
@@ -115,7 +119,20 @@ void Game::start(ServiceManager* servicer)
 		boost::bind(&Game::checkWars, this)));
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
-    new boost::thread(boost::bind(&Game::emergencyDDoSLoop, this));
+    std::clog << "[DDOS EMERGENCY] Enabled" << std::endl;
+
+    m_underDDoS = false;
+    m_lastDDoS = 0;
+
+    m_lastRxPackets = getCurrentRxPackets();
+    m_lastRxBytes = getCurrentRxBytes();
+    m_lastTxBytes = getCurrentTxBytes();
+
+    m_wasNotified = false;
+    m_internalCount = 0;
+
+    checkDDoSEvent = Scheduler::getInstance().addEvent(createSchedulerTask(STATE_DELAY,
+        boost::bind(&Game::emergencyDDoSLoop, this)));
 #endif		
 
 	services = servicer;
@@ -6569,118 +6586,96 @@ void Game::showHotkeyUseMessage(Player* player, Item* item)
 #ifdef __DARGHOS_EMERGENCY_DDOS__
 void Game::emergencyDDoSLoop()
 {
-    std::clog << "[DDOS EMERGENCY] Enabled" << std::endl;
+    //current PPS
+    int64_t currentRxPackets = getCurrentRxPackets();
+    int32_t currentPps = currentRxPackets - m_lastRxPackets;
 
-    m_underDDoS = false;
-    m_lastDDoS = 0;
+    m_rxPpsRecords.push_front(currentPps);
 
-    uint32_t tick_interval = 1000;
-
-    RxPpsRecords rxPpsRecords, rxBpsRecords, txBpsRecords;
-
-    uint64_t lastRxPackets = getCurrentRxPackets();
-	uint64_t lastRxBytes = getCurrentRxBytes();
-	uint64_t lastTxBytes = getCurrentTxBytes();
-
-    bool loop = true;
-	bool wasNotified = false;
-	uint32_t internal_count = 0;
-
-    while(loop)
+    if(m_rxPpsRecords.size() > 6)
     {
-		//current PPS
-        int64_t currentRxPackets = getCurrentRxPackets();
-        int32_t currentPps = currentRxPackets - lastRxPackets;
-
-        rxPpsRecords.push_front(currentPps);
-
-        if(rxPpsRecords.size() > 6)
-        {
-            rxPpsRecords.pop_back();
-        }
-
-        int32_t avgPps = (int32_t)checkDDoS(rxPpsRecords);
-		
-		//current BPS rx
-		int64_t currentRxBytes = getCurrentRxBytes();
-		int32_t currentRxBps = currentRxBytes - lastRxBytes;
-		
-		rxBpsRecords.push_front(currentRxBps);
-		
-        if(rxBpsRecords.size() > 6)
-        {
-            rxBpsRecords.pop_back();
-        }
-
-        int32_t avgRxBps = (int32_t)checkDDoS(rxBpsRecords);
-		
-		//current BPS tx
-		int64_t currentTxBytes = getCurrentTxBytes();
-		int32_t currentTxBps = currentTxBytes - lastTxBytes;
-		
-		txBpsRecords.push_front(currentTxBps);
-		
-        if(txBpsRecords.size() > 6)
-        {
-            txBpsRecords.pop_back();
-        }
-
-        int32_t avgTxBps = (int32_t)checkDDoS(txBpsRecords);
-
-		bool brokenPps, brokenRxBps, brokenTxBps;
-		brokenPps = brokenRxBps = brokenTxBps = false;
-		
-		if(rxPpsRecords.size() >= 3){
-			if(avgPps >= g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) || avgPps == 0)
-				brokenPps = true;
-			if(avgRxBps >= g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE))
-				brokenRxBps = true;
-			if(avgTxBps >= g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE))
-				brokenTxBps = true;
-		}
-
-		if(brokenPps || brokenRxBps || brokenTxBps){
-			m_underDDoS = true;
-			m_lastDDoS = time(NULL);
-		}
-
-		if(internal_count == 30){
-			std::clog << "[CONNECTION LOAD] Periodic statistics." <<  std::endl;
-			std::clog << "RX PPS " << avgPps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) << "), ";
-			std::clog << "RX BPS " << avgRxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE) << "), ";
-			std::clog << "TX BPS " << avgTxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE) << ")." << std::endl;
-
-			internal_count = 0;
-		}
-		else{
-			internal_count++;
-		}
-
-		
-        if(m_underDDoS && !wasNotified)
-        {
-            //ok, we are under DDoS attacks
-            wasNotified = true;
-            std::clog << "[DDOS EMERGENCY] Emergency ENABLED." << std::endl;
-            std::clog << "RX PPS " << avgPps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) << ")." << std::endl;
-            std::clog << "RX BPS " << avgRxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE) << ")." << std::endl;
-            std::clog << "TX BPS " << avgTxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE) << ")." << std::endl;
-            broadcastMessage("Connection problems detected. For your security the game is \"PAUSED\" for now... Please wait...", MSG_STATUS_WARNING);
-        }
-        else if(m_underDDoS && time(NULL) >= m_lastDDoS + g_config.getNumber(ConfigManager::DDOS_EMERGENCY_MIN_TIME))
-        {
-            m_underDDoS = false;
-			wasNotified = false;
-            std::clog << "[DDOS EMERGENCY] Emergency disabled." << std::endl;
-            broadcastMessage("Connection now is fine! The game was unpaused. Thanks for your patience!", MSG_STATUS_WARNING);
-        }	
-		
-        lastRxPackets = currentRxPackets;
-        lastRxBytes = currentRxBytes;
-        lastTxBytes = currentTxBytes;
-		
-        boost::this_thread::sleep(boost::posix_time::milliseconds(tick_interval));
+        m_rxPpsRecords.pop_back();
     }
+
+    int32_t avgPps = (int32_t)checkDDoS(m_rxPpsRecords);
+
+    //current BPS rx
+    int64_t currentRxBytes = getCurrentRxBytes();
+    int32_t currentRxBps = currentRxBytes - m_lastRxBytes;
+
+    m_rxBpsRecords.push_front(currentRxBps);
+
+    if(m_rxBpsRecords.size() > 6)
+    {
+        m_rxBpsRecords.pop_back();
+    }
+
+    int32_t avgRxBps = (int32_t)checkDDoS(m_rxBpsRecords);
+
+    //current BPS tx
+    int64_t currentTxBytes = getCurrentTxBytes();
+    int32_t currentTxBps = currentTxBytes - m_lastTxBytes;
+
+    m_txBpsRecords.push_front(currentTxBps);
+
+    if(txBpsRecords.size() > 6)
+    {
+        m_txBpsRecords.pop_back();
+    }
+
+    int32_t avgTxBps = (int32_t)checkDDoS(m_txBpsRecords);
+
+    bool brokenPps, brokenRxBps, brokenTxBps;
+    brokenPps = brokenRxBps = brokenTxBps = false;
+
+    if(m_rxPpsRecords.size() >= 3){
+        if(avgPps >= g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) || avgPps == 0)
+            brokenPps = true;
+        if(avgRxBps >= g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE))
+            brokenRxBps = true;
+        if(avgTxBps >= g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE))
+            brokenTxBps = true;
+    }
+
+    if(brokenPps || brokenRxBps || brokenTxBps){
+        m_underDDoS = true;
+        m_lastDDoS = time(NULL);
+    }
+
+    if(m_internalCount == 30){
+        std::clog << "[CONNECTION LOAD] Periodic statistics." <<  std::endl;
+        std::clog << "RX PPS " << avgPps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) << "), ";
+        std::clog << "RX BPS " << avgRxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE) << "), ";
+        std::clog << "TX BPS " << avgTxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE) << ")." << std::endl;
+
+        m_internalCount = 0;
+    }
+    else{
+        m_internalCount++;
+    }
+
+
+    if(m_underDDoS && !m_wasNotified)
+    {
+        //ok, we are under DDoS attacks
+        m_wasNotified = true;
+        std::clog << "[DDOS EMERGENCY] Emergency ENABLED." << std::endl;
+        std::clog << "RX PPS " << avgPps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) << ")." << std::endl;
+        std::clog << "RX BPS " << avgRxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE) << ")." << std::endl;
+        std::clog << "TX BPS " << avgTxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE) << ")." << std::endl;
+        broadcastMessage("Connection problems detected. For your security the game is \"PAUSED\" for now... Please wait...", MSG_STATUS_WARNING);
+    }
+    else if(m_underDDoS && time(NULL) >= m_lastDDoS + g_config.getNumber(ConfigManager::DDOS_EMERGENCY_MIN_TIME))
+    {
+        m_underDDoS = false;
+        m_wasNotified = false;
+        std::clog << "[DDOS EMERGENCY] Emergency disabled." << std::endl;
+        broadcastMessage("Connection now is fine! The game was unpaused. Thanks for your patience!", MSG_STATUS_WARNING);
+    }
+
+    m_lastRxPackets = currentRxPackets;
+    m_lastRxBytes = currentRxBytes;
+    m_lastTxBytes = currentTxBytes;
 }
 
 uint32_t Game::checkDDoS(RxPpsRecords& rxPpsRecords)
