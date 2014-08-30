@@ -183,6 +183,10 @@ function changeStage(cid, skilltype, multiple)
 			
 		 	expSpecialBonus = expSpecialBonus + ((getPlayerStorageValue(cid, sid.EXP_MOD_ESPECIAL) > 0) and tonumber(getPlayerStorageValue(cid, sid.EXP_MOD_ESPECIAL)) or 0)
 		 end
+
+		 if(getPlayerStorageValue(cid, sid.DOUBLE_EXP_EVENT) == 1) then
+		 	expSpecialBonus = expSpecialBonus + 100
+		 end
 		 
 		 expSpecialBonus = round(expSpecialBonus / 100) + 1.00
 		 

@@ -6,6 +6,7 @@ local config = {
 }
 
 function onStartup()
+	--[[
 	local data, time, result = {}, os.time(), db.getResult("SELECT `id`, `ownerid`, `creationdata`, `checkdata` FROM `guilds` WHERE `world_id` = " .. getConfigValue('worldId') .. ";")
 	if(result:getID() ~= -1) then
 		repeat
@@ -74,6 +75,7 @@ function onStartup()
 			end
 		end
 	end
+	]]
 
 	db.executeQuery("UPDATE `players` SET `online` = 0 WHERE `world_id` = " .. getConfigValue('worldId') .. " AND `online` > 0;")
 	return true

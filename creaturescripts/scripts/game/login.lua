@@ -50,6 +50,11 @@ function onLogin(cid)
 		doPlayerAddBlessing(cid, 5)		
 	end	
 	
+	--event
+	if(not playerHistory.hasAchievement(cid, PH_ACH_MISC_GOT_LEVEL_100)) then
+		setPlayerStorageValue(cid, sid.DOUBLE_EXP_EVENT, 1)
+	end
+
 	setStagesOnLogin(cid)
 
 	local itemShop = itemShop:new()
