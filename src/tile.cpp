@@ -491,7 +491,7 @@ void Tile::moveCreature(Creature* actor, Creature* creature, Cylinder* toCylinde
     {
         if((tmpPlayer = (*it)->getPlayer())){
             int32_t stackpos = oldStackposVector[i++];
-            if(stackpos != -1 && !tmpPlayer->isGhost()){
+            if(stackpos != -1){
                 tmpPlayer->sendCreatureMove(creature, newTile, newPos, this, pos, stackpos, teleport);
             }
         }
