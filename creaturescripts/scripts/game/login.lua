@@ -230,8 +230,13 @@ end
 function addMapMarksByUids(cid, uids, type)
 
 	for k,v in pairs(uids) do
-		local pos = getThingPosition(12000 + v.uid)
-		doPlayerAddMapMark(cid, pos, type, v.description)
+		local uid = 12000 + v.uid
+		if(getThing(uid).uid ~= 0) then
+			local pos = getThingPosition(12000 + v.uid)
+			doPlayerAddMapMark(cid, pos, type, v.description)
+		else
+			std.clog("Cannot find object to the map mark uid: " .. uid)
+		end
 	end
 end
 

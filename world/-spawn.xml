@@ -27847,7 +27847,10 @@
 	<spawn centerx="3566" centery="2134" centerz="13" radius="5">
 		<monster name="Demon" x="4" y="0" z="13" spawntime="60" />
 	</spawn>
-	<spawn centerx="3589" centery="2134" centerz="13" radius="5" />
+	<spawn centerx="3589" centery="2134" centerz="13" radius="5">
+		<monster name="Demon" x="-1" y="-1" z="13" spawntime="60" />
+		<monster name="Demon" x="-1" y="1" z="13" spawntime="60" />
+	</spawn>
 	<spawn centerx="3487" centery="2178" centerz="13" radius="5">
 		<monster name="Demon" x="0" y="1" z="13" spawntime="180" />
 		<monster name="Fire Elemental" x="0" y="3" z="13" spawntime="150" />
@@ -28130,7 +28133,18 @@
 		<monster name="Priestess" x="1" y="0" z="14" spawntime="60" />
 		<monster name="Necromancer" x="-1" y="1" z="14" spawntime="60" />
 	</spawn>
-	<spawn centerx="3588" centery="2134" centerz="14" radius="7" />
+	<spawn centerx="3588" centery="2134" centerz="14" radius="7">
+		<monster name="Banshee" x="-2" y="-4" z="14" spawntime="60" />
+		<monster name="Banshee" x="3" y="-4" z="14" spawntime="60" />
+		<monster name="Demon" x="-3" y="-2" z="14" spawntime="60" />
+		<monster name="Demon" x="4" y="-2" z="14" spawntime="60" />
+		<monster name="Banshee" x="-4" y="0" z="14" spawntime="60" />
+		<monster name="Banshee" x="6" y="0" z="14" spawntime="60" />
+		<monster name="Demon" x="-3" y="2" z="14" spawntime="60" />
+		<monster name="Demon" x="4" y="2" z="14" spawntime="60" />
+		<monster name="Banshee" x="-2" y="4" z="14" spawntime="60" />
+		<monster name="Banshee" x="3" y="4" z="14" spawntime="60" />
+	</spawn>
 	<spawn centerx="3384" centery="2209" centerz="14" radius="5">
 		<monster name="Banshee" x="-3" y="-3" z="14" spawntime="60" />
 		<monster name="Banshee" x="1" y="-3" z="14" spawntime="60" />
