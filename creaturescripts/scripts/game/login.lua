@@ -51,9 +51,10 @@ function onLogin(cid)
 	end	
 	
 	--event
-	if(not playerHistory.hasAchievement(cid, PH_ACH_MISC_GOT_LEVEL_100)) then
+	setPlayerStorageValue(cid, sid.DOUBLE_EXP_EVENT, -1)
+	--[[if(not playerHistory.hasAchievement(cid, PH_ACH_MISC_GOT_LEVEL_100)) then
 		setPlayerStorageValue(cid, sid.DOUBLE_EXP_EVENT, 1)
-	end
+	end]]
 
 	setStagesOnLogin(cid)
 
