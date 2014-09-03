@@ -93,7 +93,8 @@ function onLogin(cid)
 		doPlayerPopupFYI(cid, message)
 	end
 
-	if(getPlayerAccess(cid) == access.GOD) then
+	local arr = { access.GOD, access.GAME_MASTER, access.COMMUNITY_MANAGER }
+	if(isInArray(arr, getPlayerAccess(cid))) then
 		addAllOufits(cid)
 	end
 	

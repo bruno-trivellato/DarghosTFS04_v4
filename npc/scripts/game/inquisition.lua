@@ -312,6 +312,6 @@ end
 local node = keywordHandler:addKeyword({'mission', 'missão', 'missao'}, missionCallback, {npcHandler = npcHandler, onlyFocus = true, talkState = TALK_MISSION.NONE})
 
 local node1 = keywordHandler:addKeyword({'bless', 'benção', 'blessings'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'A bravos guerreiros que tiverem ajudado no combate as forças demoniacas eu posso conceder todas benções de uma vez porem custando um pouco mais caro, você gostaria?'})
-	node1:addChildKeyword(confirmPattern, D_CustomNpcModules.inquisitionBless, {npcHandler = npcHandler, premium = true, baseCost = 2000, aditionalCostMultipler = 1.10, levelCost = 200, startLevel = 30, endLevel = 120})
+	node1:addChildKeyword(confirmPattern, D_CustomNpcModules.inquisitionBless, {npcHandler = npcHandler, premium = true, baseCost = 40000, aditionalCostMultipler = 0.80, levelCost = 0, startLevel = 30, endLevel = 120})
 	node1:addChildKeyword(negationPattern, noCallback, {npcHandler = npcHandler, onlyFocus = true})
 npcHandler:addModule(FocusModule:new())
