@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talkactions>
 
-	<talkaction log="yes" words="/storagevalue" channel="65534" access="5" event="script" value="game/playerstorage.lua"/>
+	<talkaction log="yes" words="/mstorage" channel="65534" access="5" event="script" value="game/mstorage.lua"/>
 	<talkaction log="yes" words="/specialexp" channel="65534" access="5" event="script" value="game/special_exp.lua"/>
 	<talkaction log="yes" words="/setoutfit" channel="65534" access="5" event="script" value="game/alter_outfit.lua"/>
 	<talkaction log="yes" words="/help" channel="65534" access="1" event="script" value="game/help_manager.lua"/>
