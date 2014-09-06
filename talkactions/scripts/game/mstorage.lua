@@ -9,7 +9,7 @@ function onSay(cid, words, param)
 
 	for _, pid in ipairs(getPlayersOnline()) do
 
-		setPlayerStorageValue(pid, t[2], t[3])
+		setPlayerStorageValue(pid, t[1], t[2])
 	end	
 
 	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "All players storage [" .. t[1] .. "] = " .. t[2])
