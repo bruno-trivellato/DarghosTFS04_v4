@@ -20,3 +20,32 @@
 19:33:08 | Player [Kanaith Bolado] | Item Data Entregue com sucesso: {"log_id":416,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 19:33:08 | Player [Kanaith Bolado] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 19:33:08 | Player [Kanaith Bolado] | --------------------------------------.
+15:14:38 | Player [Avengedx] | Processando 2 itens a entregar....
+15:14:39 | Player [Avengedx] | Item Data: {"log_id":4063,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+15:14:39 | Player [Avengedx] | Item Data: {"log_id":4064,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+15:14:39 | Player [Avengedx] | Item Data Entregue com sucesso: {"log_id":4063,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+15:14:39 | Player [Avengedx] | Item Data Entregue com sucesso: {"log_id":4064,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+15:14:39 | Player [Avengedx] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+15:14:39 | Player [Avengedx] | --------------------------------------.
+16:47:18 | Player [Lord Saldo] | Processando 1 itens a entregar....
+16:47:18 | Player [Lord Saldo] | Item Data: {"log_id":4065,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+16:47:18 | Player [Lord Saldo] | Item Data Entregue com sucesso: {"log_id":4065,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+16:47:18 | Player [Lord Saldo] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+16:47:18 | Player [Lord Saldo] | --------------------------------------.
+16:54:21 | Player [Lord Saldo] | Processando 1 itens a entregar....
+16:54:21 | Player [Lord Saldo] | Item Data: {"log_id":4066,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+16:54:21 | Player [Lord Saldo] | Item Data Entregue com sucesso: {"log_id":4066,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+16:54:21 | Player [Lord Saldo] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+16:54:21 | Player [Lord Saldo] | --------------------------------------.
+17:07:53 | Player [KeriaTer Um Nome] | Processando 1 itens a entregar....
+17:07:53 | Player [KeriaTer Um Nome] | Item Data: {"log_id":4067,"item_count":1,"item_id":5947,"item_name":"Elanes Crossbow","use_present":true,"item_action_id":0}.
+17:07:53 | Player [KeriaTer Um Nome] | Item Data Entregue com sucesso: {"log_id":4067,"item_count":1,"item_id":5947,"item_name":"Elanes Crossbow","use_present":true,"item_action_id":0}.
+17:07:53 | Player [KeriaTer Um Nome] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+17:07:53 | Player [KeriaTer Um Nome] | --------------------------------------.
+20:19:02 | Player [Colibris] | Processando 2 itens a entregar....
+20:19:02 | Player [Colibris] | Item Data: {"log_id":4061,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+20:19:02 | Player [Colibris] | Item Data: {"log_id":4062,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+20:19:02 | Player [Colibris] | Item Data Entregue com sucesso: {"log_id":4061,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+20:19:02 | Player [Colibris] | Item Data Entregue com sucesso: {"log_id":4062,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+20:19:02 | Player [Colibris] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+20:19:02 | Player [Colibris] | --------------------------------------.

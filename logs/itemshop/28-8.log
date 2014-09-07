@@ -43,3 +43,47 @@
 18:50:27 | Player [Muse] | Item Data Entregue com sucesso: {"log_id":389,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 18:50:27 | Player [Muse] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 18:50:27 | Player [Muse] | --------------------------------------.
+01:15:24 | Player [Vayne] | Processando 1 itens a entregar....
+01:15:24 | Player [Vayne] | Item Data: {"log_id":4026,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+01:15:24 | Player [Vayne] | Item Data Entregue com sucesso: {"log_id":4026,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+01:15:24 | Player [Vayne] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+01:15:24 | Player [Vayne] | --------------------------------------.
+14:47:26 | Player [Mage Of Hell] | Processando 3 itens a entregar....
+14:47:26 | Player [Mage Of Hell] | Item Data: {"log_id":4027,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+14:47:26 | Player [Mage Of Hell] | Item Data: {"log_id":4028,"item_count":1,"item_id":8851,"item_name":"Royal Crossbow","use_present":true,"item_action_id":0}.
+14:47:26 | Player [Mage Of Hell] | Item Data: {"log_id":4029,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+14:47:26 | Player [Mage Of Hell] | Item Data Entregue com sucesso: {"log_id":4027,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+14:47:26 | Player [Mage Of Hell] | Item Data Entregue com sucesso: {"log_id":4028,"item_count":1,"item_id":8851,"item_name":"Royal Crossbow","use_present":true,"item_action_id":0}.
+14:47:26 | Player [Mage Of Hell] | Item Data Entregue com sucesso: {"log_id":4029,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+14:47:26 | Player [Mage Of Hell] | Processo concluido. Resultado: Total de itens 3, Itens não recebidos 0, Itens a Receber 3..
+14:47:26 | Player [Mage Of Hell] | --------------------------------------.
+21:06:31 | Player [Menor do Chapa] | Processando 2 itens a entregar....
+21:06:31 | Player [Menor do Chapa] | Item Data: {"log_id":4030,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+21:06:31 | Player [Menor do Chapa] | Item Data: {"log_id":4031,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+21:06:31 | Player [Menor do Chapa] | Item Data Entregue com sucesso: {"log_id":4030,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+21:06:31 | Player [Menor do Chapa] | Item Data Entregue com sucesso: {"log_id":4031,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+21:06:31 | Player [Menor do Chapa] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+21:06:31 | Player [Menor do Chapa] | --------------------------------------.
+21:57:13 | Player [Panex Frat] | Processando 1 itens a entregar....
+21:57:13 | Player [Panex Frat] | Item Data: {"log_id":4032,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+21:57:13 | Player [Panex Frat] | Item Data Entregue com sucesso: {"log_id":4032,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+21:57:13 | Player [Panex Frat] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+21:57:13 | Player [Panex Frat] | --------------------------------------.
+22:21:54 | Player [NightWolf] | Processando 1 itens a entregar....
+22:21:54 | Player [NightWolf] | Item Data: {"log_id":4033,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+22:21:54 | Player [NightWolf] | Item Data Entregue com sucesso: {"log_id":4033,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+22:21:54 | Player [NightWolf] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+22:21:54 | Player [NightWolf] | --------------------------------------.
+23:05:58 | Player [Romulo] | Processando 5 itens a entregar....
+23:05:58 | Player [Romulo] | Item Data: {"log_id":4034,"item_count":1,"item_id":8918,"item_name":"Spellbook of Dark Mysteries","use_present":true,"item_action_id":0}.
+23:05:58 | Player [Romulo] | Item Data: {"log_id":4035,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+23:05:58 | Player [Romulo] | Item Data: {"log_id":4036,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+23:05:58 | Player [Romulo] | Item Data: {"log_id":4037,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+23:05:58 | Player [Romulo] | Item Data: {"log_id":4038,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+23:05:58 | Player [Romulo] | Item Data Entregue com sucesso: {"log_id":4034,"item_count":1,"item_id":8918,"item_name":"Spellbook of Dark Mysteries","use_present":true,"item_action_id":0}.
+23:05:58 | Player [Romulo] | Item Data Entregue com sucesso: {"log_id":4035,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+23:05:58 | Player [Romulo] | Item Data Entregue com sucesso: {"log_id":4036,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+23:05:58 | Player [Romulo] | Item Data Entregue com sucesso: {"log_id":4037,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+23:05:58 | Player [Romulo] | Item Data Entregue com sucesso: {"log_id":4038,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+23:05:58 | Player [Romulo] | Processo concluido. Resultado: Total de itens 5, Itens não recebidos 0, Itens a Receber 5..
+23:05:58 | Player [Romulo] | --------------------------------------.

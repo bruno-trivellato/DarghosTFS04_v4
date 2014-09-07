@@ -173,14 +173,14 @@ function D_CustomNpcModules.inquisitionBless(cid, message, keywords, parameters,
 		return false
 	end
 
-	local questStatus = getPlayerStorageValue(cid, QUESTLOG.INQUISITION.MISSION_SHADOW_NEXUS)
+	--[[local questStatus = getPlayerStorageValue(cid, QUESTLOG.INQUISITION.MISSION_SHADOW_NEXUS)
 	
 	if(questStatus ~= 1) then
 		npcHandler:say('Você precisa completar todas as missões no combate as forças demoniacas para que eu possa lhe abençoar.', cid)
 		npcHandler:resetNpc(cid)
 		
 		return true	
-	end
+	end]]
 
 	if(isPlayerPremiumCallback(cid) or not getBooleanFromString(getConfigValue('blessingsOnlyPremium')) or not parameters.premium) then
 		local price = parameters.baseCost
