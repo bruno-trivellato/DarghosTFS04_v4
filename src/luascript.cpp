@@ -791,26 +791,6 @@ bool LuaInterface::loadFile(const std::string& file, Npc* npc/* = NULL*/)
 	return true;
 }
 
-bool LuaInterface::loadDirectory(const std::string& dir, Npc* npc/* = NULL*/)
-{
-	StringVec files;
-	for(boost::filesystem::directory_iterator it(dir), end; it != end; ++it)
-	{
-		std::string s = it->leaf();
-		if(!boost::filesystem::is_directory(it->status()) && (s.size() > 4 ? s.substr(s.size() - 4) : "") == ".lua")
-			files.push_back(s);
-	}
-
-	std::sort(files.begin(), files.end());
-	for(StringVec::iterator it = files.begin(); it != files.end(); ++it)
-	{
-		if(!loadFile(dir + (*it), npc))
-			return false;
-	}
-
-	return true;
-}
-
 int32_t LuaInterface::getEvent(const std::string& eventName)
 {
 	//get our events table
@@ -920,7 +900,7 @@ bool LuaInterface::initState()
 #endif
 
 	registerFunctions();
-	if(!loadDirectory(getFilePath(FILE_TYPE_OTHER, "lib/"), NULL))
+    if(!loadFile(getFilePath(FILE_TYPE_OTHER, "lib/global.lua")))
 		std::clog << "[Warning - LuaInterface::initState] Cannot load " << getFilePath(FILE_TYPE_OTHER, "lib/") << std::endl;
 
 	lua_newtable(m_luaState);
@@ -11214,14 +11194,8 @@ int32_t LuaInterface::luaL_domodlib(lua_State* L)
 int32_t LuaInterface::luaL_dodirectory(lua_State* L)
 {
 	//dodirectory(dir)
-	std::string dir = popString(L);
-	if(!getEnv()->getInterface()->loadDirectory(dir, NULL))
-	{
-		errorEx("Failed to load directory " + dir + ".");
-		lua_pushboolean(L, false);
-	}
-	else
-		lua_pushboolean(L, true);
+    errorEx("Deprecated function.");
+    lua_pushboolean(L, false);
 
 	return 1;
 }

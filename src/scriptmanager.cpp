@@ -116,7 +116,7 @@ bool ScriptManager::loadSystem()
 
 bool ScriptManager::loadMods()
 {
-	boost::filesystem::path modsPath(getFilePath(FILE_TYPE_MOD));
+    /*boost::filesystem::path modsPath(getFilePath(FILE_TYPE_MOD));
 	if(!boost::filesystem::exists(modsPath))
 	{
 		std::clog << "[Error - ScriptManager::loadMods] Couldn't locate main directory" << std::endl;
@@ -155,7 +155,7 @@ bool ScriptManager::loadMods()
 		std::clog << " (" << j << " disabled)";
 
 	std::clog << "." << std::endl;
-	modsLoaded = true;
+    modsLoaded = true;*/
 	return true;
 }
 
