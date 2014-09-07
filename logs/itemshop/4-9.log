@@ -10,3 +10,23 @@
 20:25:31 | Player [Kukis] | Item Data Entregue com sucesso: {"log_id":421,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 20:25:31 | Player [Kukis] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
 20:25:31 | Player [Kukis] | --------------------------------------.
+01:59:30 | Player [Masta Tox] | Processando 1 itens a entregar....
+01:59:30 | Player [Masta Tox] | Item Data: {"log_id":4075,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+01:59:30 | Player [Masta Tox] | Item Data Entregue com sucesso: {"log_id":4075,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+01:59:30 | Player [Masta Tox] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+01:59:30 | Player [Masta Tox] | --------------------------------------.
+12:33:06 | Player [Quazy] | Processando 1 itens a entregar....
+12:33:06 | Player [Quazy] | Item Data: {"log_id":4076,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+12:33:06 | Player [Quazy] | Item Data Entregue com sucesso: {"log_id":4076,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+12:33:06 | Player [Quazy] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+12:33:06 | Player [Quazy] | --------------------------------------.
+12:34:05 | Player [Kutagawa] | Processando 1 itens a entregar....
+12:34:05 | Player [Kutagawa] | Item Data: {"log_id":4077,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+12:34:05 | Player [Kutagawa] | Item Data Entregue com sucesso: {"log_id":4077,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+12:34:05 | Player [Kutagawa] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+12:34:05 | Player [Kutagawa] | --------------------------------------.
+16:15:39 | Player [Kutagawa] | Processando 1 itens a entregar....
+16:15:39 | Player [Kutagawa] | Item Data: {"log_id":4078,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+16:15:39 | Player [Kutagawa] | Item Data Entregue com sucesso: {"log_id":4078,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+16:15:39 | Player [Kutagawa] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+16:15:39 | Player [Kutagawa] | --------------------------------------.

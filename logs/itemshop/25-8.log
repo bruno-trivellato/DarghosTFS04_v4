@@ -8,3 +8,59 @@
 13:36:57 | Player [Looney Ironic] | Item Data Entregue com sucesso: {"log_id":370,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 13:36:57 | Player [Looney Ironic] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 13:36:57 | Player [Looney Ironic] | --------------------------------------.
+10:36:20 | Player [Forsaken] | Processando 1 itens a entregar....
+10:36:20 | Player [Forsaken] | Item Data: {"log_id":3983,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+10:36:20 | Player [Forsaken] | Item Data Entregue com sucesso: {"log_id":3983,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+10:36:20 | Player [Forsaken] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+10:36:20 | Player [Forsaken] | --------------------------------------.
+15:31:36 | Player [Bombomnaotamaistabom] | Processando 1 itens a entregar....
+15:31:36 | Player [Bombomnaotamaistabom] | Item Data: {"log_id":3984,"item_count":1,"item_id":8853,"item_name":"The Ironworker","use_present":true,"item_action_id":0}.
+15:31:36 | Player [Bombomnaotamaistabom] | Item Data Entregue com sucesso: {"log_id":3984,"item_count":1,"item_id":8853,"item_name":"The Ironworker","use_present":true,"item_action_id":0}.
+15:31:36 | Player [Bombomnaotamaistabom] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+15:31:36 | Player [Bombomnaotamaistabom] | --------------------------------------.
+16:55:59 | Player [Deiivitos] | Processando 2 itens a entregar....
+16:55:59 | Player [Deiivitos] | Capacidade esgotada, entregando os itens previamente processados..
+16:55:59 | Player [Deiivitos] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 0..
+16:55:59 | Player [Deiivitos] | --------------------------------------.
+16:59:33 | Player [Deiivitos] | Processando 2 itens a entregar....
+16:59:33 | Player [Deiivitos] | Item Data: {"log_id":3985,"item_count":1,"item_id":9778,"item_name":"Yalahari Mask","use_present":true,"item_action_id":0}.
+16:59:33 | Player [Deiivitos] | Item Data: {"log_id":3986,"item_count":1,"item_id":12643,"item_name":"Royal Scale Robe","use_present":true,"item_action_id":0}.
+16:59:33 | Player [Deiivitos] | Item Data Entregue com sucesso: {"log_id":3985,"item_count":1,"item_id":9778,"item_name":"Yalahari Mask","use_present":true,"item_action_id":0}.
+16:59:33 | Player [Deiivitos] | Item Data Entregue com sucesso: {"log_id":3986,"item_count":1,"item_id":12643,"item_name":"Royal Scale Robe","use_present":true,"item_action_id":0}.
+16:59:33 | Player [Deiivitos] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+16:59:33 | Player [Deiivitos] | --------------------------------------.
+17:43:47 | Player [Mago Negro] | Processando 1 itens a entregar....
+17:43:47 | Player [Mago Negro] | Item Data: {"log_id":3987,"item_count":1,"item_id":5804,"item_name":"Nose Ring","use_present":true,"item_action_id":0}.
+17:43:47 | Player [Mago Negro] | Item Data Entregue com sucesso: {"log_id":3987,"item_count":1,"item_id":5804,"item_name":"Nose Ring","use_present":true,"item_action_id":0}.
+17:43:47 | Player [Mago Negro] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+17:43:47 | Player [Mago Negro] | --------------------------------------.
+18:52:22 | Player [Asiatica Safada] | Processando 1 itens a entregar....
+18:52:22 | Player [Asiatica Safada] | Item Data: {"log_id":3988,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+18:52:22 | Player [Asiatica Safada] | Item Data Entregue com sucesso: {"log_id":3988,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+18:52:22 | Player [Asiatica Safada] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+18:52:22 | Player [Asiatica Safada] | --------------------------------------.
+19:55:06 | Player [Holaxx] | Processando 3 itens a entregar....
+19:55:06 | Player [Holaxx] | Item Data: {"log_id":3989,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+19:55:06 | Player [Holaxx] | Item Data: {"log_id":3990,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+19:55:06 | Player [Holaxx] | Capacidade esgotada, entregando os itens previamente processados..
+19:55:06 | Player [Holaxx] | Item Data Entregue com sucesso: {"log_id":3989,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+19:55:06 | Player [Holaxx] | Item Data Entregue com sucesso: {"log_id":3990,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+19:55:06 | Player [Holaxx] | Problema ilogico não previsto: Total de itens 3, Itens não recebidos 0, Itens a Receber 2..
+19:55:06 | Player [Holaxx] | Processo concluido. Resultado: Total de itens 3, Itens não recebidos 0, Itens a Receber 2..
+19:55:06 | Player [Holaxx] | --------------------------------------.
+19:55:27 | Player [Holaxx] | Processando 1 itens a entregar....
+19:55:27 | Player [Holaxx] | Capacidade esgotada, entregando os itens previamente processados..
+19:55:27 | Player [Holaxx] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 0..
+19:55:27 | Player [Holaxx] | --------------------------------------.
+19:55:43 | Player [Holaxx] | Processando 1 itens a entregar....
+19:55:43 | Player [Holaxx] | Item Data: {"log_id":3991,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+19:55:43 | Player [Holaxx] | Item Data Entregue com sucesso: {"log_id":3991,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+19:55:43 | Player [Holaxx] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+19:55:43 | Player [Holaxx] | --------------------------------------.
+21:50:15 | Player [Notorious Big] | Processando 2 itens a entregar....
+21:50:15 | Player [Notorious Big] | Item Data: {"log_id":3992,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+21:50:15 | Player [Notorious Big] | Item Data: {"log_id":3993,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+21:50:15 | Player [Notorious Big] | Item Data Entregue com sucesso: {"log_id":3992,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+21:50:15 | Player [Notorious Big] | Item Data Entregue com sucesso: {"log_id":3993,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+21:50:15 | Player [Notorious Big] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+21:50:15 | Player [Notorious Big] | --------------------------------------.

@@ -8,3 +8,73 @@
 14:12:34 | Player [Favi Alyok] | Item Data Entregue com sucesso: {"log_id":372,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 14:12:34 | Player [Favi Alyok] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 14:12:34 | Player [Favi Alyok] | --------------------------------------.
+07:58:44 | Player [Athenas] | Processando 1 itens a entregar....
+07:58:44 | Player [Athenas] | Item Data: {"log_id":3994,"item_count":1,"item_id":8918,"item_name":"Spellbook of Dark Mysteries","use_present":true,"item_action_id":0}.
+07:58:44 | Player [Athenas] | Item Data Entregue com sucesso: {"log_id":3994,"item_count":1,"item_id":8918,"item_name":"Spellbook of Dark Mysteries","use_present":true,"item_action_id":0}.
+07:58:44 | Player [Athenas] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+07:58:44 | Player [Athenas] | --------------------------------------.
+08:00:57 | Player [Athenas] | Processando 2 itens a entregar....
+08:00:57 | Player [Athenas] | Item Data: {"log_id":3995,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+08:00:57 | Player [Athenas] | Item Data: {"log_id":3996,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+08:00:57 | Player [Athenas] | Item Data Entregue com sucesso: {"log_id":3995,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+08:00:57 | Player [Athenas] | Item Data Entregue com sucesso: {"log_id":3996,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+08:00:57 | Player [Athenas] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+08:00:57 | Player [Athenas] | --------------------------------------.
+09:22:01 | Player [Hunfs] | Processando 3 itens a entregar....
+09:22:01 | Player [Hunfs] | Item Data: {"log_id":3997,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:22:01 | Player [Hunfs] | Item Data: {"log_id":3998,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:22:01 | Player [Hunfs] | Item Data: {"log_id":3999,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:22:01 | Player [Hunfs] | Item Data Entregue com sucesso: {"log_id":3997,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:22:01 | Player [Hunfs] | Item Data Entregue com sucesso: {"log_id":3998,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:22:01 | Player [Hunfs] | Item Data Entregue com sucesso: {"log_id":3999,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:22:01 | Player [Hunfs] | Processo concluido. Resultado: Total de itens 3, Itens não recebidos 0, Itens a Receber 3..
+09:22:01 | Player [Hunfs] | --------------------------------------.
+12:43:53 | Player [The Joker] | Processando 2 itens a entregar....
+12:43:53 | Player [The Joker] | Item Data: {"log_id":4000,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+12:43:53 | Player [The Joker] | Item Data: {"log_id":4001,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+12:43:53 | Player [The Joker] | Item Data Entregue com sucesso: {"log_id":4000,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+12:43:53 | Player [The Joker] | Item Data Entregue com sucesso: {"log_id":4001,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+12:43:53 | Player [The Joker] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+12:43:53 | Player [The Joker] | --------------------------------------.
+15:50:25 | Player [Bubblleexx] | Processando 2 itens a entregar....
+15:50:25 | Player [Bubblleexx] | Item Data: {"log_id":4002,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+15:50:25 | Player [Bubblleexx] | Item Data: {"log_id":4003,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+15:50:25 | Player [Bubblleexx] | Item Data Entregue com sucesso: {"log_id":4002,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+15:50:25 | Player [Bubblleexx] | Item Data Entregue com sucesso: {"log_id":4003,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+15:50:25 | Player [Bubblleexx] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+15:50:25 | Player [Bubblleexx] | --------------------------------------.
+17:05:12 | Player [Bombomnaotamaistabom] | Processando 1 itens a entregar....
+17:05:12 | Player [Bombomnaotamaistabom] | Item Data: {"log_id":4004,"item_count":1,"item_id":8925,"item_name":"Solar Axe","use_present":true,"item_action_id":0}.
+17:05:12 | Player [Bombomnaotamaistabom] | Item Data Entregue com sucesso: {"log_id":4004,"item_count":1,"item_id":8925,"item_name":"Solar Axe","use_present":true,"item_action_id":0}.
+17:05:12 | Player [Bombomnaotamaistabom] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+17:05:12 | Player [Bombomnaotamaistabom] | --------------------------------------.
+21:09:58 | Player [Ulrich von Liechtenstein] | Processando 1 itens a entregar....
+21:09:58 | Player [Ulrich von Liechtenstein] | Item Data: {"log_id":4005,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+21:09:58 | Player [Ulrich von Liechtenstein] | Item Data Entregue com sucesso: {"log_id":4005,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+21:09:58 | Player [Ulrich von Liechtenstein] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+21:09:58 | Player [Ulrich von Liechtenstein] | --------------------------------------.
+21:10:28 | Player [Menor do Chapa] | Processando 1 itens a entregar....
+21:10:28 | Player [Menor do Chapa] | Item Data: {"log_id":4006,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+21:10:28 | Player [Menor do Chapa] | Item Data Entregue com sucesso: {"log_id":4006,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+21:10:28 | Player [Menor do Chapa] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+21:10:28 | Player [Menor do Chapa] | --------------------------------------.
+23:42:50 | Player [Elderzinha Rox] | Processando 4 itens a entregar....
+23:42:51 | Player [Elderzinha Rox] | Capacidade esgotada, entregando os itens previamente processados..
+23:42:51 | Player [Elderzinha Rox] | Processo concluido. Resultado: Total de itens 4, Itens não recebidos 0, Itens a Receber 0..
+23:42:51 | Player [Elderzinha Rox] | --------------------------------------.
+23:43:17 | Player [Elderzinha Rox] | Processando 4 itens a entregar....
+23:43:17 | Player [Elderzinha Rox] | Item Data: {"log_id":4007,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+23:43:17 | Player [Elderzinha Rox] | Item Data: {"log_id":4008,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+23:43:17 | Player [Elderzinha Rox] | Capacidade esgotada, entregando os itens previamente processados..
+23:43:17 | Player [Elderzinha Rox] | Item Data Entregue com sucesso: {"log_id":4007,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+23:43:17 | Player [Elderzinha Rox] | Item Data Entregue com sucesso: {"log_id":4008,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+23:43:17 | Player [Elderzinha Rox] | Problema ilogico não previsto: Total de itens 4, Itens não recebidos 0, Itens a Receber 2..
+23:43:17 | Player [Elderzinha Rox] | Processo concluido. Resultado: Total de itens 4, Itens não recebidos 0, Itens a Receber 2..
+23:43:17 | Player [Elderzinha Rox] | --------------------------------------.
+23:45:13 | Player [Elderzinha Rox] | Processando 2 itens a entregar....
+23:45:13 | Player [Elderzinha Rox] | Item Data: {"log_id":4009,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+23:45:13 | Player [Elderzinha Rox] | Item Data: {"log_id":4010,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+23:45:13 | Player [Elderzinha Rox] | Item Data Entregue com sucesso: {"log_id":4009,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+23:45:13 | Player [Elderzinha Rox] | Item Data Entregue com sucesso: {"log_id":4010,"item_count":100,"item_id":6529,"item_name":"Infernal Bolts","use_present":true,"item_action_id":0}.
+23:45:13 | Player [Elderzinha Rox] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+23:45:13 | Player [Elderzinha Rox] | --------------------------------------.
