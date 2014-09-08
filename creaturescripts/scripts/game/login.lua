@@ -16,6 +16,33 @@ function onLogin(cid)
 	registerCreatureEvent(cid, "onTradeAccept")
 	registerCreatureEvent(cid, "onTradeRequest")
 	
+	POI_SOFTBOOTS			= 2503,
+	POI_BACKPACK			= 2504,
+	POI_FROZEN				= 2505,
+	POI_100PLATINUM			= 2506,
+	POI_STUFFED				= 2507,
+	POI_ANKH				= 2508,
+
+	local replaceUids = {
+		[2500] = 2041
+		,[2501] = 2042
+		,[2502] = 2043
+		,[2503] = 2045
+		,[2504] = 2046
+		,[2505] = 2047
+		,[2506] = 2048
+		,[2507] = 2049
+		,[2508] = 2050
+		,[2509] = 2079
+	}
+
+	for k,v in pairs(replaceUids) do
+		local t = getPlayerStorageValue(cid, k)
+		if t ~= -1 then
+			setPlayerStorageValue(cid, v, t)
+		end
+	end
+
 	--if(tasks.hasStartedTask(cid)) then
 		registerCreatureEvent(cid, "CustomTasks")
 	--end
