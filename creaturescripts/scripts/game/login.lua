@@ -15,13 +15,6 @@ function onLogin(cid)
 	registerCreatureEvent(cid, "PrepareDeath")
 	registerCreatureEvent(cid, "onTradeAccept")
 	registerCreatureEvent(cid, "onTradeRequest")
-	
-	POI_SOFTBOOTS			= 2503,
-	POI_BACKPACK			= 2504,
-	POI_FROZEN				= 2505,
-	POI_100PLATINUM			= 2506,
-	POI_STUFFED				= 2507,
-	POI_ANKH				= 2508,
 
 	local replaceUids = {
 		[2500] = 2041
