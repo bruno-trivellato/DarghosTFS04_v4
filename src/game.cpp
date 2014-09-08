@@ -1502,7 +1502,9 @@ bool Game::playerMoveItem(uint32_t playerId, const Position& fromPos,
 			}
 
 			std::list<Direction> listDir;
-			if(map->getPathTo(player, walkPos, listDir))
+
+
+            if (getPathToEx(player, walkPos, listDir, 0, 1, true, true))
 			{
 				Dispatcher::getInstance().addTask(createTask(boost::bind(&Game::playerAutoWalk,
 					this, player->getID(), listDir)));

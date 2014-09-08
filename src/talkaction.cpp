@@ -1057,8 +1057,8 @@ bool TalkAction::thingProporties(Creature* creature, const std::string&, const s
 			tmpPlayer->sendUpdateTile(tile, pos);
 	}
 
-	for(it = list.begin(); it != list.end(); ++it)
-		(*it)->onUpdateTile(tile, pos);
+    //for(it = list.begin(); it != list.end(); ++it)
+    //	(*it)->onUpdateTile(tile, pos);
 
 	g_game.addMagicEffect(pos, MAGIC_EFFECT_WRAPS_GREEN);
 	if(invalid.empty())

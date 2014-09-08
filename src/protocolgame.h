@@ -18,6 +18,8 @@
 #ifndef __PROTOCOLGAME__
 #define __PROTOCOLGAME__
 
+#include <unordered_set>
+
 #include "otsystem.h"
 #include "enums.h"
 
@@ -69,10 +71,14 @@ class ProtocolGame : public Protocol
 
 		void setPlayer(Player* p);
 
+        const std::unordered_set<uint32_t>& getKnownCreatures() const {
+            return knownCreatureSet;
+        }
+
 	private:
 		void disconnectClient(uint8_t error, const char* message);
 
-		std::list<uint32_t> knownCreatureList;
+        std::unordered_set<uint32_t> knownCreatureSet;
 		void checkCreatureAsKnown(uint32_t id, bool& known, uint32_t& removedKnown);
 
 		bool connect(uint32_t playerId, OperatingSystem_t operatingSystem, uint16_t version);

@@ -62,6 +62,26 @@ class Position
 			return !(std::abs(float(p1.x - p2.x)) > r.x || std::abs(float(p1.y - p2.y)) > r.y || std::abs(float(p1.z - p2.z)) > r.z);
 		}
 
+        inline static int_fast32_t getOffsetX(const Position& p1, const Position& p2) {
+            return p1.getX() - p2.getX();
+        }
+        inline static int_fast32_t getOffsetY(const Position& p1, const Position& p2) {
+            return p1.getY() - p2.getY();
+        }
+        inline static int_fast16_t getOffsetZ(const Position& p1, const Position& p2) {
+            return p1.getZ() - p2.getZ();
+        }
+
+        inline static int32_t getDistanceX(const Position& p1, const Position& p2) {
+            return std::abs(Position::getOffsetX(p1, p2));
+        }
+        inline static int32_t getDistanceY(const Position& p1, const Position& p2) {
+            return std::abs(Position::getOffsetY(p1, p2));
+        }
+        inline static int16_t getDistanceZ(const Position& p1, const Position& p2) {
+            return std::abs(Position::getOffsetZ(p1, p2));
+        }
+
 		Position(uint16_t _x, uint16_t _y, uint16_t _z): x(_x), y(_y), z(_z) {}
 		uint16_t x, y, z;
 
@@ -112,6 +132,11 @@ class Position
 		{
 			return Position(x - p1.x, y - p1.y, z - p1.z);
 		}
+
+
+        inline int_fast32_t getX() const { return x; }
+        inline int_fast32_t getY() const { return y; }
+        inline int_fast16_t getZ() const { return z; }
 };
 
 std::ostream& operator<<(std::ostream&, const Position&);

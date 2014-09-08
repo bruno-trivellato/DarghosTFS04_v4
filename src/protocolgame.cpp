@@ -1132,46 +1132,36 @@ void ProtocolGame::GetFloorDescription(NetworkMessage_ptr msg, int32_t x, int32_
 
 void ProtocolGame::checkCreatureAsKnown(uint32_t id, bool& known, uint32_t& removedKnown)
 {
-    // loop through the known creature list and check if the given creature is in
-    for(std::list<uint32_t>::iterator it = knownCreatureList.begin(); it != knownCreatureList.end(); ++it)
-    {
-        if((*it) != id)
-            continue;
-
-        // know... make the creature even more known...
-        knownCreatureList.erase(it);
-        knownCreatureList.push_back(id);
-
+    auto result = knownCreatureSet.insert(id);
+    if (!result.second) {
         known = true;
         return;
     }
 
-    // ok, he is unknown...
     known = false;
-    // ... but not in future
-    knownCreatureList.push_back(id);
-    // too many known creatures?
-    if(knownCreatureList.size() > 250)
-    {
-        // lets try to remove one from the end of the list
-        Creature* c = NULL;
-        for(int32_t n = 0; n < 250; n++)
-        {
-            removedKnown = knownCreatureList.front();
-            if(!(c = g_game.getCreatureByID(removedKnown)) || !canSee(c))
-                break;
 
-            // this creature we can't remove, still in sight, so back to the end
-            knownCreatureList.pop_front();
-            knownCreatureList.push_back(removedKnown);
+    if (knownCreatureSet.size() > 250) {
+        // Look for a creature to remove
+        for (std::unordered_set<uint32_t>::iterator it = knownCreatureSet.begin(); it != knownCreatureSet.end(); ++it) {
+            Creature* creature = g_game.getCreatureByID(*it);
+            if (!canSee(creature)) {
+                removedKnown = *it;
+                knownCreatureSet.erase(it);
+                return;
+            }
         }
 
-        // hopefully we found someone to remove :S, we got only 250 tries
-        // if not... lets kick some players with debug errors :)
-        knownCreatureList.pop_front();
-    }
-    else // we can cache without problems :)
+        // Bad situation. Let's just remove anyone.
+        std::unordered_set<uint32_t>::iterator it = knownCreatureSet.begin();
+        if (*it == id) {
+            ++it;
+        }
+
+        removedKnown = *it;
+        knownCreatureSet.erase(it);
+    } else {
         removedKnown = 0;
+    }
 }
 
 bool ProtocolGame::canSee(const Creature* c) const
@@ -1768,8 +1758,15 @@ void ProtocolGame::sendCreatureEmblem(const Creature* creature)
     if(msg)
     {
         TRACK_MESSAGE(msg);
-        std::list<uint32_t>::iterator it = std::find(knownCreatureList.begin(), knownCreatureList.end(), creature->getID());
-        if(it != knownCreatureList.end())
+        bool found = false;
+        for (std::unordered_set<uint32_t>::iterator it = knownCreatureSet.begin(); it != knownCreatureSet.end(); ++it) {
+            if(creature->getID() == (*it)){
+                found = true;
+                break;
+            }
+        }
+
+        if(found)
         {
             RemoveTileItem(msg, creature->getPosition(), stackpos);
             msg->put<char>(0x6A);

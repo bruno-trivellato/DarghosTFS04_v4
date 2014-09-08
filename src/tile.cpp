@@ -434,8 +434,8 @@ void Tile::onUpdateTile()
     }
 
     //event methods
-    for(it = list.begin(); it != list.end(); ++it)
-        (*it)->onUpdateTile(this, cylinderMapPos);
+    //for(it = list.begin(); it != list.end(); ++it)
+    //    (*it)->onUpdateTile(this, cylinderMapPos);
 }
 
 void Tile::moveCreature(Creature* actor, Creature* creature, Cylinder* toCylinder, bool forceTeleport/* = false*/)

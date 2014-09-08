@@ -17,6 +17,9 @@
 
 #ifndef __MAP__
 #define __MAP__
+
+#include <bitset>
+#include <unordered_map>
 #include "tools.h"
 
 #include "fileloader.h"
@@ -50,32 +53,26 @@ using boost::shared_ptr;
 
 class AStarNodes
 {
-	public:
-		AStarNodes();
-		virtual ~AStarNodes() {}
+    public:
+        AStarNodes(uint32_t x, uint32_t y);
+        ~AStarNodes() {}
 
-		void openNode(AStarNode* node);
-		void closeNode(AStarNode* node);
+        AStarNode* createOpenNode(AStarNode* parent, uint32_t x, uint32_t y, int_fast32_t f);
+        AStarNode* getBestNode();
+        void closeNode(AStarNode* node);
+        void openNode(AStarNode* node);
+        int_fast32_t getClosedNodes() const;
+        AStarNode* getNodeByPosition(uint32_t x, uint32_t y);
 
-		uint32_t countOpenNodes();
-		uint32_t countClosedNodes();
+        static int_fast32_t getMapWalkCost(AStarNode* node, const Position& neighborPos);
+        static int_fast32_t getTileWalkCost(const Creature& creature, const Tile* tile);
 
-		AStarNode* getBestNode();
-		AStarNode* createOpenNode();
-		AStarNode* getNodeInList(uint16_t x, uint16_t y);
-
-		bool isInList(uint16_t x, uint16_t y);
-		int32_t getEstimatedDistance(uint16_t x, uint16_t y, uint16_t xGoal, uint16_t yGoal);
-
-		int32_t getMapWalkCost(const Creature* creature, AStarNode* node,
-			const Tile* neighbourTile, const Position& neighbourPos);
-		static int32_t getTileWalkCost(const Creature* creature, const Tile* tile);
-
-	private:
-		AStarNode nodes[MAX_NODES];
-
-		std::bitset<MAX_NODES> openNodes;
-		uint32_t curNode;
+    private:
+        AStarNode nodes[MAX_NODES];
+        bool openNodes[MAX_NODES];
+        std::unordered_map<uint32_t, AStarNode*> nodeTable;
+        size_t curNode;
+        int_fast32_t closedNodes;
 };
 
 template<class T> class lessPointer: public std::binary_function<T*, T*, bool>
@@ -236,8 +233,8 @@ class Map
 		*/
 		bool getPathTo(const Creature* creature, const Position& destPos,
 			std::list<Direction>& listDir, int32_t maxDist = -1);
-		bool getPathMatching(const Creature* creature, std::list<Direction>& dirList,
-			const FrozenPathingConditionCall& pathCondition, const FindPathParams& fpp);
+        bool getPathMatching(const Creature* creature, std::list<Direction>& dirList,
+            const FrozenPathingConditionCall& pathCondition, const FindPathParams& fpp);
 
 		QTreeLeafNode* getLeaf(uint16_t x, uint16_t y) {return root.getLeaf(x, y);}
 		const Tile* canWalkTo(const Creature* creature, const Position& pos);
