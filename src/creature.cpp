@@ -41,6 +41,10 @@ boost::recursive_mutex AutoId::lock;
 uint32_t AutoId::count = 1000;
 AutoId::List AutoId::list;
 
+double Creature::speedA = 857.36;
+double Creature::speedB = 261.29;
+double Creature::speedC = -4795.01;
+
 extern Game g_game;
 extern ConfigManager g_config;
 extern CreatureEvents* g_creatureEvents;
@@ -1076,20 +1080,50 @@ void Creature::getPathSearchParams(const Creature*, FindPathParams& fpp) const
 
 void Creature::goToFollowCreature()
 {
-	if(followCreature)
-	{
-		FindPathParams fpp;
-		getPathSearchParams(followCreature, fpp);
-		if(g_game.getPathToEx(this, followCreature->getPosition(), listWalkDir, fpp))
-		{
-			hasFollowPath = true;
-			startAutoWalk(listWalkDir);
-		}
-		else
-			hasFollowPath = false;
-	}
+    if (followCreature) {
+        FindPathParams fpp;
+        getPathSearchParams(followCreature, fpp);
 
-	onFollowCreatureComplete(followCreature);
+        Monster* monster = getMonster();
+        if (monster && !monster->getMaster() && (monster->isFleeing() || fpp.maxTargetDist > 1)) {
+            Direction dir = NODIR;
+
+            if (monster->isFleeing()) {
+                monster->getDistanceStep(followCreature->getPosition(), dir, true);
+            } else { //maxTargetDist > 1
+                if (!monster->getDistanceStep(followCreature->getPosition(), dir)) {
+                    // if we can't get anything then let the A* calculate
+                    listWalkDir.clear();
+                    if (getPathTo(followCreature->getPosition(), listWalkDir, fpp)) {
+                        hasFollowPath = true;
+                        startAutoWalk(listWalkDir);
+                    } else {
+                        hasFollowPath = false;
+                    }
+
+                    return;
+                }
+            }
+
+            if (dir != NODIR) {
+                listWalkDir.clear();
+                listWalkDir.push_back(dir);
+
+                hasFollowPath = true;
+                startAutoWalk(listWalkDir);
+            }
+        } else {
+            listWalkDir.clear();
+            if (getPathTo(followCreature->getPosition(), listWalkDir, fpp)) {
+                hasFollowPath = true;
+                startAutoWalk(listWalkDir);
+            } else {
+                hasFollowPath = false;
+            }
+        }
+    }
+
+    onFollowCreatureComplete(followCreature);
 }
 
 bool Creature::setFollowCreature(Creature* creature, bool /*fullPathSearch = false*/)
@@ -1582,28 +1616,54 @@ std::string Creature::getDescription(int32_t) const
 	return "a creature";
 }
 
-int32_t Creature::getStepDuration(Direction dir) const
+int64_t Creature::getStepDuration(Direction dir) const
 {
-	if(dir == NORTHWEST || dir == NORTHEAST || dir == SOUTHWEST || dir == SOUTHEAST)
-		return getStepDuration() * 2;
-
-	return getStepDuration();
+    int64_t stepDuration = getStepDuration();
+    if (dir == NORTHWEST || dir == NORTHEAST || dir == SOUTHWEST || dir == SOUTHEAST) {
+        stepDuration *= 3;
+    }
+    return stepDuration;
 }
 
-int32_t Creature::getStepDuration() const
+int64_t Creature::getStepDuration() const
 {
-	if(removed)
-		return 0;
+    if (isRemoved()) {
+        return 0;
+    }
 
-	uint32_t stepSpeed = getStepSpeed();
-	if(!stepSpeed)
-		return 0;
+    uint32_t calculatedStepSpeed;
+    uint32_t groundSpeed;
 
-	const Tile* tile = getTile();
-	if(!tile || !tile->ground)
-		return 0;
+    int32_t stepSpeed = getStepSpeed();
+    if (stepSpeed > -Creature::speedB) {
+        calculatedStepSpeed = floor((Creature::speedA * log((stepSpeed / 2) + Creature::speedB) + Creature::speedC) + 0.5);
+        if (calculatedStepSpeed <= 0) {
+            calculatedStepSpeed = 1;
+        }
+    } else {
+        calculatedStepSpeed = 1;
+    }
 
-	return ((1000 * Item::items[tile->ground->getID()].speed) / stepSpeed) * lastStepCost;
+    const Tile* tile = getTile();
+    if (tile && tile->ground) {
+        uint32_t groundId = tile->ground->getID();
+        groundSpeed = Item::items[groundId].speed;
+        if (groundSpeed == 0) {
+            groundSpeed = 150;
+        }
+    } else {
+        groundSpeed = 150;
+    }
+
+    double duration = std::floor(1000 * groundSpeed / calculatedStepSpeed);
+    int64_t stepDuration = std::ceil(duration / 50) * 50;
+
+    const Monster* monster = getMonster();
+    if (monster && monster->isTargetNearby() && !monster->isFleeing() && !monster->getMaster()) {
+        stepDuration *= 2;
+    }
+
+    return stepDuration;
 }
 
 int64_t Creature::getEventStepTicks(bool onlyDelay/* = false*/) const
@@ -1727,4 +1787,20 @@ bool FrozenPathingConditionCall::operator()(const Position& startPos, const Posi
 	}
 
 	return false;
+}
+
+bool Creature::getPathTo(const Position& targetPos, std::list<Direction>& dirList, const FindPathParams& fpp) const
+{
+    return g_game.getMap()->getPathMatching(this, dirList, FrozenPathingConditionCall(targetPos), fpp);
+}
+
+bool Creature::getPathTo(const Position& targetPos, std::list<Direction>& dirList, int32_t minTargetDist, int32_t maxTargetDist, bool fullPathSearch /*= true*/, bool clearSight /*= true*/, int32_t maxSearchDist /*= 0*/) const
+{
+    FindPathParams fpp;
+    fpp.fullPathSearch = fullPathSearch;
+    fpp.maxSearchDist = maxSearchDist;
+    fpp.clearSight = clearSight;
+    fpp.minTargetDist = minTargetDist;
+    fpp.maxTargetDist = maxTargetDist;
+    return getPathTo(targetPos, dirList, fpp);
 }

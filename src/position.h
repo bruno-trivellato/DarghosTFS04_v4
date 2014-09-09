@@ -32,7 +32,10 @@ enum Direction
 	SOUTHWEST = 4,
 	SOUTHEAST = 5,
 	NORTHWEST = 6,
-	NORTHEAST = 7
+    NORTHEAST = 7,
+    SOUTH_ALT = 8,
+    EAST_ALT = 9,
+    NODIR = 10
 };
 
 typedef std::pair<int32_t, int32_t> PositionPair;

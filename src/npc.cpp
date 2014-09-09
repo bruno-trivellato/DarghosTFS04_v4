@@ -1781,7 +1781,7 @@ void Npc::doMove(Direction dir)
 void Npc::doMoveTo(Position target)
 {
 	std::list<Direction> listDir;
-	if(!g_game.getPathToEx(this, target, listDir, 1, 1, true, true))
+    if(!getPathTo(target, listDir, 1, 1, true, true))
 		return;
 
 	startAutoWalk(listDir);

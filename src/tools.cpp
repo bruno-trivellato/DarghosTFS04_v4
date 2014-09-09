@@ -509,6 +509,13 @@ IntegerVec vectorAtoi(StringVec stringVector)
 	return returnVector;
 }
 
+std::mt19937& getRandomGenerator()
+{
+    static std::random_device rd;
+    static std::mt19937 generator(rd());
+    return generator;
+}
+
 bool hasBitSet(uint32_t flag, uint32_t flags)
 {
 	return ((flags & flag) == flag);
@@ -776,6 +783,12 @@ std::string trimString(std::string& str)
 	return str.erase(0, str.find_first_not_of(" "));
 }
 
+bool boolean_random(double probability/* = 0.5*/)
+{
+    static std::bernoulli_distribution booleanRand;
+    return booleanRand(getRandomGenerator(), std::bernoulli_distribution::param_type(probability));
+}
+
 std::string parseParams(tokenizer::iterator &it, tokenizer::iterator end)
 {
 	if(it == end)
@@ -1030,6 +1043,9 @@ Direction getReverseDirection(Direction dir)
 			return SOUTHWEST;
 		case SOUTHEAST:
 			return NORTHWEST;
+
+        default:
+            break;
 	}
 
 	return SOUTH;
@@ -1067,6 +1083,9 @@ Position getNextPosition(Direction direction, Position pos)
 			pos.x++;
 			pos.y--;
 			break;
+
+        default:
+            break;
 	}
 
 	return pos;

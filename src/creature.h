@@ -168,6 +168,8 @@ class Creature : public AutoId, virtual public Thing
 	public:
 		virtual ~Creature();
 
+        static double speedA, speedB, speedC;
+
 		virtual Creature* getCreature() {return this;}
 		virtual const Creature* getCreature()const {return this;}
 		virtual Player* getPlayer() {return NULL;}
@@ -227,8 +229,8 @@ class Creature : public AutoId, virtual public Thing
 
 		int32_t getWalkDelay(Direction dir) const;
 		int32_t getWalkDelay() const;
-		int32_t getStepDuration(Direction dir) const;
-		int32_t getStepDuration() const;
+        int64_t getStepDuration(Direction dir) const;
+        int64_t getStepDuration() const;
 
 		int64_t getEventStepTicks(bool onlyDelay = false) const;
 		int64_t getTimeSinceLastMove() const;
@@ -457,6 +459,9 @@ class Creature : public AutoId, virtual public Thing
 		const Position& getLastPosition() {return lastPosition;}
 		void setLastPosition(Position newLastPos) {lastPosition = newLastPos;}
 		static bool canSee(const Position& myPos, const Position& pos, uint32_t viewRangeX, uint32_t viewRangeY);
+
+        bool getPathTo(const Position& targetPos, std::list<Direction>& dirList, const FindPathParams& fpp) const;
+        bool getPathTo(const Position& targetPos, std::list<Direction>& dirList, int32_t minTargetDist, int32_t maxTargetDist, bool fullPathSearch = true, bool clearSight = true, int32_t maxSearchDist = 0) const;
 
 	protected:
 		static const int32_t mapWalkWidth = Map::maxViewportX * 2 + 1;

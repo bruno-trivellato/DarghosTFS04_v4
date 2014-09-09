@@ -1138,11 +1138,11 @@ bool Game::playerMoveCreature(uint32_t playerId, uint32_t movingCreatureId,
 	{
 		//need to walk to the creature first before moving it
 		std::list<Direction> listDir;
-		if(getPathToEx(player, movingCreaturePos, listDir, 0, 1, true, true))
+        if(player->getPathTo(movingCreaturePos, listDir, 0, 1, true, true))
 		{
 			Dispatcher::getInstance().addTask(createTask(boost::bind(&Game::playerAutoWalk,
 				this, player->getID(), listDir)));
-			SchedulerTask* task = createSchedulerTask(std::max((int32_t)SCHEDULER_MINTICKS, player->getStepDuration()),
+            SchedulerTask* task = createSchedulerTask(std::max((int64_t)SCHEDULER_MINTICKS, player->getStepDuration()),
 				boost::bind(&Game::playerMoveCreature, this, playerId, movingCreatureId, movingCreaturePos, toPos, g_config.getNumber(ConfigManager::PUSH_CREATURE_DISTANCE_DELAY)));
 
 			player->setNextWalkActionTask(task);
@@ -1272,7 +1272,7 @@ bool Game::playerMoveCreature(uint32_t playerId, uint32_t movingCreatureId,
 
 	if(Player* movingPlayer = movingCreature->getPlayer())
 	{
-		uint64_t delay = OTSYS_TIME() + movingPlayer->getStepDuration();
+        int64_t delay = OTSYS_TIME() + movingPlayer->getStepDuration();
 		if(delay > movingPlayer->getNextActionTime())
 			movingPlayer->setNextAction(delay);
 	}
@@ -1438,11 +1438,11 @@ bool Game::playerMoveItem(uint32_t playerId, const Position& fromPos,
 	{
 		//need to walk to the item first before using it
 		std::list<Direction> listDir;
-		if(getPathToEx(player, item->getPosition(), listDir, 0, 1, true, true))
+        if(player->getPathTo(item->getPosition(), listDir, 0, 1, true, true))
 		{
 			Dispatcher::getInstance().addTask(createTask(boost::bind(&Game::playerAutoWalk,
 				this, player->getID(), listDir)));
-			SchedulerTask* task = createSchedulerTask(std::max((int32_t)SCHEDULER_MINTICKS, player->getStepDuration()),
+            SchedulerTask* task = createSchedulerTask(std::max((int64_t)SCHEDULER_MINTICKS, player->getStepDuration()),
 				boost::bind(&Game::playerMoveItem, this, playerId, fromPos, spriteId, fromStackpos, toPos, count));
 
 			player->setNextWalkActionTask(task);
@@ -1504,11 +1504,11 @@ bool Game::playerMoveItem(uint32_t playerId, const Position& fromPos,
 			std::list<Direction> listDir;
 
 
-            if (getPathToEx(player, walkPos, listDir, 0, 1, true, true))
+            if (player->getPathTo(walkPos, listDir, 0, 0, true, true))
 			{
 				Dispatcher::getInstance().addTask(createTask(boost::bind(&Game::playerAutoWalk,
 					this, player->getID(), listDir)));
-				SchedulerTask* task = createSchedulerTask(std::max((int32_t)SCHEDULER_MINTICKS, player->getStepDuration()),
+                SchedulerTask* task = createSchedulerTask(std::max((int64_t)SCHEDULER_MINTICKS, player->getStepDuration()),
 					boost::bind(&Game::playerMoveItem, this, playerId, itemPos, spriteId, itemStackpos, toPos, count));
 
 				player->setNextWalkActionTask(task);
@@ -2623,7 +2623,7 @@ bool Game::playerUseItemEx(uint32_t playerId, const Position& fromPos, int16_t f
 			}
 
 			std::list<Direction> listDir;
-			if(getPathToEx(player, walkToPos, listDir, 0, 1, true, true, 10))
+            if(player->getPathTo(walkToPos, listDir, 0, 1, true, true))
 			{
 				Dispatcher::getInstance().addTask(createTask(boost::bind(&Game::playerAutoWalk,
 					this, player->getID(), listDir)));
@@ -2690,7 +2690,7 @@ bool Game::playerUseItem(uint32_t playerId, const Position& pos, int16_t stackpo
 		if(ret == RET_TOOFARAWAY)
 		{
 			std::list<Direction> listDir;
-			if(getPathToEx(player, pos, listDir, 0, 1, true, true))
+            if(player->getPathTo(pos, listDir, 0, 1, true, true))
 			{
 				Dispatcher::getInstance().addTask(createTask(boost::bind(&Game::playerAutoWalk,
 					this, player->getID(), listDir)));
@@ -2767,7 +2767,7 @@ bool Game::playerUseBattleWindow(uint32_t playerId, const Position& fromPos, int
 		if(ret == RET_TOOFARAWAY)
 		{
 			std::list<Direction> listDir;
-			if(getPathToEx(player, item->getPosition(), listDir, 0, 1, true, true))
+            if(player->getPathTo(item->getPosition(), listDir, 0, 1, true, true))
 			{
 				Dispatcher::getInstance().addTask(createTask(boost::bind(&Game::playerAutoWalk,
 					this, player->getID(), listDir)));
@@ -2885,7 +2885,7 @@ bool Game::playerRotateItem(uint32_t playerId, const Position& pos, int16_t stac
 	if(pos.x != 0xFFFF && !Position::areInRange<1,1,0>(pos, player->getPosition()))
 	{
 		std::list<Direction> listDir;
-		if(getPathToEx(player, pos, listDir, 0, 1, true, true))
+        if(player->getPathTo(pos, listDir, 0, 1, true, true))
 		{
 			Dispatcher::getInstance().addTask(createTask(boost::bind(&Game::playerAutoWalk,
 				this, player->getID(), listDir)));
@@ -3048,7 +3048,7 @@ bool Game::playerRequestTrade(uint32_t playerId, const Position& pos, int16_t st
 	if(!Position::areInRange<1,1,0>(tradeItem->getPosition(), player->getPosition()))
 	{
 		std::list<Direction> listDir;
-		if(getPathToEx(player, pos, listDir, 0, 1, true, true))
+        if(player->getPathTo(pos, listDir, 0, 1, true, true))
 		{
 			Dispatcher::getInstance().addTask(createTask(boost::bind(&Game::playerAutoWalk,
 				this, player->getID(), listDir)));

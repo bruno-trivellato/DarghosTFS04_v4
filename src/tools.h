@@ -79,6 +79,9 @@ StringVec explodeString(const std::string& string, const std::string& separator)
 IntegerVec vectorAtoi(StringVec stringVector);
 bool hasBitSet(uint32_t flag, uint32_t flags);
 
+std::mt19937& getRandomGenerator();
+bool boolean_random(double probability = 0.5);
+
 bool isNumber(char character);
 bool isLowercaseLetter(char character);
 bool isUppercaseLetter(char character);

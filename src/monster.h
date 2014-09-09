@@ -114,6 +114,11 @@ class Monster : public Creature
 		bool isTarget(Creature* creature);
 		bool getIdleStatus() const {return isIdle;}
 		bool isFleeing() const {return getHealth() <= mType->runAwayHealth;}
+        bool isTargetNearby() const {
+            return stepDuration >= 1;
+        }
+
+        bool getDistanceStep(const Position& targetPos, Direction& dir, bool flee = false);
 
 		virtual BlockType_t blockHit(Creature* attacker, CombatType_t combatType, int32_t& damage,
 			bool checkDefense = false, bool checkArmor = false, bool reflect = true, bool field = false);
@@ -132,6 +137,7 @@ class Monster : public Creature
 		uint32_t defenseTicks;
 		uint32_t yellTicks;
 		int32_t targetChangeCooldown;
+        int32_t stepDuration;
 		bool resetTicks;
 		bool isIdle;
 		bool extraMeleeAttack;
