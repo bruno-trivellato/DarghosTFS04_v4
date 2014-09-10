@@ -36,15 +36,13 @@ function onMoveGroundItem(cid, item, position)
 			return false
 		end
 	elseif(getTileInfo(position).house) then
-		doPlayerSendCancel(cid, "Não é permitido colocar items nas houses por enquanto.")
-		return false	
-		--[[local house_id = getHouseFromPos(position)
+		local house_id = getHouseFromPos(position)
 		
 		local accessLevel = getHouseAccessLevel(house_id, cid)
 		if(accessLevel == HOUSE_ACCESS_NOT_INVITED) then
 			doPlayerSendCancel(cid, "Você precisa estar convidado para entrar nesta casa para poder jogar itens dentro dela.")
 			return false		
-		end]]
+		end
 	end
 	
 	return true

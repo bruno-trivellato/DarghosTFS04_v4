@@ -26,3 +26,4 @@
 [20/8/2014 15:42:10] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: bind: Address already in use
 [30/8/2014 5:9:21] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: bind: Address already in use
 [31/8/2014 5:9:20] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: bind: Address already in use
+[10/9/2014 18:26:14] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: bind: Address already in use
