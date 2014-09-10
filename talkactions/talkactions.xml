@@ -20,9 +20,6 @@
 	<talkaction words="!ping;!lag" access="0" event="script" value="game/ping.lua"/>
 	<talkaction words="!online;/online" event="script" value="game/online.lua"/>
 	<talkaction default="true" event="script" value="game/channels.lua"/> <!-- Help Channel -->	
-
-
-	<talkaction log="yes" words="/m" channel="65534" access="6" event="script" value="creature.lua"/>
 	
 	<!-- Gods -->
 	<!-- <talkaction log="yes" words="!test" channel="65534" access="5" event="script" value="test.lua"/> --> <!-- talkaction de testes -->
@@ -35,6 +32,7 @@
 	<talkaction log="yes" words="/shutdown" access="5" channel="65534" event="script" value="shutdown.lua"/>
 	<talkaction log="yes" access="5" words="/mode" channel="65534" event="script" value="mode.lua"/>
 	<talkaction log="yes" words="/i" channel="65534" access="5" event="script" value="createitem.lua"/>
+	<talkaction log="yes" words="/m" channel="65534" access="5" event="script" value="creature.lua"/>
 
 	<!-- Community Managers -->
 	<talkaction log="yes" words="/n" channel="65534" access="4" event="script" value="creature.lua"/>
