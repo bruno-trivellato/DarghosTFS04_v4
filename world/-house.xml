@@ -366,5 +366,4 @@
 	<house name="Central House 3" houseid="673" entryx="2182" entryy="2683" entryz="7" rent="21000" townid="5" size="37" />
 	<house name="Central Guildhall 2" houseid="674" entryx="2183" entryy="2680" entryz="7" rent="30000" townid="5" size="65" />
 	<house name="Central House 4" houseid="675" entryx="2195" entryy="2677" entryz="7" rent="24000" townid="5" size="72" />
-	<house name="Aracura West I" houseid="676" entryx="3337" entryy="2003" entryz="7" rent="40000" townid="10" size="40" />
 </houses>
