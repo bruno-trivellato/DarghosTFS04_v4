@@ -162,7 +162,7 @@ function D_CustomNpcModules.pvpBless(cid, message, keywords, parameters, node)
 	return true
 end
 
-function D_CustomNpcModules.inquisitionBless(cid, message, keywords, parameters, node)
+function D_CustomNpcModules.allBless(cid, message, keywords, parameters, node)
 	local npcHandler = parameters.npcHandler
 	if(npcHandler == nil) then
 		print('StdModule.bless called without any npcHandler instance.')
@@ -173,25 +173,14 @@ function D_CustomNpcModules.inquisitionBless(cid, message, keywords, parameters,
 		return false
 	end
 
-	--[[local questStatus = getPlayerStorageValue(cid, QUESTLOG.INQUISITION.MISSION_SHADOW_NEXUS)
-	
-	if(questStatus ~= 1) then
-		npcHandler:say('Você precisa completar todas as missões no combate as forças demoniacas para que eu possa lhe abençoar.', cid)
-		npcHandler:resetNpc(cid)
-		
-		return true	
-	end]]
-
 	if(isPlayerPremiumCallback(cid) or not getBooleanFromString(getConfigValue('blessingsOnlyPremium')) or not parameters.premium) then
 		local price = parameters.baseCost
 		if(getPlayerLevel(cid) > parameters.startLevel) then
 			price = (price + ((math.min(parameters.endLevel, getPlayerLevel(cid)) - parameters.startLevel) * parameters.levelCost))
 		end
-		
-		price = (price * 5) * parameters.aditionalCostMultipler
 
 		if(getPlayerBlessing(cid, 1) or getPlayerBlessing(cid, 2) or getPlayerBlessing(cid, 3) or getPlayerBlessing(cid, 4) or getPlayerBlessing(cid, 5)) then
-			npcHandler:say("Você já possui uma ou mais benções, eu somente posso abençoar quem não foi abençoado por nenhum Deus.", cid)
+			npcHandler:say("Você já possui uma ou mais benções, eu somente posso abençoar com todas as blessings quem não foi abençoado por nenhuma.", cid)
 		elseif(getCreatureSkull(cid) >= SKULL_WHITE) then
 			npcHandler:say("Você tem sangue em suas mãos! Caia fora daqui!", cid)				
 		elseif(not doPlayerRemoveMoney(cid, price)) then
@@ -244,9 +233,13 @@ function D_CustomNpcModules.offerBlessing(cid, message, keywords, parameters, no
 	local func = nil
 	
 	local pvpbless = parameters.ispvp or false
+	local isall = parameters.isall or false
 	if(pvpbless) then
 		func = D_CustomNpcModules.pvpBless
 		npcHandler:say('Saiba que a benção do PvP (twist of fate) não irá reduzir a penalidade quando você morre como as benções normais, mas ao invez disto, irá previnir que você perca as proprias benções normais quando você for derrotado por outro jogador (apénas jogadores!). Para adquirir-la você precisará sacrificar ' .. D_CustomNpcModules.getBlessPrice(cid, blessParams) .. ' moedas de ouro. Quer fazer isto em troca de proteção?', cid)
+	elseif(isall) then
+		func = D_CustomNpcModules.allBless
+		npcHandler:say('Ao obter todas benções as penalidades na proxima vez que você morrer serão reduzidas ao maximo. Para o seu level isto lhe custará o sacrificio de ' .. parameters.baseCost .. ' moedas de ouro.', cid)	
 	else
 		func = StdModule.bless
 		npcHandler:say('Ao obter uma benção as penalidades na proxima vez que você morrer serão reduzidas, você gostaria de obter uma benção? Para o seu level isto lhe custará o sacrificio de ' .. D_CustomNpcModules.getBlessPrice(cid, blessParams) .. ' moedas de ouro.', cid)	

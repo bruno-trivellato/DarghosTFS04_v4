@@ -394,6 +394,16 @@ function doPlayerSetPVPBlessing(cid)
 	return doPlayerAddBlessing(cid, pvpBless)
 end
 
+function getPlayerPVEBlessing(cid)
+	local pveBless = getConfigValue('useBlessingAsPve')
+	return getPlayerBlessing(cid, pveBless) or false
+end
+
+function doPlayerSetPVEBlessing(cid)
+	local pveBless = getConfigValue('useBlessingAsPve')
+	return doPlayerAddBlessing(cid, pveBless)
+end
+
 function doPlayerIsInArena(cid) return getPlayerStorageValue(cid, sid.ARENA_INSIDE) == 1 end
 
 function incPlayerStorageValue(cid, storage, value)
