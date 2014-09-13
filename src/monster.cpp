@@ -489,11 +489,7 @@ BlockType_t Monster::blockHit(Creature* attacker, CombatType_t combatType, int32
 
 bool Monster::isTarget(Creature* creature)
 {
-#ifdef __DARGHOS_EMERGENCY_DDOS__
-	return (!creature->isRemoved() && !g_game.isUnderDDoS() && creature->isAttackable() && creature->getZone() != ZONE_PROTECTION
-#else
 	return (!creature->isRemoved() && creature->isAttackable() && creature->getZone() != ZONE_PROTECTION
-#endif
 		&& canSeeCreature(creature) && creature->getPosition().z == getPosition().z);
 }
 

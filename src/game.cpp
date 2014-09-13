@@ -53,6 +53,7 @@
 
 #include "vocation.h"
 #include "group.h"
+#include "status.h"
 
 #ifdef __DARGHOS_PVP_SYSTEM__
 #include "darghos_pvp.h"
@@ -99,6 +100,8 @@ Game::Game()
 #ifdef __DARGHOS_EMERGENCY_DDOS__
     checkDDoSEvent = 0;
 #endif
+
+    updateStatusEvent = 0;
 }
 
 Game::~Game()
@@ -134,6 +137,9 @@ void Game::start(ServiceManager* servicer)
     checkDDoSEvent = Scheduler::getInstance().addEvent(createSchedulerTask(STATE_DELAY,
         boost::bind(&Game::emergencyDDoSLoop, this)));
 #endif		
+
+    updateStatusEvent = Scheduler::getInstance().addEvent(createSchedulerTask(1000 * 60,
+        boost::bind(&Game::updateStatus, this)));
 
 	services = servicer;
 	if(!g_config.getBool(ConfigManager::GLOBALSAVE_ENABLED) || g_config.getNumber(ConfigManager::GLOBALSAVE_H) < 1 ||
@@ -1069,10 +1075,8 @@ bool Game::playerMoveThing(uint32_t playerId, const Position& fromPos,
 	if(!player || player->isRemoved())
 		return false;
 
-#ifdef __DARGHOS_EMERGENCY_DDOS__
-	if(player->getNoMove() || isUnderDDoS())
+    if(player->getNoMove())
 		return false;
-#endif
 
 	uint8_t fromIndex = 0;
 	if(fromPos.x == 0xFFFF)
@@ -2298,11 +2302,8 @@ bool Game::playerMove(uint32_t playerId, Direction dir)
 		return false;
 
 	player->setIdleTime(0);
-#ifdef __DARGHOS_EMERGENCY_DDOS__
-	if(player->getNoMove() || isUnderDDoS())
-#else
+
 	if(player->getNoMove())
-#endif
 	{
 		player->sendCancelMessage(RET_NOTPOSSIBLE);
 		player->sendCancelWalk();
@@ -2525,14 +2526,12 @@ bool Game::playerAutoWalk(uint32_t playerId, std::list<Direction>& listDir)
 	if(!player || player->isRemoved())
 		return false;
 
-#ifdef __DARGHOS_EMERGENCY_DDOS__
-	if(player->getNoMove() || isUnderDDoS())
+    if(player->getNoMove())
 	{
 		player->sendCancelMessage(RET_NOTPOSSIBLE);
 		player->sendCancelWalk();
 		return false;
 	}
-#endif
 
 	player->setIdleTime(0);
 	if(player->hasCondition(CONDITION_GAMEMASTER, GAMEMASTER_TELEPORT))
@@ -6764,37 +6763,12 @@ int64_t Game::getCurrentTxBytes()
 }
 #endif
 
-#ifdef __DARGHOS_SPOOF__
-uint32_t Game::getPlayersOnline(bool spoof/* = false*/)
+void Game::updateStatus()
 {
-    uint32_t onlinePlayers = (uint32_t)Player::autoList.size();
-    uint32_t playersSpoofed = 0;
+    updateStatusEvent = Scheduler::getInstance().addEvent(createSchedulerTask(1000 * 60,
+        boost::bind(&Game::updateStatus, this)));
 
-    if(g_config.getBool(ConfigManager::SPOOF_PLAYERS_ENABLED) && spoof)
-    {
-        uint32_t spoofStartIn = (g_config.getNumber(ConfigManager::SPOOF_PLAYERS_STARTS) > 0) ? g_config.getNumber(ConfigManager::SPOOF_PLAYERS_STARTS) : g_config.getNumber(ConfigManager::SPOOF_PLAYERS_COUNT);
-
-        if(g_config.getNumber(ConfigManager::SPOOF_PLAYERS_ONLINE_STARTS) > 0)
-		{
-			if(g_config.getNumber(ConfigManager::SPOOF_PLAYERS_MIN_AMOUNT) > 0)
-				playersSpoofed = random_range(g_config.getNumber(ConfigManager::SPOOF_PLAYERS_MIN_AMOUNT), g_config.getNumber(ConfigManager::SPOOF_PLAYERS_ONLINE_STARTS));
-			else
-				playersSpoofed = g_config.getNumber(ConfigManager::SPOOF_PLAYERS_ONLINE_STARTS);
-		}
-
-        if(onlinePlayers > spoofStartIn)
-        {
-            if((onlinePlayers - spoofStartIn) > g_config.getNumber(ConfigManager::SPOOF_PLAYERS_COUNT))
-            {
-                playersSpoofed += g_config.getNumber(ConfigManager::SPOOF_PLAYERS_COUNT);
-            }
-            else
-            {
-                playersSpoofed += (onlinePlayers - spoofStartIn);
-            }
-        }
+    if(Status* status = Status::getInstance()){
+        status->updateDb();
     }
-
-    return onlinePlayers + playersSpoofed;
 }
-#endif

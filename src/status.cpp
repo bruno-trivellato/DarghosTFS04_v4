@@ -59,10 +59,8 @@ void ProtocolStatus::onRecvFirstMessage(NetworkMessage& msg)
 					if(Status* status = Status::getInstance())
 					{
 						bool sendPlayers = false;
-						#ifndef __DARGHOS_SPOOF__
 						if(msg.size() > msg.position())
 							sendPlayers = msg.get<char>() == 0x01;
-                        #endif
 
 						output->putString(status->getStatusString(sendPlayers), false);
 					}
@@ -137,31 +135,13 @@ std::string Status::getStatusString(bool sendPlayers) const
 	xmlAddChild(root, p);
 
 	p = xmlNewNode(NULL,(const xmlChar*)"players");
-	#ifdef __DARGHOS_SPOOF__
-		sprintf(buffer, "%d", g_game.getPlayersOnline(true));
-	#else
-        #ifdef __DARGHOS_IGNORE_AFK__
-        sprintf(buffer, "%d", Player::afkCount);
-        xmlSetProp(p, (const xmlChar*)"afk", (const xmlChar*)buffer);
-        sprintf(buffer, "%d", g_game.getPlayersOnline() - Player::afkCount);
-        #else
 	sprintf(buffer, "%d", g_game.getPlayersOnline());
-        #endif
-    #endif
 	xmlSetProp(p, (const xmlChar*)"online", (const xmlChar*)buffer);
 	sprintf(buffer, "%d", g_config.getNumber(ConfigManager::MAX_PLAYERS));
 	xmlSetProp(p, (const xmlChar*)"max", (const xmlChar*)buffer);
-	#ifdef __DARGHOS_SPOOF__
-	if(g_config.getBool(ConfigManager::SPOOF_PLAYERS_ENABLED))
-        sprintf(buffer, "%d", g_game.getPlayersRecord() + g_config.getNumber(ConfigManager::SPOOF_PLAYERS_ONLINE_STARTS) + (g_config.getNumber(ConfigManager::SPOOF_PLAYERS_COUNT) + 1));
-    else
-        sprintf(buffer, "%d", g_game.getPlayersRecord());
-	#else
 	sprintf(buffer, "%d", g_game.getPlayersRecord());
-	#endif
 	xmlSetProp(p, (const xmlChar*)"peak", (const xmlChar*)buffer);
 
-	#ifndef __DARGHOS_SPOOF__
 	if(sendPlayers)
 	{
 		std::stringstream ss;
@@ -178,7 +158,6 @@ std::string Status::getStatusString(bool sendPlayers) const
 
 		xmlNodeSetContent(p, (const xmlChar*)ss.str().c_str());
 	}
-	#endif
 
 	xmlAddChild(root, p);
 
@@ -255,25 +234,9 @@ void Status::getInfo(uint32_t requestedInfo, OutputMessage_ptr output, NetworkMe
 	if(requestedInfo & REQUEST_PLAYERS_INFO)
 	{
 		output->put<char>(0x20);
-		#ifdef __DARGHOS_SPOOF__
-		output->put<uint32_t>(g_game.getPlayersOnline(true));
-		output->put<uint32_t>(g_config.getNumber(ConfigManager::MAX_PLAYERS));
-		if(g_config.getBool(ConfigManager::SPOOF_PLAYERS_ENABLED))
-            output->put<uint32_t>(g_game.getPlayersRecord() + g_config.getNumber(ConfigManager::SPOOF_PLAYERS_ONLINE_STARTS) + (g_config.getNumber(ConfigManager::SPOOF_PLAYERS_COUNT + 1)));
-        else
-            output->put<uint32_t>(g_game.getPlayersRecord());
-		#else
-            #ifdef __DARGHOS_IGNORE_AFK__
-            output->put<uint32_t>(g_game.getPlayersOnline() - Player::afkCount);
-            output->put<uint32_t>(g_config.getNumber(ConfigManager::MAX_PLAYERS));
-            output->put<uint32_t>(g_game.getPlayersRecord());
-            output->put<uint32_t>(Player::afkCount);
-            #else
 		output->put<uint32_t>(g_game.getPlayersOnline());
 		output->put<uint32_t>(g_config.getNumber(ConfigManager::MAX_PLAYERS));
 		output->put<uint32_t>(g_game.getPlayersRecord());
-            #endif
-        #endif
 	}
 
 	if(requestedInfo & REQUEST_SERVER_MAP_INFO)
@@ -288,7 +251,6 @@ void Status::getInfo(uint32_t requestedInfo, OutputMessage_ptr output, NetworkMe
 		output->put<uint16_t>(mapHeight);
 	}
 
-    #ifndef __DARGHOS_SPOOF__
 	if(requestedInfo & REQUEST_EXT_PLAYERS_INFO)
 	{
 		output->put<char>(0x21);
@@ -318,7 +280,6 @@ void Status::getInfo(uint32_t requestedInfo, OutputMessage_ptr output, NetworkMe
 		else
 			output->put<char>(0x00);
 	}
-	#endif
 
 	if(requestedInfo & REQUEST_SERVER_SOFTWARE_INFO)
 	{
@@ -327,4 +288,44 @@ void Status::getInfo(uint32_t requestedInfo, OutputMessage_ptr output, NetworkMe
 		output->putString(SOFTWARE_VERSION);
 		output->putString(SOFTWARE_PROTOCOL);
 	}
+}
+
+void Status::updateDb(){
+    Database* db = Database::getInstance();
+    DBQuery query;
+    query << "TRUNCATE `server_status`";
+    if(!db->query(query.str()))
+        return;
+
+    query.str("");
+
+    query << "INSERT INTO `server_status` (`uptime`, `ip`, `servername`, `port`, `location`, `url`, `server`, `version`, `protocol`, `owner_name`, `owner_email`, `players_online`, `players_max`, `players_peak`, `monsters`, `npcs`, `map_name`, `map_author`, `map_width`, `map_height`) VALUES (";
+    query << getUptime();
+    query << ", '" << g_config.getString(ConfigManager::IP).c_str() << "'";
+    query << ", '" << g_config.getString(ConfigManager::SERVER_NAME).c_str() << "'";
+    query << ", " << g_config.getNumber(ConfigManager::LOGIN_PORT);
+    query << ", '" << g_config.getString(ConfigManager::LOCATION).c_str() << "'";
+    query << ", '" << g_config.getString(ConfigManager::URL).c_str() << "'";
+    query << ", '" << SOFTWARE_NAME << "'";
+    query << ", '" << SOFTWARE_VERSION << "'";
+    query << ", '" << SOFTWARE_PROTOCOL << "'";
+    query << ", '" << g_config.getString(ConfigManager::OWNER_NAME).c_str() << "'";
+    query << ", '" << g_config.getString(ConfigManager::OWNER_EMAIL).c_str() << "'";
+    query << ", " << g_game.getPlayersOnline();
+    query << ", " << g_config.getNumber(ConfigManager::MAX_PLAYERS);
+    query << ", " << g_game.getPlayersRecord();
+    query << ", " << g_game.getMonstersOnline();
+    query << ", " << g_game.getNpcsOnline();
+    query << ", '" << g_config.getString(ConfigManager::MAP_NAME).c_str() << "'";
+    query << ", '" << g_config.getString(ConfigManager::MAP_AUTHOR).c_str() << "'";
+
+    uint32_t mapWidth, mapHeight;
+    g_game.getMapDimensions(mapWidth, mapHeight);
+
+    query << ", " << mapWidth;
+    query << ", " << mapHeight;
+
+    query << ")";
+
+    db->query(query.str());
 }

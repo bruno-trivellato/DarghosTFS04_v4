@@ -319,19 +319,12 @@ bool ConfigManager::load()
 	m_confNumber[DEFAULT_DEPOT_SIZE] = getGlobalNumber("defaultDepotSizefree", 500);
 	m_confBool[UNIFIED_SPELLS] = getGlobalBool("unifiedSpells", true);
 	m_confBool[HEAL_PLAYER_ON_LEVEL] = getGlobalBool("healPlayersOnLevelAdvance", true);
-	m_confNumber[MAX_PACKETS_PER_SECOND] = getGlobalNumber("maxPacketsPerSecond", 40);
-
-#ifdef __DARGHOS_SPOOF__
-    m_confBool[SPOOF_PLAYERS_ENABLED] = getGlobalBool("spoofPlayersEnabled", true);
-    m_confNumber[SPOOF_PLAYERS_COUNT] = getGlobalNumber("spoofPlayersCount", 75);
-    m_confNumber[SPOOF_PLAYERS_STARTS] = getGlobalNumber("spoofPlayersStarts", 10);
-    m_confNumber[SPOOF_PLAYERS_ONLINE_STARTS] = getGlobalNumber("spoofPlayersOnlineStarts", 0);
-	m_confNumber[SPOOF_PLAYERS_MIN_AMOUNT] = getGlobalNumber("spoofPlayersOnlineMin", 0);
-#endif
+    m_confNumber[MAX_PACKETS_PER_SECOND] = getGlobalNumber("maxPacketsPerSecond", 40);
 
 #ifdef __DARGHOS_CUSTOM__
 	m_confNumber[DEATH_FRAGGERS] = getGlobalNumber("deathFraggersCount", 1);
 	m_confNumber[USE_BLESSING_AS_PVP] = getGlobalNumber("useBlessingAsPvp", 6);
+    m_confNumber[USE_BLESSING_AS_PVE] = getGlobalNumber("useBlessingAsPve", 7);
 	m_confBool[UNFAIR_FIGHT] = getGlobalBool("unfairFightEnabled", false);
 	m_confNumber[RATE_GOLD_LOOT] = getGlobalNumber("rateGoldLoot", 1);
 	m_confBool[PLAYERS_CAN_HEAL_MONSTERS] = getGlobalBool("playersCanHealMonsters", false);

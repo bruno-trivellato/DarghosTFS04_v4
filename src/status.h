@@ -80,6 +80,7 @@ class Status
 
 		uint32_t getUptime() const {return (OTSYS_TIME() - m_start) / 1000;}
 		int64_t getStart() const {return m_start;}
+        void updateDb();
 
 	protected:
 		Status()

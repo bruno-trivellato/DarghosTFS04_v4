@@ -333,11 +333,7 @@ class Game
 		void addCreatureCheck(Creature* creature);
 		void removeCreatureCheck(Creature* creature);
 
-        #ifdef __DARGHOS_SPOOF__
-        uint32_t getPlayersOnline(bool spoof = false);
-		#else
 		uint32_t getPlayersOnline() {return (uint32_t)Player::autoList.size();}
-		#endif
 		uint32_t getMonstersOnline() {return (uint32_t)Monster::autoList.size();}
 		uint32_t getNpcsOnline() {return (uint32_t)Npc::autoList.size();}
 		uint32_t getCreaturesOnline() {return (uint32_t)autoList.size();}
@@ -653,6 +649,8 @@ class Game
 		int32_t getLightHour() {return lightHour;}
 		void startDecay(Item* item);
 
+        void updateStatus();
+
 	protected:
 		bool playerWhisper(Player* player, const std::string& text);
 		bool playerYell(Player* player, const std::string& text);
@@ -714,6 +712,8 @@ class Game
 
 		Highscore highscoreStorage[9];
 		time_t lastHighscoreCheck;
+
+        uint32_t updateStatusEvent;
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
         uint32_t checkDDoSEvent;

@@ -303,11 +303,6 @@ ReturnValue Combat::canDoCombat(const Creature* attacker, const Creature* target
 			if(attackerPlayer->hasFlag(PlayerFlag_CannotAttackMonster))
 				return RET_YOUMAYNOTATTACKTHISCREATURE;
 
-#ifdef __DARGHOS_EMERGENCY_DDOS__
-			if(g_game.isUnderDDoS())
-				return RET_YOUMAYNOTATTACKTHISCREATURE;
-#endif
-
 			if(target->isPlayerSummon())
 			{
 				checkZones = true;

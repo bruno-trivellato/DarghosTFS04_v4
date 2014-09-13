@@ -192,6 +192,7 @@ class ConfigManager
 #ifdef __DARGHOS_CUSTOM__
 			DEATH_FRAGGERS,
 			USE_BLESSING_AS_PVP,
+            USE_BLESSING_AS_PVE,
 			RATE_GOLD_LOOT,
 			MAX_FREE_PREMIUM_LEVEL,
 			IN_PVP_HEALING_DECREASE_PERCENT,
@@ -211,13 +212,6 @@ class ConfigManager
 
 #ifdef __DARGHOS_PVP_SYSTEM__
 			BATTLEGROUND_PZ_LOCKED,
-#endif
-
-#ifdef __DARGHOS_SPOOF__
-            SPOOF_PLAYERS_COUNT,
-            SPOOF_PLAYERS_STARTS,
-            SPOOF_PLAYERS_ONLINE_STARTS,
-            SPOOF_PLAYERS_MIN_AMOUNT,
 #endif
 			
 			LAST_NUMBER_CONFIG /* this must be the last one */
@@ -339,10 +333,6 @@ class ConfigManager
 #ifdef __DARGHOS_CUSTOM__
             UNFAIR_FIGHT,
             PLAYERS_CAN_HEAL_MONSTERS,
-#endif
-
-#ifdef __DARGHOS_SPOOF__
-            SPOOF_PLAYERS_ENABLED,
 #endif
 			
 			LAST_BOOL_CONFIG /* this must be the last one */
