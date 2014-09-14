@@ -5,8 +5,8 @@
 	]]>
 	</script>
 
-	<announce delay="0" type="event" message="Um grande estrondo foi possivel de ser ovido vindo do centro do planeta... Quendor deve se organizar."/>
-	<announce delay="360000" type="event" message="Metais pesados estao sendo distorcer, os gigantes glorificam a chegada do rei!"/>
+	<announce delay="0" type="event" message="Um poderoso estrondo vindo do centro do planeta alerta ao perigo... Quendor deve se organizar."/>
+	<announce delay="360000" type="event" message="Metais pesados estão a se distorcer, os gigantes glorificam a chegada do rei!"/>
 	
 	<announce delay="600000" type="event" message="Rebelião de gigantes aos arredores de Quendor, a cidade está em perigo!"/>	
 	<areaspawn delay="600000" centerx="2090" centery="1825" centerz="7" radius="20">
