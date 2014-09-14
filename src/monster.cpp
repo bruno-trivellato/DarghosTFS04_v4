@@ -1703,10 +1703,13 @@ Item* Monster::createCorpse(DeathList deathList)
 	if(!owner)
 		return corpse;
 
-	if(owner->getStaminaMinutes() <= 840)
-		lootDrop = LOOT_DROP_NONE;
+    if(mType->checkCorpseOwner){
+        if(owner->getStaminaMinutes() <= 840)
+            lootDrop = LOOT_DROP_NONE;
 
-	corpse->setCorpseOwner(owner->getGUID());
+        corpse->setCorpseOwner(owner->getGUID());
+    }
+
 	return corpse;
 }
 

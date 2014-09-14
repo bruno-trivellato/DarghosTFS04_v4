@@ -46,6 +46,8 @@ void MonsterType::reset()
 	runAwayHealth = manaCost = lightLevel = lightColor = yellSpeedTicks = yellChance = changeTargetSpeed = changeTargetChance = 0;
 	experience = defense = armor = lookCorpse = corpseUnique = corpseAction = conditionImmunities = damageImmunities = 0;
 
+    checkCorpseOwner = g_config.getBool(ConfigManager::CHECK_CORPSE_OWNER);
+
 	maxSummons = -1;
 	targetDistance = 1;
 	staticAttackChance = 95;
@@ -1129,6 +1131,9 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 
 						mType->targetDistance = std::max(1, intValue);
 					}
+
+                    if(readXMLString(tmpNode, "checkcorpseowner", strValue))
+                        mType->checkCorpseOwner = booleanString(strValue);
 
 					if(readXMLInteger(tmpNode, "runonhealth", intValue))
 						mType->runAwayHealth = intValue;

@@ -111,6 +111,8 @@ class MonsterType
 		uint32_t yellChance, yellSpeedTicks, staticAttackChance, manaCost;
 		uint64_t experience;
 
+        bool checkCorpseOwner;
+
 		std::string name, nameDescription;
 
 		SummonList summonList;

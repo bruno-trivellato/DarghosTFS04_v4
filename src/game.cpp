@@ -6663,14 +6663,14 @@ void Game::emergencyDDoSLoop()
         std::clog << "RX PPS " << avgPps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) << ")." << std::endl;
         std::clog << "RX BPS " << avgRxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE) << ")." << std::endl;
         std::clog << "TX BPS " << avgTxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE) << ")." << std::endl;
-        broadcastMessage("Connection problems detected. For your security the game is \"PAUSED\" for now... Please wait...", MSG_STATUS_WARNING);
+        //broadcastMessage("Connection problems detected. For your security the game is \"PAUSED\" for now... Please wait...", MSG_STATUS_WARNING);
     }
     else if(m_underDDoS && time(NULL) >= m_lastDDoS + g_config.getNumber(ConfigManager::DDOS_EMERGENCY_MIN_TIME))
     {
         m_underDDoS = false;
         m_wasNotified = false;
         std::clog << "[DDOS EMERGENCY] Emergency disabled." << std::endl;
-        broadcastMessage("Connection now is fine! The game was unpaused. Thanks for your patience!", MSG_STATUS_WARNING);
+        //broadcastMessage("Connection now is fine! The game was unpaused. Thanks for your patience!", MSG_STATUS_WARNING);
     }
 
     m_lastRxPackets = currentRxPackets;
