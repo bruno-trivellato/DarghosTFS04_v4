@@ -32,9 +32,11 @@ local function doSetCannotContinue()
 	local npcPos = getNpcPos()
 
 	if(npcName == "Eric, o Guarda") then
-		cannotContinue = {x = npcPos.x, y = npcPos.y + 1, z = npcPos.z}
+		table.insert(cannotContinue, {x = npcPos.x, y = npcPos.y + 1, z = npcPos.z})
+		table.insert(cannotContinue, {x = npcPos.x, y = npcPos.y, z = npcPos.z})
 	elseif(npcName == "Teudon, o Guarda") then
-		cannotContinue = {x = npcPos.x, y = npcPos.y - 1, z = npcPos.z}
+		table.insert(cannotContinue, {x = npcPos.x, y = npcPos.y - 1, z = npcPos.z})
+		table.insert(cannotContinue, {x = npcPos.x, y = npcPos.y, z = npcPos.z})
 	end
 end
 
@@ -44,10 +46,13 @@ function onCreatureMove(creature, oldPos, newPos)
 	
 		if(getPlayerStorageValue(creature, QUESTLOG.ARIADNE.LAIR) < 1) then
 	
-			if(newPos.x == cannotContinue.x and newPos.y == cannotContinue.y and newPos.z == cannotContinue.z) then
-			
-				selfSay("O Rei proibiu a todos entrarem no pantano. Você não pode passar por aqui!")
-				doTeleportPlayerBack(creature, newPos)
+			for k,v in pairs(cannotContinue) do
+				if(doComparePositions(newPos, v)) then
+					selfSay("O Rei proibiu a todos entrarem no pantano. Você não pode passar por aqui!")
+					doTeleportPlayerBack(creature, newPos)
+
+					break			
+				end
 			end
 		end
 	end

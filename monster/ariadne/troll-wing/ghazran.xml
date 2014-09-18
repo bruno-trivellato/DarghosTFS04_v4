@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Ghazran" nameDescription="a ghazran" race="blood" experience="725800" speed="600" manacost="0">
+<monster name="Ghazran" nameDescription="a ghazran" race="blood" experience="925800" speed="600" manacost="0">
   <health now="376330" max="376330"/>
   <look type="334" corpse="11107"/>
   <targetchange interval="2000" chance="7"/>
@@ -113,42 +113,6 @@
     <item id="2152" countmax="85" chance1="100000">
       <!--gold coin-->
     </item>
-   <item id="12712" chance="1666">
-      <!--hot death legs-->
-    </item>
-   <item id="12713" chance="1666">
-      <!--hot death tiara-->
-    </item>
-   <item id="12714" chance="833">
-      <!--hot death robe-->
-    </item>
-   <item id="12715" chance="1666">
-      <!--magic cold legs-->
-    </item>
-   <item id="12716" chance="1666">
-      <!--magic cold mask-->
-    </item>
-   <item id="12717" chance="833">
-      <!--magic cold robe-->
-    </item>
-   <item id="12718" chance="1666">
-      <!--dream archer's legs-->
-    </item>
-   <item id="12719" chance="1666">
-      <!--dream archer's helmet-->
-    </item>
-   <item id="12720" chance="833">
-      <!--dream archer's armor-->
-    </item>
-   <item id="12721" chance="1666">
-      <!--heavy stomper legs-->
-    </item>
-   <item id="12722" chance="1666">
-      <!--heavy stomper helmet-->
-    </item>
-   <item id="12723" chance="833">
-      <!--heavy stomper armor-->
-    </item>	
     <item id="11304" chance="15000">
       <!--zaoan legs-->
     </item>

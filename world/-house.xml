@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <houses>
-	<house name="Aracura South Palace I" houseid="1" entryx="3362" entryy="2023" entryz="7" rent="74000" townid="10" size="53" />
+	<house name="Aracura South Palace I" houseid="1" entryx="3362" entryy="2023" entryz="7" rent="74000" townid="10" size="51" />
 	<house name="Depot Shop 5" houseid="3" entryx="1984" entryy="1852" entryz="6" rent="48000" townid="1" size="20" />
 	<house name="Depot Shop 4" houseid="4" entryx="1984" entryy="1858" entryz="6" rent="48000" townid="1" size="20" />
 	<house name="Depot Shop 6" houseid="5" entryx="1985" entryy="1852" entryz="6" rent="28000" townid="1" size="16" />
@@ -31,24 +31,21 @@
 	<house name="Depot Flat 6" houseid="30" entryx="2016" entryy="1875" entryz="6" rent="20000" townid="1" size="13" />
 	<house name="Palace Shop 2" houseid="31" entryx="1966" entryy="1877" entryz="7" rent="60000" townid="1" size="10" />
 	<house name="Palace Shop 3" houseid="32" entryx="1970" entryy="1877" entryz="7" rent="60000" townid="1" size="8" />
-	<house name="Aracura North II" houseid="33" entryx="3368" entryy="1983" entryz="7" rent="38000" townid="10" size="21" />
-	<house name="Aracura North III" houseid="34" entryx="3374" entryy="1983" entryz="7" rent="38000" townid="10" size="21" />
-	<house name="Aracura North IV" houseid="35" entryx="3366" entryy="1983" entryz="6" rent="29000" townid="10" size="22" />
-	<house name="Aracura North V" houseid="36" entryx="3376" entryy="1983" entryz="6" rent="29000" townid="10" size="22" />
+	<house name="Aracura North II" houseid="33" entryx="3368" entryy="1983" entryz="7" rent="38000" townid="10" size="15" />
+	<house name="Aracura North III" houseid="34" entryx="3374" entryy="1983" entryz="7" rent="38000" townid="10" size="15" />
+	<house name="Aracura North IV" houseid="35" entryx="3368" entryy="1981" entryz="6" rent="29000" townid="10" size="11" />
+	<house name="Aracura North V" houseid="36" entryx="3374" entryy="1981" entryz="6" rent="29000" townid="10" size="11" />
 	<house name="Palace Flat 2" houseid="37" entryx="1957" entryy="1874" entryz="6" rent="10000" townid="1" size="7" />
 	<house name="Palace Flat 1" houseid="38" entryx="1957" entryy="1870" entryz="6" rent="10000" townid="1" size="7" />
-	<house name="Aracura North VI" houseid="51" entryx="3336" entryy="1993" entryz="7" rent="85000" townid="10" size="40" />
-	<house name="Aracura North VII" houseid="52" entryx="3339" entryy="1993" entryz="7" rent="85000" townid="10" size="40" />
-	<house name="Aracura North VIII" houseid="53" entryx="3336" entryy="1993" entryz="6" rent="52000" townid="10" size="40" />
-	<house name="Aracura North IX" houseid="54" entryx="3339" entryy="1993" entryz="6" rent="52000" townid="10" size="40" />
-	<house name="Aracura West II" houseid="56" entryx="3333" entryy="2008" entryz="7" rent="7500" townid="10" size="14" />
-	<house name="Aracura West III" houseid="57" entryx="3333" entryy="2013" entryz="7" rent="7500" townid="10" size="14" />
-	<house name="Aracura West IV" houseid="58" entryx="3333" entryy="2018" entryz="7" rent="7500" townid="10" size="14" />
-	<house name="Aracura West V" houseid="59" entryx="3333" entryy="2008" entryz="6" rent="7500" townid="10" size="14" />
-	<house name="Aracura West VI" houseid="60" entryx="3333" entryy="2013" entryz="6" rent="7500" townid="10" size="14" />
-	<house name="Aracura West VII" houseid="61" entryx="3333" entryy="2018" entryz="6" rent="7500" townid="10" size="14" />
-	<house name="Aracura South I" houseid="62" entryx="3341" entryy="2017" entryz="7" rent="9500" townid="10" size="28" />
-	<house name="Aracura South II" houseid="63" entryx="3357" entryy="2017" entryz="7" rent="9500" townid="10" size="28" />
+	<house name="Aracura North VI" houseid="51" entryx="3336" entryy="1993" entryz="7" rent="85000" townid="10" size="78" />
+	<house name="Aracura North VII" houseid="52" entryx="3339" entryy="1993" entryz="7" rent="85000" townid="10" size="78" />
+	<house name="Aracura North VIII" houseid="53" entryx="3336" entryy="1993" entryz="6" rent="52000" townid="10" size="0" />
+	<house name="Aracura North IX" houseid="54" entryx="3339" entryy="1993" entryz="6" rent="52000" townid="10" size="0" />
+	<house name="Aracura West II" houseid="56" entryx="3333" entryy="2008" entryz="6" rent="7500" townid="10" size="24" />
+	<house name="Aracura West III" houseid="57" entryx="3333" entryy="2013" entryz="6" rent="7500" townid="10" size="24" />
+	<house name="Aracura West IV" houseid="58" entryx="3333" entryy="2018" entryz="6" rent="7500" townid="10" size="24" />
+	<house name="Aracura South I" houseid="62" entryx="3341" entryy="2017" entryz="7" rent="9500" townid="10" size="27" />
+	<house name="Aracura South II" houseid="63" entryx="3357" entryy="2017" entryz="7" rent="9500" townid="10" size="27" />
 	<house name="Palace Flat 3" houseid="64" entryx="1957" entryy="1876" entryz="6" rent="8000" townid="1" size="4" />
 	<house name="Palace Flat 4" houseid="65" entryx="1967" entryy="1876" entryz="6" rent="8000" townid="1" size="4" />
 	<house name="Palace Flat 5" houseid="66" entryx="1967" entryy="1878" entryz="6" rent="96000" townid="1" size="31" />
@@ -64,9 +61,9 @@
 	<house name="West Garden 8" houseid="76" entryx="1950" entryy="1855" entryz="6" rent="65000" townid="1" size="13" />
 	<house name="Garden Shop 4" houseid="77" entryx="1948" entryy="1849" entryz="6" rent="105000" townid="1" size="17" />
 	<house name="Garden Shop 3" houseid="78" entryx="1951" entryy="1849" entryz="6" rent="105000" townid="1" size="20" />
-	<house name="Aracura West VIII" houseid="79" entryx="3318" entryy="2003" entryz="7" rent="9000" townid="10" size="13" />
-	<house name="Aracura West IX" houseid="80" entryx="3318" entryy="2010" entryz="7" rent="9000" townid="10" size="19" />
-	<house name="Aracura West X" houseid="81" entryx="3318" entryy="2019" entryz="7" rent="9000" townid="10" size="19" />
+	<house name="Aracura West VIII" houseid="79" entryx="3318" entryy="2003" entryz="7" rent="9000" townid="10" size="12" />
+	<house name="Aracura West IX" houseid="80" entryx="3318" entryy="2010" entryz="7" rent="9000" townid="10" size="12" />
+	<house name="Aracura West X" houseid="81" entryx="3318" entryy="2017" entryz="7" rent="9000" townid="10" size="12" />
 	<house name="Depot Shop 1" houseid="86" entryx="1984" entryy="1864" entryz="7" rent="52000" townid="1" size="14" />
 	<house name="Depot Shop 2" houseid="87" entryx="1984" entryy="1858" entryz="7" rent="55000" townid="1" size="18" />
 	<house name="Depot Shop 3" houseid="88" entryx="1984" entryy="1852" entryz="7" rent="55000" townid="1" size="18" />
@@ -123,7 +120,7 @@
 	<house name="Saintly Street 2" houseid="142" entryx="2412" entryy="1817" entryz="7" rent="44000" townid="4" size="18" />
 	<house name="Saintly Street 3" houseid="143" entryx="2412" entryy="1821" entryz="7" rent="44000" townid="4" size="16" />
 	<house name="Death Knight Guildhall" houseid="144" entryx="2400" entryy="1838" entryz="7" rent="325000" townid="4" size="143" />
-	<house name="Aracura North I" houseid="147" entryx="3366" entryy="1990" entryz="6" rent="35000" townid="10" size="53" />
+	<house name="Aracura North I" houseid="147" entryx="3366" entryy="1990" entryz="6" rent="35000" townid="10" size="40" />
 	<house name="Burnhearts Street 1" houseid="148" entryx="2392" entryy="1843" entryz="7" rent="51000" townid="4" size="13" />
 	<house name="Burnhearts Street 2" houseid="149" entryx="2392" entryy="1835" entryz="7" rent="51000" townid="4" size="15" />
 	<house name="Burnhearts Street 3" houseid="150" entryx="2387" entryy="1828" entryz="7" rent="21000" townid="4" size="7" />
@@ -340,10 +337,9 @@
 	<house name="East House III" houseid="546" entryx="1137" entryy="1133" entryz="7" rent="4500" townid="9" size="9" />
 	<house name="East House IV" houseid="547" entryx="1133" entryy="1137" entryz="7" rent="4500" townid="9" size="4" />
 	<house name="East House V" houseid="548" entryx="1133" entryy="1142" entryz="7" rent="4500" townid="9" size="4" />
-	<house name="Aracura West XI" houseid="549" entryx="3320" entryy="2003" entryz="6" rent="6500" townid="10" size="15" />
-	<house name="Aracura West XII" houseid="550" entryx="3320" entryy="2010" entryz="6" rent="6500" townid="10" size="15" />
-	<house name="Aracura West XIII" houseid="551" entryx="3320" entryy="2017" entryz="6" rent="8500" townid="10" size="18" />
-	<house name="Aracura West XIV" houseid="552" entryx="3320" entryy="2021" entryz="6" rent="9500" townid="10" size="18" />
+	<house name="Aracura West XI" houseid="549" entryx="3320" entryy="2003" entryz="6" rent="6500" townid="10" size="17" />
+	<house name="Aracura West XII" houseid="550" entryx="3320" entryy="2010" entryz="6" rent="6500" townid="10" size="16" />
+	<house name="Aracura West XIII" houseid="551" entryx="3320" entryy="2017" entryz="6" rent="8500" townid="10" size="19" />
 	<house name="Fort Guard" houseid="654" entryx="2069" entryy="1839" entryz="7" rent="285000" townid="1" size="133" />
 	<house name="Castle of Wargrowth" houseid="655" entryx="1980" entryy="1791" entryz="7" rent="5000000" townid="1" size="1251" />
 	<house name="South Flat 1" houseid="656" entryx="2186" entryy="2707" entryz="7" rent="6000" townid="5" size="20" />
@@ -366,4 +362,10 @@
 	<house name="Central House 3" houseid="673" entryx="2182" entryy="2683" entryz="7" rent="21000" townid="5" size="37" />
 	<house name="Central Guildhall 2" houseid="674" entryx="2183" entryy="2680" entryz="7" rent="30000" townid="5" size="65" />
 	<house name="Central House 4" houseid="675" entryx="2195" entryy="2677" entryz="7" rent="24000" townid="5" size="72" />
+	<house name="Aracura West I" houseid="676" entryx="3337" entryy="2003" entryz="7" rent="40000" townid="10" size="26" />
+	<house name="Aracura West XIV" houseid="677" entryx="3317" entryy="1988" entryz="7" rent="14800" townid="10" size="139" />
+	<house name="Aracura South VI" houseid="680" entryx="3321" entryy="2032" entryz="7" rent="7600" townid="10" size="39" />
+	<house name="Aracura South III" houseid="681" entryx="3326" entryy="2026" entryz="7" rent="4000" townid="10" size="9" />
+	<house name="Aracura South IV" houseid="682" entryx="3331" entryy="2026" entryz="7" rent="4000" townid="10" size="9" />
+	<house name="Aracura South V" houseid="683" entryx="3336" entryy="2026" entryz="7" rent="4000" townid="10" size="9" />
 </houses>

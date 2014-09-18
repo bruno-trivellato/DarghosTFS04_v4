@@ -105,7 +105,6 @@ function creatureSayCallback(cid, type, msg)
 		return false
 	end
 	
-	--[[
 	if(msgcontains(msg, {"mission", "task", "missão", "missao", "tarefa"})) then
 		local ariadneState = getPlayerStorageValue(cid, QUESTLOG.ARIADNE.LAIR)
 		local ghazranWingStatus = getPlayerStorageValue(cid, QUESTLOG.ARIADNE.GHAZRAN_WING)
@@ -132,7 +131,7 @@ function creatureSayCallback(cid, type, msg)
 		if(talkState[cid] == 4) then
 			local level = getPlayerLevel(cid)
 							
-			if(level < 220) then
+			if(level < 200) then
 				npcHandler:say("Estou impressionado com sua brava coragem meu rapaz, mas esta missão requer maior conhecimento e habilidade.", cid)
 			else
 				npcHandler:say("Otimo! Estou profundamente contente que você irá nos ajudar! Meus guardas já recebam ordens para que permitam você a entrar no Pantano. Muito cuidado, este lugar é traiçoeiro! Consigas o antidoto e lhe re-compensarei por esta brava atitude!", cid)	
@@ -170,7 +169,6 @@ function creatureSayCallback(cid, type, msg)
 		
 		talkState[cid] = nil
 	end
-	]]
 	
 	return true
 end

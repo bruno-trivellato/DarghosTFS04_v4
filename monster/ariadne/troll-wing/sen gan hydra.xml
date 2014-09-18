@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Sen Gan Hydra" nameDescription="a sen gan hydra" race="blood" experience="84250" speed="450" manacost="0">
+<monster name="Sen Gan Hydra" nameDescription="a sen gan hydra" race="blood" experience="132250" speed="450" manacost="0">
   <health now="103500" max="103500"/>
   <look type="121" head="20" body="30" legs="40" feet="50" corpse="6048"/>
   <targetchange interval="4000" chance="10"/>
@@ -144,7 +144,7 @@
     <item id="2472" chance="10000">
       <!--magic plate armor-->
     </item>
-    <item id="12642" chance="1000">
+    <item id="12642" chance="300">
       <!--royal draken mail-->
     </item>
     <item id="12607" chance="2500">

@@ -598,7 +598,21 @@ local quests =
 			rewardId = 12541,
 			count = 1
 		},		
-		
+		[uid.ARIADNE_ROBE] = {
+			storageId = sid.ARIADNE_CHEST,
+			rewardId = 12643,
+			count = 1
+		},
+		[uid.ARIADNE_ARMOR] = {
+			storageId = sid.ARIADNE_CHEST,
+			rewardId = 12642,
+			count = 1
+		},
+		[uid.ARIADNE_HELMET] = {
+			storageId = sid.ARIADNE_CHEST,
+			rewardId = 12645,
+			count = 1
+		}
 	}
 
 function useQuestChest(cid, quest, questActionId)

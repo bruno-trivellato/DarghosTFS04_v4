@@ -7,6 +7,14 @@
 	<movevent type="StepIn" fromuid="7501" touid="7502" event="script" value="game/kashmir.quest/tp_in_out.lua"/>
 	<movevent type="StepOut" fromaid="7507" toaid="7508" event="script" value="game/kashmir.quest/closingdoor.lua"/>
 	
+	*FIELD DAMAGE
+	<movevent type="StepIn" actionid="8300" event="script" value="game/field_damage.lua"/>	
+	<movevent type="StepIn" actionid="8301" event="script" value="game/field_damage.lua"/>	
+	<movevent type="StepIn" actionid="8302" event="script" value="game/field_damage.lua"/>	
+	<movevent type="StepIn" actionid="8303" event="script" value="game/field_damage.lua"/>	
+	<movevent type="StepIn" actionid="8304" event="script" value="game/field_damage.lua"/>	
+	<movevent type="StepIn" actionid="8305" event="script" value="game/field_damage.lua"/>
+	
 	*DEMON OAK
 	<movevent type="StepIn" actionid="4066" event="script" value="game/demon_oak.lua"/>
 
