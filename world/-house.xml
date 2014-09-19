@@ -37,9 +37,9 @@
 	<house name="Aracura North V" houseid="36" entryx="3374" entryy="1981" entryz="6" rent="29000" townid="10" size="11" />
 	<house name="Palace Flat 2" houseid="37" entryx="1957" entryy="1874" entryz="6" rent="10000" townid="1" size="7" />
 	<house name="Palace Flat 1" houseid="38" entryx="1957" entryy="1870" entryz="6" rent="10000" townid="1" size="7" />
-	<house name="Aracura North VI" houseid="51" entryx="3336" entryy="1993" entryz="7" rent="85000" townid="10" size="78" />
+	<house name="Aracura North VI" houseid="51" entryx="3336" entryy="1993" entryz="7" rent="85000" townid="10" size="39" />
 	<house name="Aracura North VII" houseid="52" entryx="3339" entryy="1993" entryz="7" rent="85000" townid="10" size="78" />
-	<house name="Aracura North VIII" houseid="53" entryx="3336" entryy="1993" entryz="6" rent="52000" townid="10" size="0" />
+	<house name="Aracura North VIII" houseid="53" entryx="3336" entryy="1993" entryz="6" rent="52000" townid="10" size="39" />
 	<house name="Aracura North IX" houseid="54" entryx="3339" entryy="1993" entryz="6" rent="52000" townid="10" size="0" />
 	<house name="Aracura West II" houseid="56" entryx="3333" entryy="2008" entryz="6" rent="7500" townid="10" size="24" />
 	<house name="Aracura West III" houseid="57" entryx="3333" entryy="2013" entryz="6" rent="7500" townid="10" size="24" />
