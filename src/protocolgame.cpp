@@ -352,7 +352,9 @@ bool ProtocolGame::connect(uint32_t playerId, OperatingSystem_t operatingSystem,
     player->client = this;
     player->isConnecting = false;
 
-    player->sendCreatureAppear(player);
+    if(!player->isSpoof())
+        player->sendCreatureAppear(player);
+
     player->setOperatingSystem(operatingSystem);
     player->setClientVersion(version);
 

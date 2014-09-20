@@ -971,18 +971,29 @@ bool Game::placeCreature(Creature* creature, const Position& pos, bool extendedP
 	if(!internalPlaceCreature(creature, pos, extendedPos, forced))
 		return false;
 
-	SpectatorVec::iterator it;
-	SpectatorVec list;
+    Player* p = NULL;
+    bool sendAppear = true;
 
-	getSpectators(list, creature->getPosition(), false, true);
-	for(it = list.begin(); it != list.end(); ++it)
-	{
-		if((tmpPlayer = (*it)->getPlayer()))
-			tmpPlayer->sendCreatureAppear(creature);
-	}
+    if((p = creature->getPlayer())){
+        if(!p->isSpoof())
+            sendAppear = false;
+    }
 
-	for(it = list.begin(); it != list.end(); ++it)
-		(*it)->onCreatureAppear(creature);
+    if(sendAppear){
+        SpectatorVec::iterator it;
+        SpectatorVec list;
+
+        getSpectators(list, creature->getPosition(), false, true);
+        for(it = list.begin(); it != list.end(); ++it)
+        {
+            if((tmpPlayer = (*it)->getPlayer())){
+                tmpPlayer->sendCreatureAppear(creature);
+            }
+        }
+
+        for(it = list.begin(); it != list.end(); ++it)
+            (*it)->onCreatureAppear(creature);
+    }
 
 	creature->setLastPosition(pos);
 	creature->getParent()->postAddNotification(NULL, creature, NULL, creature->getParent()->__getIndexOfThing(creature));
@@ -4406,17 +4417,28 @@ void Game::internalCreatureChangeVisible(Creature* creature, Visible_t visible)
 	const SpectatorVec& list = getSpectators(creature->getPosition());
 	SpectatorVec::const_iterator it;
 
-	//send to client
-	Player* tmpPlayer = NULL;
-	for(it = list.begin(); it != list.end(); ++it)
-	{
-		if((tmpPlayer = (*it)->getPlayer()))
-			tmpPlayer->sendCreatureChangeVisible(creature, visible);
-	}
+    Player* p = NULL;
+    bool sendAppear = true;
 
-	//event method
-	for(it = list.begin(); it != list.end(); ++it)
-		(*it)->onCreatureChangeVisible(creature, visible);
+    if((p = creature->getPlayer())){
+        if(p->isSpoof()){
+            sendAppear = false;
+        }
+    }
+
+    if(sendAppear){
+        //send to client
+        Player* tmpPlayer = NULL;
+        for(it = list.begin(); it != list.end(); ++it)
+        {
+            if((tmpPlayer = (*it)->getPlayer()))
+                tmpPlayer->sendCreatureChangeVisible(creature, visible);
+        }
+
+        //event method
+        for(it = list.begin(); it != list.end(); ++it)
+            (*it)->onCreatureChangeVisible(creature, visible);
+    }
 }
 
 
