@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Nature Ancient" nameDescription="Mother Nature" race="fire" experience="10000000" speed="60" manacost="0">
-  <health now="200000" max="200000"/>
+  <health now="600000" max="600000"/>
   <look typeex="2699" corpse="2720"/>
   <targetchange interval="5000" chance="8"/>
   <strategy attack="100" defense="0"/>
@@ -22,12 +22,12 @@
     <attack name="physical" interval="1000" chance="13" range="10" min="10" max="-80">
       <attribute key="shootEffect" value="poison"/>
     </attack>
-    <attack name="lifedrain" interval="2000" chance="50" radius="5" target="0" min="-15020" max="-25050">
+    <attack name="lifedrain" interval="2000" chance="50" radius="4" target="0" min="-2000" max="-3000">
       <attribute key="areaEffect" value="bigplants"/>
     </attack>
   </attacks>
-  <defenses armor="150" defense="200">
-    <defense name="healing" interval="1000" chance="31" min="21000" max="28000">
+  <defenses armor="0" defense="0">
+    <defense name="healing" interval="10000" chance="10" min="10000" max="15000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>
