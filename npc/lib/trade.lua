@@ -455,7 +455,7 @@ trade_lists = {
 		{ name = "demonrage sword", buy_for = 36000 },	
 		{ name = "dragon slayer", itemtype = 7402, buy_for = 15000 },	
 		{ name = "guardian halberd", buy_for = 11000 },	
-		{ name = "wyvern fang", buy_for = 13500 },	
+		{ name = "wyvern fang", buy_for = 1500 },	
 		{ name = "ring of the sky", buy_for = 30000 },	
 		{ name = "relic sword", itemtype = 7383, buy_for = 25000 },	
 		{ name = "dragonbone staff", buy_for = 3000 },	
