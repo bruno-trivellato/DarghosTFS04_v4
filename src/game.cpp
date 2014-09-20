@@ -975,7 +975,7 @@ bool Game::placeCreature(Creature* creature, const Position& pos, bool extendedP
     bool sendAppear = true;
 
     if((p = creature->getPlayer())){
-        if(!p->isSpoof())
+        if(p->isSpoof())
             sendAppear = false;
     }
 
