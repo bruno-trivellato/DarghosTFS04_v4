@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Nature Ancient" nameDescription="Mother Nature" race="fire" experience="10000000" speed="60" manacost="0">
-  <health now="600000" max="600000"/>
+  <health now="650000" max="650000"/>
   <look typeex="2699" corpse="2720"/>
   <targetchange interval="5000" chance="8"/>
   <strategy attack="100" defense="0"/>
@@ -18,19 +18,31 @@
     <flag runonhealth="500"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="1000" min="-0" max="-5000" poison="350"/>
+    <attack name="melee" interval="1000" min="-1500" max="-5000" poison="350"/>
     <attack name="physical" interval="1000" chance="13" range="10" min="10" max="-80">
       <attribute key="shootEffect" value="poison"/>
     </attack>
     <attack name="lifedrain" interval="2000" chance="50" radius="4" target="0" min="-2000" max="-3000">
       <attribute key="areaEffect" value="bigplants"/>
     </attack>
+    <attack name="speed" interval="1000" chance="40" radius="6" target="0" speedchange="-700" duration="2000">
+      <attribute key="shootEffect" value="poison" />
+      <attribute key="areaEffect" value="greenbubble" />
+    </attack>    
   </attacks>
   <defenses armor="0" defense="0">
     <defense name="healing" interval="10000" chance="10" min="10000" max="15000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>
+  <elements>
+    <element deathPercent="50"/>
+    <element icePercent="50"/>
+    <element earthPercent="50"/>
+    <element holyPercent="50"/>
+    <element energyPercent="50"/>
+    <element physicalPercent="-300"/>
+  </elements>  
   <immunities>
     <immunity physical="0"/>
     <immunity energy="0"/>
