@@ -41,6 +41,6 @@ function onSave()
 	doSaveServer(config.shallow)
 	
 	if(darghos_server_save_backup) then
-		addEvent(os.execute, 500, "./backup.sh")
+		addEvent(os.execute, 500, "cd backups_hour && ./run.sh")
 	end
 end
