@@ -122,6 +122,19 @@ trade_lists = {
 		{ name = "focus cape", buy_for = 6000 },
 		{ name = "batwing hat", buy_for = 8000 },
 		{ name = "jade hat", buy_for = 9000 },
+
+		{ name = "draken boots", buy_for = 40000 },
+		{ name = "drakinata", buy_for = 10000 },
+		{ name = "elite draken mail", buy_for = 50000 },
+		{ name = "guardian boots", buy_for = 35000 },
+		{ name = "twiceslicer", buy_for = 28000 },
+		{ name = "wailing widow necklace", buy_for = 3000 },
+		{ name = "zaoan armor", buy_for = 14000 },
+		{ name = "zaoan halberd", buy_for = 500 },
+		{ name = "zaoan helmet", buy_for = 45000 },
+		{ name = "zaoan legs", buy_for = 14000 },
+		{ name = "zaoan shoes", buy_for = 5000 },
+		{ name = "zaoan sword", buy_for = 30000 },
 	},
 	
 	["helmets"] = {
