@@ -25,15 +25,21 @@
     <attack name="lifedrain" interval="2000" chance="50" radius="4" target="0" min="-2000" max="-3000">
       <attribute key="areaEffect" value="bigplants"/>
     </attack>
-    <attack name="speed" interval="1000" chance="40" radius="6" target="0" speedchange="-700" duration="2000">
+    <attack name="speed" interval="1000" chance="40" radius="4" target="1" speedchange="-700" duration="2000">
       <attribute key="shootEffect" value="poison" />
       <attribute key="areaEffect" value="greenbubble" />
     </attack>    
   </attacks>
   <defenses armor="0" defense="0">
-    <defense name="healing" interval="10000" chance="10" min="10000" max="15000">
+    <defense name="healing" interval="1500" chance="35" min="1800" max="3600">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
+    <defense name="healing" interval="1000" chance="35" min="1400" max="3100">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense> 
+    <defense name="healing" interval="500" chance="35" min="900" max="2400">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>     
   </defenses>
   <elements>
     <element deathPercent="50"/>
