@@ -18,7 +18,7 @@
     <flag runonhealth="35000"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" skill="180" attack="160"/>
+    <attack name="melee" interval="2000" skill="220" attack="200"/>
     <attack name="manadrain" interval="2000" chance="22" range="7" min="-350" max="-700"/>
     <attack name="fire" interval="2000" chance="70" range="7" radius="7" target="1" min="-550" max="-870">
       <attribute key="shootEffect" value="fire"/>
@@ -38,7 +38,7 @@
     </attack>
   </attacks>
   <defenses armor="55" defense="55">
-    <defense name="healing" interval="1000" chance="40" min="3000" max="15000">
+    <defense name="healing" interval="8000" chance="100" min="40000" max="60000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
     <defense name="speed" interval="1000" chance="46" speedchange="790" duration="8000">
@@ -60,7 +60,7 @@
     <immunity invisible="1"/>
   </immunities>
   <summons maxSummons="2">
-    <summon name="Hellfire Fighter" interval="1000" chance="10"/>
+    <summon name="Hellfire Fighter" interval="1000" chance="100"/>
   </summons>
   <voices interval="5000" chance="10">
     <voice sentence="THE PORTAL WAS OPEN!" yell="1"/>
