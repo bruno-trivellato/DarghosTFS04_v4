@@ -9392,7 +9392,7 @@
 		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="5995" article="a" name="slain demon">
-		<attribute key="containerSize" value="10" />
+		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="2916" />
 		<attribute key="duration" value="10" />
 		<attribute key="corpseType" value="blood" />

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Burning Demon" nameDescription="a burning demon" race="fire" experience="5000000" speed="375" manacost="10000">
+<monster name="Burning Demon" nameDescription="a burning demon" race="fire" experience="12000000" speed="460" manacost="10000">
   <health now="500000" max="500000"/>
-  <look type="35" corpse="5995"/>
+  <look type="12" head="114" body="27" legs="103" feet="112" corpse="5995"/>
   <targetchange interval="5000" chance="8"/>
-  <strategy attack="90" defense="10"/>
+  <strategy attack="110" defense="10"/>
   <flags>
     <flag summonable="0"/>
     <flag attackable="1"/>
@@ -15,12 +15,12 @@
     <flag canpushcreatures="1"/>
     <flag targetdistance="1"/>
     <flag staticattack="90"/>
-    <flag runonhealth="0"/>
+    <flag runonhealth="35000"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" skill="200" attack="170"/>
+    <attack name="melee" interval="2000" skill="180" attack="160"/>
     <attack name="manadrain" interval="2000" chance="22" range="7" min="-350" max="-700"/>
-    <attack name="fire" interval="2000" chance="70" range="7" radius="7" target="1" min="-700" max="-1000">
+    <attack name="fire" interval="2000" chance="70" range="7" radius="7" target="1" min="-550" max="-870">
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
     </attack>
@@ -30,28 +30,28 @@
     <attack name="lifedrain" interval="2000" chance="25" length="8" spread="0" min="-300" max="-590">
       <attribute key="areaEffect" value="purpleenergy"/>
     </attack>
-    <attack name="speed" interval="2000" chance="35" target="1" speedchange="-1300" duration="30000">
+    <attack name="speed" interval="2000" chance="35" target="1" speedchange="-1350" duration="30000">
       <attribute key="shootEffect" value="suddendeath"/>
     </attack>
-    <attack name="energy" interval="3000" chance="50" range="1" target="1" min="-900" max="-1600">
+    <attack name="energy" interval="3000" chance="50" range="1" target="1" min="-900" max="-1350">
       <attribute key="areaEffect" value="purpleenergy"/>
     </attack>
   </attacks>
   <defenses armor="55" defense="55">
-    <defense name="healing" interval="2000" chance="55" min="8000" max="12000">
+    <defense name="healing" interval="1000" chance="40" min="3000" max="15000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
-    <defense name="speed" interval="1000" chance="46" speedchange="550" duration="5000">
+    <defense name="speed" interval="1000" chance="46" speedchange="790" duration="8000">
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>
   <elements>
-    <element physicalPercent="-30"/>
-    <element energyPercent="70"/>
-    <element earthPercent="80"/>
-    <element icePercent="-60"/>
-    <element holyPercent="-40"/>
-    <element deathPercent="-30"/>
+    <element physicalPercent="-5"/>
+    <element energyPercent="30"/>
+    <element earthPercent="30"/>
+    <element icePercent="-35"/>
+    <element holyPercent="-50"/>
+    <element deathPercent="-5"/>
   </elements>
   <immunities>
     <immunity fire="1"/>
@@ -59,8 +59,8 @@
     <immunity paralyze="1"/>
     <immunity invisible="1"/>
   </immunities>
-  <summons maxSummons="10">
-    <summon name="diabolic imp" interval="1000" chance="20"/>
+  <summons maxSummons="2">
+    <summon name="Hellfire Fighter" interval="1000" chance="10"/>
   </summons>
   <voices interval="5000" chance="10">
     <voice sentence="THE PORTAL WAS OPEN!" yell="1"/>
@@ -75,82 +75,80 @@
     <item id="2160" countmax="30" chance1="100000">
       <!--platinum coin-->
     </item>
-    <item id="2164" chance="600">
+    <item id="2164" chance="60000">
       <!--might ring-->
     </item>
     <item id="2151" countmax="100" chance1="100000" chancemax="100000">
       <!--talon-->
     </item>
-    <item id="2365" chance="100000">
-      <inside>
-        <item id="2514" chance="15000">
+        <item id="2514" chance="58000">
           <!--mastermind shield-->
         </item>
-        <item id="2472" chance="14000">
+        <item id="2472" chance="50000">
           <!--magic plate armor-->
         </item>
-        <item id="2470" chance="18000">
+        <item id="2470" chance="65000">
           <!--golden legs-->
         </item>
-        <item id="7382" chance="25000">
+        <item id="7382" chance="55000">
           <!--demonrage sword-->
         </item>
-        <item id="7393" chance="10000">
+        <item id="7393" chance="90000">
           <!--demon trophy-->
         </item>
-        <item id="2520" chance="22000">
+        <item id="2520" chance="80000">
           <!--demon shield-->
         </item>
-        <item id="12644" chance="1000">
+        <item id="12644" chance="26000">
           <!--Shield of corruption-->
         </item>
-        <item id="9933" chance="1600">
+        <item id="9933" chance="10000">
           <!--firewalker boots-->
         </item>
-        <item id="7453" chance="9000">
+        <item id="7453" chance="28000">
           <!--executioner-->
         </item>
-        <item id="2415" chance="2000">
+        <item id="2415" chance="6000">
           <!--great axe-->
         </item>
-        <item id="2522" chance="6000">
+        <item id="2522" chance="12000">
           <!--great shield-->
         </item>
-        <item id="2195" chance="30000">
+        <item id="2195" chance="95000">
           <!--boots of haste-->
         </item>
-        <item id="8890" chance="11000">
+        <item id="8890" chance="23000">
           <!--robe of the underworld-->
         </item>
-        <item id="2421" chance="9000">
+        <item id="2421" chance="20000">
           <!--thunder hammer-->
         </item>
-        <item id="2494" chance="15000">
+        <item id="2494" chance="60000">
           <!--demon armor-->
         </item>
-        <item id="2493" chance="15000">
+        <item id="2493" chance="60000">
           <!--demon helmet-->
         </item>
-        <item id="6132" chance="4000">
+        <item id="6132" chance="15000">
           <!--pair of soft boots-->
         </item>
-        <item id="8886" chance="9000">
+        <item id="8886" chance="28000">
           <!--molten plate-->
         </item>
-        <item id="8881" chance="11000">
+        <item id="8881" chance="23000">
           <!--fireborn giant armor-->
         </item>
-        <item id="8851" chance="11000">
+        <item id="8851" chance="23000">
           <!--royal crossbow-->
         </item>
-        <item id="8854" chance="11000">
+        <item id="8854" chance="23000">
           <!--warsinger bow-->
         </item>
-        <item id="8918" chance="11000">
+        <item id="8918" chance="23000">
           <!--spellbook of dark mysteries-->
         </item>
-      </inside>
-      <!--bag-->
-    </item>
+		<item id="2408" chance="1000">
+          <!--warlord sword-->
+        </item>
   </loot>
 </monster>

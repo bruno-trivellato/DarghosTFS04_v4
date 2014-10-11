@@ -27,7 +27,7 @@
 	<monster name="Behemoth King" file="darghos/behemoth king.xml" />
 	<monster name="Behemoth Minion" file="darghos/Behemoth Minion.xml" />
 	<monster name="Dark Eye" file="darghos/Dark Eye.xml" />
-	<monster name="demonlegs" file="darghos/demonlegs.xml" />
+	<monster name="Demon Crusher" file="darghos/demon_crusher.xml" />
 	<monster name="demonportal" file="darghos/demonportal.xml" />
 	<monster name="Durin" file="darghos/durin.xml" />
 	<monster name="Dwarf Miner" file="darghos/dwarf miner.xml" />
