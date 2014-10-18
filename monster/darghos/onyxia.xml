@@ -17,9 +17,9 @@
     <flag runonhealth="20000"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" skill="170" attack="145"/>
+    <attack name="melee" interval="2000" skill="150" attack="125"/>
     <attack name="manadrain" interval="1000" chance="5" range="7" min="-500" max="-1000"/>
-    <attack name="fire" interval="1000" chance="50" range="10" radius="10" target="1" min="-300" max="-600">
+    <attack name="fire" interval="1000" chance="50" range="10" radius="10" target="1" min="-300" max="-500">
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
     </attack>
@@ -73,28 +73,16 @@
     <item id="2148" countmax="100" chance="100000">
       <!--gold coin-->
     </item>
-    <item id="2796" countmax="4" chance="7000">
-      <!--green mushroom-->
+    <item id="2516" countmax="1" chance="90000">
+      <!--dragon shield-->
     </item>
     <item id="2498" countmax="1" chance="80000">
       <!--royal helmet-->
     </item>
-    <item id="1988" countmax="1" chance="100000">
+    <item id="2365" countmax="1" chance="100000">
       <inside>
         <item id="2148" countmax="90" chance="65000">
           <!--gold coin-->
-        </item>
-        <item id="2516" countmax="1" chance="90000">
-          <!--dragon shield-->
-        </item>
-        <item id="2187" countmax="1" chance="95000">
-          <!--wand of inferno-->
-        </item>
-        <item id="5948" countmax="1" chance="45000">
-          <!--red dragon leather-->
-        </item>
-        <item id="7314" countmax="1" chance="60000">
-          <!--red dragon scale-->
         </item>
         <item id="2492" countmax="1" chance="75000">
           <!--dragon scale mail-->
