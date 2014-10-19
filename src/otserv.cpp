@@ -205,9 +205,9 @@ void signalHandler(int32_t sig)
 			g_game.cleanMap();
 			break;
 
-		case SIGCHLD:
-			g_game.proceduralRefresh();
-			break;
+		//case SIGCHLD:
+		//	g_game.proceduralRefresh();
+		//	break;
 
 		case SIGUSR1:
 			Dispatcher::getInstance().addTask(createTask(
