@@ -39,6 +39,9 @@ bool Spoof::onStartup(){
 
 void Spoof::onLogin(Player* player){
 
+    //we will not open any spoof for now
+    return;
+
     time_t current = time(nullptr);
     tm* date = localtime(&current);
 
