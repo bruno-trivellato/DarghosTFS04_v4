@@ -891,6 +891,11 @@ Player* Game::getPlayerByAccount(uint32_t acc)
 {
 	for(AutoList<Player>::iterator it = Player::autoList.begin(); it != Player::autoList.end(); ++it)
 	{
+        if(it->second == NULL){
+            std::clog << "Crash avoided on getPlayerByAccount(" << acc << ")" << std::endl;
+            continue;
+        }
+
 		if(!it->second->isRemoved() && it->second->getAccount() == acc)
 			return it->second;
 	}
@@ -904,6 +909,11 @@ PlayerVector Game::getPlayersByName(std::string s)
 	PlayerVector players;
 	for(AutoList<Player>::iterator it = Player::autoList.begin(); it != Player::autoList.end(); ++it)
 	{
+        if(it->second == NULL){
+            std::clog << "Crash avoided on getPlayersByName(" << s << ")" << std::endl;
+            continue;
+        }
+
 		if(!it->second->isRemoved() && asLowerCaseString(it->second->getName()) == s)
 			players.push_back(it->second);
 	}
@@ -916,6 +926,11 @@ PlayerVector Game::getPlayersByAccount(uint32_t acc)
 	PlayerVector players;
 	for(AutoList<Player>::iterator it = Player::autoList.begin(); it != Player::autoList.end(); ++it)
 	{
+        if(it->second == NULL){
+            std::clog << "Crash avoided on getPlayersByAccount(" << acc << ")" << std::endl;
+            continue;
+        }
+
 		if(!it->second->isRemoved() && it->second->getAccount() == acc)
 			players.push_back(it->second);
 	}
@@ -928,6 +943,11 @@ PlayerVector Game::getPlayersByIP(uint32_t ip, uint32_t mask)
 	PlayerVector players;
 	for(AutoList<Player>::iterator it = Player::autoList.begin(); it != Player::autoList.end(); ++it)
 	{
+        if(it->second == NULL){
+            std::clog << "Crash avoided on getPlayersByIP(" << ip << ")" << std::endl;
+            continue;
+        }
+
 		if(!it->second->isRemoved() && (it->second->getIP() & mask) == (ip & mask))
 			players.push_back(it->second);
 	}

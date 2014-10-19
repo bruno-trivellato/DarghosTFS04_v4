@@ -168,10 +168,14 @@ int32_t Creature::getWalkDelay(Direction dir) const
 
 int32_t Creature::getWalkDelay() const
 {
-	if(lastStep)
-		return getStepDuration() - (OTSYS_TIME() - lastStep);
+    //Used for auto-walking
+    if (lastStep == 0) {
+        return 0;
+    }
 
-	return 0;
+    int64_t ct = OTSYS_TIME();
+    int64_t stepDuration = getStepDuration() * lastStepCost;
+    return stepDuration - (ct - lastStep);
 }
 
 void Creature::onThink(uint32_t interval)
@@ -524,13 +528,17 @@ void Creature::onCreatureMove(const Creature* creature, const Tile* newTile, con
 		lastStepCost = 1;
 
 		setLastPosition(oldPos);
-		if(!teleport)
-		{
-			if(std::abs(newPos.x - oldPos.x) >= 1 && std::abs(newPos.y - oldPos.y) >= 1)
-				lastStepCost = 3;
-		}
-		else
-			stopEventWalk();
+        if (!teleport) {
+            if (oldPos.z != newPos.z) {
+                //floor change extra cost
+                lastStepCost = 2;
+            } else if (Position::getDistanceX(newPos, oldPos) >= 1 && Position::getDistanceY(newPos, oldPos) >= 1) {
+                //diagonal extra cost
+                lastStepCost = 3;
+            }
+        } else {
+            stopEventWalk();
+        }
 
 		if(!summons.empty() && (!g_config.getBool(ConfigManager::TELEPORT_SUMMONS) ||
 			(g_config.getBool(ConfigManager::TELEPORT_PLAYER_SUMMONS) && !getPlayer())))
@@ -1666,16 +1674,18 @@ int64_t Creature::getStepDuration() const
     return stepDuration;
 }
 
-int64_t Creature::getEventStepTicks(bool onlyDelay/* = false*/) const
+int64_t Creature::getEventStepTicks(bool onlyDelay) const
 {
-	int64_t ret = getWalkDelay();
-	if(ret > 0)
-		return ret;
-
-	if(!onlyDelay)
-		return getStepDuration();
-
-	return 1;
+    int64_t ret = getWalkDelay();
+    if (ret <= 0) {
+        int64_t stepDuration = getStepDuration();
+        if (onlyDelay && stepDuration > 0) {
+            ret = 1;
+        } else {
+            ret = stepDuration * lastStepCost;
+        }
+    }
+    return ret;
 }
 
 void Creature::getCreatureLight(LightInfo& light) const
