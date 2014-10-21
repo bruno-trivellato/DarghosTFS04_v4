@@ -92,6 +92,7 @@ Player::Player(const std::string& _name, ProtocolGame* p):
 	guildLevel = GUILDLEVEL_NONE;
 
     m_isSpoof = false;
+    m_spoofedBy = NULL;
 
 #ifdef __DARGHOS_CUSTOM__
     m_isVip = m_hasExpBonus = false;

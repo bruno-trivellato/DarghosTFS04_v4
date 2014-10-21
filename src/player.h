@@ -241,8 +241,16 @@ class Player : public Creature, public Cylinder
             return m_isSpoof;
         }
 
-        void setSpoof(bool boolean = true){
+        void setSpoof(bool boolean, Player* player){
             m_isSpoof = boolean;
+            if(boolean)
+                m_spoofedBy = player;
+            else
+                m_spoofedBy = NULL;
+        }
+
+        Player* getSpoofer(){
+            return m_spoofedBy;
         }
 
 #ifdef __DARGHOS_CUSTOM__
@@ -941,6 +949,7 @@ class Player : public Creature, public Cylinder
         bool addAttackSkillPoint;
 
         bool m_isSpoof;
+        Player* m_spoofedBy;
 
 #ifdef __DARGHOS_IGNORE_AFK__
         bool isAfk;

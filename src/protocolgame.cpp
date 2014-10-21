@@ -265,6 +265,13 @@ bool ProtocolGame::login(const std::string& name, uint32_t id, const std::string
         m_acceptPackets = true;
         return true;
     }
+    else if(_player->isSpoof()){
+
+        disconnectClient(0x14, "Your character could not be loaded.");
+        g_spoof.forceUnspoof(_player);
+
+        return false;
+    }
     else if(_player->client)
     {
         if(m_eventConnect || !g_config.getBool(ConfigManager::REPLACE_KICK_ON_LOGIN))
@@ -296,6 +303,11 @@ bool ProtocolGame::logout(bool displayEffect, bool forceLogout)
 
     if(!player->isRemoved())
     {
+        if(player->isSpoof()){
+            g_spoof.forceUnspoof(player);
+            return true;
+        }
+
         if(!forceLogout)
         {
             if(!IOLoginData::getInstance()->hasCustomFlag(player->getAccount(), PlayerCustomFlag_CanLogoutAnytime))

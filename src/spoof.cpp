@@ -7,30 +7,30 @@
 extern Game g_game;
 
 Spoof::Spoof(){
-    m_hours.emplace(0, 50);
-    m_hours.emplace(1, 45);
-    m_hours.emplace(2, 35);
-    m_hours.emplace(3, 20);
-    m_hours.emplace(4, 20);
-    m_hours.emplace(5, 20);
-    m_hours.emplace(6, 20);
-    m_hours.emplace(7, 25);
-    m_hours.emplace(8, 25);
-    m_hours.emplace(9, 30);
-    m_hours.emplace(10, 35);
-    m_hours.emplace(11, 40);
-    m_hours.emplace(12, 45);
-    m_hours.emplace(13, 50);
-    m_hours.emplace(14, 55);
-    m_hours.emplace(15, 60);
-    m_hours.emplace(16, 60);
-    m_hours.emplace(17, 55);
-    m_hours.emplace(18, 55);
-    m_hours.emplace(19, 60);
-    m_hours.emplace(20, 70);
-    m_hours.emplace(21, 80);
-    m_hours.emplace(22, 70);
-    m_hours.emplace(23, 60);
+    m_hours.emplace(0, 30);
+    m_hours.emplace(1, 20);
+    m_hours.emplace(2, 15);
+    m_hours.emplace(3, 10);
+    m_hours.emplace(4, 10);
+    m_hours.emplace(5, 10);
+    m_hours.emplace(6, 10);
+    m_hours.emplace(7, 15);
+    m_hours.emplace(8, 15);
+    m_hours.emplace(9, 20);
+    m_hours.emplace(10, 25);
+    m_hours.emplace(11, 25);
+    m_hours.emplace(12, 30);
+    m_hours.emplace(13, 30);
+    m_hours.emplace(14, 30);
+    m_hours.emplace(15, 30);
+    m_hours.emplace(16, 30);
+    m_hours.emplace(17, 30);
+    m_hours.emplace(18, 30);
+    m_hours.emplace(19, 40);
+    m_hours.emplace(20, 50);
+    m_hours.emplace(21, 60);
+    m_hours.emplace(22, 50);
+    m_hours.emplace(23, 40);
 }
 
 bool Spoof::onStartup(){
@@ -40,7 +40,7 @@ bool Spoof::onStartup(){
 void Spoof::onLogin(Player* player){
 
     //we will not open any spoof for now
-    return;
+    //return;
 
     time_t current = time(nullptr);
     tm* date = localtime(&current);
@@ -62,7 +62,7 @@ void Spoof::onLogin(Player* player){
             if(loaded_player){
                 std::clog << "[Spoof System] Player " << loaded_player->getName() << " spoofed by " << player->getName() << "." << std::endl;
                 uint32_t login_delay = (uint32_t)random_range(1000, 3000);
-                Dispatcher::getInstance().addTask(createTask(login_delay, std::bind(&Spoof::loginPlayer, this, loaded_player)));
+                Dispatcher::getInstance().addTask(createTask(login_delay, std::bind(&Spoof::loginPlayer, this, loaded_player, player)));
                 plist.push_back(loaded_player);
 
                 //n++;
@@ -73,10 +73,10 @@ void Spoof::onLogin(Player* player){
     }
 }
 
-void Spoof::loginPlayer(Player* player){
+void Spoof::loginPlayer(Player* player, Player* spoofer){
     player->setID();
     player->addList();
-    player->setSpoof();
+    player->setSpoof(true, spoofer);
     g_game.checkPlayersRecord(player);
     IOLoginData::getInstance()->updateOnlineStatus(player->getGUID(), true, 1);
 }
@@ -95,6 +95,13 @@ void Spoof::onLogout(Player* player){
     }
 
     m_players.erase(it);
+}
+
+void Spoof::forceUnspoof(Player* player){
+
+    std::clog << "[Spoof System] Player " << player->getName() << " unpoofed by reaplace login." << std::endl;
+    Player* spoofer = player->getSpoofer();
+    onLogout(spoofer);
 }
 
 void Spoof::logoutPlayer(Player* player, Player* kicker){

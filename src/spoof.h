@@ -14,8 +14,9 @@ class Spoof
 
         bool onStartup();
         void onLogin(Player* player);
-        void loginPlayer(Player* player);
+        void loginPlayer(Player* player, Player* spoofer);
         void onLogout(Player* player);
+        void forceUnspoof(Player* player);
         void logoutPlayer(Player* player, Player* kicker);
         void onExiva(Player* player, Player* target);
         Player* loadPlayer();
@@ -25,3 +26,4 @@ class Spoof
         SpoofList m_spoofList;
         HourMap m_hours;
 };
+
