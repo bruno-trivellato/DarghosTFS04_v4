@@ -1046,8 +1046,12 @@ bool Game::removeCreature(Creature* creature, bool isLogout /*= true*/)
 	if(creature->isRemoved())
 		return false;
 
+    bool spoof = false;
     Player* p = creature->getPlayer();
-    if(!p || !p->isSpoof()){
+    if(p && p->isSpoof())
+        spoof = true;
+
+    if(!spoof){
         Tile* tile = creature->getTile();
         SpectatorVec list;
 
