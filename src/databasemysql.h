@@ -23,6 +23,7 @@
 #endif
 
 #include <mysql/mysql.h>
+#include <mutex>
 #if defined WINDOWS
 #include <winsock2.h>
 #endif
@@ -57,6 +58,8 @@ class DatabaseMySQL : public _Database
 		MYSQL m_handle;
 		uint16_t m_attempts;
 		uint32_t m_timeoutTask;
+
+        std::recursive_mutex database_lock;
 };
 
 class MySQLResult : public _DBResult
