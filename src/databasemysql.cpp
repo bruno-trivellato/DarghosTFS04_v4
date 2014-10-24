@@ -37,13 +37,13 @@ DatabaseMySQL::DatabaseMySQL() :
 		return;
 	}
 
-	uint32_t timeout = g_config.getNumber(ConfigManager::MYSQL_READ_TIMEOUT);
-	if(timeout)
-		mysql_options(&m_handle, MYSQL_OPT_READ_TIMEOUT, (const char*)&timeout);
+    //uint32_t timeout = g_config.getNumber(ConfigManager::MYSQL_READ_TIMEOUT);
+    //if(timeout)
+    //	mysql_options(&m_handle, MYSQL_OPT_READ_TIMEOUT, (const char*)&timeout);
 
-	timeout = g_config.getNumber(ConfigManager::MYSQL_WRITE_TIMEOUT);
-	if(timeout)
-		mysql_options(&m_handle, MYSQL_OPT_WRITE_TIMEOUT, (const char*)&timeout);
+    //timeout = g_config.getNumber(ConfigManager::MYSQL_WRITE_TIMEOUT);
+    //if(timeout)
+    //	mysql_options(&m_handle, MYSQL_OPT_WRITE_TIMEOUT, (const char*)&timeout);
 
 	my_bool reconnect = true;
 	mysql_options(&m_handle, MYSQL_OPT_RECONNECT, &reconnect);
@@ -60,16 +60,11 @@ DatabaseMySQL::DatabaseMySQL() :
 	}
 
 	m_connected = true;
-	if(mysql_get_client_version() <= 50019)
-		//MySQL servers <= 5.0.19 have a bug where MYSQL_OPT_RECONNECT option is reset by mysql_real_connect calls.
-		//Read this http://dev.mysql.com/doc/refman/5.0/en/mysql-options.html for more information.
-		mysql_options(&m_handle, MYSQL_OPT_RECONNECT, &reconnect);
-		std::clog << std::endl << "> WARNING: Outdated MySQL server detected, consider upgrading to a newer version." << std::endl;
 
-	timeout = g_config.getNumber(ConfigManager::SQL_KEEPALIVE) * 1000;
-	if(timeout)
-		m_timeoutTask = Scheduler::getInstance().addEvent(createSchedulerTask(timeout,
-			boost::bind(&DatabaseMySQL::keepAlive, this)));
+    //timeout = g_config.getNumber(ConfigManager::SQL_KEEPALIVE) * 1000;
+    //if(timeout)
+    //	m_timeoutTask = Scheduler::getInstance().addEvent(createSchedulerTask(timeout,
+    //		boost::bind(&DatabaseMySQL::keepAlive, this)));
 
 	if(asLowerCaseString(g_config.getString(ConfigManager::HOUSE_STORAGE)) == "relational")
 		return;
@@ -122,13 +117,13 @@ bool DatabaseMySQL::connect(bool _reconnect)
 		return false;
 	}*/
 
-	int32_t timeout = g_config.getNumber(ConfigManager::MYSQL_READ_TIMEOUT);
-	if(timeout)
-		mysql_options(&m_handle, MYSQL_OPT_READ_TIMEOUT, (const char*)&timeout);
+    //int32_t timeout = g_config.getNumber(ConfigManager::MYSQL_READ_TIMEOUT);
+    //if(timeout)
+    //	mysql_options(&m_handle, MYSQL_OPT_READ_TIMEOUT, (const char*)&timeout);
 
-	timeout = g_config.getNumber(ConfigManager::MYSQL_WRITE_TIMEOUT);
-	if(timeout)
-		mysql_options(&m_handle, MYSQL_OPT_WRITE_TIMEOUT, (const char*)&timeout);
+    //timeout = g_config.getNumber(ConfigManager::MYSQL_WRITE_TIMEOUT);
+    //if(timeout)
+    //	mysql_options(&m_handle, MYSQL_OPT_WRITE_TIMEOUT, (const char*)&timeout);
 
 	if(mysql_real_connect(&m_handle,
 			g_config.getString(ConfigManager::SQL_HOST).c_str(),
