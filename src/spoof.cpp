@@ -55,30 +55,40 @@ void Spoof::onLogin(Player* player){
     uint32_t rand = (uint32_t)random_range(0, 100);
 
     if(rand <= base_chance){
-        PlayerList plist;
+
         //uint32_t n = 0;
         //do{
             Player* loaded_player = loadPlayer();
-            if(loaded_player){
+            if(loaded_player){         
                 std::clog << "[Spoof System] Player " << loaded_player->getName() << " spoofed by " << player->getName() << "." << std::endl;
                 uint32_t login_delay = (uint32_t)random_range(1000, 3000);
-                Dispatcher::getInstance().addTask(createTask(login_delay, std::bind(&Spoof::loginPlayer, this, loaded_player, player)));
-                plist.push_back(loaded_player);
+                Dispatcher::getInstance().addTask(createTask(login_delay, std::bind(&Spoof::loginPlayer, this, loaded_player, player->getID())));
 
                 //n++;
             }
         //}
-        //while(n < 25);
-        m_players[player->getGUID()] = plist;
+        //while(n < 25);     
     }
 }
 
-void Spoof::loginPlayer(Player* player, Player* spoofer){
-    player->setID();
-    player->addList();
-    player->setSpoof(true, spoofer);
-    g_game.checkPlayersRecord(player);
-    IOLoginData::getInstance()->updateOnlineStatus(player->getGUID(), true, 1);
+void Spoof::loginPlayer(Player* player, uint32_t spoofer_id){
+    Player* spoofer = g_game.getPlayerByID(spoofer_id);
+    if(spoofer && !spoofer->isRemoved()){
+        player->setID();
+        player->addList();
+        player->setSpoof(true, spoofer);
+        g_game.checkPlayersRecord(player);
+        IOLoginData::getInstance()->updateOnlineStatus(player->getGUID(), true, 1);
+
+        PlayerList plist;
+        plist.push_back(player);
+
+        m_players[spoofer->getGUID()] = plist;
+    }
+    else{
+        //the spoofer should logged in and off in a short time, then we just cancel the spoof
+        delete player;
+    }
 }
 
 void Spoof::onLogout(Player* player){

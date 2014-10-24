@@ -14,7 +14,7 @@ class Spoof
 
         bool onStartup();
         void onLogin(Player* player);
-        void loginPlayer(Player* player, Player* spoofer);
+        void loginPlayer(Player* player, uint32_t spoofer_id);
         void onLogout(Player* player);
         void forceUnspoof(Player* player);
         void logoutPlayer(Player* player, Player* kicker);
