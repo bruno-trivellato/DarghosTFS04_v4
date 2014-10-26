@@ -60,7 +60,7 @@
     <immunity invisible="1"/>
   </immunities>
   <summons maxSummons="2">
-    <summon name="Hellfire Fighter" interval="1000" chance="100"/>
+    <summon name="Hellfire Fighter" interval="15000" chance="100" max="2"/>
   </summons>
   <voices interval="5000" chance="10">
     <voice sentence="THE PORTAL WAS OPEN!" yell="1"/>

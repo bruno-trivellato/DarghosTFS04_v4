@@ -17,16 +17,16 @@
     <flag runonhealth="0"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="1600" skill="140" attack="155"/>
+    <attack name="melee" interval="1600" skill="90" attack="85"/>
     <attack name="manadrain" interval="1000" chance="5" range="7" min="-200" max="-400"/>
-    <attack name="ice" interval="1000" chance="45" range="7" radius="5" target="1" min="-260" max="-690">
+    <attack name="ice" interval="1000" chance="45" range="7" radius="5" target="1" min="-360" max="-590">
       <attribute key="shootEffect" value="ice"/>
       <attribute key="areaEffect" value="icearea"/>
     </attack>
     <attack name="energyfield" interval="1000" chance="45" range="7" radius="1" target="1">
       <attribute key="shootEffect" value="energy"/>
     </attack>
-    <attack name="ice" interval="1000" chance="45" length="8" spread="0" min="-250" max="-480">
+    <attack name="ice" interval="1000" chance="45" length="8" spread="0" min="-250" max="-380">
       <attribute key="areaEffect" value="icearea"/>
     </attack>
   </attacks>
@@ -47,8 +47,8 @@
     <immunity drunk="1"/>
     <immunity invisible="1"/>
   </immunities>
-  <summons maxSummons="3">
-    <summon name="water elemental" interval="1000" chance="100" max="3"/>
+  <summons maxSummons="1">
+    <summon name="water elemental" interval="1000" chance="100" max="1"/>
   </summons>
   <voices interval="5000" chance="10">
     <voice sentence="MUHAHAHAHA!" yell="1"/>

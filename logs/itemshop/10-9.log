@@ -29,3 +29,8 @@
 21:53:38 | Player [Apoliptique] | Item Data Entregue com sucesso: {"log_id":433,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 21:53:38 | Player [Apoliptique] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
 21:53:38 | Player [Apoliptique] | --------------------------------------.
+23:56:33 | Player [Hunfs] | Processando 1 itens a entregar....
+23:56:33 | Player [Hunfs] | Item Data: {"log_id":4103,"item_count":1,"item_id":8925,"item_name":"Solar Axe","use_present":true,"item_action_id":0}.
+23:56:33 | Player [Hunfs] | Item Data Entregue com sucesso: {"log_id":4103,"item_count":1,"item_id":8925,"item_name":"Solar Axe","use_present":true,"item_action_id":0}.
+23:56:33 | Player [Hunfs] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+23:56:33 | Player [Hunfs] | --------------------------------------.
