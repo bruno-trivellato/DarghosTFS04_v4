@@ -1595,14 +1595,3 @@ end
 function doPlayerIsInBattleground(cid)
 	return false
 end
-
-local k = getLuaFunctions()
---- Create file content your server function list
-local file__ = io.open('Your Server Function List.txt','w')
-table.sort(k)
-for i=1,#k do
-    if k[i] ~= "" then
-        file__:write(k[i]..'\n')
-    end
-end
-file__:close()
