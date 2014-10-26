@@ -131,29 +131,31 @@ function onlinePrivileged(cid, words, param)
                         
                         addPing(getPlayerCurrentPing(uid))
                         
-                        if(not isInTunnel(uid)) then
-                                if(statistics.ping_min == nil or getPlayerCurrentPing(uid) < statistics.ping_min) then
-                                        statistics.ping_min = getPlayerCurrentPing(uid)
+			if(getPlayerCurrentPing(uid) ~= 0) then
+			  if(not isInTunnel(uid)) then
+				  if(statistics.ping_min == nil or getPlayerCurrentPing(uid) < statistics.ping_min) then
+					  statistics.ping_min = getPlayerCurrentPing(uid)
 
-                                end             
-                                
-                                if(statistics.ping_max == nil or getPlayerCurrentPing(uid) > statistics.ping_max) then
-                                        statistics.ping_max = getPlayerCurrentPing(uid)
-                                end
-                                
-                                statistics.ping_sum = statistics.ping_sum + getPlayerCurrentPing(uid)
-                        else
-                                if(statistics.pingT_min == nil or getPlayerCurrentPing(uid) < statistics.pingT_min) then
-                                        statistics.pingT_min = getPlayerCurrentPing(uid)
-                                end             
-                                
-                                if(statistics.pingT_max == nil or getPlayerCurrentPing(uid) > statistics.pingT_max) then
-                                        statistics.pingT_max = getPlayerCurrentPing(uid)
-                                end
-                                
-                                statistics.pingT_sum = statistics.pingT_sum + getPlayerCurrentPing(uid)         
-                                statistics.tunnel = statistics.tunnel + 1               
-                        end
+				  end             
+				  
+				  if(statistics.ping_max == nil or getPlayerCurrentPing(uid) > statistics.ping_max) then
+					  statistics.ping_max = getPlayerCurrentPing(uid)
+				  end
+				  
+				  statistics.ping_sum = statistics.ping_sum + getPlayerCurrentPing(uid)
+			  else
+				  if(statistics.pingT_min == nil or getPlayerCurrentPing(uid) < statistics.pingT_min) then
+					  statistics.pingT_min = getPlayerCurrentPing(uid)
+				  end             
+				  
+				  if(statistics.pingT_max == nil or getPlayerCurrentPing(uid) > statistics.pingT_max) then
+					  statistics.pingT_max = getPlayerCurrentPing(uid)
+				  end
+				  
+				  statistics.pingT_sum = statistics.pingT_sum + getPlayerCurrentPing(uid)         
+				  statistics.tunnel = statistics.tunnel + 1               
+			  end
+			end
 
                         if string.len(addStr) + string.len(str) >= 255 then
                                 doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, str)
