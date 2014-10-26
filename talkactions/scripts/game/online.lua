@@ -155,6 +155,8 @@ function onlinePrivileged(cid, words, param)
 				  statistics.pingT_sum = statistics.pingT_sum + getPlayerCurrentPing(uid)         
 				  statistics.tunnel = statistics.tunnel + 1               
 			  end
+			  
+			  j = j + 1
 			end
 
                         if string.len(addStr) + string.len(str) >= 255 then
@@ -165,7 +167,6 @@ function onlinePrivileged(cid, words, param)
                         else
                                 str = str .. addStr
                         end
-                        j = j + 1
                 else
                         skipped = skipped + 1
                 end
