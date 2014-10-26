@@ -222,8 +222,8 @@ end
 function summonDarkGeneral()
 
 	local POSITIONS = {
-		{pos = {x = 2221, y = 1748, z = 7}, message = "Foi avistado o estandarde supremo da Armada Negra! O GENERAL ataca o portão norte de Quendor!! Protejam a cidade!"} -- quendor north gate
-		,{pos = {x = 2080, y = 1835, z = 7}, message = "Foi avistado o estandarde supremo da Armada Negra! O GENERAL ataca o portão oeste de Quendor!! Protejam a cidade!"} -- quendor west gate
+	      {pos = {x = 1982, y = 1796, z = 7}, message = "Foi avistado o estandarde supremo da Armada Negra! O GENERAL ataca o portão norte de Quendor!! Protejam a cidade!"} -- quendor north gate
+	      ,{pos = {x = 2102, y = 1869, z = 7}, message = "Foi avistado o estandarde supremo da Armada Negra! O GENERAL ataca o portão leste de Quendor!! Protejam a cidade!"} -- quendor west gate
 	}
 	
 	local summonPos = POSITIONS[math.random(1, #POSITIONS)]
@@ -1595,3 +1595,14 @@ end
 function doPlayerIsInBattleground(cid)
 	return false
 end
+
+local k = getLuaFunctions()
+--- Create file content your server function list
+local file__ = io.open('Your Server Function List.txt','w')
+table.sort(k)
+for i=1,#k do
+    if k[i] ~= "" then
+        file__:write(k[i]..'\n')
+    end
+end
+file__:close()

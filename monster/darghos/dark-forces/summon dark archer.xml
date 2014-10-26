@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<monster speed="280" manacost="0" race="blood" skull="red" experience="25000" name="dark archer" nameDescription="an archer of dark forces">
-  <health max="21650" now="21650"/>
+<monster speed="280" manacost="0" race="blood" skull="red" experience="0" name="dark archer" nameDescription="an archer of dark forces">
+  <health max="7145" now="7145"/>
   <look head="79" body="95" addons="3" legs="19" type="129" corpse="6080" feet="95"/>
   <targetchange chance="20" interval="5000"/>
   <strategy defense="0" attack="100"/>
@@ -15,17 +15,16 @@
     <flag canpushcreatures="0"/>
     <flag targetdistance="5"/>
     <flag staticattack="70"/>
-    <flag runonhealth="1500"/>
+    <flag runonhealth="500"/>
   </flags>
   <attacks>
-    <attack chance="16" interval="2000" range="7" min="-325" name="physical" max="-675">
+    <attack chance="16" interval="2000" range="7" min="-107" name="physical" max="-202">
       <attribute key="shootEffect" value="infernalbolt"/>
     </attack>
-    <attack chance="41" interval="2000" range="7" min="-180" name="physical" max="-280">
+    <attack chance="41" interval="2000" range="7" min="-59" name="physical" max="-92">
       <attribute key="shootEffect" value="etherealspear"/>
     </attack>
-    <attack target="1" chance="25" inteval="2000" script="monsters/multi_shot.lua"/>
-    <attack chance="75" interval="2000" range="5" min="-200" name="physical" max="-420">
+    <attack chance="75" interval="2000" range="5" min="-66" name="physical" max="-138">
       <attribute key="shootEffect" value="redstar"/>
     </attack>
   </attacks>
@@ -57,22 +56,6 @@
     <voice sentence="Nossas flechas atravessarão seus escudos!"/>
   </voices>
   <loot>
-    <item chance="100000" id="7365" countmax="100"/>
-    <item chance="100000" id="5944"/>
-    <item chance="50000" id="8472" countmax="10"/>
-    <item chance="50000" id="7368" countmax="100"/>
-    <item chance="6666" id="7443"/>
-    <item chance="33333" id="6529" countmax="100"/>
-    <item chance="33333" id="2152" countmax="29"/>
-    <item chance="25000" id="7368" countmax="100"/>	
-    <item chance="2400" id="11304"/>
-    <item chance="2400" id="11301"/>
-    <item chance="641" id="12646"/>
-    <item chance="961" id="11302"/>
-    <item chance="480" id="12607"/>
-    <item chance="312" id="8852"/>
-    <item chance="160" id="8856"/>
-    <item chance="2400" id="9777"/>
-	<item chance="641" id="8851"/>
+    
   </loot>
 </monster>

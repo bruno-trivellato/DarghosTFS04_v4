@@ -62,7 +62,7 @@
 		<raid name="orshabaal" file="bosses/orshabaal.xml" interval2="43200" margin="0"/>			
 		<raid name="morgaroth" file="bosses/morgaroth.xml" interval2="129600" margin="0"/>	
 		<raid name="ghazbaran" file="bosses/ghazbaran.xml" interval2="129600" margin="0"/>		
-		<!-- <raid name="dark_general" file="bosses/dark_general.xml" interval2="9999999" margin="0" clear="1"/> -->
+		<raid name="dark_general" file="bosses/dark_general.xml" interval2="9999999" margin="0" clear="1"/>
 		<raid name="demon_quendor" file="bosses/demon_quendor.xml" interval2="9999999" margin="0"/>
 		<raid name="ent" file="bosses/ent.xml" interval2="9999999" margin="0"/>
 		<raid name="high_inquisitor" file="bosses/high_inquisitor.xml" interval2="9999999" margin="0"/>

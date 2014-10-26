@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<monster speed="350" race="blood" skull="red" experience="25000" name="dark warrior" nameDescription="a warrior of dark forces">
-  <health max="25500" now="25500"/>
+<monster speed="350" race="blood" skull="red" experience="0" name="dark warrior" nameDescription="a warrior of dark forces">
+  <health max="8415" now="8415"/>
   <look head="57" body="132" addons="3" legs="114" type="131" corpse="6080" feet="114"/>
   <targetchange chance="10" interval="15000"/>
   <strategy defense="0" attack="100"/>
@@ -18,11 +18,11 @@
     <flag runonhealth="0"/>
   </flags>
   <attacks>
-    <attack interval="2000" attack="60" skill="210" name="melee"/>
-    <attack chance="30" radius="2" interval="2000" min="-370" name="physical" max="-510">
+    <attack interval="2000" attack="60" skill="70" name="melee"/>
+    <attack chance="30" radius="2" interval="2000" min="-122" name="physical" max="-168">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack chance="10" spread="0" interval="2000" length="5" min="-500" name="physical" max="-900">
+    <attack chance="10" spread="0" interval="2000" length="5" min="-165" name="physical" max="-297">
       <attribute key="areaEffect" value="mortarea"/>
     </attack>
   </attacks>
@@ -51,26 +51,6 @@
     <voice sentence="Pelos guerreiros da armada negra!" yell="1"/>
   </voices>
   <loot>
-    <item chance="2400" id="11304"/>
-    <item chance="480" id="12607"/>
-    <item chance="961" id="11302"/>
-    <item chance="1900" id="6433"/>
-    <item chance="641" id="12646"/>
-    <item chance="6666" id="12613"/>
-    <item chance="1200" id="8881"/>
-    <item chance="160" id="8932"/>
-    <item chance="2400" id="11301"/>
-    <item chance="8888" id="2514"/>
-    <item chance="6666" id="7439"/>
-    <item chance="1900" id="11240"/>
-    <item chance="100000" id="2152" countmax="58"/>
-    <item chance="50000" id="8473" countmax="7"/>
-    <item chance="2400" id="2472"/>
-    <item chance="1200" id="6391"/>
-    <item chance="10000" id="2466"/>
-    <item chance="3846" id="12649"/>
-	<item chance="1282" id="12642"/>
-    <item chance="50000" id="7591" countmax="16"/>
-    <item chance="7700" id="11305"/>
+   
   </loot>
 </monster>

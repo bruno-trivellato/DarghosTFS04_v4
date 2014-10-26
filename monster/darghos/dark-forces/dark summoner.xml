@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<monster speed="210" manacost="0" race="blood" skull="red" experience="17000" name="dark summoner" nameDescription="a summoner of dark forces">
+<monster speed="210" manacost="0" race="blood" skull="red" experience="25000" name="dark summoner" nameDescription="a summoner of dark forces">
   <health max="15900" now="15900"/>
   <look head="79" body="114" addons="3" legs="114" type="133" corpse="6080" feet="94"/>
   <targetchange chance="8" interval="5000"/>
@@ -51,10 +51,10 @@
     <element deathPercent="20"/>
   </elements>
   <summons maxSummons="4">
-    <summon chance="7" interval="2000" name="dark mage" max="2"/>
-    <summon chance="7" interval="2000" name="dark archer" max="2"/>
-    <summon chance="10" interval="2000" name="dark warrior" max="2"/>
-    <summon chance="1" interval="4000" name="dark priestess" max="1"/>
+    <summon chance="7" interval="2000" name="summon dark mage" max="2"/>
+    <summon chance="7" interval="2000" name="summon dark archer" max="2"/>
+    <summon chance="10" interval="2000" name="summon dark warrior" max="2"/>
+    <summon chance="1" interval="4000" name="summon dark priestess" max="1"/>
   </summons>
   <voices chance="10" interval="5000">
     <voice sentence="Invoco reforços para a armada!"/>
