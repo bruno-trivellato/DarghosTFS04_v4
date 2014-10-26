@@ -16,6 +16,7 @@
     <flag targetdistance="1"/>
     <flag staticattack="40"/>
     <flag runonhealth="0"/>
+    <flag checkcorpseowner="0"/>
   </flags>
   <attacks>
     <attack interval="2000" attack="60" skill="210" name="melee"/>

@@ -16,6 +16,7 @@
     <flag staticattack="70"/>
     <flag targetdistance="5"/>
     <flag runonhealth="600"/>
+    <flag checkcorpseowner="0"/>
   </flags>
   <attacks>
     <attack target="1" chance="26" radius="2" interval="2000" range="3" min="-120" name="fire" max="-350">

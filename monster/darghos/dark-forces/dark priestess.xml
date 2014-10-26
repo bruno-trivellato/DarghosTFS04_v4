@@ -16,6 +16,7 @@
     <flag staticattack="60"/>
     <flag targetdistance="4"/>
     <flag runonhealth="0"/>
+    <flag checkcorpseowner="0"/>
   </flags>
   <attacks/>
   <defenses defense="40" armor="40">

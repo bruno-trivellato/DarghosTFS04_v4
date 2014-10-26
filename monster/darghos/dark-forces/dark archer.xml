@@ -16,6 +16,7 @@
     <flag targetdistance="5"/>
     <flag staticattack="70"/>
     <flag runonhealth="1500"/>
+    <flag checkcorpseowner="0"/>
   </flags>
   <attacks>
     <attack chance="16" interval="2000" range="7" min="-325" name="physical" max="-675">
