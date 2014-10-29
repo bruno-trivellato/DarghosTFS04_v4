@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monster speed="260" race="blood" skull="red" experience="0" name="dark mage" nameDescription="an mage of dark forces">
-  <health max="5742" now="5742"/>
+  <health max="2910" now="2910"/>
   <look head="113" body="114" addons="1" legs="114" type="145" corpse="6080" feet="79"/>
   <targetchange chance="10" interval="5000"/>
   <strategy defense="0" attack="100"/>

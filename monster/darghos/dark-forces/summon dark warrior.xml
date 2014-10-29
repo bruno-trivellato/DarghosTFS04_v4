@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <monster speed="350" race="blood" skull="red" experience="0" name="dark warrior" nameDescription="a warrior of dark forces">
-  <health max="8415" now="8415"/>
+  <health max="4710" now="4710"/>
   <look head="57" body="132" addons="3" legs="114" type="131" corpse="6080" feet="114"/>
   <targetchange chance="10" interval="15000"/>
   <strategy defense="0" attack="100"/>
