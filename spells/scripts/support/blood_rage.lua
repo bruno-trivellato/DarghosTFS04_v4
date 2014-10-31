@@ -36,6 +36,15 @@ function onCastSpell(cid, var)
                 doSendMagicEffect(pos, CONST_ME_POFF)
                 return false
         end  
+	
+	local ret = doCombat(cid, usedCombat, var)
+	
+	if(ret) then
+	  doCreatureAddMana(cid, -(mana), false)
+	  if(not getPlayerFlagValue(cid, PlayerFlag_NotGainMana) and (not getTileInfo(getThingPosition(cid)).hardcore or config.hardcoreManaSpent)) then
+		  doPlayerAddSpentMana(cid, (mana))
+	  end
+	end
   
-        return doCombat(cid, usedCombat, var)
+        return ret
 end

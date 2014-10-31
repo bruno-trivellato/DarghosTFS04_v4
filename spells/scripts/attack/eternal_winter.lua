@@ -32,5 +32,14 @@ function onCastSpell(cid, var)
                 return false
         end  
   
-	return doCombat(cid, combat, var)
+	local ret = doCombat(cid, usedCombat, var)
+	
+	if(ret) then
+	  doCreatureAddMana(cid, -(mana), false)
+	  if(not getPlayerFlagValue(cid, PlayerFlag_NotGainMana) and (not getTileInfo(getThingPosition(cid)).hardcore or config.hardcoreManaSpent)) then
+		  doPlayerAddSpentMana(cid, (mana))
+	  end
+	end
+  
+        return ret
 end
