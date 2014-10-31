@@ -32,7 +32,7 @@ function onCastSpell(cid, var)
                 return false
         end  
   
-	local ret = doCombat(cid, usedCombat, var)
+	local ret = doCombat(cid, combat, var)
 	
 	if(ret) then
 	  doCreatureAddMana(cid, -(mana), false)
