@@ -10,6 +10,11 @@ function onGetFormulaValues(cid, level, maglevel)
 		min = math.ceil(min * 1.30)
 		max = math.ceil(max * 1.30)
 	end
+
+	if(isPremium(cid)) then
+	    min = math.ceil(min * 1.10)
+	    max = math.ceil(max * 1.10)
+	end
 	
 	return -min, -max
 end
@@ -20,5 +25,18 @@ local area = createCombatArea(AREA_CROSS5X5)
 setCombatArea(combat, area)
 
 function onCastSpell(cid, var)
+  
+	local mana = 1200
+	
+	if(isPremium(cid)) then
+	  mana = mana - math.ceil(mana * 0.2)
+	end
+	
+        if(getCreatureMana(cid) < mana) then
+                doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTENOUGHMANA)
+                doSendMagicEffect(pos, CONST_ME_POFF)
+                return false
+        end
+  
 	return doCombat(cid, combat, var)
 end
