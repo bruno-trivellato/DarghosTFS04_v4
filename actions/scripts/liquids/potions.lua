@@ -19,7 +19,7 @@ local POTIONS = {
 	[8704] = {empty = 7636, splash = 42, health = {60, 90}}, -- small health potion
 	[7618] = {empty = 7636, splash = 42, health = {135, 185}}, -- health potion
 	[7588] = {empty = 7634, splash = 42, health = {275, 325}, level = 50, vocations = {3, 4, 7, 8, 11, 12}, vocStr = "knights and paladins"}, -- strong health potion
-	[7591] = {empty = 7635, splash = 42, health = {475, 525}, level = 80, vocations = {4, 8. 12}, vocStr = "knights"}, -- great health potion
+	[7591] = {empty = 7635, splash = 42, health = {475, 525}, level = 80, vocations = {4, 8, 12}, vocStr = "knights"}, -- great health potion
 	[8473] = {empty = 7635, splash = 42, health = {725, 775}, level = 130, vocations = {4, 8, 12}, vocStr = "knights"}, -- ultimate health potion
 
 	[7620] = {empty = 7636, splash = 47, mana = {75, 125}}, -- mana potion
