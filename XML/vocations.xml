@@ -77,7 +77,7 @@
 			manamultiplier="3.0" attackspeed="1500" soulmax="200" gainsoulticks="15" fromvoc="8" lessloss="40">
 		<formula meleeDamage="1.2" distDamage="1.0" wandDamage="1.0" magDamage="1.0" magHealingDamage="1.0" defense="1.0" magDefense="1.0" armor="1.0"/>
 		<skill fist="1.1" club="1.1" sword="1.1" axe="1.1" distance="1.4" shielding="1.1" fishing="1.1" experience="1.0"/>
-	</vocation>	
+	</vocation>
 <!--
 	<vocation id="9" name="Epic Master Sorcerer" description="an epic master sorcerer" needpremium="0" gaincap="10" gainhp="5" gainmana="30" gainhpticks="12" gainhpamount="1" gainmanaticks="1" gainmanaamount="2" manamultiplier="1.1" attackspeed="2000" soulmax="200" gainsoulticks="15" fromvoc="5" lessloss="50">
 		<formula meleeDamage="1.0" distDamage="1.0" wandDamage="1.0" magDamage="1.0" magHealingDamage="1.0" defense="1.0" magDefense="1.0" armor="1.0"/>
