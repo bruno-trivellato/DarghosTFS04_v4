@@ -80,7 +80,6 @@
     <voice sentence="I never lose!"/>
   </voices>
   <loot>
-    </item>
     <item id="2160" countmax="30" chance1="100000">
       <!--gold coin-->
     </item>
@@ -107,9 +106,6 @@
     </item>
     <item id="2519" chance="5000">
       <!--crown shield-->
-    </item>
-    <item id="1988" chance="100000">
-      <inside>
     </item>
     <item id="2471" chance="1000">
       <!--golden helmet-->
@@ -158,9 +154,6 @@
     </item>
     <item id="2522" chance="18000">
       <!--great shield-->
-    </item>
-      </inside>
-      <!--bag-->
     </item>
   </loot>
 </monster>
