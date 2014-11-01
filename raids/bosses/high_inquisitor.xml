@@ -5,10 +5,38 @@
 	]]>
 	</script>
 
-	<announce delay="0" type="event" message="A conselho da suprema igreja esta preucupada com os infieis na cidade de Aaragon!"/>
-	<announce delay="60000" type="event" message="O grande inquisitor esta prestes a visitar a cidade para queimar os infieis em Aaragon. Infieis se escondam!"/>
-	<announce delay="120000" type="event" message="High Inquisitor esta em Aaragon!"/>
+	<announce delay="0" type="event" message="A conselho da suprema igreja esta preucupada com os infieis na cidade de Quendor!"/>
+	<announce delay="60000" type="event" message="O grande inquisitor esta prestes a visitar a cidade para queimar os infieis."/>
+	<announce delay="120000" type="event" message="High Inquisitor Aparece na igreja de Quendor, Benedictus clama ajuda!"/>
 	
-	<singlespawn delay="120000" name="high inquisitor" x="2890" y="1180" z="7" />
+		<areaspawn delay="60000" centerx="2064" centery="1868" centerz="7" radius="20">
+		<monster name="Monk" minamount="20" maxamount="50"/>
+	</areaspawn>
+	
+		<areaspawn delay="60000" centerx="2064" centery="1868" centerz="7" radius="20">
+		<monster name="Dark Monk" minamount="20" maxamount="50"/>
+	</areaspawn>
+	
+		<areaspawn delay="60000" centerx="2064" centery="1868" centerz="7" radius="20">
+		<monster name="Priestess" minamount="20" maxamount="50"/>
+	</areaspawn>
+	
+		<areaspawn delay="60000" centerx="2095" centery="1873" centerz="7" radius="20">
+		<monster name="Monk" minamount="20" maxamount="50"/>
+	</areaspawn>
+	
+		<areaspawn delay="60000" centerx="2095" centery="1873" centerz="7" radius="20">
+		<monster name="Dark Monk" minamount="20" maxamount="50"/>
+	</areaspawn>
+	
+		<areaspawn delay="60000" centerx="2095" centery="1873" centerz="7" radius="20">
+		<monster name="Priestess" minamount="20" maxamount="50"/>
+	</areaspawn>
+	
+		<areaspawn delay="120000" centerx="2115" centery="1880" centerz="7" radius="10">
+		<monster name="Hero" minamount="10" maxamount="25"/>
+	</areaspawn>
+	
+	<singlespawn delay="120000" name="high inquisitor" x="2122" y="1888" z="7" />
 	
 </raid>
