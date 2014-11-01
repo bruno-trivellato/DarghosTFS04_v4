@@ -80,6 +80,7 @@
     <voice sentence="I never lose!"/>
   </voices>
   <loot>
+    </item>
     <item id="2160" countmax="30" chance1="100000">
       <!--gold coin-->
     </item>
