@@ -6043,7 +6043,7 @@
 		<attribute key="corpseType" value="blood" />
 	</item>
 	<item id="3058" article="a" name="dead human">
-		<attribute key="containerSize" value="10" />
+		<attribute key="containerSize" value="30" />
 		<attribute key="decayTo" value="3059" />
 		<attribute key="duration" value="900" />
 		<attribute key="corpseType" value="blood" />
