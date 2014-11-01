@@ -161,6 +161,12 @@
 		</item>
         <item id="8883" countmax="1" chance="10000">
           <!--Windborn Colossus Armor-->
+		</item>
+	    <item id="2469" countmax="1" chance="1000">
+          <!--Dragon Scale Legs-->
+		 </item>
+	    <item id="2506" countmax="1" chance="1000">
+          <!--Dragon Scale Helmet-->
         </item>
       </inside>
       <!--bag-->
