@@ -9,6 +9,42 @@ setConditionParam(condition, CONDITION_PARAM_SKILL_SHIELDPERCENT, -100)
 setConditionParam(condition, CONDITION_PARAM_BUFF, true)
 setCombatCondition(combat, condition)
 
+-- Premium
+local combat_premium = createCombatObject()
+setCombatParam(combat_premium, COMBAT_PARAM_EFFECT, CONST_ME_MAGIC_BLUE)
+setCombatParam(combat_premium, COMBAT_PARAM_AGGRESSIVE, false)
+
+local condition_premium = createConditionObject(CONDITION_ATTRIBUTES)
+setConditionParam(condition_premium, CONDITION_PARAM_TICKS, 10000)
+setConditionParam(condition_premium, CONDITION_PARAM_SKILL_MELEEPERCENT, 145)
+setConditionParam(condition_premium, CONDITION_PARAM_SKILL_SHIELDPERCENT, -100)
+setConditionParam(condition_premium, CONDITION_PARAM_BUFF, true)
+setCombatCondition(combat_premium, condition_premium)
+
 function onCastSpell(cid, var)
-        return doCombat(cid, combat, var)
+	local mana = 290
+	
+	local usedCombat = combat
+	
+	if(isPremium(cid)) then
+	  mana = mana - math.ceil(mana * 0.2)
+	  usedCombat = combat_premium
+	end
+	
+        if(getCreatureMana(cid) < mana) then
+                doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTENOUGHMANA)
+                doSendMagicEffect(pos, CONST_ME_POFF)
+                return false
+        end  
+	
+	local ret = doCombat(cid, usedCombat, var)
+	
+	if(ret) then
+	  doCreatureAddMana(cid, -(mana), false)
+	  if(not getPlayerFlagValue(cid, PlayerFlag_NotGainMana) and (not getTileInfo(getThingPosition(cid)).hardcore or config.hardcoreManaSpent)) then
+		  doPlayerAddSpentMana(cid, (mana))
+	  end
+	end
+  
+        return ret
 end

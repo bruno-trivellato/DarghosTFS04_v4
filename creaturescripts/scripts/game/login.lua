@@ -80,6 +80,16 @@ function onLogin(cid)
 	--[[if(not playerHistory.hasAchievement(cid, PH_ACH_MISC_GOT_LEVEL_100)) then
 		setPlayerStorageValue(cid, sid.DOUBLE_EXP_EVENT, 1)
 	end]]
+	
+	if(isPremium(cid)) then
+	  if(getPlayerPromotionLevel(cid) == 1) then
+	    doPlayerSetPromotionLevel(cid, 2)
+	  end
+	else
+	  if(getPlayerPromotionLevel(cid) == 2) then
+	    doPlayerSetPromotionLevel(cid, 1)
+	  end
+	end
 
 	setStagesOnLogin(cid)
 
