@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="High Inquisitor" nameDescription="monk" race="VENOM" experience="20000000" speed="800" manacost="0">
-  <health now="1500000" max="1500000"/>
+  <health now="800000" max="800000"/>
   <look type="9" head="100" body="150" legs="10" feet="150" corpse="3058"/>
   <targetchange interval="5000" chance="8"/>
   <strategy attack="100" defense="0"/>
@@ -154,6 +154,9 @@
     </item>
     <item id="2522" chance="18000">
       <!--great shield-->
+	</item>
+	<item id="2408" chance="1000">
+      <!--warlord sword-->
     </item>
   </loot>
 </monster>

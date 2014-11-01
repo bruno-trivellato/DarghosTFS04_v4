@@ -186,6 +186,9 @@
     <item id="6391" chance="30000">
       <!--nightmare shield-->
     </item>
+	<item id="2390" chance="1000">
+      <!--Magic Longsword-->
+    </item>
       </inside>
       <!--bag-->
     </item>
