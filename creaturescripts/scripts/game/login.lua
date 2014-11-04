@@ -259,7 +259,12 @@ function onLogin(cid)
 	
 	if(isInTunnel(cid)) then
  		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Voce está conectado através do Darghos Tunnel!")
- 	end	
+ 	end
+	
+	-- Trainer
+	if(getPlayerStorageValue(cid, sid.INSIDE_TRAINING_ROOM) == 1) then
+		onEnterTrainers(cid, true)
+	end
 	
 	return TRUE
 end

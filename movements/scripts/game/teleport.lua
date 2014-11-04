@@ -64,6 +64,17 @@ function onStepIn(cid, item, position, fromPosition)
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Congratulations! Now that you have defeated the maze and know the way to the secret place of the arcane power you can go back to Demona through an shortcut before the maze!")
 	end
 	
+	if(item.actionid == aid.TRAINERS_ROOM_ENTRANCE) then
+		if(not onEnterTrainers(cid, false)) then
+			pushBack(cid, position, fromPosition)
+			return false		
+		end
+	end
+	
+	if(item.actionid == aid.TRAINERS_ROOM_LEAVE) then
+		onLeaveTrainers(cid)
+	end
+	
 	local ret = Arena.onEnterTeleport(cid, item, position, fromPosition)
 	if(not ret) then
 		pushBack(cid, position, fromPosition)
