@@ -1,0 +1,31 @@
+<raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("trolls (quendor)")
+		]]>
+	</script>
+	
+	<announce delay="0" type="event" message="Disturbios foram detectados aos redores de Quendor..."/>
+	<announce delay="200000" type="event" message="Os Trolls estão planejando algum ataque a Quendor!"/>
+    <announce delay="400000" type="event" message="O Que? O rei troll reapareceu? cuidado, nao é mais uma simples invasao, king troll foi avistado ao norte de quendor!"/>
+	
+	<!-- Quendor North Gate -->
+	<areaspawn delay="400000" centerx="2023" centery="1787" centerz="7" radius="8">
+		<monster name="Troll" minamount="30" maxamount="50"/>
+		<monster name="Troll Champion" minamount="28" maxamount="36"/>
+		<monster name="island Troll" minamount="28" maxamount="36"/>
+		<monster name="frost Troll" minamount="26" maxamount="36"/>
+		<monster name="swamp Troll" minamount="26" maxamount="36"/>
+		<singlespawn delay="400000" name="Troll Boss" x="2029" y="1767" z="7" />
+	</areaspawn>	
+	
+	<!-- Quendor East Gate -->
+	<areaspawn delay="400000" centerx="2069" centery="1861" centerz="7" radius="8">
+		<monster name="Troll" minamount="30" maxamount="50"/>
+		<monster name="Troll Champion" minamount="28" maxamount="36"/>
+		<monster name="island Troll" minamount="28" maxamount="36"/>
+		<monster name="frost Troll" minamount="26" maxamount="36"/>
+		<monster name="swamp Troll" minamount="26" maxamount="36"/>
+	</areaspawn>
+	
+</raid>
