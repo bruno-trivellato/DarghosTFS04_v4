@@ -1,6 +1,6 @@
 function onStartup()
 
-	--cleanFreeHouseOwners()
+	cleanFreeHouseOwners()
 	summonLordVankyner()	
 	summonDemonOak()
 	summonInquisitionBoss()

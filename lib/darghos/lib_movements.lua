@@ -91,3 +91,39 @@ function doTeleportBack(cid, backPos)
 	
 	return true
 end
+
+function onEnterTrainers(cid, login)
+  
+	local _uid = uid.TRAINERS_ROOMS_START
+	while(_uid < uid.TRAINERS_ROOMS_LAST) do
+		
+		local pos = getThingPosition(_uid)
+		local creature = getTopCreature(pos)
+		if(creature.uid == 0) then
+			doTeleportThing(cid, pos)
+			doSendMagicEffect(pos, CONST_ME_MAGIC_BLUE)
+
+			setPlayerStorageValue(cid, sid.INSIDE_TRAINING_ROOM, 1)
+			
+			return true
+		end
+		
+		_uid = _uid + 1
+	end
+	
+	print("[Darghos Movement] Training Rooms - All slots full:" .. _uid)
+	
+	if(not login) then
+		doPlayerSendCancel(cid, "Todos os trainers já estão em uso. Tente novamente mais tarde.")
+	else
+		doTeleportThing(cid, getTownTemplePosition(getPlayerTown(cid)))
+		setPlayerStorageValue(cid, sid.INSIDE_TRAINING_ROOM, -1)
+	end
+	
+	return false
+end
+
+function onLeaveTrainers(cid)
+	setPlayerStorageValue(cid, sid.INSIDE_TRAINING_ROOM, -1)
+	return true
+end

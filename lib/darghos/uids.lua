@@ -411,6 +411,10 @@
 	
 	------------------------------
 	
+	-- Trainers Rooms
+	TRAINERS_ROOMS_START		= 8000,
+	TRAINERS_ROOMS_LAST		= 8059,
+	
 	-- pvp systems
 	ARENA_TEAM_ONE_WALLS		= {3301, 3302},
 	ARENA_TEAM_TWO_WALLS		= {3303, 3304},

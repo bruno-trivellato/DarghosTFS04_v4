@@ -324,7 +324,7 @@ premiumScroll = {}
 
 function premiumScroll.onUse(cid, item, frompos, item2, topos)
 	
-	premiumScroll.DAYS = { [CUSTOM_ITEMS.PREMIUM_SCROLL_MONTLY] = 60, [CUSTOM_ITEMS.PREMIUM_SCROLL_WEEKLY] = 7}
+	premiumScroll.DAYS = { [CUSTOM_ITEMS.PREMIUM_SCROLL_MONTLY] = 30, [CUSTOM_ITEMS.PREMIUM_SCROLL_WEEKLY] = 7}
 	
 	if(not hasValidEmail(cid)) then
 		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Você não possui ainda um e-mail cadastrado em sua conta. Você não poderá usar este item enquanto não resolver este problema.")
