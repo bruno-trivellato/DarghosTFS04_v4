@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Troll Boss" nameDescription="King of trolls" race="blood" experience="3000000" speed="550" manacost="0">
+  <health now="150000" max="150000"/>
+  <look type="282" head="20" body="30" legs="40" feet="50" corpse="7930"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+	<flag staticattack="50"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="150" attack="140"/>
+	</attack>
+    <attack name="speed" interval="2000" chance="30" target="1" speedchange="-1500" duration="30000">
+      <attribute key="shootEffect" value="suddendeath"/>
+    </attack>
+    <attack name="strength" interval="3000" chance="10" radius="5" target="0" min="-200" max="-500">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+	<attack chance="25" radius="2" interval="2000" min="-350" name="physical" max="-700">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+    <attack chance="51" interval="2000" range="7" min="-450" name="physical" max="-700">
+      <attribute key="shootEffect" value="whirlwindaxe"/>
+    </attack>
+  </attacks>
+  <defenses armor="100" defense="150">
+    <defense name="speed" interval="3000" chance="30" speedchange="660" duration="15000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+    <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <elements>
+    <element energyPercent="80"/>
+    <element holyPercent="30"/>
+    <element earthPercent="80"/>
+    <element deathPercent="80"/>
+	<element firePercent="80"/>
+	<element icePercent="80"/>
+	<element physicalPercent="80"/>
+  </elements>
+    <summons maxSummons="30">
+    <summon name="troll" interval="2000" chance="80" max="30"/>
+  </summons>
+  <voices interval="5000" chance="10">
+    <voice sentence="Sou o fucking king troll!"/>
+    <voice sentence="Você não me bate!"/>
+    <voice sentence="Onde foi parar sua forca?"/>
+    <voice sentence="Que soninho!"/>
+  </voices>
+  <loot>
+    <item id="2493" chance="6000">
+      <!--demon helmet-->
+    </item>
+    <item id="2421" chance="3000">
+      <!--thunder hammer-->
+    </item>
+    <item id="2494" chance="8000">
+      <!--demon armor-->
+    </item>
+    <item id="7405" chance="10000">
+      <!--havoc blade-->
+    </item>
+    <item id="2542" chance="10000">
+      <!--tempest shield-->
+    </item>
+    <item id="2646" chance="1200">
+      <!--golden boots-->
+    </item>
+    <item id="6391" chance="2000">
+      <!--nightmare shield-->       
+    </item>
+    <item id="5892" chance="100000">
+      <!--huge chunk of crude iron-->
+    </item>  
+    <item id="2365" chance="20000">
+      <!--backpack of holding-->
+    </item>
+  </loot>
+</monster>
