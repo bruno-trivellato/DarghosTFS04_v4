@@ -646,6 +646,7 @@
 	<monster name="Swamp Troll" file="trolls/swamp troll.xml"/>
 	<monster name="Troll" file="trolls/troll.xml"/>
 	<monster name="Troll Champion" file="trolls/troll champion.xml"/>
+    <monster name="Troll Boss" file="trolls/Troll Boss.xml"/>
 
 	<!-- Undead Humanoids -->
 	<monster name="Banshee" file="undead humanoids/banshee.xml"/>
