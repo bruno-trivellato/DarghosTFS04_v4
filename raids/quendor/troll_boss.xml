@@ -16,8 +16,9 @@
 		<monster name="island Troll" minamount="28" maxamount="36"/>
 		<monster name="frost Troll" minamount="26" maxamount="36"/>
 		<monster name="swamp Troll" minamount="26" maxamount="36"/>
-		<singlespawn delay="400000" name="Troll Boss" x="2029" y="1767" z="7" />
 	</areaspawn>	
+	
+	<singlespawn delay="400000" name="Troll Boss" x="2029" y="1767" z="7" />
 	
 	<!-- Quendor East Gate -->
 	<areaspawn delay="400000" centerx="2069" centery="1861" centerz="7" radius="8">
