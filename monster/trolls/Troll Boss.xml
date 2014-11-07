@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Troll Boss" nameDescription="King of trolls" race="blood" experience="3000000" speed="550" manacost="0">
+<monster name="Troll Boss" nameDescription="King of trolls" race="blood" experience="5000000" speed="550" manacost="0">
   <health now="150000" max="150000"/>
   <look type="282" head="20" body="30" legs="40" feet="50" corpse="7930"/>
   <targetchange interval="5000" chance="8"/>
@@ -14,22 +14,22 @@
     <flag canpushitems="1"/>
     <flag canpushcreatures="1"/>
     <flag targetdistance="1"/>
-	<flag staticattack="50"/>
+        <flag staticattack="50"/>
     <flag runonhealth="0"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" skill="150" attack="140"/>
-	</attack>
+    <attack name="melee" interval="2000" skill="190" attack="180">
+        </attack>
     <attack name="speed" interval="2000" chance="30" target="1" speedchange="-1500" duration="30000">
       <attribute key="shootEffect" value="suddendeath"/>
     </attack>
-    <attack name="strength" interval="3000" chance="10" radius="5" target="0" min="-200" max="-500">
+    <attack name="strength" interval="3000" chance="60" radius="5" target="0" min="-600" max="-800">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-	<attack chance="25" radius="2" interval="2000" min="-350" name="physical" max="-700">
+        <attack chance="60" radius="2" interval="2000" min="-650" name="physical" max="-900">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack chance="51" interval="2000" range="7" min="-450" name="physical" max="-700">
+    <attack chance="70" interval="2000" range="7" min="-650" name="physical" max="-780">
       <attribute key="shootEffect" value="whirlwindaxe"/>
     </attack>
   </attacks>
@@ -50,18 +50,22 @@
     <immunity invisible="1"/>
   </immunities>
   <elements>
-    <element energyPercent="80"/>
+    <element energyPercent="75"/>
     <element holyPercent="30"/>
-    <element earthPercent="80"/>
-    <element deathPercent="80"/>
-	<element firePercent="80"/>
-	<element icePercent="80"/>
-	<element physicalPercent="80"/>
+    <element earthPercent="75"/>
+    <element deathPercent="75"/>
+        <element firePercent="75"/>
+        <element icePercent="75"/>
+        <element physicalPercent="75"/>
   </elements>
-    <summons maxSummons="30">
-    <summon name="troll" interval="2000" chance="80" max="30"/>
+    <summons maxSummons="25">
+    <summon name="troll" interval="2000" chance="80" max="5"/>
+	<summon name="frost troll" interval="2000" chance="80" max="5"/>
+	<summon name="island troll" interval="2000" chance="80" max="5"/>
+	<summon name="swamp troll" interval="2000" chance="80" max="5"/>
+	<summon name="troll champion" interval="2000" chance="80" max="5"/>
   </summons>
-  <voices interval="5000" chance="10">
+  <voices interval="5000" chance="100">
     <voice sentence="Sou o fucking king troll!"/>
     <voice sentence="Você não me bate!"/>
     <voice sentence="Onde foi parar sua forca?"/>
@@ -87,7 +91,7 @@
       <!--golden boots-->
     </item>
     <item id="6391" chance="2000">
-      <!--nightmare shield-->       
+      <!--nightmare shield-->      
     </item>
     <item id="5892" chance="100000">
       <!--huge chunk of crude iron-->
