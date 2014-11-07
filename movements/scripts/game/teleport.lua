@@ -91,6 +91,8 @@ function onStepIn(cid, item, position, fromPosition)
 		return doTeleportBack(cid, fromPosition)
 	end
 	
+	portalSystem.onTroughtPortal(cid, item, position, fromPosition)
+	
 	if(item.actionid ~= nil and item.actionid == aid.CHURCH_PORTAL) then
 	
 		local destPos = getThingPos(uid.CHURCH_PORTAL_DEST)

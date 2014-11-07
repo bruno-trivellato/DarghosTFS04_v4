@@ -112,6 +112,8 @@
 		
 		TRAINERS_ROOM_ENTRANCE			= 4084,
 		TRAINERS_ROOM_LEAVE			= 4085,
+			
+		PORTAL_HUNTS                           	= 4086,
 
 		--  Poi Entrance Fields
 		POI_FIELDS_START			= 6010,
@@ -154,5 +156,8 @@
 		
 		DEMONA_SHORTCUT_ACCESS_TP_IN	= 7520,
 		DEMONA_SHORTCUT_ACCESS_TP_OUT	= 7521,
+		
+                --AIDS FROM 8500 to 9000 are used on TELEPORTS, check libs/teleports.lua to more informations
+                TELEPORT_SYSTEM_INIT           = 8500,		
 	
 	}

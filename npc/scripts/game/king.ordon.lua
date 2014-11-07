@@ -100,89 +100,10 @@ end
 
 talkState = {}
 
-function creatureSayCallback(cid, type, msg)
-	if(not npcHandler:isFocused(cid)) then
-		return false
-	end
-	
-	if(msgcontains(msg, {"mission", "task", "missão", "missao", "tarefa"})) then
-		local ariadneState = getPlayerStorageValue(cid, QUESTLOG.ARIADNE.LAIR)
-		local ghazranWingStatus = getPlayerStorageValue(cid, QUESTLOG.ARIADNE.GHAZRAN_WING)
-		
-		if(ariadneState == -1) then
-			npcHandler:say("A velha bruxa Ariadne está a assombrar a paz em Thorn, sua ultima vitima foi a {princesa}! Como pode!!", cid)
-			talkState[cid] = 1
-		elseif(ariadneState == 2) then
-			npcHandler:say("Encontre a entrada do Lair de Ariadne, um de meus Guardas o espera lá!", cid)
-		elseif(ghazranWingStatus >= 1 and ghazranWingStatus < 4) then
-			npcHandler:say("Está em posse da língua de Ghazran?", cid)
-			talkState[cid] = 5
-		end
-	elseif(msgcontains(msg, {"princesa"}) and talkState[cid] == 1) then
-		npcHandler:say("Minha querida filha, a princesa Elione foi vitima de um {feitiço} da velha Ariadne enquanto passeava pelo pantano. Desde então eu ordenei que meus guardas proibissem que as pessoas fossem para o pantano para evitar novas vitimas...", cid)
-		talkState[cid] = 2
-	elseif(msgcontains(msg, {"feitiço"}) and talkState[cid] == 2) then
-		npcHandler:say("O feitiço que a princesa Elione sofreu transformou minha bela filha em um horrozo sapo! Thorn precisa de bravos guerreiros que se comprometam a entrar no pantano para me ajudar a buscar os ingredientes necessarios para se fazer o {antidoto} que anula o feitiço sofrido!", cid)
-		talkState[cid] = 3
-	elseif(msgcontains(msg, {"antidoto"}) and talkState[cid] == 3) then
-		npcHandler:say("Para ser feito o antidoto é necessario conseguir 3 raros ingredientes, além de um recipiente especial que somente pode ser obtido vencendo a velha Ariadne. Os ingredientes especiais estão sob os cuidados de maléficos seguidos de Ariadne! Você gostaria de tentar ajudar a conseguir o antidoto para recuperar a doce Elione?", cid)
-		talkState[cid] = 4
-	elseif(msgcontains(msg, {"yes", "sim"})) then
-		if(talkState[cid] == 4) then
-			local level = getPlayerLevel(cid)
-							
-			if(level < 200) then
-				npcHandler:say("Estou impressionado com sua brava coragem meu rapaz, mas esta missão requer maior conhecimento e habilidade.", cid)
-			else
-				npcHandler:say("Otimo! Estou profundamente contente que você irá nos ajudar! Meus guardas já recebam ordens para que permitam você a entrar no Pantano. Muito cuidado, este lugar é traiçoeiro! Consigas o antidoto e lhe re-compensarei por esta brava atitude!", cid)	
-				doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Nova Quest aberta em seu QuestLog: Ariadne's Quest.")
-				
-				setPlayerStorageValue(cid, QUESTLOG.ARIADNE.LAIR, 2)
-			end
-			
-			talkState[cid] = nil
-		elseif(talkState[cid] == 5) then
-			local haveGhazranTongue = (getPlayerStorageValue(cid, sid.ARIADNE_GHAZRAN_TONGUE) == 1)
-			
-			if not(haveGhazranTongue) then
-				
-				npcHandler:say("Você ainda não conseguiu a língua de Ghazran, seja rápido em conseguir-la!", cid)
-			else
-				npcHandler:say("Magnifico! Esta língua será guardada para fazermos o antidoto quando tivermos os outros ingredientes. Aqui está sua recompensa!", cid)	
-				
-				local reward = nil 
-				
-				if(isKnight(cid)) then
-					reward = CUSTOM_ITEMS.VENGEANCE_SEAL_RING
-				elseif(isPaladin(cid)) then
-					reward = CUSTOM_ITEMS.CROOKED_EYE_RING
-				elseif(isDruid(cid) or isSorcerer(cid)) then
-					reward = CUSTOM_ITEMS.PETRIFIED_STONEHEARTH
-				end
-				
-				doPlayerAddItem(cid, reward, 1)
-				
-				setPlayerStorageValue(cid, QUESTLOG.ARIADNE.GHAZRAN_WING, 4)
-				setPlayerStorageValue(cid, QUESTLOG.ARIADNE.CULTISTS_WING, 1)
-			end
-		end
-		
-		talkState[cid] = nil
-	end
-	
-	return true
-end
-
-function onFarewell(cid)
-	talkState[cid] = nil
-end
-
 --keywordHandler:addKeyword({'pertences'}, facebookEventCallback, {npcHandler = npcHandler, talk_state = 0, nlyFocus = true})
 
 D_CustomNpcModules.addPromotionHandler(keywordHandler, npcHandler)
 
 keywordHandler:addKeyword({'ajuda', 'ajudar'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'A jogadores que já tiverem atingido level 20 e possuirem uma Conta Premium eu posso conceder a {promoção}!'})
 
-npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:setCallback(CALLBACK_FAREWELL, onFarewell)
 npcHandler:addModule(FocusModule:new())

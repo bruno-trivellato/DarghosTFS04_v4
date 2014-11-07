@@ -6611,6 +6611,12 @@
 	<spawn centerx="2172" centery="1571" centerz="7" radius="3">
 		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="2171" centery="1680" centerz="7" radius="5">
+		<monster name="Sen Gan Guard" x="-3" y="0" z="7" spawntime="60" />
+		<monster name="Sen Gan Hydra" x="4" y="0" z="7" spawntime="60" />
+		<monster name="Sen Gan Shaman" x="-3" y="1" z="7" spawntime="60" />
+		<monster name="Big Ooze" x="4" y="1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="1895" centery="1688" centerz="7" radius="15">
 		<monster name="Black Sheep" x="-9" y="-9" z="7" spawntime="60" />
 		<monster name="Sheep" x="-13" y="-7" z="7" spawntime="60" />
@@ -7748,9 +7754,6 @@
 	<spawn centerx="2413" centery="1937" centerz="7" radius="5">
 		<monster name="Giant Spider" x="2" y="-3" z="7" spawntime="60" />
 		<monster name="Giant Spider" x="-5" y="3" z="7" spawntime="60" />
-	</spawn>
-	<spawn centerx="2507" centery="1937" centerz="7" radius="2">
-		<npc name="thorn.guard3" x="0" y="0" z="7" spawntime="20" />
 	</spawn>
 	<spawn centerx="3491" centery="1937" centerz="7" radius="5">
 		<monster name="Draken Spellweaver" x="0" y="-1" z="7" spawntime="60" />
@@ -18625,24 +18628,63 @@
 		<monster name="Minotaur archer" x="-3" y="5" z="9" spawntime="60" />
 		<monster name="Minotaur guard" x="5" y="5" z="9" spawntime="60" />
 	</spawn>
-	<spawn centerx="2399" centery="2265" centerz="9" radius="30">
-		<monster name="Hydra" x="26" y="-14" z="9" spawntime="30" />
-		<monster name="Serpent Spawn" x="7" y="-13" z="9" spawntime="30" />
-		<monster name="Hydra" x="8" y="-13" z="9" spawntime="30" />
-		<monster name="Hydra" x="0" y="-11" z="9" spawntime="30" />
-		<monster name="Hydra" x="13" y="-7" z="9" spawntime="30" />
-		<monster name="Hydra" x="-10" y="-5" z="9" spawntime="30" />
-		<monster name="Hydra" x="22" y="-5" z="9" spawntime="30" />
-		<monster name="Hydra" x="-16" y="3" z="9" spawntime="30" />
-		<monster name="Serpent Spawn" x="-14" y="3" z="9" spawntime="30" />
-		<monster name="Serpent Spawn" x="22" y="4" z="9" spawntime="30" />
-		<monster name="Hydra" x="-14" y="6" z="9" spawntime="30" />
-		<monster name="Hydra" x="-6" y="12" z="9" spawntime="30" />
-		<monster name="Hydra" x="4" y="18" z="9" spawntime="30" />
-		<monster name="Hydra" x="5" y="21" z="9" spawntime="30" />
-		<monster name="Serpent Spawn" x="1" y="22" z="9" spawntime="30" />
-		<monster name="Hydra" x="1" y="24" z="9" spawntime="30" />
-		<monster name="Hydra" x="16" y="29" z="9" spawntime="30" />
+	<spawn centerx="2400" centery="2264" centerz="9" radius="30">
+		<monster name="Hydra" x="6" y="-15" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="5" y="-14" z="9" spawntime="120" />
+		<monster name="Hydra" x="8" y="-14" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="2" y="-13" z="9" spawntime="120" />
+		<monster name="Hydra" x="5" y="-12" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="7" y="-12" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="9" y="-12" z="9" spawntime="120" />
+		<monster name="Hydra" x="0" y="-11" z="9" spawntime="120" />
+		<monster name="Hydra" x="2" y="-11" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="4" y="-10" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="10" y="-10" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="6" y="-9" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="8" y="-9" z="9" spawntime="120" />
+		<monster name="Hydra" x="11" y="-8" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="22" y="-3" z="9" spawntime="120" />
+		<monster name="Hydra" x="20" y="-2" z="9" spawntime="120" />
+		<monster name="Hydra" x="-15" y="-1" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-13" y="0" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="22" y="0" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-17" y="1" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-19" y="2" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="22" y="2" z="9" spawntime="120" />
+		<monster name="Hydra" x="24" y="2" z="9" spawntime="120" />
+		<monster name="Hydra" x="26" y="2" z="9" spawntime="120" />
+		<monster name="Hydra" x="-15" y="3" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-14" y="3" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-12" y="3" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="21" y="3" z="9" spawntime="120" />
+		<monster name="Hydra" x="-19" y="4" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-17" y="4" z="9" spawntime="120" />
+		<monster name="Hydra" x="20" y="4" z="9" spawntime="120" />
+		<monster name="Hydra" x="26" y="4" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-12" y="5" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="18" y="5" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-14" y="6" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="21" y="6" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="27" y="6" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-16" y="7" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="24" y="7" z="9" spawntime="120" />
+		<monster name="Hydra" x="27" y="8" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="1" y="16" z="9" spawntime="120" />
+		<monster name="Hydra" x="4" y="17" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="1" y="18" z="9" spawntime="120" />
+		<monster name="Hydra" x="6" y="18" z="9" spawntime="120" />
+		<monster name="Hydra" x="3" y="19" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="4" y="19" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="6" y="19" z="9" spawntime="120" />
+		<monster name="Hydra" x="2" y="21" z="9" spawntime="120" />
+		<monster name="Hydra" x="7" y="21" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="4" y="22" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="5" y="22" z="9" spawntime="120" />
+		<monster name="Hydra" x="2" y="23" z="9" spawntime="120" />
+		<monster name="Hydra" x="7" y="23" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="8" y="23" z="9" spawntime="120" />
+		<monster name="Hydra" x="5" y="24" z="9" spawntime="120" />
+		<monster name="Hydra" x="27" y="30" z="9" spawntime="120" />
 	</spawn>
 	<spawn centerx="1339" centery="2268" centerz="9" radius="30">
 		<monster name="Dwarf" x="-23" y="2" z="9" spawntime="60" />
@@ -18656,25 +18698,59 @@
 		<monster name="Dwarf" x="4" y="19" z="9" spawntime="60" />
 		<monster name="Dwarf" x="6" y="19" z="9" spawntime="60" />
 	</spawn>
-	<spawn centerx="2460" centery="2270" centerz="9" radius="30">
-		<monster name="Hydra" x="-24" y="-20" z="9" spawntime="30" />
-		<monster name="Serpent Spawn" x="-21" y="-20" z="9" spawntime="30" />
-		<monster name="Hydra" x="-22" y="-13" z="9" spawntime="30" />
-		<monster name="Hydra" x="-22" y="-10" z="9" spawntime="30" />
-		<monster name="Hydra" x="-15" y="-2" z="9" spawntime="30" />
-		<monster name="Serpent Spawn" x="-12" y="1" z="9" spawntime="30" />
-		<monster name="Hydra" x="-4" y="3" z="9" spawntime="30" />
-		<monster name="Hydra" x="-24" y="7" z="9" spawntime="30" />
-		<monster name="Hydra" x="6" y="12" z="9" spawntime="30" />
-		<monster name="Hydra" x="-1" y="15" z="9" spawntime="30" />
-		<monster name="Serpent Spawn" x="6" y="15" z="9" spawntime="30" />
-		<monster name="Hydra" x="-27" y="16" z="9" spawntime="30" />
-		<monster name="Hydra" x="-25" y="17" z="9" spawntime="30" />
-		<monster name="Hydra" x="7" y="18" z="9" spawntime="30" />
-		<monster name="Hydra" x="-24" y="19" z="9" spawntime="30" />
-		<monster name="Hydra" x="-9" y="19" z="9" spawntime="30" />
-		<monster name="Hydra" x="-30" y="22" z="9" spawntime="30" />
-		<monster name="Hydra" x="-7" y="24" z="9" spawntime="30" />
+	<spawn centerx="2461" centery="2269" centerz="9" radius="30">
+		<monster name="Giant Spider" x="-25" y="-21" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-22" y="-21" z="9" spawntime="120" />
+		<monster name="Hydra" x="-20" y="-21" z="9" spawntime="120" />
+		<monster name="Hydra" x="-26" y="-20" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-24" y="-19" z="9" spawntime="120" />
+		<monster name="Hydra" x="-22" y="-19" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-19" y="-19" z="9" spawntime="120" />
+		<monster name="Hydra" x="-21" y="-18" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-23" y="-17" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-20" y="-16" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-23" y="-15" z="9" spawntime="120" />
+		<monster name="Hydra" x="-21" y="-14" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-23" y="-13" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-15" y="-3" z="9" spawntime="120" />
+		<monster name="Hydra" x="-14" y="-2" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-11" y="-1" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-14" y="0" z="9" spawntime="120" />
+		<monster name="Hydra" x="-9" y="0" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-8" y="1" z="9" spawntime="120" />
+		<monster name="Hydra" x="-12" y="2" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-16" y="3" z="9" spawntime="120" />
+		<monster name="Hydra" x="-14" y="3" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-9" y="3" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-6" y="3" z="9" spawntime="120" />
+		<monster name="Hydra" x="-18" y="4" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-12" y="4" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-29" y="6" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-28" y="7" z="9" spawntime="120" />
+		<monster name="Hydra" x="-26" y="7" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-24" y="7" z="9" spawntime="120" />
+		<monster name="Hydra" x="-29" y="8" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-27" y="9" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-25" y="9" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="2" y="9" z="9" spawntime="120" />
+		<monster name="Hydra" x="-28" y="11" z="9" spawntime="120" />
+		<monster name="Hydra" x="-26" y="11" z="9" spawntime="120" />
+		<monster name="Hydra" x="3" y="11" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="4" y="12" z="9" spawntime="120" />
+		<monster name="Hydra" x="7" y="13" z="9" spawntime="120" />
+		<monster name="Hydra" x="2" y="14" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-1" y="15" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="1" y="15" z="9" spawntime="120" />
+		<monster name="Hydra" x="5" y="15" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-4" y="16" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="3" y="16" z="9" spawntime="120" />
+		<monster name="Hydra" x="8" y="16" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="6" y="17" z="9" spawntime="120" />
+		<monster name="Hydra" x="8" y="19" z="9" spawntime="120" />
+		<monster name="Hydra" x="-7" y="28" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-11" y="30" z="9" spawntime="120" />
+		<monster name="Hydra" x="-8" y="30" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-6" y="30" z="9" spawntime="120" />
 	</spawn>
 	<spawn centerx="2292" centery="2278" centerz="9" radius="5">
 		<monster name="Giant Spider" x="-3" y="-5" z="9" spawntime="30" />
@@ -18717,17 +18793,48 @@
 		<monster name="Sand Dragon" x="4" y="4" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="2428" centery="2325" centerz="9" radius="30">
-		<monster name="Serpent Spawn" x="-6" y="-28" z="9" spawntime="30" />
-		<monster name="Hydra" x="-9" y="-26" z="9" spawntime="30" />
-		<monster name="Hydra" x="17" y="-24" z="9" spawntime="30" />
-		<monster name="Hydra" x="28" y="-19" z="9" spawntime="30" />
-		<monster name="Hydra" x="-19" y="-17" z="9" spawntime="30" />
-		<monster name="Serpent Spawn" x="29" y="-17" z="9" spawntime="30" />
-		<monster name="Serpent Spawn" x="-23" y="-15" z="9" spawntime="30" />
-		<monster name="Hydra" x="-24" y="-13" z="9" spawntime="30" />
-		<monster name="Hydra" x="-28" y="-12" z="9" spawntime="30" />
-		<monster name="Serpent Spawn" x="-29" y="-8" z="9" spawntime="30" />
-		<monster name="Hydra" x="-25" y="-7" z="9" spawntime="30" />
+		<monster name="Giant Spider" x="1" y="-30" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-7" y="-29" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-5" y="-29" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-3" y="-29" z="9" spawntime="120" />
+		<monster name="Hydra" x="-1" y="-28" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="1" y="-28" z="9" spawntime="120" />
+		<monster name="Hydra" x="-9" y="-27" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-6" y="-27" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-3" y="-27" z="9" spawntime="120" />
+		<monster name="Hydra" x="-2" y="-26" z="9" spawntime="120" />
+		<monster name="Hydra" x="0" y="-26" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-10" y="-25" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-1" y="-25" z="9" spawntime="120" />
+		<monster name="Hydra" x="25" y="-25" z="9" spawntime="120" />
+		<monster name="Hydra" x="28" y="-25" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="25" y="-23" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="27" y="-23" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="30" y="-22" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="27" y="-21" z="9" spawntime="120" />
+		<monster name="Hydra" x="29" y="-20" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="5" y="-19" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="7" y="-19" z="9" spawntime="120" />
+		<monster name="Hydra" x="10" y="-19" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="12" y="-19" z="9" spawntime="120" />
+		<monster name="Hydra" x="30" y="-18" z="9" spawntime="120" />
+		<monster name="Hydra" x="6" y="-17" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="9" y="-17" z="9" spawntime="120" />
+		<monster name="Hydra" x="-25" y="-16" z="9" spawntime="120" />
+		<monster name="Hydra" x="-22" y="-16" z="9" spawntime="120" />
+		<monster name="Hydra" x="11" y="-16" z="9" spawntime="120" />
+		<monster name="Hydra" x="-28" y="-15" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-23" y="-14" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-21" y="-14" z="9" spawntime="120" />
+		<monster name="Hydra" x="-29" y="-13" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-26" y="-13" z="9" spawntime="120" />
+		<monster name="Hydra" x="-22" y="-12" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-28" y="-11" z="9" spawntime="120" />
+		<monster name="Hydra" x="-26" y="-11" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-23" y="-11" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-25" y="-9" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-23" y="-9" z="9" spawntime="120" />
+		<monster name="Hydra" x="-24" y="-7" z="9" spawntime="120" />
 	</spawn>
 	<spawn centerx="2109" centery="2329" centerz="9" radius="7">
 		<monster name="Necromancer" x="-1" y="-2" z="9" spawntime="60" />
@@ -20281,9 +20388,121 @@
 		<monster name="Minotaur mage" x="1" y="-1" z="9" spawntime="60" />
 		<monster name="Minotaur archer" x="0" y="0" z="9" spawntime="60" />
 	</spawn>
+	<spawn centerx="3039" centery="2764" centerz="9" radius="30">
+		<monster name="Hydra" x="6" y="-15" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="5" y="-14" z="9" spawntime="120" />
+		<monster name="Hydra" x="8" y="-14" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="2" y="-13" z="9" spawntime="120" />
+		<monster name="Hydra" x="5" y="-12" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="7" y="-12" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="9" y="-12" z="9" spawntime="120" />
+		<monster name="Hydra" x="0" y="-11" z="9" spawntime="120" />
+		<monster name="Hydra" x="2" y="-11" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="4" y="-10" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="10" y="-10" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="6" y="-9" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="8" y="-9" z="9" spawntime="120" />
+		<monster name="Hydra" x="11" y="-8" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="22" y="-3" z="9" spawntime="120" />
+		<monster name="Hydra" x="20" y="-2" z="9" spawntime="120" />
+		<monster name="Hydra" x="-15" y="-1" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-13" y="0" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="22" y="0" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-17" y="1" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-19" y="2" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="22" y="2" z="9" spawntime="120" />
+		<monster name="Hydra" x="24" y="2" z="9" spawntime="120" />
+		<monster name="Hydra" x="26" y="2" z="9" spawntime="120" />
+		<monster name="Hydra" x="-15" y="3" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-14" y="3" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-12" y="3" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="21" y="3" z="9" spawntime="120" />
+		<monster name="Hydra" x="-19" y="4" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-17" y="4" z="9" spawntime="120" />
+		<monster name="Hydra" x="20" y="4" z="9" spawntime="120" />
+		<monster name="Hydra" x="26" y="4" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-12" y="5" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="18" y="5" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-14" y="6" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="21" y="6" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="27" y="6" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-16" y="7" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="24" y="7" z="9" spawntime="120" />
+		<monster name="Hydra" x="27" y="8" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="1" y="16" z="9" spawntime="120" />
+		<monster name="Hydra" x="4" y="17" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="1" y="18" z="9" spawntime="120" />
+		<monster name="Hydra" x="6" y="18" z="9" spawntime="120" />
+		<monster name="Hydra" x="3" y="19" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="4" y="19" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="6" y="19" z="9" spawntime="120" />
+		<monster name="Hydra" x="2" y="21" z="9" spawntime="120" />
+		<monster name="Hydra" x="7" y="21" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="4" y="22" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="5" y="22" z="9" spawntime="120" />
+		<monster name="Hydra" x="2" y="23" z="9" spawntime="120" />
+		<monster name="Hydra" x="7" y="23" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="8" y="23" z="9" spawntime="120" />
+		<monster name="Hydra" x="5" y="24" z="9" spawntime="120" />
+		<monster name="Hydra" x="27" y="30" z="9" spawntime="120" />
+	</spawn>
 	<spawn centerx="2164" centery="2765" centerz="9" radius="1">
 		<monster name="Minotaur archer" x="0" y="-1" z="9" spawntime="60" />
 		<monster name="Minotaur mage" x="-1" y="0" z="9" spawntime="60" />
+	</spawn>
+	<spawn centerx="3100" centery="2769" centerz="9" radius="30">
+		<monster name="Giant Spider" x="-25" y="-21" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-22" y="-21" z="9" spawntime="120" />
+		<monster name="Hydra" x="-20" y="-21" z="9" spawntime="120" />
+		<monster name="Hydra" x="-26" y="-20" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-24" y="-19" z="9" spawntime="120" />
+		<monster name="Hydra" x="-22" y="-19" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-19" y="-19" z="9" spawntime="120" />
+		<monster name="Hydra" x="-21" y="-18" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-23" y="-17" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-20" y="-16" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-23" y="-15" z="9" spawntime="120" />
+		<monster name="Hydra" x="-21" y="-14" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-23" y="-13" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-15" y="-3" z="9" spawntime="120" />
+		<monster name="Hydra" x="-14" y="-2" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-11" y="-1" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-14" y="0" z="9" spawntime="120" />
+		<monster name="Hydra" x="-9" y="0" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-8" y="1" z="9" spawntime="120" />
+		<monster name="Hydra" x="-12" y="2" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-16" y="3" z="9" spawntime="120" />
+		<monster name="Hydra" x="-14" y="3" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-9" y="3" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-6" y="3" z="9" spawntime="120" />
+		<monster name="Hydra" x="-18" y="4" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-12" y="4" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-29" y="6" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-28" y="7" z="9" spawntime="120" />
+		<monster name="Hydra" x="-26" y="7" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="-24" y="7" z="9" spawntime="120" />
+		<monster name="Hydra" x="-29" y="8" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-27" y="9" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-25" y="9" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="2" y="9" z="9" spawntime="120" />
+		<monster name="Hydra" x="-28" y="11" z="9" spawntime="120" />
+		<monster name="Hydra" x="-26" y="11" z="9" spawntime="120" />
+		<monster name="Hydra" x="3" y="11" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="4" y="12" z="9" spawntime="120" />
+		<monster name="Hydra" x="7" y="13" z="9" spawntime="120" />
+		<monster name="Hydra" x="2" y="14" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-1" y="15" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="1" y="15" z="9" spawntime="120" />
+		<monster name="Hydra" x="5" y="15" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-4" y="16" z="9" spawntime="120" />
+		<monster name="Serpent Spawn" x="3" y="16" z="9" spawntime="120" />
+		<monster name="Hydra" x="8" y="16" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="6" y="17" z="9" spawntime="120" />
+		<monster name="Hydra" x="8" y="19" z="9" spawntime="120" />
+		<monster name="Hydra" x="-7" y="28" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-11" y="30" z="9" spawntime="120" />
+		<monster name="Hydra" x="-8" y="30" z="9" spawntime="120" />
+		<monster name="Giant Spider" x="-6" y="30" z="9" spawntime="120" />
 	</spawn>
 	<spawn centerx="2792" centery="2771" centerz="9" radius="27">
 		<monster name="Thornback Tortoise" x="-2" y="17" z="9" spawntime="33554432" />
@@ -23557,6 +23776,18 @@
 		<monster name="Dragon Lord" x="-23" y="20" z="10" spawntime="60" />
 		<monster name="Demon" x="-2" y="20" z="10" spawntime="60" />
 	</spawn>
+	<spawn centerx="2432" centery="2181" centerz="10" radius="10">
+		<monster name="Frost Dragon" x="-4" y="3" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="0" y="3" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="4" y="3" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="8" y="3" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-4" y="6" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="0" y="6" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="4" y="6" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="8" y="6" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-4" y="10" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="0" y="10" z="10" spawntime="120" />
+	</spawn>
 	<spawn centerx="1199" centery="2199" centerz="10" radius="5">
 		<monster name="Carrion Worm" x="-4" y="-4" z="10" spawntime="60" />
 		<monster name="Rotworm" x="0" y="-2" z="10" spawntime="60" />
@@ -23572,6 +23803,89 @@
 		<monster name="Carrion Worm" x="0" y="-2" z="10" spawntime="60" />
 		<monster name="Rotworm" x="1" y="-1" z="10" spawntime="60" />
 	</spawn>
+	<spawn centerx="2395" centery="2213" centerz="10" radius="30">
+		<monster name="Souleater" x="-9" y="-22" z="10" spawntime="120" />
+		<monster name="Hydra" x="-1" y="-22" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-13" y="-21" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="1" y="-21" z="10" spawntime="120" />
+		<monster name="medusa" x="-14" y="-20" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-16" y="-19" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-2" y="-19" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="0" y="-19" z="10" spawntime="120" />
+		<monster name="Hydra" x="3" y="-18" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-18" y="-17" z="10" spawntime="120" />
+		<monster name="Hydra" x="-21" y="-16" z="10" spawntime="120" />
+		<monster name="Hydra" x="14" y="-15" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="12" y="-13" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="14" y="-13" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="16" y="-12" z="10" spawntime="120" />
+		<monster name="Hydra" x="14" y="-11" z="10" spawntime="120" />
+		<monster name="Hydra" x="-6" y="-9" z="10" spawntime="120" />
+		<monster name="Hydra" x="-3" y="-9" z="10" spawntime="120" />
+		<monster name="Souleater" x="-9" y="-8" z="10" spawntime="120" />
+		<monster name="medusa" x="-3" y="-7" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="2" y="-7" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="30" y="-7" z="10" spawntime="120" />
+		<monster name="Souleater" x="-24" y="-6" z="10" spawntime="120" />
+		<monster name="Hydra" x="-6" y="-6" z="10" spawntime="120" />
+		<monster name="Hydra" x="0" y="-6" z="10" spawntime="120" />
+		<monster name="Hydra" x="3" y="-4" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="29" y="-3" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-23" y="-2" z="10" spawntime="120" />
+		<monster name="Hydra" x="-21" y="-2" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-18" y="-2" z="10" spawntime="120" />
+		<monster name="medusa" x="-23" y="0" z="10" spawntime="120" />
+		<monster name="medusa" x="-21" y="0" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="3" y="0" z="10" spawntime="120" />
+		<monster name="Souleater" x="27" y="0" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-18" y="1" z="10" spawntime="120" />
+		<monster name="medusa" x="2" y="1" z="10" spawntime="120" />
+		<monster name="Hydra" x="5" y="2" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="19" y="2" z="10" spawntime="120" />
+		<monster name="Hydra" x="-20" y="3" z="10" spawntime="120" />
+		<monster name="Hydra" x="0" y="3" z="10" spawntime="120" />
+		<monster name="Hydra" x="-24" y="4" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-18" y="4" z="10" spawntime="120" />
+		<monster name="Hydra" x="3" y="4" z="10" spawntime="120" />
+		<monster name="Hydra" x="20" y="4" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="23" y="4" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-19" y="5" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="0" y="5" z="10" spawntime="120" />
+		<monster name="Souleater" x="2" y="5" z="10" spawntime="120" />
+		<monster name="Hydra" x="6" y="5" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="17" y="5" z="10" spawntime="120" />
+		<monster name="Hydra" x="-3" y="6" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="20" y="6" z="10" spawntime="120" />
+		<monster name="medusa" x="23" y="6" z="10" spawntime="120" />
+		<monster name="Hydra" x="-23" y="7" z="10" spawntime="120" />
+		<monster name="Hydra" x="-14" y="7" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="20" y="8" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="22" y="8" z="10" spawntime="120" />
+		<monster name="Hydra" x="-19" y="9" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-21" y="12" z="10" spawntime="120" />
+		<monster name="Hydra" x="-18" y="13" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="23" y="14" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="21" y="15" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-17" y="16" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="18" y="16" z="10" spawntime="120" />
+		<monster name="Hydra" x="-19" y="17" z="10" spawntime="120" />
+		<monster name="Hydra" x="-16" y="17" z="10" spawntime="120" />
+		<monster name="Hydra" x="20" y="17" z="10" spawntime="120" />
+		<monster name="medusa" x="22" y="17" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="25" y="17" z="10" spawntime="120" />
+		<monster name="medusa" x="-17" y="18" z="10" spawntime="120" />
+		<monster name="medusa" x="18" y="18" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-19" y="19" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="20" y="19" z="10" spawntime="120" />
+		<monster name="Hydra" x="-16" y="20" z="10" spawntime="120" />
+		<monster name="Hydra" x="22" y="20" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="24" y="20" z="10" spawntime="120" />
+		<monster name="medusa" x="-18" y="21" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="19" y="21" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="22" y="23" z="10" spawntime="120" />
+		<monster name="Hydra" x="24" y="23" z="10" spawntime="120" />
+		<monster name="Souleater" x="-13" y="26" z="10" spawntime="120" />
+	</spawn>
 	<spawn centerx="1204" centery="2215" centerz="10" radius="5">
 		<monster name="Rotworm" x="-2" y="-4" z="10" spawntime="60" />
 		<monster name="Rotworm" x="-2" y="-1" z="10" spawntime="60" />
@@ -23580,6 +23894,82 @@
 	<spawn centerx="1242" centery="2215" centerz="10" radius="5">
 		<monster name="Rotworm" x="2" y="-2" z="10" spawntime="60" />
 		<monster name="Rotworm" x="1" y="2" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="2454" centery="2220" centerz="10" radius="30">
+		<monster name="Souleater" x="-24" y="-26" z="10" spawntime="120" />
+		<monster name="Hydra" x="-26" y="-24" z="10" spawntime="120" />
+		<monster name="Hydra" x="-21" y="-24" z="10" spawntime="120" />
+		<monster name="Hydra" x="-16" y="-24" z="10" spawntime="120" />
+		<monster name="Hydra" x="-11" y="-22" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-19" y="-21" z="10" spawntime="120" />
+		<monster name="Souleater" x="-15" y="-21" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-26" y="-20" z="10" spawntime="120" />
+		<monster name="medusa" x="-23" y="-20" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="15" y="-19" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-20" y="-18" z="10" spawntime="120" />
+		<monster name="Hydra" x="-16" y="-18" z="10" spawntime="120" />
+		<monster name="Souleater" x="14" y="-18" z="10" spawntime="120" />
+		<monster name="Hydra" x="-27" y="-17" z="10" spawntime="120" />
+		<monster name="Hydra" x="17" y="-17" z="10" spawntime="120" />
+		<monster name="Hydra" x="15" y="-16" z="10" spawntime="120" />
+		<monster name="medusa" x="-26" y="-15" z="10" spawntime="120" />
+		<monster name="Hydra" x="-22" y="-15" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="17" y="-15" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="20" y="-15" z="10" spawntime="120" />
+		<monster name="Hydra" x="-19" y="-14" z="10" spawntime="120" />
+		<monster name="Hydra" x="19" y="-14" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-16" y="-13" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="17" y="-13" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="22" y="-13" z="10" spawntime="120" />
+		<monster name="Hydra" x="19" y="-12" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="21" y="-12" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-15" y="-10" z="10" spawntime="120" />
+		<monster name="Souleater" x="-5" y="-2" z="10" spawntime="120" />
+		<monster name="Hydra" x="25" y="-2" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="27" y="-2" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-6" y="-1" z="10" spawntime="120" />
+		<monster name="Hydra" x="0" y="-1" z="10" spawntime="120" />
+		<monster name="medusa" x="-7" y="0" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-4" y="0" z="10" spawntime="120" />
+		<monster name="medusa" x="24" y="0" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="27" y="0" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-2" y="1" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="21" y="1" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="23" y="1" z="10" spawntime="120" />
+		<monster name="medusa" x="-5" y="2" z="10" spawntime="120" />
+		<monster name="Souleater" x="21" y="2" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="26" y="2" z="10" spawntime="120" />
+		<monster name="medusa" x="-9" y="3" z="10" spawntime="120" />
+		<monster name="Hydra" x="23" y="3" z="10" spawntime="120" />
+		<monster name="Hydra" x="26" y="3" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-6" y="4" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="21" y="4" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-9" y="5" z="10" spawntime="120" />
+		<monster name="Hydra" x="-7" y="5" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-4" y="5" z="10" spawntime="120" />
+		<monster name="Hydra" x="25" y="5" z="10" spawntime="120" />
+		<monster name="Hydra" x="23" y="6" z="10" spawntime="120" />
+		<monster name="Hydra" x="24" y="6" z="10" spawntime="2048" />
+		<monster name="Frost Dragon" x="25" y="7" z="10" spawntime="120" />
+		<monster name="Hydra" x="-14" y="8" z="10" spawntime="120" />
+		<monster name="Hydra" x="-11" y="8" z="10" spawntime="120" />
+		<monster name="Hydra" x="-9" y="8" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-5" y="8" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="23" y="9" z="10" spawntime="120" />
+		<monster name="medusa" x="25" y="9" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-12" y="10" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-8" y="10" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-11" y="13" z="10" spawntime="120" />
+		<monster name="Hydra" x="-6" y="20" z="10" spawntime="120" />
+		<monster name="Hydra" x="-4" y="20" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="1" y="21" z="10" spawntime="120" />
+		<monster name="Souleater" x="3" y="21" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-1" y="22" z="10" spawntime="120" />
+		<monster name="Hydra" x="-6" y="23" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-4" y="23" z="10" spawntime="120" />
+		<monster name="Hydra" x="-3" y="24" z="10" spawntime="120" />
+		<monster name="Souleater" x="-5" y="25" z="10" spawntime="120" />
+		<monster name="Hydra" x="-7" y="26" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="1252" centery="2222" centerz="10" radius="5">
 		<monster name="Rotworm" x="0" y="-2" z="10" spawntime="60" />
@@ -23663,6 +24053,78 @@
 		<monster name="Rotworm" x="1" y="-2" z="10" spawntime="60" />
 		<monster name="Rotworm" x="0" y="-1" z="10" spawntime="60" />
 		<monster name="Rotworm" x="0" y="2" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="2415" centery="2249" centerz="10" radius="30">
+		<monster name="Massive Fire Elemental" x="-23" y="-3" z="10" spawntime="120" />
+		<monster name="Hydra" x="-25" y="-2" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-9" y="-2" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-23" y="-1" z="10" spawntime="120" />
+		<monster name="Hydra" x="-13" y="-1" z="10" spawntime="120" />
+		<monster name="medusa" x="5" y="-1" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="8" y="-1" z="10" spawntime="120" />
+		<monster name="medusa" x="-12" y="0" z="10" spawntime="120" />
+		<monster name="Hydra" x="-10" y="0" z="10" spawntime="120" />
+		<monster name="medusa" x="7" y="0" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-25" y="1" z="10" spawntime="120" />
+		<monster name="Hydra" x="-20" y="1" z="10" spawntime="120" />
+		<monster name="Hydra" x="-8" y="1" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="6" y="1" z="10" spawntime="120" />
+		<monster name="medusa" x="-21" y="2" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-10" y="2" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="4" y="2" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="8" y="2" z="10" spawntime="120" />
+		<monster name="medusa" x="-25" y="3" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-23" y="3" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="11" y="3" z="10" spawntime="120" />
+		<monster name="Souleater" x="19" y="3" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="28" y="3" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="29" y="3" z="10" spawntime="120" />
+		<monster name="Souleater" x="-23" y="4" z="10" spawntime="120" />
+		<monster name="Hydra" x="6" y="4" z="10" spawntime="120" />
+		<monster name="Hydra" x="22" y="4" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="24" y="4" z="10" spawntime="120" />
+		<monster name="Hydra" x="26" y="4" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="28" y="4" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="4" y="5" z="10" spawntime="120" />
+		<monster name="Hydra" x="-25" y="6" z="10" spawntime="120" />
+		<monster name="medusa" x="2" y="6" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="22" y="6" z="10" spawntime="120" />
+		<monster name="Hydra" x="24" y="6" z="10" spawntime="120" />
+		<monster name="Hydra" x="26" y="6" z="10" spawntime="120" />
+		<monster name="medusa" x="-23" y="7" z="10" spawntime="120" />
+		<monster name="Hydra" x="6" y="7" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-24" y="8" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="24" y="8" z="10" spawntime="120" />
+		<monster name="Hydra" x="-26" y="9" z="10" spawntime="120" />
+		<monster name="medusa" x="-10" y="9" z="10" spawntime="120" />
+		<monster name="Hydra" x="-8" y="9" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-7" y="10" z="10" spawntime="120" />
+		<monster name="Hydra" x="-9" y="12" z="10" spawntime="120" />
+		<monster name="medusa" x="-10" y="13" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="6" y="15" z="10" spawntime="120" />
+		<monster name="Hydra" x="8" y="15" z="10" spawntime="120" />
+		<monster name="Souleater" x="22" y="15" z="10" spawntime="120" />
+		<monster name="Souleater" x="-14" y="18" z="10" spawntime="120" />
+		<monster name="medusa" x="5" y="18" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="18" y="19" z="10" spawntime="120" />
+		<monster name="Hydra" x="-14" y="21" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="3" y="21" z="10" spawntime="120" />
+		<monster name="Hydra" x="5" y="21" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="7" y="21" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="13" y="21" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="16" y="21" z="10" spawntime="120" />
+		<monster name="Hydra" x="-16" y="22" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-13" y="22" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-15" y="23" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-12" y="23" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="15" y="23" z="10" spawntime="120" />
+		<monster name="Hydra" x="18" y="23" z="10" spawntime="120" />
+		<monster name="medusa" x="-13" y="24" z="10" spawntime="120" />
+		<monster name="Hydra" x="12" y="24" z="10" spawntime="120" />
+		<monster name="medusa" x="-2" y="26" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-5" y="27" z="10" spawntime="120" />
+		<monster name="medusa" x="-3" y="27" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-3" y="29" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="1239" centery="2258" centerz="10" radius="5">
 		<monster name="Rotworm" x="1" y="-2" z="10" spawntime="60" />
@@ -24246,6 +24708,18 @@
 	<spawn centerx="2432" centery="2681" centerz="10" radius="1">
 		<monster name="dragon hatchling" x="0" y="-1" z="10" spawntime="61" />
 	</spawn>
+	<spawn centerx="3071" centery="2681" centerz="10" radius="10">
+		<monster name="Frost Dragon" x="-4" y="3" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="0" y="3" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="4" y="3" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="8" y="3" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-4" y="6" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="0" y="6" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="4" y="6" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="8" y="6" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-4" y="10" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="0" y="10" z="10" spawntime="120" />
+	</spawn>
 	<spawn centerx="2324" centery="2688" centerz="10" radius="1">
 		<monster name="Dragon" x="1" y="-1" z="10" spawntime="61" />
 	</spawn>
@@ -24322,6 +24796,89 @@
 		<monster name="Thornback Tortoise" x="11" y="18" z="10" spawntime="60" />
 		<monster name="Thornback Tortoise" x="12" y="18" z="10" spawntime="33554432" />
 	</spawn>
+	<spawn centerx="3034" centery="2713" centerz="10" radius="30">
+		<monster name="Souleater" x="-9" y="-22" z="10" spawntime="120" />
+		<monster name="Hydra" x="-1" y="-22" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-13" y="-21" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="1" y="-21" z="10" spawntime="120" />
+		<monster name="medusa" x="-14" y="-20" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-16" y="-19" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-2" y="-19" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="0" y="-19" z="10" spawntime="120" />
+		<monster name="Hydra" x="3" y="-18" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-18" y="-17" z="10" spawntime="120" />
+		<monster name="Hydra" x="-21" y="-16" z="10" spawntime="120" />
+		<monster name="Hydra" x="14" y="-15" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="12" y="-13" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="14" y="-13" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="16" y="-12" z="10" spawntime="120" />
+		<monster name="Hydra" x="14" y="-11" z="10" spawntime="120" />
+		<monster name="Hydra" x="-6" y="-9" z="10" spawntime="120" />
+		<monster name="Hydra" x="-3" y="-9" z="10" spawntime="120" />
+		<monster name="Souleater" x="-9" y="-8" z="10" spawntime="120" />
+		<monster name="medusa" x="-3" y="-7" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="2" y="-7" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="30" y="-7" z="10" spawntime="120" />
+		<monster name="Souleater" x="-24" y="-6" z="10" spawntime="120" />
+		<monster name="Hydra" x="-6" y="-6" z="10" spawntime="120" />
+		<monster name="Hydra" x="0" y="-6" z="10" spawntime="120" />
+		<monster name="Hydra" x="3" y="-4" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="29" y="-3" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-23" y="-2" z="10" spawntime="120" />
+		<monster name="Hydra" x="-21" y="-2" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-18" y="-2" z="10" spawntime="120" />
+		<monster name="medusa" x="-23" y="0" z="10" spawntime="120" />
+		<monster name="medusa" x="-21" y="0" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="3" y="0" z="10" spawntime="120" />
+		<monster name="Souleater" x="27" y="0" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-18" y="1" z="10" spawntime="120" />
+		<monster name="medusa" x="2" y="1" z="10" spawntime="120" />
+		<monster name="Hydra" x="5" y="2" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="19" y="2" z="10" spawntime="120" />
+		<monster name="Hydra" x="-20" y="3" z="10" spawntime="120" />
+		<monster name="Hydra" x="0" y="3" z="10" spawntime="120" />
+		<monster name="Hydra" x="-24" y="4" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-18" y="4" z="10" spawntime="120" />
+		<monster name="Hydra" x="3" y="4" z="10" spawntime="120" />
+		<monster name="Hydra" x="20" y="4" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="23" y="4" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-19" y="5" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="0" y="5" z="10" spawntime="120" />
+		<monster name="Souleater" x="2" y="5" z="10" spawntime="120" />
+		<monster name="Hydra" x="6" y="5" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="17" y="5" z="10" spawntime="120" />
+		<monster name="Hydra" x="-3" y="6" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="20" y="6" z="10" spawntime="120" />
+		<monster name="medusa" x="23" y="6" z="10" spawntime="120" />
+		<monster name="Hydra" x="-23" y="7" z="10" spawntime="120" />
+		<monster name="Hydra" x="-14" y="7" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="20" y="8" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="22" y="8" z="10" spawntime="120" />
+		<monster name="Hydra" x="-19" y="9" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-21" y="12" z="10" spawntime="120" />
+		<monster name="Hydra" x="-18" y="13" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="23" y="14" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="21" y="15" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-17" y="16" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="18" y="16" z="10" spawntime="120" />
+		<monster name="Hydra" x="-19" y="17" z="10" spawntime="120" />
+		<monster name="Hydra" x="-16" y="17" z="10" spawntime="120" />
+		<monster name="Hydra" x="20" y="17" z="10" spawntime="120" />
+		<monster name="medusa" x="22" y="17" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="25" y="17" z="10" spawntime="120" />
+		<monster name="medusa" x="-17" y="18" z="10" spawntime="120" />
+		<monster name="medusa" x="18" y="18" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-19" y="19" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="20" y="19" z="10" spawntime="120" />
+		<monster name="Hydra" x="-16" y="20" z="10" spawntime="120" />
+		<monster name="Hydra" x="22" y="20" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="24" y="20" z="10" spawntime="120" />
+		<monster name="medusa" x="-18" y="21" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="19" y="21" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="22" y="23" z="10" spawntime="120" />
+		<monster name="Hydra" x="24" y="23" z="10" spawntime="120" />
+		<monster name="Souleater" x="-13" y="26" z="10" spawntime="120" />
+	</spawn>
 	<spawn centerx="2328" centery="2714" centerz="10" radius="1">
 		<monster name="Dragon" x="1" y="0" z="10" spawntime="61" />
 	</spawn>
@@ -24338,6 +24895,82 @@
 	<spawn centerx="2698" centery="2720" centerz="10" radius="27">
 		<monster name="Tortoise" x="-27" y="19" z="10" spawntime="60" />
 		<monster name="Tortoise" x="-24" y="24" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="3093" centery="2720" centerz="10" radius="30">
+		<monster name="Souleater" x="-24" y="-26" z="10" spawntime="120" />
+		<monster name="Hydra" x="-26" y="-24" z="10" spawntime="120" />
+		<monster name="Hydra" x="-21" y="-24" z="10" spawntime="120" />
+		<monster name="Hydra" x="-16" y="-24" z="10" spawntime="120" />
+		<monster name="Hydra" x="-11" y="-22" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-19" y="-21" z="10" spawntime="120" />
+		<monster name="Souleater" x="-15" y="-21" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-26" y="-20" z="10" spawntime="120" />
+		<monster name="medusa" x="-23" y="-20" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="15" y="-19" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-20" y="-18" z="10" spawntime="120" />
+		<monster name="Hydra" x="-16" y="-18" z="10" spawntime="120" />
+		<monster name="Souleater" x="14" y="-18" z="10" spawntime="120" />
+		<monster name="Hydra" x="-27" y="-17" z="10" spawntime="120" />
+		<monster name="Hydra" x="17" y="-17" z="10" spawntime="120" />
+		<monster name="Hydra" x="15" y="-16" z="10" spawntime="120" />
+		<monster name="medusa" x="-26" y="-15" z="10" spawntime="120" />
+		<monster name="Hydra" x="-22" y="-15" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="17" y="-15" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="20" y="-15" z="10" spawntime="120" />
+		<monster name="Hydra" x="-19" y="-14" z="10" spawntime="120" />
+		<monster name="Hydra" x="19" y="-14" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-16" y="-13" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="17" y="-13" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="22" y="-13" z="10" spawntime="120" />
+		<monster name="Hydra" x="19" y="-12" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="21" y="-12" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-15" y="-10" z="10" spawntime="120" />
+		<monster name="Souleater" x="-5" y="-2" z="10" spawntime="120" />
+		<monster name="Hydra" x="25" y="-2" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="27" y="-2" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-6" y="-1" z="10" spawntime="120" />
+		<monster name="Hydra" x="0" y="-1" z="10" spawntime="120" />
+		<monster name="medusa" x="-7" y="0" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-4" y="0" z="10" spawntime="120" />
+		<monster name="medusa" x="24" y="0" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="27" y="0" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-2" y="1" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="21" y="1" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="23" y="1" z="10" spawntime="120" />
+		<monster name="medusa" x="-5" y="2" z="10" spawntime="120" />
+		<monster name="Souleater" x="21" y="2" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="26" y="2" z="10" spawntime="120" />
+		<monster name="medusa" x="-9" y="3" z="10" spawntime="120" />
+		<monster name="Hydra" x="23" y="3" z="10" spawntime="120" />
+		<monster name="Hydra" x="26" y="3" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-6" y="4" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="21" y="4" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-9" y="5" z="10" spawntime="120" />
+		<monster name="Hydra" x="-7" y="5" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-4" y="5" z="10" spawntime="120" />
+		<monster name="Hydra" x="25" y="5" z="10" spawntime="120" />
+		<monster name="Hydra" x="23" y="6" z="10" spawntime="120" />
+		<monster name="Hydra" x="24" y="6" z="10" spawntime="2048" />
+		<monster name="Frost Dragon" x="25" y="7" z="10" spawntime="120" />
+		<monster name="Hydra" x="-14" y="8" z="10" spawntime="120" />
+		<monster name="Hydra" x="-11" y="8" z="10" spawntime="120" />
+		<monster name="Hydra" x="-9" y="8" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-5" y="8" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="23" y="9" z="10" spawntime="120" />
+		<monster name="medusa" x="25" y="9" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-12" y="10" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-8" y="10" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-11" y="13" z="10" spawntime="120" />
+		<monster name="Hydra" x="-6" y="20" z="10" spawntime="120" />
+		<monster name="Hydra" x="-4" y="20" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="1" y="21" z="10" spawntime="120" />
+		<monster name="Souleater" x="3" y="21" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-1" y="22" z="10" spawntime="120" />
+		<monster name="Hydra" x="-6" y="23" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-4" y="23" z="10" spawntime="120" />
+		<monster name="Hydra" x="-3" y="24" z="10" spawntime="120" />
+		<monster name="Souleater" x="-5" y="25" z="10" spawntime="120" />
+		<monster name="Hydra" x="-7" y="26" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="2741" centery="2721" centerz="10" radius="27">
 		<monster name="Tortoise" x="-8" y="-23" z="10" spawntime="60" />
@@ -24437,6 +25070,78 @@
 	</spawn>
 	<spawn centerx="2451" centery="2748" centerz="10" radius="1">
 		<monster name="dragon hatchling" x="0" y="-1" z="10" spawntime="61" />
+	</spawn>
+	<spawn centerx="3054" centery="2749" centerz="10" radius="30">
+		<monster name="Massive Fire Elemental" x="-23" y="-3" z="10" spawntime="120" />
+		<monster name="Hydra" x="-25" y="-2" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-9" y="-2" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-23" y="-1" z="10" spawntime="120" />
+		<monster name="Hydra" x="-13" y="-1" z="10" spawntime="120" />
+		<monster name="medusa" x="5" y="-1" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="8" y="-1" z="10" spawntime="120" />
+		<monster name="medusa" x="-12" y="0" z="10" spawntime="120" />
+		<monster name="Hydra" x="-10" y="0" z="10" spawntime="120" />
+		<monster name="medusa" x="7" y="0" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-25" y="1" z="10" spawntime="120" />
+		<monster name="Hydra" x="-20" y="1" z="10" spawntime="120" />
+		<monster name="Hydra" x="-8" y="1" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="6" y="1" z="10" spawntime="120" />
+		<monster name="medusa" x="-21" y="2" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-10" y="2" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="4" y="2" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="8" y="2" z="10" spawntime="120" />
+		<monster name="medusa" x="-25" y="3" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-23" y="3" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="11" y="3" z="10" spawntime="120" />
+		<monster name="Souleater" x="19" y="3" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="28" y="3" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="29" y="3" z="10" spawntime="120" />
+		<monster name="Souleater" x="-23" y="4" z="10" spawntime="120" />
+		<monster name="Hydra" x="6" y="4" z="10" spawntime="120" />
+		<monster name="Hydra" x="22" y="4" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="24" y="4" z="10" spawntime="120" />
+		<monster name="Hydra" x="26" y="4" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="28" y="4" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="4" y="5" z="10" spawntime="120" />
+		<monster name="Hydra" x="-25" y="6" z="10" spawntime="120" />
+		<monster name="medusa" x="2" y="6" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="22" y="6" z="10" spawntime="120" />
+		<monster name="Hydra" x="24" y="6" z="10" spawntime="120" />
+		<monster name="Hydra" x="26" y="6" z="10" spawntime="120" />
+		<monster name="medusa" x="-23" y="7" z="10" spawntime="120" />
+		<monster name="Hydra" x="6" y="7" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-24" y="8" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="24" y="8" z="10" spawntime="120" />
+		<monster name="Hydra" x="-26" y="9" z="10" spawntime="120" />
+		<monster name="medusa" x="-10" y="9" z="10" spawntime="120" />
+		<monster name="Hydra" x="-8" y="9" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="-7" y="10" z="10" spawntime="120" />
+		<monster name="Hydra" x="-9" y="12" z="10" spawntime="120" />
+		<monster name="medusa" x="-10" y="13" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="6" y="15" z="10" spawntime="120" />
+		<monster name="Hydra" x="8" y="15" z="10" spawntime="120" />
+		<monster name="Souleater" x="22" y="15" z="10" spawntime="120" />
+		<monster name="Souleater" x="-14" y="18" z="10" spawntime="120" />
+		<monster name="medusa" x="5" y="18" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="18" y="19" z="10" spawntime="120" />
+		<monster name="Hydra" x="-14" y="21" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="3" y="21" z="10" spawntime="120" />
+		<monster name="Hydra" x="5" y="21" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="7" y="21" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="13" y="21" z="10" spawntime="120" />
+		<monster name="Serpent Spawn" x="16" y="21" z="10" spawntime="120" />
+		<monster name="Hydra" x="-16" y="22" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-13" y="22" z="10" spawntime="120" />
+		<monster name="Frost Dragon" x="-15" y="23" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-12" y="23" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="15" y="23" z="10" spawntime="120" />
+		<monster name="Hydra" x="18" y="23" z="10" spawntime="120" />
+		<monster name="medusa" x="-13" y="24" z="10" spawntime="120" />
+		<monster name="Hydra" x="12" y="24" z="10" spawntime="120" />
+		<monster name="medusa" x="-2" y="26" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-5" y="27" z="10" spawntime="120" />
+		<monster name="medusa" x="-3" y="27" z="10" spawntime="120" />
+		<monster name="Massive Fire Elemental" x="-3" y="29" z="10" spawntime="120" />
 	</spawn>
 	<spawn centerx="2439" centery="2752" centerz="10" radius="1">
 		<monster name="Dragon" x="1" y="-1" z="10" spawntime="61" />
@@ -25708,6 +26413,60 @@
 		<monster name="Warlock" x="-2" y="0" z="11" spawntime="30" />
 		<monster name="Warlock" x="4" y="0" z="11" spawntime="30" />
 	</spawn>
+	<spawn centerx="2440" centery="2110" centerz="11" radius="30">
+		<monster name="Hydra" x="-10" y="-24" z="11" spawntime="120" />
+		<monster name="medusa" x="-8" y="-24" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="1" y="-24" z="11" spawntime="120" />
+		<monster name="Hydra" x="3" y="-24" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-12" y="-21" z="11" spawntime="120" />
+		<monster name="Hydra" x="7" y="-21" z="11" spawntime="120" />
+		<monster name="Hydra" x="-18" y="-19" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-13" y="-18" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="8" y="-17" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-14" y="-15" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="7" y="-15" z="11" spawntime="120" />
+		<monster name="Hydra" x="2" y="-13" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="5" y="-13" z="11" spawntime="120" />
+		<monster name="Hydra" x="12" y="-13" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-21" y="-12" z="11" spawntime="120" />
+		<monster name="Hydra" x="-18" y="-12" z="11" spawntime="120" />
+		<monster name="Hydra" x="-9" y="-12" z="11" spawntime="120" />
+		<monster name="medusa" x="6" y="-10" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="30" y="-10" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="5" y="-7" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-13" y="-6" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="10" y="-6" z="11" spawntime="120" />
+		<monster name="Hydra" x="-17" y="-4" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="6" y="-4" z="11" spawntime="120" />
+		<monster name="medusa" x="-4" y="-2" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-12" y="-1" z="11" spawntime="120" />
+		<monster name="Hydra" x="-9" y="2" z="11" spawntime="120" />
+		<monster name="medusa" x="-5" y="2" z="11" spawntime="120" />
+		<monster name="Hydra" x="4" y="2" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-21" y="10" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-27" y="21" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="9" y="21" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="2489" centery="2110" centerz="11" radius="30">
+		<monster name="Draken Spellweaver" x="6" y="-6" z="11" spawntime="120" />
+		<monster name="medusa" x="14" y="-5" z="11" spawntime="120" />
+		<monster name="Hydra" x="-10" y="-4" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="19" y="-4" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-12" y="-2" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-10" y="-1" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="21" y="0" z="11" spawntime="120" />
+		<monster name="Hydra" x="26" y="2" z="11" spawntime="120" />
+		<monster name="medusa" x="-9" y="3" z="11" spawntime="120" />
+		<monster name="Hydra" x="-12" y="5" z="11" spawntime="120" />
+		<monster name="medusa" x="28" y="6" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="30" y="9" z="11" spawntime="120" />
+		<monster name="Hydra" x="-12" y="11" z="11" spawntime="120" />
+		<monster name="Hydra" x="30" y="14" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-14" y="19" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-11" y="21" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-8" y="24" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="30" y="28" z="11" spawntime="120" />
+	</spawn>
 	<spawn centerx="3478" centery="2113" centerz="11" radius="5">
 		<monster name="Warlock" x="-3" y="-5" z="11" spawntime="30" />
 	</spawn>
@@ -25717,6 +26476,36 @@
 	</spawn>
 	<spawn centerx="3511" centery="2117" centerz="11" radius="5">
 		<monster name="Warlock" x="3" y="1" z="11" spawntime="30" />
+	</spawn>
+	<spawn centerx="2398" centery="2126" centerz="11" radius="30">
+		<monster name="Serpent Spawn" x="5" y="-28" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="2" y="-27" z="11" spawntime="120" />
+		<monster name="Hydra" x="8" y="-27" z="11" spawntime="120" />
+		<monster name="medusa" x="11" y="-27" z="11" spawntime="120" />
+		<monster name="medusa" x="-2" y="-26" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-16" y="-17" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-21" y="-14" z="11" spawntime="120" />
+		<monster name="medusa" x="-23" y="-11" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-19" y="-10" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-14" y="-10" z="11" spawntime="120" />
+		<monster name="medusa" x="-21" y="-7" z="11" spawntime="120" />
+		<monster name="Hydra" x="-17" y="-7" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-21" y="-3" z="11" spawntime="120" />
+		<monster name="medusa" x="-22" y="10" z="11" spawntime="120" />
+		<monster name="Hydra" x="23" y="16" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-21" y="17" z="11" spawntime="120" />
+		<monster name="Hydra" x="-21" y="21" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-2" y="21" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="20" y="22" z="11" spawntime="120" />
+		<monster name="Hydra" x="27" y="22" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="25" y="23" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="23" y="24" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-19" y="25" z="11" spawntime="120" />
+		<monster name="Hydra" x="24" y="26" z="11" spawntime="120" />
+		<monster name="medusa" x="28" y="26" z="11" spawntime="120" />
+		<monster name="Souleater" x="18" y="28" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-17" y="29" z="11" spawntime="120" />
+		<monster name="Hydra" x="-10" y="29" z="11" spawntime="120" />
 	</spawn>
 	<spawn centerx="3480" centery="2127" centerz="11" radius="5">
 		<monster name="Warlock" x="-3" y="0" z="11" spawntime="30" />
@@ -25730,9 +26519,65 @@
 	<spawn centerx="3552" centery="2134" centerz="11" radius="5">
 		<monster name="Demon" x="-2" y="-1" z="11" spawntime="60" />
 	</spawn>
+	<spawn centerx="2546" centery="2135" centerz="11" radius="30">
+		<monster name="Draken Elite" x="7" y="-18" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="13" y="-18" z="11" spawntime="120" />
+		<monster name="Hydra" x="17" y="-17" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="6" y="-15" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="22" y="-15" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="19" y="-13" z="11" spawntime="120" />
+		<monster name="Hydra" x="5" y="-11" z="11" spawntime="120" />
+		<monster name="Hydra" x="20" y="-10" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-25" y="-9" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="23" y="-9" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="4" y="-7" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="9" y="-5" z="11" spawntime="120" />
+		<monster name="medusa" x="8" y="-4" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="14" y="-4" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="18" y="-4" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-25" y="-3" z="11" spawntime="120" />
+		<monster name="medusa" x="18" y="-2" z="11" spawntime="120" />
+		<monster name="Hydra" x="8" y="-1" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-6" y="11" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-28" y="12" z="11" spawntime="120" />
+		<monster name="Hydra" x="-12" y="12" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-7" y="12" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="2508" centery="2138" centerz="11" radius="30">
+		<monster name="Hydra" x="-25" y="4" z="11" spawntime="120" />
+		<monster name="Hydra" x="-14" y="10" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-10" y="13" z="11" spawntime="120" />
+		<monster name="medusa" x="6" y="15" z="11" spawntime="120" />
+		<monster name="medusa" x="-1" y="17" z="11" spawntime="120" />
+		<monster name="Hydra" x="-8" y="18" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-10" y="21" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-5" y="22" z="11" spawntime="120" />
+		<monster name="medusa" x="-9" y="24" z="11" spawntime="120" />
+		<monster name="Hydra" x="-12" y="25" z="11" spawntime="120" />
+		<monster name="Hydra" x="-4" y="25" z="11" spawntime="120" />
+	</spawn>
 	<spawn centerx="3502" centery="2140" centerz="11" radius="5">
 		<monster name="Warlock" x="-4" y="-2" z="11" spawntime="30" />
 		<monster name="Warlock" x="5" y="5" z="11" spawntime="30" />
+	</spawn>
+	<spawn centerx="2463" centery="2156" centerz="11" radius="30">
+		<monster name="Draken Warmaster" x="-7" y="-10" z="11" spawntime="120" />
+		<monster name="Hydra" x="-11" y="-7" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-7" y="-7" z="11" spawntime="120" />
+		<monster name="medusa" x="-10" y="-4" z="11" spawntime="120" />
+		<monster name="Hydra" x="1" y="-4" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-6" y="-3" z="11" spawntime="120" />
+		<monster name="Hydra" x="-3" y="-3" z="11" spawntime="120" />
+		<monster name="Hydra" x="-10" y="1" z="11" spawntime="120" />
+		<monster name="medusa" x="-4" y="3" z="11" spawntime="120" />
+		<monster name="Hydra" x="-4" y="5" z="11" spawntime="120" />
+		<monster name="Souleater" x="-8" y="8" z="11" spawntime="120" />
+		<monster name="Souleater" x="-11" y="13" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-28" y="14" z="11" spawntime="120" />
+		<monster name="Hydra" x="-26" y="20" z="11" spawntime="120" />
+		<monster name="Souleater" x="-17" y="21" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="9" y="25" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="28" y="30" z="11" spawntime="120" />
 	</spawn>
 	<spawn centerx="3350" centery="2156" centerz="11" radius="5">
 		<monster name="Demon" x="-3" y="-2" z="11" spawntime="300" />
@@ -25778,6 +26623,38 @@
 		<monster name="Fire Elemental" x="-2" y="-2" z="11" spawntime="150" />
 		<monster name="Fire Devil" x="-3" y="0" z="11" spawntime="120" />
 		<monster name="Fire Devil" x="2" y="2" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="2403" centery="2174" centerz="11" radius="30">
+		<monster name="Draken Elite" x="-19" y="-15" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-15" y="-15" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-24" y="-14" z="11" spawntime="120" />
+		<monster name="Hydra" x="-14" y="-13" z="11" spawntime="120" />
+		<monster name="Hydra" x="-20" y="-12" z="11" spawntime="120" />
+		<monster name="Souleater" x="13" y="-11" z="11" spawntime="120" />
+		<monster name="medusa" x="-22" y="-10" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-20" y="-5" z="11" spawntime="120" />
+		<monster name="Hydra" x="25" y="-2" z="11" spawntime="120" />
+		<monster name="Souleater" x="29" y="-2" z="11" spawntime="120" />
+		<monster name="Souleater" x="15" y="-1" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="27" y="0" z="11" spawntime="120" />
+		<monster name="Hydra" x="23" y="3" z="11" spawntime="120" />
+		<monster name="medusa" x="22" y="7" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-20" y="9" z="11" spawntime="120" />
+		<monster name="Hydra" x="24" y="11" z="11" spawntime="120" />
+		<monster name="Hydra" x="-20" y="13" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="28" y="13" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-21" y="15" z="11" spawntime="120" />
+		<monster name="Souleater" x="21" y="16" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="5" y="17" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-21" y="19" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="4" y="19" z="11" spawntime="120" />
+		<monster name="Souleater" x="15" y="19" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="2" y="20" z="11" spawntime="120" />
+		<monster name="Souleater" x="7" y="20" z="11" spawntime="120" />
+		<monster name="Hydra" x="6" y="22" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="3" y="23" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-20" y="25" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="0" y="29" z="11" spawntime="120" />
 	</spawn>
 	<spawn centerx="1241" centery="2186" centerz="11" radius="30">
 		<monster name="Carrion Worm" x="13" y="-22" z="11" spawntime="60" />
@@ -25831,6 +26708,38 @@
 		<monster name="Rotworm" x="17" y="27" z="11" spawntime="60" />
 		<monster name="Carrion Worm" x="18" y="29" z="11" spawntime="60" />
 	</spawn>
+	<spawn centerx="2506" centery="2204" centerz="11" radius="30">
+		<monster name="Draken Spellweaver" x="-4" y="-23" z="11" spawntime="120" />
+		<monster name="Hydra" x="-9" y="-22" z="11" spawntime="120" />
+		<monster name="medusa" x="6" y="-22" z="11" spawntime="120" />
+		<monster name="Hydra" x="10" y="-22" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-7" y="-20" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="10" y="-19" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="14" y="-18" z="11" spawntime="120" />
+		<monster name="Hydra" x="14" y="-17" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="19" y="-17" z="11" spawntime="120" />
+		<monster name="Hydra" x="-10" y="-16" z="11" spawntime="120" />
+		<monster name="medusa" x="22" y="-16" z="11" spawntime="120" />
+		<monster name="medusa" x="-13" y="-15" z="11" spawntime="120" />
+		<monster name="Hydra" x="14" y="-9" z="11" spawntime="120" />
+		<monster name="Hydra" x="-16" y="-6" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-11" y="-6" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-11" y="-4" z="11" spawntime="120" />
+		<monster name="Hydra" x="15" y="-4" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="16" y="-3" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="13" y="0" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-7" y="2" z="11" spawntime="120" />
+		<monster name="Hydra" x="0" y="3" z="11" spawntime="120" />
+		<monster name="medusa" x="8" y="3" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="5" y="7" z="11" spawntime="120" />
+		<monster name="Hydra" x="3" y="14" z="11" spawntime="120" />
+		<monster name="medusa" x="-1" y="23" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-22" y="25" z="11" spawntime="120" />
+		<monster name="Hydra" x="-17" y="27" z="11" spawntime="120" />
+		<monster name="Hydra" x="-21" y="29" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-15" y="29" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-24" y="30" z="11" spawntime="120" />
+	</spawn>
 	<spawn centerx="3313" centery="2207" centerz="11" radius="5">
 		<monster name="Demon" x="-2" y="-1" z="11" spawntime="300" />
 		<monster name="Demon" x="2" y="-1" z="11" spawntime="300" />
@@ -25842,6 +26751,52 @@
 		<monster name="Carrion Worm" x="5" y="21" z="11" spawntime="60" />
 		<monster name="Rotworm" x="6" y="22" z="11" spawntime="60" />
 		<monster name="Rotworm" x="-19" y="30" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="2379" centery="2214" centerz="11" radius="30">
+		<monster name="medusa" x="-6" y="-9" z="11" spawntime="120" />
+		<monster name="medusa" x="11" y="-7" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="20" y="-7" z="11" spawntime="120" />
+		<monster name="medusa" x="-10" y="-5" z="11" spawntime="120" />
+		<monster name="Hydra" x="18" y="-5" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-20" y="-4" z="11" spawntime="120" />
+		<monster name="Hydra" x="-15" y="-3" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-11" y="-3" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-19" y="-1" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-16" y="0" z="11" spawntime="120" />
+		<monster name="Hydra" x="-10" y="2" z="11" spawntime="120" />
+		<monster name="Hydra" x="-22" y="3" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-13" y="3" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-9" y="4" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="19" y="4" z="11" spawntime="120" />
+		<monster name="Hydra" x="17" y="5" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-27" y="7" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="18" y="7" z="11" spawntime="120" />
+		<monster name="Hydra" x="23" y="8" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="14" y="9" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="20" y="10" z="11" spawntime="120" />
+		<monster name="Hydra" x="17" y="11" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="25" y="11" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="2463" centery="2215" centerz="11" radius="30">
+		<monster name="Hydra" x="-27" y="-27" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-25" y="-24" z="11" spawntime="120" />
+		<monster name="Souleater" x="-22" y="-23" z="11" spawntime="120" />
+		<monster name="Souleater" x="-14" y="-19" z="11" spawntime="120" />
+		<monster name="Souleater" x="-7" y="-16" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-7" y="-12" z="11" spawntime="120" />
+		<monster name="Hydra" x="-1" y="-9" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-14" y="-7" z="11" spawntime="120" />
+		<monster name="medusa" x="-8" y="-7" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-4" y="-5" z="11" spawntime="120" />
+		<monster name="Hydra" x="-12" y="-4" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="-3" z="11" spawntime="120" />
+		<monster name="Hydra" x="2" y="-3" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-16" y="-2" z="11" spawntime="120" />
+		<monster name="Hydra" x="-7" y="0" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="5" y="1" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-3" y="17" z="11" spawntime="120" />
+		<monster name="medusa" x="6" y="18" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="21" y="21" z="11" spawntime="120" />
 	</spawn>
 	<spawn centerx="1274" centery="2220" centerz="11" radius="30">
 		<monster name="Carrion Worm" x="8" y="-21" z="11" spawntime="60" />
@@ -26271,9 +27226,130 @@
 		<monster name="Banshee" x="0" y="-3" z="11" spawntime="60" />
 		<monster name="Banshee" x="1" y="-3" z="11" spawntime="60" />
 	</spawn>
+	<spawn centerx="3079" centery="2610" centerz="11" radius="30">
+		<monster name="Hydra" x="-10" y="-24" z="11" spawntime="120" />
+		<monster name="medusa" x="-8" y="-24" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="1" y="-24" z="11" spawntime="120" />
+		<monster name="Hydra" x="3" y="-24" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-12" y="-21" z="11" spawntime="120" />
+		<monster name="Hydra" x="7" y="-21" z="11" spawntime="120" />
+		<monster name="Hydra" x="-18" y="-19" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-13" y="-18" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="8" y="-17" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-14" y="-15" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="7" y="-15" z="11" spawntime="120" />
+		<monster name="Hydra" x="2" y="-13" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="5" y="-13" z="11" spawntime="120" />
+		<monster name="Hydra" x="12" y="-13" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-21" y="-12" z="11" spawntime="120" />
+		<monster name="Hydra" x="-18" y="-12" z="11" spawntime="120" />
+		<monster name="Hydra" x="-9" y="-12" z="11" spawntime="120" />
+		<monster name="medusa" x="6" y="-10" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="30" y="-10" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="5" y="-7" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-13" y="-6" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="10" y="-6" z="11" spawntime="120" />
+		<monster name="Hydra" x="-17" y="-4" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="6" y="-4" z="11" spawntime="120" />
+		<monster name="medusa" x="-4" y="-2" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-12" y="-1" z="11" spawntime="120" />
+		<monster name="Hydra" x="-9" y="2" z="11" spawntime="120" />
+		<monster name="medusa" x="-5" y="2" z="11" spawntime="120" />
+		<monster name="Hydra" x="4" y="2" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-21" y="10" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-27" y="21" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="9" y="21" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="3128" centery="2610" centerz="11" radius="30">
+		<monster name="Draken Spellweaver" x="6" y="-6" z="11" spawntime="120" />
+		<monster name="medusa" x="14" y="-5" z="11" spawntime="120" />
+		<monster name="Hydra" x="-10" y="-4" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="19" y="-4" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-12" y="-2" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-10" y="-1" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="21" y="0" z="11" spawntime="120" />
+		<monster name="Hydra" x="26" y="2" z="11" spawntime="120" />
+		<monster name="medusa" x="-9" y="3" z="11" spawntime="120" />
+		<monster name="Hydra" x="-12" y="5" z="11" spawntime="120" />
+		<monster name="medusa" x="28" y="6" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="30" y="9" z="11" spawntime="120" />
+		<monster name="Hydra" x="-12" y="11" z="11" spawntime="120" />
+		<monster name="Hydra" x="30" y="14" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-14" y="19" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-11" y="21" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-8" y="24" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="30" y="28" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="3037" centery="2626" centerz="11" radius="30">
+		<monster name="Serpent Spawn" x="5" y="-28" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="2" y="-27" z="11" spawntime="120" />
+		<monster name="Hydra" x="8" y="-27" z="11" spawntime="120" />
+		<monster name="medusa" x="11" y="-27" z="11" spawntime="120" />
+		<monster name="medusa" x="-2" y="-26" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-16" y="-17" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-21" y="-14" z="11" spawntime="120" />
+		<monster name="medusa" x="-23" y="-11" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-19" y="-10" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-14" y="-10" z="11" spawntime="120" />
+		<monster name="medusa" x="-21" y="-7" z="11" spawntime="120" />
+		<monster name="Hydra" x="-17" y="-7" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-21" y="-3" z="11" spawntime="120" />
+		<monster name="medusa" x="-22" y="10" z="11" spawntime="120" />
+		<monster name="Hydra" x="23" y="16" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-21" y="17" z="11" spawntime="120" />
+		<monster name="Hydra" x="-21" y="21" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-2" y="21" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="20" y="22" z="11" spawntime="120" />
+		<monster name="Hydra" x="27" y="22" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="25" y="23" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="23" y="24" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-19" y="25" z="11" spawntime="120" />
+		<monster name="Hydra" x="24" y="26" z="11" spawntime="120" />
+		<monster name="medusa" x="28" y="26" z="11" spawntime="120" />
+		<monster name="Souleater" x="18" y="28" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-17" y="29" z="11" spawntime="120" />
+		<monster name="Hydra" x="-10" y="29" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="3185" centery="2635" centerz="11" radius="30">
+		<monster name="Draken Elite" x="7" y="-18" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="13" y="-18" z="11" spawntime="120" />
+		<monster name="Hydra" x="17" y="-17" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="6" y="-15" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="22" y="-15" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="19" y="-13" z="11" spawntime="120" />
+		<monster name="Hydra" x="5" y="-11" z="11" spawntime="120" />
+		<monster name="Hydra" x="20" y="-10" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-25" y="-9" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="23" y="-9" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="4" y="-7" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="9" y="-5" z="11" spawntime="120" />
+		<monster name="medusa" x="8" y="-4" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="14" y="-4" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="18" y="-4" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-25" y="-3" z="11" spawntime="120" />
+		<monster name="medusa" x="18" y="-2" z="11" spawntime="120" />
+		<monster name="Hydra" x="8" y="-1" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-6" y="11" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-28" y="12" z="11" spawntime="120" />
+		<monster name="Hydra" x="-12" y="12" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-7" y="12" z="11" spawntime="120" />
+	</spawn>
 	<spawn centerx="2375" centery="2638" centerz="11" radius="1">
 		<monster name="Dragon Lord" x="1" y="-1" z="11" spawntime="61" />
 		<monster name="Dragon Lord" x="-1" y="1" z="11" spawntime="61" />
+	</spawn>
+	<spawn centerx="3147" centery="2638" centerz="11" radius="30">
+		<monster name="Hydra" x="-25" y="4" z="11" spawntime="120" />
+		<monster name="Hydra" x="-14" y="10" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-10" y="13" z="11" spawntime="120" />
+		<monster name="medusa" x="6" y="15" z="11" spawntime="120" />
+		<monster name="medusa" x="-1" y="17" z="11" spawntime="120" />
+		<monster name="Hydra" x="-8" y="18" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-10" y="21" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-5" y="22" z="11" spawntime="120" />
+		<monster name="medusa" x="-9" y="24" z="11" spawntime="120" />
+		<monster name="Hydra" x="-12" y="25" z="11" spawntime="120" />
+		<monster name="Hydra" x="-4" y="25" z="11" spawntime="120" />
 	</spawn>
 	<spawn centerx="2401" centery="2641" centerz="11" radius="1">
 		<monster name="dragon lord hatchling" x="-1" y="-1" z="11" spawntime="61" />
@@ -26285,6 +27361,25 @@
 	<spawn centerx="2411" centery="2651" centerz="11" radius="1">
 		<monster name="Dragon Lord" x="0" y="-1" z="11" spawntime="61" />
 		<monster name="dragon lord hatchling" x="1" y="-1" z="11" spawntime="61" />
+	</spawn>
+	<spawn centerx="3102" centery="2656" centerz="11" radius="30">
+		<monster name="Draken Warmaster" x="-7" y="-10" z="11" spawntime="120" />
+		<monster name="Hydra" x="-11" y="-7" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-7" y="-7" z="11" spawntime="120" />
+		<monster name="medusa" x="-10" y="-4" z="11" spawntime="120" />
+		<monster name="Hydra" x="1" y="-4" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-6" y="-3" z="11" spawntime="120" />
+		<monster name="Hydra" x="-3" y="-3" z="11" spawntime="120" />
+		<monster name="Hydra" x="-10" y="1" z="11" spawntime="120" />
+		<monster name="medusa" x="-4" y="3" z="11" spawntime="120" />
+		<monster name="Hydra" x="-4" y="5" z="11" spawntime="120" />
+		<monster name="Souleater" x="-8" y="8" z="11" spawntime="120" />
+		<monster name="Souleater" x="-11" y="13" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-28" y="14" z="11" spawntime="120" />
+		<monster name="Hydra" x="-26" y="20" z="11" spawntime="120" />
+		<monster name="Souleater" x="-17" y="21" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="9" y="25" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="28" y="30" z="11" spawntime="120" />
 	</spawn>
 	<spawn centerx="2375" centery="2657" centerz="11" radius="1">
 		<monster name="Dragon Lord" x="1" y="-1" z="11" spawntime="61" />
@@ -26300,6 +27395,38 @@
 	<spawn centerx="2371" centery="2671" centerz="11" radius="1">
 		<monster name="dragon lord hatchling" x="-1" y="0" z="11" spawntime="61" />
 		<monster name="Dragon Lord" x="1" y="1" z="11" spawntime="61" />
+	</spawn>
+	<spawn centerx="3042" centery="2674" centerz="11" radius="30">
+		<monster name="Draken Elite" x="-19" y="-15" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-15" y="-15" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-24" y="-14" z="11" spawntime="120" />
+		<monster name="Hydra" x="-14" y="-13" z="11" spawntime="120" />
+		<monster name="Hydra" x="-20" y="-12" z="11" spawntime="120" />
+		<monster name="Souleater" x="13" y="-11" z="11" spawntime="120" />
+		<monster name="medusa" x="-22" y="-10" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-20" y="-5" z="11" spawntime="120" />
+		<monster name="Hydra" x="25" y="-2" z="11" spawntime="120" />
+		<monster name="Souleater" x="29" y="-2" z="11" spawntime="120" />
+		<monster name="Souleater" x="15" y="-1" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="27" y="0" z="11" spawntime="120" />
+		<monster name="Hydra" x="23" y="3" z="11" spawntime="120" />
+		<monster name="medusa" x="22" y="7" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-20" y="9" z="11" spawntime="120" />
+		<monster name="Hydra" x="24" y="11" z="11" spawntime="120" />
+		<monster name="Hydra" x="-20" y="13" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="28" y="13" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-21" y="15" z="11" spawntime="120" />
+		<monster name="Souleater" x="21" y="16" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="5" y="17" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-21" y="19" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="4" y="19" z="11" spawntime="120" />
+		<monster name="Souleater" x="15" y="19" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="2" y="20" z="11" spawntime="120" />
+		<monster name="Souleater" x="7" y="20" z="11" spawntime="120" />
+		<monster name="Hydra" x="6" y="22" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="3" y="23" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-20" y="25" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="0" y="29" z="11" spawntime="120" />
 	</spawn>
 	<spawn centerx="2416" centery="2677" centerz="11" radius="1">
 		<monster name="dragon lord hatchling" x="-1" y="-1" z="11" spawntime="61" />
@@ -26377,6 +27504,84 @@
 		<monster name="Thornback Tortoise" x="2" y="7" z="11" spawntime="60" />
 		<monster name="Tortoise" x="-12" y="8" z="11" spawntime="60" />
 		<monster name="Blood Crab" x="-7" y="8" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="3145" centery="2704" centerz="11" radius="30">
+		<monster name="Draken Spellweaver" x="-4" y="-23" z="11" spawntime="120" />
+		<monster name="Hydra" x="-9" y="-22" z="11" spawntime="120" />
+		<monster name="medusa" x="6" y="-22" z="11" spawntime="120" />
+		<monster name="Hydra" x="10" y="-22" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-7" y="-20" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="10" y="-19" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="14" y="-18" z="11" spawntime="120" />
+		<monster name="Hydra" x="14" y="-17" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="19" y="-17" z="11" spawntime="120" />
+		<monster name="Hydra" x="-10" y="-16" z="11" spawntime="120" />
+		<monster name="medusa" x="22" y="-16" z="11" spawntime="120" />
+		<monster name="medusa" x="-13" y="-15" z="11" spawntime="120" />
+		<monster name="Hydra" x="14" y="-9" z="11" spawntime="120" />
+		<monster name="Hydra" x="-16" y="-6" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-11" y="-6" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-11" y="-4" z="11" spawntime="120" />
+		<monster name="Hydra" x="15" y="-4" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="16" y="-3" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="13" y="0" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-7" y="2" z="11" spawntime="120" />
+		<monster name="Hydra" x="0" y="3" z="11" spawntime="120" />
+		<monster name="medusa" x="8" y="3" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="5" y="7" z="11" spawntime="120" />
+		<monster name="Hydra" x="3" y="14" z="11" spawntime="120" />
+		<monster name="medusa" x="-1" y="23" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-22" y="25" z="11" spawntime="120" />
+		<monster name="Hydra" x="-17" y="27" z="11" spawntime="120" />
+		<monster name="Hydra" x="-21" y="29" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-15" y="29" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-24" y="30" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="3018" centery="2714" centerz="11" radius="30">
+		<monster name="medusa" x="-6" y="-9" z="11" spawntime="120" />
+		<monster name="medusa" x="11" y="-7" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="20" y="-7" z="11" spawntime="120" />
+		<monster name="medusa" x="-10" y="-5" z="11" spawntime="120" />
+		<monster name="Hydra" x="18" y="-5" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-20" y="-4" z="11" spawntime="120" />
+		<monster name="Hydra" x="-15" y="-3" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-11" y="-3" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-19" y="-1" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-16" y="0" z="11" spawntime="120" />
+		<monster name="Hydra" x="-10" y="2" z="11" spawntime="120" />
+		<monster name="Hydra" x="-22" y="3" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-13" y="3" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-9" y="4" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="19" y="4" z="11" spawntime="120" />
+		<monster name="Hydra" x="17" y="5" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-27" y="7" z="11" spawntime="120" />
+		<monster name="Draken Spellweaver" x="18" y="7" z="11" spawntime="120" />
+		<monster name="Hydra" x="23" y="8" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="14" y="9" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="20" y="10" z="11" spawntime="120" />
+		<monster name="Hydra" x="17" y="11" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="25" y="11" z="11" spawntime="120" />
+	</spawn>
+	<spawn centerx="3102" centery="2715" centerz="11" radius="30">
+		<monster name="Hydra" x="-27" y="-27" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-25" y="-24" z="11" spawntime="120" />
+		<monster name="Souleater" x="-22" y="-23" z="11" spawntime="120" />
+		<monster name="Souleater" x="-14" y="-19" z="11" spawntime="120" />
+		<monster name="Souleater" x="-7" y="-16" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-7" y="-12" z="11" spawntime="120" />
+		<monster name="Hydra" x="-1" y="-9" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-14" y="-7" z="11" spawntime="120" />
+		<monster name="medusa" x="-8" y="-7" z="11" spawntime="120" />
+		<monster name="Serpent Spawn" x="-4" y="-5" z="11" spawntime="120" />
+		<monster name="Hydra" x="-12" y="-4" z="11" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="-3" z="11" spawntime="120" />
+		<monster name="Hydra" x="2" y="-3" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-16" y="-2" z="11" spawntime="120" />
+		<monster name="Hydra" x="-7" y="0" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="5" y="1" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="-3" y="17" z="11" spawntime="120" />
+		<monster name="medusa" x="6" y="18" z="11" spawntime="120" />
+		<monster name="Draken Warmaster" x="21" y="21" z="11" spawntime="120" />
 	</spawn>
 	<spawn centerx="2690" centery="2738" centerz="11" radius="27">
 		<monster name="Blood Crab" x="-6" y="-9" z="11" spawntime="60" />
@@ -27294,10 +28499,175 @@
 		<monster name="dragon lord hatchling" x="11" y="11" z="12" spawntime="60" />
 		<monster name="Dragon Lord" x="13" y="11" z="12" spawntime="60" />
 	</spawn>
+	<spawn centerx="2458" centery="2056" centerz="12" radius="30">
+		<monster name="Draken Elite" x="19" y="-13" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="16" y="-12" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="22" y="-12" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="24" y="-12" z="12" spawntime="120" />
+		<monster name="medusa" x="16" y="-10" z="12" spawntime="120" />
+		<monster name="Hydra" x="21" y="-10" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-10" y="-9" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-4" y="-9" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="19" y="-9" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="23" y="-7" z="12" spawntime="120" />
+		<monster name="Hydra" x="-10" y="-6" z="12" spawntime="120" />
+		<monster name="medusa" x="-7" y="-6" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-5" y="-6" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="18" y="-6" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="15" y="-5" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-8" y="-4" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-11" y="-3" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-26" y="-1" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-22" y="-1" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-4" y="-1" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="12" y="-1" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-8" y="0" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="-5" y="3" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="9" y="4" z="12" spawntime="120" />
+		<monster name="Hydra" x="8" y="7" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="0" y="9" z="12" spawntime="120" />
+		<monster name="medusa" x="6" y="9" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="6" y="11" z="12" spawntime="120" />
+		<monster name="medusa" x="16" y="14" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="20" y="14" z="12" spawntime="120" />
+		<monster name="Hydra" x="25" y="15" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="21" y="16" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="18" y="17" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="25" y="18" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="18" y="20" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="21" y="20" z="12" spawntime="120" />
+		<monster name="Hydra" x="-22" y="24" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-14" y="24" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="13" y="24" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-26" y="26" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="5" y="26" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-16" y="28" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-12" y="28" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-7" y="28" z="12" spawntime="120" />
+		<monster name="medusa" x="2" y="28" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-27" y="30" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="2398" centery="2058" centerz="12" radius="30">
+		<monster name="Draken Elite" x="-3" y="-20" z="12" spawntime="120" />
+		<monster name="medusa" x="-16" y="-19" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-5" y="-19" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-17" y="-18" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-17" y="-16" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-4" y="-16" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-20" y="-15" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-13" y="-13" z="12" spawntime="120" />
+		<monster name="Hydra" x="-6" y="-13" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-10" y="-12" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="-12" y="-11" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-6" y="-11" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-14" y="-10" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-7" y="-9" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="0" y="-5" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="4" y="-2" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="28" y="-1" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="12" y="0" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="16" y="1" z="12" spawntime="120" />
+		<monster name="Hydra" x="25" y="1" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="6" y="2" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="8" y="2" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="20" y="2" z="12" spawntime="120" />
+		<monster name="Hydra" x="8" y="4" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="18" y="4" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="9" y="6" z="12" spawntime="120" />
+		<monster name="medusa" x="17" y="6" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="15" y="8" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="13" y="10" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-23" y="11" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-17" y="11" z="12" spawntime="120" />
+		<monster name="Hydra" x="-14" y="11" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-11" y="13" z="12" spawntime="120" />
+		<monster name="medusa" x="-23" y="15" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-10" y="16" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-22" y="17" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-13" y="18" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-23" y="19" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="7" y="20" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="-11" y="21" z="12" spawntime="120" />
+		<monster name="Hydra" x="-19" y="22" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-15" y="22" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-11" y="25" z="12" spawntime="120" />
+		<monster name="Hydra" x="7" y="25" z="12" spawntime="120" />
+		<monster name="medusa" x="-8" y="30" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="2473" centery="2098" centerz="12" radius="30">
+		<monster name="Draken Warmaster" x="18" y="-14" z="12" spawntime="120" />
+		<monster name="Hydra" x="19" y="-12" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="21" y="-11" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="16" y="-10" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="14" y="-9" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="21" y="-8" z="12" spawntime="120" />
+		<monster name="Hydra" x="-30" y="-7" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="19" y="-6" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="17" y="-5" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="21" y="-5" z="12" spawntime="120" />
+		<monster name="medusa" x="15" y="-2" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="19" y="-2" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="11" y="1" z="12" spawntime="120" />
+		<monster name="medusa" x="-4" y="7" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="1" y="9" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-5" y="10" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="11" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-1" y="12" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="4" y="12" z="12" spawntime="120" />
+		<monster name="Hydra" x="-5" y="13" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-2" y="16" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-7" y="18" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-13" y="20" z="12" spawntime="120" />
+		<monster name="Hydra" x="-26" y="23" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-16" y="24" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-29" y="25" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-17" y="26" z="12" spawntime="120" />
+		<monster name="medusa" x="-30" y="27" z="12" spawntime="120" />
+	</spawn>
 	<spawn centerx="2162" centery="2103" centerz="12" radius="5">
 		<monster name="Nightmare" x="-2" y="5" z="12" spawntime="60" />
 		<monster name="Hand of Cursed Fate" x="0" y="5" z="12" spawntime="60" />
 		<monster name="Nightmare" x="2" y="5" z="12" spawntime="60" />
+	</spawn>
+	<spawn centerx="2413" centery="2106" centerz="12" radius="30">
+		<monster name="Serpent Spawn" x="28" y="-18" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-3" y="-17" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-6" y="-16" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="21" y="-15" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="25" y="-14" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-23" y="-13" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-9" y="-12" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="-7" y="-12" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-3" y="-12" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-22" y="-11" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-16" y="-11" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-5" y="-11" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-1" y="-9" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-7" y="-8" z="12" spawntime="120" />
+		<monster name="Hydra" x="-4" y="-8" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-5" y="-5" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="24" y="-3" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-9" y="0" z="12" spawntime="120" />
+		<monster name="medusa" x="24" y="0" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="24" y="3" z="12" spawntime="120" />
+		<monster name="Hydra" x="-13" y="6" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="29" y="12" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-8" y="14" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="23" y="14" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="27" y="14" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-4" y="15" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="19" y="16" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="25" y="16" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-14" y="18" z="12" spawntime="120" />
+		<monster name="Hydra" x="18" y="18" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="23" y="18" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="26" y="18" z="12" spawntime="120" />
+		<monster name="medusa" x="-14" y="22" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-2" y="22" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-3" y="24" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-11" y="25" z="12" spawntime="120" />
+		<monster name="Hydra" x="-8" y="26" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-14" y="27" z="12" spawntime="120" />
 	</spawn>
 	<spawn centerx="2162" centery="2112" centerz="12" radius="5">
 		<monster name="Hand of Cursed Fate" x="-4" y="-3" z="12" spawntime="60" />
@@ -27501,6 +28871,101 @@
 	<spawn centerx="2329" centery="2549" centerz="12" radius="5">
 		<monster name="Warlock" x="1" y="1" z="12" spawntime="60" />
 	</spawn>
+	<spawn centerx="3097" centery="2556" centerz="12" radius="30">
+		<monster name="Draken Elite" x="19" y="-13" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="16" y="-12" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="22" y="-12" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="24" y="-12" z="12" spawntime="120" />
+		<monster name="medusa" x="16" y="-10" z="12" spawntime="120" />
+		<monster name="Hydra" x="21" y="-10" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-10" y="-9" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-4" y="-9" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="19" y="-9" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="23" y="-7" z="12" spawntime="120" />
+		<monster name="Hydra" x="-10" y="-6" z="12" spawntime="120" />
+		<monster name="medusa" x="-7" y="-6" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-5" y="-6" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="18" y="-6" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="15" y="-5" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-8" y="-4" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-11" y="-3" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-26" y="-1" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-22" y="-1" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-4" y="-1" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="12" y="-1" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-8" y="0" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="-5" y="3" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="9" y="4" z="12" spawntime="120" />
+		<monster name="Hydra" x="8" y="7" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="0" y="9" z="12" spawntime="120" />
+		<monster name="medusa" x="6" y="9" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="6" y="11" z="12" spawntime="120" />
+		<monster name="medusa" x="16" y="14" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="20" y="14" z="12" spawntime="120" />
+		<monster name="Hydra" x="25" y="15" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="21" y="16" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="18" y="17" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="25" y="18" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="18" y="20" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="21" y="20" z="12" spawntime="120" />
+		<monster name="Hydra" x="-22" y="24" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-14" y="24" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="13" y="24" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-26" y="26" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="5" y="26" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-16" y="28" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-12" y="28" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-7" y="28" z="12" spawntime="120" />
+		<monster name="medusa" x="2" y="28" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-27" y="30" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="3037" centery="2558" centerz="12" radius="30">
+		<monster name="Draken Elite" x="-3" y="-20" z="12" spawntime="120" />
+		<monster name="medusa" x="-16" y="-19" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-5" y="-19" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-17" y="-18" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-17" y="-16" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-4" y="-16" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-20" y="-15" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-13" y="-13" z="12" spawntime="120" />
+		<monster name="Hydra" x="-6" y="-13" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-10" y="-12" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="-12" y="-11" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-6" y="-11" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-14" y="-10" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-7" y="-9" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="0" y="-5" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="4" y="-2" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="28" y="-1" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="12" y="0" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="16" y="1" z="12" spawntime="120" />
+		<monster name="Hydra" x="25" y="1" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="6" y="2" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="8" y="2" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="20" y="2" z="12" spawntime="120" />
+		<monster name="Hydra" x="8" y="4" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="18" y="4" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="9" y="6" z="12" spawntime="120" />
+		<monster name="medusa" x="17" y="6" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="15" y="8" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="13" y="10" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-23" y="11" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-17" y="11" z="12" spawntime="120" />
+		<monster name="Hydra" x="-14" y="11" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-11" y="13" z="12" spawntime="120" />
+		<monster name="medusa" x="-23" y="15" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-10" y="16" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-22" y="17" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-13" y="18" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-23" y="19" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="7" y="20" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="-11" y="21" z="12" spawntime="120" />
+		<monster name="Hydra" x="-19" y="22" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-15" y="22" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-11" y="25" z="12" spawntime="120" />
+		<monster name="Hydra" x="7" y="25" z="12" spawntime="120" />
+		<monster name="medusa" x="-8" y="30" z="12" spawntime="120" />
+	</spawn>
 	<spawn centerx="2329" centery="2559" centerz="12" radius="5">
 		<monster name="Warlock" x="1" y="-3" z="12" spawntime="60" />
 	</spawn>
@@ -27545,6 +29010,76 @@
 		<monster name="Demon" x="6" y="-7" z="12" spawntime="60" />
 		<monster name="Fire Elemental" x="-8" y="2" z="12" spawntime="60" />
 		<monster name="Demon" x="-8" y="4" z="12" spawntime="60" />
+	</spawn>
+	<spawn centerx="3112" centery="2598" centerz="12" radius="30">
+		<monster name="Draken Warmaster" x="18" y="-14" z="12" spawntime="120" />
+		<monster name="Hydra" x="19" y="-12" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="21" y="-11" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="16" y="-10" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="14" y="-9" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="21" y="-8" z="12" spawntime="120" />
+		<monster name="Hydra" x="-30" y="-7" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="19" y="-6" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="17" y="-5" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="21" y="-5" z="12" spawntime="120" />
+		<monster name="medusa" x="15" y="-2" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="19" y="-2" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="11" y="1" z="12" spawntime="120" />
+		<monster name="medusa" x="-4" y="7" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="1" y="9" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-5" y="10" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="11" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-1" y="12" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="4" y="12" z="12" spawntime="120" />
+		<monster name="Hydra" x="-5" y="13" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-2" y="16" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-7" y="18" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-13" y="20" z="12" spawntime="120" />
+		<monster name="Hydra" x="-26" y="23" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-16" y="24" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-29" y="25" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-17" y="26" z="12" spawntime="120" />
+		<monster name="medusa" x="-30" y="27" z="12" spawntime="120" />
+	</spawn>
+	<spawn centerx="3052" centery="2606" centerz="12" radius="30">
+		<monster name="Serpent Spawn" x="28" y="-18" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-3" y="-17" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-6" y="-16" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="21" y="-15" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="25" y="-14" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-23" y="-13" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-9" y="-12" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="-7" y="-12" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-3" y="-12" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-22" y="-11" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-16" y="-11" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-5" y="-11" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-1" y="-9" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-7" y="-8" z="12" spawntime="120" />
+		<monster name="Hydra" x="-4" y="-8" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-5" y="-5" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="24" y="-3" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-9" y="0" z="12" spawntime="120" />
+		<monster name="medusa" x="24" y="0" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="24" y="3" z="12" spawntime="120" />
+		<monster name="Hydra" x="-13" y="6" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="29" y="12" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-8" y="14" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="23" y="14" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="27" y="14" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-4" y="15" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="19" y="16" z="12" spawntime="120" />
+		<monster name="Serpent Spawn" x="25" y="16" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-14" y="18" z="12" spawntime="120" />
+		<monster name="Hydra" x="18" y="18" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="23" y="18" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="26" y="18" z="12" spawntime="120" />
+		<monster name="medusa" x="-14" y="22" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-2" y="22" z="12" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-3" y="24" z="12" spawntime="120" />
+		<monster name="Draken Warmaster" x="-11" y="25" z="12" spawntime="120" />
+		<monster name="Hydra" x="-8" y="26" z="12" spawntime="120" />
+		<monster name="Draken Elite" x="-14" y="27" z="12" spawntime="120" />
 	</spawn>
 	<spawn centerx="2340" centery="2630" centerz="12" radius="1">
 		<monster name="dragon lord hatchling" x="1" y="1" z="12" spawntime="61" />
@@ -28207,6 +29742,178 @@
 		<monster name="Cyclops" x="1" y="9" z="13" spawntime="60" />
 		<monster name="Behemoth" x="0" y="10" z="13" spawntime="60" />
 	</spawn>
+	<spawn centerx="2354" centery="2022" centerz="13" radius="30">
+		<monster name="Draken Elite" x="14" y="-23" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="18" y="-23" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="11" y="-21" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="17" y="-21" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="7" y="-19" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="17" y="-18" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="8" y="-16" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="16" y="-15" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="7" y="-14" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="11" y="-14" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="18" y="-12" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="28" y="-1" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-10" y="2" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="27" y="3" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-12" y="4" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-18" y="6" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-11" y="6" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="27" y="6" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="24" y="7" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="9" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="22" y="9" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="28" y="9" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-21" y="12" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-23" y="13" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-9" y="13" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="28" y="13" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-19" y="14" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-12" y="14" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-9" y="16" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="14" y="19" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="27" y="19" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="10" y="21" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="12" y="21" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="15" y="22" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-2" y="23" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="8" y="24" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="18" y="24" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="14" y="27" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="10" y="28" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-21" y="30" z="13" spawntime="120" />
+	</spawn>
+	<spawn centerx="2402" centery="2023" centerz="13" radius="30">
+		<monster name="Draken Warmaster" x="-7" y="-24" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-4" y="-24" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="0" y="-23" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-6" y="-19" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="3" y="-19" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="2" y="-16" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-6" y="-15" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-2" y="-15" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="5" y="-15" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-4" y="-14" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-8" y="-11" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="16" y="0" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="16" y="3" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="16" y="6" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="25" y="7" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-15" y="8" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="15" y="8" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="16" y="11" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="26" y="11" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="23" y="12" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="13" y="13" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="26" y="13" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="27" y="15" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-7" y="19" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-3" y="21" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-15" y="24" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-10" y="24" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-7" y="24" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-3" y="24" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="0" y="24" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="4" y="24" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-8" y="27" z="13" spawntime="120" />
+	</spawn>
+	<spawn centerx="2320" centery="2053" centerz="13" radius="30">
+		<monster name="Draken Warmaster" x="-17" y="-17" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-13" y="-15" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-16" y="-14" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-6" y="-13" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="-11" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-19" y="-10" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-13" y="-10" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-16" y="-6" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-8" y="-6" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-20" y="-5" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-15" y="-4" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="12" y="0" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="17" y="0" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="5" y="1" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="9" y="1" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="20" y="2" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="9" y="5" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="19" y="8" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="11" y="9" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="16" y="10" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="6" y="17" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-1" y="18" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="3" y="19" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-4" y="20" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="1" y="22" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-2" y="23" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-4" y="24" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="0" y="25" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="3" y="26" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="6" y="30" z="13" spawntime="120" />
+	</spawn>
+	<spawn centerx="2348" centery="2069" centerz="13" radius="30">
+		<monster name="Draken Spellweaver" x="28" y="-12" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="27" y="-10" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="20" y="11" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="13" y="12" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="9" y="14" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="16" y="15" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="19" y="15" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="7" y="17" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="2" y="18" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="19" y="18" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="16" y="21" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="12" y="22" z="13" spawntime="120" />
+	</spawn>
+	<spawn centerx="2408" centery="2077" centerz="13" radius="30">
+		<monster name="Draken Warmaster" x="-28" y="-23" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-23" y="-20" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="9" y="-20" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="13" y="-20" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="27" y="-20" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-27" y="-19" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="16" y="-19" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-22" y="-18" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="9" y="-17" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="21" y="-16" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="24" y="-16" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-24" y="-15" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="8" y="-15" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="17" y="-15" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-28" y="-14" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="11" y="-12" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-28" y="-10" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="7" y="-9" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-11" y="-8" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-4" y="-8" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-28" y="-7" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="0" y="-6" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-12" y="-4" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-1" y="-4" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-15" y="-3" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-3" y="-2" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-13" y="-1" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-9" y="2" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-6" y="2" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-9" y="4" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-22" y="6" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-22" y="8" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="19" y="9" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-20" y="10" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-24" y="11" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="18" y="12" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="21" y="13" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-14" y="14" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-26" y="15" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="17" y="17" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-24" y="18" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="13" y="18" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-18" y="19" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-13" y="20" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="9" y="21" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="14" y="21" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="18" y="22" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="21" y="22" z="13" spawntime="120" />
+	</spawn>
 	<spawn centerx="3498" centery="2134" centerz="13" radius="5">
 		<monster name="Fire Elemental" x="3" y="-3" z="13" spawntime="150" />
 		<monster name="Fire Elemental" x="0" y="-2" z="13" spawntime="150" />
@@ -28269,6 +29976,82 @@
 		<monster name="medusa" x="-1" y="-2" z="13" spawntime="60" />
 		<monster name="medusa" x="1" y="0" z="13" spawntime="60" />
 	</spawn>
+	<spawn centerx="2993" centery="2522" centerz="13" radius="30">
+		<monster name="Draken Elite" x="14" y="-23" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="18" y="-23" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="11" y="-21" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="17" y="-21" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="7" y="-19" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="17" y="-18" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="8" y="-16" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="16" y="-15" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="7" y="-14" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="11" y="-14" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="18" y="-12" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="28" y="-1" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-10" y="2" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="27" y="3" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-12" y="4" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-18" y="6" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-11" y="6" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="27" y="6" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="24" y="7" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="9" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="22" y="9" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="28" y="9" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-21" y="12" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-23" y="13" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-9" y="13" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="28" y="13" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-19" y="14" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-12" y="14" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-9" y="16" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="14" y="19" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="27" y="19" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="10" y="21" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="12" y="21" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="15" y="22" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-2" y="23" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="8" y="24" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="18" y="24" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="14" y="27" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="10" y="28" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-21" y="30" z="13" spawntime="120" />
+	</spawn>
+	<spawn centerx="3041" centery="2523" centerz="13" radius="30">
+		<monster name="Draken Warmaster" x="-7" y="-24" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-4" y="-24" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="0" y="-23" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-6" y="-19" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="3" y="-19" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="2" y="-16" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-6" y="-15" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-2" y="-15" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="5" y="-15" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-4" y="-14" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-8" y="-11" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="16" y="0" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="16" y="3" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="16" y="6" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="25" y="7" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-15" y="8" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="15" y="8" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="16" y="11" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="26" y="11" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="23" y="12" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="13" y="13" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="26" y="13" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="27" y="15" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-7" y="19" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-3" y="21" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-15" y="24" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-10" y="24" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-7" y="24" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-3" y="24" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="0" y="24" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="4" y="24" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-8" y="27" z="13" spawntime="120" />
+	</spawn>
 	<spawn centerx="2287" centery="2536" centerz="13" radius="30">
 		<monster name="Demon" x="-12" y="-21" z="13" spawntime="30" />
 		<monster name="Demon" x="9" y="-12" z="13" spawntime="30" />
@@ -28279,14 +30062,110 @@
 	<spawn centerx="2328" centery="2540" centerz="13" radius="10">
 		<monster name="Demon" x="-2" y="-3" z="13" spawntime="30" />
 	</spawn>
+	<spawn centerx="2959" centery="2553" centerz="13" radius="30">
+		<monster name="Draken Warmaster" x="-17" y="-17" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-13" y="-15" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-16" y="-14" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-6" y="-13" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="-11" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-19" y="-10" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-13" y="-10" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-16" y="-6" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-8" y="-6" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-20" y="-5" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-15" y="-4" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="12" y="0" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="17" y="0" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="5" y="1" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="9" y="1" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="20" y="2" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="9" y="5" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="19" y="8" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="11" y="9" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="16" y="10" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="6" y="17" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-1" y="18" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="3" y="19" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-4" y="20" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="1" y="22" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-2" y="23" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-4" y="24" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="0" y="25" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="3" y="26" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="6" y="30" z="13" spawntime="120" />
+	</spawn>
 	<spawn centerx="2331" centery="2560" centerz="13" radius="10">
 		<monster name="Demon" x="-5" y="4" z="13" spawntime="30" />
+	</spawn>
+	<spawn centerx="2987" centery="2569" centerz="13" radius="30">
+		<monster name="Draken Spellweaver" x="28" y="-12" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="27" y="-10" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="20" y="11" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="13" y="12" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="9" y="14" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="16" y="15" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="19" y="15" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="7" y="17" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="2" y="18" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="19" y="18" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="16" y="21" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="12" y="22" z="13" spawntime="120" />
 	</spawn>
 	<spawn centerx="2269" centery="2576" centerz="13" radius="10">
 		<monster name="Demon" x="-1" y="2" z="13" spawntime="30" />
 	</spawn>
 	<spawn centerx="2296" centery="2577" centerz="13" radius="10">
 		<monster name="Demon" x="3" y="4" z="13" spawntime="30" />
+	</spawn>
+	<spawn centerx="3047" centery="2577" centerz="13" radius="30">
+		<monster name="Draken Warmaster" x="-28" y="-23" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-23" y="-20" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="9" y="-20" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="13" y="-20" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="27" y="-20" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-27" y="-19" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="16" y="-19" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-22" y="-18" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="9" y="-17" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="21" y="-16" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="24" y="-16" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-24" y="-15" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="8" y="-15" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="17" y="-15" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-28" y="-14" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="11" y="-12" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-28" y="-10" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="7" y="-9" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-11" y="-8" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-4" y="-8" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-28" y="-7" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="0" y="-6" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-12" y="-4" z="13" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-1" y="-4" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-15" y="-3" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-3" y="-2" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-13" y="-1" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-9" y="2" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-6" y="2" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-9" y="4" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-22" y="6" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="-22" y="8" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="19" y="9" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-20" y="10" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-24" y="11" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="18" y="12" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="21" y="13" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="-14" y="14" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-26" y="15" z="13" spawntime="120" />
+		<monster name="Draken Abomination" x="17" y="17" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-24" y="18" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="13" y="18" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-18" y="19" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="-13" y="20" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="9" y="21" z="13" spawntime="120" />
+		<monster name="Draken Elite" x="14" y="21" z="13" spawntime="120" />
+		<monster name="Draken Spellweaver" x="18" y="22" z="13" spawntime="120" />
+		<monster name="Draken Warmaster" x="21" y="22" z="13" spawntime="120" />
 	</spawn>
 	<spawn centerx="2475" centery="879" centerz="14" radius="5">
 		<monster name="Hellfire Fighter" x="0" y="-1" z="14" spawntime="60" />
@@ -28512,6 +30391,95 @@
 		<monster name="Priestess" x="1" y="0" z="14" spawntime="60" />
 		<monster name="Necromancer" x="-1" y="1" z="14" spawntime="60" />
 	</spawn>
+	<spawn centerx="2323" centery="1928" centerz="14" radius="30">
+		<monster name="Ghastly Dragon" x="-1" y="-23" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="7" y="-23" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="-9" y="-20" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="3" y="-18" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="7" y="-17" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="-2" y="-16" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="-9" y="-15" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="7" y="-12" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-9" y="-10" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="2" y="-10" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-4" y="-7" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="1" y="-5" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-2" y="-1" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-12" y="5" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="-12" y="12" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-9" y="15" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="-1" y="18" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="6" y="22" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="12" y="26" z="14" spawntime="120" />
+	</spawn>
+	<spawn centerx="2317" centery="1987" centerz="14" radius="30">
+		<monster name="Ghastly Dragon" x="20" y="-28" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="20" y="-24" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="16" y="-22" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="3" y="-19" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="10" y="-19" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-2" y="-15" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="-8" y="-13" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-11" y="-10" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="-15" y="-7" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-12" y="-2" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="3" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-8" y="9" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="-8" y="13" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-1" y="14" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-14" y="15" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-20" y="17" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="4" y="17" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="7" y="21" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-22" y="22" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="7" y="26" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="4" y="27" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-3" y="29" z="14" spawntime="120" />
+	</spawn>
+	<spawn centerx="2303" centery="2045" centerz="14" radius="30">
+		<monster name="Ghastly Dragon" x="-3" y="-27" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="7" y="-26" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="3" y="-23" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="1" y="-20" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="-10" y="-16" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-7" y="-15" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="-13" y="-14" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="15" y="-14" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="21" y="-14" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="18" y="-13" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-17" y="-12" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="21" y="-10" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="15" y="-9" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-4" y="-8" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="9" y="-7" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-22" y="-3" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="24" y="-2" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="7" y="1" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-4" y="2" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="22" y="3" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="-23" y="5" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="17" y="5" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="12" y="6" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="7" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="20" y="7" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-19" y="9" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="16" y="10" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-15" y="11" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="-12" y="12" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="-10" y="15" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-2" y="21" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="1" y="26" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="-3" y="28" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-1" y="29" z="14" spawntime="120" />
+	</spawn>
+	<spawn centerx="2303" centery="2082" centerz="14" radius="30">
+		<monster name="Draken Warmaster" x="4" y="-6" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="7" y="-1" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="0" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-8" y="7" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="5" y="7" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="-1" y="8" z="14" spawntime="120" />
+	</spawn>
 	<spawn centerx="3588" centery="2134" centerz="14" radius="7">
 		<monster name="Banshee" x="-2" y="-4" z="14" spawntime="60" />
 		<monster name="Banshee" x="3" y="-4" z="14" spawntime="60" />
@@ -28530,6 +30498,95 @@
 		<monster name="Banshee" x="5" y="-3" z="14" spawntime="60" />
 		<monster name="Banshee" x="-1" y="-1" z="14" spawntime="60" />
 		<monster name="Banshee" x="3" y="-1" z="14" spawntime="60" />
+	</spawn>
+	<spawn centerx="2962" centery="2428" centerz="14" radius="30">
+		<monster name="Ghastly Dragon" x="-1" y="-23" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="7" y="-23" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="-9" y="-20" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="3" y="-18" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="7" y="-17" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="-2" y="-16" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="-9" y="-15" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="7" y="-12" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-9" y="-10" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="2" y="-10" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-4" y="-7" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="1" y="-5" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-2" y="-1" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-12" y="5" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="-12" y="12" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-9" y="15" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="-1" y="18" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="6" y="22" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="12" y="26" z="14" spawntime="120" />
+	</spawn>
+	<spawn centerx="2956" centery="2487" centerz="14" radius="30">
+		<monster name="Ghastly Dragon" x="20" y="-28" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="20" y="-24" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="16" y="-22" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="3" y="-19" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="10" y="-19" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-2" y="-15" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="-8" y="-13" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-11" y="-10" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="-15" y="-7" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-12" y="-2" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="3" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-8" y="9" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="-8" y="13" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-1" y="14" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-14" y="15" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-20" y="17" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="4" y="17" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="7" y="21" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-22" y="22" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="7" y="26" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="4" y="27" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-3" y="29" z="14" spawntime="120" />
+	</spawn>
+	<spawn centerx="2942" centery="2545" centerz="14" radius="30">
+		<monster name="Ghastly Dragon" x="-3" y="-27" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="7" y="-26" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="3" y="-23" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="1" y="-20" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="-10" y="-16" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-7" y="-15" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="-13" y="-14" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="15" y="-14" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="21" y="-14" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="18" y="-13" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-17" y="-12" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="21" y="-10" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="15" y="-9" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-4" y="-8" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="9" y="-7" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-22" y="-3" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="24" y="-2" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="7" y="1" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-4" y="2" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="22" y="3" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="-23" y="5" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="17" y="5" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="12" y="6" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="7" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="20" y="7" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="-19" y="9" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="16" y="10" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-15" y="11" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="-12" y="12" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="-10" y="15" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-2" y="21" z="14" spawntime="120" />
+		<monster name="Draken Warmaster" x="1" y="26" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="-3" y="28" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-1" y="29" z="14" spawntime="120" />
+	</spawn>
+	<spawn centerx="2942" centery="2582" centerz="14" radius="30">
+		<monster name="Draken Warmaster" x="4" y="-6" z="14" spawntime="120" />
+		<monster name="Draken Spellweaver" x="7" y="-1" z="14" spawntime="120" />
+		<monster name="Draken Elite" x="-9" y="0" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="-8" y="7" z="14" spawntime="120" />
+		<monster name="Ghastly Dragon" x="5" y="7" z="14" spawntime="120" />
+		<monster name="Draken Abomination" x="-1" y="8" z="14" spawntime="120" />
 	</spawn>
 	<spawn centerx="2882" centery="1232" centerz="15" radius="5">
 		<monster name="Vampire" x="0" y="-3" z="15" spawntime="60" />
