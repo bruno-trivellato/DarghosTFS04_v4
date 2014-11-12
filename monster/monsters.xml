@@ -88,6 +88,7 @@
 
 	<!-- Aracnids -->
 	<monster name="Crystal Spider" file="aracnids/crystal spider.xml"/>
+	<monster name="Spider Boss" file="aracnids/Spider Boss.xml"/>
 	<monster name="Giant Spider" file="aracnids/giant spider.xml"/>
 	<monster name="Poison Spider" file="aracnids/poison spider.xml"/>
 	<monster name="Scorpion" file="aracnids/scorpion.xml"/>
@@ -269,6 +270,7 @@
 	<monster name="Efreet" file="djinns/efreet.xml"/>
 	<monster name="Green Djinn" file="djinns/green djinn.xml"/>
 	<monster name="Marid" file="djinns/marid.xml"/>
+	<monster name="Dijinn Boss" file="djinns/Dijinn Boss.xml"/>
 
 	<!-- Dragons -->
 	<monster name="Dragon Lord" file="dragons/dragon lord.xml"/>
