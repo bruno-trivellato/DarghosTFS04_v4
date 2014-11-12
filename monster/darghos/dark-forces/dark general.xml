@@ -70,4 +70,33 @@
     <item chance="3000" id="2408"/>
     <item chance="2083" id="2523"/>
   </loot>
+  <individual maxItems="3" containerId="6511">
+	  <item name="zaon legs"/>
+	  <item name="elite draken mail"/>
+	  <item name="necromancer shield"/>
+	  <item name="draken boots"/>
+	  <item name="fireborn giant armor"/>
+	  <item name="calamity"/>
+	  <item name="zaoan armor"/>
+	  <item name="mastermind shield"/>
+	  <item name="berserk potion"/>
+	  <item name="guardian boots"/>
+	  <item name="magic plate armor"/>
+	  <item name="nightmare shield"/>
+	  <item name="blade of corruption"/>
+	  <item name="royal draken mail"/>
+	  <item name="drakinata"/>
+	  <item name="devileye"/>
+	  <item name="yol's bow"/>
+	  <item name="yalahari leg piece"/>
+	  <item name="royal crossbow"/>
+	  <item name="zaoan robe"/>
+	  <item name="spellweaver's robe"/>
+	  <item name="spellbook of dark mysteries"/>
+	  <item name="firewalker boots"/>
+	  <item name="spellbook of lost souls"/>
+	  <item name="snake god's wristguard"/>
+	  <item name="cobra crown"/>
+	  <item name="robe of the ice queen"/>
+  </individual>
 </monster>
