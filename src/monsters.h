@@ -25,6 +25,7 @@
 
 struct LootBlock;
 typedef std::list<LootBlock> LootItems;
+typedef std::list<uint32_t> IndividualLootItems;
 
 enum LootMessage_t
 {
@@ -115,6 +116,9 @@ class MonsterType
 
 		std::string name, nameDescription;
 
+        uint32_t maxInvidivualItems;
+        uint32_t individualItemsContainer;
+
 		SummonList summonList;
 		LootItems lootItems;
 		ElementMap elementMap;
@@ -122,6 +126,7 @@ class MonsterType
 		SpellList spellDefenseList;
 		VoiceVector voiceVector;
 		StringVec scriptList;
+        IndividualLootItems individualLootItems;
 };
 
 class Monsters
@@ -146,6 +151,7 @@ class Monsters
 		bool loaded;
 
 		bool loadLoot(xmlNodePtr, LootBlock&);
+        bool loadIndividualLoots(xmlNodePtr, IndividualLootItems&);
 		bool loadChildLoot(xmlNodePtr, LootBlock&);
 
 		ConditionDamage* getDamageCondition(ConditionType_t conditionType,

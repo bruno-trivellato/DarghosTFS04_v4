@@ -21,6 +21,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/depot.cpp
 	${CMAKE_CURRENT_LIST_DIR}/fileloader.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game.cpp
+	${CMAKE_CURRENT_LIST_DIR}/gameservers.cpp
 	${CMAKE_CURRENT_LIST_DIR}/globalevent.cpp
 	${CMAKE_CURRENT_LIST_DIR}/group.cpp
 	${CMAKE_CURRENT_LIST_DIR}/house.cpp

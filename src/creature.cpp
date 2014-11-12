@@ -1182,6 +1182,18 @@ double Creature::getDamageRatio(Creature* attacker) const
 	return attackerDamage / totalDamage;
 }
 
+uint32_t Creature::getTotalDamageReceived(Creature* attacker) const
+{
+    uint32_t attackerDamage = 0;
+    for(CountMap::const_iterator it = damageMap.begin(); it != damageMap.end(); ++it)
+    {
+        if(it->first == attacker->getID())
+            attackerDamage += it->second.total;
+    }
+
+    return attackerDamage;
+}
+
 void Creature::addDamagePoints(Creature* attacker, int32_t damagePoints)
 {
 	uint32_t attackerId = 0;

@@ -48,6 +48,8 @@ void MonsterType::reset()
 
     checkCorpseOwner = g_config.getBool(ConfigManager::CHECK_CORPSE_OWNER);
 
+    individualItemsContainer = maxInvidivualItems = 0;
+
 	maxSummons = -1;
 	targetDistance = 1;
 	staticAttackChance = 95;
@@ -1433,6 +1435,39 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 				tmpNode = tmpNode->next;
 			}
 		}
+        else if(!xmlStrcmp(p->name, (const xmlChar*)"individual"))
+        {
+            if(readXMLInteger(p, "maxItems", intValue))
+                mType->maxInvidivualItems = intValue;
+            else
+                SHOW_XML_WARNING("Missing max individual items");
+
+            if(readXMLInteger(p, "containerId", intValue))
+                mType->individualItemsContainer = intValue;
+            else
+                SHOW_XML_WARNING("Missing individual container id");
+
+            if(!Item::items[mType->individualItemsContainer].isContainer())
+                SHOW_XML_WARNING("Individual container id is not a container");
+
+            if(mType->maxInvidivualItems > Item::items[mType->individualItemsContainer].maxItems)
+                mType->maxInvidivualItems = Item::items[mType->individualItemsContainer].maxItems;
+
+            xmlNodePtr tmpNode = p->children;
+            while(tmpNode)
+            {
+                if(tmpNode->type != XML_ELEMENT_NODE)
+                {
+                    tmpNode = tmpNode->next;
+                    continue;
+                }
+
+                if(!loadIndividualLoots(tmpNode, mType->individualLootItems))
+                    SHOW_XML_WARNING("Cant load individual loot");
+
+                tmpNode = tmpNode->next;
+            }
+        }
 		else if(!xmlStrcmp(p->name, (const xmlChar*)"elements"))
 		{
 			xmlNodePtr tmpNode = p->children;
@@ -1546,6 +1581,28 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 		delete mType;
 
 	return false;
+}
+
+bool Monsters::loadIndividualLoots(xmlNodePtr node, IndividualLootItems& individualLootItems)
+{
+    int32_t intValue;
+    std::string strValue;
+    if(readXMLInteger(node, "id", intValue))
+    {
+        individualLootItems.push_back(intValue);
+    }
+    else if(readXMLString(node, "name", strValue))
+    {
+        int32_t tempId = Item::items.getItemIdByName(strValue);
+        if(!tempId){
+
+            return false;
+        }
+
+        individualLootItems.push_back(tempId);
+    }
+
+    return true;
 }
 
 bool Monsters::loadLoot(xmlNodePtr node, LootBlock& lootBlock)

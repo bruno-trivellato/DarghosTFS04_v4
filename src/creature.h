@@ -560,6 +560,8 @@ class Creature : public AutoId, virtual public Thing
 		virtual uint64_t getLostExperience() const {return 0;}
 
 		virtual double getDamageRatio(Creature* attacker) const;
+        virtual uint32_t getTotalDamageReceived(Creature* attacker) const;
+
 		virtual void getPathSearchParams(const Creature* creature, FindPathParams& fpp) const;
 		DeathList getKillers();
 
