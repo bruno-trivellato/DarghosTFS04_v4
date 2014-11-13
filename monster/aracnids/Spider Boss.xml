@@ -57,7 +57,7 @@
     <immunity invisible="1"/>
   </immunities>
   <summons maxSummons="3">
-    <summon name="the old widow" interval="8000" chance="40" max="3"/>
+    <summon name="the old widow" interval="8000" chance="100" max="3"/>
   </summons>
     <voices interval="5000" chance="100">
     <voice sentence="Voce esta morto!"/>
