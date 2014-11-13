@@ -861,7 +861,7 @@ DeathList Creature::getKillers()
 	for(it = damageMap.begin(); it != damageMap.end(); ++it)
 	{
 		cb = it->second;
-		if((now - cb.ticks) > requiredTime)
+        if((now - cb.ticks) > requiredTime && asLowerCaseString(std::getName()) != "dark general")
 			continue;
 
 		Creature* mdc = g_game.getCreatureByID(it->first);
