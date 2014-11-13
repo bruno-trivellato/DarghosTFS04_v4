@@ -19,16 +19,16 @@
   </flags>
   <attacks>
     <attack name="melee" interval="2000" min="-150" max="-350"/>
-    <attack name="fire" interval="1000" chance="35" range="7" min="-450" max="-810">
+    <attack name="fire" interval="1000" chance="50" range="7" min="-450" max="-810">
       <attribute key="shootEffect" value="fire"/>
     </attack>
-    <attack name="energy" interval="2000" chance="25" range="7" min="-620" max="-1105">
+    <attack name="energy" interval="2000" chance="50" range="7" min="-620" max="-1105">
       <attribute key="shootEffect" value="energy"/>
     </attack>
     <attack name="lifedrain" interval="3000" chance="40" range="7" min="-250" max="-320">
       <attribute key="shootEffect" value="suddendeath"/>
     </attack>
-    <attack name="speed" interval="1000" chance="30" range="7" speedchange="-1540" duration="15000">
+    <attack name="speed" interval="3000" chance="60" range="7" speedchange="-1540" duration="15000">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
     <attack name="drunk" interval="1000" chance="50" range="7">
@@ -42,10 +42,10 @@
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
     </attack>
-    <attack chance="65" interval="4000" range="7" min="-1980" name="death" max="-2870">
+    <attack chance="100" interval="5000" range="7" min="-1980" name="death" max="-2670">
       <attribute key="shootEffect" value="suddendeath"/>
     </attack>
-    <attack name="energycondition" interval="2000" chance="17" radius="3" target="0" min="-390" max="-510">
+    <attack name="energycondition" interval="2000" chance="35" radius="3" target="0" min="-390" max="-510">
       <attribute key="areaEffect" value="energy"/>
     </attack>
   </attacks>

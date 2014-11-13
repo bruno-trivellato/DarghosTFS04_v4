@@ -25,10 +25,10 @@
 	<attack name="speed" interval="2000" chance="45" radius="5" target="0" speedchange="-1600" duration="10000">
       <attribute key="areaEffect" value="poff"/>
     </attack>
-	<attack name="earth" interval="4000" chance="50" length="8" spread="3" min="-700" max="-1450">
+	<attack name="earth" interval="6000" chance="100" length="8" spread="3" min="-900" max="-1550">
 	    <attribute key="areaEffect" value="plantattack" />
 	</attack>
-    <attack name="poison" interval="8000" chance="50" radius="5" target="0" min="-780" max="-1420">
+    <attack name="poison" interval="8000" chance="100" radius="5" target="0" min="-880" max="-1420">
       <attribute key="areaEffect" value="poison"/>
 	</attack>
 	<attack name="outfit" interval="2000" chance="18" range="7" item="3976" duration="4000">
