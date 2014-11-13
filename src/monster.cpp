@@ -1678,8 +1678,6 @@ Item* Monster::createCorpse(DeathList deathList)
 	if(!corpse)
 		return NULL;
 
-    std::clog << "General Death." << std::endl;
-
     //individual system items
     uint32_t fullDamageDealt = (uint32_t)mType->healthMax * 0.20;
     uint32_t itemsCount = mType->maxInvidivualItems;
