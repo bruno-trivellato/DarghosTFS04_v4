@@ -1,13 +1,13 @@
 <raid>
 	<script delay="0">
-	<![CDATA[
-	raidLog("trolls (quendor)")
+		<![CDATA[
+		raidLog("trolls (quendor)")
 		]]>
 	</script>
 	
 	<announce delay="0" type="event" message="A antiga lampada foi ativada depois de muito tempo..."/>
 	<announce delay="60000" type="event" message="Rebeliao em quendor, os dijinns se organizam para o ataque!"/>
-    <announce delay="180000" type="event" message="O grande Genio aparece em quendor, o portao norte está sobre ataque!"/>
+	<announce delay="180000" type="event" message="O grande Genio aparece em quendor, o portao norte está sobre ataque!"/>
 	
 	<!-- Quendor North Gate -->
 	<areaspawn delay="180000" centerx="2023" centery="1787" centerz="7" radius="20">
@@ -17,8 +17,6 @@
 		<monster name="marid" minamount="10" maxamount="25"/>
 	</areaspawn>	
 	
-	<singlespawn delay="180000" name="Dijinn Boss" x="2029" y="1767" z="7" />
-	
-	</areaspawn>
-	
+	<singlespawn delay="180000" name="Djinn Boss" x="2029" y="1767" z="7" />
+
 </raid>

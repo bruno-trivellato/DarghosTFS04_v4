@@ -19,6 +19,4 @@
 	
 	<singlespawn delay="180000" name="Spider boss" x="2029" y="1767" z="7" />
 	
-	</areaspawn>
-	
 </raid>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <servers>
 	
-	<server id="0" name="Uniterian" versionMin="860" versionMax="860" address="177.103.221.232" port="7172"/>
+	<server id="0" name="Uniterian" versionMin="860" versionMax="860" address="187.57.123.80" port="7172"/>
 	<server id="1" name="Tenerian" versionMin="860" versionMax="860" address="177.103.221.232" port="7173"/>
 </servers>

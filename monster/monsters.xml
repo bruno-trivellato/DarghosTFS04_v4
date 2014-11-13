@@ -270,7 +270,7 @@
 	<monster name="Efreet" file="djinns/efreet.xml"/>
 	<monster name="Green Djinn" file="djinns/green djinn.xml"/>
 	<monster name="Marid" file="djinns/marid.xml"/>
-	<monster name="Dijinn Boss" file="djinns/Dijinn Boss.xml"/>
+	<monster name="Djinn Boss" file="djinns/Djinn Boss.xml"/>
 
 	<!-- Dragons -->
 	<monster name="Dragon Lord" file="dragons/dragon lord.xml"/>
