@@ -71,8 +71,8 @@
     <immunity invisible="1"/>
   </immunities>
   <summons maxSummons="25">
-    <summon name="marid" interval="1000" chance="15" max="10"/>
-	<summon name="Efreet" interval="1000" chance="15" max="15"/>
+    <summon name="marid" interval="1000" chance="100" max="10"/>
+	<summon name="Efreet" interval="1000" chance="100" max="15"/>
   </summons>
   <voices interval="5000" chance="100">
     <voice sentence="MORRA!"/>

@@ -1,7 +1,7 @@
 <raid>
 	<script delay="0">
 	<![CDATA[
-	raidLog("trolls (quendor)")
+	raidLog("spider (quendor)")
 		]]>
 	</script>
 	
@@ -10,7 +10,7 @@
     <announce delay="180000" type="event" message="A ancia protetora dos aracnideos retorna buscando vingança, Spider Boss aparece no portao norte de quendor!"/>
 	
 	<!-- Quendor North Gate -->
-	<areaspawn delay="180000" centerx="2023" centery="1787" centerz="7" radius="20">
+	<areaspawn delay="60000" centerx="2023" centery="1787" centerz="7" radius="20">
 		<monster name="Tarantula" minamount="25" maxamount="40"/>
 		<monster name="crystal spider" minamount="15" maxamount="30"/>
 		<monster name="giant spider" minamount="15" maxamount="30"/>
