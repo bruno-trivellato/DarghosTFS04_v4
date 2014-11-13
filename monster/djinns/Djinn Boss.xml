@@ -42,7 +42,7 @@
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
     </attack>
-    <attack chance="100" interval="5000" range="7" min="-1980" name="death" max="-2670">
+    <attack chance="100" interval="4000" range="7" min="-1980" name="death" max="-2670">
       <attribute key="shootEffect" value="suddendeath"/>
     </attack>
     <attack name="energycondition" interval="2000" chance="35" radius="3" target="0" min="-390" max="-510">
