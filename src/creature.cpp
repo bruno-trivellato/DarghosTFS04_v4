@@ -1332,6 +1332,9 @@ void Creature::onAttackedCreatureKilled(Creature* target)
 
 	double gainExp = target->getGainedExperience(this);
 	onGainExperience(gainExp, !target->getPlayer(), false);
+
+    if(target->getMonster() && getPlayer())
+        target->getMonster()->addIndividualItems(getPlayer());
 }
 
 bool Creature::onKilledCreature(Creature* target, DeathEntry& entry)

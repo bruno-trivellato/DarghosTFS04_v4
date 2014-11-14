@@ -1672,85 +1672,81 @@ bool Monster::onDeath()
 	return true;
 }
 
+void Monster::addIndividualItems(Player* player){
+
+    //individual system items
+    uint32_t fullDamageDealt = (uint32_t)healthMax * 0.20;
+    uint32_t itemsCount = mType->maxInvidivualItems;
+
+    if(mType->maxInvidivualItems == 0 || mType->individualLootItems.size() == 0)
+        return;
+
+    uint32_t damageFromPlayer = getTotalDamageReceived(player);
+
+    if(damageFromPlayer < fullDamageDealt){
+        double percent = (double)((damageFromPlayer * 100) / fullDamageDealt) / 100;
+        itemsCount = std::floor((uint32_t)mType->maxInvidivualItems * percent);
+    }
+
+    if(itemsCount > 0){
+        IndividualLootItems sortedItems;
+
+        uint32_t lastId = 0;
+        uint32_t roll = 0;
+
+        for(uint32_t i = 0; i < itemsCount; i++){
+
+            for(IndividualLootItems::iterator lit = mType->individualLootItems.begin(); lit != mType->individualLootItems.end(); lit++){
+
+                if(std::find(sortedItems.begin(), sortedItems.end(), *lit) != sortedItems.end())
+                    continue;
+
+                uint32_t tmpRoll = random_range(0, 100);
+                if(tmpRoll >= roll){
+                    lastId = *lit;
+                    roll = tmpRoll;
+                }
+            }
+
+            sortedItems.push_back(lastId);
+
+            lastId = 0;
+            roll = 0;
+        }
+
+        const ItemType& it = Item::items[mType->individualItemsContainer];
+
+        Item* container = Item::CreateItem(it.id, 1);
+        if(container)
+        {
+            for(IndividualLootItems::iterator lit = sortedItems.begin(); lit != sortedItems.end(); lit++){
+                const ItemType& tit = Item::items[*lit];
+
+                Item* newItem = Item::CreateItem(tit.id, 1);
+                if(newItem)
+                {
+                    ReturnValue ret = g_game.internalAddItem(NULL, container->getContainer(), newItem);
+                    if(ret != RET_NOERROR)
+                        std::clog << "[Warning - Monster::createCorpse] Cannot add individual loot to container." << std::endl;
+                }
+            }
+
+            ReturnValue ret = g_game.internalPlayerAddItem(NULL, player, container, false);
+            if(ret != RET_NOERROR)
+                std::clog << "[Warning - Monster::createCorpse] Cannot add individual loot to player inventory." << std::endl;
+
+            std::stringstream ss;
+            ss << "You received a reward's bundle by your endeavour.";
+            player->sendTextMessage((MessageClasses)g_config.getNumber(ConfigManager::LOOT_MESSAGE_TYPE), ss.str());
+        }
+    }
+}
+
 Item* Monster::createCorpse(DeathList deathList)
 {
 	Item* corpse = Creature::createCorpse(deathList);
 	if(!corpse)
 		return NULL;
-
-    //individual system items
-    uint32_t fullDamageDealt = (uint32_t)mType->healthMax * 0.20;
-    uint32_t itemsCount = mType->maxInvidivualItems;
-
-    if(deathList.size() > 0 && mType->individualLootItems.size() > 0){
-        for(DeathList::iterator it = deathList.begin(); it != deathList.end(); ++it)
-        {
-            Player* player = it->getKillerCreature()->getPlayer();
-            if(!player){
-                player = it->getKillerCreature()->getPlayerMaster();
-                if(!player)
-                    continue;
-            }
-
-            if((uint32_t)it->getDamage() < fullDamageDealt){
-                double percent = (double)((it->getDamage() * 100) / fullDamageDealt) / 100;
-                itemsCount = std::floor((uint32_t)mType->maxInvidivualItems * percent);
-            }
-
-            if(itemsCount > 0){
-                IndividualLootItems sortedItems;
-
-                uint32_t lastId = 0;
-                uint32_t roll = 0;
-
-                for(uint32_t i = 0; i < itemsCount; i++){
-
-                    for(IndividualLootItems::iterator lit = mType->individualLootItems.begin(); lit != mType->individualLootItems.end(); lit++){
-
-                        if(std::find(sortedItems.begin(), sortedItems.end(), *lit) != sortedItems.end())
-                            continue;
-
-                        uint32_t tmpRoll = random_range(0, 100);
-                        if(tmpRoll >= roll){
-                            lastId = *lit;
-                            roll = tmpRoll;
-                        }
-                    }
-
-                    sortedItems.push_back(lastId);
-
-                    lastId = 0;
-                    roll = 0;
-                }
-
-                const ItemType& it = Item::items[mType->individualItemsContainer];
-
-                Item* container = Item::CreateItem(it.id, 1);
-                if(container)
-                {
-                    for(IndividualLootItems::iterator lit = sortedItems.begin(); lit != sortedItems.end(); lit++){
-                        const ItemType& tit = Item::items[*lit];
-
-                        Item* newItem = Item::CreateItem(tit.id, 1);
-                        if(newItem)
-                        {
-                            ReturnValue ret = g_game.internalAddItem(NULL, container->getContainer(), newItem);
-                            if(ret != RET_NOERROR)
-                                std::clog << "[Warning - Monster::createCorpse] Cannot add individual loot to container." << std::endl;
-                        }
-                    }
-
-                    ReturnValue ret = g_game.internalPlayerAddItem(NULL, player, container, false);
-                    if(ret != RET_NOERROR)
-                        std::clog << "[Warning - Monster::createCorpse] Cannot add individual loot to player inventory." << std::endl;
-
-                    std::stringstream ss;
-                    ss << "You received a reward's bundle by your endeavour.";
-                    player->sendTextMessage((MessageClasses)g_config.getNumber(ConfigManager::LOOT_MESSAGE_TYPE), ss.str());
-                }
-            }
-        }
-    }
 
 	if(mType->corpseUnique)
 		corpse->setUniqueId(mType->corpseUnique);

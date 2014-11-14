@@ -123,6 +123,8 @@ class Monster : public Creature
 		virtual BlockType_t blockHit(Creature* attacker, CombatType_t combatType, int32_t& damage,
 			bool checkDefense = false, bool checkArmor = false, bool reflect = true, bool field = false);
 
+        void addIndividualItems(Player* player);
+
 	private:
 		CreatureList targetList;
 		CreatureList friendList;
