@@ -18,14 +18,14 @@
     <flag runonhealth="400"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="1000" min="-300" max="-800"/>
-    <attack name="melee" interval="2000" chance="90" range="7" radius="3" target="0" min="-150" max="-400">
+    <attack name="melee" interval="1000" min="-700" max="-1300"/>
+    <attack name="melee" interval="2000" chance="90" range="7" radius="3" target="0" min="-450" max="-500">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack name="melee" interval="2000" chance="95" range="7" radius="5" target="0" min="-230" max="-320">
+    <attack name="melee" interval="2000" chance="95" range="7" radius="5" target="0" min="-430" max="-620">
       <attribute key="areaEffect" value="groundshaker"/>
     </attack>
-    <attack name="melee" interval="2000" chance="90" range="7" target="1" min="-170" max="-340">
+    <attack name="melee" interval="2000" chance="90" range="7" target="1" min="-370" max="-540">
       <attribute key="shootEffect" value="whirlwindclub"/>
     </attack>
   </attacks>

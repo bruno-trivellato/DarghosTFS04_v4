@@ -20,26 +20,37 @@
     <flag runonhealth="5000"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" skill="120" attack="140"/>
-    <attack name="physical" interval="1000" chance="12" range="7" min="-360" max="-540">
+    <attack name="melee" interval="2000" skill="170" attack="190"/>
+    <attack name="physical" interval="2000" chance="100" range="7" min="-660" max="-940">
       <attribute key="shootEffect" value="largerock"/>
     </attack>
-    <attack name="earth" interval="1000" chance="18" radius="5" target="0" min="-295" max="-465">
+    <attack name="earth" interval="1000" chance="30" radius="5" target="0" min="-995" max="-1165">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack name="speed" interval="1000" chance="6" range="7" speedchange="-1000" duration="20000">
+    <attack name="speed" interval="1000" chance="20" range="7" speedchange="-1800" duration="20000">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="earth" interval="1000" chance="18" radius="7" target="0" min="-265" max="-465">
+    <attack name="earth" interval="1000" chance="25" radius="7" target="0" min="-665" max="-865">
       <attribute key="areaEffect" value="plantattack"/>
     </attack>
-    <attack name="manadrain" interval="1000" chance="14" radius="4" target="1" min="-765" max="-1250">
+    <attack name="manadrain" interval="1000" chance="30" radius="4" target="1" min="-1965" max="-2150">
       <attribute key="areaEffect" value="groundshaker"/>
     </attack>
   </attacks>
   <defenses armor="100" defense="100">
     <defense name="speed" interval="2000" chance="12" speedchange="900" duration="8000">
       <attribute key="areaEffect" value="redshimmer"/>
+	<defense name="healing" interval="1500" chance="33" min="1300" max="2200">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="healing" interval="1000" chance="33" min="700" max="2300">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="healing" interval="500" chance="33" min="700" max="1900">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="healing" interval="500" chance="33" min="700" max="1900">
+      <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>
   <elements>

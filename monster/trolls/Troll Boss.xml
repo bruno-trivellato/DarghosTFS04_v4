@@ -72,31 +72,31 @@
     <voice sentence="Que soninho!"/>
   </voices>
   <loot>
-    <item id="2493" chance="6000">
+    <item id="2493" chance="15000">
       <!--demon helmet-->
     </item>
-    <item id="2421" chance="3000">
+    <item id="2421" chance="10000">
       <!--thunder hammer-->
     </item>
-    <item id="2494" chance="8000">
+    <item id="2494" chance="15000">
       <!--demon armor-->
     </item>
-    <item id="7405" chance="10000">
+    <item id="7405" chance="9000">
       <!--havoc blade-->
     </item>
-    <item id="2542" chance="10000">
+    <item id="2542" chance="18000">
       <!--tempest shield-->
     </item>
-    <item id="2646" chance="1200">
+    <item id="2646" chance="1000">
       <!--golden boots-->
     </item>
-    <item id="6391" chance="2000">
+    <item id="6391" chance="5000">
       <!--nightmare shield-->      
     </item>
     <item id="5892" chance="100000">
       <!--huge chunk of crude iron-->
     </item>  
-    <item id="2365" chance="20000">
+    <item id="2365" chance="25000">
       <!--backpack of holding-->
     </item>
   </loot>
