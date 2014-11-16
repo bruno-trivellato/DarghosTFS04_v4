@@ -124,9 +124,12 @@
         </item>
         <item id="6132" chance="25000">
           <!--pair of soft boots-->
-		<item id="2408" chance="4300">
-          <!--warlord sword-->
+		
+         
         </item>
+	<item id="2408" chance="4300">
+	   <!--warlord sword-->
+	</item>
       </inside>
       <!--purple bag-->
     </item>

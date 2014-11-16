@@ -19,13 +19,15 @@
     <flag checkcorpseowner="0"/>
   </flags>
   <attacks>
-    <attack interval="1500" attack="140" skill="210" name="melee"/>
+    <!--
+	  <attack interval="1500" attack="140" skill="210" name="melee"/>
     <attack chance="25" radius="2" interval="2000" min="-750" name="physical" max="-1200">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
     <attack chance="51" interval="2000" range="7" min="-650" name="physical" max="-900">
       <attribute key="shootEffect" value="whirlwindaxe"/>
     </attack>
+	  -->
   </attacks>
   <defenses defense="50" armor="100"/>
   <immunities>
@@ -41,10 +43,10 @@
     <element icePercent="-10"/>
     <element holyPercent="-15"/>
     <element physicalPercent="50"/>
-	<element deathPercent="35"/>
+	<element deathPercent="-1000"/>
     <element energyPercent="10"/>
   </elements>
-  <summons maxSummons="6">
+  <summons maxSummons="0">
     <summon chance="7" interval="1000" name="dark priestess"/>
   </summons>
   <voices chance="50" interval="5000">
