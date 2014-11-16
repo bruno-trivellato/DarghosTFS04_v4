@@ -693,6 +693,10 @@
 	<monster name="Nieruzad Ghoul" file="Nieruzad/nieruzad ghoul.xml"/>
 	<monster name="Nieruzad Zombie" file="Nieruzad/nieruzad zombie.xml"/>
 	<monster name="Nieruzad Banshee" file="Nieruzad/nieruzad banshee.xml"/>
+	<monster name="summon nieruzad Ghost" file="Nieruzad/summon nieruzad ghost.xml"/>
+	<monster name="summon nieruzad Ghoul" file="Nieruzad/summon nieruzad ghoul.xml"/>
+	<monster name="summon nieruzad Zombie" file="Nieruzad/summon nieruzad zombie.xml"/>
+	<monster name="summon nieruzad Banshee" file="Nieruzad/summon nieruzad banshee.xml"/>
 
 	<!-- Quest da Igreja -->
 	<monster name="Lord Vankyner" file="darghos/lord vankyner.xml"/>

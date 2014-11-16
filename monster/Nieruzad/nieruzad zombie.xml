@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<monster name="Nieruzad Zombie" nameDescription="a nieruzad summon" race="undead" experience="1000" speed="180" manacost="0">
-  <health now="6000" max="6000"/>
+eu<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Nieruzad Zombie" nameDescription="a nieruzad summon" race="undead" experience="80000" speed="180" manacost="0">
+  <health now="5000" max="5000"/>
   <look type="311" corpse="9875"/>
   <targetchange interval="5000" chance="8"/>
   <strategy attack="100" defense="0"/>
@@ -18,8 +18,8 @@
     <flag runonhealth="0"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" min="-0" max="-120"/>
-    <attack name="manadrain" interval="1000" chance="13" range="1" min="-0" max="-100"/>
+    <attack name="melee" interval="2000" min="-330" max="-510"/>
+    <attack name="manadrain" interval="1000" chance="13" range="1" min="-285" max="-400"/>
   </attacks>
   <defenses armor="15" defense="10"/>
   <elements>
@@ -27,10 +27,10 @@
   </elements>
   <immunities>
     <immunity death="1"/>
-    <immunity energy="1"/>
-    <immunity ice="1"/>
-    <immunity fire="1"/>
-    <immunity earth="1"/>
+    <immunity energy="0"/>
+    <immunity ice="0"/>
+    <immunity fire="0"/>
+    <immunity earth="0"/>
     <immunity lifedrain="1"/>
     <immunity paralyze="1"/>
     <immunity invisible="1"/>
@@ -42,12 +42,11 @@
     <voice sentence="Httt.... hmnnsss..."/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0">
-      <!--worm-->
+    <item id="5911" countmax="10" chance1="100000" chancemax="100000">
+      <!--red piece of cloth-->
     </item>
-    <!-- worms -->
-    <item id="2148" countmax="52" chance1="100000" chancemax="0">
-      <!--gold coin-->
+    <item id="5914" countmax="10" chance1="100000" chancemax="100000">
+      <!--yellow piece of cloth-->
     </item>
     <!-- gps -->
     <item id="1987" chance="100000">

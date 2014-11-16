@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Nieruzad" nameDescription="a royal lich" race="blood" experience="5000000" speed="1" manacost="100">
-  <health now="800000" max="800000"/>
+<monster name="Nieruzad" nameDescription="a royal lich" race="blood" experience="10000000" speed="70" manacost="100">
+  <health now="1600000" max="1600000"/>
   <look type="287" head="20" body="30" legs="40" feet="50" corpse="6006"/>
   <targetchange interval="5000" chance="8"/>
   <strategy attack="100" defense="0"/>
@@ -15,21 +15,21 @@
     <flag canpushcreatures="1"/>
     <flag targetdistance="1"/>
     <flag staticattack="90"/>
-    <flag runonhealth="10"/>
+    <flag runonhealth="0"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" min="-250" max="-380"/>
-    <attack name="melee" interval="2000" chance="50" range="7" radius="3" target="0" min="-7000" max="-10000">
+    <attack name="melee" interval="2000" min="-550" max="-780"/>
+    <attack name="melee" interval="2000" chance="100" range="7" radius="3" target="0" min="-10000" max="-20000">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack name="fire" interval="1000" chance="90" range="7" radius="3" target="1" min="-50" max="-70">
+    <attack name="fire" interval="1000" chance="100" range="7" radius="4" target="1" min="-800" max="-1100">
       <attribute key="areaEffect" value="redshimmer"/>
       <attribute key="shootEffect" value="fire"/>
     </attack>
     <attack name="lifedrain" interval="2000" chance="20" range="8" min="-655" max="-1200">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="speed" interval="1000" chance="6" range="7" speedchange="-1000" duration="20000">
+    <attack name="speed" interval="1000" chance="70" range="7" speedchange="-2500" duration="5000">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
   </attacks>
@@ -37,7 +37,7 @@
     <defense name="healing" interval="2000" chance="50" min="1000" max="2000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
-    <defense name="speed" interval="1500" chance="120" range="7" speedchange="500" duration="30000">
+    <defense name="speed" interval="20000" chance="100" range="7" speedchange="100" duration="15000">
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>
@@ -53,10 +53,10 @@
     <immunity invisible="1"/>
   </immunities>
   <summons maxSummons="100">
-    <summon name="Nieruzad Zombie" interval="2000" chance="50" max="20"/>
-    <summon name="Nieruzad Ghoul" interval="2000" chance="70" max="10"/>
-    <summon name="Nieruzad Ghost" interval="2000" chance="60" max="40"/>
-    <summon name="Nieruzad Banshee" interval="2000" chance="20" max="30"/>
+    <summon name="summon nieruzad Zombie" interval="2000" chance="50" max="25"/>
+    <summon name="summon nieruzad Ghoul" interval="2000" chance="50" max="25"/>
+    <summon name="summon nieruzad Ghost" interval="2000" chance="50" max="25"/>
+    <summon name="summon nieruzad Banshee" interval="2000" chance="50" max="25"/>
   </summons>
   <voices interval="5000" chance="100">
     <voice sentence="Is geting cold here han?!" yell="1"/>
@@ -66,46 +66,57 @@
     <voice sentence="Rise my Soldiers, and fight once more!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="9" chance1="100000" chancemax="0">
-      <!--gold coin-->
+    <item id="2160" countmax="100" chance1="100000" chancemax="100000">
+      <!--crystal coin-->
     </item>
-    <item id="2193" chance="8000">
-      <!--ankh-->
+    <item id="8930" chance="23000">
+      <!--emerald sword-->
     </item>
-    <item id="2193" chance="1666">
-      <!--ankh-->
+    <item id="6528" chance="25000">
+      <!--the avenger-->
     </item>
-    <item id="2193" chance="4000">
-      <!--ankh-->
+    <item id="8925" chance="3000">
+      <!--solar axe-->
     </item>
-    <item id="5905" countmax="1" chance1="2000" chancemax="0">
-      <!--vampire dust-->
+    <item id="7455" chance="15000">
+      <!--mythril axe-->
     </item>
-    <item id="2534" chance="200">
-      <!--vampire shield-->
+    <item id="8926" chance="9000">
+      <!--demonwing axe-->
+	</item>
+    <item id="7450" chance="1000">
+      <!--Hammer of Prophecy-->
+	</item>
+    <item id="8858" chance="1000">
+      <!--elethriel's elemental bow-->
+	</item>
+    <item id="8882" chance="13000">
+      <!--earthborn titan armor-->
     </item>
     <item id="1994" chance="100000">
       <inside>
-        <item id="5905" countmax="4" chance1="2500" chancemax="0">
-          <!--vampire dust-->
+        <item id="8888" chance="23000">
+          <!--master archer's armor-->
         </item>
-        <item id="5905" countmax="3" chance1="10000" chancemax="0">
-          <!--vampire dust-->
+        <item id="11117" chance="28000">
+          <!--crystal boots-->
         </item>
-        <item id="2747" chance="18000">
-          <!--grave flower-->
-        </item>
-        <item id="2646" chance="500">
+        <item id="2646" chance="6000">
           <!--golden boots-->
         </item>
-        <item id="2656" chance="600">
-          <!--blue robe-->
+        <item id="2496" chance="1000">
+          <!--horned helmet-->
         </item>
-        <item id="5905" countmax="3" chance1="1538" chancemax="0">
-          <!--vampire dust-->
+        <item id="2495" chance="1500">
+          <!--demon legs-->
         </item>
-        <item id="2479" chance="1428">
-          <!--strange helmet-->
+        <item id="2523" chance="2200">
+          <!--blessed shield-->
+        </item>
+        <item id="6132" chance="25000">
+          <!--pair of soft boots-->
+		<item id="2408" chance="4300">
+          <!--warlord sword-->
         </item>
       </inside>
       <!--purple bag-->
