@@ -17,6 +17,6 @@
 		<monster name="wailing widow" minamount="10" maxamount="20"/>
 	</areaspawn>	
 	
-	<singlespawn delay="180000" name="Spider boss" x="2029" y="1767" z="7" />
+	<singlespawn delay="180000" name="Spider boss" x="1772" y="1845" z="7" />
 	
 </raid>
