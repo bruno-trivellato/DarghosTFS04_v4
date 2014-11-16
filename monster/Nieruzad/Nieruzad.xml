@@ -22,7 +22,7 @@
     <attack name="melee" interval="2000" chance="100" range="7" radius="3" target="0" min="-10000" max="-20000">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack name="fire" interval="1000" chance="100" range="7" radius="4" target="1" min="-800" max="-1100">
+    <attack name="fire" interval="4000" chance="100" range="7" radius="4" target="1" min="-800" max="-1100">
       <attribute key="areaEffect" value="redshimmer"/>
       <attribute key="shootEffect" value="fire"/>
     </attack>
@@ -78,10 +78,10 @@
     <item id="2160" countmax="100" chance1="100000" chancemax="100000">
       <!--crystal coin-->
     </item>
-    <item id="8930" chance="23000">
+    <item id="8930" chance="19000">
       <!--emerald sword-->
     </item>
-    <item id="6528" chance="25000">
+    <item id="6528" chance="22000">
       <!--the avenger-->
     </item>
     <item id="8925" chance="3000">
@@ -107,7 +107,7 @@
         <item id="8888" chance="23000">
           <!--master archer's armor-->
         </item>
-        <item id="11117" chance="28000">
+        <item id="11117" chance="24000">
           <!--crystal boots-->
         </item>
         <item id="2646" chance="6000">
@@ -122,7 +122,7 @@
         <item id="2523" chance="2200">
           <!--blessed shield-->
         </item>
-        <item id="6132" chance="25000">
+        <item id="6132" chance="22000">
           <!--pair of soft boots-->
 		
          
@@ -134,4 +134,33 @@
       <!--purple bag-->
     </item>
   </loot>
+    <individual maxItems="2" containerId="6511">
+	  <item name="zaon legs"/>
+	  <item name="golden legs"/>
+	  <item name="mastermind shield"/>
+	  <item name="blue robe"/>
+	  <item name="eagle shield"/>
+	  <item name="pair of soft boots"/>
+	  <item name="zaoan armor"/>
+	  <item name="blue legs"/>
+	  <item name="emerald sword"/>
+	  <item name="guardian boots"/>
+	  <item name="magic plate armor"/>
+	  <item name="nightmare shield"/>
+	  <item name="blade of corruption"/>
+	  <item name="royal helmet"/>
+	  <item name="magic sword"/>
+	  <item name="demonwing axe"/>
+	  <item name="demon helmet"/>
+	  <item name="demon legs"/>
+	  <item name="hailstorm rod"/>
+	  <item name="snakebite rod"/>
+	  <item name="spellweaver's robe"/>
+	  <item name="boots of haste"/>
+	  <item name="firewalker boots"/>
+	  <item name="spellbook of lost souls"/>
+	  <item name="snake god's wristguard"/>
+	  <item name="cobra crown"/>
+	  <item name="robe of the ice queen"/>
+  </individual>
 </monster>
