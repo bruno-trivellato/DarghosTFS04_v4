@@ -41,10 +41,19 @@
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>
+  <elements>
+    <element deathPercent="25"/>
+    <element icePercent="25"/>
+    <element earthPercent="25"/>
+    <element holyPercent="25"/>
+    <element energyPercent="25"/>
+	<element firePercent="25"/>
+    <element physicalPercent="-50"/>
+  </elements>  
   <immunities>
     <immunity physical="0"/>
     <immunity energy="0"/>
-    <immunity fire="1"/>
+    <immunity fire="0"/>
     <immunity poison="0"/>
     <immunity lifedrain="0"/>
     <immunity paralyze="1"/>
