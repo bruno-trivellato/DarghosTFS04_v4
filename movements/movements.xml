@@ -3,6 +3,7 @@
 
 	<!-- Teleports to Hunts System -->
         <movevent type="StepIn" fromaid="8500" toaid="8599" event="script" value="game/hunts.lua"/>
+	<movevent type="StepIn" actionid="4087" event="script" value="game/hunts.lua"/>
 	
 	*Kashmir Quest
 	<movevent type="StepIn" itemid="9738" event="script" value="game/kashmir.quest/azerusdeath.lua"/>

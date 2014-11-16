@@ -114,6 +114,7 @@
 		TRAINERS_ROOM_LEAVE			= 4085,
 			
 		PORTAL_HUNTS                           	= 4086,
+		RAIDS_ENTRANCE				= 4087,
 
 		--  Poi Entrance Fields
 		POI_FIELDS_START			= 6010,
