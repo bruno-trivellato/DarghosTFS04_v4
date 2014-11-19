@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<monster speed="280" manacost="0" race="blood" skull="red" experience="35000" name="dark archer" nameDescription="an archer of dark forces">
+<monster speed="280" manacost="0" race="blood" skull="red" experience="55000" name="dark archer" nameDescription="an archer of dark forces">
   <health max="13400" now="13400"/>
   <look head="79" body="95" addons="3" legs="19" type="129" corpse="6080" feet="95"/>
   <targetchange chance="20" interval="5000"/>

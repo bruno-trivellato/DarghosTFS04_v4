@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<monster speed="210" manacost="0" race="blood" skull="red" experience="35000" name="Dark Priestess" nameDescription="a priestess of dark forces">
+<monster speed="210" manacost="0" race="blood" skull="red" experience="55000" name="Dark Priestess" nameDescription="a priestess of dark forces">
   <health max="9000" now="9000"/>
   <look head="116" body="114" addons="3" legs="38" type="138" corpse="6081" feet="79"/>
   <targetchange chance="8" interval="5000"/>

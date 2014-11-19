@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<monster speed="260" race="blood" skull="red" experience="35000" name="dark mage" nameDescription="an mage of dark forces">
+<monster speed="260" race="blood" skull="red" experience="55000" name="dark mage" nameDescription="an mage of dark forces">
   <health max="9700" now="9700"/>
   <look head="113" body="114" addons="1" legs="114" type="145" corpse="6080" feet="79"/>
   <targetchange chance="10" interval="5000"/>

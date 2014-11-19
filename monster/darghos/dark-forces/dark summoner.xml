@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<monster speed="210" manacost="0" race="blood" skull="red" experience="35000" name="dark summoner" nameDescription="a summoner of dark forces">
+<monster speed="210" manacost="0" race="blood" skull="red" experience="55000" name="dark summoner" nameDescription="a summoner of dark forces">
   <health max="8400" now="8400"/>
   <look head="79" body="114" addons="3" legs="114" type="133" corpse="6080" feet="94"/>
   <targetchange chance="8" interval="5000"/>
