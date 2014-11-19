@@ -17,6 +17,6 @@
 		<monster name="marid" minamount="10" maxamount="25"/>
 	</areaspawn>	
 	
-	<singlespawn delay="180000" name="Djinn Boss" x="1806" y="1861" z="7" />
+	<singlespawn delay="180000" name="Lawlyet" x="1806" y="1861" z="7" />
 
 </raid>
