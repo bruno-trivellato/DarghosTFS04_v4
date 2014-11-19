@@ -67,11 +67,11 @@
     <item chance="50000" id="2150" countmax="39"/>
     <item chance="33333" id="7589" countmax="16"/>
     <item chance="10000" id="10220"/>
-    <item chance="25000" id="8904"/>
-    <item chance="33333" id="7896"/>
+    <item chance="2000" id="8904"/> <!-- Spellscroll of prophecies -->
+    <item chance="33333" id="7896"/> 
     <item chance="3333" id="7440"/>
-    <item chance="1562" id="11356"/>
-    <item chance="980" id="11117"/>
-    <item chance="3000" id="9778"/>
+    <item chance="666" id="11356"/> <!-- Zaoan Robe -->
+    <item chance="333" id="11117"/> <!-- Crystal boots -->
+    <item chance="100" id="9778"/> <!-- Yalahari mask -->
   </loot>
 </monster>

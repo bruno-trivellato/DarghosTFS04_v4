@@ -66,14 +66,14 @@
     <item chance="33333" id="6529" countmax="100"/>
     <item chance="33333" id="2152" countmax="29"/>
     <item chance="25000" id="7368" countmax="100"/>	
-    <item chance="2400" id="11304"/>
-    <item chance="2400" id="11301"/>
-    <item chance="641" id="12646"/>
-    <item chance="961" id="11302"/>
-    <item chance="480" id="12607"/>
-    <item chance="312" id="8852"/>
-    <item chance="160" id="8856"/>
-    <item chance="2400" id="9777"/>
-	<item chance="641" id="8851"/>
+    <item chance="1000" id="11304"/> <!-- Zaoan Legs -->
+    <item chance="1000" id="11301"/> <!-- Zaoan Armor -->
+    <item chance="666" id="12646"/> <!-- Draken Boots -->
+    <item chance="666" id="11302"/> <!-- Zaoan Helmet -->
+    <item chance="333" id="12607"/> <!-- Elite Draken Mail -->
+    <item chance="100" id="8852"/> <!-- Devileye -->
+    <item chance="100" id="8856"/> <!-- Yol's Bow -->
+    <item chance="100" id="9777"/> <!-- Yalahari Leg Piece -->
+	<item chance="100" id="8851"/> <!-- Royal Crossbow -->
   </loot>
 </monster>

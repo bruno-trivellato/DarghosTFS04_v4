@@ -52,25 +52,25 @@
     <voice sentence="Pelos guerreiros da armada negra!" yell="1"/>
   </voices>
   <loot>
-    <item chance="2400" id="11304"/>
-    <item chance="480" id="12607"/>
-    <item chance="961" id="11302"/>
-    <item chance="1900" id="6433"/>
-    <item chance="641" id="12646"/>
-    <item chance="6666" id="12613"/>
-    <item chance="1200" id="8881"/>
-    <item chance="160" id="8932"/>
-    <item chance="2400" id="11301"/>
-    <item chance="8888" id="2514"/>
+    <item chance="1000" id="11304"/> <!-- Zaoan Legs -->
+    <item chance="100" id="12607"/> <!-- Elite Draken Mail -->
+    <item chance="1000" id="11302"/> <!-- Zaoan Helmet -->
+    <item chance="666" id="6433"/> <!-- Necromancer Shield -->
+    <item chance="1000" id="12646"/> <!-- Draken boots -->
+    <item chance="6666" id="12613"/> <!-- Twiceslicer -->
+    <item chance="333" id="8881"/> <!-- Fireborn giant armor -->
+    <item chance="100" id="8932"/> <!-- Calamity -->
+    <item chance="1000" id="11301"/> <!-- Zaoan Armor -->
+    <item chance="8888" id="2514"/> <!-- Mastermind shield -->
     <item chance="6666" id="7439"/>
-    <item chance="1900" id="11240"/>
+    <item chance="666" id="11240"/> <!-- Guardian boots -->
     <item chance="100000" id="2152" countmax="58"/>
     <item chance="50000" id="8473" countmax="7"/>
-    <item chance="2400" id="2472"/>
-    <item chance="1200" id="6391"/>
-    <item chance="10000" id="2466"/>
-    <item chance="3846" id="12649"/>
-	<item chance="1282" id="12642"/>
+    <item chance="2400" id="2472"/> <!-- Magic plate armor -->
+    <item chance="666" id="6391"/> <!-- Nightmare shield -->
+    <item chance="10000" id="2466"/> <!-- Golden armor -->
+    <item chance="1000" id="12649"/> <!-- Blade of corruption -->
+	<item chance="333" id="12642"/> <!-- Royal draken mail -->
     <item chance="50000" id="7591" countmax="16"/>
     <item chance="7700" id="11305"/>
   </loot>

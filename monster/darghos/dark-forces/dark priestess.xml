@@ -45,11 +45,11 @@
     <item chance="50000" id="9970" countmax="12"/>
     <item chance="33333" id="2145" countmax="34"/>
     <item chance="25000" id="2150" countmax="27"/>
-    <item chance="16666" id="8903"/>
-    <item chance="1562" id="11355"/>
-    <item chance="641" id="12646"/>
-    <item chance="3000" id="12647"/>
-    <item chance="990" id="12630"/>
-    <item chance="495" id="8866"/>
+    <item chance="666" id="8903"/> <!-- Spellbook of lost souls -->
+    <item chance="666" id="11355"/> <!-- Spellweaver's robe -->
+    <item chance="1000" id="12646"/> <!-- Draken boots -->
+    <item chance="100" id="12647"/> <!-- Snake god's wristguard -->
+    <item chance="100" id="12630"/> <!-- Cobra crown -->
+    <item chance="333" id="8866"/> <!-- Robe of ice queen -->
   </loot>
 </monster>
