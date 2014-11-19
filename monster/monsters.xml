@@ -270,7 +270,7 @@
 	<monster name="Efreet" file="djinns/efreet.xml"/>
 	<monster name="Green Djinn" file="djinns/green djinn.xml"/>
 	<monster name="Marid" file="djinns/marid.xml"/>
-	<monster name="Lawlyet" file="djinns/Lawlyet.xml"/>
+	<monster name="Asaad" file="djinns/Asaad.xml"/>
 
 	<!-- Dragons -->
 	<monster name="Dragon Lord" file="dragons/dragon lord.xml"/>
@@ -648,7 +648,7 @@
 	<monster name="Swamp Troll" file="trolls/swamp troll.xml"/>
 	<monster name="Troll" file="trolls/troll.xml"/>
 	<monster name="Troll Champion" file="trolls/troll champion.xml"/>
-    <monster name="Lanchya" file="trolls/Lanchya.xml"/>
+    <monster name="Gal'darah" file="trolls/Gal'darah.xml"/>
 
 	<!-- Undead Humanoids -->
 	<monster name="Banshee" file="undead humanoids/banshee.xml"/>
