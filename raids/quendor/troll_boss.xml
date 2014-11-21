@@ -18,7 +18,7 @@
 		<monster name="swamp Troll" minamount="26" maxamount="36"/>
 	</areaspawn>	
 	
-	<singlespawn delay="400000" name="Lanchya" x="1786" y="1893" z="7" />
+	<singlespawn delay="400000" name="Gal'darah" x="1786" y="1893" z="7" />
 	
 	<!-- Quendor East Gate -->
 	<areaspawn delay="400000" centerx="2069" centery="1861" centerz="7" radius="8">
