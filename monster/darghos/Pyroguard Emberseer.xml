@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Pyroguard Emberseer" nameDescription="King of elements" race="undead" experience="8000000" speed="570" manacost="0">
+  <health now="280000" max="280000"/>
+  <look type="290" corpse="9009"/>
+  <targetchange interval="5000" chance="10"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="160" attack="155"/>
+	<attack name="energy" interval="3000" chance="50" target="0" radius="4" min="-650" max="-830">
+      <attribute key="shootEffect" value="energy"/>
+      <attribute key="areaEffect" value="purpleenergy"/>
+    </attack>
+	<attack name="energy" interval="1000" chance="80" range="7" target="1" min="-150" max="-450">
+      <attribute key="areaEffect" value="purpleenergy"/>
+    </attack>
+	<attack name="earth" interval="3000" chance="50" target="0" radius="4" min="-650" max="-830">
+      <attribute key="areaEffect" value="stones"/>
+    </attack>
+    <attack name="earth" interval="1000" chance="80" target="1" range="7" radius="4" min="-200" max="-350">
+      <attribute key="shootEffect" value="smallearth"/>
+      <attribute key="areaEffect" value="poison"/>
+    </attack>
+	<attack name="speed" interval="2000" chance="50" radius="5" target="0" speedchange="-1000" duration="8000">
+      <attribute key="areaEffect" value="icetornado"/>
+    </attack>
+	<attack name="ice" interval="1000" chance="80" range="7" target="1" min="-50" max="-550">
+      <attribute key="shootEffect" value="smallice"/>
+      <attribute key="areaEffect" value="iceattack"/>
+	</attack>
+    <attack name="fire" interval="1000" chance="85" length="1" min="-980" max="-1350">
+      <attribute key="areaEffect" value="fireattack"/>
+    </attack>
+    <attack name="fire" interval="3000" chance="50" target="1" radius="4" min="-400" max="-680">
+      <attribute key="areaEffect" value="firearea"/>
+	</attack>	
+    <attack name="death" interval="2000" chance="60" range="7" radius="4" target="0" min="-950" max="-980">
+	  <attribute key="areaEffect" value="mortarea"/>
+	</attack>	
+    <attack name="Holy" interval="2000" chance="90" range="7" radius="4" target="0" min="-550" max="-780">
+	  <attribute key="areaEffect" value="holyarea"/>
+	</attack>	
+  </attacks>
+  <defenses armor="30" defense="30">
+    <defense name="outfit" interval="3000" chance="50" monster="Energy Overlord" duration="3000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="outfit" interval="3000" chance="50" monster="Fire Overlord" duration="3000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="outfit" interval="3000" chance="50" monster="Earth Overlord" duration="3000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="outfit" interval="3000" chance="50" monster="Ice Overlord" duration="3000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+    <element energyPercent="95"/>
+    <element firePercent="95"/>
+	<element earthPercent="95"/>
+	<element icePercent="95"/>
+	<element deathPercent="95"/>
+	<element physicalPercent="50"/>
+	<element holyPercent="20"/>
+  </elements>
+  <immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="5">
+    <summon chance="30" interval="5000" name="Lord of the elements" max="5"/>
+  </summons>
+  <voices chance="100" interval="4000">
+    <voice sentence="NENHUMA MAGIA PODE ME DERROTAR!" yell="1"/>
+    <voice sentence="VENHA PARA A MORTE!" yell="1"/>
+    <voice sentence="TREMA PERANTE MINHA DEFESA" yell="1"/>
+    <voice sentence="ISTO ACABARA AQUI DE UMA VEZ POR TODAS!" yell="1"/>
+    <voice sentence="NUNCA ME LEMBRAREI DE ALGUEM TAO PATETICO!" yell="1"/>
+  </voices>
+  <loot>
+    <item id="2160" countmax="100" chance1="100000" chancemax="100000">
+      <!--crystal coin-->
+    </item>
+    <item id="7450" chance="700">
+      <!--Hammer of Prophecy-->
+	</item>
+    <item id="8927" chance="1300">
+      <!--dark trinity mace-->
+	</item>
+	<item id="8930" chance="3600">
+      <!--emerald sword-->
+	</item>
+	<item id="7436" chance="6000">
+      <!--angelic axe-->
+	</item>
+    <item id="7455" chance="5500">
+      <!--mythril axe-->
+	</item>
+    <item id="8926" chance="2100">
+      <!--demonwing axe-->
+	</item>
+    <item id="8858" chance="1000">
+      <!--elethriel's elemental bow-->
+	</item>
+    <item id="2342" chance="400">
+      <!--helmet of the ancients-->
+	</item>
+    <item id="1993" chance="100000">
+      <inside>
+	    <item id="12630" chance="9000">
+          <!--cobra crown-->
+	    </item>
+	    <item id="8884" chance="8000">
+          <!--oceanborn leviathan armor-->
+		</item>
+        <item id="8883" chance="7000">
+          <!--Windborn Colossus Armor-->
+		</item>
+        <item id="9932" chance="13000">
+          <!--firewalker boots-->
+		</item>
+        <item id="11240" chance="18000">
+          <!--guardian boots-->
+		</item>
+        <item id="8905" chance="900">
+          <!--rainbow shield-->
+		</item>
+        <item id="6433" chance="6900">
+          <!--necromancer shield-->
+		  
+		  
+	    </item>
+    <item id="8918" chance="7000">
+       <!--spellbook of dark mysteries-->
+    </item>
+	  </inside>
+      <!--red bag-->
+    </item>
+  </loot>
+</monster>

@@ -33,6 +33,7 @@
 		<raid name="troll_boss" file="quendor/troll_boss.xml" interval2="9999999" margin="240"/>
 		<raid name="spider_boss" file="quendor/spider_boss.xml" interval2="9999999" margin="240"/>
 		<raid name="dijinn_boss" file="quendor/dijinn_boss.xml" interval2="9999999" margin="240"/>
+		<raid name="Elemental_boss" file="quendor/Elemental_boss.xml" interval2="9999999" margin="240"/>
 		
 		-- Thorn
 		<raid name="thorn_cyclops" file="thorn/thorn_cyclops.xml" interval2="1440" margin="240"/>
