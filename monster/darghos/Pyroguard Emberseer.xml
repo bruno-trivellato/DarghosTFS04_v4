@@ -132,6 +132,9 @@
         <item id="9932" chance="13000">
           <!--firewalker boots-->
 		</item>
+        <item id="2123" chance="100000">
+          <!--ring of the sky-->
+		</item>
         <item id="11240" chance="18000">
           <!--guardian boots-->
 		</item>
