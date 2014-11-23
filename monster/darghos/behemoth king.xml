@@ -108,6 +108,7 @@
     </item>
     <item id="2414" chance="75000">
       <!--dragon lance-->
+    </item>
 	<item id="2365" countmax="1" chance="100000">
       <inside>
         <item id="2377" chance="90000">
