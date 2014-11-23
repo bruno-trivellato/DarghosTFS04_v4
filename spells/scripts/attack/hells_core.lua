@@ -42,7 +42,7 @@ function onCastSpell(cid, var)
 	
 	if(ret) then
 	  doCreatureAddMana(cid, -(mana), false)
-	  if(not getPlayerFlagValue(cid, PlayerFlag_NotGainMana) and (not getTileInfo(getThingPosition(cid)).hardcore or config.hardcoreManaSpent)) then
+	  if(not getPlayerFlagValue(cid, PlayerFlag_NotGainMana)) then
 		  doPlayerAddSpentMana(cid, (mana))
 	  end
 	end
