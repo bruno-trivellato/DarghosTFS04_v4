@@ -25,10 +25,11 @@
 	
 	<announce delay="1500000" type="event" message="Os gigantes agora lutam ao lado de seu Rei, o Rei Behemoth aclama a tomada de Quendor por seus súditos! Quendor resistira a esta grave ameaça?"/>
 	<areaspawn delay="1500000" centerx="2020" centery="1770" centerz="7" radius="15">
-		<monster name="Behemoth King" minamount="1" maxamount="1"/>
 		<monster name="Behemoth" minamount="16" maxamount="24"/>
 		<monster name="Cyclops Drone" minamount="34" maxamount="56"/>
 		<monster name="Cyclops Smith" minamount="34" maxamount="56"/>
 	</areaspawn>		
+	
+	<singlespawn delay="1500000" name="Behemoth king" x="1806" y="1861" z="7" />
 	
 </raid>

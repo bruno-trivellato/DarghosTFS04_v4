@@ -20,8 +20,8 @@
     <flag runonhealth="5000"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" skill="170" attack="190"/>
-    <attack name="physical" interval="2000" chance="100" range="7" min="-660" max="-940">
+    <attack name="melee" interval="2000" skill="210" attack="250"/>
+    <attack name="physical" interval="2000" chance="100" range="7" min="-860" max="-1140">
       <attribute key="shootEffect" value="largerock"/>
     </attack>
     <attack name="earth" interval="1000" chance="30" radius="5" target="0" min="-995" max="-1165">
@@ -30,7 +30,7 @@
     <attack name="speed" interval="1000" chance="20" range="7" speedchange="-1800" duration="20000">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="earth" interval="1000" chance="25" radius="7" target="0" min="-665" max="-865">
+    <attack name="earth" interval="1000" chance="25" radius="7" target="0" min="-865" max="-1025">
       <attribute key="areaEffect" value="plantattack"/>
     </attack>
     <attack name="manadrain" interval="1000" chance="30" radius="4" target="1" min="-1965" max="-2150">
@@ -41,16 +41,16 @@
     <defense name="speed" interval="2000" chance="12" speedchange="900" duration="8000">
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
-    <defense name="healing" interval="1500" chance="33" min="1300" max="2200">
+    <defense name="healing" interval="1500" chance="33" min="1400" max="2400">
       <attribute key="areaEffect" value="blueshimmer"/>    
     </defense>
-    <defense name="healing" interval="1000" chance="33" min="700" max="2300">
+    <defense name="healing" interval="1000" chance="33" min="900" max="2400">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
-    <defense name="healing" interval="500" chance="33" min="700" max="1900">
+    <defense name="healing" interval="500" chance="33" min="800" max="2100">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
-    <defense name="healing" interval="500" chance="33" min="700" max="1900">
+    <defense name="healing" interval="500" chance="33" min="750" max="1950">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>
@@ -108,57 +108,87 @@
     </item>
     <item id="2414" chance="75000">
       <!--dragon lance-->
-    </item>
-    <item id="2377" chance="90000">
-      <!--two handed sword-->
-    </item>
-    <item id="2502" chance="60000">
-      <!--dwarven helmet-->
-    </item>	
-    <item id="7416" chance="25000">
-      <!--bloody edge-->
-    </item>
-    <item id="2472" chance="60000">
-      <!--magic plate armor-->
-    </item>
-    <item id="5887" chance="20000">
-      <!--piece of royal steel-->
-    </item>
-    <item id="2426" chance="60000">
-      <!--naginata-->
-    </item>
-    <item id="2393" chance="60000">
-      <!--giant sword-->
-    </item>
-    <item id="2392" chance="90000">
-      <!--fire sword-->
-    </item>
-    <item id="2476" chance="60000">
-      <!--knight armor-->
-    </item>
-    <item id="2645" chance="60000">
-      <!--steel boots-->
-    </item>
-    <item id="2520" chance="60000">
-      <!--demon shield-->
-    </item>
-    <item id="2514" chance="60000">
-      <!--mastermind shield-->
-    </item>
-    <item id="2474" chance="1000">
-      <!--winged helmet-->
-    </item>
-    <item id="2470" chance="60000">
-      <!--golden legs-->
-    </item>
-    <item id="2493" chance="60000">
-      <!--demon helmet-->
-    </item>
-    <item id="7368" countmax="100" chance="90000">
-      <!--infernal bolt-->
-    </item>
-    <item id="2365" chance="90000">
+	<item id="2365" countmax="1" chance="100000">
+      <inside>
+        <item id="2377" chance="90000">
+          <!--two handed sword-->
+        </item>
+        <item id="2502" chance="60000">
+          <!--dwarven helmet-->
+        </item>	
+        <item id="7416" chance="25000">
+          <!--bloody edge-->
+        </item>
+        <item id="2472" chance="60000">
+          <!--magic plate armor-->
+        </item>
+        <item id="5887" chance="20000">
+          <!--piece of royal steel-->
+        </item>
+        <item id="2426" chance="60000">
+          <!--naginata-->
+        </item>
+        <item id="2393" chance="60000">
+          <!--giant sword-->
+        </item>
+        <item id="2392" chance="90000">
+          <!--fire sword-->
+        </item>
+        <item id="2476" chance="60000">
+          <!--knight armor-->
+        </item>
+        <item id="2645" chance="60000">
+          <!--steel boots-->
+        </item>
+        <item id="2520" chance="60000">
+          <!--demon shield-->
+        </item>
+        <item id="2514" chance="60000">
+          <!--mastermind shield-->
+        </item>
+        <item id="2474" chance="1000">
+          <!--winged helmet-->
+        </item>
+        <item id="2470" chance="60000">
+          <!--golden legs-->
+        </item>
+        <item id="2493" chance="60000">
+          <!--demon helmet-->
+        </item>
+        <item id="7368" countmax="100" chance="90000">
+          <!--infernal bolt-->
+        </item>
+      </inside>
       <!--backpack of holding-->
-    </item>
+	  </item>
   </loot>
+    <individual maxItems="1" containerId="6511">
+	  <item name="backpack of holding"/>
+	  <item name="golden legs"/>
+	  <item name="mastermind shield"/>
+	  <item name="demon helmet"/>
+	  <item name="steel boots"/>
+	  <item name="knight armor"/>
+	  <item name="fire sword"/>
+	  <item name="naginata"/>
+	  <item name="giant sword"/>
+	  <item name="two handed sword"/>
+	  <item name="magic plate armor"/>
+	  <item name="nightmare shield"/>
+	  <item name="dragon lance"/>
+	  <item name="royal helmet"/>
+	  <item name="magic sword"/>
+	  <item name="ruthless axe"/>
+	  <item name="amulet of loss"/>
+	  <item name="dwarven helmet"/>
+	  <item name="bright sword"/>
+	  <item name="katana"/>
+	  <item name="golden boots"/>
+	  <item name="boots of haste"/>
+	  <item name="royal crossbow"/>
+	  <item name="winged helmet"/>
+	  <item name="demon helmet"/>
+	  <item name="spike sword"/>
+	  <item name="golden armor"/>
+  </individual>
 </monster>
