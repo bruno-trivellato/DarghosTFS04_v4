@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="General Drakkisath" nameDescription="The king of undeads" race="undead" experience="6000000" speed="700" manacost="0">
-	<health now="50000000" max="50000000"/>
+<monster name="General Drakkisath" nameDescription="The king of undeads" race="undead" experience="9000000" speed="700" manacost="0">
+	<health now="20000000" max="20000000"/>
 	<look type="231" corpse="6306"/>
 	<targetchange interval="5000" chance="8"/>
 	<strategy attack="100" defense="0"/>
@@ -50,20 +50,20 @@
 	</attacks>
 	<defenses armor="5" defense="35"/>
 	<elements>
-		<element deathPercent="-150"/>
-		<element earthPercent="-150"/>
-		<element firePercent="-150"/>
-		<element physicalPercent="-550"/>
-		<element icePercent="-450"/>
-		<element energyPercent="-400"/>
-		<element holyPercent="-1000"/>
+		<element deathPercent="-350"/>
+		<element earthPercent="-350"/>
+		<element firePercent="-350"/>
+		<element physicalPercent="-750"/>
+		<element icePercent="-650"/>
+		<element energyPercent="-600"/>
+		<element holyPercent="-1200"/>
 	</elements>
 	<immunities>
 		<immunity paralyze="1"/>
 		<immunity invisible="1"/>
 	</immunities>
-	<summons maxSummons="20">
-      <summon name="Undead Dragon" interval="15000" chance="100" max="20"/>
+	<summons maxSummons="10">
+      <summon name="Undead Dragon" interval="10000" chance="100" max="10"/>
     </summons>
 	<voices interval="5000" chance="100">
 		<voice sentence="Verei a morte?" yell="1"/>
