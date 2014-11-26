@@ -74,6 +74,7 @@
 	<monster name="Pillar" file="darghos/timegame/pillar.xml"/>
 	<monster name="Pyroguard Emberseer" file="darghos/Pyroguard Emberseer.xml"/>
 	<monster name="General Drakkisath" file="darghos/General Drakkisath.xml"/>
+	<monster name="Shade" file="darghos/Shade.xml"/>
 
 	<!-- Amazons -->
 	<monster name="Amazon" file="amazons/amazon.xml"/>
