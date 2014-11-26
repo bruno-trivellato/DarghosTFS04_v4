@@ -1,0 +1,14 @@
+<raid>
+	<script delay="0">
+		<![CDATA[
+		raidLog("Undead (quendor)")
+		]]>
+	</script>
+	
+	<announce delay="0" type="event" message="Os Mortos vivos se unem para atacar quendor."/>
+	<announce delay="60000" type="event" message="Uma grande batalha está para se formar, o grande rei dos mortos aclama sua chegada!"/>
+	<announce delay="180000" type="event" message="Quendor foi invadida, detenham esse dragao, o rei dos mortos promete aniquilar todos!"/>
+	
+	<singlespawn delay="180000" name="General Drakkisath" x="1806" y="1861" z="7" />
+
+</raid>
