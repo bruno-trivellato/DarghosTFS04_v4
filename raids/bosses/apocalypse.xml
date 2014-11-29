@@ -5,21 +5,10 @@
 	]]>
 	</script>
 
-	<announce delay="0" type="event" message="Uma Grande ameaça pode ser sentida em aracura! Uma nuvem de maldade toma posse da cave demoniaca!."/>
-	<announce delay="180000" type="event" message="O surgimento da criatura antiga está próxima, subordinanos Desta criatura nascem aguardando anciosamente seu retorno."/>
-	<announce delay="600000" type="event" message="Apocalypse retorna das trevas! A cave de demonios de aracura ao sul foi tomada! Cuidado cidadoes!."/>
+	<announce delay="0" type="event" message="Uma Grande ameaça pode ser sentida em quendor! Uma nuvem de maldade toma posse da da cidade!."/>
+	<announce delay="60000" type="event" message="O surgimento da criatura antiga está próxima, subordinanos Desta criatura nascem aguardando anciosamente seu retorno."/>
+	<announce delay="180000" type="event" message="Apocalypse retorna das trevas! Quendor foi tomada! Cuidado cidadoes!."/>
 
-	
-	<singlespawn delay="600000" name="Apocalypse" x="3441" y="2245" z="13" />
-	<singlespawn delay="180000" name="demonlegs" x="3457" y="2239" z="13" />
-	<singlespawn delay="180000" name="demonlegs" x="3474" y="2228" z="13" />
-	<singlespawn delay="180000" name="demonlegs" x="3474" y="2211" z="13" />
-	<singlespawn delay="180000" name="demonlegs" x="3449" y="2200" z="13" />
-	<singlespawn delay="180000" name="demonlegs" x="3487" y="2213" z="13" />
-	<singlespawn delay="180000" name="demonlegs" x="3493" y="2230" z="13" />
-	<singlespawn delay="180000" name="demonlegs" x="3493" y="2242" z="13" />
-	<singlespawn delay="180000" name="demonlegs" x="3498" y="2257" z="13" />
-	<singlespawn delay="180000" name="demonlegs" x="3509" y="2227" z="13" />
-	<singlespawn delay="180000" name="demonlegs" x="3522" y="2216" z="13" />
+	<singlespawn delay="600000" name="Apocalypse" x="1786" y="1894" z="7" />
 	
 </raid>

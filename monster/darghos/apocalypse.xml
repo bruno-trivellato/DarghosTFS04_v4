@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Apocalypse" nameDescription="Apocalypse" race="fire" experience="3000000" speed="430" manacost="0">
-  <health now="160000" max="160000"/>
+<monster name="Apocalypse" nameDescription="Apocalypse" race="fire" experience="15000000" speed="750" manacost="0">
+  <health now="320000" max="320000"/>
   <look type="12" head="38" body="114" legs="0" feet="94" corpse="6068"/>
   <targetchange interval="5000" chance="20"/>
   <strategy attack="65" defense="5"/>
@@ -18,45 +18,45 @@
     <flag runonhealth="0"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" min="-300" max="-1000"/>
-    <attack name="physical" interval="1000" chance="33" radius="8" target="0" min="-700" max="-1000">
+    <attack name="melee" interval="2000" min="-960" max="-1955"/>
+    <attack name="physical" interval="1000" chance="45" radius="8" target="0" min="-750" max="-1200">
       <attribute key="areaEffect" value="mortarea"/>
     </attack>
-    <attack name="speed" interval="1000" chance="12" radius="6" target="0" speedchange="-850" duration="60000">
+    <attack name="speed" interval="1000" chance="30" radius="6" target="0" speedchange="-1120" duration="60000">
       <attribute key="areaEffect" value="poison"/>
     </attack>
-    <attack name="strength" interval="1000" chance="12" radius="3" target="0">
+    <attack name="strength" interval="1000" chance="10" radius="3" target="0">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack name="fire" interval="1000" chance="10" range="7" radius="7" target="1" min="-300" max="-700">
+    <attack name="fire" interval="1000" chance="10" range="7" radius="7" target="1" min="-500" max="-700">
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
     </attack>
-    <attack name="manadrain" interval="1000" chance="7" length="0" spread="3" min="-600" max="-1100">
+    <attack name="manadrain" interval="1000" chance="10" length="0" spread="3" min="-900" max="-1800">
       <attribute key="areaEffect" value="energyarea"/>
     </attack>
-    <attack name="physical" interval="1000" chance="19" length="8" spread="3" min="-170" max="-500"/>
+    <attack name="physical" interval="1000" chance="20" length="8" spread="3" min="-470" max="-700"/>
     <attack name="energy" interval="1000" chance="100" length="8" spread="0" min="-700" max="-1200">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="poisoncondition" interval="1000" chance="10" length="0" spread="0" min="-300" max="-700">
+    <attack name="poisoncondition" interval="1000" chance="20" length="0" spread="0" min="-800" max="-1100">
       <attribute key="areaEffect" value="greenspark"/>
     </attack>
-    <attack name="lifedrain" interval="1000" chance="15" length="8" spread="0" min="-100" max="-300">
+    <attack name="lifedrain" interval="1000" chance="30" length="8" spread="0" min="-300" max="-500">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
   </attacks>
   <defenses armor="188" defense="145">
-    <defense name="healing" interval="1000" chance="25" min="3000" max="5000">
+    <defense name="healing" interval="2000" chance="30" min="2000" max="4000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
-    <defense name="speed" interval="2000" chance="8" speedchange="680" duration="60000">
+    <defense name="speed" interval="2000" chance="10" speedchange="980" duration="60000">
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>
   <immunities>
     <immunity physical="0"/>
-    <immunity death="1"/>
+    <immunity death="0"/>
     <immunity energy="0"/>
     <immunity fire="1"/>
     <immunity poison="1"/>
@@ -67,10 +67,13 @@
     <immunity invisible="1"/>
   </immunities>
   <elements>
-    <element holyPercent="-5"/>
-    <element icePercent="30"/>
-    <element energyPercent="-60"/>
-    <element firePercent="-5"/>
+    <element holyPercent="-30"/>
+    <element icePercent="-15"/>
+    <element energyPercent="80"/>
+	<element physicalPercent="-10"/>
+	<element earthPercent="10"/>
+	<element deathPercent="55"/>
+    <element firePercent="40"/>
   </elements>
   <voices interval="5000" chance="10">
     <voice sentence="BOW TO THE POWER OF THE RUTHLESS SEVEN!" yell="1"/>
