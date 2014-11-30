@@ -196,4 +196,33 @@
       <!--bag-->
     </item>
   </loot>
+      <individual maxItems="1" containerId="6511">
+	  <item name="demon helmet"/>
+	  <item name="golden boots"/>
+	  <item name="mastermind shield"/>
+	  <item name="demon armor"/>
+	  <item name="jade hat"/>
+	  <item name="leather boots"/>
+	  <item name="crown armor"/>
+	  <item name="crown legs"/>
+	  <item name="the justice seeker"/>
+	  <item name="crystal sword"/>
+	  <item name="magic plate armor"/>
+	  <item name="teddy bear"/>
+	  <item name="thunder hammer"/>
+	  <item name="crown helmet"/>
+	  <item name="hellforged axe"/>
+	  <item name="voodoo doll"/>
+	  <item name="boots of haste"/>
+	  <item name="underworld rod"/>
+	  <item name="skullcracker armor"/>
+	  <item name="golden armor"/>
+	  <item name="golden legs"/>
+	  <item name="magma legs"/>
+	  <item name="firewalker boots"/>
+	  <item name="runed sword"/>
+	  <item name="ancient amulet"/>
+	  <item name="crystal ring"/>
+	  <item name="ring of the sky"/>
+  </individual>
 </monster>
