@@ -7,52 +7,9 @@
 	</script>
 
 	<announce delay="0" type="event" message="Chuva de meteoros em Quendor! Demonios caem do ceu! O apocalypse nunca esteve tao proximo!"/>
-	<announce delay="360000" type="event" message="Uma chuva de demonios nunca vistos antes caí sobre a cidade de Quendor. Nao ha para onde correr, e o fim!"/>
-	<announce delay="660000" type="event" message="Resista ao apocalyspe demoniaco ou sera o fim da raca humana, Demon crushers aparecem ao portao norte!"/>
-	<announce delay="1320000" type="event" message="Nada se compara ao que pode ser visto em Quendor! Nunca estivemos tao proximos do fim, defenda a sua existencia, Burning Demon aparece!"/>
+	<announce delay="60000" type="event" message="Uma chuva de demonios nunca vistos antes caí sobre a cidade de Quendor. Nao ha para onde correr, e o fim!"/>
+	<announce delay="120000" type="event" message="Nada se compara ao que pode ser visto em Quendor! Nunca estivemos tao proximos do fim, defenda a sua existencia, Burning Demon aparece!"/>
 
-
-	<areaspawn delay="360000" centerx="2010" centery="1792" centerz="7" radius="15">
-		<monster name="Demon" minamount="2" maxamount="5"/>
-	</areaspawn>
-
-	<areaspawn delay="360000" centerx="2025" centery="1777" centerz="7" radius="15">
-		<monster name="Demon" minamount="2" maxamount="5"/>
-	</areaspawn>
-
-	<areaspawn delay="360000" centerx="2025" centery="1762" centerz="7" radius="15">
-		<monster name="Demon" minamount="2" maxamount="5"/>
-	</areaspawn>
-	
-	<areaspawn delay="360000" centerx="2008" centery="1770" centerz="7" radius="15">
-		<monster name="Demon" minamount="2" maxamount="5"/>
-	</areaspawn>
-
-	<areaspawn delay="360000" centerx="1986" centery="1803" centerz="7" radius="15">
-		<monster name="Demon" minamount="2" maxamount="5"/>
-	</areaspawn>
-
-	<singlespawn delay="1320000" name="burning demon" x="2032" y="1752" z="7" />
-
-<areaspawn delay="660000" centerx="2010" centery="1792" centerz="7" radius="15">
-		<monster name="Demon Crusher" minamount="2" maxamount="3"/>
-	</areaspawn>
-
-	<areaspawn delay="660000" centerx="2025" centery="1777" centerz="7" radius="15">
-		<monster name="Demon Crusher" minamount="2" maxamount="3"/>
-	</areaspawn>
-
-	<areaspawn delay="660000" centerx="2025" centery="1762" centerz="7" radius="15">
-		<monster name="Demon Crusher" minamount="2" maxamount="3"/>
-	</areaspawn>
-	
-	<areaspawn delay="660000" centerx="2008" centery="1770" centerz="7" radius="15">
-		<monster name="Demon Crusher" minamount="2" maxamount="3"/>
-	</areaspawn>
-
-	<areaspawn delay="660000" centerx="1986" centery="1803" centerz="7" radius="15">
-		<monster name="Demon Crusher" minamount="2" maxamount="3"/>
-	</areaspawn>
-	
+	<singlespawn delay="120000" name="burning demon" x="1786" y="1893" z="7" />
 	
 </raid>
