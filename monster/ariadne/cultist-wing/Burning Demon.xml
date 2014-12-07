@@ -38,7 +38,7 @@
     </attack>
   </attacks>
   <defenses armor="55" defense="55">
-    <defense name="healing" interval="7000" chance="100" min="5000" max="7000">
+    <defense name="healing" interval="20000" chance="100" min="5000" max="5000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
     <defense name="speed" interval="1000" chance="46" speedchange="790" duration="8000">
@@ -147,19 +147,19 @@
         <item id="8918" chance="23000">
           <!--spellbook of dark mysteries-->
         </item>
-		<item id="2523" chance="5000">
+		<item id="2523" chance="6000">
           <!--blessed shield-->
 	    </item>
-		<item id="2469" chance="4000">
+		<item id="2469" chance="5000">
           <!--Dragon Scale Legs-->
 		</item>
-		<item id="8882" chance="15000">
+		<item id="8882" chance="18000">
           <!--earthborn titan armor-->
         </item>
-		<item id="2495" chance="6000">
+		<item id="2495" chance="7000">
           <!--demon legs-->
         </item>
-		<item id="2496" chance="4000">
+		<item id="2496" chance="5000">
           <!--horned helmet-->
         </item>
   </loot>
