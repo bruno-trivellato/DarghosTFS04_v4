@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Son of Ferumbras" tp="1" species="human" nameDescription="the son of ferumbras" race="blood" experience="1950800" speed="680" manacost="0">
-  <health now="133000" max="13300"/>
+  <health now="163000" max="163000"/>
   <look type="194" head="117" body="110" legs="129" feet="57" corpse="6080"/>
   <targetchange interval="60000" chance="0"/>
   <strategy attack="100" defense="0"/>
@@ -15,7 +15,7 @@
     <flag staticattack="50"/>
     <flag lightlevel="0"/>
     <flag lightcolor="0"/>
-    <flag targetdistance="5"/>
+    <flag targetdistance="2"/>
     <flag runonhealth="0"/>
   </flags>
   <attacks>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Incendius" nameDescription="a Ragnaros Creation" race="fire" experience="545000" speed="200" manacost="0">
-  <health now="49500" max="49500"/>
+<monster name="Incendius" nameDescription="a Ragnaros Creation" race="fire" experience="1600000" speed="200" manacost="0">
+  <health now="82500" max="82500"/>
   <look type="49" corpse="6324"/>
   <targetchange interval="5000" chance="90"/>
   <strategy attack="100" defense="0"/>

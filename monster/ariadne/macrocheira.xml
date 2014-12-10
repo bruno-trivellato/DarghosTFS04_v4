@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Macrocheira" nameDescription="a giant spider" race="VENOM" experience="3100" speed="380" manacost="0">
-  <health now="36000" max="36000"/>
+<monster name="Macrocheira" nameDescription="a giant spider" race="VENOM" experience="510000" speed="380" manacost="0">
+  <health now="65000" max="65000"/>
   <look type="38" head="0" body="0" legs="0" feet="0" corpse="5977"/>
   <targetchange interval="5000" chance="8"/>
   <strategy attack="100" defense="0"/>

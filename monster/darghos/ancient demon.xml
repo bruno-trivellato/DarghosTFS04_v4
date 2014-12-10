@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Ancient Demon" nameDescription="a demon" race="fire" experience="750000" speed="400" manacost="0">
-  <health now="64000" max="64000"/>
+<monster name="Ancient Demon" nameDescription="a demon" race="fire" experience="1520000" speed="400" manacost="0">
+  <health now="128000" max="128000"/>
   <look type="35" head="0" body="0" legs="0" feet="0" corpse="2916"/>
   <targetchange interval="2000" chance="10"/>
   <strategy attack="70" defense="10"/>
