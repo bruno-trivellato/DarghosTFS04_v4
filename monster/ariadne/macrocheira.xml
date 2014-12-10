@@ -18,7 +18,7 @@
     <flag runonhealth="0"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" min="-300" max="-920"/>
+    <attack name="melee" interval="2000" min="-780" max="-1520"/>
     <attack name="poisonfield" interval="1000" chance="100" range="10" radius="1" target="1">
       <attribute key="shootEffect" value="poison"/>
     </attack>
@@ -42,7 +42,7 @@
     <immunity invisible="1"/>
   </immunities>
   <summons maxSummons="15">
-    <summon name="Giant Spider" interval="1000" chance="30" max="2"/>
+    <summon name="Giant Spider" interval="1000" chance="30" max="15"/>
   </summons>
   <loot>
     <item id="2169" chance="700">
@@ -60,7 +60,7 @@
     <item id="2459" chance="20000">
       <!--iron helmet-->
     </item>
-    <item id="5879" countmax="1" chance1="5000" chancemax="0">
+    <item id="5879" countmax="10" chance1="5000" chancemax="5000">
       <!--giant spider silk-->
     </item>
     <item id="1987" chance="100000">
@@ -80,8 +80,8 @@
         <item id="2478" chance="10000">
           <!--brass legs-->
         </item>
-        <item id="2169" chance="10000">
-          <!--time ring-->
+        <item id="6433" chance="2100">
+          <!--Necromancer Shield-->
         </item>
       </inside>
       <!--bag-->
