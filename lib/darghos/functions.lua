@@ -248,7 +248,6 @@ end
 
 function enableRoyalBlessing(msg, class)
 	doSetStorage(gid.ROYAL_BLESSING, 1)
-	setWorldType(WORLDTYPE_OPTIONAL)
 
 	msg = msg or "Rei Ordon anúncia: Por Quendor está concedida a BENÇÃO REAL a todos durante esta ameaça! Lutem por Quendor sem medo!"
 	class = class or MESSAGE_EVENT_ADVANCE
@@ -257,7 +256,6 @@ end
 
 function disableRoyalBlessing(msg, class)
 	doSetStorage(gid.ROYAL_BLESSING, 0)
-	setWorldType(WORLDTYPE_OPEN)
 
 	msg = msg or "Rei Ordon: Não há mais ameaça, a benção real está ENCERRADA!"
 	if(msg) then
