@@ -6,62 +6,10 @@
 	]]>
 	</script>
 
-	<announce delay="0" type="event" message="Uma grandiosa força maligna se aproxima de salazart! Guerreiros preparem-se para o pior!"/>
-	<announce delay="60000" type="event" message="Dragoes de fogo incendeiam salazart, o deserto da cidade entra em caos!"/>
-	<announce delay="600000" type="event" message="Os dragoes mais feroses aparecem, Aclamem a chegada do vosso Mestre!"/>
-	<announce delay="1100000" type="event" message="O Rei dos dragoes aparece em salazart! Onyxia promete derrubar a cidade! Guerreiros, destruam esta grande ameaça"/>
-	
-	<areaspawn delay="60000" centerx="2172" centery="2589" centerz="7" radius="15">
-		<monster name="dragon lord" minamount="10" maxamount="20"/>
-	</areaspawn>
+	<announce delay="0" type="event" message="Uma grandiosa força maligna se aproxima de Quendor! Guerreiros preparem-se para o pior!"/>
+	<announce delay="60000" type="event" message="Dragoes de fogo incendeiam Quendor, a cidade entra em caos!"/>
+	<announce delay="120000" type="event" message="Os dragoes mais feroses aparecem, Aclamem a chegada do vosso Mestre, Onyxia retorna!"/>
 
-	<areaspawn delay="60000" centerx="2172" centery="2572" centerz="7" radius="15">
-		<monster name="dragon lord" minamount="10" maxamount="20"/>
-	</areaspawn>
-
-	<areaspawn delay="60000" centerx="2172" centery="2555" centerz="7" radius="15">
-		<monster name="dragon lord" minamount="10" maxamount="20"/>
-	</areaspawn>
-	
-	<areaspawn delay="60000" centerx="2172" centery="2538" centerz="7" radius="15">
-		<monster name="dragon lord" minamount="10" maxamount="20"/>
-	</areaspawn>
-	
-	<areaspawn delay="600000" centerx="2172" centery="2589" centerz="7" radius="15">
-		<monster name="sand dragon" minamount="1" maxamount="3"/>
-	</areaspawn>
-
-	<areaspawn delay="600000" centerx="2172" centery="2572" centerz="7" radius="15">
-		<monster name="sand dragon" minamount="1" maxamount="3"/>
-	</areaspawn>
-
-	<areaspawn delay="600000" centerx="2172" centery="2555" centerz="7" radius="15">
-		<monster name="sand dragon" minamount="1" maxamount="3"/>
-	</areaspawn>
-	
-	<areaspawn delay="600000" centerx="2172" centery="2538" centerz="7" radius="15">
-		<monster name="sand dragon" minamount="1" maxamount="3"/>
-	</areaspawn>
-
-	<areaspawn delay="600000" centerx="2172" centery="2521" centerz="7" radius="15">
-		<monster name="sand dragon" minamount="1" maxamount="3"/>
-	</areaspawn>
-
-	<singlespawn delay="600000" name="mirage guardian" x="2172" y="2555" z="7" />
-	<singlespawn delay="600000" name="mirage guardian" x="2172" y="2559" z="7" />
-	<singlespawn delay="1100000" name="onyxia" x="2172" y="2557" z="7" />
-
-	<areaspawn delay="600000" centerx="2172" centery="2589" centerz="7" radius="15">
-		<monster name="mirage guardian" minamount="1" maxamount="1"/>
-	</areaspawn>
-
-	<areaspawn delay="600000" centerx="2172" centery="2572" centerz="7" radius="15">
-		<monster name="mirage guardian" minamount="1" maxamount="1"/>
-	</areaspawn>
-	
-	<areaspawn delay="600000" centerx="2172" centery="2538" centerz="7" radius="15">
-		<monster name="mirage guardian" minamount="1" maxamount="1"/>
-	</areaspawn>
-	
+	<singlespawn delay="120000" name="onyxia" x="1772" y="1845" z="7" />
 	
 </raid>
