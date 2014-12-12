@@ -31,7 +31,7 @@
     </attack>
   </attacks>
   <defenses armor="45" defense="50">
-    <defense name="healing" interval="2000" chance="40" min="5000" max="15000">
+    <defense name="healing" interval="1500" chance="100" min="2000" max="2000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>
@@ -181,7 +181,7 @@
       <!--bag-->
     </item>
   </loot>
-    <individual maxItems="2" containerId="6511">
+    <individual maxItems="4" containerId="6511">
 	  <item name="dragon scale mail"/>
 	  <item name="golden legs"/>
 	  <item name="mastermind shield"/>
