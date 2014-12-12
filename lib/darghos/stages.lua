@@ -2,6 +2,7 @@ STAGES_EXPERIENCE = 1
 STAGES_EXP_PROTECTED = 2
 STAGES_SKILLS = 3
 STAGES_MAGIC = 4
+STAGES_EXP_TENERIAN = 5
 
 SKILL_STAGE_MAGES = 2
 SKILL_STAGE_NON_LOGOUT_PLAYERS = SKILL_STAGE_MAGES
@@ -21,7 +22,7 @@ stages = {
 		{start_level = 80, end_level = 119, multipler = 10},
 		{start_level = 120, end_level = 159, multipler = 4},
 		{start_level = 160, end_level = 219, multipler = 2},
-		{start_level = 220, multipler = 1}s
+		{start_level = 220, multipler = 1}
 	},
 	
 	--[[

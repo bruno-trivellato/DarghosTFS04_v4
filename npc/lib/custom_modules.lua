@@ -1,5 +1,3 @@
-﻿-- Custom Modules do Darghos para o NPC System padrĂŁo do Jiddo
-
 D_CustomNpcModules = {}
 
 function D_CustomNpcModules.addonTradeItems(cid, message, keywords, parameters, node)
