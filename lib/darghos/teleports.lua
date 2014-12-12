@@ -504,7 +504,7 @@ teleportAids = {
 	,[8586] = {
 		name = "Ariadne Dungeon (Trolls Wing)"
 		,desc = "Group with 8 or more members is highly recommended! Then, be prepared to face Sen Gan Guards, Sen Gan Shamans, Sen Gan Hunters, Big Oozes, Swamp Things and the boss Ghazran."
-		,min_level = 200
+		,min_level = 300
 		,required_items = { { itemtype = 5908, fail = "You must be with a Obsidian Knife to enter on this dungeon."} }
 	} 
 }

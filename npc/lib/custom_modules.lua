@@ -1,4 +1,4 @@
--- Custom Modules do Darghos para o NPC System padrÃ£o do Jiddo
+ï»¿-- Custom Modules do Darghos para o NPC System padrÄ‚Åo do Jiddo
 
 D_CustomNpcModules = {}
 
@@ -148,13 +148,13 @@ function D_CustomNpcModules.pvpBless(cid, message, keywords, parameters, node)
 	end
 
 	if(getPlayerPVPBlessing(cid)) then
-		npcHandler:say("De novo? Os deuses já lhe abençoaram!", cid)
+		npcHandler:say("De novo? Os deuses jÃ¡ lhe abenÃ§oaram!", cid)
 	elseif(getCreatureSkull(cid) >= SKULL_WHITE) then
-		npcHandler:say("Você tem sangue em suas mãos! Caia fora daqui!", cid)
+		npcHandler:say("VocÄ™ tem sangue em suas mÄƒos! Caia fora daqui!", cid)
 	elseif(not doPlayerRemoveMoney(cid, price)) then
-		npcHandler:say("Você não tem moedas sulficientes para a benção...", cid)
+		npcHandler:say("VocÄ™ nÄƒo tem moedas sulficientes para a benÃ§Äƒo...", cid)
 	else
-		npcHandler:say("Agora suas benções normais estão protegidas contra mortes para outros jogadores! Boa sorte!", cid)
+		npcHandler:say("Agora suas benÃ§Å‘es normais estÄƒo protegidas contra mortes para outros jogadores! Boa sorte!", cid)
 		doPlayerSetPVPBlessing(cid)
 	end
 
@@ -180,13 +180,13 @@ function D_CustomNpcModules.allBless(cid, message, keywords, parameters, node)
 		end
 
 		if(getPlayerBlessing(cid, 1) or getPlayerBlessing(cid, 2) or getPlayerBlessing(cid, 3) or getPlayerBlessing(cid, 4) or getPlayerBlessing(cid, 5)) then
-			npcHandler:say("Você já possui uma ou mais benções, eu somente posso abençoar com todas as blessings quem não foi abençoado por nenhuma.", cid)
+			npcHandler:say("VocÄ™ jÃ¡ possui uma ou mais benÃ§Å‘es, eu somente posso abenÃ§oar com todas as blessings quem nÄƒo foi abenÃ§oado por nenhuma.", cid)
 		elseif(getCreatureSkull(cid) >= SKULL_WHITE) then
-			npcHandler:say("Você tem sangue em suas mãos! Caia fora daqui!", cid)				
+			npcHandler:say("VocÄ™ tem sangue em suas mÄƒos! Caia fora daqui!", cid)				
 		elseif(not doPlayerRemoveMoney(cid, price)) then
-			npcHandler:say("Você não tem dinheiro sulficiente. Em seu level, são necessarios " .. price .. " gold coins.", cid)		
+			npcHandler:say("VocÄ™ nÄƒo tem dinheiro sulficiente. Em seu level, sÄƒo necessarios " .. price .. " gold coins.", cid)		
 		else
-			npcHandler:say("Você recebeu todas as benções! Você esta completamente protegido!", cid)
+			npcHandler:say("VocÄ™ recebeu todas as benÃ§Å‘es! VocÄ™ esta completamente protegido!", cid)
 			
 			doPlayerAddBlessing(cid, 1)
 			doPlayerAddBlessing(cid, 2)
@@ -195,7 +195,7 @@ function D_CustomNpcModules.allBless(cid, message, keywords, parameters, node)
 			doPlayerAddBlessing(cid, 5)
 		end
 	else
-		npcHandler:say('Eu somente posso abençoar jogadores com uma premium account.', cid)
+		npcHandler:say('Eu somente posso abenÃ§oar jogadores com uma premium account.', cid)
 	end
 
 	npcHandler:resetNpc(cid)
@@ -236,19 +236,17 @@ function D_CustomNpcModules.offerBlessing(cid, message, keywords, parameters, no
 	local isall = parameters.isall or false
 	if(pvpbless) then
 		func = D_CustomNpcModules.pvpBless
-		npcHandler:say('Saiba que a benção do PvP (twist of fate) não irá reduzir a penalidade quando você morre como as benções normais, mas ao invez disto, irá previnir que você perca as proprias benções normais quando você for derrotado por outro jogador (apénas jogadores!). Para adquirir-la você precisará sacrificar ' .. D_CustomNpcModules.getBlessPrice(cid, blessParams) .. ' moedas de ouro. Quer fazer isto em troca de proteção?', cid)
+		npcHandler:say('Saiba que a benÃ§Äƒo do PvP (twist of fate) nÄƒo irÃ¡ reduzir a penalidade quando vocÄ™ morre como as benÃ§Å‘es normais, mas ao invez disto, irÃ¡ previnir que vocÄ™ perca as proprias benÃ§Å‘es normais quando vocÄ™ for derrotado por outro jogador (apÃ©nas jogadores!). Para adquirir-la vocÄ™ precisarÃ¡ sacrificar ' .. D_CustomNpcModules.getBlessPrice(cid, blessParams) .. ' moedas de ouro. Quer fazer isto em troca de proteÃ§Äƒo?', cid)
 	elseif(isall) then
 		func = D_CustomNpcModules.allBless
-		npcHandler:say('Ao obter todas benções as penalidades na proxima vez que você morrer serão reduzidas ao maximo. Para o seu level isto lhe custará o sacrificio de ' .. parameters.baseCost .. ' moedas de ouro.', cid)	
+		npcHandler:say('Ao obter todas benÃ§Å‘es as penalidades na proxima vez que vocÄ™ morrer serÄƒo reduzidas ao maximo. Para o seu level isto lhe custarÃ¡ o sacrificio de ' .. parameters.baseCost .. ' moedas de ouro.', cid)	
 	else
 		func = StdModule.bless
-		npcHandler:say('Ao obter uma benção as penalidades na proxima vez que você morrer serão reduzidas, você gostaria de obter uma benção? Para o seu level isto lhe custará o sacrificio de ' .. D_CustomNpcModules.getBlessPrice(cid, blessParams) .. ' moedas de ouro.', cid)	
+		npcHandler:say('Ao obter uma benÃ§Äƒo as penalidades na proxima vez que vocÄ™ morrer serÄƒo reduzidas, vocÄ™ gostaria de obter uma benÃ§Äƒo? Para o seu level isto lhe custarÃ¡ o sacrificio de ' .. D_CustomNpcModules.getBlessPrice(cid, blessParams) .. ' moedas de ouro.', cid)	
 	end
 
-	node:addChildKeyword({'yes', 'sim'}, func, parameters)
-	node:addChildKeyword({'no', 'não', 'nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Volte quando for necessário!'})	
-
-	return true
+	node:getParent():addChildKeyword({'yes', 'sim'}, func, parameters)
+	node:getParent():addChildKeyword({'no', 'nÄƒo', 'nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Volte quando for necessÃ¡rio!'})	
 end
 
 function D_CustomNpcModules.addTradeList(shopModule, tradelist_name)
@@ -280,7 +278,7 @@ function D_CustomNpcModules.addTradeList(shopModule, tradelist_name)
 	
 		if(not error) then
 			
-			-- lembrando que as funções no Jiddo são nomeadas da perspectiva do player...
+			-- lembrando que as funÃ§Å‘es no Jiddo sÄƒo nomeadas da perspectiva do player...
 			-- mas por se tratar de um NPC, vamos inverter, e partir da perspectiva deste
 					
 			if(v.sell_for ~= nil) then
@@ -332,7 +330,7 @@ function D_CustomNpcModules.parseTradeLists(shopModule, trade_lists)
 end
 
 function D_CustomNpcModules.addPromotionHandler(keywordHandler, npcHandler)
-	keywordHandler:addKeyword({'promotion', 'promote', 'promoção'}, D_CustomNpcModules.callbackPromote, {npcHandler = npcHandler, onlyFocus = true})
+	keywordHandler:addKeyword({'promotion', 'promote', 'promoÃ§Äƒo'}, D_CustomNpcModules.callbackPromote, {npcHandler = npcHandler, onlyFocus = true})
 	
 	function callbackPromotionDesc(cid, message, keywords, parameters, node)
 		local npcHandler = parameters.npcHandler
@@ -342,7 +340,7 @@ function D_CustomNpcModules.addPromotionHandler(keywordHandler, npcHandler)
 		end
 		
 		local desc = {
-			"Os beneficios obtidos ao se promover são: a velocidade que você regenera a sua vida e sua mana serão aumentadas, você também ganhará novas habilidades para usar e também terá pequena chance de causar danos criticos além de possui penalidades nas mortes reduzidas."
+			"Os beneficios obtidos ao se promover sÄƒo: a velocidade que vocÄ™ regenera a sua vida e sua mana serÄƒo aumentadas, vocÄ™ tambÃ©m ganharÃ¡ novas habilidades para usar e tambÃ©m terÃ¡ pequena chance de causar danos criticos alÃ©m de possui penalidades nas mortes reduzidas."
 		}
 		
 		if(desc[getPlayerPromotionLevel(cid)] ~= nil) then
@@ -352,7 +350,7 @@ function D_CustomNpcModules.addPromotionHandler(keywordHandler, npcHandler)
 		return true
 	end
 	
-	keywordHandler:addKeyword({'beneficios', 'benefícios'}, callbackPromotionDesc, {npcHandler = npcHandler, onlyFocus = true})
+	keywordHandler:addKeyword({'beneficios', 'benefÃ­cios'}, callbackPromotionDesc, {npcHandler = npcHandler, onlyFocus = true})
 end
 
 function D_CustomNpcModules.callbackPromote(cid, message, keywords, parameters, node)
@@ -370,23 +368,23 @@ function D_CustomNpcModules.callbackPromote(cid, message, keywords, parameters, 
 	
 	local promotions = {
 		{
-			message = "Com uma promoção você se tornaria um " .. promotionNames[1][getPlayerBaseVocation(cid)] .. " e também ganharia alguns {benefícios}. Para isto você deverá sacrificar 20 000 moedas de ouro. Voce quer receber esta promoção?"
-			, params = {npcHandler = npcHandler, premium = true, cost = 20000, level = 20, promotion = 1, text = 'Parabens! Agora você esta promovido!', reset = true}
+			message = "Com uma promoÃ§Äƒo vocÄ™ se tornaria um " .. promotionNames[1][getPlayerBaseVocation(cid)] .. " e tambÃ©m ganharia alguns {benefÃ­cios}. Para isto vocÄ™ deverÃ¡ sacrificar 20 000 moedas de ouro. Voce quer receber esta promoÃ§Äƒo?"
+			, params = {npcHandler = npcHandler, premium = true, cost = 20000, level = 20, promotion = 1, text = 'Parabens! Agora vocÄ™ esta promovido!', reset = true}
 		}
 	}
 	
 	local promo = promotions[getPlayerPromotionLevel(cid) + 1]
 	
 	if(promo == nil) then
-		npcHandler:say("Desculpe, mas você ja possui todas as promoções possiveis...", cid)
+		npcHandler:say("Desculpe, mas vocÄ™ ja possui todas as promoÃ§Å‘es possiveis...", cid)
 	else
 		npcHandler:say(promo.message, cid)
 		
-		-- Precisamos limpar os nodes filhos para não haver conflitos...
+		-- Precisamos limpar os nodes filhos para nÄƒo haver conflitos...
 		node:clearChildrenNodes()
 		
 		node:addChildKeyword({'yes', 'sim'}, StdModule.promotePlayer, promo.params)
-		node:addChildKeyword({'no','não','nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Tudo bem, posso lhe ajudar em algo mais?', reset = true})
+		node:addChildKeyword({'no','nÄƒo','nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Tudo bem, posso lhe ajudar em algo mais?', reset = true})
 	end
 	
 	return true

@@ -8,12 +8,20 @@ SKILL_STAGE_NON_LOGOUT_PLAYERS = SKILL_STAGE_MAGES
 
 stages = {
 	[STAGES_EXPERIENCE] = {
+		{end_level = 199, multipler = 100},
+		{start_level = 200, end_level = 399, multipler = 30},
+		{start_level = 400, end_level = 499, multipler = 5},
+		{start_level = 500, end_level = 599, multipler = 4},
+		{start_level = 600, multipler = 3}
+	},
+
+	[STAGES_EXP_TENERIAN] = {
 		{end_level = 39, multipler = 50},
 		{start_level = 40, end_level = 79, multipler = 20},
 		{start_level = 80, end_level = 119, multipler = 10},
 		{start_level = 120, end_level = 159, multipler = 4},
 		{start_level = 160, end_level = 219, multipler = 2},
-		{start_level = 220, multipler = 1}
+		{start_level = 220, multipler = 1}s
 	},
 	
 	--[[
@@ -89,6 +97,11 @@ function getPlayerMultiple(cid, stagetype, skilltype)
 	
 	if(getPlayerTown(cid) == towns.ISLAND_OF_PEACE and darghos_use_protected_stages and stagetype == STAGES_EXPERIENCE) then
 		_stages = stages[STAGES_EXP_PROTECTED]
+	end
+
+	local world_id = getConfigValue('worldId')
+	if(world_id == WORLD_TENERIAN) then
+		_stages = stages[STAGES_EXP_TENERIAN]
 	end
 	
 	if(stagetype == STAGES_MAGIC or stagetype == STAGES_SKILLS) then

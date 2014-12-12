@@ -1,5 +1,4 @@
-local usePvPBless = false
-local usePvEBless = true -- Inquisition
+local usePvPBless = true
 
 function onSay(cid, words, param)	
 	local blesses = {
@@ -65,16 +64,6 @@ function onSay(cid, words, param)
 			message = message .. "\nVocê não possui a benção do PvP! Você irá perder suas benções regulares caso morra mesmo para outros jogadores! Compre-a em qualquer NPC dentro dos templos!"
 		end
 	end	
-
-	if(usePvEBless) then
-		message = message .. "\n\nBenção do Inquisitor:"
-		
-		if(getPlayerPVEBlessing(cid)) then	
-			message = message .. "\nVocê prestou enorme ajuda ao Constantino no combate as forças demôniacas. Suas benções estarão sempre protegido caso você morra para monstros!"
-		else
-			message = message .. "\nVocê pode obter esta benção ao concluir a Quest da Inquisição. Procure o NPC Constantino em Thorn para maiores informações."
-		end
-	end		
 	
 	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, message)
 	return true	

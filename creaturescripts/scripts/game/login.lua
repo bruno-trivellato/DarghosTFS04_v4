@@ -36,11 +36,6 @@ function onLogin(cid)
 		end
 	end
 
-	-- giving pve bless to players that has completed inquisition quest
-	if(getPlayerStorageValue(cid, 3617) == 1 and not getPlayerPVEBlessing(cid)) then
-		doPlayerSetPVEBlessing(cid)
-	end
-
 	--if(tasks.hasStartedTask(cid)) then
 		registerCreatureEvent(cid, "CustomTasks")
 	--end
