@@ -2431,7 +2431,6 @@ bool Player::onDeath()
 
 #ifdef __DARGHOS_CUSTOM__
 	bool usePVPBlessing = false;
-    bool usePVEBlessing = false;
 	uint32_t totalDamage = 0, pvpDamage = 0, enemiesLevelSum = 0, alliesLevelSum = 0;
 	std::map<Player*, uint32_t> enemiesList, alliesList;
 
@@ -2475,15 +2474,6 @@ bool Player::onDeath()
                 sendTextMessage(MSG_EVENT_ORANGE, "Tip: You died in PvP Fight without the Twist of Fate and has lost ALL your blessings. Buy the Twist of Fate Bless in any temple for the next time and avoid loss all your blessings in PvP Fights!");
             }
         }
-
-        if(getBlessings() >= 1 && pvpPercent <= 1)
-        {
-            if(hasPveBlessing())
-            {
-                usePVEBlessing = true;
-                sendTextMessage(MSG_EVENT_ORANGE, "You died against creatures but no worry! All your bravure helping Constantino against the demonic forces gives you the Inquisitor Bless and now it prevent you to loose your blessings!");
-            }
-        }
 	}
 
     uint64_t lossExperience = 0;
@@ -2492,7 +2482,7 @@ bool Player::onDeath()
         m_lastdeath_experience_loss = lossExperience;
     }
 
-    if(!usePVPBlessing && !usePVEBlessing){
+    if(!usePVPBlessing){
         m_lastdeath_blessings_loss = getBlessings();
     }
 
@@ -2622,7 +2612,7 @@ bool Player::onDeath()
 		}
 
 #ifdef __DARGHOS_CUSTOM__
-        if(!usePVPBlessing && !isSecureDeath() && !usePVEBlessing)
+        if(!usePVPBlessing && !isSecureDeath())
         {
             sendTextMessage(MSG_EVENT_ORANGE, "You lost all your regular blessings, remember to buy your blessings again to avoid hard losses when you die in the future!");
 
@@ -4758,9 +4748,6 @@ uint16_t Player::getBlessings() const
 #ifdef __DARGHOS_CUSTOM__
 		if(i == g_config.getNumber(ConfigManager::USE_BLESSING_AS_PVP) - 1)
 			continue;
-
-        if(i == g_config.getNumber(ConfigManager::USE_BLESSING_AS_PVE) - 1)
-            continue;
 #endif
 
 		if(hasBlessing(i))
@@ -4776,11 +4763,12 @@ uint64_t Player::getLostExperience() const
 		return 0;
 
 #ifdef __DARGHOS_CUSTOM__
-    double percent = (double)(lossPercent[LOSS_EXPERIENCE] - vocation->getLessLoss() - (isVip() && !hasExpBonus() ? g_config.getNumber(ConfigManager::VIP_DEATH_LESS_LOSS) : 0) - (getBlessings() * g_config.getNumber(ConfigManager::BLESS_REDUCTION))) / 100.;
-
-    return (uint64_t)std::floor((double)(experience * percent) / 10.);
+    double percent = (double)(lossPercent[LOSS_EXPERIENCE] - vocation->getLessLoss() - (isVip() && !hasExpBonus() ? g_config.getNumber(ConfigManager::VIP_DEATH_LESS_LOSS) : 0) - (getBlessings() * g_config.getNumber(
 #else
-    double percent = (double)(lossPercent[LOSS_EXPERIENCE] - vocation->getLessLoss() - (getBlessings() * g_config.getNumber(ConfigManager::BLESS_REDUCTION))) / 100.;
+    double percent = (double)(lossPercent[LOSS_EXPERIENCE] - vocation->getLessLoss() - (getBlessings() * g_config.getNumber(
+#endif
+
+    ConfigManager::BLESS_REDUCTION))) / 100.;
 
 	if(level <= 25)
 		return (uint64_t)std::floor((double)(experience * percent) / 10.);
@@ -4800,7 +4788,6 @@ uint64_t Player::getLostExperience() const
 		lost += (uint64_t)std::floor((double)(getExpForLevel(base) - getExpForLevel(base - 1)) * levels);
 
 	return (uint64_t)std::floor((double)(lost * percent));
-#endif
 }
 
 uint32_t Player::getAttackSpeed() const
@@ -5712,8 +5699,6 @@ bool Player::getAfkState()
 bool Player::hasPvpBlessing() const{ return hasBlessing(g_config.getNumber(ConfigManager::USE_BLESSING_AS_PVP) - 1); }
 void Player::removePvpBlessing() { removeBlessing(g_config.getNumber(ConfigManager::USE_BLESSING_AS_PVP) - 1); }
 void Player::removeBlessing(int16_t value) { if(hasBlessing(value)) blessings -= (int16_t)1 << value;  }
-
-bool Player::hasPveBlessing() const{ return hasBlessing(g_config.getNumber(ConfigManager::USE_BLESSING_AS_PVE) - 1); }
 
 void Player::receivePing() {
     lastPong = OTSYS_TIME();

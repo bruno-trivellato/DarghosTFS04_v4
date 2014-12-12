@@ -257,7 +257,6 @@ class Player : public Creature, public Cylinder
         bool hasPvpBlessing() const;
         void removePvpBlessing();
         void removeBlessing(int16_t value);
-        bool hasPveBlessing() const;
         void setPvpStatus(bool status) { pvpStatus = status; }
         bool isPvpEnabled() const { return pvpStatus; }
 
