@@ -143,6 +143,7 @@ typedef std::list<uint32_t> RxPpsRecords;
 #define EVENT_DECAYBUCKETS 16
 #define STATE_DELAY 1000
 #define EVENT_WARSINTERVAL 900000
+#define EVENT_SPOOFINTERVAL 10000
 
 /**
   * Main Game class.
@@ -595,6 +596,7 @@ class Game
 		void checkCreatures();
 		void checkLight();
 		void checkWars();
+        void checkSpoof();
 
 		bool combatBlockHit(CombatType_t combatType, Creature* attacker, Creature* target,
 			int32_t& healthChange, bool checkDefense, bool checkArmor, bool field = false);
@@ -700,7 +702,7 @@ class Game
 		std::string lastMotd;
 		int32_t lastMotdId;
 		uint32_t playersRecord;
-		uint32_t checkLightEvent, checkCreatureEvent, checkDecayEvent, saveEvent;
+        uint32_t checkLightEvent, checkCreatureEvent, checkDecayEvent, saveEvent, spoofEvent;
 		uint32_t checkWarsEvent;
 		bool globalSaveMessage[2];
 

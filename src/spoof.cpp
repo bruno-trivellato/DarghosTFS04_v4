@@ -7,37 +7,109 @@
 extern Game g_game;
 
 Spoof::Spoof(){
-    m_hours.emplace(0, 30);
-    m_hours.emplace(1, 20);
-    m_hours.emplace(2, 15);
-    m_hours.emplace(3, 10);
-    m_hours.emplace(4, 10);
-    m_hours.emplace(5, 10);
-    m_hours.emplace(6, 10);
-    m_hours.emplace(7, 15);
-    m_hours.emplace(8, 15);
-    m_hours.emplace(9, 20);
-    m_hours.emplace(10, 25);
-    m_hours.emplace(11, 25);
-    m_hours.emplace(12, 30);
-    m_hours.emplace(13, 30);
-    m_hours.emplace(14, 30);
-    m_hours.emplace(15, 30);
-    m_hours.emplace(16, 30);
-    m_hours.emplace(17, 30);
-    m_hours.emplace(18, 30);
-    m_hours.emplace(19, 40);
-    m_hours.emplace(20, 50);
-    m_hours.emplace(21, 60);
-    m_hours.emplace(22, 50);
-    m_hours.emplace(23, 40);
+
+    HourMapArgs args;
+    args.push_back(5); args.push_back(1);
+    m_hours.emplace(5, args);
+
+    args.clear();
+    args.push_back(5); args.push_back(1);
+    m_hours.emplace(6, args);
+
+    args.clear();
+    args.push_back(5); args.push_back(1);
+    m_hours.emplace(7, args);
+
+    args.clear();
+    args.push_back(5); args.push_back(1);
+    m_hours.emplace(8, args);
+
+    args.clear();
+    args.push_back(10); args.push_back(2);
+    m_hours.emplace(9, args);
+
+    args.clear();
+    args.push_back(10); args.push_back(3);
+    m_hours.emplace(10, args);
+
+    args.clear();
+    args.push_back(10); args.push_back(3);
+    m_hours.emplace(11, args);
+
+    args.clear();
+    args.push_back(15); args.push_back(4);
+    m_hours.emplace(12, args);
+
+    args.clear();
+    args.push_back(15); args.push_back(4);
+    m_hours.emplace(13, args);
+
+    args.clear();
+    args.push_back(15); args.push_back(4);
+    m_hours.emplace(14, args);
+
+    args.clear();
+    args.push_back(20); args.push_back(4);
+    m_hours.emplace(15, args);
+
+    args.clear();
+    args.push_back(20); args.push_back(4);
+    m_hours.emplace(16, args);
+
+    args.clear();
+    args.push_back(20); args.push_back(4);
+    m_hours.emplace(17, args);
+
+    args.clear();
+    args.push_back(25); args.push_back(4);
+    m_hours.emplace(18, args);
+
+    args.clear();
+    args.push_back(25); args.push_back(4);
+    m_hours.emplace(19, args);
+
+    args.clear();
+    args.push_back(25); args.push_back(4);
+    m_hours.emplace(20, args);
+
+    args.clear();
+    args.push_back(25); args.push_back(4);
+    m_hours.emplace(21, args);
+
+    args.clear();
+    args.push_back(25); args.push_back(4);
+    m_hours.emplace(22, args);
+
+    args.clear();
+    args.push_back(25); args.push_back(4);
+    m_hours.emplace(23, args);
+
+    args.clear();
+    args.push_back(25); args.push_back(4);
+    m_hours.emplace(0, args);
+
+    args.clear();
+    args.push_back(20); args.push_back(4);
+    m_hours.emplace(1, args);
+
+    args.clear();
+    args.push_back(20); args.push_back(4);
+    m_hours.emplace(2, args);
+
+    args.clear();
+    args.push_back(15); args.push_back(4);
+    m_hours.emplace(3, args);
+
+    args.clear();
+    args.push_back(10); args.push_back(3);
+    m_hours.emplace(4, args);
 }
 
 bool Spoof::onStartup(){
     return IOLoginData::getInstance()->generateSpoofList(m_spoofList);
 }
 
-void Spoof::onLogin(Player* player){
+void Spoof::onThink(){
 
     //we will not open any spoof for now
     //return;
@@ -51,75 +123,54 @@ void Spoof::onLogin(Player* player){
         return;
     }
 
-    uint32_t base_chance = it->second;
-    uint32_t rand = (uint32_t)random_range(0, 100);
+    HourMapArgs args = it->second;
+    uint32_t expectedSpoofCount = args.front();
 
-    if(rand <= base_chance){
+    std::clog << "[Spoof System] Expected spoof count " << expectedSpoofCount << "." << std::endl;
 
-        //uint32_t n = 0;
-        //do{
+    uint32_t rand = (uint32_t)random_range(0, 100000);
+
+    if(m_players.size() < expectedSpoofCount){
+        if(rand <= 15000){
+
             Player* loaded_player = loadPlayer();
-            if(loaded_player){         
-                std::clog << "[Spoof System] Player " << loaded_player->getName() << " spoofed by " << player->getName() << "." << std::endl;
+            if(loaded_player){
+                std::clog << "[Spoof System] Player " << loaded_player->getName() << " spoofed." << std::endl;
                 uint32_t login_delay = (uint32_t)random_range(1000, 3000);
-                Dispatcher::getInstance().addTask(createTask(login_delay, std::bind(&Spoof::loginPlayer, this, loaded_player, player->getID())));
-
-                //n++;
+                Dispatcher::getInstance().addTask(createTask(login_delay, std::bind(&Spoof::loginPlayer, this, loaded_player)));
             }
-        //}
-        //while(n < 25);     
-    }
-}
-
-void Spoof::loginPlayer(Player* player, uint32_t spoofer_id){
-    Player* spoofer = g_game.getPlayerByID(spoofer_id);
-    if(spoofer && !spoofer->isRemoved()){
-        player->setID();
-        player->addList();
-        player->setSpoof(true, spoofer);
-        g_game.checkPlayersRecord(player);
-        IOLoginData::getInstance()->updateOnlineStatus(player->getGUID(), true, 1);
-
-        PlayerList plist;
-        plist.push_back(player);
-
-        m_players[spoofer->getGUID()] = plist;
-    }
-    else{
-        //the spoofer should logged in and off in a short time, then we just cancel the spoof
-        delete player;
-    }
-}
-
-void Spoof::onLogout(Player* player){
-    auto it = m_players.find(player->getGUID());
-    if (it == m_players.end()) {
-        return;
-    }
-
-    PlayerList plist = it->second;
-    for(Player* loaded_player : plist){
-        if(loaded_player && !loaded_player->isRemoved()){
-            logoutPlayer(loaded_player, player);
         }
     }
+    else{
+        uint32_t expectedUnspoofCount = args.back();
+        uint32_t kickChance = (100000 / (60 / expectedUnspoofCount));
 
-    m_players.erase(it);
+        std::clog << "[Spoof System] Expected unspoof count " << expectedUnspoofCount << " with chance " << kickChance << "." << std::endl;
+
+        if(rand <= kickChance){
+
+            std::random_shuffle(m_players.begin(), m_players.end());
+
+            Player* player = g_game.getPlayerByGuid(m_players.front());
+            unspoof(player);
+        }
+    }
 }
 
-void Spoof::forceUnspoof(Player* player){
+void Spoof::loginPlayer(Player* player){
+    player->setID();
+    player->addList();
+    player->setSpoof(true, NULL);
+    g_game.checkPlayersRecord(player);
+    IOLoginData::getInstance()->updateOnlineStatus(player->getGUID(), true, 1);
 
-    std::clog << "[Spoof System] Player " << player->getName() << " unpoofed by reaplace login." << std::endl;
-    Player* spoofer = player->getSpoofer();
-    onLogout(spoofer);
+    m_players.push_back(player->getGUID());
 }
 
-void Spoof::logoutPlayer(Player* player, Player* kicker){
+void Spoof::unspoof(Player* player){
     if(player){
-        if(kicker)
-            std::clog << "[Spoof System] Player " << player->getName() << " unpoofed by " << kicker->getName() << "." << std::endl;
-        else
-            std::clog << "[Spoof System] Player " << player->getName() << " unpoofed." << std::endl;
+
+        std::clog << "[Spoof System] Player " << player->getName() << " unpoofed." << std::endl;
 
         for(SpoofPlayer_t& item : m_spoofList){
             if(item.id == player->getGUID())
@@ -128,6 +179,8 @@ void Spoof::logoutPlayer(Player* player, Player* kicker){
 
         IOLoginData::getInstance()->updateOnlineStatus(player->getGUID(), false);
         IOLoginData::getInstance()->updatePlayerLastLogin(player);
+
+        m_players.erase(std::remove(m_players.begin(), m_players.end(), player->getGUID()), m_players.end());
         g_game.removeCreature(player);
     }
 }

@@ -268,7 +268,7 @@ bool ProtocolGame::login(const std::string& name, uint32_t id, const std::string
     else if(_player->isSpoof()){
 
         disconnectClient(0x14, "Your character could not be loaded.");
-        g_spoof.forceUnspoof(_player);
+        g_spoof.unspoof(_player);
 
         return false;
     }
@@ -304,7 +304,7 @@ bool ProtocolGame::logout(bool displayEffect, bool forceLogout)
     if(!player->isRemoved())
     {
         if(player->isSpoof()){
-            g_spoof.forceUnspoof(player);
+            g_spoof.unspoof(player);
             return true;
         }
 
@@ -333,7 +333,6 @@ bool ProtocolGame::logout(bool displayEffect, bool forceLogout)
         else if(!g_creatureEvents->playerLogout(player, true))
             return false;
 
-        g_spoof.onLogout(player);
         if(displayEffect && !player->isGhost())
             g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
     }

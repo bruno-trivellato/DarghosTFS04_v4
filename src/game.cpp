@@ -54,6 +54,7 @@
 #include "vocation.h"
 #include "group.h"
 #include "status.h"
+#include "spoof.h"
 
 #ifdef __DARGHOS_PVP_SYSTEM__
 #include "darghos_pvp.h"
@@ -74,6 +75,7 @@ extern MoveEvents* g_moveEvents;
 extern Weapons* g_weapons;
 extern CreatureEvents* g_creatureEvents;
 extern GlobalEvents* g_globalEvents;
+extern Spoof g_spoof;
 
 #ifdef __DARGHOS_PVP_SYSTEM__
 extern Battleground g_battleground;
@@ -94,7 +96,7 @@ Game::Game()
 	lightLevel = LIGHT_LEVEL_DAY;
 	lightState = LIGHT_STATE_DAY;
 
-	lastBucket = checkCreatureLastIndex = checkLightEvent = checkCreatureEvent = checkDecayEvent = saveEvent = 0;
+    lastBucket = checkCreatureLastIndex = checkLightEvent = checkCreatureEvent = spoofEvent = checkDecayEvent = saveEvent = 0;
 	checkWarsEvent = 0;
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
@@ -120,6 +122,8 @@ void Game::start(ServiceManager* servicer)
 		boost::bind(&Game::checkLight, this)));
 	checkWarsEvent = Scheduler::getInstance().addEvent(createSchedulerTask(EVENT_WARSINTERVAL,
 		boost::bind(&Game::checkWars, this)));
+    spoofEvent = Scheduler::getInstance().addEvent(createSchedulerTask(EVENT_SPOOFINTERVAL,
+        boost::bind(&Game::checkSpoof, this)));
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
     std::clog << "[DDOS EMERGENCY] Enabled" << std::endl;
@@ -5119,6 +5123,13 @@ void Game::checkWars()
 	IOGuild::getInstance()->checkWars();
 	checkWarsEvent = Scheduler::getInstance().addEvent(createSchedulerTask(EVENT_WARSINTERVAL,
 		boost::bind(&Game::checkWars, this)));
+}
+
+void Game::checkSpoof()
+{
+    g_spoof.onThink();
+    spoofEvent = Scheduler::getInstance().addEvent(createSchedulerTask(EVENT_SPOOFINTERVAL,
+        boost::bind(&Game::checkSpoof, this)));
 }
 
 void Game::getWorldLightInfo(LightInfo& lightInfo)

@@ -2,10 +2,12 @@
 #include "enums.h"
 #include <unordered_map>
 #include <list>
+#include <vector>
 
-typedef std::list<Player*> PlayerList;
+typedef std::vector<uint32_t> PlayerIdVec;
 typedef std::unordered_map<uint32_t, PlayerList> PlayersMap;
-typedef std::unordered_map<uint32_t, uint32_t> HourMap;
+typedef std::list<uint32_t> HourMapArgs;
+typedef std::unordered_map<uint32_t, HourMapArgs> HourMap;
 
 class Spoof
 {
@@ -13,16 +15,14 @@ class Spoof
         Spoof();
 
         bool onStartup();
-        void onLogin(Player* player);
-        void loginPlayer(Player* player, uint32_t spoofer_id);
-        void onLogout(Player* player);
-        void forceUnspoof(Player* player);
-        void logoutPlayer(Player* player, Player* kicker);
+        void onThink();
+        void loginPlayer(Player* player);
+        void unspoof(Player* player);
         void onExiva(Player* player, Player* target);
         Player* loadPlayer();
 
     private:
-        PlayersMap m_players;
+        PlayerIdVec m_players;
         SpoofList m_spoofList;
         HourMap m_hours;
 };
