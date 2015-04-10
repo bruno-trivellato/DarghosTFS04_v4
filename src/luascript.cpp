@@ -2541,6 +2541,12 @@ void LuaInterface::registerFunctions()
 	//getPlayerBattlegroundRating(cid)
 	lua_register(m_luaState, "getPlayerBattlegroundRating", LuaInterface::luaGetPlayerBattlegroundRating);
 
+    //doPlayerCaptureBgFlag(cid)
+    lua_register(m_luaState, "doPlayerCaptureBgFlag", LuaInterface::luaDoPlayerCaptureBgFlag);
+
+    //doPlayerDropBgFlag(cid)
+    lua_register(m_luaState, "doPlayerDropBgFlag", LuaInterface::luaDoPlayerDropBgFlag);
+
 
 	//getBattlegroundStatistics()
 	lua_register(m_luaState, "getBattlegroundStatistics", LuaInterface::luaGetBattlegroundStatistics);
@@ -10919,6 +10925,42 @@ int32_t LuaInterface::luaGetPlayerBattlegroundRating(lua_State* L)
 	}
 
 	return 1;
+}
+
+int32_t LuaInterface::luaDoPlayerDropBgFlag(lua_State* L)
+{
+    //doPlayerDropBgFlag(cid)
+    ScriptEnviroment* env = getEnv();
+    if(Player* player = env->getPlayerByUID(popNumber(L)))
+    {
+        lua_pushboolean(L, player->onDropBgFlag());
+        return 1;
+    }
+    else
+    {
+        errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
+        lua_pushboolean(L, false);
+    }
+
+    return 1;
+}
+
+int32_t LuaInterface::luaDoPlayerCaptureBgFlag(lua_State* L)
+{
+    //doPlayerCaptureBgFlag(cid)
+    ScriptEnviroment* env = getEnv();
+    if(Player* player = env->getPlayerByUID(popNumber(L)))
+    {
+        lua_pushboolean(L, player->onCaptureBgFlag());
+        return 1;
+    }
+    else
+    {
+        errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
+        lua_pushboolean(L, false);
+    }
+
+    return 1;
 }
 
 int32_t LuaInterface::luaDoPlayerSetBattlegroundRating(lua_State* L)

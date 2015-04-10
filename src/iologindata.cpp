@@ -982,7 +982,7 @@ bool IOLoginData::savePlayer(Player* player, DBInsert& query_insert, bool preSav
 
 #ifdef __DARGHOS_CUSTOM__
 	query << "`pvpEnabled` = " << (player->pvpStatus ? 1 : 0) << ", ";
-#ifdef __DARGHOS_PVP__
+#ifdef __DARGHOS_PVP_SYSTEM__
 	query << "`battleground_rating` = " << player->battlegroundRating << ", ";
 #endif
 #endif

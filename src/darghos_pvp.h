@@ -62,6 +62,9 @@ struct Bg_Team_t {
     Bg_TeamLook_t look;
 	Position entrance_pos;
     Position spawn_pos;
+    uint32_t flag_player;
+    uint32_t flag_debuff_ticks;
+    uint32_t flag_debuff_stacks;
 	uint32_t points;
 	uint32_t levelSum;
 };
@@ -106,6 +109,7 @@ class Battleground
 		void start();
 		bool playerIsInWaitlist(Player* player);
 		void removeWaitlistPlayer(Player* player);
+        void removeIdleWaitlistPlayer(uint32_t player_id);
 		uint32_t getTeamSize() { return teamSize; }
 
 		void incrementTeamPoints(Bg_Teams_t team_id, uint32_t points = 1);
@@ -152,6 +156,7 @@ class Battleground
 		uint32_t teamSize;
 		uint32_t winPoints;
 		uint32_t duration;
+        Bg_Teams_t lastTeamScore;
 
 		uint32_t endEvent;
 

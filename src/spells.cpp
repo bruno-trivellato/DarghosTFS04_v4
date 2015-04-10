@@ -84,7 +84,12 @@ ReturnValue Spells::onPlayerSay(Player* player, const std::string& words)
     }
     else
     {
-        ConditionSpellCast* condition = new ConditionSpellCast(CONDITIONID_COMBAT, CONDITION_CASTING_SPELL, instantSpell->getCastDelay(), false, 0, reWords, reParam);
+        uint32_t castDelay = instantSpell->getCastDelay();
+        if(instantSpell->castFunction != NULL){
+            instantSpell->castFunction(castDelay, player, reParam);
+        }
+
+        ConditionSpellCast* condition = new ConditionSpellCast(CONDITIONID_COMBAT, CONDITION_CASTING_SPELL, castDelay, false, 0, reWords, reParam);
         if(!condition)
             return RET_NOTPOSSIBLE;
 
@@ -494,6 +499,7 @@ Spell::Spell()
 	range = -1;
 	exhaustion = 1200;
 #ifdef __DARGHOS_CUSTOM_SPELLS__
+    castFunction = NULL;
 	castDelay = 0;
 	canAgressive = true;
 #endif
@@ -557,6 +563,15 @@ bool Spell::configureSpell(xmlNodePtr p)
 		exhaustion = intValue;
 
 #ifdef __DARGHOS_CUSTOM_SPELLS__
+    if(readXMLString(p, "castFunction", strValue)){
+
+        std::string tmpStrValue = asLowerCaseString(strValue);
+        if(tmpStrValue == "hellscore")
+            castFunction = onCastHellsCore;
+        else
+            std::clog << "[Warning - Spell::configureSpell] Cast function \"" <<strValue << "\" does not exist." << std::endl;
+    }
+
 	if(readXMLInteger(p, "castdelay", intValue))
 		castDelay = intValue;
 
@@ -616,6 +631,45 @@ bool Spell::configureSpell(xmlNodePtr p)
 
 	return true;
 }
+
+#ifdef __DARGHOS_CUSTOM_SPELLS__
+bool Spell::onCastHellsCore(uint32_t& castDelay, Creature* creature, const std::string& param)
+{
+    Player* player = NULL;
+    if(!(player = creature->getPlayer())){
+        return false;
+    }
+
+    int32_t parts = 0;
+
+    Item* item = NULL;
+    if((item = player->getInventoryItem(SLOT_HEAD))){
+        if(item->getID() == 12747)
+            parts++;
+    }
+
+    if((item = player->getInventoryItem(SLOT_ARMOR))){
+        if(item->getID() == 12748)
+            parts++;
+    }
+
+    if((item = player->getInventoryItem(SLOT_LEGS))){
+        if(item->getID() == 12749)
+            parts++;
+    }
+
+    if((item = player->getInventoryItem(SLOT_FEET))){
+        if(item->getID() == 12750)
+            parts++;
+    }
+
+    if(parts >= 3)
+        castDelay = 2000;
+
+    return true;
+}
+
+#endif
 
 bool Spell::checkSpell(Player* player) const
 {
@@ -1013,10 +1067,6 @@ void Spell::postSpell(Player* player, bool finishedCast /*= true*/, bool payCost
 			if(!player->hasFlag(PlayerFlag_HasNoExhaustion) && exhaustion > 0)
 			{
 				player->addExhaust(exhaustion, isAggressive ? EXHAUST_COMBAT : EXHAUST_HEALING);
-
-				uint32_t globalCooldown = g_config.getNumber(ConfigManager::GLOBAL_COOLDOWN);
-				if(globalCooldown > 0)
-					player->addExhaust(globalCooldown, EXHAUST_GLOBAL);
 			}
 		}
 		else
@@ -1024,10 +1074,6 @@ void Spell::postSpell(Player* player, bool finishedCast /*= true*/, bool payCost
 			if(!player->hasFlag(PlayerFlag_HasNoExhaustion) && exhaustion > 0 && castDelay == 0)
 			{
 				player->addExhaust(exhaustion, isAggressive ? EXHAUST_COMBAT : EXHAUST_HEALING);
-
-				uint32_t globalCooldown = g_config.getNumber(ConfigManager::GLOBAL_COOLDOWN);
-				if(globalCooldown > 0)
-					player->addExhaust(globalCooldown, EXHAUST_GLOBAL);
 			}
 		}
 #else

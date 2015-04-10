@@ -4580,7 +4580,8 @@ bool Game::combatChangeHealth(CombatType_t combatType, Creature* attacker, Creat
 			//ou está na Battleground, e o target é um inimigo
 			if(p_target
                 && ((p_attacker->getZone() == ZONE_OPEN && !p_attacker->isPvpEnabled() && p_target->isPvpEnabled() && p_target != p_attacker)
-				|| (!p_attacker->isPvpEnabled() && p_target->isPvpEnabled() && p_target->getZone() == ZONE_OPEN && p_target != p_attacker))
+				|| (!p_attacker->isPvpEnabled() && p_target->isPvpEnabled() && p_target->getZone() == ZONE_OPEN && p_target != p_attacker)
+                || (p_attacker->isInBattleground() && p_target->getBattlegroundTeam() != p_attacker->getBattlegroundTeam()))
             )
 			{
 				return false;
@@ -4914,7 +4915,12 @@ void Game::addAnimatedText(const SpectatorVec& list, const Position& pos, uint8_
 	Player* player = NULL;
 	for(SpectatorVec::const_iterator it = list.begin(); it != list.end(); ++it)
 	{
+#ifdef __DARGHOS_CUSTOM__
+		Creature* c = (*it);
+		if(c && (player = c->getPlayer()))
+#else
 		if((player = (*it)->getPlayer()))
+#endif
 			player->sendAnimatedText(pos, textColor, text);
 	}
 }

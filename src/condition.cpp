@@ -231,6 +231,9 @@ Condition* Condition::createCondition(ConditionId_t _id, ConditionType_t _type, 
 		case CONDITION_GAMEMASTER:
 #ifdef __DARGHOS_CUSTOM__
 		case CONDITION_DECREASE_HEALING:
+#ifdef __DARGHOS_PVP_SYSTEM__
+        	case CONDITION_BATTLEGROUND_FLAG:
+#endif
 #endif
 			return new ConditionGeneric(_id, _type, _ticks, _buff, _subId);
 
@@ -1788,8 +1791,14 @@ void ConditionSpellCast::endCondition(Creature* creature, ConditionEnd_t reason)
     }
     else
     {
-        creature->getPlayer()->sendCancelMessage(RET_YOUINTERRUPTYOURCAST);
-        creature->getPlayer()->sendMagicEffect(creature->getPosition(), MAGIC_EFFECT_POFF);
+		if(creature){
+			Player* player = creature->getPlayer();
+			if(player){
+				player->sendCancelMessage(RET_YOUINTERRUPTYOURCAST);
+				player->sendMagicEffect(creature->getPosition(), MAGIC_EFFECT_POFF);
+				player->sendAnimatedText(player->getPosition(), COLOR_RED, "Fail cast!");
+			}
+		}
     }
 }
 

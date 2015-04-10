@@ -982,10 +982,31 @@ bool MoveEvent::EquipItem(MoveEvent* moveEvent, Player* player, Item* item, slot
 			return false;
 	}
 
+#ifdef __DARGHOS_PVP_SYSTEM__
+    const ItemType& it = Item::items[item->getID()];
+
+    if(it.transformEquipTo){
+         const ItemType& transf = Item::items[it.transformEquipTo];
+
+        if(slot == SLOT_RING && (transf.abilities.invisible || transf.abilities.speed) && player->isInBattleground()){
+            return false;
+        }
+    }
+    else{
+        if(slot == SLOT_RING && (it.abilities.invisible || it.abilities.speed) && player->isInBattleground()){
+            return false;
+        }
+    }
+
+
+#endif
+
 	if(isCheck)
 		return true;
 
+#ifndef __DARGHOS_PVP_SYSTEM__
 	const ItemType& it = Item::items[item->getID()];
+#endif
 	if(it.transformEquipTo)
 	{
 		Item* newItem = g_game.transformItem(item, it.transformEquipTo);

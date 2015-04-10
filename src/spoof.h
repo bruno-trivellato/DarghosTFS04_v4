@@ -5,7 +5,6 @@
 #include <vector>
 
 typedef std::vector<uint32_t> PlayerIdVec;
-typedef std::unordered_map<uint32_t, PlayerList> PlayersMap;
 typedef std::list<uint32_t> HourMapArgs;
 typedef std::unordered_map<uint32_t, HourMapArgs> HourMap;
 

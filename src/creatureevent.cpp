@@ -116,7 +116,7 @@ bool CreatureEvents::playerLogin(Player* player)
 
 bool CreatureEvents::playerLogout(Player* player, bool forceLogout)
 {
-	#ifdef __DARGHOS_PVP__
+    #ifdef __DARGHOS_PVP_SYSTEM__
 	// em teoria um player nunca conseguiria deslogar dentro de uma battleground, mas.. vai saber se por acidente alguem d� um /closeserver nao � verdade?
 	if(player->isInBattleground())
 	{
@@ -221,6 +221,8 @@ bool CreatureEvent::configureEvent(xmlNodePtr p)
 		m_type = CREATURE_EVENT_BG_END;
 	else if(tmpStr == "bgleave")
 		m_type = CREATURE_EVENT_BG_LEAVE;
+    	else if(tmpStr == "bgflagstacks")
+		m_type = CREATURE_EVENT_BG_FLAG_STACKS;
 #endif
 #ifdef __DARGHOS_CUSTOM__
 	else if(tmpStr == "moveitem")
@@ -303,6 +305,8 @@ std::string CreatureEvent::getScriptEventName() const
 			return "onBattlegroundEnd";
 		case CREATURE_EVENT_BG_LEAVE:
 			return "onBattlegroundLeave";
+        	case CREATURE_EVENT_BG_FLAG_STACKS:
+            		return "onReceiveFlagStacks";
 		#endif
 #ifdef __DARGHOS_CUSTOM__
 		case CREATURE_EVENT_MOVE_ITEM:
@@ -382,6 +386,8 @@ std::string CreatureEvent::getScriptEventParams() const
             return "cid, winner, timeIn, bgDuration, initIn";
         case CREATURE_EVENT_BG_DEATH:
             return "cid, lastDamager, assistList";
+        case CREATURE_EVENT_BG_FLAG_STACKS:
+            return "cid, stacks";
 #endif
 #ifdef __DARGHOS_CUSTOM__
 		case CREATURE_EVENT_MOVE_ITEM:
@@ -2129,6 +2135,60 @@ uint32_t CreatureEvent::executeBgLeave(Player* player)
 		std::clog << "[Error - CreatureEvent::executeFollow] Call stack overflow." << std::endl;
 		return 0;
 	}
+}
+
+uint32_t CreatureEvent::executeBgFlagStacks(Player* player, uint32_t stacks)
+{
+    //onReceiveFlagStacks(cid)
+    if(m_interface->reserveEnv())
+    {
+        ScriptEnviroment* env = m_interface->getEnv();
+        if(m_scripted == EVENT_SCRIPT_BUFFER)
+        {
+            env->setRealPos(player->getPosition());
+            std::stringstream scriptstream;
+
+            scriptstream << "local cid = " << env->addThing(player) << std::endl;
+            scriptstream << "local stacks = " << stacks << std::endl;
+
+            scriptstream << m_scriptData;
+            bool result = true;
+            if(m_interface->loadBuffer(scriptstream.str()))
+            {
+                lua_State* L = m_interface->getState();
+                result = m_interface->getGlobalBool(L, "_result", true);
+            }
+
+            m_interface->releaseEnv();
+            return result;
+        }
+        else
+        {
+            #ifdef __DEBUG_LUASCRIPTS__
+            std::stringstream desc;
+            desc << creature->getName();
+            env->setEvent(desc.str());
+            #endif
+
+            env->setScriptId(m_scriptId, m_interface);
+            env->setRealPos(player->getPosition());
+
+            lua_State* L = m_interface->getState();
+            m_interface->pushFunction(m_scriptId);
+
+            lua_pushnumber(L, env->addThing(player));
+            lua_pushnumber(L, stacks);
+
+            bool result = m_interface->callFunction(2);
+            m_interface->releaseEnv();
+            return result;
+        }
+    }
+    else
+    {
+        std::clog << "[Error - CreatureEvent::executeFollow] Call stack overflow." << std::endl;
+        return 0;
+    }
 }
 #endif
 

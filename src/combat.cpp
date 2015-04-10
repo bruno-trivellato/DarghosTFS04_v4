@@ -311,7 +311,7 @@ ReturnValue Combat::canDoCombat(const Creature* attacker, const Creature* target
 					return RET_YOUMAYNOTATTACKTHISCREATURE;		
 
 #ifdef __DARGHOS_CUSTOM__
-                if(!attackerPlayer->isPvpEnabled() && !Combat::isInPvpZone(attacker, target))
+                if(!attackerPlayer->isPvpEnabled() && !attackerPlayer->isInBattleground() && !Combat::isInPvpZone(attacker, target))
                     return RET_YOUMAYNOTATTACKTHISCREATURE;
 #endif	
 			}
@@ -559,7 +559,76 @@ bool Combat::CombatHealthFunc(Creature* caster, Creature* target, const CombatPa
 	if(g_game.combatBlockHit(params.combatType, caster, target, change, params.blockedByShield, params.blockedByArmor))
 		return false;
 
-	#if !defined __DARGHOS_PVP_SYSTEM__
+
+	#if defined __DARGHOS_CUSTOM__ || defined __DARGHOS_PVP_SYSTEM__
+    if(change < 0 && caster && target && caster->getPlayer() && target->getPlayer())
+    {
+		bool casterOnBattleground = false;
+
+		#ifdef __DARGHOS_PVP_SYSTEM__
+		if(caster->getPlayer()->isInBattleground())
+		{
+			casterOnBattleground = true;
+
+			if(caster->getPlayer()->getBattlegroundTeam() == target->getPlayer()->getBattlegroundTeam())
+				change = 0;
+			else
+			{
+				BgTeamsMap teams = g_battleground.getTeams();
+
+				Bg_Team_t casterTeam = teams[caster->getPlayer()->getBattlegroundTeam()];
+				Bg_Team_t targetTeam = teams[target->getPlayer()->getBattlegroundTeam()];
+
+				uint16_t casterTeamSize = casterTeam.players.size();
+				uint16_t targetTeamSize = targetTeam.players.size();
+
+				if(casterTeamSize > targetTeamSize)
+				{
+					double basePercent = 100. / g_battleground.getTeamSize();
+					double diminushPercent = ((casterTeamSize - targetTeamSize) * basePercent) / 100;
+
+					if(diminushPercent < 1.)
+						change = std::ceil(change * (1. - diminushPercent));
+				}
+				else if(casterTeamSize == targetTeamSize && casterTeam.levelSum > targetTeam.levelSum)
+				{
+					uint16_t casterTeamAvgLvl = std::ceil((double)(casterTeam.levelSum / g_battleground.getTeamSize()));
+
+					if((targetTeam.levelSum + casterTeamAvgLvl) < casterTeam.levelSum)
+					{
+						double basePercent = 100. / g_battleground.getTeamSize();
+						double diminushPercent = (((casterTeam.levelSum - targetTeam.levelSum) / casterTeamAvgLvl) * basePercent) / 100;
+
+						if(diminushPercent < 1.)
+							change = std::ceil(change * (1. - diminushPercent));
+					}
+				}
+			}
+		}
+		#endif
+
+        if(target->getPlayer()->getSkull() != SKULL_BLACK)
+        {
+            if(casterOnBattleground){
+                change = change * g_config.getDouble(ConfigManager::BATTLEGROUND_DAMAGE_RATE);
+
+                if(target->getPlayer()->hasCondition(CONDITION_BATTLEGROUND_FLAG)){
+
+                    Bg_Team_t* team = NULL;
+                    if((team = g_battleground.findPlayerTeam(target->getPlayer()))){
+                        if(team->flag_debuff_stacks > 0){
+                            change = change * (1. + (0.10 * team->flag_debuff_stacks));
+                        }
+                    }
+                }
+            }
+            else
+                change = change / 2;
+        }
+    }
+	#endif
+
+	#if !defined __DARGHOS_CUSTOM__ && !defined __DARGHOS_PVP_SYSTEM__
 	if(change < 0 && caster && caster->getPlayer() && target->getPlayer() && target->getPlayer()->getSkull() != SKULL_BLACK)
         change = change / 2;
 	#endif
@@ -582,8 +651,64 @@ bool Combat::CombatManaFunc(Creature* caster, Creature* target, const CombatPara
 			change = random_range(var->minChange, var->maxChange, DISTRO_NORMAL);
 	}
 
+	#if defined __DARGHOS_CUSTOM__ || defined __DARGHOS_PVP_SYSTEM__
+    if(change < 0 && caster && target && caster->getPlayer() && target->getPlayer())
+    {
+		bool casterOnBattleground = false;
 
-	#if !defined __DARGHOS_PVP_SYSTEM__
+		#ifdef __DARGHOS_PVP_SYSTEM__
+		if(caster->getPlayer()->isInBattleground())
+		{
+			casterOnBattleground = true;
+
+			if(caster->getPlayer()->getBattlegroundTeam() == target->getPlayer()->getBattlegroundTeam())
+				change = 0;
+			else
+			{
+				BgTeamsMap teams = g_battleground.getTeams();
+
+				Bg_Team_t casterTeam = teams[caster->getPlayer()->getBattlegroundTeam()];
+				Bg_Team_t targetTeam = teams[target->getPlayer()->getBattlegroundTeam()];
+
+				uint16_t casterTeamSize = casterTeam.players.size();
+				uint16_t targetTeamSize = targetTeam.players.size();
+
+				if(casterTeamSize > targetTeamSize)
+				{
+					double basePercent = 100. / g_battleground.getTeamSize();
+					double diminushPercent = ((casterTeamSize - targetTeamSize) * basePercent) / 100;
+
+					if(diminushPercent < 1.)
+						change = std::ceil(change * (1. - diminushPercent));
+				}
+				else if(casterTeamSize == targetTeamSize && casterTeam.levelSum > targetTeam.levelSum)
+				{
+					uint16_t casterTeamAvgLvl = std::ceil((double)(casterTeam.levelSum / g_battleground.getTeamSize()));
+
+					if((targetTeam.levelSum + casterTeamAvgLvl) < casterTeam.levelSum)
+					{
+						double basePercent = 100. / g_battleground.getTeamSize();
+						double diminushPercent = (((casterTeam.levelSum - targetTeam.levelSum) / casterTeamAvgLvl) * basePercent) / 100;
+
+						if(diminushPercent < 1.)
+							change = std::ceil(change * (1. - diminushPercent));
+					}
+				}
+			}
+		}
+		#endif
+
+        if(target->getPlayer()->getSkull() != SKULL_BLACK)
+        {
+            if(casterOnBattleground)
+                change = change * g_config.getDouble(ConfigManager::BATTLEGROUND_DAMAGE_RATE);
+            else
+                change = change / 2;
+        }
+    }
+	#endif
+
+	#if !defined __DARGHOS_CUSTOM__ && !defined __DARGHOS_PVP_SYSTEM__
 	if(change < 0 && caster && caster->getPlayer() && target->getPlayer() && target->getPlayer()->getSkull() != SKULL_BLACK)
         change = change / 2;
 	#endif

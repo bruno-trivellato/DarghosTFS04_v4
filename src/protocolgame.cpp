@@ -553,6 +553,11 @@ void ProtocolGame::parsePacket(NetworkMessage &msg)
     if(player->isRemoved() && recvbyte != 0x14)
         return;
 
+#ifdef __DARGHOS_CUSTOM__
+    if(player->isPause())
+        return;
+#endif
+
     if(player->isAccountManager())
     {
         switch(recvbyte)
@@ -3019,8 +3024,12 @@ void ProtocolGame::AddCreatureSpeak(NetworkMessage_ptr msg, const Creature* crea
         }
 
         if(speaker && type != SPEAK_RVR_ANSWER && !speaker->isAccountManager()
-            && !speaker->hasCustomFlag(PlayerCustomFlag_HideLevel))
-            msg->put<uint16_t>(speaker->getPlayerInfo(PLAYERINFO_LEVEL));
+            && !speaker->hasCustomFlag(PlayerCustomFlag_HideLevel)){
+		if(!speaker->isInBattleground())
+            		msg->put<uint16_t>(speaker->getPlayerInfo(PLAYERINFO_LEVEL));
+		else
+			msg->put<uint16_t>(speaker->getBattlegroundRating());
+	}
         else
             msg->put<uint16_t>(0x00);
 

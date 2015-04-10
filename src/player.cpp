@@ -73,11 +73,11 @@ Player::Player(const std::string& _name, ProtocolGame* p):
 #ifdef __DARGHOS_PVP_SYSTEM__
     onBattleground = false;
     team_id = BATTLEGROUND_TEAM_NONE;
-    lastBattlegroundDeath = 0;
 #endif
 
 #ifdef __DARGHOS_CUSTOM__
     pvpStatus = true;
+    pause = false;
     m_lastdeath_experience_loss = 0;
     m_lastdeath_blessings_loss = m_lastdeath_items_loss = 0;
 #endif
@@ -229,15 +229,23 @@ std::string Player::getDescription(int32_t lookDistance) const
 #ifdef __DARGHOS_PVP_SYSTEM__
         if(isInBattleground())
             s << ". You are with " << battlegroundRating << " battleground rating points";
-        else
 #endif
 	}
 	else
 	{
 		s << nameDescription;
+#ifdef __DARGHOS_PVP_SYSTEM__
+		s << " (";
 
 		if(!hasCustomFlag(PlayerCustomFlag_HideLevel))
+		    s << " level " << level;
+
+		s << "battleground rating " << battlegroundRating;
+		s << ")";
+#else
+		if(!hasCustomFlag(PlayerCustomFlag_HideLevel))
 			s << " (Level " << level << ")";
+#endif
 
 		s << ". " << (sex % 2 ? "He" : "She");
 		if(hasFlag(PlayerFlag_ShowGroupNameInsteadOfVocation))
@@ -1347,6 +1355,12 @@ void Player::sendCancelMessage(ReturnValue message) const
 			sendCancel("You cannot add more items on this tile.");
 			break;
 
+#ifdef __DARGHOS_CUSTOM__
+		case RET_YOUINTERRUPTYOURCAST:
+			sendCancel("Your last action interrupted your spell cast.");
+			break;
+#endif
+
 		case RET_DONTSHOWMESSAGE:
 			break;
 
@@ -1741,8 +1755,21 @@ void Player::onCreatureMove(const Creature* creature, const Tile* newTile, const
 		|| (tradePartner && !Position::areInRange<2,2,0>(tradePartner->getPosition(), getPosition()))))
 		g_game.internalCloseTrade(this);
 
+#ifdef __DARGHOS_CUSTOM__
+	if(((!isInBattleground() && teleport) || oldPos.z != newPos.z) && !hasCustomFlag(PlayerCustomFlag_CanStairhop))
+	{
+		if(isInBattleground())
+		{
+			addExhaust(1600, EXHAUST_COMBAT_AREA);
+			addExhaust(2400, EXHAUST_HEALING, true);
+			addExhaust(2400, EXHAUST_OTHERS);
+		}
+		else
+		{
+#else
 	if((teleport || oldPos.z != newPos.z) && !hasCustomFlag(PlayerCustomFlag_CanStairhop))
 	{
+#endif
 		int32_t ticks = g_config.getNumber(ConfigManager::STAIRHOP_DELAY);
 		if(ticks > 0)
 		{
@@ -1751,6 +1778,9 @@ void Player::onCreatureMove(const Creature* creature, const Tile* newTile, const
 			if(Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT, CONDITION_PACIFIED, ticks))
 				addCondition(condition);
 		}
+#ifdef __DARGHOS_CUSTOM__
+		}
+#endif
 	}
 }
 
@@ -1943,6 +1973,43 @@ void Player::onThink(uint32_t interval)
 
 	if(lastMail && lastMail < (uint64_t)(OTSYS_TIME() + g_config.getNumber(ConfigManager::MAIL_ATTEMPTS_FADE)))
 		mailAttempts = lastMail = 0;
+
+#ifdef __DARGHOS_PVP_SYSTEM__
+    Condition* condition = NULL;
+    if((condition = getCondition(CONDITION_BATTLEGROUND_FLAG, CONDITIONID_DEFAULT, 0))){
+
+        Bg_Team_t* team = NULL;
+        if((team = g_battleground.findPlayerTeam(this)))
+        {
+            team->flag_debuff_ticks += interval;
+
+            if(team->flag_debuff_ticks >= 1000 * 60)
+            {
+
+                bool increased = false;
+
+                if(team->flag_debuff_stacks == 0 && team->flag_debuff_ticks >= 1000 * 60 * 2){
+                    team->flag_debuff_stacks++;
+                    team->flag_debuff_ticks = 0;
+                    increased = true;
+                }
+                else if(team->flag_debuff_stacks >= 1 && team->flag_debuff_stacks < 5){
+                    team->flag_debuff_stacks++;
+                    team->flag_debuff_ticks = 0;
+                    increased = true;
+                }
+
+                if(increased){
+                    CreatureEventList bgFragEvents = getCreatureEvents(CREATURE_EVENT_BG_FLAG_STACKS);
+                    for(CreatureEventList::iterator it = bgFragEvents.begin(); it != bgFragEvents.end(); ++it)
+                    {
+                        (*it)->executeBgFlagStacks(this, team->flag_debuff_stacks);
+                    }
+                }
+            }
+        }
+    }
+#endif
 }
 
 bool Player::isMuted(uint16_t channelId, SpeakClasses type, uint32_t& time)
@@ -2735,11 +2802,37 @@ Item* Player::createCorpse(DeathList deathList)
 	return corpse;
 }
 
+#ifdef __DARGHOS_CUSTOM__
+void Player::addExhaust(uint32_t ticks, Exhaust_t type, bool increment)
+{
+	if(!increment)
+	{
+		if(Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT,
+			CONDITION_EXHAUST, ticks, 0, false, (uint32_t)type))
+			addCondition(condition);
+	}
+	else
+	{
+		Condition* exhaust = getCondition(CONDITION_EXHAUST, CONDITIONID_DEFAULT, (uint32_t)type);
+		if(!exhaust)
+		{
+			if(Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT,
+				CONDITION_EXHAUST, ticks, 0, false, (uint32_t)type))
+				addCondition(condition);
+		}
+		else
+		{
+			exhaust->setTicks(exhaust->getTicks() + ticks);
+		}
+	}
+
+#else
 void Player::addExhaust(uint32_t ticks, Exhaust_t type)
 {
 	if(Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT,
 		CONDITION_EXHAUST, ticks, 0, false, (uint32_t)type))
 		addCondition(condition);
+#endif
 }
 
 void Player::addInFightTicks(bool pzLock, int32_t ticks/* = 0*/)
@@ -5732,6 +5825,38 @@ bool Player::isBattlegroundDeserter()
 	return false;
 }
 
+bool Player::onDropBgFlag()
+{
+    Condition* condition = NULL;
+    if((condition = getCondition(CONDITION_BATTLEGROUND_FLAG, CONDITIONID_DEFAULT, 0))){
+        removeCondition(condition);
+
+        Bg_Team_t* team = NULL;
+        if((team = g_battleground.findPlayerTeam(this)))
+            team->flag_player = 0;
+
+        return true;
+    }
+
+    return false;
+}
+
+bool Player::onCaptureBgFlag()
+{
+    if(Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT, CONDITION_BATTLEGROUND_FLAG, -1, 0, false, 0)){
+
+        addCondition(condition);
+
+        Bg_Team_t* team = NULL;
+        if((team = g_battleground.findPlayerTeam(this)))
+            team->flag_player = 0;
+
+        return true;
+    }
+
+    return false;
+}
+
 void Player::onEnterBattleground()
 {
 	baseSpeed = vocation->getBaseSpeed() + (2 * (120 - 1));
@@ -5752,45 +5877,5 @@ void Player::onLeaveBattleground()
 	mana = getPlayerInfo(PLAYERINFO_MAXMANA);
 
 	sendStats();
-}
-
-void Player::wearGear(bool isDeath/* = false*/)
-{
-	Item* item = NULL;
-	for(int32_t slot = SLOT_FIRST; slot < SLOT_LAST; ++slot)
-	{
-		if(!(item = getInventoryItem((slots_t)slot)) || item->isRemoved() ||
-				(g_moveEvents->hasEquipEvent(item) && !isItemAbilityEnabled((slots_t)slot)))
-			continue;
-
-		if(item->getWeaponType() == WEAPON_NONE)
-		{
-			item->onWear(isDeath);
-		}
-	}
-}
-
-void Player::wearShield(bool isDeath/* = false*/)
-{
-	Item* item = NULL;
-	for(int32_t slot = SLOT_FIRST; slot < SLOT_LAST; ++slot)
-	{
-		if(!(item = getInventoryItem((slots_t)slot)) || item->isRemoved() ||
-				(g_moveEvents->hasEquipEvent(item) && !isItemAbilityEnabled((slots_t)slot)))
-			continue;
-
-		if(item->getWeaponType() == WEAPON_SHIELD)
-		{
-			item->onWear(isDeath);
-		}
-	}
-}
-
-void Player::wearWeapon(bool isDeath/* = false*/)
-{
-	if(Item* item = getWeapon(true))
-	{
-		item->onWear(isDeath);
-	}
 }
 #endif

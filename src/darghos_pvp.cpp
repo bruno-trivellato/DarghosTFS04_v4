@@ -54,8 +54,12 @@ void Battleground::onInit()
 	teamSize = MIN_BATTLEGROUND_TEAM_SIZE;
 	winPoints = BATTLEGROUND_WIN_POINTS;
 	duration = BATTLEGROUND_END;
+    lastTeamScore = BATTLEGROUND_TEAM_NONE;
 
     Bg_Team_t team_one;
+
+    team_one.flag_debuff_stacks = 0;
+    team_one.flag_debuff_ticks = 0;
 
 	team_one.points = 0;
 	team_one.levelSum = 0;
@@ -77,6 +81,8 @@ void Battleground::onInit()
 
     Bg_Team_t team_two;
 
+    team_two.flag_debuff_stacks = 0;
+    team_two.flag_debuff_ticks = 0;
 	team_two.points = 0;
 	team_two.levelSum = 0;
 
@@ -104,6 +110,18 @@ void Battleground::removeWaitlistPlayer(Player* player)
 	Bg_Waitlist_t::iterator it = std::find(waitlist.begin(), waitlist.end(), player);
 	if(it != waitlist.end())
 		waitlist.erase(it);
+}
+
+void Battleground::removeIdleWaitlistPlayer(uint32_t player_id)
+{
+    Player* player = g_game.getPlayerByID(player_id);
+    if(!player)
+        return;
+
+    if(playerIsInWaitlist(player)){
+        player->sendPvpChannelMessage("Nenhuma partida foi iniciada nas ultimas 2 horas. Você foi removido da fila. Digite novamente \"!bg entrar\" se você deseja voltar a fila!", SPEAK_CHANNEL_O);
+        removeWaitlistPlayer(player);
+    }
 }
 
 bool Battleground::playerIsInWaitlist(Player* player)
@@ -160,8 +178,14 @@ void Battleground::finish()
 		finish(BATTLEGROUND_TEAM_ONE);
 	else if(teamsMap[BATTLEGROUND_TEAM_ONE].points < teamsMap[BATTLEGROUND_TEAM_TWO].points)
 		finish(BATTLEGROUND_TEAM_TWO);
-	else
-		finish(BATTLEGROUND_TEAM_NONE); //empate? raro...
+    else{
+        if(teamsMap[BATTLEGROUND_TEAM_ONE].points == 0)
+            finish(BATTLEGROUND_TEAM_NONE); //empate? somente em caso de 0x0
+        else{
+            //empates em 1x1 e 2x2 será considerado vencedor o time que capturou a ultima bandeira
+            finish(lastTeamScore);
+        }
+    }
 }
 
 void Battleground::finish(Bg_Teams_t teamWinner)
@@ -244,7 +268,7 @@ bool Battleground::buildTeams()
 			team = ((i & 1) == 1) ? BATTLEGROUND_TEAM_TWO : BATTLEGROUND_TEAM_ONE;
 
 		putInTeam((*it), team);
-		Scheduler::getInstance().addEvent(createSchedulerTask(1000 * 4,
+        Scheduler::getInstance().addEvent(createSchedulerTask(1000 * 4,
 			boost::bind(&Battleground::callPlayer, this, (*it)->getID())));
 
         waitlist.erase(it);
@@ -263,20 +287,20 @@ void Battleground::callPlayer(uint32_t player_id)
 	if(!player)
 		return;
 
-	player->sendPvpChannelMessage("A battleground está pronta para iniciar! Você tem 2 minutos para digitar o comando \"!bg entrar\" para ser enviado a batalha! Boa sorte bravo guerreiro!", SPEAK_CHANNEL_O);
+    player->sendPvpChannelMessage("A battleground está pronta para iniciar! Você tem 2 minutos para digitar o comando \"!bg entrar\" para ser enviado a batalha! Boa sorte bravo guerreiro!", SPEAK_CHANNEL_O);
 	player->sendFYIBox("A battleground está pronta para iniciar!\n Você tem 2 minutos para digitar o comando \n\"!bg entrar\" para ser enviado a batalha!\n\n Boa sorte bravo guerreiro!");
 }
 
 void Battleground::start()
 {
-	uint32_t notJoin = 0;
+    uint32_t notJoin = 0;
 
 	lastInit = time(NULL);
 	storeNew();
 
 	for(BgTeamsMap::iterator it = teamsMap.begin(); it != teamsMap.end(); it++)
 	{
-		for(PlayersMap::iterator it_players = it->second.players.begin(); it_players != it->second.players.end(); it_players++)
+        for(PlayersMap::iterator it_players = it->second.players.begin(); it_players != it->second.players.end(); it_players++)
 		{
 			Player* player = g_game.getPlayerByID(it_players->first);
 			if(!it_players->second.areInside)
@@ -389,6 +413,9 @@ BattlegrondRetValue Battleground::onPlayerJoin(Player* player)
 		waitlist.push_back(player);
 		buildTeams();
 
+        Scheduler::getInstance().addEvent(createSchedulerTask(1000 * 60 * 60 * 2,
+            boost::bind(&Battleground::removeIdleWaitlistPlayer, this, player->getID())));
+
 		return BATTLEGROUND_PUT_IN_WAITLIST;
 	}
 	else if(status == STARTED || status == PREPARING)
@@ -435,7 +462,7 @@ BattlegrondRetValue Battleground::onPlayerJoin(Player* player)
 		}
 		else
 		{
-			player->sendPvpChannelMessage("Você já está dentro da battleground!");
+            player->sendPvpChannelMessage("Você já está dentro da battleground!");
 		}
 	}
 
@@ -579,7 +606,7 @@ void Battleground::onPlayerDeath(Player* player, DeathList deathList)
 
 	if(lastDmg)
 	{
-		Bg_Team_t* team = findPlayerTeam(lastDmg);
+		//Bg_Team_t* team = findPlayerTeam(lastDmg);
 
 		Bg_PlayerInfo_t* playerInfo = findPlayerInfo(player);
 
@@ -767,7 +794,22 @@ bool Battleground::storeFinish(time_t end, uint32_t finishBy, uint32_t team1_poi
 
 void Battleground::incrementTeamPoints(Bg_Teams_t team_id, uint32_t points)
 {
-	teamsMap[team_id].points += points;
+    teamsMap[team_id].points += points;
+    lastTeamScore = team_id;
+
+    BgTeamsMap::iterator it = teamsMap.find(BATTLEGROUND_TEAM_ONE);
+    if(it != teamsMap.end()){
+        it->second.flag_player = 0;
+        it->second.flag_debuff_stacks = 0;
+        it->second.flag_debuff_ticks = 0;
+    }
+
+    it = teamsMap.find(BATTLEGROUND_TEAM_TWO);
+    if(it != teamsMap.end()){
+        it->second.flag_player = 0;
+        it->second.flag_debuff_stacks = 0;
+        it->second.flag_debuff_ticks = 0;
+    }
 
     if(teamsMap[team_id].points >= winPoints && status == STARTED)
     {
@@ -778,10 +820,26 @@ void Battleground::incrementTeamPoints(Bg_Teams_t team_id, uint32_t points)
 void Battleground::setTeamPoints(Bg_Teams_t team_id, uint32_t points)
 {
     teamsMap[team_id].points = points;
+    lastTeamScore = team_id;
+
+    BgTeamsMap::iterator it = teamsMap.find(BATTLEGROUND_TEAM_ONE);
+    if(it != teamsMap.end()){
+        it->second.flag_player = 0;
+        it->second.flag_debuff_stacks = 0;
+    }
+
+    it = teamsMap.find(BATTLEGROUND_TEAM_TWO);
+    if(it != teamsMap.end()){
+        it->second.flag_player = 0;
+        it->second.flag_debuff_stacks = 0;
+    }
 
     if(teamsMap[team_id].points >= winPoints && status == STARTED)
     {
 		finish(team_id);
+    }
+    else{
+
     }
 }
 

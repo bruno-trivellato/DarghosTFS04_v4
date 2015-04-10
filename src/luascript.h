@@ -745,6 +745,8 @@ class LuaInterface
 		static int32_t luaGetPlayerBattlegroundTeam(lua_State* L);
 		static int32_t luaGetPlayerBattlegroundInfo(lua_State* L);
 		static int32_t luaGetPlayerBattlegroundRating(lua_State* L);
+        	static int32_t luaDoPlayerCaptureBgFlag(lua_State* L);
+        	static int32_t luaDoPlayerDropBgFlag(lua_State* L);
 
 		static int32_t luaGetBattlegroundStatistics(lua_State* L);
 		static int32_t luaClearBattlegroundStatistics(lua_State* L);

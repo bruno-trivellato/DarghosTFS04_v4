@@ -63,6 +63,10 @@ enum ConditionType_t
 #ifdef __DARGHOS_CUSTOM_SPELLS__
     ,CONDITION_CASTING_SPELL = 1 << 25
 #endif
+
+#ifdef __DARGHOS_PVP_SYSTEM__
+    ,CONDITION_BATTLEGROUND_FLAG = 1 << 26
+#endif
 #endif
 };
 

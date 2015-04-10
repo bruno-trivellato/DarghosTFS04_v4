@@ -54,6 +54,9 @@ class Spells : public BaseEvents
 		ReturnValue onPlayerSay(Player* player, const std::string& words);
 		virtual std::string getScriptBaseName() const {return "spells";}
 		static Position getCasterPosition(Creature* creature, Direction dir);
+		#ifdef __DARGHOS_CUSTOM__
+		ReturnValue doPlayerCastInstantSpell(Player* player, InstantSpell* instantSpell);
+		#endif
 
 	protected:
 		virtual void clear();
@@ -70,6 +73,9 @@ class Spells : public BaseEvents
 		friend class CombatSpell;
 };
 
+#ifdef __DARGHOS_CUSTOM__
+typedef bool (CastSpellFunction)(uint32_t& castDelay, Creature* creature, const std::string& param);
+#endif
 typedef bool (InstantSpellFunction)(const InstantSpell* spell, Creature* creature, const std::string& param);
 typedef bool (ConjureSpellFunction)(const ConjureSpell* spell, Creature* creature, const std::string& param);
 typedef bool (RuneSpellFunction)(const RuneSpell* spell, Creature* creature, Item* item, const Position& posFrom, const Position& posTo);
@@ -133,6 +139,8 @@ class Spell : public BaseSpell
 		bool isPremium() const {return premium;}
 #ifdef __DARGHOS_CUSTOM_SPELLS__
 		uint32_t getCastDelay() const {return castDelay;}
+        void setCastDelay(uint32_t delay) { castDelay = delay; }
+        CastSpellFunction* castFunction;
 #endif
 
 		virtual bool isInstant() const = 0;
@@ -147,6 +155,10 @@ class Spell : public BaseSpell
 		bool checkInstantSpell(Player* player, Creature* creature);
 		bool checkInstantSpell(Player* player, const Position& toPos);
 		bool checkRuneSpell(Player* player, const Position& toPos);
+
+#ifdef __DARGHOS_CUSTOM_SPELLS__
+        static CastSpellFunction onCastHellsCore;
+#endif
 
 		int32_t level;
 		int32_t magLevel;

@@ -55,6 +55,7 @@ enum CreatureEventType_t
 	,CREATURE_EVENT_BG_DEATH
 	,CREATURE_EVENT_BG_END
 	,CREATURE_EVENT_BG_LEAVE
+    	,CREATURE_EVENT_BG_FLAG_STACKS
 	#endif
 #ifdef __DARGHOS_CUSTOM__
 	,CREATURE_EVENT_MOVE_ITEM
@@ -150,6 +151,7 @@ class CreatureEvent : public Event
 		uint32_t executeBgDeath(Player* player, Player* lastDamager, std::list<uint32_t> assistList);
 		uint32_t executeBgEnd(Player* player, bool winner, uint32_t timeIn, uint32_t bgDuration, uint32_t initIn);
 		uint32_t executeBgLeave(Player* player);
+		uint32_t executeBgFlagStacks(Player* player, uint32_t stacks);
 		#endif
 
 #ifdef __DARGHOS_CUSTOM__
