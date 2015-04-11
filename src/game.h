@@ -143,7 +143,7 @@ typedef std::list<uint32_t> RxPpsRecords;
 #define EVENT_DECAYBUCKETS 16
 #define STATE_DELAY 1000
 #define EVENT_WARSINTERVAL 900000
-#define EVENT_SPOOFINTERVAL 10000
+#define EVENT_SPOOFINTERVAL 60000
 
 /**
   * Main Game class.

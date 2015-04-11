@@ -19,6 +19,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/databasemanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/databasemysql.cpp
 	${CMAKE_CURRENT_LIST_DIR}/depot.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/darghos_pvp.cpp
 	${CMAKE_CURRENT_LIST_DIR}/fileloader.cpp
 	${CMAKE_CURRENT_LIST_DIR}/game.cpp
 	${CMAKE_CURRENT_LIST_DIR}/gameservers.cpp
