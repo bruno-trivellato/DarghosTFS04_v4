@@ -614,6 +614,7 @@ bool Combat::CombatHealthFunc(Creature* caster, Creature* target, const CombatPa
 
         if(target->getPlayer()->getSkull() != SKULL_BLACK)
         {
+#ifdef __DARGHOS_PVP_SYSTEM__
             if(casterOnBattleground){
                 change = change * g_config.getDouble(ConfigManager::BATTLEGROUND_DAMAGE_RATE);
 
@@ -628,6 +629,7 @@ bool Combat::CombatHealthFunc(Creature* caster, Creature* target, const CombatPa
                 }
             }
             else
+#endif
                 change = change / 2;
         }
     }
