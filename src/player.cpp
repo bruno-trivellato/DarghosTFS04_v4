@@ -1778,6 +1778,9 @@ void Player::onCreatureMove(const Creature* creature, const Tile* newTile, const
 			if(Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT, CONDITION_PACIFIED, ticks))
 				addCondition(condition);
 		}
+#ifdef __DARGHOS_PVP_SYSTEM__
+        }
+#endif
 	}
 }
 
