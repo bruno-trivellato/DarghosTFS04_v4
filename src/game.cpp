@@ -4581,7 +4581,10 @@ bool Game::combatChangeHealth(CombatType_t combatType, Creature* attacker, Creat
 			if(p_target
                 && ((p_attacker->getZone() == ZONE_OPEN && !p_attacker->isPvpEnabled() && p_target->isPvpEnabled() && p_target != p_attacker)
 				|| (!p_attacker->isPvpEnabled() && p_target->isPvpEnabled() && p_target->getZone() == ZONE_OPEN && p_target != p_attacker)
-                || (p_attacker->isInBattleground() && p_target->getBattlegroundTeam() != p_attacker->getBattlegroundTeam()))
+#ifdef __DARGHOS_PVP_SYSTEM__
+                || (p_attacker->isInBattleground() && p_target->getBattlegroundTeam() != p_attacker->getBattlegroundTeam())
+#endif
+                    )
             )
 			{
 				return false;

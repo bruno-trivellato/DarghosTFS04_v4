@@ -1755,7 +1755,7 @@ void Player::onCreatureMove(const Creature* creature, const Tile* newTile, const
 		|| (tradePartner && !Position::areInRange<2,2,0>(tradePartner->getPosition(), getPosition()))))
 		g_game.internalCloseTrade(this);
 
-#ifdef __DARGHOS_CUSTOM__
+#ifdef __DARGHOS_PVP_SYSTEM__
 	if(((!isInBattleground() && teleport) || oldPos.z != newPos.z) && !hasCustomFlag(PlayerCustomFlag_CanStairhop))
 	{
 		if(isInBattleground())
@@ -1778,9 +1778,6 @@ void Player::onCreatureMove(const Creature* creature, const Tile* newTile, const
 			if(Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT, CONDITION_PACIFIED, ticks))
 				addCondition(condition);
 		}
-#ifdef __DARGHOS_CUSTOM__
-		}
-#endif
 	}
 }
 

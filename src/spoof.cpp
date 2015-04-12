@@ -133,7 +133,7 @@ void Spoof::onThink(){
     uint32_t loginChance = 1666;
 
     if(m_players.size() <= expectedSpoofCount){
-        loginChance = (100000 / (60 / std::max(expectedSpoofCount - m_players.size(), 1)));
+        loginChance = (100000 / (60 / (uint32_t)std::max((int32_t)(expectedSpoofCount - m_players.size()), 1)));
     }
 
     if(rand <= loginChance){

@@ -3025,10 +3025,14 @@ void ProtocolGame::AddCreatureSpeak(NetworkMessage_ptr msg, const Creature* crea
 
         if(speaker && type != SPEAK_RVR_ANSWER && !speaker->isAccountManager()
             && !speaker->hasCustomFlag(PlayerCustomFlag_HideLevel)){
+#ifdef __DARGHOS_PVP_SYSTEM__
 		if(!speaker->isInBattleground())
             		msg->put<uint16_t>(speaker->getPlayerInfo(PLAYERINFO_LEVEL));
 		else
 			msg->put<uint16_t>(speaker->getBattlegroundRating());
+#else
+            msg->put<uint16_t>(speaker->getPlayerInfo(PLAYERINFO_LEVEL));
+#endif
 	}
         else
             msg->put<uint16_t>(0x00);

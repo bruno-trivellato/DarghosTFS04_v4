@@ -565,12 +565,13 @@ bool Combat::CombatHealthFunc(Creature* caster, Creature* target, const CombatPa
 		return false;
 
 
-	#if defined __DARGHOS_CUSTOM__ || defined __DARGHOS_PVP_SYSTEM__
+    #if defined __DARGHOS_CUSTOM__ || defined __DARGHOS_PVP_SYSTEM__
     if(change < 0 && caster && target && caster->getPlayer() && target->getPlayer())
     {
+#ifdef __DARGHOS_PVP_SYSTEM__
 		bool casterOnBattleground = false;
 
-		#ifdef __DARGHOS_PVP_SYSTEM__
+
 		if(caster->getPlayer()->isInBattleground())
 		{
 			casterOnBattleground = true;
@@ -610,7 +611,7 @@ bool Combat::CombatHealthFunc(Creature* caster, Creature* target, const CombatPa
 				}
 			}
 		}
-		#endif
+#endif
 
         if(target->getPlayer()->getSkull() != SKULL_BLACK)
         {
@@ -661,9 +662,9 @@ bool Combat::CombatManaFunc(Creature* caster, Creature* target, const CombatPara
 	#if defined __DARGHOS_CUSTOM__ || defined __DARGHOS_PVP_SYSTEM__
     if(change < 0 && caster && target && caster->getPlayer() && target->getPlayer())
     {
+#ifdef __DARGHOS_PVP_SYSTEM__
 		bool casterOnBattleground = false;
 
-		#ifdef __DARGHOS_PVP_SYSTEM__
 		if(caster->getPlayer()->isInBattleground())
 		{
 			casterOnBattleground = true;
@@ -707,9 +708,11 @@ bool Combat::CombatManaFunc(Creature* caster, Creature* target, const CombatPara
 
         if(target->getPlayer()->getSkull() != SKULL_BLACK)
         {
+#ifdef __DARGHOS_PVP_SYSTEM__
             if(casterOnBattleground)
                 change = change * g_config.getDouble(ConfigManager::BATTLEGROUND_DAMAGE_RATE);
             else
+#endif
                 change = change / 2;
         }
     }
