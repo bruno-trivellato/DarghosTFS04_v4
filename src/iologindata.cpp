@@ -381,7 +381,7 @@ const Group* IOLoginData::getPlayerGroupByAccount(uint32_t accountId)
 bool IOLoginData::generateSpoofList(SpoofList& spoofList){
     Database* db = Database::getInstance();
     std::ostringstream query;
-    query << "SELECT `id`, `name`, `account_id` FROM `players` WHERE `level` >= 8 AND `level` <= 80 AND (`real_lastlogin` <= UNIX_TIMESTAMP() - (60 * 60 * 24 * 4) OR `real_lastlogin` = 0) AND `world_id` = " << g_config.getNumber(ConfigManager::WORLD_ID);
+    query << "SELECT `id`, `name`, `account_id` FROM `players` WHERE `level` >= 9 AND `level` <= 80 AND (`real_lastlogin` <= UNIX_TIMESTAMP() - (60 * 60 * 24 * 4) OR `real_lastlogin` = 0) AND `world_id` = " << g_config.getNumber(ConfigManager::WORLD_ID);
 
     DBResult* result = db->storeQuery(query.str());
     if (result) {

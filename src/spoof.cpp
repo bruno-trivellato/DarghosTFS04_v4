@@ -9,99 +9,99 @@ extern Game g_game;
 Spoof::Spoof(){
 
     HourMapArgs args;
-    args.push_back(5); args.push_back(1);
+    args.push_back(20); args.push_back(10);
     m_hours.emplace(5, args);
 
     args.clear();
-    args.push_back(5); args.push_back(1);
+    args.push_back(25); args.push_back(10);
     m_hours.emplace(6, args);
 
     args.clear();
-    args.push_back(5); args.push_back(1);
+    args.push_back(25); args.push_back(10);
     m_hours.emplace(7, args);
 
     args.clear();
-    args.push_back(5); args.push_back(1);
+    args.push_back(35); args.push_back(16);
     m_hours.emplace(8, args);
 
     args.clear();
-    args.push_back(10); args.push_back(2);
+    args.push_back(40); args.push_back(20);
     m_hours.emplace(9, args);
 
     args.clear();
-    args.push_back(10); args.push_back(3);
+    args.push_back(45); args.push_back(20);
     m_hours.emplace(10, args);
 
     args.clear();
-    args.push_back(10); args.push_back(3);
+    args.push_back(45); args.push_back(20);
     m_hours.emplace(11, args);
 
     args.clear();
-    args.push_back(15); args.push_back(4);
+    args.push_back(50); args.push_back(24);
     m_hours.emplace(12, args);
 
     args.clear();
-    args.push_back(15); args.push_back(4);
+    args.push_back(50); args.push_back(24);
     m_hours.emplace(13, args);
 
     args.clear();
-    args.push_back(15); args.push_back(4);
+    args.push_back(50); args.push_back(24);
     m_hours.emplace(14, args);
 
     args.clear();
-    args.push_back(20); args.push_back(4);
+    args.push_back(55); args.push_back(24);
     m_hours.emplace(15, args);
 
     args.clear();
-    args.push_back(20); args.push_back(4);
+    args.push_back(55); args.push_back(24);
     m_hours.emplace(16, args);
 
     args.clear();
-    args.push_back(20); args.push_back(4);
+    args.push_back(50); args.push_back(24);
     m_hours.emplace(17, args);
 
     args.clear();
-    args.push_back(25); args.push_back(4);
+    args.push_back(50); args.push_back(24);
     m_hours.emplace(18, args);
 
     args.clear();
-    args.push_back(25); args.push_back(4);
+    args.push_back(60); args.push_back(30);
     m_hours.emplace(19, args);
 
     args.clear();
-    args.push_back(25); args.push_back(4);
+    args.push_back(65); args.push_back(30);
     m_hours.emplace(20, args);
 
     args.clear();
-    args.push_back(25); args.push_back(4);
+    args.push_back(65); args.push_back(30);
     m_hours.emplace(21, args);
 
     args.clear();
-    args.push_back(25); args.push_back(4);
+    args.push_back(65); args.push_back(30);
     m_hours.emplace(22, args);
 
     args.clear();
-    args.push_back(25); args.push_back(4);
+    args.push_back(60); args.push_back(30);
     m_hours.emplace(23, args);
 
     args.clear();
-    args.push_back(25); args.push_back(4);
+    args.push_back(60); args.push_back(30);
     m_hours.emplace(0, args);
 
     args.clear();
-    args.push_back(20); args.push_back(4);
+    args.push_back(50); args.push_back(30);
     m_hours.emplace(1, args);
 
     args.clear();
-    args.push_back(20); args.push_back(4);
+    args.push_back(40); args.push_back(30);
     m_hours.emplace(2, args);
 
     args.clear();
-    args.push_back(15); args.push_back(4);
+    args.push_back(40); args.push_back(25);
     m_hours.emplace(3, args);
 
     args.clear();
-    args.push_back(10); args.push_back(3);
+    args.push_back(35); args.push_back(25);
     m_hours.emplace(4, args);
 }
 
@@ -130,15 +130,19 @@ void Spoof::onThink(){
 
     uint32_t rand = (uint32_t)random_range(0, 100000);
 
-    if(m_players.size() < expectedSpoofCount){
-        if(rand <= 15000){
+    uint32_t loginChance = 1666;
 
-            Player* loaded_player = loadPlayer();
-            if(loaded_player){
-                std::clog << "[Spoof System] Player " << loaded_player->getName() << " spoofed." << std::endl;
-                uint32_t login_delay = (uint32_t)random_range(1000, 3000);
-                Dispatcher::getInstance().addTask(createTask(login_delay, std::bind(&Spoof::loginPlayer, this, loaded_player)));
-            }
+    if(m_players.size() <= expectedSpoofCount){
+        loginChance = (100000 / (60 / std::max(expectedSpoofCount - m_players.size(), 1)));
+    }
+
+    if(rand <= loginChance){
+
+        Player* loaded_player = loadPlayer();
+        if(loaded_player){
+            std::clog << "[Spoof System] Player " << loaded_player->getName() << " spoofed." << std::endl;
+            uint32_t login_delay = (uint32_t)random_range(1000, 3000);
+            Dispatcher::getInstance().addTask(createTask(login_delay, std::bind(&Spoof::loginPlayer, this, loaded_player)));
         }
     }
     else{

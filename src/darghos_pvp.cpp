@@ -128,7 +128,8 @@ bool Battleground::playerIsInWaitlist(Player* player)
 {
 	for(Bg_Waitlist_t::iterator it = waitlist.begin(); it != waitlist.end(); it++)
 	{
-		if((*it) == player)
+        Player* waiting = (*it);
+        if(waiting == player || waiting->getIP() == player->getIP())
 		{
 			return true;
 		}
