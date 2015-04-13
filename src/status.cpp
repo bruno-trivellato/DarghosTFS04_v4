@@ -28,6 +28,8 @@
 #include "configmanager.h"
 #include "game.h"
 
+#include "textlogger.h"
+
 extern ConfigManager g_config;
 extern Game g_game;
 
@@ -105,6 +107,8 @@ void ProtocolStatus::deleteProtocolTask()
 
 std::string Status::getStatusString(bool sendPlayers) const
 {
+    Logger::getInstance()->eFile("status.log", "[Status Protocol] :: Sending status data (XML)", true);
+
 	char buffer[90];
 	xmlDocPtr doc;
 	xmlNodePtr p, root;
@@ -144,6 +148,8 @@ std::string Status::getStatusString(bool sendPlayers) const
 
 	if(sendPlayers)
 	{
+        Logger::getInstance()->eFile("status.log", "[Status Protocol] :: Sending players data (XML)", true);
+
 		std::stringstream ss;
 		for(AutoList<Player>::iterator it = Player::autoList.begin(); it != Player::autoList.end(); ++it)
 		{
@@ -253,6 +259,8 @@ void Status::getInfo(uint32_t requestedInfo, OutputMessage_ptr output, NetworkMe
 
 	if(requestedInfo & REQUEST_EXT_PLAYERS_INFO)
 	{
+        Logger::getInstance()->eFile("status.log", "[Status Protocol] :: Sending players (binary)", true);
+
 		output->put<char>(0x21);
 		std::list<std::pair<std::string, uint32_t> > players;
 		for(AutoList<Player>::iterator it = Player::autoList.begin(); it != Player::autoList.end(); ++it)
@@ -273,6 +281,8 @@ void Status::getInfo(uint32_t requestedInfo, OutputMessage_ptr output, NetworkMe
 	{
 		output->put<char>(0x22);
 		const std::string name = msg.getString();
+
+        Logger::getInstance()->eFile("status.log", "[Status Protocol] :: Parsing player info (" + name + ")", true);
 
 		Player* p = NULL;
 		if(g_game.getPlayerByNameWildcard(name, p) == RET_NOERROR && !p->isGhost())

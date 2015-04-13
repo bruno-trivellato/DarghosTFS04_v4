@@ -56,6 +56,10 @@
 #include "status.h"
 #include "spoof.h"
 
+#ifdef __DARGHOS_EMERGENCY_DDOS__
+#include "textlogger.h"
+#endif
+
 #ifdef __DARGHOS_PVP_SYSTEM__
 #include "darghos_pvp.h"
 #endif
@@ -6709,10 +6713,14 @@ void Game::emergencyDDoSLoop()
     }
 
     if(m_internalCount == 30){
-        std::clog << "[CONNECTION LOAD] Periodic statistics." <<  std::endl;
-        std::clog << "RX PPS " << avgPps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) << "), ";
-        std::clog << "RX BPS " << avgRxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE) << "), ";
-        std::clog << "TX BPS " << avgTxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE) << ")." << std::endl;
+
+        std::stringstream ss;
+        ss << "[" << formatDate() << "] Periodic statistics.\n";
+        ss << "RX PPS " << avgPps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) << "),\n";
+        ss << "RX BPS " << avgRxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE) << "),\n";
+        ss << "TX BPS " << avgTxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE) << ").\n";
+
+        Logger::getInstance()->eFile("ddos/periodic.log", ss.str(), true);
 
         m_internalCount = 0;
     }
@@ -6725,17 +6733,25 @@ void Game::emergencyDDoSLoop()
     {
         //ok, we are under DDoS attacks
         m_wasNotified = true;
-        std::clog << "[DDOS EMERGENCY] Emergency ENABLED." << std::endl;
-        std::clog << "RX PPS " << avgPps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) << ")." << std::endl;
-        std::clog << "RX BPS " << avgRxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE) << ")." << std::endl;
-        std::clog << "TX BPS " << avgTxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE) << ")." << std::endl;
+
+        std::stringstream ss;
+        ss << "[" << formatDate() << "] Emergency ENABLED!\n";
+        ss << "RX PPS " << avgPps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_PPS_TO_ENABLE) << ").\n";
+        ss << "RX BPS " << avgRxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_RX_BPS_TO_ENABLE) << ").\n";
+        ss << "TX BPS " << avgTxBps << " (" << g_config.getNumber(ConfigManager::DDOS_EMERGENCY_TX_BPS_TO_ENABLE) << ").\n";
+
+        Logger::getInstance()->eFile("ddos/attack.log", ss.str(), true);
         //broadcastMessage("Connection problems detected. For your security the game is \"PAUSED\" for now... Please wait...", MSG_STATUS_WARNING);
     }
     else if(m_underDDoS && time(NULL) >= m_lastDDoS + g_config.getNumber(ConfigManager::DDOS_EMERGENCY_MIN_TIME))
     {
         m_underDDoS = false;
         m_wasNotified = false;
-        std::clog << "[DDOS EMERGENCY] Emergency disabled." << std::endl;
+
+        std::stringstream ss;
+        ss << "[" << formatDate() << "] Emergency DISABLED" << std::endl;
+        Logger::getInstance()->eFile("ddos/attack.log", ss.str(), true);
+
         //broadcastMessage("Connection now is fine! The game was unpaused. Thanks for your patience!", MSG_STATUS_WARNING);
     }
 

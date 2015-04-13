@@ -126,14 +126,12 @@ void Spoof::onThink(){
     HourMapArgs args = it->second;
     uint32_t expectedSpoofCount = args.front();
 
-    std::clog << "[Spoof System] Expected spoof count " << expectedSpoofCount << "." << std::endl;
-
     uint32_t rand = (uint32_t)random_range(0, 100000);
 
     uint32_t loginChance = 1666;
 
     if(m_players.size() <= expectedSpoofCount){
-        loginChance = (100000 / (60 / (uint32_t)std::max((int32_t)(expectedSpoofCount - m_players.size()), 1)));
+        loginChance = (100000 / std::max(int32_t(60 / (uint32_t)std::max((int32_t)(expectedSpoofCount - m_players.size()), 1)), 1));
     }
 
     if(rand <= loginChance){
@@ -145,11 +143,9 @@ void Spoof::onThink(){
             Dispatcher::getInstance().addTask(createTask(login_delay, std::bind(&Spoof::loginPlayer, this, loaded_player)));
         }
     }
-    else{
+    else if(m_players.size() > 0){
         uint32_t expectedUnspoofCount = args.back();
         uint32_t kickChance = (100000 / (60 / expectedUnspoofCount));
-
-        std::clog << "[Spoof System] Expected unspoof count " << expectedUnspoofCount << " with chance " << kickChance << "." << std::endl;
 
         if(rand <= kickChance){
 
