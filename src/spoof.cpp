@@ -128,10 +128,11 @@ void Spoof::onThink(){
 
     uint32_t rand = (uint32_t)random_range(0, 100000);
 
-    uint32_t loginChance = 1666;
+    uint32_t tick_interval = EVENT_SPOOFINTERVAL / 1000;
+    uint32_t loginChance = std::floor(100000 / tick_interval);
 
     if(m_players.size() <= expectedSpoofCount){
-        loginChance = (100000 / std::max(int32_t(60 / (uint32_t)std::max((int32_t)(expectedSpoofCount - m_players.size()), 1)), 1));
+        loginChance = (100000 / std::max(int32_t(tick_interval / (uint32_t)std::max((int32_t)(expectedSpoofCount - m_players.size()), 1)), 1));
     }
 
     if(rand <= loginChance){
@@ -145,7 +146,7 @@ void Spoof::onThink(){
     }
     else if(m_players.size() > 0){
         uint32_t expectedUnspoofCount = args.back();
-        uint32_t kickChance = (100000 / (60 / expectedUnspoofCount));
+        uint32_t kickChance = (100000 / (tick_interval / expectedUnspoofCount));
 
         if(rand <= kickChance){
 
