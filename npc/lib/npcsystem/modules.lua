@@ -149,8 +149,8 @@ if(Modules == nil) then
 			if(getPlayerBlessing(cid, parameters.number)) then
 				npcHandler:say("Gods have already blessed you with this blessing!", cid)
 			--[[ DARGHOS_CUSTOM ]]--
-			--elseif(parameters.onlyPvpDisable ~= nil and parameters.onlyPvpDisable and doPlayerIsPvpEnable(cid)) then
-				--npcHandler:say("Only pacific players can get this blessing with me!", cid)
+			elseif(parameters.onlyPvpDisable ~= nil and parameters.onlyPvpDisable and doPlayerIsPvpEnable(cid)) then
+				npcHandler:say("Only pacific players can get this blessing with me!", cid)
 			--[[ DARGHOS_CUSTOM ]]--
 			elseif(not doPlayerRemoveMoney(cid, price)) then
 				npcHandler:say("You don't have enough money for blessing.", cid)
@@ -187,8 +187,10 @@ if(Modules == nil) then
 		elseif(not pzLocked and isPlayerPzLocked(cid)) then
 			npcHandler:say('First get rid of those blood stains! You are not going to ruin my vehicle!', cid)
 		--[[ DARGHOS_CUSTOM ]]--
-		--elseif(parameters.pvpEnabledOnly ~= nil and parameters.pvpEnabledOnly and not doPlayerIsPvpEnable(cid)) then
-			--npcHandler:say('You must enable your pvp to travel to this town.', cid)		
+		elseif(parameters.pvpEnabledOnly ~= nil and parameters.pvpEnabledOnly and not doPlayerIsPvpEnable(cid)) then
+			npcHandler:say('You must turn your pvp on to travel to this town.', cid)
+		elseif(parameters.pvpDisabledOnly ~= nil and parameters.pvpDisabledOnly and doPlayerIsPvpEnable(cid)) then
+			npcHandler:say('You must turn your pvp off to travel to this town.', cid)			
 		--[[ DARGHOS_CUSTOM ]]--	
 		elseif(not doPlayerRemoveMoney(cid, parameters.cost)) then
 			npcHandler:say('You don\'t have enough money.', cid)
