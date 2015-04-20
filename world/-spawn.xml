@@ -7601,6 +7601,9 @@
 	<spawn centerx="2383" centery="1856" centerz="7" radius="3">
 		<npc name="thorn.temple" x="-1" y="0" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="2006" centery="1858" centerz="7" radius="2">
+		<npc name="global.rashid" x="-1" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="1963" centery="1859" centerz="7" radius="1">
 		<npc name="quendor.plants" x="0" y="-1" z="7" spawntime="60" />
 	</spawn>
