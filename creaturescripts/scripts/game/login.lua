@@ -58,12 +58,6 @@ function onLogin(cid)
 	if(getPlayerStorageValue(cid, sid.FIRSTLOGIN_ITEMS) ~= 1) then
 		defineFirstItems(cid)
 		
-		if(getPlayerTown(cid) ~= towns.ISLAND_OF_PEACE) then		
-			doPlayerEnablePvp(cid)
-		else
-			doPlayerDisablePvp(cid)
-		end
-		
 		doPlayerAddBlessing(cid, 1)
 		doPlayerAddBlessing(cid, 2)
 		doPlayerAddBlessing(cid, 3)
