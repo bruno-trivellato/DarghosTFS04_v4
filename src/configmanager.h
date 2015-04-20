@@ -331,6 +331,7 @@ class ConfigManager
 
 #ifdef __DARGHOS_CUSTOM__
             UNFAIR_FIGHT,
+            ON_LOOK_SHOW_CURRENT_PVP,
             PLAYERS_CAN_HEAL_MONSTERS,
 #endif
 			

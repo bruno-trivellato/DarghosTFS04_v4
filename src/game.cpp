@@ -1272,13 +1272,76 @@ bool Game::playerMoveCreature(uint32_t playerId, uint32_t movingCreatureId,
 				player->sendCancelMessage(RET_NOTPOSSIBLE);
 				return false;
             }
-#endif
 
-			if(player->getLevel() < protectionLevel && player->getVocation()->isAttackable())
+            //vamos permitir que se puxe um player em cima de outro desde que ou o puxado ou o destino sejam pacificos
+            CreatureVector* creatures = toTile->getCreatures();
+            Player* movingPlayer = movingCreature->getPlayer();
+
+            bool success = true;
+
+            /*
+                PUXANDO     DESTINO     RESULTADO
+                agressivo   agressivo   false
+                agressivo   pacifico    true
+                pacifico    agressivo   true
+                pacifico    pacifico    true
+            */
+
+            if(creatures && !creatures->empty())
+            {
+                Creature* temp_creature = NULL;
+                Player* temp_player = NULL;
+                for(CreatureVector::iterator it = creatures->begin(); it != creatures->end(); ++it)
+                {
+                    temp_creature = (*it);
+
+                    if(!(temp_player = temp_creature->getPlayer()))
+                    {
+                        success = false;
+                        break;
+                    }
+
+                    if(!movingPlayer)
+                        continue;
+
+                    if((movingPlayer->isPvpEnabled() && !temp_player->isPvpEnabled())
+                       || (!movingPlayer->isPvpEnabled() && temp_player->isPvpEnabled())
+                       || (!movingPlayer->isPvpEnabled() && !temp_player->isPvpEnabled())
+                       )
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        success = false;
+                        break;
+                    }
+                }
+            }
+
+			if(!success)
 			{
+				player->sendCancelMessage(RET_NOTPOSSIBLE);
+				return false;
+			}
+
+			if((!player->isPvpEnabled() || (player->getLevel() < protectionLevel && player->getVocation()->isAttackable()))
+#ifdef __DARGHOS_PVP_SYSTEM__
+				&& !player->isInBattleground()
+#endif
+				)
+#else
+			if(player->getLevel() < protectionLevel && player->getVocation()->isAttackable())
+#endif
+			{
+#ifdef __DARGHOS_CUSTOM__
+				if(movingPlayer && (movingPlayer->isPvpEnabled() || (movingPlayer->getLevel() >= protectionLevel
+					&& movingPlayer->getVocation()->isAttackable())))
+#else
                 Player* movingPlayer = movingCreature->getPlayer();
 				if(movingPlayer && movingPlayer->getLevel() >= protectionLevel
 					&& movingPlayer->getVocation()->isAttackable())
+#endif
 				{
 					player->sendCancelMessage(RET_PLAYERISNOTREACHABLE);
 					return false;

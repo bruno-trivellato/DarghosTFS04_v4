@@ -506,7 +506,7 @@ void Tile::moveCreature(Creature* actor, Creature* creature, Cylinder* toCylinde
 }
 
 ReturnValue Tile::__queryAdd(int32_t, const Thing* thing, uint32_t,
-    uint32_t flags, Creature*) const
+                             uint32_t flags, Creature*) const
 {
     const CreatureVector* creatures = getCreatures();
     const TileItemVector* items = getItemList();
@@ -564,7 +564,7 @@ ReturnValue Tile::__queryAdd(int32_t, const Thing* thing, uint32_t,
                 return RET_NOTPOSSIBLE;
 
             if((hasFlag(TILESTATE_BLOCKSOLID) || (hasBitSet(FLAG_PATHFINDING, flags) && hasFlag(TILESTATE_NOFIELDBLOCKPATH)))
-                && (!(monster->canPushItems() || hasBitSet(FLAG_IGNOREBLOCKITEM, flags))))
+                    && (!(monster->canPushItems() || hasBitSet(FLAG_IGNOREBLOCKITEM, flags))))
                 return RET_NOTPOSSIBLE;
 
             if(!items) // Do not seek for fields if there are no items
@@ -589,7 +589,7 @@ ReturnValue Tile::__queryAdd(int32_t, const Thing* thing, uint32_t,
                 return RET_NOTPOSSIBLE;
 
             return !monster->hasCondition(Combat::DamageToConditionType(combatType), -1, false)
-                && !monster->canPushItems() ? RET_NOTPOSSIBLE : RET_NOERROR;
+                    && !monster->canPushItems() ? RET_NOTPOSSIBLE : RET_NOERROR;
         }
 
         if(const Player* player = creature->getPlayer())
@@ -640,7 +640,7 @@ ReturnValue Tile::__queryAdd(int32_t, const Thing* thing, uint32_t,
                 {
                     const ItemType& iType = Item::items[ground->getID()];
                     if(ground->isBlocking(creature) && (!iType.moveable || (ground->isLoadedFromMap() &&
-                        (ground->getUniqueId() || (ground->getActionId() && ground->getContainer())))))
+                                                                            (ground->getUniqueId() || (ground->getActionId() && ground->getContainer())))))
                         return RET_NOTPOSSIBLE;
                 }
 
@@ -650,7 +650,7 @@ ReturnValue Tile::__queryAdd(int32_t, const Thing* thing, uint32_t,
                     {
                         const ItemType& iType = Item::items[(*it)->getID()];
                         if((*it)->isBlocking(creature) && (!iType.moveable || ((*it)->isLoadedFromMap() &&
-                            ((*it)->getUniqueId() || ((*it)->getActionId() && (*it)->getContainer())))))
+                                                                               ((*it)->getUniqueId() || ((*it)->getActionId() && (*it)->getContainer())))))
                             return RET_NOTPOSSIBLE;
                     }
                 }
@@ -686,7 +686,7 @@ ReturnValue Tile::__queryAdd(int32_t, const Thing* thing, uint32_t,
         }
 
         const uint32_t itemLimit = g_config.getNumber(
-                hasFlag(TILESTATE_PROTECTIONZONE) ? ConfigManager::PROTECTION_TILE_LIMIT : ConfigManager::TILE_LIMIT);
+                    hasFlag(TILESTATE_PROTECTIONZONE) ? ConfigManager::PROTECTION_TILE_LIMIT : ConfigManager::TILE_LIMIT);
         if(itemLimit && getThingCount() > itemLimit)
             return RET_TILEISFULL;
 
@@ -731,7 +731,7 @@ ReturnValue Tile::__queryAdd(int32_t, const Thing* thing, uint32_t,
 }
 
 ReturnValue Tile::__queryMaxCount(int32_t, const Thing*, uint32_t count, uint32_t& maxQueryCount,
-    uint32_t ) const
+                                  uint32_t ) const
 {
     maxQueryCount = std::max((uint32_t)1, count);
     return RET_NOERROR;
@@ -745,14 +745,14 @@ ReturnValue Tile::__queryRemove(const Thing* thing, uint32_t count, uint32_t fla
 
     const Item* item = thing->getItem();
     if(!item || !count || (item->isStackable() && count > item->getItemCount())
-        || (!item->isMoveable() && !hasBitSet(FLAG_IGNORENOTMOVEABLE, flags)))
+            || (!item->isMoveable() && !hasBitSet(FLAG_IGNORENOTMOVEABLE, flags)))
         return RET_NOTPOSSIBLE;
 
     return RET_NOERROR;
 }
 
 Cylinder* Tile::__queryDestination(int32_t&, const Thing*, Item** destItem,
-    uint32_t& flags)
+                                   uint32_t& flags)
 {
     Tile* destTile = NULL;
     *destItem = NULL;
@@ -767,32 +767,32 @@ Cylinder* Tile::__queryDestination(int32_t&, const Thing*, Item** destItem,
             Tile* tmpTile = NULL;
             switch(i)
             {
-                case CHANGE_NORTH_EX:
+            case CHANGE_NORTH_EX:
+                __pos.y++;
+                if((tmpTile = g_game.getTile(__pos)))
                     __pos.y++;
-                    if((tmpTile = g_game.getTile(__pos)))
-                        __pos.y++;
 
-                    break;
-                case CHANGE_SOUTH_EX:
+                break;
+            case CHANGE_SOUTH_EX:
+                __pos.y--;
+                if((tmpTile = g_game.getTile(__pos)))
                     __pos.y--;
-                    if((tmpTile = g_game.getTile(__pos)))
-                        __pos.y--;
 
-                    break;
-                case CHANGE_EAST_EX:
+                break;
+            case CHANGE_EAST_EX:
+                __pos.x--;
+                if((tmpTile = g_game.getTile(__pos)))
                     __pos.x--;
-                    if((tmpTile = g_game.getTile(__pos)))
-                        __pos.x--;
 
-                    break;
-                case CHANGE_WEST_EX:
+                break;
+            case CHANGE_WEST_EX:
+                __pos.x++;
+                if((tmpTile = g_game.getTile(__pos)))
                     __pos.x++;
-                    if((tmpTile = g_game.getTile(__pos)))
-                        __pos.x++;
 
-                    break;
-                default:
-                    break;
+                break;
+            default:
+                break;
             }
 
             if(!tmpTile || !tmpTile->floorChange((FloorChange_t)i))
@@ -1478,7 +1478,7 @@ Thing* Tile::__getThing(uint32_t index) const
 }
 
 void Tile::postAddNotification(Creature* actor, Thing* thing, const Cylinder* oldParent,
-    int32_t index, cylinderlink_t link/* = LINK_OWNER*/)
+                               int32_t index, cylinderlink_t link/* = LINK_OWNER*/)
 {
     const Position& cylinderMapPos = pos;
     const SpectatorVec& list = g_game.getSpectators(cylinderMapPos);
@@ -1550,7 +1550,7 @@ void Tile::postAddNotification(Creature* actor, Thing* thing, const Cylinder* ol
 }
 
 void Tile::postRemoveNotification(Creature* actor, Thing* thing, const Cylinder* newParent,
-    int32_t index, bool isCompleteRemoval, cylinderlink_t /*link = LINK_OWNER*/)
+                                  int32_t index, bool isCompleteRemoval, cylinderlink_t /*link = LINK_OWNER*/)
 {
     const Position& cylinderMapPos = pos;
     const SpectatorVec& list = g_game.getSpectators(cylinderMapPos);

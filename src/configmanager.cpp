@@ -326,6 +326,7 @@ bool ConfigManager::load()
 	m_confNumber[USE_BLESSING_AS_PVP] = getGlobalNumber("useBlessingAsPvp", 6);
 	m_confBool[UNFAIR_FIGHT] = getGlobalBool("unfairFightEnabled", false);
 	m_confNumber[RATE_GOLD_LOOT] = getGlobalNumber("rateGoldLoot", 1);
+	m_confBool[ON_LOOK_SHOW_CURRENT_PVP] = getGlobalBool("onLookShowCurrentPvp", true);
 	m_confBool[PLAYERS_CAN_HEAL_MONSTERS] = getGlobalBool("playersCanHealMonsters", false);
 	m_confNumber[MAX_FREE_PREMIUM_LEVEL] = getGlobalNumber("maxFreePremiumLevel", 150);
 	m_confNumber[IN_PVP_HEALING_DECREASE_PERCENT] = getGlobalNumber("inPvpHealingDecreasePercent", 0);

@@ -225,22 +225,31 @@ std::string Player::getDescription(int32_t lookDistance) const
 			s << " You are " << vocation->getDescription();
 		else
 			s << " You have no vocation";
-
+#ifdef __DARGHOS_CUSTOM__
 #ifdef __DARGHOS_PVP_SYSTEM__
-        if(isInBattleground())
-            s << ". You are with " << battlegroundRating << " battleground rating points";
+	if(isInBattleground())
+	    s << ". You are with " << battlegroundRating << " battleground rating points";
+#endif
+        if(g_config.getBool(ConfigManager::ON_LOOK_SHOW_CURRENT_PVP))
+            s << ". You are an " << (isPvpEnabled() ? "PvP ON" : "PvP OFF") << " player";
 #endif
 	}
 	else
 	{
 		s << nameDescription;
-#ifdef __DARGHOS_PVP_SYSTEM__
+#ifdef __DARGHOS_CUSTOM__
 		s << " (";
 
-		if(!hasCustomFlag(PlayerCustomFlag_HideLevel))
-		    s << " level " << level;
+		if(isPvpEnabled())
+			s << "PvP ON, ";
+		else
+			s << "PvP OFF, ";
 
-		s << "battleground rating " << battlegroundRating;
+		if(!hasCustomFlag(PlayerCustomFlag_HideLevel))
+		    s << "level " << level;
+#ifdef __DARGHOS_PVP_SYSTEM__
+		s << ", battleground rating" << battlegroundRating;
+#endif
 		s << ")";
 #else
 		if(!hasCustomFlag(PlayerCustomFlag_HideLevel))
