@@ -4,6 +4,15 @@ summonRequests = {
 }
 
 function createSummonRequest(cid, target)
+
+    if(getPlayerAccess(cid) >= access.GOD) then
+		if(not doSummonCreatureNear(cid, target)) then
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Impossivel concluir a convocação...")
+		end
+
+		return
+    end
+
 	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You create a request to teleport " .. getPlayerName(target) .. " successfully. Now he need accept it.")
 	doPlayerSendTextMessage(target, MESSAGE_STATUS_CONSOLE_BLUE, "ATENÇÃO: " .. getPlayerName(cid) .. " deseja convocar você em sua tela. Digite \"!aceitotp\" para fazer isto.")
 

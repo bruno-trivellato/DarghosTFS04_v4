@@ -1132,4 +1132,49 @@
 		<!-- Magical Torch -->
 	<movevent type="Equip" itemid="9956" slot="pickupable" event="function" value="onEquipItem"/>
 	<movevent type="DeEquip" itemid="9956" slot="pickupable" event="function" value="onDeEquipItem"/>
+
+	<!-- custom -->
+
+	<!-- Pair of Soft Boots (equipped) -->
+	<movevent type="Equip" itemid="12675" slot="feet" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="12675" slot="feet" event="function" value="onDeEquipItem"/>
+	<!-- Pair of Soft Boots (unequipped) -->
+	<movevent type="Equip" itemid="12674" slot="feet" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="12674" slot="feet" event="function" value="onDeEquipItem"/>	
+
+		<!-- Strong Sword Ring -->
+	<movevent type="Equip" itemid="12676" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="Equip" itemid="12679" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="12679" slot="ring" event="function" value="onDeEquipItem"/>	
+
+		<!-- Strong Axe Ring -->
+	<movevent type="Equip" itemid="12677" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="Equip" itemid="12680" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="12680" slot="ring" event="function" value="onDeEquipItem"/>		
+
+		<!-- Strong Club Ring -->
+	<movevent type="Equip" itemid="12678" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="Equip" itemid="12681" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="12681" slot="ring" event="function" value="onDeEquipItem"/>
+
+		<!-- Iron Ring -->
+	<movevent type="Equip" itemid="12682" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="Equip" itemid="12683" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="12683" slot="ring" event="function" value="onDeEquipItem"/>	
+
+		<!-- Eagle-eye Ring -->
+	<movevent type="Equip" itemid="12684" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="Equip" itemid="12685" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="12685" slot="ring" event="function" value="onDeEquipItem"/>
+
+		<!-- Bullseye Ring -->
+	<movevent type="Equip" itemid="12686" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="Equip" itemid="12687" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="12687" slot="ring" event="function" value="onDeEquipItem"/>	
+
+		<!-- Warlock Ring -->
+	<movevent type="Equip" itemid="12688" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="Equip" itemid="12689" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="12689" slot="ring" event="function" value="onDeEquipItem"/>
+
 </movements>

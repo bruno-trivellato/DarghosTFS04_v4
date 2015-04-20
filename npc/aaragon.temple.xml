@@ -7,6 +7,9 @@
 		<parameter key="module_keywords" value="1" />
        	<parameter key="message_greet" value="Olá |PLAYERNAME|! Como posso lhe {ajudar}?" />
 		<parameter key="keywords" value="name" />
+
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="amulet of lost,2173,50000" />
 	
 		<parameter key="keyword_reply1" value="My name is |NPCNAME|." />		
 	</parameters>     

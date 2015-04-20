@@ -17,8 +17,8 @@ function defaultActions(cid, item, fromPosition, itemEx, toPosition)
 		ret = teleportRune.onUse(cid, item, fromPosition, itemEx, toPosition)
 	elseif(item_id == CUSTOM_ITEMS.UNHOLY_SWORD) then
 		ret = unholySword.onUse(cid, item, fromPosition, itemEx, toPosition)
-	elseif(item_id == CUSTOM_ITEMS.PREMIUM_SCROLL_MONTLY or item_id == CUSTOM_ITEMS.PREMIUM_SCROLL_WEEKLY) then
-		ret = premiumScroll.onUse(cid, item, fromPosition, itemEx, toPosition)
+	elseif(item_id == CUSTOM_ITEMS.VIP_SCROLL_MONTLY or item_id == CUSTOM_ITEMS.VIP_SCROLL_WEEKLY) then
+		ret = vipScroll.onUse(cid, item, fromPosition, itemEx, toPosition)
 	elseif(item_id == CUSTOM_ITEMS.OUTFIT_TICKET) then
 		ret = outfitTicket.onUse(cid, item, fromPosition, itemEx, toPosition)
 	elseif(isInArray(CHRISTMAS_PRESENTS, item_id)) then
@@ -320,34 +320,34 @@ function outfitTicket.onUse(cid, item, fromPosition, itemEx, toPosition)
 	return true
 end
 
-premiumScroll = {}
+vipScroll = {}
 
-function premiumScroll.onUse(cid, item, frompos, item2, topos)
-	
-	premiumScroll.DAYS = { [CUSTOM_ITEMS.PREMIUM_SCROLL_MONTLY] = 30, [CUSTOM_ITEMS.PREMIUM_SCROLL_WEEKLY] = 7}
-	
-	if(not hasValidEmail(cid)) then
-		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Você não possui ainda um e-mail cadastrado em sua conta. Você não poderá usar este item enquanto não resolver este problema.")
-		return true
-	end
-	
-	local log_id = getItemAttribute(item.uid, "itemShopLogId")
-	
-	if(not log_id or not doLogItemShopUse(cid, log_id)) then
-	
-		local log_id = getItemAttribute(item.uid, "itemShopLogId") or 0
-		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Este item foi detectado como duplicado e ilegal e foi APAGADO do servidor.")
-		std.clog("[Warning - Item Destroyed] Duplicated itemid " .. item.itemid .. " from log shop id #" .. log_id .. " destroyed on try to use of " .. getPlayerName(cid) .. ".")
-		doRemoveItem(item.uid)
-		
-		return true
-	end
-	
-	doPlayerAddPremiumDays(cid, premiumScroll.DAYS[item.itemid])
-	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "You get " .. premiumScroll.DAYS[item.itemid] .. " days of premium time with this premium ticket! Good luck!")
-	doRemoveItem(item.uid)	
-	
-	return true
+function vipScroll.onUse(cid, item, frompos, item2, topos)
+    
+    vipScroll.DAYS = { [CUSTOM_ITEMS.VIP_SCROLL_MONTLY] = 30, [CUSTOM_ITEMS.VIP_SCROLL_WEEKLY] = 7}
+    
+    if(not hasValidEmail(cid)) then
+        doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Você não possui ainda um e-mail cadastrado em sua conta. Você não podera usar este item enquanto não resolver este problema.")
+        return true
+    end    
+    
+    local log_id = getItemAttribute(item.uid, "itemShopLogId")
+    
+    if(not log_id or not doLogItemShopUse(cid, log_id)) then
+    
+        local log_id = getItemAttribute(item.uid, "itemShopLogId") or 0
+        doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Este item foi detectado como duplicado e ilegal e foi APAGADO do servidor.")
+        std.clog("[Warning - Item Destroyed] Duplicated itemid " .. item.itemid .. " from log shop id #" .. log_id .. " destroyed on try to use of " .. getPlayerName(cid) .. ".")
+        doRemoveItem(item.uid)
+        
+        return true
+    end
+    
+    doPlayerAddVipDays(cid, vipScroll.DAYS[item.itemid])
+    doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "You get " .. vipScroll.DAYS[item.itemid] .. " days of VIP time with this vip ticket! Good luck!")
+    doRemoveItem(item.uid)
+    
+    return true    
 end
 
 teleportRune = {}

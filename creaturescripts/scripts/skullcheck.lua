@@ -39,12 +39,3 @@ function doCheckPlayerSkull(cid)
 		table.insert(lastUpdateData, cid, data)
 	end
 end
-
-function doUpdateDBPlayerSkull(cid)
-
-	local player_id = getPlayerGUID(cid)
-	local skull, skullEnd = getCreatureSkull(cid), getPlayerSkullEnd(cid)
-	
-	local queryStr = "UPDATE `players` SET `skull` = " .. skull .. ", `skulltime` = " .. skullEnd .. " WHERE `id` = " .. player_id .. ";"
-	db.executeQuery(queryStr)	
-end

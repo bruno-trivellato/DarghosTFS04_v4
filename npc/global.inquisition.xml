@@ -5,8 +5,11 @@
 
 	<parameters>
 		<parameter key="module_keywords" value="1" />
-		<parameter key="message_greet" value="Ola jovem |PLAYERNAME|. O que eu posso fazer para te ajudar?" />
+		<parameter key="message_greet" value="Ola jovem |PLAYERNAME|. Diga {trade} para ver minhas ofertas. O que eu posso fazer para te ajudar?" />
 		<parameter key="keywords" value="job;name" />
+
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="amulet of lost,2173,50000" />
 		
 		<parameter key="keyword_reply1" value="Eu sou a autoridade responsavel por combater os demonios, sou o inquisidor." />
 		<parameter key="keyword_reply2" value="Meu nome é |NPCNAME|." />			

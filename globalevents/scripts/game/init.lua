@@ -1,6 +1,6 @@
 function onStartup()
 
-	cleanFreeHouseOwners()
+	--cleanFreeHouseOwners()
 	summonLordVankyner()	
 	summonDemonOak()
 	summonInquisitionBoss()
@@ -39,7 +39,7 @@ function onStartup()
 	
 	db.executeQuery("UPDATE `player_storage` SET `value` = -1 WHERE `key` = '" .. sid.WEBSITE_POLL_NOTIFY .. "'")
 
-	doSetStorage(gid.ARENA_PLAYER_INSIDE, 0)
+	doSetStorage(gid.ARENA_PLAYER_INSIDE, -1)
 	doSetStorage(gid.ARENA_LAST_BATTLE_START, 0)
 	
 	-- reseta Kashmir Quest Status (executando/ou não), caso o server "crashe" bem no meio da quest e o estado "ativado" fique salvo.

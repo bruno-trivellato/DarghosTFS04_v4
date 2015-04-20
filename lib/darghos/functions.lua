@@ -7,11 +7,20 @@ function isInTunnel(cid)
 	return false
 end
 
+function doUpdateDBPlayerSkull(cid)
+
+	local player_id = getPlayerGUID(cid)
+	local skull, skullEnd = getCreatureSkull(cid), getPlayerSkullEnd(cid)
+	
+	local queryStr = "UPDATE `players` SET `skull` = " .. skull .. ", `skulltime` = " .. skullEnd .. " WHERE `id` = " .. player_id .. ";"
+	db.executeQuery(queryStr)	
+end
+
 function increasePremiumSpells(cid, min, max)
-	if(isPremium(cid)) then
-		min = math.floor(min * 1.1)
-		max = math.floor(max * 1.1)
-	end
+	--if(isPremium(cid)) then
+	--	min = math.floor(min * 1.1)
+	--	max = math.floor(max * 1.1)
+	--end
 	
 	return min, max
 end
@@ -512,6 +521,26 @@ end
 function teleportScrollIsLocked(cid)
 	
 	return (getPlayerStorageValue(cid, sid.TELEPORT_RUNE_LOCK) == 1) and true or false
+end
+
+function doPlayerRemoveBalance(cid, balance)
+
+	local account = getPlayerAccountId(cid)
+	local result = db.getResult("SELECT `balance` FROM `accounts` WHERE `id` = " .. account .. ";")
+
+	if(result:getID() ~= -1) then
+		local _balance = result:getDataInt("balance")
+		result:free()
+		
+		if(_balance - balance < 0) then
+			return false
+		end
+
+		db.executeQuery("UPDATE `accounts` SET `balance` = " .. _balance - balance .. " WHERE `id` = " .. account .. ";")
+		return true
+	end
+
+	return false
 end
 
 function doLogItemShopUse(cid, log_id)
@@ -1453,10 +1482,10 @@ end
 
 function addPremiumTest(cid)
 
-	doPlayerAddPremiumDays(cid, darghos_premium_test_quanty)
+	doPlayerAddVipDays(cid, darghos_premium_test_quanty)
 	local account = getPlayerAccountId(cid)
 	db.executeQuery("INSERT INTO `wb_premiumtest` VALUES ('" .. account .. "', '" .. os.time() .. "');")
-	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Parabens! Você recebeu 10 dias de conta premium no Darghos gratuitamente! Aproveite e divirta-se!")
+	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Parabens! Você recebeu " .. darghos_premium_test_quanty .. " dias de conta VIP no Darghos gratuitamente! Aproveite e divirta-se!")
 	sendEnvolveEffect(cid, CONST_ME_HOLYAREA)
 end
 
@@ -1561,7 +1590,7 @@ function hasPollToNotify(cid)
 	result:free()
 	]]
 	
-	return true
+	return false
 end
 
 function getWeekday()

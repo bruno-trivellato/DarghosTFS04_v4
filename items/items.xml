@@ -15215,7 +15215,6 @@
 		<attribute key="weight" value="2850" />
 		<attribute key="weaponType" value="wand" />
 		<attribute key="shootType" value="death" />
-		<attribute key="attackSpeed" value="700" />
 		<attribute key="range" value="3" />
 	</item>
 	<item id="8923" name="ranger legs">
@@ -18909,27 +18908,23 @@
 		<attribute key="showduration" value="1" />
 		<attribute key="showattributes" value="1" />
 	</item>
-
+	
 	<item id="12674" article="a" name="pair of softhaste boots">
 		<attribute key="weight" value="800" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="transformEquipTo" value="12675" />
-		<attribute key="stopduration" value="1" />
-		<attribute key="showduration" value="1" />
 	</item>
 
 	<item id="12675" article="a" name="pair of softhaste boots">
 		<attribute key="weight" value="800" />
 		<attribute key="slotType" value="feet" />
-		<attribute key="decayTo" value="0" />
 		<attribute key="transformDeEquipTo" value="12674" />
 		<attribute key="speed" value="40" />
 		<attribute key="armor" value="3" />
-		<attribute key="duration" value="12600" />
-		<attribute key="healthGain" value="30" />
-		<attribute key="healthTicks" value="6000" />
-		<attribute key="manaGain" value="120" />
-		<attribute key="manaTicks" value="6000" />
+		<attribute key="healthGain" value="24" />
+		<attribute key="healthTicks" value="1000" />
+		<attribute key="manaGain" value="36" />
+		<attribute key="manaTicks" value="1000" />
 		<attribute key="showduration" value="1" />
 		<attribute key="showattributes" value="1" />
 	</item>
@@ -19050,9 +19045,9 @@
 		<attribute key="duration" value="25200" />
 		<attribute key="showduration" value="1" />
 	</item>	
-	<item id="12690" article="a" name="bilhete de premium - mensal">
+	<item id="12690" article="a" name="bilhete de vip - mensal">
 		<attribute key="weight" value="120" />
-		<attribute key="description" value="Use isto para ganhar um mês de premium em sua conta. (30 days)." />
+		<attribute key="description" value="Use isto para ganhar um mês de VIP em sua conta. (30 days)." />
 	</item>	
 	<item id="12691" article="a" name="outfit ticket">
 		<attribute key="weight" value="1200" />
@@ -19078,8 +19073,8 @@
 		<attribute key="containerSize" value="10" />
 		<attribute key="description" value="Abra para saber qual presente sortido você ganhou no Darghos! Mas somente no dia de Natal!" />
 	</item>		
-	<item id="12696" article="a" name="bilhete de premium - semanal">
+	<item id="12696" article="a" name="bilhete de vip - semanal">
 		<attribute key="weight" value="120" />
-		<attribute key="description" value="Use isto para ganhar uma semana de premium em sua conta  (7 dias)." />
+		<attribute key="description" value="Use isto para ganhar uma semana de VIP em sua conta  (7 dias)." />
 	</item>	
 </items>

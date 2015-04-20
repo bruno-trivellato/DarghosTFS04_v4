@@ -76,6 +76,7 @@ function onLogin(cid)
 		setPlayerStorageValue(cid, sid.DOUBLE_EXP_EVENT, 1)
 	end]]
 	
+	--[[
 	if(isPremium(cid)) then
 	  if(getPlayerPromotionLevel(cid) == 1) then
 	    doPlayerSetPromotionLevel(cid, 2)
@@ -85,6 +86,7 @@ function onLogin(cid)
 	    doPlayerSetPromotionLevel(cid, 1)
 	  end
 	end
+	]]
 
 	setStagesOnLogin(cid)
 
@@ -278,6 +280,11 @@ function addMapMarksByUids(cid, uids, type)
 end
 
 function onLoginNotify(cid)
+
+	if(doPlayerIsVip(cid)) then
+		local leftDays = getPlayerVipDays(cid) > 0 and getPlayerVipDays(cid) .. " dias restantes." or "menos de um dia restante."
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Conta VIP: " .. leftDays)
+	end	
 
 	--[[
 	local today = os.date("*t").wday

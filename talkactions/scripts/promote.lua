@@ -25,7 +25,8 @@ function onSay(cid, words, param, channel)
 		g = -1
 	end
 
-	local group, newGroup = getPlayerGroupId(pid), group + g
+	local group = getPlayerGroupId(pid)
+	local newGroup = group + g
 	if(t[2]) then
 		for i, id in ipairs(getGroupList()) do
 			local tmp = getGroupInfo(id)

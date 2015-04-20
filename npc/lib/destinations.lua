@@ -20,7 +20,7 @@ function boatDestiny.addAracura(keywordHandler, npcHandler, module)
 	module = (module == nil) and StdModule.travel or module
 
 	local travelNode = keywordHandler:addKeyword({'aracura'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to sail to aracura for 160 gold coins?'})
-	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = true, pvpEnabledOnly = true, level = 0, cost = 160, destination = BOAT_DESTINY_ARACURA})
+	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = true, vip = true, pvpEnabledOnly = true, level = 0, cost = 160, destination = BOAT_DESTINY_ARACURA})
 	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Then stay here!'})
 end
 
@@ -29,7 +29,7 @@ function boatDestiny.addAaragon(keywordHandler, npcHandler, module)
 	module = (module == nil) and StdModule.travel or module
 
 	local travelNode = keywordHandler:addKeyword({'aaragon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to sail to aaragon for 130 gold coins?'})
-	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = true, pvpDisabledOnly = true, level = 0, cost = 130, destination = BOAT_DESTINY_AARAGON })
+	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = true, vip = true, pvpDisabledOnly = true, level = 0, cost = 130, destination = BOAT_DESTINY_AARAGON })
 	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Then stay here!'})
 end
 
@@ -93,22 +93,22 @@ function boatDestiny.addIslandOfPeace(keywordHandler, npcHandler)
 		
 		if(darghos_world_configuration == WORLD_CONF_CHANGE_ALLOWED) then
 			if(doPlayerIsPvpEnable(cid)) then
-				npcHandler:say('Desculpe, mas você é um jogador agressivo! Torne-se um jogadores pacificos primeiro se quiser viajar para Island of Peace!', cid)
+				npcHandler:say('Desculpe, mas vocï¿½ ï¿½ um jogador agressivo! Torne-se um jogadores pacificos primeiro se quiser viajar para Island of Peace!', cid)
 				npcHandler:resetNpc(cid)
 				return false
 			end
 			
-			npcHandler:say('Você gostaria de pagar 200 moedas de ouro pela passagem de volta a tranquilidade de Island of Peace?', cid)
+			npcHandler:say('Vocï¿½ gostaria de pagar 200 moedas de ouro pela passagem de volta a tranquilidade de Island of Peace?', cid)
 		elseif(darghos_world_configuration == WORLD_CONF_WEECLY_CHANGE) then
 			
 			if(getPlayerLevel(cid) <= darghos_weecly_change_max_level_any_day) then
-				npcHandler:say('Você gostaria de se mudar para Island of Peace? Lembre-se que ate atingir o nivel ' .. (darghos_weecly_change_max_level_any_day + 1) .. ' você podera fazer essa viagem a qualquer instante e de graça!', cid)
+				npcHandler:say('Vocï¿½ gostaria de se mudar para Island of Peace? Lembre-se que ate atingir o nivel ' .. (darghos_weecly_change_max_level_any_day + 1) .. ' vocï¿½ podera fazer essa viagem a qualquer instante e de graï¿½a!', cid)
 			elseif(getPlayerStorageValue(cid, sid.TEMP_TEN_DAYS_FREE_CHANGE_PVP) == -1) then
-				npcHandler:say('Você gostaria de se mudar para Island of Peace e se tornar um jogador pacifico?', cid)
+				npcHandler:say('Vocï¿½ gostaria de se mudar para Island of Peace e se tornar um jogador pacifico?', cid)
 			elseif(getPlayerPremiumDays(cid) > 0) then
-				npcHandler:say('Você gostaria de se mudar para Island of Peace e se tornar um jogador pacifico? PRESTE ATENÇÃO: PARA O SEU NÍVEL {ESTA MUDANÇA IRA CONSUMIR ' .. getChangePvpPrice(cid) .. ' DIAS DE SUA CONTA PREMIUM}! VOCÊ TEM CERTEZA QUE REALMENTE DESEJA ISTO?', cid)
+				npcHandler:say('Vocï¿½ gostaria de se mudar para Island of Peace e se tornar um jogador pacifico? PRESTE ATENï¿½ï¿½O: PARA O SEU Nï¿½VEL {ESTA MUDANï¿½A IRA CONSUMIR ' .. getChangePvpPrice(cid) .. ' DIAS DE SUA CONTA PREMIUM}! VOCï¿½ TEM CERTEZA QUE REALMENTE DESEJA ISTO?', cid)
 			else
-				npcHandler:say('Para efetuar uma mudança para Island of Peace e se tornar um jogador pacifico em seu nível é necessario possuir dias de conta premium.', cid)
+				npcHandler:say('Para efetuar uma mudanï¿½a para Island of Peace e se tornar um jogador pacifico em seu nï¿½vel ï¿½ necessario possuir dias de conta premium.', cid)
 				npcHandler:resetNpc(cid)
 				return false				
 			end
@@ -131,7 +131,7 @@ function boatDestiny.addIslandOfPeace(keywordHandler, npcHandler)
 		
 		if(darghos_world_configuration == WORLD_CONF_CHANGE_ALLOWED) then	
 			if(not doPlayerRemoveMoney(cid, parameters.cost)) then
-				npcHandler:say('Oh, infelizmente você não possui o dinheiro necessario para embarcar...', cid)
+				npcHandler:say('Oh, infelizmente vocï¿½ nï¿½o possui o dinheiro necessario para embarcar...', cid)
 				npcHandler:resetNpc(cid)
 				return true
 			end
@@ -143,7 +143,7 @@ function boatDestiny.addIslandOfPeace(keywordHandler, npcHandler)
 				setPlayerStorageValue(cid, sid.TEMP_TEN_DAYS_FREE_CHANGE_PVP, 1)			
 			elseif(price > 0) then
 				if(getPlayerPremiumDays(cid) < price) then
-					npcHandler:say('Desculpe, mas esta mudança consome ' .. price .. ' dias de premium de sua conta, e você não possui isto!', cid)
+					npcHandler:say('Desculpe, mas esta mudanï¿½a consome ' .. price .. ' dias de premium de sua conta, e vocï¿½ nï¿½o possui isto!', cid)
 					npcHandler:resetNpc(cid)
 					return true				
 				end
@@ -163,7 +163,7 @@ function boatDestiny.addIslandOfPeace(keywordHandler, npcHandler)
 
 	local travelNode = keywordHandler:addKeyword({'island of peace', 'isle of peace'}, onAsk, {npcHandler = npcHandler, onlyFocus = true})
 	travelNode:addChildKeyword({'yes', 'sim'}, onAccept, {npcHandler = npcHandler, cost = 200, destination = BOAT_DESTINY_ISLAND_OF_PEACE })
-	travelNode:addChildKeyword({'no', 'não', 'nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Mas que pena... Mas tenha um bom dia!!'})
+	travelNode:addChildKeyword({'no', 'nï¿½o', 'nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Mas que pena... Mas tenha um bom dia!!'})
 end
 
 function boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
@@ -183,32 +183,32 @@ function boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
 			local hasFirstChangePvpArea = getPlayerStorageValue(cid, sid.FIRST_CHANGE_PVP_AREA) == 1
 			
 			if(not hasFirstChangePvpArea) then
-				npcHandler:say('Vejo que você nunca viajou para Quendor, este barco pode levar-lo para lá, por ser sua primeira viagem, não lhe será cobrado nada, porém saiba que fora de Island of Peace você poderá ativar ou desativar <...>', cid)
-				npcHandler:say('a habilidade de entrar em combate com outros jogadores, isto é, seu pvp. Inicialmente o seu pvp está desativado, caso você deseje o ativar converse com o NPC\'s que ficam no templo de todas cidades. <...>', cid)
-				npcHandler:say('Saiba também que somente é permitido voltar para Island of Peace jogadores que estiverem com seu pvp desativado, se você o ativar-lo, não poderá voltar. <...>', cid)			
-				npcHandler:say('E então, deseja mesmo embarcar para Quendor?', cid)
+				npcHandler:say('Vejo que vocï¿½ nunca viajou para Quendor, este barco pode levar-lo para lï¿½, por ser sua primeira viagem, nï¿½o lhe serï¿½ cobrado nada, porï¿½m saiba que fora de Island of Peace vocï¿½ poderï¿½ ativar ou desativar <...>', cid)
+				npcHandler:say('a habilidade de entrar em combate com outros jogadores, isto ï¿½, seu pvp. Inicialmente o seu pvp estï¿½ desativado, caso vocï¿½ deseje o ativar converse com o NPC\'s que ficam no templo de todas cidades. <...>', cid)
+				npcHandler:say('Saiba tambï¿½m que somente ï¿½ permitido voltar para Island of Peace jogadores que estiverem com seu pvp desativado, se vocï¿½ o ativar-lo, nï¿½o poderï¿½ voltar. <...>', cid)			
+				npcHandler:say('E entï¿½o, deseja mesmo embarcar para Quendor?', cid)
 				
 				return true
 			end
 			
-			npcHandler:say('Você gostaria de pagar 200 moedas de ouro para viajar para Quendor?', cid)
+			npcHandler:say('Vocï¿½ gostaria de pagar 200 moedas de ouro para viajar para Quendor?', cid)
 		elseif(darghos_world_configuration == WORLD_CONF_WEECLY_CHANGE) then
 			
 			if(getPlayerLevel(cid) <= darghos_weecly_change_max_level_any_day) then
-				npcHandler:say('Você gostaria de se mudar para Quendor? Lembre-se que ate atingir o nivel ' .. (darghos_weecly_change_max_level_any_day + 1) .. ' você podera fazer essa viagem a qualquer instante e de graça!', cid)
+				npcHandler:say('Vocï¿½ gostaria de se mudar para Quendor? Lembre-se que ate atingir o nivel ' .. (darghos_weecly_change_max_level_any_day + 1) .. ' vocï¿½ podera fazer essa viagem a qualquer instante e de graï¿½a!', cid)
 			elseif(getPlayerStorageValue(cid, sid.TEMP_TEN_DAYS_FREE_CHANGE_PVP) == -1) then
-				npcHandler:say('Você gostaria de se mudar para Quendor e se tornar um jogador agressivo?', cid)			
+				npcHandler:say('Vocï¿½ gostaria de se mudar para Quendor e se tornar um jogador agressivo?', cid)			
 			elseif(getPlayerPremiumDays(cid) > 0) then
-				npcHandler:say('Você gostaria de se mudar para Quendor e se tornar um jogador agressivo? PRESTE ATENÇÃO: PARA O SEU NÍVEL {ESTA MUDANÇA IRA CONSUMIR ' .. getChangePvpPrice(cid) .. ' DIAS DE SUA CONTA PREMIUM}! VOCÊ TEM CERTEZA QUE REALMENTE DESEJA ISTO?', cid)
+				npcHandler:say('Vocï¿½ gostaria de se mudar para Quendor e se tornar um jogador agressivo? PRESTE ATENï¿½ï¿½O: PARA O SEU Nï¿½VEL {ESTA MUDANï¿½A IRA CONSUMIR ' .. getChangePvpPrice(cid) .. ' DIAS DE SUA CONTA PREMIUM}! VOCï¿½ TEM CERTEZA QUE REALMENTE DESEJA ISTO?', cid)
 			else
-				npcHandler:say('Para efetuar uma mudança para Quendor e se tornar um jogador agressivo em seu nível é necessario possuir dias de conta premium.', cid)
+				npcHandler:say('Para efetuar uma mudanï¿½a para Quendor e se tornar um jogador agressivo em seu nï¿½vel ï¿½ necessario possuir dias de conta premium.', cid)
 				npcHandler:resetNpc(cid)
 				return false	
 			end
 		elseif(darghos_world_configuration == WORLD_CONF_AGRESSIVE_ONLY) then
-			npcHandler:say('Quendor é uma maravilhosa cidade! Mais saiba que por lá e por todo o resto do mundo do Darghos não é um local seguro, assim você poderá  <...>', cid)
-			npcHandler:say('atacar e ser atacado por outras pessoas... Também esteja ciente que uma vez abandonando esta ilha você se tornará cidadão de Quendor e não será mais possivel retornar <...>', cid)
-			npcHandler:say('E então, deseja mesmo embarcar para Quendor?', cid)		
+			npcHandler:say('Quendor ï¿½ uma maravilhosa cidade! Mais saiba que por lï¿½ e por todo o resto do mundo do Darghos nï¿½o ï¿½ um local seguro, assim vocï¿½ poderï¿½  <...>', cid)
+			npcHandler:say('atacar e ser atacado por outras pessoas... Tambï¿½m esteja ciente que uma vez abandonando esta ilha vocï¿½ se tornarï¿½ cidadï¿½o de Quendor e nï¿½o serï¿½ mais possivel retornar <...>', cid)
+			npcHandler:say('E entï¿½o, deseja mesmo embarcar para Quendor?', cid)		
 		end
 		
 		return true
@@ -229,7 +229,7 @@ function boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
 			local hasFirstChangePvpArea = getPlayerStorageValue(cid, sid.FIRST_CHANGE_PVP_AREA) == 1
 			
 			if(hasFirstChangePvpArea and not doPlayerRemoveMoney(cid, parameters.cost)) then
-				npcHandler:say('Oh, infelizmente você não possui o dinheiro necessario para embarcar...', cid)
+				npcHandler:say('Oh, infelizmente vocï¿½ nï¿½o possui o dinheiro necessario para embarcar...', cid)
 				npcHandler:resetNpc(cid)
 				return true
 			end	
@@ -254,7 +254,7 @@ function boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
 				setPlayerStorageValue(cid, sid.TEMP_TEN_DAYS_FREE_CHANGE_PVP, 1)
 			elseif(price > 0) then
 				if(getPlayerPremiumDays(cid) < price) then
-					npcHandler:say('Desculpe, mas esta mudança consome ' .. price .. ' dias de premium de sua conta, e você não possui isto!', cid)
+					npcHandler:say('Desculpe, mas esta mudanï¿½a consome ' .. price .. ' dias de premium de sua conta, e vocï¿½ nï¿½o possui isto!', cid)
 					npcHandler:resetNpc(cid)
 					return true				
 				end
@@ -281,7 +281,7 @@ function boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
 
 	local travelNode = keywordHandler:addKeyword({'quendor'}, onAsk, {npcHandler = npcHandler, onlyFocus = true})
 	travelNode:addChildKeyword({'yes', 'sim'}, onAccept, {npcHandler = npcHandler, cost = 200, destination = BOAT_DESTINY_QUENDOR })
-	travelNode:addChildKeyword({'no', 'não', 'nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Mas que pena... Mas tenha um bom dia!!'})
+	travelNode:addChildKeyword({'no', 'nï¿½o', 'nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Mas que pena... Mas tenha um bom dia!!'})
 end
 
 -----------
@@ -293,7 +293,7 @@ carpetDestiny = {}
 function carpetDestiny.addAaragon(keywordHandler, npcHandler)
 
 	local travelNode = keywordHandler:addKeyword({'aaragon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to fly in my magic carpet to Aaragon for 60 gold coins?'})
-	travelNode:addChildKeyword({'yes'}, StdModule.travel, {npcHandler = npcHandler, premium = true, level = 0, cost = 60, destination = CARPET_DESTINY_AARAGON })
+	travelNode:addChildKeyword({'yes'}, StdModule.travel, {npcHandler = npcHandler, vip = true, premium = true, level = 0, cost = 60, destination = CARPET_DESTINY_AARAGON })
 	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Then stay here!'})
 end
 

@@ -1,5 +1,5 @@
 function needCheckTradeItem(item_id)
-	return isInArray({CUSTOM_ITEMS.PREMIUM_SCROLL_MONTLY, CUSTOM_ITEMS.PREMIUM_SCROLL_WEEKLY, CUSTOM_ITEMS.OUTFIT_TICKET}, item_id)
+	return isInArray({CUSTOM_ITEMS.OUTFIT_TICKET, CUSTOM_ITEMS.VIP_SCROLL_MONTLY, CUSTOM_ITEMS.VIP_SCROLL_WEEKLY}, item_id)
 end
 
 function searchItemInContainer(container, foundItems)
@@ -130,8 +130,8 @@ function onTradeRequest(cid, target, item)
 	end	
 	
 	local sameLookItems = {
-		[CUSTOM_ITEMS.PREMIUM_SCROLL_MONTLY] = {}
-		,[CUSTOM_ITEMS.PREMIUM_SCROLL_WEEKLY] = {}
+		[CUSTOM_ITEMS.VIP_SCROLL_MONTLY] = {}
+		,[CUSTOM_ITEMS.VIP_SCROLL_WEEKLY] = {}
 		,[CUSTOM_ITEMS.OUTFIT_TICKET] = {}
 	}
 	

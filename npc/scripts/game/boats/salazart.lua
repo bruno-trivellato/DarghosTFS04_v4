@@ -11,6 +11,7 @@ function onThink() 						npcHandler:onThink() end
     
 boatDestiny.addAracura(keywordHandler, npcHandler)    
 boatDestiny.addAaragon(keywordHandler, npcHandler)    
+boatDestiny.addQuendor(keywordHandler, npcHandler)
         
 npcHandler:setMessage(MESSAGE_GREET, "Greetings |PLAYERNAME|. I can take you to {aracura} and {aaragon}. Which of these places you wold like to travel?.")
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I am the captain of this ship.'})
