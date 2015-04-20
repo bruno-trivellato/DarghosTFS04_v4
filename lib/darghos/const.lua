@@ -166,6 +166,12 @@
 		ARACURA = 10
 	}
 	
+	temp_towns =
+	{
+		BATTLEGROUND_TEAM_1 = 12,
+		BATTLEGROUND_TEAM_2 = 13
+	}
+	
 	-->> Posi��es dos templos
 
 		QUENDOR = {x=2020 ,y=1903, z=7}
@@ -242,6 +248,9 @@
 		
 		FLASK_OF_MAGIC_PRODUCTIVITY = 12710
 	}
+
+	CUSTOM_CHANNEL_PVP			= 10
+	CUSTOM_CHANNEL_BG_CHAT		= 11
 	
 	-- Pacific & Agresives Configuration
 	
@@ -267,7 +276,9 @@
 	PLAYERCUSTOMFLAG_CONTINUEONLINEWHENEXIT = 26
 	
 	-- Custom Conditions
-	CONDITION_IGNORE_DEATH_LOSS = 16777216 -- 1 << 24
+	CONDITION_IGNORE_DEATH_LOSS =   16777216  -- 1 << 24
+        CONDITION_CASTING_SPELL =       33554432  -- 1 << 25
+        CONDITION_BATTLEGROUND_FLAG =   67108864  -- 1 << 26
 	
 	-- Constantes para o OpenTibia, nao envolvem coisas do Darghos mas nao existem no projeto original
 	HOUSE_ACCESS_NOT_INVITED = 0

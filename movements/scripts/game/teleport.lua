@@ -32,6 +32,20 @@ function onStepIn(cid, item, position, fromPosition)
 		return TRUE
 	end
 	
+	if(item.actionid == aid.BATTLEGROUND_EXIT) then
+		local ret = pvpBattleground.onExit(cid)
+		if(not ret) then
+			pushBack(cid, position, fromPosition)
+			return false
+		end
+	elseif(item.actionid == aid.BATTLEGROUND_LEAVE_SPAWN) then
+		local ret = pvpBattleground.onLeaveSpawnArea(cid)
+		if(not ret) then
+			pushBack(cid, position, fromPosition)
+			return false
+		end
+	end
+
 	if(item.actionid == aid.TELEPORT_NO_SKULLS and getCreatureSkull(cid) >= SKULL_WHITE) then
 			doPlayerSendCancel(cid, "You have blood in your hands. The destination of this portal os not for you.")
 			pushBack(cid, position, fromPosition)

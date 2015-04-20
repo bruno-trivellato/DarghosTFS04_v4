@@ -20,5 +20,7 @@
 	</channel>
 	<channel id="8" name="RL-Chat" level="2"/>
 	<channel id="9" name="Help" logged="yes"/>
+	<channel id="10" name="PvP Channel"/>
+	<channel id="11" name="Bg Team Chat"/>
 	<channel id="65535" name="Private Chat Channel"/>
 </channels>

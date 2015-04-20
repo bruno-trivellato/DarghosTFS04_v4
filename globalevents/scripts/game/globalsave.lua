@@ -7,6 +7,9 @@ function onTime(time)
 	--if(not isInArray({WEEKDAY.MONDAY, WEEKDAY.WEDNESDAY, WEEKDAY.FRIDAY}, date.wday)) then
 	--	return true
 	--end
+
+	-- preparos de desligamento
+	pvpBattleground.close()
 	
 	-- desligamento em 5 minutos
 	addEvent(doSetGameState, 1000 * 60 * 5, GAMESTATE_CLOSING)

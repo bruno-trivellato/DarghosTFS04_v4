@@ -12,12 +12,28 @@ function onSay(cid, words, param, channel, type)
 
 	if(channel == CHANNEL_HELP) then
 		return help.onSay(cid, words, param, channel)
+	elseif(channel == CUSTOM_CHANNEL_PVP or channel == CUSTOM_CHANNEL_BG_CHAT) then
+		return pvp.onSay(cid, words, param, channel)
 	end
 end
 
 pvp = {}
 
 function pvp.onSay(cid, words, param, channel)
+	
+	if(getPlayerAccess(cid) == ACCESS_PLAYER) then
+		if(channel == CUSTOM_CHANNEL_BG_CHAT) then
+			if(pvpBattleground.playerSpeakTeam(cid, words .. " " .. param)) then
+				return true			
+			else
+				doPlayerSendCancel(cid, "Não é permitido a jogadores fora da battleground enviarem mensagens por este canal. Para entrar em uma partida digite \"!bg entrar\"")
+				return true
+			end	
+		elseif(channel == CUSTOM_CHANNEL_PVP) then
+			doPlayerSendCancel(cid, "Não é permitido enviar mensagens neste canal. Para entrar em uma Battleground digite \"!bg entrar\"")
+			return true		
+		end
+	end
 
 	return false
 end

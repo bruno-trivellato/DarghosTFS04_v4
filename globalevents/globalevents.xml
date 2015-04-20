@@ -5,7 +5,13 @@
 	<globalevent name="custom_init" type="startup" event="script" value="game/init.lua"/>
 	<globalevent name="custom_globalsave" time="4:50:00" event="script" value="game/globalsave.lua"/>
 	<globalevent name="announcements" interval="600000" event="script" value="game/announcements.lua"/>
-	
+	<globalevent name="bginit" type="startup" event="script" value="game/battleground.lua"/>
+	<globalevent name="bggainstart" time="11:00:00" event="script" value="game/battleground.lua"/>
+	<globalevent name="bggainend" time="1:00:00" event="script" value="game/battleground.lua"/>
+	<globalevent name="bgstart" type="bgstart" event="script" value="game/battleground.lua"/>
+	<globalevent name="bgprepare" type="bgprepare" event="script" value="game/battleground.lua"/>
+	<globalevent name="bgend" type="bgend" event="script" value="game/battleground.lua"/>	
+
 	<!-- Darghos Raids -->
 
 	<globalevent name="save" interval="3600000" event="script" value="save.lua"/>

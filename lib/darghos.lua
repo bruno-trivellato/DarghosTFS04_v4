@@ -10,6 +10,7 @@ dofile(getDataDir() .. "lib/darghos/functions.lua")
 dofile(getDataDir() .. "lib/darghos/mcord.lua")
 dofile(getDataDir() .. "lib/darghos/gids.lua")
 dofile(getDataDir() .. "lib/darghos/polls.lua")
+dofile(getDataDir() .. "lib/darghos/pvp_battleground.lua")
 dofile(getDataDir() .. "lib/darghos/luaGlobal.lua")
 
 dofile(getDataDir() .. "lib/darghos/lib_item_shop.lua")

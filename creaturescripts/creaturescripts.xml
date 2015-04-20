@@ -35,8 +35,13 @@
 	<event type="think" name="GainStamina" event="script" value="game/stamina.lua"/>
 	<event type="statschange" name="onStateChange" event="script" value="game/onstatechange.lua"/>
 	<event type="preparedeath" name="PrepareDeath" event="script" value="game/prepare_death.lua"/>
-	
+
 	<!-- DARGHOS SOURCE SCRIPTED EVENTS -->
+	<event type="think" name="onBattlegroundThink" event="script" value="game/battleground.lua"/>
+	<event type="bgdeath" name="onBattlegroundDeath" event="script" value="game/battleground.lua"/>
+	<event type="bgend" name="onBattlegroundEnd" event="script" value="game/battleground.lua"/>
+	<event type="bgleave" name="onBattlegroundLeave" event="script" value="game/battleground.lua"/>
+        <event type="bgflagstacks" name="onReceiveFlagStacks" event="script" value="game/battleground.lua"/>
 	
 	<event type="moveitem" name="onMoveItem" event="script" value="game/move_item.lua"/>
 	

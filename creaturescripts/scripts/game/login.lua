@@ -42,6 +42,7 @@ function onLogin(cid)
 	
 	registerCreatureEvent(cid, "Hacks")
 	registerCreatureEvent(cid, "GainStamina")
+	registerCreatureEvent(cid, "onLeaveChannel")
 	registerCreatureEvent(cid, "onPush")
 	
 	playerRecord()
@@ -95,7 +96,7 @@ function onLogin(cid)
 	
 	Auctions.onLogin(cid)	
 	
-	--doPlayerOpenChannel(cid, CUSTOM_CHANNEL_PVP)
+	doPlayerOpenChannel(cid, CUSTOM_CHANNEL_PVP)
 	
 	-- premium test
 	if(canReceivePremiumTest(cid)) then

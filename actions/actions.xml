@@ -5,6 +5,9 @@
 	<!-- Hack for default script for Use With items... -->
 	<action itemid="12670" script="default.lua"/>
 
+	<!-- Battleground Flags -->
+	<action itemid="10952;11293" script="game/battleground_flag.lua"/>
+
 	<!-- Koshei's (Blue Legs) -->
 	<action uniqueid="1075-1076" script="game/koshei.lua"/>
 	<action itemid="8266" script="game/koshei.lua"/>
