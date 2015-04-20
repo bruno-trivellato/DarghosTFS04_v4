@@ -22455,9 +22455,6 @@
 		<monster name="Sen Gan Shaman" x="0" y="1" z="10" spawntime="300" />
 		<monster name="Sen Gan Guard" x="1" y="2" z="10" spawntime="300" />
 	</spawn>
-	<spawn centerx="2399" centery="1880" centerz="10" radius="1">
-		<npc name="global.inquisition" x="0" y="0" z="10" spawntime="60" />
-	</spawn>
 	<spawn centerx="2473" centery="1880" centerz="10" radius="5">
 		<monster name="Sen Gan Guard" x="0" y="-5" z="10" spawntime="300" />
 		<monster name="Sen Gan Guard" x="3" y="-5" z="10" spawntime="300" />
@@ -26067,6 +26064,9 @@
 		<monster name="Rat" x="0" y="-1" z="11" spawntime="60" />
 		<monster name="Rat" x="-1" y="1" z="11" spawntime="60" />
 		<monster name="Cave Rat" x="0" y="1" z="11" spawntime="60" />
+	</spawn>
+	<spawn centerx="2702" centery="1302" centerz="11" radius="1">
+		<npc name="global.inquisition" x="1" y="0" z="11" spawntime="60" />
 	</spawn>
 	<spawn centerx="2698" centery="1307" centerz="11" radius="1">
 		<monster name="Rat" x="-1" y="-1" z="11" spawntime="60" />
