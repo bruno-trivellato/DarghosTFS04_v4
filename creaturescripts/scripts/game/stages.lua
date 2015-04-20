@@ -19,6 +19,15 @@ function onAdvance(cid, type, oldlevel, newlevel)
 		elseif(newlevel == 500 and not playerHistory.hasAchievement(cid, PH_ACH_MISC_GOT_LEVEL_500)) then
 			playerHistory.onAchiev(cid, PH_ACH_MISC_GOT_LEVEL_500)
 		end
+
+		if(newlevel >= 20 and not playerHistory.hasAchievement(cid, PH_ACH_BE_PROMOTED)) then
+			playerHistory.onAchiev(cid, PH_ACH_BE_PROMOTED)
+
+			if(getPlayerPromotionLevel(cid) == 0) then
+				setPlayerPromotionLevel(cid, 1)	
+				return false						
+			end			
+		end
 	
 		--[[
 		local expSpecialBonusEnd = getPlayerStorageValue(cid, sid.EXP_MOD_ESPECIAL_END)

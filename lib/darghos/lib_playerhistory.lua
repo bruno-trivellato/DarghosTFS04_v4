@@ -38,6 +38,9 @@ PH_ACH_DUNGEON_ARIADNE_TROLLS_GOT_GHAZRAN_TONGUE = 1001
 PH_ACH_DUNGEON_ARIADNE_TROLLS_COMPLETE_IN_ONLY_ONE_ATTEMP = 1002
 PH_ACH_DUNGEON_ARIADNE_TROLLS_COMPLETE_WITHOUT_ANYONE_DIE = 1003
 
+-- Misc (2000 a 2500)
+PH_ACH_BE_PROMOTED = 2500
+
 -- Misc (2000 a 2999)
 PH_ACH_MISC_GOT_LEVEL_100 = 2000
 PH_ACH_MISC_GOT_LEVEL_200 = 2001
@@ -136,6 +139,9 @@ playerAchievements = {
 	
 	,[PH_ACH_MISC_GOT_LEVEL_500] = {
 		notifyText = "[Façanha alcançada] Você atingiu o level 500!"
+	}	
+	,[PH_ACH_BE_PROMOTED] = {
+		notifyText = "[Façanha alcançada] Você atingiu o level 20 e ganhou uma promoção!"
 	}
 }
 
