@@ -521,6 +521,12 @@ function portalSystem.onStepInfoField(cid, item, position, fromPosition)
 		
 		return true
 	end
+
+	if(not darghos_enable_portals) then
+		doPlayerSendCancel(cid, "The access of portal's hunts was blocked.")
+		pushBack(cid, position, fromPosition, false)
+		return true
+	end
 	
 	if(getPlayerLevel(cid) < tpProperties.min_level) then
 		

@@ -67,3 +67,5 @@ if(getConfigValue("worldId") == WORLD_AARAGON) then
 else
 	darghos_use_protected_stages = false
 end
+
+darghos_enable_portals = true

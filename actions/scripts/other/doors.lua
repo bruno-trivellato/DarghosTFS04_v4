@@ -19,7 +19,26 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		return true
 	end
 
+	--[[ DARGHOS_CUSTOM ]]
+	if(item.actionid == 190) then
+		if(not darghos_enable_portals) then
+			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "The access of portal's hunts was blocked.")
+			return true							
+		end
+
+		if(getCreatureCondition(cid, CONDITION_INFIGHT)) then
+			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You cannot passtrough this door while you are in fight condition.")
+			return true				
+		end
+
+		doorEnter(cid, item, toPosition)
+		return true			
+	end
+	--[[ END ]]
+
 	if(getItemLevelDoor(item.itemid) > 0) then
+
+
 		if(item.actionid == 189) then
 			if(not isPremium(cid)) then
 				doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Only the worthy may pass.")
