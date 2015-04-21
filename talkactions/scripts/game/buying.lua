@@ -22,6 +22,7 @@ local callbacks = {
 			doPlayerSendCancel(cid, msg_needcap)
 		end
 
+		doPlayerRemoveMoney(cid, aol_price)
 		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Bought 1x amulet of loss for " .. aol_price .." gold.")
 		return true
 	end,
@@ -52,6 +53,7 @@ local callbacks = {
 			return false
 		end
 
+		doPlayerRemoveMoney(cid, promotion_price)
 		setPlayerPromotionLevel(cid, max_promotion_level)
 
 		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Congratulations! You are promoted!")
