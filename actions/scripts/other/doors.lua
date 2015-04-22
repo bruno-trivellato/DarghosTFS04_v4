@@ -16,26 +16,25 @@ end
 local function doorEnterPortals(cid, item, toPosition)
 	local openDoorId = item.itemid + 1
 	local fromPosition = getCreaturePos(cid)
-
-	doTransformItem(item.uid, openDoorId)
-	doTeleportThing(cid, toPosition)
+	local dir = NORTH
 
 	local newPosition = {x = toPosition.x, y = toPosition.y, z = toPosition.z}
 	if(isInArray(verticalOpenDoors, openDoorId)) then
 		if(fromPosition.x > toPosition.x) then
-			newPosition.x = newPosition.x - 1
+			dir = WEST
 		else
-			newPosition.x = newPosition.x + 1
+			dir = EAST
 		end
 	else
 		if(fromPosition.y > toPosition.y) then
-			newPosition.y = newPosition.y - 1
+			dir = NORTH
 		else
-			newPosition.y = newPosition.y + 1
+			dir = SOUTH
 		end
 	end
 
-	addEvent(doTeleportThing, 250, cid, newPosition)
+	doTransformItem(item.uid, openDoorId)
+	doMoveCreature(cid, dir)
 end
 
 function onUse(cid, item, fromPosition, itemEx, toPosition)
