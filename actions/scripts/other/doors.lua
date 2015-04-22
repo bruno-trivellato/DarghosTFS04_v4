@@ -13,6 +13,31 @@ local function doorEnter(cid, item, toPosition)
 	doTeleportThing(cid, toPosition)
 end
 
+local function doorEnterPortals(cid, item, toPosition)
+	local openDoorId = item.itemid + 1
+	local fromPosition = getCreaturePos(cid)
+
+	doTransformItem(item.uid, openDoorId)
+	doTeleportThing(cid, toPosition)
+
+	local newPosition = {x = toPosition.x, y = toPosition.y, z = toPosition.z}
+	if(isInArray(verticalOpenDoors, openDoorId)) then
+		if(fromPosition.x > toPosition.x) then
+			newPosition.x = newPosition.x - 1
+		else
+			newPosition.x = newPosition.x + 1
+		end
+	else
+		if(fromPosition.y > toPosition.y) then
+			newPosition.y = newPosition.y - 1
+		else
+			newPosition.y = newPosition.y + 1
+		end
+	end
+
+	addEvent(doTeleportThing, 250, cid, newPosition)
+end
+
 function onUse(cid, item, fromPosition, itemEx, toPosition)
 	if(fromPosition.x ~= CONTAINER_POSITION and isPlayerPzLocked(cid) and getTileInfo(fromPosition).protection) then
 		doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTPOSSIBLE)
@@ -31,7 +56,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 			return true				
 		end
 
-		doorEnter(cid, item, toPosition)
+		doorEnterPortals(cid, item, toPosition)
 		return true			
 	end
 	--[[ END ]]
