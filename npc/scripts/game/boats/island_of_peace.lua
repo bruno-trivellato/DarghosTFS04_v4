@@ -9,9 +9,9 @@ function onCreatureSay(cid, type, msg) 	npcHandler:onCreatureSay(cid, type, msg)
 function onThink() 						npcHandler:onThink() end
 -- OTServ event handling functions end
 
-boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
+boatDestiny.addQuendor(keywordHandler, npcHandler)
         
-local text = 'Meu navio pode levar-lo ocasionamente a {quendor}.'      
+local text = 'Meu navio pode levar-lo a {quendor}.'
         
 keywordHandler:addKeyword({'passage', 'travel', 'passagem', 'viajar', 'cidades'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = text})
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Eu sou o Capitão deste navio.'})

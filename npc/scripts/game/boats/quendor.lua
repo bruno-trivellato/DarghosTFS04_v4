@@ -13,8 +13,9 @@ boatDestiny.addAracura(keywordHandler, npcHandler)
 boatDestiny.addAaragon(keywordHandler, npcHandler)
 boatDestiny.addNorthrend(keywordHandler, npcHandler)
 boatDestiny.addSalazart(keywordHandler, npcHandler)
+boatDestiny.addIslandOfPeace(keywordHandler, npcHandler)
         
-npcHandler:setMessage(MESSAGE_GREET, "Greetings |PLAYERNAME|. I can take you to {aracura}, {aaragon} and {northrend} also {salazart}. Which of these places you wold like to travel?.")
+npcHandler:setMessage(MESSAGE_GREET, "Greetings |PLAYERNAME|. I can take you to {aracura}, {aaragon}, {island of peace} and {northrend} also {salazart}. Which of these places you wold like to travel?.")
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I\'m the ship captain!'})
 
 -- Makes sure the npc reacts when you say hi, bye etc.

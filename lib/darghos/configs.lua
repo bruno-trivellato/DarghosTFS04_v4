@@ -62,10 +62,6 @@ darghos_kill_dark_general_exp_bonus_days = 3
 darghos_kill_dark_general_exp_bonus_percent = 10
 
 -- Define se jogadores em area non-pvp/pacificos usarão um estagio de exp diferenciado do normal
-if(getConfigValue("worldId") == WORLD_AARAGON) then
-	darghos_use_protected_stages = true
-else
-	darghos_use_protected_stages = false
-end
+darghos_use_protected_stages = false
 
 darghos_enable_portals = true
