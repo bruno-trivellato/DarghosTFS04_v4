@@ -18,20 +18,7 @@ local function doorEnterPortals(cid, item, toPosition)
 	local fromPosition = getCreaturePos(cid)
 	local dir = NORTH
 
-	local newPosition = {x = toPosition.x, y = toPosition.y, z = toPosition.z}
-	if(isInArray(verticalOpenDoors, openDoorId)) then
-		if(fromPosition.x > toPosition.x) then
-			dir = WEST
-		else
-			dir = EAST
-		end
-	else
-		if(fromPosition.y > toPosition.y) then
-			dir = NORTH
-		else
-			dir = SOUTH
-		end
-	end
+	local dir = getDirectionTo(fromPosition, toPosition)
 
 	doTransformItem(item.uid, openDoorId)
 	doMoveCreature(cid, dir)
