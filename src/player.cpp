@@ -70,6 +70,7 @@ Player::Player(const std::string& _name, ProtocolGame* p):
     isAfk = false;
 #endif
 
+
 #ifdef __DARGHOS_PVP_SYSTEM__
     onBattleground = false;
     team_id = BATTLEGROUND_TEAM_NONE;
@@ -93,7 +94,8 @@ Player::Player(const std::string& _name, ProtocolGame* p):
     m_spoofedBy = NULL;
 
 #ifdef __DARGHOS_CUSTOM__
-    m_isVip = m_hasExpBonus = false;
+	m_isVip = m_hasExpBonus = false;
+	m_criticalFactor = g_config.getDouble(ConfigManager::CRITICAL_HIT_MUL);
 #endif
 
 	promotionLevel = walkTaskEvent = actionTaskEvent = nextStepEvent = bloodHitCount = shieldBlockCount = 0;
@@ -2309,6 +2311,10 @@ bool Player::hasShield() const
 BlockType_t Player::blockHit(Creature* attacker, CombatType_t combatType, int32_t& damage,
 	bool checkDefense/* = false*/, bool checkArmor/* = false*/, bool reflect/* = true*/, bool field/* = false*/)
 {
+#ifdef __DARGHOS_CUSTOM__
+    	int32_t resilience = 0;
+#endif
+
 	BlockType_t blockType = Creature::blockHit(attacker, combatType, damage, checkDefense, checkArmor, reflect, field);
 	if(attacker)
 	{
@@ -2349,6 +2355,10 @@ BlockType_t Player::blockHit(Creature* attacker, CombatType_t combatType, int32_
 		}
 
 #ifdef __DARGHOS_CUSTOM__
+        if(it.m_resilience > 0){
+            resilience += it.m_resilience;
+        }
+
         Absorb_t::const_iterator fit = it.abilities.fieldAbsorb.find(combatType);
         if(field && fit != it.abilities.fieldAbsorb.end())
 		{
@@ -2368,6 +2378,19 @@ BlockType_t Player::blockHit(Creature* attacker, CombatType_t combatType, int32_
 				g_game.transformItem(item, item->getID(), std::max((int32_t)0, (int32_t)item->getCharges() - 1));
 		}
 	}
+
+#ifdef __DARGHOS_CUSTOM__
+    if(resilience > 0){
+
+        if(attacker)
+        {
+            if(attacker->getMonster() && !attacker->isPlayerSummon())
+                resilience = -std::abs(resilience);
+        }
+
+        blocked += (int32_t)std::ceil((double)(damage * (resilience / 100.)));
+    }
+#endif
 
 	if(outfitAttributes)
 	{
@@ -5644,7 +5667,7 @@ void Player::clearPartyInvitations()
 		(*it)->removeInvite(this);
 }
 
-void Player::increaseCombatValues(int32_t& min, int32_t& max, bool useCharges, bool countWeapon)
+void Player::increaseCombatValues(int32_t& min, int32_t& max, int32_t& critChance, bool useCharges, bool countWeapon)
 {
 	if(min > 0)
 		min = (int32_t)(min * vocation->getMultiplier(MULTIPLIER_HEALING));
@@ -5658,6 +5681,10 @@ void Player::increaseCombatValues(int32_t& min, int32_t& max, bool useCharges, b
 
 	Item* item = NULL;
 	int32_t minValue = 0, maxValue = 0, i = SLOT_FIRST;
+
+#ifdef __DARGHOS_CUSTOM__
+    critChance += getVocation()->getCriticalChance();
+#endif
 
 	for(; i < SLOT_LAST; ++i)
 	{
@@ -5692,6 +5719,13 @@ void Player::increaseCombatValues(int32_t& min, int32_t& max, bool useCharges, b
 				max = (int32_t)std::ceil((double)(max * it.abilities.increment[MAGIC_PERCENT]) / 100.);
 		}
 
+#ifdef __DARGHOS_CUSTOM__
+		if(it.m_criticalChance != -1)
+		{
+            critChance += it.m_criticalChance;
+		}
+#endif
+
 		bool removeCharges = false;
 		for(int32_t j = INCREMENT_FIRST; j <= INCREMENT_LAST; ++j)
 		{
@@ -5705,6 +5739,15 @@ void Player::increaseCombatValues(int32_t& min, int32_t& max, bool useCharges, b
 		if(useCharges && removeCharges && (countWeapon || item != weapon) && item->hasCharges())
 			g_game.transformItem(item, item->getID(), std::max((int32_t)0, (int32_t)item->getCharges() - 1));
 	}
+
+#ifdef __DARGHOS_CUSTOM__
+    if(min <= 0 && max <= 0 && random_range(1, 100) < critChance)
+	{
+        min = int32_t(min * getCriticalFactor());
+		max = int32_t(max * getCriticalFactor());
+		sendCritical();
+	}
+#endif
 
 	min += minValue;
 	max += maxValue;
@@ -5788,6 +5831,11 @@ bool Player::hasPvpBlessing() const{ return hasBlessing(g_config.getNumber(Confi
 void Player::removePvpBlessing() { removeBlessing(g_config.getNumber(ConfigManager::USE_BLESSING_AS_PVP) - 1); }
 void Player::removeBlessing(int16_t value) { if(hasBlessing(value)) blessings -= (int16_t)1 << value;  }
 
+double Player::getCriticalFactor() const
+{ 
+	return m_criticalFactor; 
+}
+
 void Player::receivePing() {
     lastPong = OTSYS_TIME();
     uint16_t latency = lastPong - lastPing;
@@ -5811,6 +5859,28 @@ uint32_t Player::getCurrentPing() const {
     }
 
     return std::ceil((float)(sum / latencyList.size()));
+}
+
+uint32_t Player::getCriticalChance() const
+{
+	Item* item = NULL;
+	int32_t criticalChance = getVocation()->getCriticalChance();
+
+	for(uint32_t i = SLOT_FIRST ; i < SLOT_LAST; ++i)
+	{
+		if(!(item = getInventoryItem((slots_t)i)) || item->isRemoved() ||
+				(g_moveEvents->hasEquipEvent(item) && !isItemAbilityEnabled((slots_t)i)))
+			continue;
+
+		const ItemType& it = Item::items[item->getID()];
+	
+		if(it.m_criticalChance != -1)
+		{
+			criticalChance += it.m_criticalChance;
+		}
+	}
+
+	return criticalChance;
 }
 #endif
 

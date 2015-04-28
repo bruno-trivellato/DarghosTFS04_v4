@@ -299,7 +299,7 @@ public:
 
     void generateReservedStorage();
     bool transferMoneyTo(const std::string& name, uint64_t amount);
-    void increaseCombatValues(int32_t& min, int32_t& max, bool useCharges, bool countWeapon);
+    void increaseCombatValues(int32_t& min, int32_t& max, int32_t& critChance, bool useCharges, bool countWeapon);
 
     void setGroupId(int32_t newId);
     int32_t getGroupId() const {return groupId;}
@@ -842,6 +842,9 @@ public:
         if(cancelTarget) setAttackedCreature(NULL);
         sendCancelTarget();
     }
+
+    double getCriticalFactor() const;
+    uint32_t getCriticalChance() const;
 #endif
 
 #ifdef __DARGHOS_PVP_SYSTEM__
@@ -976,6 +979,9 @@ private:
     bool pause;
     uint64_t m_lastdeath_experience_loss;
     int16_t m_lastdeath_blessings_loss, m_lastdeath_items_loss;
+
+    uint16_t m_criticalChance;
+    double m_criticalFactor;
 #endif
 
 #ifdef __DARGHOS_PVP_SYSTEM__
@@ -983,9 +989,6 @@ private:
     Bg_Teams_t team_id;
     uint32_t battlegroundRating;
     int64_t lastBattlegroundDeath;
-
-    uint16_t m_criticalChance;
-    double m_criticalFactor;
 #endif
 
     OperatingSystem_t operatingSystem;

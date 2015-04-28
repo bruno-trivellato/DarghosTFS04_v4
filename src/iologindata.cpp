@@ -394,6 +394,7 @@ bool IOLoginData::generateSpoofList(SpoofList& spoofList){
 
             spoofList.push_back(entry);
         } while (result->next());
+        result->free();
 
         std::clog << "[Spoof System] " << spoofList.size() << " players are pre-selected to use." << std::endl;
 

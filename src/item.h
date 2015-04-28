@@ -260,6 +260,11 @@ class Item : virtual public Thing, public ItemAttributes
 		int32_t getHitChance() const;
 		int32_t getShootRange() const;
 
+#ifdef __DARGHOS_CUSTOM__
+		int32_t getCriticalChance() const;
+        	int32_t getResilience() const;
+#endif
+
 		Ammo_t getAmmoType() const {return items[id].ammoType;}
 		WeaponType_t getWeaponType() const {return items[id].weaponType;}
 		int32_t getSlotPosition() const {return items[id].slotPosition;}
@@ -433,6 +438,26 @@ inline int32_t Item::getAttackSpeed() const
 
 	return items[id].attackSpeed;
 }
+
+#ifdef __DARGHOS_CUSTOM__
+inline int32_t Item::getCriticalChance() const
+{
+	const int32_t* v = getIntegerAttribute("criticalchance");
+	if(v)
+		return *v;
+
+	return items[id].m_criticalChance;
+}
+
+inline int32_t Item::getResilience() const
+{
+    const int32_t* v = getIntegerAttribute("resil");
+    if(v)
+        return *v;
+
+    return items[id].m_resilience;
+}
+#endif
 
 inline int32_t Item::getHitChance() const
 {

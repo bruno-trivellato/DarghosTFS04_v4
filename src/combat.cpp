@@ -87,7 +87,8 @@ bool Combat::getMinMaxValues(Creature* creature, Creature* target, int32_t& min,
 					if(maxc && std::abs(max) < std::abs(maxc))
 						max = maxc;
 
-					player->increaseCombatValues(min, max, params.useCharges, true);
+                    int32_t critChance = 0;
+                    player->increaseCombatValues(min, max, critChance, params.useCharges, true);
 					return true;
 				}
 
@@ -1200,11 +1201,13 @@ void ValueCallback::getMinMaxValues(Player* player, int32_t& min, int32_t& max, 
 	}
 
 	int32_t params = lua_gettop(L);
-	if(!lua_pcall(L, parameters, 2, 0))
+    if(!lua_pcall(L, parameters, 3, 0))
 	{
+        	int32_t crit = LuaInterface::popNumber(L);
+        	max = LuaInterface::popNumber(L);
 		min = LuaInterface::popNumber(L);
-		max = LuaInterface::popNumber(L);
-		player->increaseCombatValues(min, max, useCharges, type != FORMULA_SKILL);
+
+        	player->increaseCombatValues(min, max, crit, useCharges, type != FORMULA_SKILL);
 	}
 	else
 		LuaInterface::error(NULL, std::string(LuaInterface::popString(L)));

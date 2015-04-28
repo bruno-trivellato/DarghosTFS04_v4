@@ -159,6 +159,10 @@ class ItemType
 		uint32_t shootRange, charges, decayTime, attackSpeed, wieldInfo, minReqLevel, minReqMagicLevel,
 			worth, levelDoor;
 
+#ifdef __DARGHOS_CUSTOM__
+        	int32_t m_criticalChance, m_resilience;
+#endif
+
 		std::string name, pluralName, article, description, runeSpellName, vocationString;
 
 		Condition* condition;

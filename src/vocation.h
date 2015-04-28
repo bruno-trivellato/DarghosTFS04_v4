@@ -97,6 +97,11 @@ class Vocation
 		float getMultiplier(multiplier_t type) const {return formulaMultipliers[type];}
 		void setMultiplier(multiplier_t type, float v) {formulaMultipliers[type] = v;}
 
+#ifdef __DARGHOS_CUSTOM__
+		uint32_t getCriticalChance() const {return m_criticalChance;}
+		void setCriticalChance(uint32_t chance) {m_criticalChance = chance;}
+#endif
+
 		int16_t getAbsorb(CombatType_t combat) const {return absorb[combat];}
 		void increaseAbsorb(CombatType_t combat, int16_t v) {absorb[combat] += v;}
 
@@ -119,6 +124,10 @@ class Vocation
 		int32_t lessLoss, capGain;
 		uint32_t id, fromVocation, baseSpeed, attackSpeed;
 		std::string name, description;
+
+#ifdef __DARGHOS_CUSTOM__
+		uint32_t m_criticalChance;
+#endif
 
 		int16_t absorb[COMBAT_LAST + 1], reflect[REFLECT_LAST + 1][COMBAT_LAST + 1];
 		uint32_t gain[GAIN_LAST + 1], gainTicks[GAIN_LAST + 1], gainAmount[GAIN_LAST + 1], skillBase[SKILL_LAST + 1];

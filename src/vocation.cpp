@@ -87,6 +87,11 @@ bool Vocations::parseVocationNode(xmlNodePtr p)
 	if(readXMLFloat(p, "manamultiplier", floatValue))
 		voc->setMultiplier(MULTIPLIER_MANA, floatValue);
 
+#ifdef __DARGHOS_CUSTOM__
+	if(readXMLInteger(p, "criticalchancepercent", intValue))
+		voc->setCriticalChance(intValue);
+#endif
+
 	if(readXMLInteger(p, "attackspeed", intValue))
 		voc->setAttackSpeed(intValue);
 
@@ -470,6 +475,10 @@ void Vocation::reset()
 	baseSpeed = 220;
 	attackSpeed = 1500;
 	name = description = "";
+
+#ifdef __DARGHOS_CUSTOM__
+	m_criticalChance = 0;
+#endif
 
 	gainAmount[GAIN_HEALTH] = gainAmount[GAIN_MANA] = gainAmount[GAIN_SOUL] = 1;
 	gain[GAIN_HEALTH] = gain[GAIN_MANA] = capGain = 5;

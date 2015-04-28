@@ -842,6 +842,14 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance, const
 
 			if(it.hitChance != -1 || (item && item->getHitChance() != -1))
 				s << ", Hit% " << std::showpos << (item ? item->getHitChance() : it.hitChance) << std::noshowpos;
+
+#ifdef __DARGHOS_CUSTOM__
+			if(it.m_criticalChance > 0 || (item && item->getCriticalChance() > 0))
+				s << ", Crit% " << std::showpos << (item ? item->getCriticalChance() : it.m_criticalChance) << std::noshowpos;
+
+            if(it.m_resilience > 0 || (item && item->getResilience() > 0))
+                s << ", Resil% " << std::showpos << (item ? item->getResilience() : it.m_resilience) << std::noshowpos;
+#endif
 		}
 		else if(it.weaponType != WEAPON_AMMO && it.weaponType != WEAPON_WAND)
 		{
@@ -879,6 +887,15 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance, const
 				if(it.extraDefense || (item && item->getExtraDefense()))
 					s << " " << std::showpos << int32_t(item ? item->getExtraDefense() : it.extraDefense) << std::noshowpos;
 			}
+
+#ifdef __DARGHOS_CUSTOM__
+			if(it.m_criticalChance > 0 || (item && item->getCriticalChance() > 0))
+				s << ", Crit% " << std::showpos << (item ? item->getCriticalChance() : it.m_criticalChance) << std::noshowpos;
+
+
+            if(it.m_resilience > 0 || (item && item->getResilience() > 0))
+                s << ", Resil% " << std::showpos << (item ? item->getResilience() : it.m_resilience) << std::noshowpos;
+#endif
 		}
 
 		for(uint16_t i = SKILL_FIRST; i <= SKILL_LAST; i++)
@@ -1407,6 +1424,12 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance, const
 		if(!begin)
 			s << ")";
 	}	
+#ifdef __DARGHOS_CUSTOM__
+	else if(it.m_criticalChance > 0 || (item && item->getCriticalChance() > 0))
+		s << "(Crit% " << std::showpos << (item ? item->getCriticalChance() : it.m_criticalChance) << std::noshowpos << ")";
+    else if(it.m_resilience > 0 || (item && item->getResilience() > 0))
+        s << "(Resil% " << std::showpos << (item ? item->getResilience() : it.m_resilience) << std::noshowpos << ")";
+#endif
 	else if(it.isContainer())
 		s << " (Vol:" << (int32_t)it.maxItems << ")";
 	else if(it.isKey())

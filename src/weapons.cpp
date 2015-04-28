@@ -358,13 +358,24 @@ bool Weapon::useFist(Player* player, Creature* target)
 
 	int32_t maxDamage = Weapons::getMaxWeaponDamage(player->getLevel(), attackSkill, attackValue, attackFactor);
 
+#ifndef __DARGHOS_CUSTOM__
 	if(random_range(1, 100) < g_config.getNumber(ConfigManager::CRITICAL_HIT_CHANCE))
 	{
 		maxDamage = std::pow(maxDamage, g_config.getDouble(ConfigManager::CRITICAL_HIT_MUL));	
 		player->sendCritical();
 	}
+#endif
 
 	int32_t minDamage = 0;
+
+#ifdef __DARGHOS_CUSTOM__
+	if((uint32_t)random_range(1, 100) < player->getCriticalChance())
+	{
+		minDamage = maxDamage;
+		maxDamage = int32_t(maxDamage * player->getCriticalFactor());	
+		player->sendCritical();
+	}
+#endif
 
 	Vocation* vocation = player->getVocation();
 	if(vocation && vocation->getMultiplier(MULTIPLIER_MELEE) != 1.0)
@@ -633,14 +644,25 @@ int32_t WeaponMelee::getWeaponDamage(const Player* player, const Creature*, cons
 	float attackFactor = player->getAttackFactor();
 
 	int32_t maxValue = Weapons::getMaxWeaponDamage(player->getLevel(), attackSkill, attackValue, attackFactor);
-
-	if(random_range(1, 100) < g_config.getNumber(ConfigManager::CRITICAL_HIT_CHANCE))
+#ifndef __DARGHOS_CUSTOM__
+	if((uint32_t)random_range(1, 100) < g_config.getNumber(ConfigManager::CRITICAL_HIT_CHANCE))
 	{
 		maxValue = std::pow(maxDamage, g_config.getDouble(ConfigManager::CRITICAL_HIT_MUL));	
 		player->sendCritical();
 	}
+#endif
 	
 	int32_t minValue = 0;
+
+#ifdef __DARGHOS_CUSTOM__
+	if((uint32_t)random_range(1, 100) < player->getCriticalChance())
+	{
+		minValue = maxValue;
+		maxValue = int32_t(maxValue * player->getCriticalFactor());	
+		player->sendCritical();
+	}
+#endif
+
 	Vocation* vocation = player->getVocation();
 	if(vocation && vocation->getMultiplier(MULTIPLIER_MELEE) != 1.0)
 		maxValue = int32_t(maxValue * vocation->getMultiplier(MULTIPLIER_MELEE));
@@ -658,13 +680,24 @@ int32_t WeaponMelee::getElementDamage(const Player* player, const Item* item) co
 	float attackFactor = player->getAttackFactor();
 
 	int32_t maxValue = Weapons::getMaxWeaponDamage(player->getLevel(), attackSkill, elementDamage, attackFactor);
+#ifndef __DARGHOS_CUSTOM__
 	if(random_range(1, 100) < g_config.getNumber(ConfigManager::CRITICAL_HIT_CHANCE))
 	{
 		maxValue = std::pow(maxValue, g_config.getDouble(ConfigManager::CRITICAL_HIT_MUL));	
 		player->sendCritical();
 	}
+#endif
 
 	int32_t minValue = 0;
+
+#ifdef __DARGHOS_CUSTOM__
+	if((uint32_t)random_range(1, 100) < player->getCriticalChance())
+	{
+		minValue = maxValue;
+		maxValue = int32_t(maxValue * player->getCriticalFactor());	
+		player->sendCritical();
+	}
+#endif
 
 	Vocation* vocation = player->getVocation();
 	if(vocation && vocation->getMultiplier(MULTIPLIER_MELEE) != 1.0)
@@ -903,13 +936,24 @@ int32_t WeaponDistance::getWeaponDamage(const Player* player, const Creature* ta
 	float attackFactor = player->getAttackFactor();
 
 	int32_t maxValue = Weapons::getMaxWeaponDamage(player->getLevel(), attackSkill, attackValue, attackFactor);
+#ifndef __DARGHOS_CUSTOM__
 	if(random_range(1, 100) < g_config.getNumber(ConfigManager::CRITICAL_HIT_CHANCE))
 	{
 		maxValue = std::pow(maxDamage, g_config.getDouble(ConfigManager::CRITICAL_HIT_MUL));	
 		player->sendCritical();
 	}
+#endif
 	
 	int32_t minValue = 0;
+
+#ifdef __DARGHOS_CUSTOM__
+	if((uint32_t)random_range(1, 100) < player->getCriticalChance())
+	{
+		minValue = maxValue;
+		maxValue = int32_t(maxValue * player->getCriticalFactor());
+		player->sendCritical();
+	}
+#endif
 
 	Vocation* vocation = player->getVocation();
 	if(vocation && vocation->getMultiplier(MULTIPLIER_DISTANCE) != 1.0)
@@ -993,10 +1037,20 @@ int32_t WeaponWand::getWeaponDamage(const Player* player, const Creature*, const
 	if(Vocation* vocation = player->getVocation())
 		multiplier = vocation->getMultiplier(MULTIPLIER_WAND);
 
+#ifdef __DARGHOS_CUSTOM__
+	if((uint32_t)random_range(1, 100) < player->getCriticalChance())
+	{
+		multiplier = multiplier * player->getCriticalFactor();	
+		player->sendCritical();
+	}
+#endif
+
 	int32_t maxValue = (int32_t)(maxChange * multiplier);
 	if(maxDamage)
 	{
+#ifndef __DARGHOS_CUSTOM__
 		player->sendCritical();
+#endif
 		return -maxValue;
 	}
 
