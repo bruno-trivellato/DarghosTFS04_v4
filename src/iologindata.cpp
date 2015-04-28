@@ -1896,6 +1896,41 @@ bool IOLoginData::resetGuildInformation(uint32_t guid)
 	return db->query(query.str());
 }
 
+int32_t IOLoginData::getMotdId()
+{
+    if(lastMotd == g_config.getString(ConfigManager::MOTD))
+        return lastMotdId;
+
+    lastMotd = g_config.getString(ConfigManager::MOTD);
+    Database* db = Database::getInstance();
+
+    DBQuery query;
+    query << "INSERT INTO `server_motd` (`id`, `world_id`, `text`) VALUES (" << ++lastMotdId << ", " << g_config.getNumber(ConfigManager::WORLD_ID) << ", " << db->escapeString(lastMotd) << ")";
+    if(db->query(query.str()))
+        return lastMotdId;
+
+    return --lastMotdId;
+}
+
+void IOLoginData::loadMotd()
+{
+    Database* db = Database::getInstance();
+    DBQuery query;
+    query << "SELECT `id`, `text` FROM `server_motd` WHERE `world_id` = " << g_config.getNumber(ConfigManager::WORLD_ID) << " ORDER BY `id` DESC LIMIT 1";
+
+    DBResult* result;
+    if(!(result = db->storeQuery(query.str())))
+    {
+        std::clog << "> ERROR: Failed to load motd!" << std::endl;
+        lastMotdId = random_range(5, 500);
+        return;
+    }
+
+    lastMotdId = result->getDataInt("id");
+    lastMotd = result->getDataString("text");
+    result->free();
+}
+
 #ifdef __DARGHOS_IGNORE_AFK__
 bool IOLoginData::updateAfkStatus(uint32_t guid, bool afk)
 {

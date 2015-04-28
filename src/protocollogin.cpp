@@ -184,9 +184,9 @@ bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
 		TRACK_MESSAGE(output);
 		output->put<char>(0x14);
 
-		char motd[1300];
-		sprintf(motd, "%d\n%s", g_game.getMotdId(), g_config.getString(ConfigManager::MOTD).c_str());
-		output->putString(motd);
+        std::ostringstream ss;
+        ss << IOLoginData::getInstance()->getMotdId() << "\n" << g_config.getString(ConfigManager::MOTD);
+        output->putString(ss.str());
 
 		uint32_t serverIp = serverIps.front().first;
 		for(std::list<std::pair<uint32_t, uint32_t> >::iterator it = serverIps.begin(); it != serverIps.end(); ++it)

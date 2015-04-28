@@ -532,8 +532,6 @@ class Game
 		bool broadcastMessage(const std::string& text, MessageClasses type);
 		void showHotkeyUseMessage(Player* player, Item* item);
 
-		int32_t getMotdId();
-		void loadMotd();
 		void loadPlayersRecord();
 		void checkPlayersRecord(Player* player);
 
@@ -699,8 +697,6 @@ class Game
 		ServiceManager* services;
 		Map* map;
 
-		std::string lastMotd;
-		int32_t lastMotdId;
 		uint32_t playersRecord;
         uint32_t checkLightEvent, checkCreatureEvent, checkDecayEvent, saveEvent, spoofEvent;
 		uint32_t checkWarsEvent;

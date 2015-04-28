@@ -215,7 +215,7 @@ void Game::start(ServiceManager* servicer)
 void Game::loadGameState()
 {
 	ScriptEnviroment::loadGameState();
-	loadMotd();
+    IOLoginData::getInstance()->loadMotd();
 	loadPlayersRecord();
 	checkHighscores();
 }
@@ -6266,41 +6266,6 @@ Highscore Game::getHighscore(uint16_t skill)
 	}
 
 	return hs;
-}
-
-int32_t Game::getMotdId()
-{
-	if(lastMotd == g_config.getString(ConfigManager::MOTD))
-		return lastMotdId;
-
-	lastMotd = g_config.getString(ConfigManager::MOTD);
-	Database* db = Database::getInstance();
-
-	DBQuery query;
-	query << "INSERT INTO `server_motd` (`id`, `world_id`, `text`) VALUES (" << ++lastMotdId << ", " << g_config.getNumber(ConfigManager::WORLD_ID) << ", " << db->escapeString(lastMotd) << ")";
-	if(db->query(query.str()))
-		return lastMotdId;
-
-	return --lastMotdId;
-}
-
-void Game::loadMotd()
-{
-	Database* db = Database::getInstance();
-	DBQuery query;
-	query << "SELECT `id`, `text` FROM `server_motd` WHERE `world_id` = " << g_config.getNumber(ConfigManager::WORLD_ID) << " ORDER BY `id` DESC LIMIT 1";
-
-	DBResult* result;
-	if(!(result = db->storeQuery(query.str())))
-	{
-		std::clog << "> ERROR: Failed to load motd!" << std::endl;
-		lastMotdId = random_range(5, 500);
-		return;
-	}
-
-	lastMotdId = result->getDataInt("id");
-	lastMotd = result->getDataString("text");
-	result->free();
 }
 
 void Game::checkPlayersRecord(Player* player)

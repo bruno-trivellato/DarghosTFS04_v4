@@ -117,6 +117,9 @@ class IOLoginData
 		bool updateAfkStatus(uint32_t guid, bool afk);
 		#endif
 
+        int32_t getMotdId();
+        void loadMotd();
+
 	protected:
 		IOLoginData() {}
 		struct StringCompareCase
@@ -129,6 +132,10 @@ class IOLoginData
 
 		typedef std::map<std::string, uint32_t, StringCompareCase> GuidCacheMap;
 		GuidCacheMap guidCacheMap;
+
+
+        std::string lastMotd;
+        int32_t lastMotdId;
 
 		typedef std::map<uint32_t, std::string> NameCacheMap;
 		NameCacheMap nameCacheMap;
