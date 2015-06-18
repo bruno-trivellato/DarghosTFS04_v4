@@ -48,8 +48,8 @@ function onThink(cid, interval)
 	local staminaMinutes = getPlayerStamina(cid)
 	local newStamina = staminaMinutes + 1
 	
-	local highStaminaInterval = (60 * 20)
-	local lowStaminaInterval = (60 * 6)
+	local highStaminaInterval = (60 * 5)
+	local lowStaminaInterval = (60 * 1.5)
 	
 	if(staminaMinutes >= maxStamina) then
 		return
