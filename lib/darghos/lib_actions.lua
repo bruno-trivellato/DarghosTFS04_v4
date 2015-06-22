@@ -372,7 +372,7 @@ function teleportRune.onUse(cid, item, frompos, item2, topos)
 		return true
 	end
 
-	if(doPlayerRemoveBalance(cid, 200)) then
+	if(not doPlayerRemoveBalance(cid, 200)) then
 		doPlayerSendCancel(cid, "Você não possui R$ 2,00 de saldo em sua conta necessários para o uso deste item.")
 		return true		
 	end
