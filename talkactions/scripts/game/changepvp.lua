@@ -12,7 +12,7 @@ local function generateCode(cid)
 			code = code .. valid:sub(rand, rand)
 		end
 
-		local msg = "Este comando Ã© usado para ativar ou desativar o seu PvP ao custo de R$ 20,00 (debitados de seu saldo)."
+		local msg = "Este comando é usado para ativar ou desativar o seu PvP ao custo de R$ 20,00 (debitados de seu saldo)."
 		msg = msg .. "\nPara confirmar a sua compra, digite o seguinte comando: \"!changepvp " .. code .. "\" (sem as aspas)."
 
 		table.insert(codes, cid, {date = os.time(), value = code})
@@ -36,16 +36,16 @@ function onSay(cid, words, param)
 					
 					if(doPlayerIsPvpEnable(cid)) then
 						doPlayerDisablePvp(cid)
-						msg = "Parabens, vocÃª desativou seu PvP! Divirta-se!"
+						msg = "Parabens, você desativou seu PvP! Divirta-se!"
 						doSendAnimatedText(getPlayerPosition(cid), "PvP OFF!", TEXTCOLOR_PURPLE)
 					else
 						doPlayerEnablePvp(cid)
-						msg = "Parabens, vocÃª ativou seu PvP! Divirta-se!"
+						msg = "Parabens, você ativou seu PvP! Divirta-se!"
 						doSendAnimatedText(getPlayerPosition(cid), "PvP ON!", TEXTCOLOR_PURPLE)
 					end
 					
 				else
-					msg = "NÃ£o hÃ¡ saldo disponÃ­vel em sua conta. Por favor, adicione saldo em sua conta pelo nosso website e tente novamente."	
+					msg = "Não há saldo disponível em sua conta. Por favor, adicione saldo em sua conta pelo nosso website e tente novamente."	
 				end
 
 				codes[cid] = nil
