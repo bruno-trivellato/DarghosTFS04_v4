@@ -10,12 +10,7 @@ changeLog = {}
 
 function changeLog.create(type, key, value)
 
-	if(value ~= nil and type(value) == "table") then
-		local json = require("json")	
-		value = json.encode(value)
-	else
-		value = value or ""
-	end
+	value = value or ""
 	
 	db.executeQuery("INSERT `wb_changelog` (`type`, `key`, `value`, `time`) VALUES (" .. type .. ", " .. key .. ", '" .. value .. "', " .. os.time() .. ");")
 end
