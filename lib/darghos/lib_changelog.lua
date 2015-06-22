@@ -4,6 +4,7 @@ CLOG_RECHARGE_CHARACTER_STAMINA = 3
 CLOG_ACCOUNT_RENAME = 4
 CLOG_SWITCH_PVP = 5
 CLOG_CLEAN_CHANGE_PVP_DEBUFF = 6
+CLOG_TELEPORT_RUNE = 7
 
 changeLog = {}
 
@@ -26,4 +27,8 @@ end
 
 function changeLog.onCleanExpDebuff(cid)
 	changeLog.create(CLOG_CLEAN_CHANGE_PVP_DEBUFF, getPlayerGUID(cid), nil)
+end
+
+function changeLog.onUseTeleportRune(cid)
+	changeLog.create(CLOG_TELEPORT_RUNE, getPlayerGUID(cid), 200)
 end

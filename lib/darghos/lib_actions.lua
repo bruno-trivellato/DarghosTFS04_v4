@@ -358,7 +358,7 @@ teleportRune.STATE_TELEPORTING_SECOND = 1
 teleportRune.STATE_TELEPORTING_THIRD = 2
 
 teleportRune.TELEPORT_USAGE_NEVER = -1
-teleportRune.TELEPORT_USAGE_INTERVAL = 60 * 30 -- 30 minutos
+teleportRune.TELEPORT_USAGE_INTERVAL = 30 -- 30 segundos
 
 function teleportRune.onUse(cid, item, frompos, item2, topos)
 
@@ -391,6 +391,7 @@ function teleportRune.onUse(cid, item, frompos, item2, topos)
 	doSendMagicEffect(getCreaturePosition(cid), CONST_ME_MAGIC_BLUE)
 
 	setPlayerStorageValue(cid, sid.TELEPORT_RUNE_LAST_USAGE, os.time())	
+	changeLog.onUseTeleportRune(cid)
 	
 	return true
 end
