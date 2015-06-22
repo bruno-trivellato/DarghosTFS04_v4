@@ -12,7 +12,7 @@ local function generateCode(cid)
 			code = code .. valid:sub(rand, rand)
 		end
 
-		local msg = "Este comando é usado para regenerar completamente a sua stamina ao custo de R$ 10,00 (debitados de seu saldo)."
+		local msg = "Este comando é usado para regenerar completamente a sua stamina ao custo de R$ 5,00 (debitados de seu saldo)."
 		msg = msg .. "\nPara confirmar a sua compra, digite o seguinte comando: \"!buystamina " .. code .. "\" (sem as aspas)."
 
 		table.insert(codes, cid, {date = os.time(), value = code})
@@ -31,7 +31,7 @@ function onSay(cid, words, param)
 			local msg = ""	
 
 			if(code.value == param) then
-				if(doPlayerRemoveBalance(cid, 1000)) then
+				if(doPlayerRemoveBalance(cid, 500)) then
 					db.executeQuery("INSERT INTO `wb_changelog` (`type`, `key`, `value`, `time`) VALUES ('stamina', " .. getPlayerGUID(cid) .. ", '" .. code.value .. "', " .. os.time() .. ");")
 					msg = "Parabens, você está com sua stamina totalmente regenerada! Divirta-se!"
 					doPlayerSetStamina(cid, 42 * 60)

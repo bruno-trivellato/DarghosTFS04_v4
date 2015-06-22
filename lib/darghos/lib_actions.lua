@@ -361,16 +361,9 @@ teleportRune.TELEPORT_USAGE_NEVER = -1
 teleportRune.TELEPORT_USAGE_INTERVAL = 60 * 30 -- 30 minutos
 
 function teleportRune.onUse(cid, item, frompos, item2, topos)
-	
-	return true
---[[
+
 	if(teleportScrollIsLocked(cid)) then
 		doPlayerSendCancel(cid, "Você não pode usar este item neste lugar!")
-		return true
-	end
-
-	if(hasCondition(cid, CONDITION_INFIGHT) == TRUE) then
-		doPlayerSendCancel(cid, "Você não pode usar este item enquanto estiver em batalha!")
 		return true
 	end
 	
@@ -378,27 +371,28 @@ function teleportRune.onUse(cid, item, frompos, item2, topos)
 		doPlayerSendCancel(cid, "A carga já sendo carregada, tenha paciencia!")
 		return true
 	end
+
+	if(doPlayerRemoveBalance(cid, 200)) then
+		doPlayerSendCancel(cid, "Você não possui R$ 2,00 de saldo em sua conta necessários para o uso deste item.")
+		return true		
+	end
 	
 	local lastTeleportRuneUsage = getPlayerStorageValue(cid, sid.TELEPORT_RUNE_LAST_USAGE)
 	if(lastTeleportRuneUsage ~= teleportRune.TELEPORT_USAGE_NEVER and os.time() <= lastTeleportRuneUsage + teleportRune.TELEPORT_USAGE_INTERVAL) then
-		local secondsLeft = (lastTeleportRuneUsage + teleportRune.TELEPORT_USAGE_INTERVAL) - os.time()
-		
-		if(secondsLeft >= 60) then
-			doPlayerSendCancel(cid, "Você deve aguardar " .. math.floor(secondsLeft / 60) .. " minutos para que sua teleport rune descançe e possa usar-la novamente.")
-		else
-			doPlayerSendCancel(cid, "Você deve aguardar menos de um minuto para que sua teleport rune termine de descançar e possa usar-la novamente.")
-		end
-		
-		doPlayerSendCancel(cid, "Você deve aguardar " .. math.ceil(((lastTeleportRuneUsage + teleportRune.TELEPORT_USAGE_INTERVAL) - os.time()) / 60) .. " minutos para que sua teleport rune descançe e possa usar-la novamente.")
+		doPlayerSendCancel(cid, "Você deve aguardar 30 segundos para que sua teleport rune termine de recarregar e você possa usar-la novamente.")
+
 		return true
 	end
 	
-	doCreatureSay(cid, "Faltam 30 segundos para minha teleport rune ser carregada...", TALKTYPE_ORANGE_1)
-	setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, teleportRune.STATE_TELEPORTING_FIRST)
-	addEvent(teleportRune.firstStep, 1000 * 10, cid)
+	doCreatureSay(cid, "Goodbye n00bies!", TALKTYPE_ORANGE_1)
+
+	doSendMagicEffect(getCreaturePosition(cid), CONST_ME_MAGIC_BLUE)	
+	doTeleportThing(cid, getPlayerMasterPos(cid))
+	doSendMagicEffect(getCreaturePosition(cid), CONST_ME_MAGIC_BLUE)
+
+	setPlayerStorageValue(cid, sid.TELEPORT_RUNE_LAST_USAGE, os.time())	
 	
 	return true
-]]
 end
 
 function teleportRune.firstStep(cid)
@@ -458,7 +452,7 @@ function teleportRune.thirdStep(cid)
 	
 	if(teleportScrollIsLocked(cid)) then
 		setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, teleportRune.STATE_NONE)
-		doCreatureSay(cid, "Arggh! A teleport rune não funciona neste lugar! O transporte foi abortado!", TALKTYPE_ORANGE_1)
+		doCreatureSay(cid, "Goodbye n00bies!", TALKTYPE_ORANGE_1)
 		return	
 	end	
 	
