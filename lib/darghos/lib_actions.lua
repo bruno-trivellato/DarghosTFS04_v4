@@ -371,11 +371,6 @@ function teleportRune.onUse(cid, item, frompos, item2, topos)
 		doPlayerSendCancel(cid, "A carga já sendo carregada, tenha paciencia!")
 		return true
 	end
-
-	if(not doPlayerRemoveBalance(cid, 200)) then
-		doPlayerSendCancel(cid, "Você não possui R$ 2,00 de saldo em sua conta necessários para o uso deste item.")
-		return true		
-	end
 	
 	local lastTeleportRuneUsage = getPlayerStorageValue(cid, sid.TELEPORT_RUNE_LAST_USAGE)
 	if(lastTeleportRuneUsage ~= teleportRune.TELEPORT_USAGE_NEVER and os.time() <= lastTeleportRuneUsage + teleportRune.TELEPORT_USAGE_INTERVAL) then
@@ -383,6 +378,11 @@ function teleportRune.onUse(cid, item, frompos, item2, topos)
 
 		return true
 	end
+
+	if(not doPlayerRemoveBalance(cid, 200)) then
+		doPlayerSendCancel(cid, "Você não possui R$ 2,00 de saldo em sua conta necessários para o uso deste item.")
+		return true		
+	end	
 	
 	doCreatureSay(cid, "Goodbye n00bies!", TALKTYPE_ORANGE_1)
 
