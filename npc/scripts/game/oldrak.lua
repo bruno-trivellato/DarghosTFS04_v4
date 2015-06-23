@@ -16,7 +16,7 @@ local ITEM_HALLOWED_AXE = 8293
 local ITEM_AXE = 2386
 local MONEY = 1000
 
-local TASK_DEMONS_KILL = 6666
+local TASK_DEMONS_KILL = 3000
 
 function tradeHallowedAxe(cid, message, keywords, parameters, node)
 
