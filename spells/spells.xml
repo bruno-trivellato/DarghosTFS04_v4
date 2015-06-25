@@ -431,6 +431,6 @@
 	-->
 	
 	<instant name="Multi Shot" needtarget="1" aggressive="1" script="monsters/multi_shot.lua"/>
-	<instant name="Random Teleport" words="exori mas con" needtarget="1" aggressive="1" script="monsters/random_teleport.lua"/>
+	<instant name="Random Teleport" needtarget="1" aggressive="1" script="monsters/random_teleport.lua"/>
 
 </spells>
