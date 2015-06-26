@@ -20,7 +20,7 @@ function boatDestiny.addAracura(keywordHandler, npcHandler, module)
 	module = (module == nil) and StdModule.travel or module
 
 	local travelNode = keywordHandler:addKeyword({'aracura'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to sail to aracura for 160 gold coins?'})
-	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = true, vip = true, pvpEnabledOnly = true, level = 0, cost = 160, destination = BOAT_DESTINY_ARACURA})
+	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = true, vip = true, level = 0, cost = 160, destination = BOAT_DESTINY_ARACURA})
 	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Then stay here!'})
 end
 
@@ -29,7 +29,7 @@ function boatDestiny.addAaragon(keywordHandler, npcHandler, module)
 	module = (module == nil) and StdModule.travel or module
 
 	local travelNode = keywordHandler:addKeyword({'aaragon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to sail to aaragon for 130 gold coins?'})
-	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = true, vip = true, pvpDisabledOnly = true, level = 0, cost = 130, destination = BOAT_DESTINY_AARAGON })
+	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = true, vip = true, level = 0, cost = 130, destination = BOAT_DESTINY_AARAGON })
 	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Then stay here!'})
 end
 

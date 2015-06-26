@@ -24,7 +24,7 @@
 	<talkaction words="!aol" event="script" value="game/buying.lua"/>
 	<talkaction words="!promotion" event="script" value="game/buying.lua"/>
 	<talkaction words="!buystamina;!stamina" event="script" value="game/stamina.lua"/>
-	<talkaction words="!changepvp" event="script" value="game/changepvp.lua"/>
+	<!--<talkaction words="!changepvp" event="script" value="game/changepvp.lua"/>-->
 	<talkaction words="!removeskull" event="script" value="game/remove_skull.lua"/>
 	<talkaction default="true" event="script" value="game/channels.lua"/> <!-- Help Channel -->	
 	
