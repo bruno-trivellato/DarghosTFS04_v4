@@ -592,7 +592,7 @@ public:
     void sendChannelMessage(std::string author, std::string text, SpeakClasses type, uint8_t channel)
     {if(client) client->sendChannelMessage(author, text, type, channel);}
     void sendCreatureAppear(const Creature* creature){
-        client->sendAddCreature(creature, creature->getPosition(), creature->getTile()->getClientIndexOfThing(this, creature));
+        if(client) client->sendAddCreature(creature, creature->getPosition(), creature->getTile()->getClientIndexOfThing(this, creature));
     }
     void sendCreatureDisappear(const Creature* creature, uint32_t stackpos)
     {if(client) client->sendRemoveCreature(creature, creature->getPosition(), stackpos);}
