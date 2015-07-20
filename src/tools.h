@@ -140,4 +140,10 @@ bool fileExists(const char* filename);
 uint32_t adlerChecksum(uint8_t *data, size_t length);
 
 std::string getFilePath(FileType_t type, std::string name = "");
+
+bool isDruid(uint16_t vocation_id);
+bool isSorcerer(uint16_t vocation_id);
+bool isKnight(uint16_t vocation_id);
+bool isPaladin(uint16_t vocation_id);
+
 #endif

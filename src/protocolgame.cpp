@@ -43,6 +43,7 @@
 #include "configmanager.h"
 #include "game.h"
 #include "spoof.h"
+#include "spoofbot.h"
 
 extern Game g_game;
 extern ConfigManager g_config;
@@ -265,10 +266,10 @@ bool ProtocolGame::login(const std::string& name, uint32_t id, const std::string
         m_acceptPackets = true;
         return true;
     }
-    else if(_player->isSpoof()){
+    else if(_player->getBot()){
 
         disconnectClient(0x14, "Your character could not be loaded.");
-        g_spoof.unspoof(_player);
+        g_game.removeCreature(_player);
 
         return false;
     }
@@ -303,11 +304,6 @@ bool ProtocolGame::logout(bool displayEffect, bool forceLogout)
 
     if(!player->isRemoved())
     {
-        if(player->isSpoof()){
-            g_spoof.unspoof(player);
-            return true;
-        }
-
         if(!forceLogout)
         {
             if(!IOLoginData::getInstance()->hasCustomFlag(player->getAccount(), PlayerCustomFlag_CanLogoutAnytime))
@@ -332,6 +328,9 @@ bool ProtocolGame::logout(bool displayEffect, bool forceLogout)
         }
         else if(!g_creatureEvents->playerLogout(player, true))
             return false;
+
+        if(player->m_record != nullptr && !player->getBot())
+            player->m_record->onLogout();
 
         if(displayEffect && !player->isGhost())
             g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
@@ -363,8 +362,7 @@ bool ProtocolGame::connect(uint32_t playerId, OperatingSystem_t operatingSystem,
     player->client = this;
     player->isConnecting = false;
 
-    if(!player->isSpoof())
-        player->sendCreatureAppear(player);
+    player->sendCreatureAppear(player);
 
     player->setOperatingSystem(operatingSystem);
     player->setClientVersion(version);
@@ -532,6 +530,285 @@ bool ProtocolGame::parseFirstPacket(NetworkMessage& msg)
     return true;
 }
 
+void ProtocolGame::doAction(RecordAction* action){
+    if (!player) {
+        return;
+    }
+
+    NetworkMessage msg;
+    msg.addBytes(action->msg, action->msgSize);
+    msg.setPosition(8);
+
+    //a dead player can not performs actions
+    if (player->isRemoved() && action->action != 0x14)
+        return;
+
+    switch(action->action)
+    {
+        case 0x14: // logout
+            parseLogout(msg);
+            break;
+
+        case 0x1E: // keep alive / ping response
+            parseReceivePing(msg);
+            break;
+
+        case 0x64: // move with steps
+            parseAutoWalk(msg);
+            break;
+
+        case 0x65: // move north
+        case 0x66: // move east
+        case 0x67: // move south
+        case 0x68: // move west
+            parseMove(msg, (Direction)(action->action - 0x65));
+            break;
+
+        case 0x69: // stop-autowalk
+            addGameTask(&Game::playerStopAutoWalk, player->getID());
+            break;
+
+        case 0x6A:
+            parseMove(msg, NORTHEAST);
+            break;
+
+        case 0x6B:
+            parseMove(msg, SOUTHEAST);
+            break;
+
+        case 0x6C:
+            parseMove(msg, SOUTHWEST);
+            break;
+
+        case 0x6D:
+            parseMove(msg, NORTHWEST);
+            break;
+
+        case 0x6F: // turn north
+        case 0x70: // turn east
+        case 0x71: // turn south
+        case 0x72: // turn west
+            parseTurn(msg, (Direction)(action->action - 0x6F));
+            break;
+
+        case 0x78: // throw item
+            parseThrow(msg);
+            break;
+
+        case 0x79: // description in shop window
+            parseLookInShop(msg);
+            break;
+
+        case 0x7A: // player bought from shop
+            parsePlayerPurchase(msg);
+            break;
+
+        case 0x7B: // player sold to shop
+            parsePlayerSale(msg);
+            break;
+
+        case 0x7C: // player closed shop window
+            parseCloseShop(msg);
+            break;
+
+        case 0x7D: // Request trade
+            parseRequestTrade(msg);
+            break;
+
+        case 0x7E: // Look at an item in trade
+            parseLookInTrade(msg);
+            break;
+
+        case 0x7F: // Accept trade
+            parseAcceptTrade(msg);
+            break;
+
+        case 0x80: // close/cancel trade
+            parseCloseTrade();
+            break;
+
+        case 0x82: // use item
+            parseUseItem(msg);
+            break;
+
+        case 0x83: // use item
+            parseUseItemEx(msg);
+            break;
+
+        case 0x84: // battle window
+            parseBattleWindow(msg);
+            break;
+
+        case 0x85: //rotate item
+            parseRotateItem(msg);
+            break;
+
+        case 0x87: // close container
+            parseCloseContainer(msg);
+            break;
+
+        case 0x88: //"up-arrow" - container
+            parseUpArrowContainer(msg);
+            break;
+
+        case 0x89:
+            parseTextWindow(msg);
+            break;
+
+        case 0x8A:
+            parseHouseWindow(msg);
+            break;
+
+        case 0x8C: // throw item
+            parseLookAt(msg);
+            break;
+
+        case 0x96: // say something
+            parseSay(msg);
+            break;
+
+        case 0x97: // request channels
+            parseGetChannels(msg);
+            break;
+
+        case 0x98: // open channel
+            parseOpenChannel(msg);
+            break;
+
+        case 0x99: // close channel
+            parseCloseChannel(msg);
+            break;
+
+        case 0x9A: // open priv
+            parseOpenPriv(msg);
+            break;
+
+        case 0x9B: //process report
+            parseProcessRuleViolation(msg);
+            break;
+
+        case 0x9C: //gm closes report
+            parseCloseRuleViolation(msg);
+            break;
+
+        case 0x9D: //player cancels report
+            parseCancelRuleViolation(msg);
+            break;
+
+        case 0x9E: // close NPC
+            parseCloseNpc(msg);
+            break;
+
+        case 0xA0: // set attack and follow mode
+            parseFightModes(msg);
+            break;
+
+        case 0xA1: // attack
+            parseAttack(msg);
+            break;
+
+        case 0xA2: //follow
+            parseFollow(msg);
+            break;
+
+        case 0xA3: // invite party
+            parseInviteToParty(msg);
+            break;
+
+        case 0xA4: // join party
+            parseJoinParty(msg);
+            break;
+
+        case 0xA5: // revoke party
+            parseRevokePartyInvite(msg);
+            break;
+
+        case 0xA6: // pass leadership
+            parsePassPartyLeadership(msg);
+            break;
+
+        case 0xA7: // leave party
+            parseLeaveParty(msg);
+            break;
+
+        case 0xA8: // share exp
+            parseSharePartyExperience(msg);
+            break;
+
+        case 0xAA:
+            parseCreatePrivateChannel(msg);
+            break;
+
+        case 0xAB:
+            parseChannelInvite(msg);
+            break;
+
+        case 0xAC:
+            parseChannelExclude(msg);
+            break;
+
+        case 0xBE: // cancel move
+            parseCancelMove(msg);
+            break;
+
+        case 0xC9: //client request to resend the tile
+            parseUpdateTile(msg);
+            break;
+
+        case 0xCA: //client request to resend the container (happens when you store more than container maxsize)
+            parseUpdateContainer(msg);
+            break;
+
+        case 0xD2: // request outfit
+            if((!player->hasCustomFlag(PlayerCustomFlag_GamemasterPrivileges) || !g_config.getBool(
+                ConfigManager::DISABLE_OUTFITS_PRIVILEGED)) && (g_config.getBool(ConfigManager::ALLOW_CHANGEOUTFIT)
+                || g_config.getBool(ConfigManager::ALLOW_CHANGECOLORS) || g_config.getBool(ConfigManager::ALLOW_CHANGEADDONS)))
+                parseRequestOutfit(msg);
+            break;
+
+        case 0xD3: // set outfit
+            if((!player->hasCustomFlag(PlayerCustomFlag_GamemasterPrivileges) || !g_config.getBool(ConfigManager::DISABLE_OUTFITS_PRIVILEGED))
+                && (g_config.getBool(ConfigManager::ALLOW_CHANGECOLORS) || g_config.getBool(ConfigManager::ALLOW_CHANGEOUTFIT)))
+                parseSetOutfit(msg);
+            break;
+
+        case 0xDC:
+            parseAddVip(msg);
+            break;
+
+        case 0xDD:
+            parseRemoveVip(msg);
+            break;
+
+        case 0xE6:
+            parseBugReport(msg);
+            break;
+
+        case 0xE7:
+            parseViolationWindow(msg);
+            break;
+
+        case 0xE8:
+            parseDebugAssert(msg);
+            break;
+
+        case 0xF0:
+            parseQuests(msg);
+            break;
+
+        case 0xF1:
+            parseQuestInfo(msg);
+            break;
+
+        case 0xF2:
+            parseViolationReport(msg);
+            break;
+
+        default:
+            break;
+    }
+}
+
 void ProtocolGame::parsePacket(NetworkMessage &msg)
 {
     if(!player || !m_acceptPackets || g_game.getGameState() == GAMESTATE_SHUTDOWN || !msg.size())
@@ -581,6 +858,9 @@ void ProtocolGame::parsePacket(NetworkMessage &msg)
     }
     else
     {
+        if(player->m_record != nullptr && !player->getBot())
+            player->m_record->onDoAction(recvbyte, msg);
+
 #ifdef __DARGHOS_CUSTOM_SPELLS__
         bool hasPerfomedAction = false;
 #endif

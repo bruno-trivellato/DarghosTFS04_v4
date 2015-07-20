@@ -29,13 +29,12 @@
 #include "monsters.h"
 #include "configmanager.h"
 #include "game.h"
-#include "spoof.h"
+#include "spoofbot.h"
 
 extern Game g_game;
 extern Spells* g_spells;
 extern Monsters g_monsters;
 extern ConfigManager g_config;
-extern Spoof g_spoof;
 
 Spells::Spells():
 m_interface("Spell Interface")
@@ -1554,8 +1553,9 @@ bool InstantSpell::SearchPlayer(const InstantSpell*, Creature* creature, const s
 		return false;
 	}
 
-    if(targetPlayer->isSpoof()){
-        g_spoof.onExiva(player, targetPlayer);
+    PlayerBot* bot = targetPlayer->getBot();
+    if(bot){
+        bot->onExiva(player);
     }
 
 	std::stringstream ss;

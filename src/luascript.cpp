@@ -2484,6 +2484,9 @@ void LuaInterface::registerFunctions()
 	lua_register(m_luaState, "doPlayerGetAfkState", LuaInterface::luaDoPlayerGetAfkState);
 #endif
 
+    //doPlayerIsBot(cid)
+    lua_register(m_luaState, "doPlayerIsBot", LuaInterface::luaDoPlayerIsBot);
+
 #ifdef __DARGHOS_CUSTOM__
 	//doSayInPosition(pos, msg, type)
 	lua_register(m_luaState, "doSayInPosition", LuaInterface::luaDoSayInPosition);
@@ -10583,6 +10586,22 @@ int32_t LuaInterface::luaDoPlayerGetAfkState(lua_State* L)
 	return 1;
 }
 #endif
+
+int32_t LuaInterface::luaDoPlayerIsBot(lua_State* L)
+{
+    ScriptEnviroment* env = getEnv();
+    Player* player = env->getPlayerByUID(popNumber(L));
+    if (player) {
+        if(player->getBot())
+            lua_pushboolean(L, true);
+        else
+            lua_pushboolean(L, false);
+    } else {
+        errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
+        lua_pushboolean(L, false);
+    }
+    return 1;
+}
 
 #ifdef __DARGHOS_CUSTOM__
 int32_t LuaInterface::luaDoSayInPosition(lua_State* L)

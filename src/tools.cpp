@@ -1835,3 +1835,31 @@ std::string getFilePath(FileType_t type, std::string name/* = ""*/)
 	}
 	return path;
 }
+
+bool isDruid(uint16_t vocation_id){
+    if(vocation_id == 2 || vocation_id == 6)
+        return true;
+
+    return false;
+}
+
+bool isSorcerer(uint16_t vocation_id){
+    if(vocation_id == 1 || vocation_id == 5)
+        return true;
+
+    return false;
+}
+
+bool isPaladin(uint16_t vocation_id){
+    if(vocation_id == 3 || vocation_id == 7)
+        return true;
+
+    return false;
+}
+
+bool isKnight(uint16_t vocation_id){
+    if(vocation_id == 4 || vocation_id == 8)
+        return true;
+
+    return false;
+}

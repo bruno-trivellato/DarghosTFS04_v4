@@ -198,23 +198,24 @@ class PropStream
 			p = a;
 			end = a + size;
 		}
-		int32_t size() const {return end - p;}
+        size_t size() const {return end - p;}
 
 		template <typename T>
 		inline bool getType(T& ret)
 		{
-			if(size() < (int32_t)sizeof(T))
-				return false;
+            if (size() < sizeof(T)) {
+                return false;
+            }
 
-			ret = *((T*)p);
-			p += sizeof(T);
-			return true;
+            ret = *reinterpret_cast<const T*>(p);
+            p += sizeof(T);
+            return true;
 		}
 
 		template <typename T>
 		inline bool getStruct(T* &ret)
 		{
-			if(size() < (int32_t)sizeof(T))
+            if(size() < sizeof(T))
 			{
 				ret = NULL;
 				return false;
@@ -229,11 +230,12 @@ class PropStream
 		inline bool getShort(uint16_t& ret) {return getType(ret);}
 		inline bool getTime(time_t& ret) {return getType(ret);}
 		inline bool getLong(uint32_t& ret) {return getType(ret);}
+        inline bool getBigLong(uint64_t& ret) {return getType(ret);}
 
 		inline bool getFloat(float& ret)
 		{
 			// ugly hack, but it makes reading not depending on arch
-			if(size() < (int32_t)sizeof(uint32_t))
+            if(size() < sizeof(uint32_t))
 				return false;
 
 			float f;
@@ -250,7 +252,7 @@ class PropStream
 			if(!getShort(strLen))
 				return false;
 
-			if(size() < (int32_t)strLen)
+            if(size() < strLen)
 				return false;
 
 			char* str = new char[strLen + 1];
@@ -269,7 +271,7 @@ class PropStream
 			if(!getLong(strLen))
 				return false;
 
-			if(size() < (int32_t)strLen)
+            if(size() < strLen)
 				return false;
 
 			char* str = new char[strLen + 1];
@@ -282,7 +284,18 @@ class PropStream
 			return true;
 		}
 
-		inline bool skip(int16_t n)
+        inline bool readBuffer(char* buffer, uint32_t _size){
+
+            if(size() < _size)
+                return false;
+
+            memcpy(buffer, p, _size);
+            buffer[_size] = 0;
+            p += _size;
+            return true;
+        }
+
+        inline bool skip(size_t n)
 		{
 			if(size() < n)
 				return false;
@@ -355,6 +368,7 @@ class PropWriteStream
 		inline void addShort(uint16_t ret) {addType(ret);}
 		inline void addTime(time_t ret) {addType(ret);}
 		inline void addLong(uint32_t ret) {addType(ret);}
+        inline void addBigLong(uint64_t ret) {addType(ret);}
 
 		inline void addString(const std::string& add)
 		{

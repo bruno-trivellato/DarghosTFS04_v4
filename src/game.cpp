@@ -55,6 +55,7 @@
 #include "group.h"
 #include "status.h"
 #include "spoof.h"
+#include "spoofbot.h"
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
 #include "textlogger.h"
@@ -126,8 +127,8 @@ void Game::start(ServiceManager* servicer)
 		boost::bind(&Game::checkLight, this)));
 	checkWarsEvent = Scheduler::getInstance().addEvent(createSchedulerTask(EVENT_WARSINTERVAL,
 		boost::bind(&Game::checkWars, this)));
-    spoofEvent = Scheduler::getInstance().addEvent(createSchedulerTask(EVENT_SPOOFINTERVAL,
-        boost::bind(&Game::checkSpoof, this)));
+    /*spoofEvent = Scheduler::getInstance().addEvent(createSchedulerTask(1000,
+        boost::bind(&Game::checkSpoof, this)));*/
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
     std::clog << "[DDOS EMERGENCY] Enabled" << std::endl;
@@ -999,29 +1000,19 @@ bool Game::placeCreature(Creature* creature, const Position& pos, bool extendedP
 	if(!internalPlaceCreature(creature, pos, extendedPos, forced))
 		return false;
 
-    Player* p = NULL;
-    bool sendAppear = true;
+    SpectatorVec::iterator it;
+    SpectatorVec list;
 
-    if((p = creature->getPlayer())){
-        if(p->isSpoof())
-            sendAppear = false;
-    }
-
-    if(sendAppear){
-        SpectatorVec::iterator it;
-        SpectatorVec list;
-
-        getSpectators(list, creature->getPosition(), false, true);
-        for(it = list.begin(); it != list.end(); ++it)
-        {
-            if((tmpPlayer = (*it)->getPlayer())){
-                tmpPlayer->sendCreatureAppear(creature);
-            }
+    getSpectators(list, creature->getPosition(), false, true);
+    for(it = list.begin(); it != list.end(); ++it)
+    {
+        if((tmpPlayer = (*it)->getPlayer())){
+            tmpPlayer->sendCreatureAppear(creature);
         }
-
-        for(it = list.begin(); it != list.end(); ++it)
-            (*it)->onCreatureAppear(creature);
     }
+
+    for(it = list.begin(); it != list.end(); ++it)
+        (*it)->onCreatureAppear(creature);
 
 	creature->setLastPosition(pos);
 	creature->getParent()->postAddNotification(NULL, creature, NULL, creature->getParent()->__getIndexOfThing(creature));
@@ -1054,50 +1045,52 @@ bool Game::removeCreature(Creature* creature, bool isLogout /*= true*/)
 	if(creature->isRemoved())
 		return false;
 
-    bool spoof = false;
-    Player* p = creature->getPlayer();
-    if(p && p->isSpoof())
-        spoof = true;
-
-    if(!spoof){
-        Tile* tile = creature->getTile();
-        SpectatorVec list;
-
-        SpectatorVec::iterator it;
-        getSpectators(list, tile->getPosition(), false, true);
-
-        Player* player = NULL;
-        std::vector<uint32_t> oldStackPosVector;
-        for(it = list.begin(); it != list.end(); ++it)
-        {
-            if((player = (*it)->getPlayer()) && player->canSeeCreature(creature))
-                oldStackPosVector.push_back(tile->getClientIndexOfThing(player, creature));
+    Player* _player = creature->getPlayer();
+    if(_player){
+        PlayerBot* bot = _player->getBot();
+        if(bot){
+            if(!bot->remove())
+                return true;
         }
-
-        int32_t oldIndex = tile->__getIndexOfThing(creature);
-        if(!map->removeCreature(creature))
-            return false;
-
-        //send to client
-        uint32_t i = 0;
-        for(it = list.begin(); it != list.end(); ++it)
-        {
-            if(creature != (*it))
-                (*it)->updateTileCache(tile);
-
-            if(!(player = (*it)->getPlayer()) || !player->canSeeCreature(creature))
-                continue;
-
-            player->sendCreatureDisappear(creature, oldStackPosVector[i]);
-            ++i;
-        }
-
-        //event method
-        for(it = list.begin(); it != list.end(); ++it)
-            (*it)->onCreatureDisappear(creature, isLogout);
-
-        creature->getParent()->postRemoveNotification(NULL, creature, NULL, oldIndex, true);
     }
+
+    Tile* tile = creature->getTile();
+    SpectatorVec list;
+
+    SpectatorVec::iterator it;
+    getSpectators(list, tile->getPosition(), false, true);
+
+    Player* player = NULL;
+    std::vector<uint32_t> oldStackPosVector;
+    for(it = list.begin(); it != list.end(); ++it)
+    {
+        if((player = (*it)->getPlayer()) && player->canSeeCreature(creature))
+            oldStackPosVector.push_back(tile->getClientIndexOfThing(player, creature));
+    }
+
+    int32_t oldIndex = tile->__getIndexOfThing(creature);
+    if(!map->removeCreature(creature))
+        return false;
+
+    //send to client
+    uint32_t i = 0;
+    for(it = list.begin(); it != list.end(); ++it)
+    {
+        if(creature != (*it))
+            (*it)->updateTileCache(tile);
+
+        if(!(player = (*it)->getPlayer()) || !player->canSeeCreature(creature))
+            continue;
+
+        player->sendCreatureDisappear(creature, oldStackPosVector[i]);
+        ++i;
+    }
+
+    //event method
+    for(it = list.begin(); it != list.end(); ++it)
+        (*it)->onCreatureDisappear(creature, isLogout);
+
+    creature->getParent()->postRemoveNotification(NULL, creature, NULL, oldIndex, true);
 
 	creature->onRemovedCreature();
 
@@ -1419,6 +1412,9 @@ ReturnValue Game::internalMoveCreature(Creature* creature, Direction direction, 
 			destPos.z++;
 		}
 	}
+
+    if(!hasBitSet(FLAG_IGNOREBLOCKITEM, flags) && creature->getPlayer() && creature->getPlayer()->getBot())
+        flags |= FLAG_IGNOREBLOCKITEM;
 
 	ReturnValue ret = RET_NOTPOSSIBLE;
 	if((toTile = map->getTile(destPos)))
@@ -2659,6 +2655,9 @@ bool Game::playerAutoWalk(uint32_t playerId, std::list<Direction>& listDir)
 	}
 
 	player->setNextWalkTask(NULL);
+    PlayerBot* bot = player->getBot();
+    if(bot)
+        bot->onAutoWalk();
 	return player->startAutoWalk(listDir);
 }
 
@@ -3676,6 +3675,18 @@ bool Game::playerLookAt(uint32_t playerId, const Position& pos, uint16_t spriteI
 			lookDistance = lookDistance + 9 + 6;
 	}
 
+    Creature* creature = thing->getCreature();
+    if(creature){
+        Player* p = creature->getPlayer();
+        if(p){
+            PlayerBot* bot = p->getBot();
+            if(bot){
+                bot->lookAt(player, lookDistance);
+                return true;
+            }
+        }
+    }
+
 	bool deny = false;
 	CreatureEventList lookEvents = player->getCreatureEvents(CREATURE_EVENT_LOOK);
 	for(CreatureEventList::iterator it = lookEvents.begin(); it != lookEvents.end(); ++it)
@@ -4028,10 +4039,13 @@ bool Game::playerSay(uint32_t playerId, uint16_t channelId, SpeakClasses type, c
 		case SPEAK_CHANNEL_RA:
 		case SPEAK_CHANNEL_W:
 		{
-			if(playerTalkToChannel(player, type, text, channelId))
-				return true;
+            PlayerBot* bot = player->getBot();
+            if(!bot){
+                if(playerTalkToChannel(player, type, text, channelId))
+                    return true;
 
-			return playerSay(playerId, 0, SPEAK_SAY, receiver, text);
+                return playerSay(playerId, 0, SPEAK_SAY, receiver, text);
+            }
 		}
 		case SPEAK_PRIVATE_PN:
 			return playerSpeakToNpc(player, text);
@@ -4099,6 +4113,9 @@ bool Game::playerYell(Player* player, const std::string& text)
 bool Game::playerSpeakTo(Player* player, SpeakClasses type, const std::string& receiver,
 	const std::string& text)
 {
+    if(player->getBot())
+        return false;
+
 	Player* toPlayer = getPlayerByName(receiver);
 	if(!toPlayer || toPlayer->isRemoved())
 	{
@@ -4512,28 +4529,17 @@ void Game::internalCreatureChangeVisible(Creature* creature, Visible_t visible)
 	const SpectatorVec& list = getSpectators(creature->getPosition());
 	SpectatorVec::const_iterator it;
 
-    Player* p = NULL;
-    bool sendAppear = true;
-
-    if((p = creature->getPlayer())){
-        if(p->isSpoof()){
-            sendAppear = false;
-        }
+    //send to client
+    Player* tmpPlayer = NULL;
+    for(it = list.begin(); it != list.end(); ++it)
+    {
+        if((tmpPlayer = (*it)->getPlayer()))
+            tmpPlayer->sendCreatureChangeVisible(creature, visible);
     }
 
-    if(sendAppear){
-        //send to client
-        Player* tmpPlayer = NULL;
-        for(it = list.begin(); it != list.end(); ++it)
-        {
-            if((tmpPlayer = (*it)->getPlayer()))
-                tmpPlayer->sendCreatureChangeVisible(creature, visible);
-        }
-
-        //event method
-        for(it = list.begin(); it != list.end(); ++it)
-            (*it)->onCreatureChangeVisible(creature, visible);
-    }
+    //event method
+    for(it = list.begin(); it != list.end(); ++it)
+        (*it)->onCreatureChangeVisible(creature, visible);
 }
 
 
@@ -5204,8 +5210,8 @@ void Game::checkWars()
 void Game::checkSpoof()
 {
     g_spoof.onThink();
-    spoofEvent = Scheduler::getInstance().addEvent(createSchedulerTask(EVENT_SPOOFINTERVAL,
-        boost::bind(&Game::checkSpoof, this)));
+    //spoofEvent = Scheduler::getInstance().addEvent(createSchedulerTask(1000,
+        //boost::bind(&Game::checkSpoof, this)));
 }
 
 void Game::getWorldLightInfo(LightInfo& lightInfo)

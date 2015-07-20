@@ -723,6 +723,8 @@ class LuaInterface
 		static int32_t luaDoPlayerGetAfkState(lua_State* L);
 		#endif
 
+        static int32_t luaDoPlayerIsBot(lua_State* L);
+
 		#ifdef __DARGHOS_CUSTOM__
 		static int32_t luaDoSayInPosition(lua_State* L);
 		static int32_t luaWordsIsSpell(lua_State* L);

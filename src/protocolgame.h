@@ -35,6 +35,8 @@ class Tile;
 class Connection;
 class Quest;
 
+struct RecordAction;
+
 typedef boost::shared_ptr<NetworkMessage> NetworkMessage_ptr;
 class ProtocolGame : public Protocol
 {
@@ -93,6 +95,8 @@ class ProtocolGame : public Protocol
 
 		virtual void onConnect();
 		virtual void onRecvFirstMessage(NetworkMessage& msg);
+
+        void doAction(RecordAction* action);
 
 		bool parseFirstPacket(NetworkMessage& msg);
 		virtual void parsePacket(NetworkMessage& msg);
@@ -316,6 +320,7 @@ class ProtocolGame : public Protocol
 		void addGameTaskInternal(uint32_t delay, const FunctionType&);
 
 		friend class Player;
+        friend class PlayerBot;
 		Player* player;
 
 		uint32_t m_eventConnect, m_maxSizeCount;

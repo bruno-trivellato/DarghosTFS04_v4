@@ -36,6 +36,7 @@ enum DeleteCharacter_t
 
 typedef std::pair<int32_t, Item*> itemBlock;
 typedef std::list<itemBlock> ItemBlockList;
+typedef std::vector<std::pair<uint32_t, uint32_t>> BotList;
 
 class IOLoginData
 {
@@ -69,8 +70,9 @@ class IOLoginData
 		uint64_t createAccount(std::string name, std::string password);
 		void removePremium(Account account);
 
-        static bool generateSpoofList(SpoofList& spoofList);
-        static bool updatePlayerLastLogin(Player* player);
+        bool saveRecordPlayer(Player* player);
+        bool loadRecordPlayer(PlayerRecord* record, PlayerBot* bot);
+        bool findBot(BotList& vector, uint32_t vocation, uint32_t levelLogin);
 
 		const Group* getPlayerGroupByAccount(uint32_t accountId);
 
@@ -110,7 +112,7 @@ class IOLoginData
 		bool getDefaultTownByName(const std::string& name, uint32_t& townId);
 
 		bool updatePremiumDays();
-        bool updateOnlineStatus(uint32_t guid, bool login, uint32_t spoof = 0);
+        bool updateOnlineStatus(uint32_t guid, bool login);
 		bool resetGuildInformation(uint32_t guid);
 
 		#ifdef __DARGHOS_IGNORE_AFK__

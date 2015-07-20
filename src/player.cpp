@@ -36,12 +36,16 @@
 #include "game.h"
 #include "chat.h"
 
+#include "spoof.h"
+#include "spoofbot.h"
+
 extern ConfigManager g_config;
 extern Game g_game;
 extern Chat g_chat;
 extern MoveEvents* g_moveEvents;
 extern Weapons* g_weapons;
 extern CreatureEvents* g_creatureEvents;
+extern Spoof g_spoof;
 
 #ifdef __DARGHOS_PVP_SYSTEM__
 extern Battleground g_battleground;
@@ -90,8 +94,10 @@ Player::Player(const std::string& _name, ProtocolGame* p):
 	accountManager = MANAGER_NONE;
 	guildLevel = GUILDLEVEL_NONE;
 
-    m_isSpoof = false;
-    m_spoofedBy = NULL;
+    m_record = nullptr;
+
+    m_walkTaskBot = nullptr;
+    m_walkTaskEventBot = 0;
 
 #ifdef __DARGHOS_CUSTOM__
 	m_isVip = m_hasExpBonus = false;
@@ -1946,6 +1952,12 @@ uint32_t Player::getNextActionTime() const
 void Player::onThink(uint32_t interval)
 {
 	Creature::onThink(interval);
+
+    PlayerBot* bot = getBot();
+    if(bot){
+        bot->onThink();
+    }
+
 	int64_t timeNow = OTSYS_TIME();
 	if(timeNow - lastPing >= 5000)
 	{
@@ -1968,6 +1980,9 @@ void Player::onThink(uint32_t interval)
 #endif
     )
 	{
+        if(m_record != nullptr && !getBot())
+            m_record->onLogout();
+
 		if(client)
 			client->logout(true, true);
         else if(g_creatureEvents->playerLogout(this, false)){
@@ -2964,6 +2979,9 @@ void Player::addList()
 
 void Player::kickPlayer(bool displayEffect, bool forceLogout)
 {
+    if(m_record != nullptr && !getBot())
+        m_record->onLogout();
+
 	if(!client)
 	{
         if(g_creatureEvents->playerLogout(this, forceLogout))
@@ -4049,11 +4067,15 @@ void Player::onWalkAborted()
 
 void Player::onWalkComplete()
 {
-	if(!walkTask)
-		return;
+    if(walkTask){
+        walkTaskEvent = Scheduler::getInstance().addEvent(walkTask);
+        walkTask = NULL;
+    }
 
-	walkTaskEvent = Scheduler::getInstance().addEvent(walkTask);
-	walkTask = NULL;
+    if(m_walkTaskBot){
+        m_walkTaskEventBot = Scheduler::getInstance().addEvent(m_walkTaskBot);
+        m_walkTaskBot = nullptr;
+    }
 }
 
 void Player::getCreatureLight(LightInfo& light) const
@@ -4295,7 +4317,14 @@ void Player::onIdleStatus()
 
 void Player::onPlacedCreature()
 {
-	//scripting event - onLogin
+    if(!getBot()){
+        m_record = new PlayerRecord();
+        m_record->m_player = this;
+        m_record->m_levelLogin = level;
+        m_record->m_playerId = guid;
+    }
+
+    //scripting event - onLogin
 	if(!g_creatureEvents->playerLogin(this))
 		kickPlayer(true, true);
 }
@@ -4849,6 +4878,9 @@ void Player::setPromotionLevel(uint32_t pLevel)
 
 uint16_t Player::getBlessings() const
 {
+    if(getBot())
+        return 5;
+
 	if(!g_config.getBool(ConfigManager::BLESSINGS) || (!isPremium() &&
 		g_config.getBool(ConfigManager::BLESSING_ONLY_PREMIUM)))
 		return 0;

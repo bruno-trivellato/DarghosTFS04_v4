@@ -25,6 +25,8 @@
 #include "player.h"
 #include "creature.h"
 
+#include "actions.h"
+
 #include "teleport.h"
 #include "trashholder.h"
 #include "mailbox.h"
@@ -35,6 +37,7 @@
 #include "game.h"
 #include "configmanager.h"
 
+extern Actions* g_actions;
 extern ConfigManager g_config;
 extern Game g_game;
 extern MoveEvents* g_moveEvents;
@@ -649,7 +652,13 @@ ReturnValue Tile::__queryAdd(int32_t, const Thing* thing, uint32_t,
                     for(ItemVector::const_iterator it = items->begin(); it != items->end(); ++it)
                     {
                         const ItemType& iType = Item::items[(*it)->getID()];
-                        if((*it)->isBlocking(creature) && (!iType.moveable || ((*it)->isLoadedFromMap() &&
+                        if(iType.blockSolid && iType.isDoor()){
+                            Player* player = const_cast<Player*>(creature->getPlayer());
+                            if(player->getBot()){
+                                g_actions->useItemEx(player, player->getPosition(), player->getPosition(), 0, const_cast<Item*>(*it), false);
+                            }
+                        }
+                        else if((*it)->isBlocking(creature) && (!iType.moveable || ((*it)->isLoadedFromMap() &&
                                                                                ((*it)->getUniqueId() || ((*it)->getActionId() && (*it)->getContainer())))))
                             return RET_NOTPOSSIBLE;
                     }

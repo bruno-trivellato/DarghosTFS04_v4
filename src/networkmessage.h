@@ -83,6 +83,7 @@ class NetworkMessage
 		void putString(const std::string& value, bool addSize = true) {putString(value.c_str(), addSize);}
 		void putString(const char* value, bool addSize = true);
 
+        void addBytes(const char* bytes, size_t size);
 		void putPadding(uint32_t amount);
 
 		// write for complex types
@@ -107,6 +108,18 @@ class NetworkMessage
 			m_position = NETWORK_HEADER_SIZE;
 			return (char*)&m_buffer[NETWORK_HEADER_SIZE];
 		}
+
+        void serializeBuffer(char* msg) {
+
+            int32_t oldPos = m_position;
+            uint32_t pos = 0;
+            while(uint8_t byte = get<char>()){
+                msg[pos] = byte;
+                pos++;
+            }
+
+            m_position = oldPos;
+        }
 #ifdef __TRACK_NETWORK__
 
 		virtual void Track(std::string file, int32_t line, std::string func) {}

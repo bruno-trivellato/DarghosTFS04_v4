@@ -185,6 +185,17 @@ void NetworkMessage::putString(const char* value, bool addSize/* = true*/)
 	m_size += size;
 }
 
+void NetworkMessage::addBytes(const char* bytes, size_t size)
+{
+    if (!hasSpace(size) || size > 8192) {
+        return;
+    }
+
+    memcpy(m_buffer + m_position, bytes, size);
+    m_position += size;
+    m_size += size;
+}
+
 void NetworkMessage::putPadding(uint32_t amount)
 {
 	if(!hasSpace(amount))

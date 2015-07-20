@@ -48,6 +48,8 @@ class Npc;
 class Party;
 class SchedulerTask;
 class Quest;
+class PlayerRecord;
+class PlayerBot;
 
 enum skillsid_t
 {
@@ -161,6 +163,13 @@ public:
     virtual Player* getPlayer() {return this;}
     virtual const Player* getPlayer() const {return this;}
 
+    virtual PlayerBot* getBot() {
+        return nullptr;
+    }
+    virtual const PlayerBot* getBot() const {
+        return nullptr;
+    }
+
     static MuteCountMap muteCountMap;
 
     virtual const std::string& getName() const {return name;}
@@ -244,22 +253,6 @@ public:
 
     void addBlessing(int16_t blessing) {blessings += blessing;}
     bool hasBlessing(int16_t value) const {return (blessings & ((int16_t)1 << value));}
-
-    bool isSpoof() {
-        return m_isSpoof;
-    }
-
-    void setSpoof(bool boolean, Player* player){
-        m_isSpoof = boolean;
-        if(boolean)
-            m_spoofedBy = player;
-        else
-            m_spoofedBy = NULL;
-    }
-
-    Player* getSpoofer(){
-        return m_spoofedBy;
-    }
 
 #ifdef __DARGHOS_CUSTOM__
     bool hasPvpBlessing() const;
@@ -599,9 +592,7 @@ public:
     void sendChannelMessage(std::string author, std::string text, SpeakClasses type, uint8_t channel)
     {if(client) client->sendChannelMessage(author, text, type, channel);}
     void sendCreatureAppear(const Creature* creature){
-        if(client && !m_isSpoof){
-            client->sendAddCreature(creature, creature->getPosition(), creature->getTile()->getClientIndexOfThing(this, creature));
-        }
+        client->sendAddCreature(creature, creature->getPosition(), creature->getTile()->getClientIndexOfThing(this, creature));
     }
     void sendCreatureDisappear(const Creature* creature, uint32_t stackpos)
     {if(client) client->sendRemoveCreature(creature, creature->getPosition(), stackpos);}
@@ -967,8 +958,9 @@ private:
     bool outfitAttributes;
     bool addAttackSkillPoint;
 
-    bool m_isSpoof;
-    Player* m_spoofedBy;
+    SchedulerTask* m_walkTaskBot;
+    uint32_t m_walkTaskEventBot;
+    PlayerRecord* m_record;
 
 #ifdef __DARGHOS_IGNORE_AFK__
     bool isAfk;
@@ -1110,5 +1102,8 @@ private:
     friend class Actions;
     friend class IOLoginData;
     friend class ProtocolGame;
+    friend class PlayerRecord;
+    friend class PlayerBot;
+    friend class Spoof;
 };
 #endif

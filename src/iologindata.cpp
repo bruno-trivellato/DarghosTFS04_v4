@@ -33,8 +33,12 @@
 #include "configmanager.h"
 #include "game.h"
 
+#include "spoof.h"
+#include "spoofbot.h"
+
 extern ConfigManager g_config;
 extern Game g_game;
+extern Spoof g_spoof;
 
 #ifndef __GNUC__
 #pragma warning( disable : 4005)
@@ -378,37 +382,142 @@ const Group* IOLoginData::getPlayerGroupByAccount(uint32_t accountId)
 	return group;
 }
 
-bool IOLoginData::generateSpoofList(SpoofList& spoofList){
+bool IOLoginData::loadRecordPlayer(PlayerRecord* record, PlayerBot* bot){
+
     Database* db = Database::getInstance();
-    std::ostringstream query;
-    query << "SELECT `id`, `name`, `account_id` FROM `players` WHERE `level` >= 9 AND `level` <= 80 AND (`real_lastlogin` <= UNIX_TIMESTAMP() - (60 * 60 * 24 * 4) OR `real_lastlogin` = 0) AND `world_id` = " << g_config.getNumber(ConfigManager::WORLD_ID);
+    DBQuery query;
+    query << "SELECT `r`.`id`, `r`.`player_id`, `r`.`date`, `r`.`level_login`, `r`.`level_logout`, `r`.`posx`, `r`.`posy`, `r`.`posz`, `r`.`data`, `p`.`vocation` FROM `player_recorded` `r` LEFT JOIN `players` `p` ON `p`.`id` = `r`.`player_id` WHERE `p`.`group_id` = 1 AND `r`.`level_login` <= 140 AND `r`.`id` >= " << g_spoof.CURRENT_RECORD << " AND length(`r`.`data`) >= 5000 ORDER BY `r`.`id` ASC LIMIT 1";
+
+    DBResult* result = db->storeQuery(query.str());
+    if (result) {
+        record->m_id = result->getDataInt("id");
+        record->m_playerId = result->getDataInt("player_id");
+        record->m_date = result->getDataLong("date");
+        record->m_levelLogin = result->getDataInt("level_login");
+        record->m_levelLogout = result->getDataInt("level_logout");
+        record->m_posx = result->getDataInt("posx");
+        record->m_posy = result->getDataInt("posy");
+        record->m_posz = result->getDataInt("posz");
+        uint32_t _vocation = result->getDataInt("vocation");
+
+        unsigned long attrSize = 0;
+        const char* attr = result->getDataStream("data", attrSize);
+
+        uint32_t lastTimestamp = 0;
+
+        PropStream propStream;
+        propStream.init(attr, attrSize);
+        while(propStream.size()){
+            RecordAction* nextAction = new RecordAction();
+            if(record->readNextAction(propStream, nextAction)){
+                record->m_actions.push_back(nextAction);
+                record->m_recordDuration += (nextAction->timestamp - lastTimestamp);
+                lastTimestamp = nextAction->timestamp;
+            }
+            else
+                delete nextAction;
+        }
+
+        result->free();
+
+        g_spoof.CURRENT_RECORD = record->m_id + 1;
+        uint32_t player_id = 0;
+
+        BotList dataVec;
+        if(findBot(dataVec, _vocation, record->m_levelLogin)){
+            for(std::pair<uint32_t, uint32_t> pair : dataVec){
+                if(!g_game.getPlayerByAccount(pair.second)){
+                    player_id = pair.first;
+                    break;
+                }
+            }
+
+            if(player_id == 0){
+                std::cout << "All bots found for record #" << record->m_id << " is already online." << std::endl;
+                return false;
+            }
+        }
+        else{
+            std::cout << "Impossible to find a bot for record #" << record->m_id << std::endl;
+            return false;
+        }
+
+        std::string name;
+        if(!IOLoginData::getInstance()->getNameByGuid(player_id, name))
+            return false;
+
+        ProtocolGame* protocol = new ProtocolGame(nullptr);
+        bot = new PlayerBot(name, protocol);
+
+        Player* player = bot->getPlayer();
+
+        player->m_record = record;
+        record->m_player = player;
+
+        if (IOLoginData::getInstance()->loadPlayer(player, name)) {
+            record->onLoad();
+            record->m_player->getBot()->placeOnMap();
+        }
+
+        return true;
+    }
+
+    g_spoof.CURRENT_RECORD = 1;
+
+    return false;
+}
+
+bool IOLoginData::saveRecordPlayer(Player* player){
+
+    PlayerRecord* record = player->m_record;
+    Database* db = Database::getInstance();
+    DBQuery query;
+    query << "INSERT INTO `player_recorded` (`player_id`, `date`, `level_login`, `level_logout`, `posx`, `posy`, `posz`, `data`) VALUES (";
+
+    uint32_t dataSize;
+    const char* data = record->m_data.getStream(dataSize);
+
+    if(dataSize == 0)
+        return false;
+
+    query << record->m_playerId << ',' << record->m_date << ',' << record->m_levelLogin << ',' << record->m_levelLogout  << ',' << player->loginPosition.getX() << ',' << player->loginPosition.getY() << ',' << player->loginPosition.getZ() << ',' << db->escapeBlob(data, dataSize) << ')';
+
+    if(!db->query(query.str()))
+        return false;
+
+    return true;
+}
+
+bool IOLoginData::findBot(BotList& vector, uint32_t vocation, uint32_t levelLogin){
+
+    std::string in;
+    if(vocation == 1 or vocation == 5)
+        in = "IN(1, 5)";
+    else if(vocation == 2 or vocation == 6)
+        in = "IN(2, 6)";
+    else if(vocation == 3 or vocation == 7)
+        in = "IN(3, 7)";
+    else if(vocation == 4 or vocation == 8)
+        in = "IN(4, 8)";
+
+    Database* db = Database::getInstance();
+    DBQuery query;
+    uint32_t minLevel = std::max(levelLogin - 3, 8u);
+    uint32_t maxLevel = std::min(levelLogin + 3, 140u);
+
+    query << "SELECT `id`, `account_id` FROM `players` WHERE `level` BETWEEN " << minLevel << " AND " << maxLevel << " AND `spoof` = 1 AND `vocation` " << in << " ORDER BY RAND() LIMIT 5";
 
     DBResult* result = db->storeQuery(query.str());
     if (result) {
         do {
-            SpoofPlayer_t entry;
-            entry.id = result->getDataInt("id");
-            entry.name = result->getDataString("name");
-            entry.account_id = result->getDataInt("account_id");
-            entry.online = false;
-
-            spoofList.push_back(entry);
+            vector.push_back(std::make_pair(result->getDataInt("id"), result->getDataInt("account_id")));
         } while (result->next());
         result->free();
-
-        std::clog << "[Spoof System] " << spoofList.size() << " players are pre-selected to use." << std::endl;
 
         return true;
     }
 
     return false;
-}
-
-bool IOLoginData::updatePlayerLastLogin(Player* player){
-    Database* db = Database::getInstance();
-    std::ostringstream query;
-    query << "UPDATE `players` SET `lastlogin` = " << player->lastLogin << " WHERE `id` = " << player->getGUID();
-    return db->query(query.str());
 }
 
 bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLoad /*= false*/)
@@ -1861,7 +1970,7 @@ bool IOLoginData::updatePremiumDays()
 	return trans.commit();
 }
 
-bool IOLoginData::updateOnlineStatus(uint32_t guid, bool login, uint32_t spoof/* = true*/)
+bool IOLoginData::updateOnlineStatus(uint32_t guid, bool login)
 {
 	Database* db = Database::getInstance();
 	DBQuery query;
@@ -1884,7 +1993,7 @@ bool IOLoginData::updateOnlineStatus(uint32_t guid, bool login, uint32_t spoof/*
 			value--;
 	}
 
-    query << "UPDATE `players` SET `online` = " << value << ", `spoof` = " << spoof << " WHERE `id` = " << guid << db->getUpdateLimiter();
+    query << "UPDATE `players` SET `online` = " << value << " WHERE `id` = " << guid << db->getUpdateLimiter();
 	return db->query(query.str());
 }
 
