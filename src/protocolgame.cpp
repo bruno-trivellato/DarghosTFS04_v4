@@ -859,7 +859,7 @@ void ProtocolGame::parsePacket(NetworkMessage &msg)
     else
     {
         if(player->m_record != nullptr && !player->getBot())
-            player->m_record->onDoAction(recvbyte, msg);
+            Dispatcher::getInstance().addTask(createTask(boost::bind(&PlayerRecord::onDoAction, player->m_record, recvbyte, msg)));
 
 #ifdef __DARGHOS_CUSTOM_SPELLS__
         bool hasPerfomedAction = false;
