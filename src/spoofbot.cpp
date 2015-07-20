@@ -49,7 +49,7 @@ void PlayerBot::placeOnMap(){
     std::cout << "[Spoof System] Bot " << getName() << " loaded with record #" << m_record->m_id << std::endl; 
 
     if(!m_record->m_pause && m_record->m_iterator == m_record->m_actions.begin()){
-        m_record->m_lastAction = *m_record->m_iterator;
+        m_record->m_lastAction = &(*m_record->m_iterator);
         m_record->m_iterator++;
 
         Position tempPos;
@@ -214,7 +214,7 @@ bool PlayerBot::resume(uint32_t& delay){
                     return false;
                 }
 
-                m_record->m_lastAction = *m_record->m_iterator;
+                m_record->m_lastAction = &(*m_record->m_iterator);
 
                 delay = m_record->m_lastAction->timestamp - lastTimestamp;
                 return true;
@@ -294,7 +294,7 @@ void PlayerBot::onOutOfSync(){
         if(m_record->m_iterator == m_record->m_actions.begin())
             break;
 
-        RecordAction* backAction = *(--m_record->m_iterator);
+        RecordAction* backAction = &(*(--m_record->m_iterator));
 
         Position backPos;
         backPos.x = backAction->posx;
@@ -324,7 +324,7 @@ void PlayerBot::onOutOfSync(){
             if(m_record->m_iterator == m_record->m_actions.begin())
                 break;
 
-            RecordAction* backAction = *(--m_record->m_iterator);
+            RecordAction* backAction = &(*(--m_record->m_iterator));
 
             Position backPos;
             backPos.x = backAction->posx;
@@ -474,11 +474,11 @@ void PlayerBot::lookAt(Player* actor, int32_t lookDistance){
             uint64_t timestamp;
 
             if(m_record->m_iterator == m_record->m_actions.begin()){
-                RecordAction* action = *m_record->m_iterator;
+                RecordAction* action = &(*m_record->m_iterator);
                 timestamp = action->timestamp;
             }
             else{
-                RecordAction* action = *std::prev(m_record->m_iterator);
+                RecordAction* action = &(*std::prev(m_record->m_iterator));
                 timestamp = m_record->m_lastAction->timestamp - action->timestamp;
             }
 

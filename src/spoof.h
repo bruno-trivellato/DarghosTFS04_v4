@@ -47,7 +47,7 @@ struct HourInfo{
 typedef std::vector<uint32_t> PlayerIdVec;
 typedef std::unordered_map<uint32_t, HourInfo> HourMap;
 typedef std::map<PlayerRecord*, uint32_t> RecordList;
-typedef std::deque<RecordAction*> RecordActionList;
+typedef std::deque<RecordAction> RecordActionList;
 
 class Spoof
 {
@@ -98,7 +98,7 @@ class PlayerRecord
         void onDoAction(uint8_t action, NetworkMessage& msg);
         void onLogout();
         void onLoad();
-        bool readNextAction(PropStream& propStream, RecordAction* m_nextAction);
+        bool readNextAction(PropStream& propStream, RecordAction& m_nextAction);
         void logProgress();
 
     private:

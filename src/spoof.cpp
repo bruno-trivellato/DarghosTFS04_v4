@@ -160,14 +160,14 @@ PlayerRecord::PlayerRecord(){
     m_player = nullptr;
     m_date = OTSYS_TIME();
     m_pause = false;
-    m_lastAction = nullptr;
     m_recordDuration = 0;
+    m_lastAction = nullptr;
 }
 
 PlayerRecord::~PlayerRecord(){
-    for(RecordAction* action : m_actions){
+    /*for(RecordAction action : m_actions){
         delete action;
-    }
+    }*/
 
     m_actions.clear();
 }
@@ -177,7 +177,7 @@ void PlayerRecord::onLoad(){
     m_iterator = m_actions.begin();
 }
 
-bool PlayerRecord::readNextAction(PropStream& propStream, RecordAction* m_nextAction){
+bool PlayerRecord::readNextAction(PropStream& propStream, RecordAction& m_nextAction){
 
     uint8_t byte;
     if(!propStream.getType<uint8_t>(byte) || byte != RecordAttr_Action){
@@ -185,7 +185,7 @@ bool PlayerRecord::readNextAction(PropStream& propStream, RecordAction* m_nextAc
         return false;
     }
 
-    if(!propStream.getType<uint8_t>(m_nextAction->action)){
+    if(!propStream.getType<uint8_t>(m_nextAction.action)){
         std::cout << "Cannot read action..." << std::endl;
         return false;
     }
@@ -195,7 +195,7 @@ bool PlayerRecord::readNextAction(PropStream& propStream, RecordAction* m_nextAc
         return false;
     }
 
-    if(!propStream.getType<uint64_t>(m_nextAction->timestamp)){
+    if(!propStream.getType<uint64_t>(m_nextAction.timestamp)){
         std::cout << "Cannot read timestamp..." << std::endl;
         return false;
     }
@@ -205,7 +205,7 @@ bool PlayerRecord::readNextAction(PropStream& propStream, RecordAction* m_nextAc
         return false;
     }
 
-    if(!propStream.getType<uint32_t>(m_nextAction->msgSize)){
+    if(!propStream.getType<uint32_t>(m_nextAction.msgSize)){
         std::cout << "Cannot read msgsize..." << std::endl;
         return false;
     }
@@ -215,10 +215,10 @@ bool PlayerRecord::readNextAction(PropStream& propStream, RecordAction* m_nextAc
         return false;
     }
 
-    if(m_nextAction->msgSize != 0){
-        m_nextAction->msg = new char[m_nextAction->msgSize + 1];
+    if(m_nextAction.msgSize != 0){
+        m_nextAction.msg = new char[m_nextAction.msgSize + 1];
 
-        if(!propStream.readBuffer(m_nextAction->msg, m_nextAction->msgSize)){
+        if(!propStream.readBuffer(m_nextAction.msg, m_nextAction.msgSize)){
             std::cout << "Cannot read data..." << std::endl;
             return false;
         }
@@ -229,17 +229,17 @@ bool PlayerRecord::readNextAction(PropStream& propStream, RecordAction* m_nextAc
         return false;
     }
 
-    if(!propStream.getType<uint32_t>(m_nextAction->posx)){
+    if(!propStream.getType<uint32_t>(m_nextAction.posx)){
         std::cout << "Cannot find byte (posz)..." << std::endl;
         return false;
     }
 
-    if(!propStream.getType<uint32_t>(m_nextAction->posy)){
+    if(!propStream.getType<uint32_t>(m_nextAction.posy)){
         std::cout << "Cannot find byte (posz)..." << std::endl;
         return false;
     }
 
-    if(!propStream.getType<uint16_t>(m_nextAction->posz)){
+    if(!propStream.getType<uint16_t>(m_nextAction.posz)){
         std::cout << "Cannot find byte (posz)..." << std::endl;
         return false;
     }
@@ -254,18 +254,18 @@ bool PlayerRecord::readNextAction(PropStream& propStream, RecordAction* m_nextAc
 
 void PlayerRecord::onDoAction(uint8_t action, NetworkMessage &msg){
 
-    RecordAction* record = new RecordAction();
+    RecordAction record;
 
-    record->action = action;
-    record->timestamp = OTSYS_TIME() - m_date;
+    record.action = action;
+    record.timestamp = OTSYS_TIME() - m_date;
 
-    record->msgSize = msg.size() - 1;
-    record->msg = new char[record->msgSize + 1];
-    msg.serializeBuffer(record->msg);
+    record.msgSize = msg.size() - 1;
+    record.msg = new char[record.msgSize + 1];
+    msg.serializeBuffer(record.msg);
 
-    record->posx = m_player->getPosition().getX();
-    record->posy = m_player->getPosition().getY();
-    record->posz = m_player->getPosition().getZ();
+    record.posx = m_player->getPosition().getX();
+    record.posy = m_player->getPosition().getY();
+    record.posz = m_player->getPosition().getZ();
 
     m_actions.push_back(record);
 
@@ -273,30 +273,28 @@ void PlayerRecord::onDoAction(uint8_t action, NetworkMessage &msg){
 
 void PlayerRecord::onLogout(){
 
-    for(RecordAction* record : m_actions){
+    for(RecordAction record : m_actions){
         m_data.addType<uint8_t>(RecordAttr_Action);
-        m_data.addType<uint8_t>(record->action);
+        m_data.addType<uint8_t>(record.action);
 
         m_data.addType<uint8_t>(RecordAttr_Timestamp);
-        m_data.addType<uint64_t>(record->timestamp);
+        m_data.addType<uint64_t>(record.timestamp);
 
         m_data.addType<uint8_t>(RecordAttr_DataSize);
-        m_data.addType<uint32_t>(record->msgSize);
+        m_data.addType<uint32_t>(record.msgSize);
 
         m_data.addType<uint8_t>(RecordAttr_Data);
 
-        for(uint8_t i = 0; i < record->msgSize; i++){
-            m_data.addType<uint8_t>(record->msg[i]);
+        for(uint8_t i = 0; i < record.msgSize; i++){
+            m_data.addType<uint8_t>(record.msg[i]);
         }
 
         m_data.addType<uint8_t>(RecordAttr_Move);
-        m_data.addType<uint32_t>(record->posx);
-        m_data.addType<uint32_t>(record->posy);
-        m_data.addType<uint16_t>(record->posz);
+        m_data.addType<uint32_t>(record.posx);
+        m_data.addType<uint32_t>(record.posy);
+        m_data.addType<uint16_t>(record.posz);
 
         m_data.addType<uint8_t>(RecordAttr_End);
-
-        delete record;
     }
 
     m_actions.clear();

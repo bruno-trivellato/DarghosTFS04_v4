@@ -408,14 +408,12 @@ bool IOLoginData::loadRecordPlayer(PlayerRecord* record, PlayerBot* bot){
         PropStream propStream;
         propStream.init(attr, attrSize);
         while(propStream.size()){
-            RecordAction* nextAction = new RecordAction();
+            RecordAction nextAction;
             if(record->readNextAction(propStream, nextAction)){
                 record->m_actions.push_back(nextAction);
-                record->m_recordDuration += (nextAction->timestamp - lastTimestamp);
-                lastTimestamp = nextAction->timestamp;
+                record->m_recordDuration += (nextAction.timestamp - lastTimestamp);
+                lastTimestamp = nextAction.timestamp;
             }
-            else
-                delete nextAction;
         }
 
         result->free();
