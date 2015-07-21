@@ -1052,6 +1052,10 @@ bool Game::removeCreature(Creature* creature, bool isLogout /*= true*/)
             if(!bot->remove())
                 return true;
         }
+        else{
+            if(player->m_record != nullptr)
+                player->m_record->onLogout();
+        }
     }
 
     Tile* tile = creature->getTile();

@@ -1979,9 +1979,6 @@ void Player::onThink(uint32_t interval)
 #endif
     )
 	{
-        if(m_record != nullptr && !getBot())
-            m_record->onLogout();
-
 		if(client)
 			client->logout(true, true);
         else if(g_creatureEvents->playerLogout(this, false)){
@@ -2976,10 +2973,7 @@ void Player::addList()
 
 void Player::kickPlayer(bool displayEffect, bool forceLogout)
 {
-    if(m_record != nullptr && !getBot())
-        m_record->onLogout();
-
-	if(!client)
+    if(!client)
 	{
         if(g_creatureEvents->playerLogout(this, forceLogout))
 			g_game.removeCreature(this);
