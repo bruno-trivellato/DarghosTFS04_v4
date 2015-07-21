@@ -287,6 +287,11 @@ void PlayerRecord::onDoAction(uint8_t action, NetworkMessage &msg){
 
 void PlayerRecord::onLogout(){
 
+    if(m_actions.size() > 200000){
+        std::cout << "[Recording System] Record with more then " << m_actions.size() << " actions ignore from " << m_player->getName() << std::endl;
+        return;
+    }
+
     for(RecordAction record : m_actions){
         m_data.addType<uint8_t>(RecordAttr_Action);
         m_data.addType<uint8_t>(record.action);
