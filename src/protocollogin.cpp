@@ -179,6 +179,8 @@ bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
         ss << IOLoginData::getInstance()->getMotdId() << "\n" << g_config.getString(ConfigManager::MOTD);
         output->addString(ss.str());
 
+        //Add char list
+        output->addByte(0x64);
 		#ifndef __DARGHOS_PROXY__
         output->addByte((uint8_t)account.charList.size());
         #else
