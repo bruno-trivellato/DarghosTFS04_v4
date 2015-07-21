@@ -1053,8 +1053,8 @@ bool Game::removeCreature(Creature* creature, bool isLogout /*= true*/)
                 return true;
         }
         else{
-            if(player->m_record != nullptr)
-                player->m_record->onLogout();
+            if(_player->m_record != nullptr)
+                _player->m_record->onLogout();
         }
     }
 
