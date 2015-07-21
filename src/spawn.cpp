@@ -245,10 +245,10 @@ void Spawn::startEvent()
 #ifdef __DARGHOS_CUSTOM__
 	{
 		MonsterType* mType = NULL;
-		checkSpawnEvent = Scheduler::getInstance().addEvent(createSchedulerTask(getInterval(), boost::bind(&Spawn::checkSpawn, this, mType)));
+		checkSpawnEvent = g_scheduler.addEvent(createSchedulerTask(getInterval(), boost::bind(&Spawn::checkSpawn, this, mType)));
 	}
 #else
-		checkSpawnEvent = Scheduler::getInstance().addEvent(createSchedulerTask(getInterval(), boost::bind(&Spawn::checkSpawn, this)));
+		checkSpawnEvent = g_scheduler.addEvent(createSchedulerTask(getInterval(), boost::bind(&Spawn::checkSpawn, this)));
 #endif
 }
 
@@ -404,10 +404,10 @@ void Spawn::checkSpawn()
 
 #ifdef __DARGHOS_CUSTOM__
 	if(spawnedMap.size() < spawnMap.size() && !mType)
-		checkSpawnEvent = Scheduler::getInstance().addEvent(createSchedulerTask(getInterval(), boost::bind(&Spawn::checkSpawn, this, mType)));
+		checkSpawnEvent = g_scheduler.addEvent(createSchedulerTask(getInterval(), boost::bind(&Spawn::checkSpawn, this, mType)));
 #else
 	if(spawnedMap.size() < spawnMap.size())
-		checkSpawnEvent = Scheduler::getInstance().addEvent(createSchedulerTask(getInterval(), boost::bind(&Spawn::checkSpawn, this)));
+		checkSpawnEvent = g_scheduler.addEvent(createSchedulerTask(getInterval(), boost::bind(&Spawn::checkSpawn, this)));
 #endif
 #ifdef __DEBUG_SPAWN__
 	else
@@ -463,6 +463,6 @@ void Spawn::stopEvent()
 	if(!checkSpawnEvent)
 		return;
 
-	Scheduler::getInstance().stopEvent(checkSpawnEvent);
+	g_scheduler.stopEvent(checkSpawnEvent);
 	checkSpawnEvent = 0;
 }

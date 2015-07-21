@@ -160,7 +160,7 @@ bool Raids::startup()
 		return false;
 
 	setLastRaidEnd(OTSYS_TIME());
-	checkRaidsEvent = Scheduler::getInstance().addEvent(createSchedulerTask(
+	checkRaidsEvent = g_scheduler.addEvent(createSchedulerTask(
 		CHECK_RAIDS_INTERVAL * 1000, boost::bind(&Raids::checkRaids, this)));
 
 	started = true;
@@ -169,7 +169,7 @@ bool Raids::startup()
 
 void Raids::checkRaids()
 {
-	checkRaidsEvent = Scheduler::getInstance().addEvent(createSchedulerTask(
+	checkRaidsEvent = g_scheduler.addEvent(createSchedulerTask(
 		CHECK_RAIDS_INTERVAL * 1000, boost::bind(&Raids::checkRaids, this)));
 	if(running)
 		return;
@@ -186,7 +186,7 @@ void Raids::checkRaids()
 
 void Raids::clear()
 {
-	Scheduler::getInstance().stopEvent(checkRaidsEvent);
+	g_scheduler.stopEvent(checkRaidsEvent);
 	checkRaidsEvent = lastRaidEnd = 0;
 	loaded = started = false;
 
@@ -321,7 +321,7 @@ bool Raid::startRaid()
 	if(!raidEvent)
 		return false;
 
-	nextEvent = Scheduler::getInstance().addEvent(createSchedulerTask(
+	nextEvent = g_scheduler.addEvent(createSchedulerTask(
 		raidEvent->getDelay(), boost::bind(&Raid::executeRaidEvent, this, raidEvent)));
 	Raids::getInstance()->setRunning(this);
 	return true;
@@ -354,7 +354,7 @@ bool Raid::executeRaidEvent(RaidEvent* raidEvent)
 	if(!newRaidEvent)
 		return !resetRaid(false);
 
-	nextEvent = Scheduler::getInstance().addEvent(createSchedulerTask(
+	nextEvent = g_scheduler.addEvent(createSchedulerTask(
 		std::max(RAID_MINTICKS, (int32_t)(newRaidEvent->getDelay() - raidEvent->getDelay())),
 		boost::bind(&Raid::executeRaidEvent, this, newRaidEvent)));
 	return true;
@@ -393,7 +393,7 @@ void Raid::stopEvents()
 	if(!nextEvent)
 		return;
 
-	Scheduler::getInstance().stopEvent(nextEvent);
+	g_scheduler.stopEvent(nextEvent);
 	nextEvent = 0;
 }
 

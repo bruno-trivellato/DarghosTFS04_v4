@@ -64,7 +64,7 @@ DatabaseMySQL::DatabaseMySQL() :
 
     //timeout = g_config.getNumber(ConfigManager::SQL_KEEPALIVE) * 1000;
     //if(timeout)
-    //	m_timeoutTask = Scheduler::getInstance().addEvent(createSchedulerTask(timeout,
+    //	m_timeoutTask = g_scheduler.addEvent(createSchedulerTask(timeout,
     //		boost::bind(&DatabaseMySQL::keepAlive, this)));
 
 	if(asLowerCaseString(g_config.getString(ConfigManager::HOUSE_STORAGE)) == "relational")
@@ -88,7 +88,7 @@ DatabaseMySQL::~DatabaseMySQL()
 		mysql_close(&m_handle);
 
 	if(m_timeoutTask != 0)
-		Scheduler::getInstance().stopEvent(m_timeoutTask);
+		g_scheduler.stopEvent(m_timeoutTask);
 }
 
 bool DatabaseMySQL::connect(bool _reconnect)
@@ -275,7 +275,7 @@ void DatabaseMySQL::keepAlive()
 			m_connected = false;
 	}
 
-	Scheduler::getInstance().addEvent(createSchedulerTask(timeout,
+	g_scheduler.addEvent(createSchedulerTask(timeout,
 		boost::bind(&DatabaseMySQL::keepAlive, this)));
 }
 

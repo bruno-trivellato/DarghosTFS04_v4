@@ -37,5 +37,8 @@
 #include <boost/regex.hpp>
 #include <boost/tokenizer.hpp>
 
+#include <mutex>
+#include <thread>
+
 //otserv
 #include "thing.h"

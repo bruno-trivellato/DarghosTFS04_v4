@@ -34,6 +34,12 @@ enum QueryWeight_t
 };
 #endif
 
+enum ThreadState {
+        THREAD_STATE_RUNNING,
+        THREAD_STATE_CLOSING,
+        THREAD_STATE_TERMINATED,
+};
+
 enum DatabaseEngine_t
 {
 	DATABASE_ENGINE_NONE = 0,

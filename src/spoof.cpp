@@ -135,7 +135,7 @@ void Spoof::checkBotIdResume(uint32_t player_id){
         uint32_t delay = 0;
 
         if(bot->resume(delay)){
-            Scheduler::getInstance().addEvent(createSchedulerTask(delay ,std::bind(&Spoof::checkBotIdResume, this, bot->getGUID())));
+            g_scheduler.addEvent(createSchedulerTask(delay ,std::bind(&Spoof::checkBotIdResume, this, bot->getGUID())));
         }
     }
 }
@@ -148,7 +148,7 @@ void Spoof::checkBotResume(PlayerBot* bot){
 
     uint32_t delay = 0;
     if(bot->resume(delay)){
-        Scheduler::getInstance().addEvent(createSchedulerTask(delay ,std::bind(&Spoof::checkBotIdResume, this, bot->getGUID())));
+        g_scheduler.addEvent(createSchedulerTask(delay ,std::bind(&Spoof::checkBotIdResume, this, bot->getGUID())));
     }
 }
 
@@ -259,7 +259,7 @@ void PlayerRecord::onDoAction(uint8_t action, NetworkMessage &msg){
     record.action = action;
     record.timestamp = OTSYS_TIME() - m_date;
 
-    record.msgSize = msg.size() - 1;
+    record.msgSize = msg.getLength() - 1;
     record.msg = new char[record.msgSize + 1];
     msg.serializeBuffer(record.msg);
 

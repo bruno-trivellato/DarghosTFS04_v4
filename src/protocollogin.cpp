@@ -26,6 +26,8 @@
 #include "outputmessage.h"
 #include "connection.h"
 
+#include "rsa.h"
+
 #include "configmanager.h"
 #include "game.h"
 
@@ -51,9 +53,8 @@ void ProtocolLogin::disconnectClient(uint8_t error, const char* message)
 	OutputMessage_ptr output = OutputMessagePool::getInstance()->getOutputMessage(this, false);
 	if(output)
 	{
-		TRACK_MESSAGE(output);
-		output->put<char>(error);
-		output->putString(message);
+        output->addByte(error);
+        output->addString(message);
 		OutputMessagePool::getInstance()->send(output);
 	}
 
@@ -62,17 +63,17 @@ void ProtocolLogin::disconnectClient(uint8_t error, const char* message)
 
 bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
 {
-	if(g_game.getGameState() == GAMESTATE_SHUTDOWN)
+    if(g_game.getGameState() == GAMESTATE_SHUTDOWN)
 	{
 		getConnection()->close();
 		return false;
 	}
 
 	uint32_t clientIp = getConnection()->getIP();
-	/*uint16_t operatingSystem = msg.get<uint16_t>();*/msg.skip(2);
+    /*uint16_t operatingSystem = msg.get<uint16_t>();*/msg.skipBytes(2);
 	uint16_t version = msg.get<uint16_t>();
 
-	msg.skip(12);
+    msg.skipBytes(12);
 	if(!RSA_decrypt(msg))
 	{
 		getConnection()->close();
@@ -114,12 +115,6 @@ bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
 		return false;
 	}
 
-	if(ConnectionManager::getInstance()->isDisabled(clientIp, protocolId))
-	{
-		disconnectClient(0x0A, "Too many connections attempts from your IP address, please try again later.");
-		return false;
-	}
-
 	if(IOBan::getInstance()->isIpBanished(clientIp))
 	{
 		disconnectClient(0x0A, "Your IP is banished!");
@@ -129,7 +124,6 @@ bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
 	uint32_t id = 1;
 	if(!IOLoginData::getInstance()->getAccountId(name, id))
 	{
-		ConnectionManager::getInstance()->addAttempt(clientIp, protocolId, false);
 		disconnectClient(0x0A, "Invalid account name.");
 		return false;
 	}
@@ -137,7 +131,6 @@ bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
 	Account account = IOLoginData::getInstance()->loadAccount(id);
 	if(!encryptTest(account.salt + password, account.password))
 	{
-		ConnectionManager::getInstance()->addAttempt(clientIp, protocolId, false);
 		disconnectClient(0x0A, "Invalid password.");
 		return false;
 	}
@@ -178,15 +171,13 @@ bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
 		return false;
 	}
 
-	ConnectionManager::getInstance()->addAttempt(clientIp, protocolId, true);
 	if(OutputMessage_ptr output = OutputMessagePool::getInstance()->getOutputMessage(this, false))
 	{
-		TRACK_MESSAGE(output);
-		output->put<char>(0x14);
+        output->addByte(0x14);
 
         std::ostringstream ss;
         ss << IOLoginData::getInstance()->getMotdId() << "\n" << g_config.getString(ConfigManager::MOTD);
-        output->putString(ss.str());
+        output->addString(ss.str());
 
 		uint32_t serverIp = serverIps.front().first;
 		for(std::list<std::pair<uint32_t, uint32_t> >::iterator it = serverIps.begin(); it != serverIps.end(); ++it)
@@ -199,71 +190,71 @@ bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
 		}
 
 		//Add char list
-		output->put<char>(0x64);
+        output->addByte(0x64);
 		if(g_config.getBool(ConfigManager::ACCOUNT_MANAGER) && id != 1)
 		{
-			output->put<char>(account.charList.size() + 1);
-			output->putString("Account Manager");
-			output->putString(g_config.getString(ConfigManager::SERVER_NAME));
-			output->put<uint32_t>(serverIp);
-			output->put<uint16_t>(g_config.getNumber(ConfigManager::GAME_PORT));
+            output->addByte(account.charList.size() + 1);
+            output->addString("Account Manager");
+            output->addString(g_config.getString(ConfigManager::SERVER_NAME));
+            output->add<uint32_t>(serverIp);
+            output->add<uint16_t>(g_config.getNumber(ConfigManager::GAME_PORT));
 		}
 		else
 		#ifndef __DARGHOS_PROXY__
-			output->put<char>((uint8_t)account.charList.size());
+            output->addByte((uint8_t)account.charList.size());
         #else
-            output->put<char>((uint8_t)account.charList.size() * 2);
+            output->addByte((uint8_t)account.charList.size() * 2);
         #endif
 
 		for(Characters::iterator it = account.charList.begin(); it != account.charList.end(); it++)
 		{
 			#ifndef __LOGIN_SERVER__
-			output->putString((*it));
+            output->addString((*it));
 
 			if(g_config.getBool(ConfigManager::ON_OR_OFF_CHARLIST))
 			{
 				if(g_game.getPlayerByName((*it)))
-					output->putString("Online");
+                    output->addString("Online");
 				else
-					output->putString("Offline");
+                    output->addString("Offline");
 			}
 			else
-				output->putString(g_config.getString(ConfigManager::SERVER_NAME));
+                output->addString(g_config.getString(ConfigManager::SERVER_NAME));
 
-			output->put<uint32_t>(serverIp);
-			output->put<uint16_t>(g_config.getNumber(ConfigManager::GAME_PORT));
+            output->add<uint32_t>(serverIp);
+            output->add<uint16_t>(g_config.getNumber(ConfigManager::GAME_PORT));
 			
 			#ifdef __DARGHOS_PROXY__
-			output->putString((*it));
-			output->putString("Proxy 1 on " + g_config.getString(ConfigManager::SERVER_NAME));
-			output->put<uint32_t>(inet_addr("174.37.227.173"));
-			output->put<uint16_t>(8686);
+            output->addString((*it));
+            output->addString("Proxy 1 on " + g_config.getString(ConfigManager::SERVER_NAME));
+            output->add<uint32_t>(inet_addr("174.37.227.173"));
+            output->add<uint16_t>(8686);
 			#endif
 			
 			#else
 			if(version < it->second->getVersionMin() || version > it->second->getVersionMax())
 				continue;
 
-			output->putString(it->first);
-			output->putString(it->second->getName());
-			output->put<uint32_t>(it->second->getAddress());
-			output->put<uint16_t>(it->second->getPort());
+            output->addString(it->first);
+            output->addString(it->second->getName());
+            output->add<uint32_t>(it->second->getAddress());
+            output->add<uint16_t>(it->second->getPort());
 			#endif
 		}
 
 		//Add premium days
 		if(g_config.getBool(ConfigManager::FREE_PREMIUM))
-			output->put<uint16_t>(65535); //client displays free premium
+            output->add<uint16_t>(65535); //client displays free premium
 		else
 #ifdef __DARGHOS_CUSTOM__
 		{
 			if(account.premiumDays == 0)
-				output->put<uint16_t>(65535);
+                output->add<uint16_t>(65535);
 			else
-				output->put<uint16_t>(account.premiumDays);
+                output->add<uint16_t>(account.premiumDays);
 		}
 #else
-		output->put<uint16_t>(account.premiumDays);
+        output->add<uint16_t>(account.premiumDays);
 #endif
 			
 

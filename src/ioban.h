@@ -41,21 +41,42 @@ enum PlayerBan_t
 
 struct Ban
 {
-	Ban_t type;
-	ViolationAction_t action;
-	uint32_t id, value, param, added, adminId, reason;
-	int32_t expires;
-	std::string comment, statement;
+    Ban_t type;
+    ViolationAction_t action;
+    uint32_t id, value, param, added, adminId, reason;
+    int32_t expires;
+    std::string comment, statement;
 
-	Ban()
-	{
-		type = BAN_NONE;
-		action = ACTION_PLACEHOLDER;
-		id = value = param = added = adminId = reason = expires = 0;
-	}
+    Ban()
+    {
+        type = BAN_NONE;
+        action = ACTION_PLACEHOLDER;
+        id = value = param = added = adminId = reason = expires = 0;
+    }
 };
 
 typedef std::vector<Ban> BansVec;
+
+struct ConnectBlock {
+    ConnectBlock(uint64_t lastAttempt, uint64_t blockTime, uint32_t count)
+        : lastAttempt(lastAttempt), blockTime(blockTime), count(count) {}
+
+    uint64_t lastAttempt;
+    uint64_t blockTime;
+    uint32_t count;
+};
+
+typedef std::map<uint32_t, ConnectBlock> IpConnectMap;
+
+class CBan
+{
+    public:
+        bool acceptConnection(uint32_t clientip);
+
+    protected:
+        IpConnectMap ipConnectMap;
+        std::recursive_mutex lock;
+};
 
 class IOBan
 {

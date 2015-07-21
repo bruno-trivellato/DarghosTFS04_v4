@@ -19,13 +19,7 @@
 #define __PROTOCOL__
 #include "otsystem.h"
 
-class OutputMessage;
-typedef boost::shared_ptr<OutputMessage> OutputMessage_ptr;
-
-class Connection;
-typedef boost::shared_ptr<Connection> Connection_ptr;
-
-class NetworkMessage;
+#include "connection.h"
 
 class Protocol : boost::noncopyable
 {
@@ -59,7 +53,7 @@ class Protocol : boost::noncopyable
 
 	protected:
 		//use this function for autosend messages only
-		OutputMessage_ptr getOutputBuffer();
+        OutputMessage_ptr getOutputBuffer(int32_t size);
 
 		void setRawMessages(bool value) {m_rawMessages = value;}
 		void enableChecksum() {m_checksumEnabled = true;}
@@ -69,9 +63,9 @@ class Protocol : boost::noncopyable
 		void disableXTEAEncryption() {m_encryptionEnabled = false;}
 		void setXTEAKey(const uint32_t* key) {memcpy(&m_key, key, sizeof(uint32_t) * 4);}
 
-		void XTEA_encrypt(OutputMessage& msg);
-		bool XTEA_decrypt(NetworkMessage& msg);
-		bool RSA_decrypt(NetworkMessage& msg);
+        void XTEA_encrypt(OutputMessage& msg) const;
+        bool XTEA_decrypt(NetworkMessage& msg) const;
+        static bool RSA_decrypt(NetworkMessage& msg);
 
 		virtual void releaseProtocol();
 		virtual void deleteProtocolTask();

@@ -36,7 +36,6 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/items.cpp
 	${CMAKE_CURRENT_LIST_DIR}/textlogger.cpp
 	${CMAKE_CURRENT_LIST_DIR}/luascript.cpp
-	${CMAKE_CURRENT_LIST_DIR}/manager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/mailbox.cpp
 	${CMAKE_CURRENT_LIST_DIR}/map.cpp
 	${CMAKE_CURRENT_LIST_DIR}/monster.cpp
@@ -56,7 +55,8 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/protocollogin.cpp
 	${CMAKE_CURRENT_LIST_DIR}/protocolold.cpp
 	${CMAKE_CURRENT_LIST_DIR}/quests.cpp
-	${CMAKE_CURRENT_LIST_DIR}/raids.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/raids.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/rsa.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scheduler.cpp
 	${CMAKE_CURRENT_LIST_DIR}/scriptmanager.cpp
 	${CMAKE_CURRENT_LIST_DIR}/server.cpp

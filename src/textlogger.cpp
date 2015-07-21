@@ -17,8 +17,6 @@
 #include "otpch.h"
 #include "textlogger.h"
 
-#include "manager.h"
-
 #include "configmanager.h"
 #include "game.h"
 #include "tools.h"
@@ -150,9 +148,6 @@ std::streambuf::int_type OutputHandler::overflow(std::streambuf::int_type c/* = 
 
 		s.write(m_cache.c_str(), m_cache.size());
 		Logger::getInstance()->iFile(LOGFILE_OUTPUT, s.str(), false);
-
-		if(g_game.isRunning())
-            Manager::getInstance()->output(m_cache);
 	}
 
 	m_cache.clear();

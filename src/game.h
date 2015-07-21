@@ -644,11 +644,13 @@ class Game
 		Map* getMap() {return map;}
 		const Map* getMap() const {return map;}
 
-        bool isRunning() const {return services && services->isRunning();}
+        bool isRunning() const {return services && services->is_running();}
 		int32_t getLightHour() {return lightHour;}
 		void startDecay(Item* item);
 
         void updateStatus();
+
+        Map* map;
 
 	protected:
 		bool playerWhisper(Player* player, const std::string& text);
@@ -694,7 +696,6 @@ class Game
 		WorldType_t worldType;
 
 		ServiceManager* services;
-		Map* map;
 
 		uint32_t playersRecord;
         uint32_t checkLightEvent, checkCreatureEvent, checkDecayEvent, saveEvent, spoofEvent;

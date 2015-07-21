@@ -42,10 +42,12 @@ class ProtocolLogin : public Protocol
 #endif
 		}
 
-		enum {protocolId = 0x01};
-		enum {isSingleSocket = false};
-		enum {hasChecksum = true};
-		static const char* protocolName() {return "login protocol";}
+        enum {server_sends_first = false};
+        enum {protocol_identifier = 0x01};
+        enum {use_checksum = true};
+        static const char* protocol_name() {
+            return "login protocol";
+        }
 
 	protected:
 		virtual void deleteProtocolTask();

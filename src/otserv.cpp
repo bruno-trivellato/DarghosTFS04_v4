@@ -38,18 +38,13 @@
 #include "game.h"
 #include "chat.h"
 #include "tools.h"
-
-#include <openssl/rsa.h>
-#include <openssl/bn.h>
-#include <openssl/err.h>
-
+#include "rsa.h"
 #include "protocollogin.h"
 #include "protocolgame.h"
 #include "protocolold.h"
 #include "protocolhttp.h"
 
 #include "status.h"
-#include "manager.h"
 #ifdef __OTADMIN__
 #include "admin.h"
 #endif
@@ -91,8 +86,10 @@ inline void boost::throw_exception(std::exception const & e)
 }
 #endif
 
+Dispatcher g_dispatcher;
+Scheduler g_scheduler;
 Spoof g_spoof;
-RSA *g_RSA;
+RSA g_RSA;
 ConfigManager g_config;
 Game g_game;
 Chat g_chat;
@@ -197,7 +194,7 @@ void signalHandler(int32_t sig)
 	switch(sig)
 	{
 		case SIGHUP:
-			Dispatcher::getInstance().addTask(createTask(
+            g_dispatcher.addTask(createTask(
 				boost::bind(&Game::saveGameState, &g_game, false)));
 			break;
 
@@ -210,7 +207,7 @@ void signalHandler(int32_t sig)
 		//	break;
 
 		case SIGUSR1:
-			Dispatcher::getInstance().addTask(createTask(
+            g_dispatcher.addTask(createTask(
 				boost::bind(&Game::setGameState, &g_game, GAMESTATE_CLOSED)));
 			break;
 
@@ -219,17 +216,17 @@ void signalHandler(int32_t sig)
 			break;
 
 		case SIGCONT:
-			Dispatcher::getInstance().addTask(createTask(
+            g_dispatcher.addTask(createTask(
 				boost::bind(&Game::reloadInfo, &g_game, RELOAD_ALL, 0)));
 			break;
 
 		case SIGQUIT:
-			Dispatcher::getInstance().addTask(createTask(
+            g_dispatcher.addTask(createTask(
 				boost::bind(&Game::setGameState, &g_game, GAMESTATE_SHUTDOWN)));
 			break;
 
 		case SIGTERM:
-			Dispatcher::getInstance().addTask(createTask(
+            g_dispatcher.addTask(createTask(
 				boost::bind(&Game::shutdown, &g_game)));
 			break;
 
@@ -276,6 +273,10 @@ int main(int argc, char* argv[])
 
 	std::set_new_handler(allocationHandler);
 	ServiceManager servicer;
+
+    g_dispatcher.start();
+    g_scheduler.start();
+
 	g_config.startup();
 
 #ifdef __OTSERV_ALLOCATOR_STATS__
@@ -308,20 +309,35 @@ int main(int argc, char* argv[])
 #endif
 
 	OutputHandler::getInstance();
-	Dispatcher::getInstance().addTask(createTask(boost::bind(otserv, args, &servicer)));
+    g_dispatcher.addTask(createTask(boost::bind(otserv, args, &servicer)));
 
 	g_loaderSignal.wait(g_loaderUniqueLock);
-	if(servicer.isRunning())
+    if(servicer.is_running())
 	{
 		std::clog << ">> " << g_config.getString(ConfigManager::SERVER_NAME) << " server Online!" << std::endl << std::endl;
 		servicer.run();
 	}
-	else
+    else{
 		std::clog << ">> " << g_config.getString(ConfigManager::SERVER_NAME) << " server Offline! No services available..." << std::endl << std::endl;
+        g_dispatcher.addTask(createTask([]() {
+            g_dispatcher.addTask(createTask([]() {
+                g_scheduler.shutdown();
+                //g_databaseTasks.shutdown();
+                g_dispatcher.shutdown();
+            }));
+            g_scheduler.stop();
+            //g_databaseTasks.stop();
+            g_dispatcher.stop();
+        }));
+    }
 
 #ifdef __EXCEPTION_TRACER__
 	mainExceptionHandler.RemoveHandler();
 #endif
+
+    g_scheduler.join();
+    g_dispatcher.join();
+
 	return 0;
 }
 
@@ -490,92 +506,12 @@ void otserv(StringVec, ServiceManager* services)
 		boost::this_thread::sleep(boost::posix_time::seconds(30));
 	}
 
-    /*
-	std::clog << ">> Checking software version...";
-	if(xmlDocPtr doc = xmlParseFile(VERSION_CHECK))
-	{
-		xmlNodePtr p, root = xmlDocGetRootElement(doc);
-		if(!xmlStrcmp(root->name, (const xmlChar*)"versions"))
-		{
-			p = root->children->next;
-			if(!xmlStrcmp(p->name, (const xmlChar*)"entry"))
-			{
-				std::string version;
-				int32_t patch, build, timestamp;
-
-				bool tmp = false;
-				if(readXMLString(p, "version", version) && version != SOFTWARE_VERSION)
-					tmp = true;
-
-				if(readXMLInteger(p, "patch", patch) && patch > VERSION_PATCH)
-					tmp = true;
-
-				if(readXMLInteger(p, "build", build) && build > VERSION_BUILD)
-					tmp = true;
-
-				if(readXMLInteger(p, "timestamp", timestamp) && timestamp > VERSION_TIMESTAMP)
-					tmp = true;
-
-				if(tmp)
-				{
-					std::clog << " ";
-					if(version.find("_SVN") == std::string::npos)
-						std::clog << "running sub version, please mind it's unstable and only for testing purposes!";
-					else
-						std::clog << "outdated, please consider upgrading!";
-
-					std::clog << std::endl << "> Current version information - version: "
-						<< SOFTWARE_VERSION << ", patch: " << VERSION_PATCH
-						<< ", build: " << VERSION_BUILD << ", timestamp: " << VERSION_TIMESTAMP
-						<< "." << std::endl << "> Latest version information - version: "
-						<< version << ", patch: " << patch << ", build: " << build
-						<< ", timestamp: " << timestamp << "." << std::endl;
-					if(g_config.getBool(ConfigManager::CONFIRM_OUTDATED_VERSION) &&
-						asLowerCaseString(version).find("_svn") == std::string::npos)
-					{
-						std::clog << "Continue? (y/N)" << std::endl;
-						char buffer = getch();
-						if(buffer != 121 && buffer != 89)
-							startupErrorMessage("Aborted.");
-					}
-				}
-				else
-					std::clog << "up to date!" << std::endl;
-			}
-			else
-				std::clog << "failed checking - malformed entry." << std::endl;
-		}
-		else
-			std::clog << "failed checking - malformed file." << std::endl;
-
-		xmlFreeDoc(doc);
-	}
-	else
-		std::clog << "failed - could not parse remote file (are you connected to any network?)" << std::endl;
-
-    */
-
 	std::clog << ">> Loading RSA key" << std::endl;
 
-	const char* p("14299623962416399520070177382898895550795403345466153217470516082934737582776038882967213386204600674145392845853859217990626450972452084065728686565928113");
-	const char* q("7630979195970404721891201847792002125535401292779123937207447574596692788513647179235335529307251350570728407373705564708871762033017096809910315212884101");
-	const char* d("46730330223584118622160180015036832148732986808519344675210555262940258739805766860224610646919605860206328024326703361630109888417839241959507572247284807035235569619173792292786907845791904955103601652822519121908367187885509270025388641700821735345222087940578381210879116823013776808975766851829020659073");
-	const char* n("109120132967399429278860960508995541528237502902798129123468757937266291492576446330739696001110603907230888610072655818825358503429057592827629436413108566029093628212635953836686562675849720620786279431090218017681061521755056710823876476444260558147179707119674283982419152118103759076030616683978566631413");
-
-	g_RSA = RSA_new();
-	BN_dec2bn(&g_RSA->p, p);
-	BN_dec2bn(&g_RSA->q, q);
-	BN_dec2bn(&g_RSA->d, d);
-	BN_dec2bn(&g_RSA->n, n);
-	BN_dec2bn(&g_RSA->e, "65537");
-	// TODO: dmp1, dmq1, iqmp?
-
-	if(!RSA_check_key(g_RSA)) {
-		ERR_load_crypto_strings();
-		std::clog << "OpenSSL failed:" << std::endl;
-		startupErrorMessage(ERR_error_string(ERR_get_error(), NULL));
-	}
-
+    //set RSA key
+    const char* p("14299623962416399520070177382898895550795403345466153217470516082934737582776038882967213386204600674145392845853859217990626450972452084065728686565928113");
+    const char* q("7630979195970404721891201847792002125535401292779123937207447574596692788513647179235335529307251350570728407373705564708871762033017096809910315212884101");
+    g_RSA.setKey(p, q);
 
 	std::clog << ">> Starting SQL connection" << std::endl;
 
@@ -698,76 +634,9 @@ void otserv(StringVec, ServiceManager* services)
     g_spoof.onStartup();
 
 	std::clog << ">> Initializing game state and binding services..." << std::endl;
-	g_game.setGameState(GAMESTATE_INIT);
-	IPAddressList ipList;
+    g_game.setGameState(GAMESTATE_INIT);
 
-	std::string ip = g_config.getString(ConfigManager::IP);
-	if(asLowerCaseString(ip) == "auto")
-	{
-		// TODO: automatic shit
-	}
-
-	IPAddress m_ip;
-	if(ip.size())
-	{
-		std::clog << "> Global IP address: ";
-		uint32_t resolvedIp = inet_addr(ip.c_str());
-		if(resolvedIp == INADDR_NONE)
-		{
-			hostent* host = gethostbyname(ip.c_str());
-			if(!host)
-			{
-				std::clog << "..." << std::endl;
-				startupErrorMessage("Cannot resolve " + ip + "!");
-			}
-
-			resolvedIp = *(uint32_t*)host->h_addr;
-		}
-
-		serverIps.push_front(std::make_pair(resolvedIp, 0));
-		m_ip = boost::asio::ip::address_v4(swap_uint32(resolvedIp));
-
-		ipList.push_back(m_ip);
-		std::clog << m_ip.to_string() << std::endl;
-	}
-
-	ipList.push_back(boost::asio::ip::address_v4(INADDR_LOOPBACK));
-	bool owned = false;
-
-	char hostName[128];
-	if(!gethostname(hostName, 128))
-	{
-		if(hostent* host = gethostbyname(hostName))
-		{
-			std::clog << "> Local IP address(es): ";
-			for(uint8_t** addr = (uint8_t**)host->h_addr_list; addr[0]; addr++)
-			{
-				std::clog << (int32_t)(addr[0][0]) << "." << (int32_t)(addr[0][1]) << "."
-					<< (int32_t)(addr[0][2]) << "." << (int32_t)(addr[0][3]) << "\t";
-
-				ipList.push_back(boost::asio::ip::address_v4(*(uint32_t*)(*addr)));
-				if(ipList.back() == m_ip)
-					owned = true; // fuck yeah
-
-				serverIps.push_front(std::make_pair(*(uint32_t*)(*addr), 0x0000FFFF));
-			}
-
-			std::clog << std::endl;
-		}
-	}
-
-	serverIps.push_front(std::make_pair(LOCALHOST, 0xFFFFFFFF)); // we gotta check it!
-	if(ip.size() && !owned)
-	{
-		ipList.clear();
-		ipList.push_back(boost::asio::ip::address_v4(INADDR_ANY));
-	}
-
-	services->add<ProtocolStatus>(g_config.getNumber(ConfigManager::STATUS_PORT), ipList);
-	services->add<ProtocolManager>(g_config.getNumber(ConfigManager::MANAGER_PORT), ipList);
-	#ifdef __OTADMIN__
-	services->add<ProtocolAdmin>(g_config.getNumber(ConfigManager::ADMIN_PORT), ipList);
-	#endif
+    services->add<ProtocolStatus>(g_config.getNumber(ConfigManager::STATUS_PORT));
 
 	//services->add<ProtocolHTTP>(8080, ipList);
 	if(
@@ -778,17 +647,12 @@ void otserv(StringVec, ServiceManager* services)
 #endif
 	)
 	{
-		services->add<ProtocolLogin>(g_config.getNumber(ConfigManager::LOGIN_PORT), ipList);
-		services->add<ProtocolOldLogin>(g_config.getNumber(ConfigManager::LOGIN_PORT), ipList);
+        services->add<ProtocolLogin>(g_config.getNumber(ConfigManager::LOGIN_PORT));
+        services->add<ProtocolOldLogin>(g_config.getNumber(ConfigManager::LOGIN_PORT));
 	}
 
-	services->add<ProtocolGame>(g_config.getNumber(ConfigManager::GAME_PORT), ipList);
-	services->add<ProtocolOldGame>(g_config.getNumber(ConfigManager::LOGIN_PORT), ipList);
-	std::clog << "> Bound ports: ";
-
-	std::list<uint16_t> ports = services->getPorts();
-	for(std::list<uint16_t>::iterator it = ports.begin(); it != ports.end(); ++it)
-		std::clog << (*it) << "\t";
+    services->add<ProtocolGame>(g_config.getNumber(ConfigManager::GAME_PORT));
+    services->add<ProtocolOldGame>(g_config.getNumber(ConfigManager::LOGIN_PORT));
 
 	std::clog << std::endl << ">> Everything smells good, server is starting up..." << std::endl;
 	g_game.setGameState(g_config.getBool(ConfigManager::START_CLOSED) ? GAMESTATE_CLOSED : GAMESTATE_NORMAL);

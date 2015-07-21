@@ -240,6 +240,8 @@ class Map
 		const Tile* canWalkTo(const Creature* creature, const Position& pos);
 		Waypoints waypoints;
 
+        void clearSpectatorCache() {spectatorCache.clear();}
+
 	protected:
 		QTreeNode root;
 
@@ -248,7 +250,6 @@ class Map
 		StringVec descriptions;
 
 		SpectatorCache spectatorCache;
-		void clearSpectatorCache() {spectatorCache.clear();}
 
 		// Actually scans the map for spectators
 		void getSpectatorsInternal(SpectatorVec& list, const Position& centerPos, bool checkforduplicate,

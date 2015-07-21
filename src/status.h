@@ -33,7 +33,7 @@ enum RequestedInfo_t
 	REQUEST_SERVER_SOFTWARE_INFO	= 0x80
 };
 
-typedef std::map<uint32_t, int64_t> IpConnectMap;
+
 class ProtocolStatus : public Protocol
 {
 	public:
@@ -55,13 +55,16 @@ class ProtocolStatus : public Protocol
 #endif
 		}
 
-		enum {protocolId = 0xFF};
-		enum {isSingleSocket = false};
-		enum {hasChecksum = false};
-		static const char* protocolName() {return "status protocol";}
+        enum {server_sends_first = false};
+        enum {protocol_identifier = 0xFF};
+        enum {use_checksum = false};
+        static const char* protocol_name() {
+            return "status protocol";
+        }
+
 
 	protected:
-		static IpConnectMap ipConnectMap;
+        static std::map<uint32_t, int64_t> ipConnectMap;
 		virtual void deleteProtocolTask();
 };
 

@@ -336,6 +336,7 @@ class ConfigManager
             ON_LOOK_SHOW_CURRENT_PVP,
             PLAYERS_CAN_HEAL_MONSTERS,
 #endif
+            BIND_ONLY_GLOBAL_ADDRESS,
 			
 			LAST_BOOL_CONFIG /* this must be the last one */
 		};

@@ -20,6 +20,7 @@
 #include "outputmessage.h"
 #include "connection.h"
 #include "game.h"
+#include "rsa.h"
 
 extern Game g_game;
 
@@ -39,9 +40,8 @@ void ProtocolOld::disconnectClient(uint8_t error, const char* message)
 {
 	if(OutputMessage_ptr output = OutputMessagePool::getInstance()->getOutputMessage(this, false))
 	{
-		TRACK_MESSAGE(output);
-		output->put<char>(error);
-		output->putString(message);
+        output->addByte(error);
+        output->addString(message);
 		OutputMessagePool::getInstance()->send(output);
 	}
 
@@ -58,7 +58,7 @@ bool ProtocolOld::parseFirstPacket(NetworkMessage& msg)
 
 	/*uint16_t operatingSystem = */msg.get<uint16_t>();
 	uint16_t version = msg.get<uint16_t>();
-	msg.skip(12);
+    msg.skipBytes(12);
 	if(version <= 760)
 		disconnectClient(0x0A, CLIENT_VERSION_STRING);
 

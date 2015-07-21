@@ -77,7 +77,7 @@ void PlayerBot::placeOnMap(){
             }
         }
 
-        Scheduler::getInstance().addEvent(createSchedulerTask(m_record->m_lastAction->timestamp ,std::bind(&Spoof::checkBotIdResume, &g_spoof, getGUID())));
+        g_scheduler.addEvent(createSchedulerTask(m_record->m_lastAction->timestamp ,std::bind(&Spoof::checkBotIdResume, &g_spoof, getGUID())));
     }
 
     onLoad();
@@ -266,7 +266,7 @@ bool PlayerBot::syncPath(RecordAction* nextAction){
 
             SchedulerTask* task = createSchedulerTask(400, std::bind(&PlayerBot::unPause, this));
             if(m_walkTaskEventBot != 0){
-                Scheduler::getInstance().stopEvent(m_walkTaskEventBot);
+                g_scheduler.stopEvent(m_walkTaskEventBot);
                 m_walkTaskEventBot = 0;
             }
             m_walkTaskBot = task;

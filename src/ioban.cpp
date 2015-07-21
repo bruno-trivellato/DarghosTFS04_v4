@@ -21,6 +21,40 @@
 #include "database.h"
 #include "iologindata.h"
 
+bool CBan::acceptConnection(uint32_t clientip)
+{
+    std::lock_guard<std::recursive_mutex> lockClass(lock);
+
+    uint64_t currentTime = OTSYS_TIME();
+
+    auto it = ipConnectMap.find(clientip);
+    if (it == ipConnectMap.end()) {
+        ipConnectMap.emplace(clientip, ConnectBlock(currentTime, 0, 1));
+        return true;
+    }
+
+    ConnectBlock& connectBlock = it->second;
+    if (connectBlock.blockTime > currentTime) {
+        connectBlock.blockTime += 250;
+        return false;
+    }
+
+    int64_t timeDiff = currentTime - connectBlock.lastAttempt;
+    connectBlock.lastAttempt = currentTime;
+    if (timeDiff <= 5000) {
+        if (++connectBlock.count > 5) {
+            connectBlock.count = 0;
+            if (timeDiff <= 500) {
+                connectBlock.blockTime = currentTime + 3000;
+                return false;
+            }
+        }
+    } else {
+        connectBlock.count = 1;
+    }
+    return true;
+}
+
 bool IOBan::isIpBanished(uint32_t ip, uint32_t mask/* = 0xFFFFFFFF*/) const
 {
 	/*

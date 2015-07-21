@@ -86,6 +86,7 @@ bool ConfigManager::load()
 		if(m_confString[OUTPUT_LOG] == "")
 			m_confString[OUTPUT_LOG] = getGlobalString("outputLog", "");
 
+        m_confBool[BIND_ONLY_GLOBAL_ADDRESS] = getGlobalBool("bindOnlyGlobalAddress", false);
 		m_confBool[TRUNCATE_LOG] = getGlobalBool("truncateLogOnStartup", true);
 		#ifdef MULTI_SQL_DRIVERS
 		m_confString[SQL_TYPE] = getGlobalString("sqlType", "sqlite");

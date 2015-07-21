@@ -39,24 +39,22 @@ void ProtocolHTTP::disconnectClient()
 
 bool ProtocolHTTP::parseFirstPacket(NetworkMessage&)
 {
-	if(OutputMessage_ptr output = OutputMessagePool::getInstance()->getOutputMessage(this, false))
-	{
-		TRACK_MESSAGE(output);
+        if(OutputMessage_ptr output = OutputMessagePool::getInstance()->getOutputMessage(this, false)){
 
-		output->putString("HTTP/1.1 200 OK");
-		output->putString("Date: Fri, 27 Mar 2009 17:28.13 GMT\r\n");
-		output->putString("Server: The Forgotten Server httpd/0.4\r\n");
-		output->putString("Content-Location: filename.html\r\n");
+                output->addString("HTTP/1.1 200 OK");
+                output->addString("Date: Fri, 27 Mar 2009 17:28.13 GMT\r\n");
+                output->addString("Server: The Forgotten Server httpd/0.4\r\n");
+                output->addString("Content-Location: filename.html\r\n");
 		//Vary: negotiate\r\n
 		//TCN: choice\r\n
-		output->putString("Last-Modified: Fri, 27 Mar 2009 17:28.13 GMT\r\n");
-		output->putString("Accept-Ranges: bytes\r\n");
-		output->putString("Content-Length: 1234\r\n");
-		output->putString("Expires: Fri, 27 Mar 2009 17:28.13 GMT\r\n");
-		output->putString("Connection: close\r\n");
-		output->putString("Content-Type: text/html qs=0.7\r\n");
-		output->putString("\r\n");
-		output->putString("<html><head><title>The Forgotten Server httpd</title></head><body>It works (apache ripoff ;D)!</body></html>");
+                output->addString("Last-Modified: Fri, 27 Mar 2009 17:28.13 GMT\r\n");
+                output->addString("Accept-Ranges: bytes\r\n");
+                output->addString("Content-Length: 1234\r\n");
+                output->addString("Expires: Fri, 27 Mar 2009 17:28.13 GMT\r\n");
+                output->addString("Connection: close\r\n");
+                output->addString("Content-Type: text/html qs=0.7\r\n");
+                output->addString("\r\n");
+                output->addString("<html><head><title>The Forgotten Server httpd</title></head><body>It works (apache ripoff ;D)!</body></html>");
 
 		OutputMessagePool::getInstance()->send(output);
 	}

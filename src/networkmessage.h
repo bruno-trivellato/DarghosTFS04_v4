@@ -19,124 +19,167 @@
 #define __NETWORKMESSAGE__
 #include "otsystem.h"
 #include "const.h"
-
-enum SocketCode_t
-{
-	SOCKET_CODE_OK,
-	SOCKET_CODE_TIMEOUT,
-	SOCKET_CODE_ERROR,
-};
+#include "fileloader.h"
 
 class Item;
-class Position;
+class Creature;
+class Player;
+struct Position;
+class RSA;
 
 class NetworkMessage
 {
-	public:
-		NetworkMessage() {reset();}
-		virtual ~NetworkMessage() {}
+    public:
+        enum { header_length = 2 };
+        enum { crypto_length = 4 };
+        enum { xtea_multiple = 8 };
+        enum { max_body_length = NETWORKMESSAGE_MAXSIZE - header_length - crypto_length - xtea_multiple };
+        enum { max_protocol_body_length = max_body_length - 10 };
 
-		// resets the internal buffer to an empty message
-		void reset(uint16_t size = NETWORK_CRYPTOHEADER_SIZE)
-		{
-			m_size = 0;
-			m_position = size;
-		}
+        // constructor
+        NetworkMessage() {
+            reset();
+        }
 
-		// socket functions
-		SocketCode_t read(SOCKET socket, bool ignoreLength, int32_t timeout = NETWORK_RETRY_TIMEOUT);
-		SocketCode_t write(SOCKET socket, int32_t timeout = NETWORK_RETRY_TIMEOUT);
+        void reset() {
+            overrun = false;
+            length = 0;
+            position = 8;
+        }
 
-		// simple read functions for incoming message
-		template<typename T>
-		T get(bool peek = false)
-		{
-			T value = *(T*)(m_buffer + m_position);
-			if(peek)
-				return value;
+        // simply read functions for incoming message
+        uint8_t getByte() {
+            if (!canRead(1)) {
+                return 0;
+            }
 
-			m_position += sizeof(T);
-			return value;
-		}
+            return buffer[position++];
+        }
 
-		std::string getString(bool peek = false, uint16_t size = 0);
-		std::string getRaw(bool peek = false) {return getString(peek, m_size - m_position);}
+        uint8_t getPreviousByte() {
+            return buffer[--position];
+        }
 
-		// read for complex types
-		Position getPosition();
+        template<typename T>
+        T get() {
+            if (!canRead(sizeof(T))) {
+                return 0;
+            }
 
-		// skips count unknown/unused bytes in an incoming message
-		void skip(int32_t count) {m_position += count;}
+            T v = *reinterpret_cast<T*>(buffer + position);
+            position += sizeof(T);
+            return v;
+        }
 
-		// simple write functions for outgoing message
-		template<typename T>
-		void put(T value)
-		{
-			if(!hasSpace(sizeof(T)))
-				return;
+        std::string getString(uint16_t stringLen = 0);
+        Position getPosition();
 
-			*(T*)(m_buffer + m_position) = value;
-			m_position += sizeof(T);
-			m_size += sizeof(T);
-		}
+        // skips count unknown/unused bytes in an incoming message
+        void skipBytes(int count) {
+            position += count;
+        }
 
-		void putString(const std::string& value, bool addSize = true) {putString(value.c_str(), addSize);}
-		void putString(const char* value, bool addSize = true);
+        // simply write functions for outgoing message
+        void addByte(uint8_t value) {
+            if (!canAdd(1)) {
+                return;
+            }
+
+            buffer[position++] = value;
+            length++;
+        }
+
+        template<typename T>
+        void add(T value) {
+            if (!canAdd(sizeof(T))) {
+                return;
+            }
+
+            *reinterpret_cast<T*>(buffer + position) = value;
+            position += sizeof(T);
+            length += sizeof(T);
+        }
 
         void addBytes(const char* bytes, size_t size);
-		void putPadding(uint32_t amount);
+        void addPaddingBytes(size_t n);
 
-		// write for complex types
-		void putPosition(const Position& pos);
-		void putItem(uint16_t id, uint8_t count);
-		void putItem(const Item* item);
-		void putItemId(const Item* item);
-		void putItemId(uint16_t itemId);
+        void addString(const std::string& value);
+        void addString(const char* value);
 
-		int32_t decodeHeader();
+        void addDouble(double value, uint8_t precision = 2);
 
-		// message propeties functions
-	  	uint16_t size() const {return m_size;}
-		void setSize(uint16_t size) {m_size = size;}
+        // write functions for complex types
+        void addPosition(const Position& pos);
+        void addItem(uint16_t id, uint8_t count);
+        void addItem(const Item* item);
+        void addItemId(uint16_t itemId);
 
-		uint16_t position() const {return m_position;}
-		void setPosition(uint16_t position) {m_position = position;}
+        int32_t getLength() const {
+            return length;
+        }
 
-		char* buffer() {return (char*)&m_buffer[0];}
-		char* bodyBuffer()
-		{
-			m_position = NETWORK_HEADER_SIZE;
-			return (char*)&m_buffer[NETWORK_HEADER_SIZE];
-		}
+        void setLength(int32_t newLength) {
+            length = newLength;
+        }
+
+        int32_t getBufferPosition() const {
+            return position;
+        }
+
+        void setBufferPosition(int32_t pos) {
+            position = pos;
+        }
+
+        int32_t decodeHeader();
+
+        bool isOverrun() const {
+            return overrun;
+        }
+
+        uint8_t* getBuffer() {
+            return buffer;
+        }
+
+        const uint8_t* getBuffer() const {
+            return buffer;
+        }
+
+        uint8_t* getBodyBuffer() {
+            position = 2;
+            return buffer + header_length;
+        }
 
         void serializeBuffer(char* msg) {
 
-            int32_t oldPos = m_position;
+            int32_t oldPos = position;
             uint32_t pos = 0;
-            while(uint8_t byte = get<char>()){
-                msg[pos] = byte;
+            while(canRead(1)){
+                msg[pos] = buffer[position++];
                 pos++;
             }
 
-            m_position = oldPos;
+            overrun = false;
+            position = oldPos;
         }
-#ifdef __TRACK_NETWORK__
 
-		virtual void Track(std::string file, int32_t line, std::string func) {}
-		virtual void clearTrack() {}
-#endif
+    protected:
+        inline bool canAdd(size_t size) const {
+            return (size + position) < max_body_length;
+        }
 
-        // message data
-        uint8_t m_buffer[NETWORK_MAX_SIZE];
+        inline bool canRead(int32_t size) {
+            if ((position + size) > (length + 8) || size >= (NETWORKMESSAGE_MAXSIZE - position)) {
+                overrun = true;
+                return false;
+            }
+            return true;
+        }
 
-	protected:
-		// used to check available space while writing
-		inline bool hasSpace(int32_t size) {return (size + m_position < NETWORK_MAX_SIZE - 16);}
+        int32_t length;
+        int32_t position;
+        bool overrun;
 
-		// message propeties
-		uint16_t m_size;
-		uint16_t m_position;
+        uint8_t buffer[NETWORKMESSAGE_MAXSIZE];
 };
 
-typedef boost::shared_ptr<NetworkMessage> NetworkMessage_ptr;
 #endif

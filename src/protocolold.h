@@ -42,8 +42,12 @@ class ProtocolOld : public Protocol
 #endif
 		}
 
-		enum {isSingleSocket = false};
-		enum {hasChecksum = false};
+        enum {server_sends_first = false};
+        enum {protocol_identifier = 0x01};
+        enum {use_checksum = false};
+        static const char* protocol_name() {
+            return "old login protocol";
+        }
 
 	protected:
 		#ifdef __DEBUG_NET_DETAIL__
