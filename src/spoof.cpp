@@ -162,6 +162,7 @@ PlayerRecord::PlayerRecord(){
     m_pause = false;
     m_recordDuration = 0;
     m_lastAction = nullptr;
+    m_ignoredPackets = 0;
 }
 
 PlayerRecord::~PlayerRecord(){
@@ -266,6 +267,19 @@ void PlayerRecord::onDoAction(uint8_t action, NetworkMessage &msg){
     record.posx = m_player->getPosition().getX();
     record.posy = m_player->getPosition().getY();
     record.posz = m_player->getPosition().getZ();
+
+    if(m_actions.size() > 0){
+        RecordAction lastRecord = m_actions.back();
+        if(lastRecord.timestamp + 200 > record.timestamp && lastRecord.action == record.action && record.posx == lastRecord.posx && record.posy == lastRecord.posy && record.posz == lastRecord.posz && record.msgSize == lastRecord.msgSize && memcmp(record.msg, lastRecord.msg, record.msgSize) == 0){
+            m_ignoredPackets++;
+            return;
+        }
+    }
+
+    if(m_ignoredPackets >= 1000){
+        std::cout << "[Recording System] Ignored " << m_ignoredPackets << " repeated packets from " << m_player->getName() << std::endl;
+        m_ignoredPackets = 0;
+    }
 
     m_actions.push_back(record);
 

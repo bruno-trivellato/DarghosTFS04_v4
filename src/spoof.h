@@ -117,6 +117,7 @@ class PlayerRecord
         RecordAction* m_lastAction;
         RecordActionList::iterator m_iterator;
         uint64_t m_recordDuration;
+        uint64_t m_ignoredPackets;
 
     friend class IOLoginData;
     friend class Spoof;
