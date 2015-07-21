@@ -179,31 +179,10 @@ bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
         ss << IOLoginData::getInstance()->getMotdId() << "\n" << g_config.getString(ConfigManager::MOTD);
         output->addString(ss.str());
 
-		uint32_t serverIp = serverIps.front().first;
-		for(std::list<std::pair<uint32_t, uint32_t> >::iterator it = serverIps.begin(); it != serverIps.end(); ++it)
-		{
-			if((it->first & it->second) != (clientIp & it->second))
-				continue;
-
-			serverIp = it->first;
-			break;
-		}
-
-		//Add char list
-        output->addByte(0x64);
-		if(g_config.getBool(ConfigManager::ACCOUNT_MANAGER) && id != 1)
-		{
-            output->addByte(account.charList.size() + 1);
-            output->addString("Account Manager");
-            output->addString(g_config.getString(ConfigManager::SERVER_NAME));
-            output->add<uint32_t>(serverIp);
-            output->add<uint16_t>(g_config.getNumber(ConfigManager::GAME_PORT));
-		}
-		else
 		#ifndef __DARGHOS_PROXY__
-            output->addByte((uint8_t)account.charList.size());
+        output->addByte((uint8_t)account.charList.size());
         #else
-            output->addByte((uint8_t)account.charList.size() * 2);
+        output->addByte((uint8_t)account.charList.size() * 2);
         #endif
 
 		for(Characters::iterator it = account.charList.begin(); it != account.charList.end(); it++)
@@ -221,7 +200,7 @@ bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
 			else
                 output->addString(g_config.getString(ConfigManager::SERVER_NAME));
 
-            output->add<uint32_t>(serverIp);
+            output->add<uint32_t>(inet_addr(g_config.getString(ConfigManager::IP).c_str()));
             output->add<uint16_t>(g_config.getNumber(ConfigManager::GAME_PORT));
 			
 			#ifdef __DARGHOS_PROXY__
