@@ -22,7 +22,8 @@ find_package(GMP REQUIRED)
 find_package(MySQL)
 find_package(LuaJIT)
 find_package(ZLIB)
-find_package(OpenSSL)
+find_package(Threads)
+
 
 #if (LUAJIT_FOUND)
 #    add_definitions(-D__LUAJIT__)
@@ -35,20 +36,13 @@ add_definitions(-D__DARGHOS_CUSTOM__ -D__DARGHOS_EMERGENCY_DDOS__ -D__NO_CRYPTOP
 #add_definitions(-D__DARGHOS_CUSTOM__ -D__DARGHOS_EMERGENCY_DDOS__ -D__NO_CRYPTOPP__ -D__USE_MYSQL__ -D__WAR_SYSTEM__ -D__NO_CRYPTOPP__ -D__TFS_NEWEST_REVS_FIXIES__ -D__DARGHOS_PVP_SYSTEM__ -D__DARGHOS_CUSTOM_SPELLS__)
 
 set(Boost_USE_STATIC_LIBS   ON)
-set(Boost_USE_MULTITHREADED ON)
 
-find_package(Boost 1.42.0 COMPONENTS thread system filesystem regex REQUIRED)
+find_package(Boost 1.42.0 COMPONENTS system filesystem regex REQUIRED)
 
 include(src/CMakeLists.txt)
 add_executable(tfs ${tfs_SRC})
 
 include_directories(${LIBXML2_INCLUDE_DIR} ${MYSQL_INCLUDE_DIR} ${LUA_INCLUDE_DIR} ${Boost_INCLUDE_DIRS} ${GMP_INCLUDE_DIR} ${ZLIB_INCLUDE_DIRS} ${OPENSSL_INCLUDE_DIRS})
 
-find_package(Threads REQUIRED)
-
-if(WIN32 AND __COMPILER_GNU)
-    # mingw-gcc fails to link boost::thread
-    add_definitions(-DBOOST_THREAD_USE_LIB)
-endif(WIN32 AND __COMPILER_GNU)
 
 target_link_libraries(tfs ${LIBXML2_LIBRARIES} ${MYSQL_CLIENT_LIBS} ${LUA_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${Boost_LIBRARIES} ${GMP_LIBRARIES} ${ZLIB_LIBRARIES} ${OPENSSL_LIBRARIES})

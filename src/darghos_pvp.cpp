@@ -192,7 +192,7 @@ void Battleground::finish()
 void Battleground::finish(Bg_Teams_t teamWinner)
 {
 	status = FINISHED;
-	Scheduler::getInstance().stopEvent(endEvent);
+    g_scheduler.stopEvent(endEvent);
 
 	for(BgTeamsMap::iterator it = teamsMap.begin(); it != teamsMap.end(); it++)
 	{
@@ -211,7 +211,7 @@ void Battleground::finish(Bg_Teams_t teamWinner)
 			player->setPause(true);
 			player->sendPvpChannelMessage("Você será levado ao lugar em que estava em 5 segundos...");
 
-			Scheduler::getInstance().addEvent(createSchedulerTask(1000 * 5,
+            g_scheduler.addEvent(createSchedulerTask(1000 * 5,
 				boost::bind(&Battleground::kickPlayer, this, player, true)));
 
 			time_t timeInBg = time(NULL) - it_players->second.join_in;
@@ -269,7 +269,7 @@ bool Battleground::buildTeams()
 			team = ((i & 1) == 1) ? BATTLEGROUND_TEAM_TWO : BATTLEGROUND_TEAM_ONE;
 
 		putInTeam((*it), team);
-        Scheduler::getInstance().addEvent(createSchedulerTask(1000 * 4,
+        g_scheduler.addEvent(createSchedulerTask(1000 * 4,
 			boost::bind(&Battleground::callPlayer, this, (*it)->getID())));
 
         waitlist.erase(it);
@@ -277,7 +277,7 @@ bool Battleground::buildTeams()
 
 	g_globalEvents->execute(GLOBALEVENT_BATTLEGROUND_PREPARE);
 
-	Scheduler::getInstance().addEvent(createSchedulerTask((1000 * 60 * 2) + (1000 * 5),
+    g_scheduler.addEvent(createSchedulerTask((1000 * 60 * 2) + (1000 * 5),
 		boost::bind(&Battleground::start, this)));
 	return true;
 }
@@ -323,7 +323,7 @@ void Battleground::start()
 	for(GlobalEventMap::iterator it = events.begin(); it != events.end(); ++it)
 		it->second->executeOnBattlegroundStart(notJoin);
 
-	endEvent = Scheduler::getInstance().addEvent(createSchedulerTask(duration,
+    endEvent = g_scheduler.addEvent(createSchedulerTask(duration,
 		boost::bind(&Battleground::finish, this)));
 }
 
@@ -414,7 +414,7 @@ BattlegrondRetValue Battleground::onPlayerJoin(Player* player)
 		waitlist.push_back(player);
 		buildTeams();
 
-        Scheduler::getInstance().addEvent(createSchedulerTask(1000 * 60 * 60 * 2,
+        g_scheduler.addEvent(createSchedulerTask(1000 * 60 * 60 * 2,
             boost::bind(&Battleground::removeIdleWaitlistPlayer, this, player->getID())));
 
 		return BATTLEGROUND_PUT_IN_WAITLIST;
@@ -623,7 +623,7 @@ void Battleground::onPlayerDeath(Player* player, DeathList deathList)
 		{
 			status = FINISHED;
 
-			Scheduler::getInstance().addEvent(createSchedulerTask(1000,
+            g_scheduler.addEvent(createSchedulerTask(1000,
 				boost::bind(&Battleground::finish, this, lastDmg->getBattlegroundTeam())));
 		}*/
 	}
