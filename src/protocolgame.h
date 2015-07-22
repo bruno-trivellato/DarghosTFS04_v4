@@ -34,8 +34,7 @@ class Container;
 class Tile;
 class Connection;
 class Quest;
-
-struct RecordAction;
+class RecordAction;
 
 typedef boost::shared_ptr<NetworkMessage> NetworkMessage_ptr;
 class ProtocolGame : public Protocol

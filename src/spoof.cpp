@@ -161,9 +161,9 @@ PlayerRecord::PlayerRecord(){
 }
 
 PlayerRecord::~PlayerRecord(){
-    /*for(RecordAction action : m_actions){
-        delete action;
-    }*/
+    for(RecordAction action : m_actions){
+        action._free();
+    }
 
     m_actions.clear();
 }
@@ -309,6 +309,8 @@ void PlayerRecord::onLogout(){
         m_data.addType<uint16_t>(record.posz);
 
         m_data.addType<uint8_t>(RecordAttr_End);
+
+        record._free();
     }
 
     m_actions.clear();

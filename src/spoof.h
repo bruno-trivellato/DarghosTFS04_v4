@@ -1,37 +1,38 @@
 #ifndef FS_SPOOF_H
 #define FS_SPOOF_H
 
-#include "scheduler.h"
 #include "enums.h"
 #include "fileloader.h"
-#include "networkmessage.h"
-
-#include <unordered_map>
-#include <list>
-#include <vector>
-#include <deque>
 
 class PlayerBot;
 class Player;
 class PlayerRecord;
+class NetworkMessage;
 
-struct RecordAction{
-    RecordAction(){
-        action = 0;
-        timestamp = 0;
-        msgSize = 0;
-        posx = 0;
-        posy = 0;
-        posz = 0;
-    }
+class RecordAction{
 
-    uint8_t action;
-    uint64_t timestamp;
-    uint32_t msgSize;
-    char* msg;
-    uint32_t posx;
-    uint32_t posy;
-    uint16_t posz;
+    public:
+        RecordAction(){
+            action = 0;
+            timestamp = 0;
+            msgSize = 0;
+            msg = nullptr;
+            posx = 0;
+            posy = 0;
+            posz = 0;
+        }
+
+        void _free(){
+            free(msg);
+        }
+
+        uint8_t action;
+        uint64_t timestamp;
+        uint32_t msgSize;
+        char* msg;
+        uint32_t posx;
+        uint32_t posy;
+        uint16_t posz;
 };
 
 struct HourInfo{

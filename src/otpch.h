@@ -35,6 +35,10 @@
 
 #include <mutex>
 #include <thread>
+#include <unordered_map>
+#include <list>
+#include <vector>
+#include <deque>
 
 //otserv
 #include "thing.h"
