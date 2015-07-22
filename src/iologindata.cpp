@@ -431,12 +431,16 @@ bool IOLoginData::loadRecordPlayer(PlayerRecord* record, PlayerBot* bot){
             }
 
             if(player_id == 0){
-                std::cout << "All bots found for record #" << record->m_id << " is already online." << std::endl;
+                //std::cout << "All bots found for record #" << record->m_id << " is already online." << std::endl;
+                delete record;
+                record = nullptr;
                 return false;
             }
         }
         else{
-            std::cout << "Impossible to find a bot for record #" << record->m_id << std::endl;
+            //std::cout << "Impossible to find a bot for record #" << record->m_id << std::endl;
+            delete record;
+            record = nullptr;
             return false;
         }
 
