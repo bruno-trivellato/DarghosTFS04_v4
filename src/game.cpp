@@ -127,8 +127,8 @@ void Game::start(ServiceManager* servicer)
 		boost::bind(&Game::checkLight, this)));
     checkWarsEvent = g_scheduler.addEvent(createSchedulerTask(EVENT_WARSINTERVAL,
 		boost::bind(&Game::checkWars, this)));
-    /*spoofEvent = g_scheduler.addEvent(createSchedulerTask(1000,
-        boost::bind(&Game::checkSpoof, this)));*/
+    spoofEvent = g_scheduler.addEvent(createSchedulerTask(1000,
+        boost::bind(&Game::checkSpoof, this)));
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
     std::clog << "[DDOS EMERGENCY] Enabled" << std::endl;
@@ -5214,8 +5214,8 @@ void Game::checkWars()
 void Game::checkSpoof()
 {
     g_spoof.onThink();
-    //spoofEvent = g_scheduler.addEvent(createSchedulerTask(1000,
-        //boost::bind(&Game::checkSpoof, this)));
+    spoofEvent = g_scheduler.addEvent(createSchedulerTask(1000,
+        boost::bind(&Game::checkSpoof, this)));
 }
 
 void Game::getWorldLightInfo(LightInfo& lightInfo)

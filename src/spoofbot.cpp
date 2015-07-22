@@ -83,6 +83,8 @@ void PlayerBot::placeOnMap(){
     onLoad();
 
     g_spoof.m_players.push_back(getGUID());
+    std::pair<PlayerRecord*, uint32_t> pair(m_record, getGUID());
+    g_spoof.m_records.insert(pair);
     g_spoof.LOGINS_COUNT++;
 }
 

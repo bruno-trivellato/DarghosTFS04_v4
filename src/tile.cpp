@@ -36,6 +36,7 @@
 
 #include "game.h"
 #include "configmanager.h"
+#include "house.h"
 
 extern Actions* g_actions;
 extern ConfigManager g_config;
@@ -652,10 +653,12 @@ ReturnValue Tile::__queryAdd(int32_t, const Thing* thing, uint32_t,
                     for(ItemVector::const_iterator it = items->begin(); it != items->end(); ++it)
                     {
                         const ItemType& iType = Item::items[(*it)->getID()];
-                        if(iType.blockSolid && iType.isDoor()){
+                        Item* item = const_cast<Item*>(*it);
+                        Door* door = item->getDoor();
+                        if(iType.blockSolid && iType.blockProjectile && iType.isDoor() && door && !door->getHouse()){
                             Player* player = const_cast<Player*>(creature->getPlayer());
                             if(player->getBot()){
-                                g_actions->useItemEx(player, player->getPosition(), player->getPosition(), 0, const_cast<Item*>(*it), false);
+                                g_actions->useItemEx(player, player->getPosition(), player->getPosition(), 0, item, false);
                             }
                         }
                         else if((*it)->isBlocking(creature) && (!iType.moveable || ((*it)->isLoadedFromMap() &&

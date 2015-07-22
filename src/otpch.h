@@ -15,10 +15,6 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ////////////////////////////////////////////////////////////////////////
 
-#ifdef __OTPCH__
-#error "Precompiled header should be included only once."
-#endif
-
 #define __OTPCH__
 #if defined WINDOWS
 #include <boost/asio/detail/socket_types.hpp>

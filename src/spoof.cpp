@@ -119,11 +119,6 @@ void Spoof::loadBot(){
         if(g_spoof.CURRENT_RECORD == 1)
             IOLoginData::getInstance()->loadRecordPlayer(record, bot);
     }
-
-    if(record && bot){
-        std::pair<PlayerRecord*, uint32_t> pair(record, bot->getGUID());
-        m_records.insert(pair);
-    }
 }
 
 void Spoof::checkBotIdResume(uint32_t player_id){
