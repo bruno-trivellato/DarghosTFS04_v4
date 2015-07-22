@@ -247,15 +247,18 @@ std::string Player::getDescription(int32_t lookDistance) const
 #ifdef __DARGHOS_CUSTOM__
 		s << " (";
 
-		if(isPvpEnabled())
-			s << "PvP ON, ";
-		else
-			s << "PvP OFF, ";
+        if(g_config.getBool(ConfigManager::ON_LOOK_SHOW_CURRENT_PVP)){
+            if(isPvpEnabled())
+                s << "PvP ON, ";
+            else
+                s << "PvP OFF, ";
+        }
 
 		if(!hasCustomFlag(PlayerCustomFlag_HideLevel))
 		    s << "level " << level;
 #ifdef __DARGHOS_PVP_SYSTEM__
-		s << ", battleground rating" << battlegroundRating;
+        if(isInBattleground())
+            s << ", battleground rating " << battlegroundRating;
 #endif
 		s << ")";
 #else

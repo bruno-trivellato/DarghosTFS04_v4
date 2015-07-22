@@ -299,9 +299,7 @@ void PlayerRecord::onLogout(){
 
         m_data.addType<uint8_t>(RecordAttr_Data);
 
-        for(uint8_t i = 0; i < record.msgSize; i++){
-            m_data.addType<uint8_t>(record.msg[i]);
-        }
+        m_data.addBytes(record.msg, record.msgSize);
 
         m_data.addType<uint8_t>(RecordAttr_Move);
         m_data.addType<uint32_t>(record.posx);

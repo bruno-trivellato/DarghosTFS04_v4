@@ -398,6 +398,22 @@ class PropWriteStream
 			size += strLen;
 		}
 
+        inline void addBytes(const char* bytes, uint32_t _size){
+            if((bufferSize - size) < _size)
+            {
+                bufferSize += _size + 0x1F;
+                char* tmp = (char*)realloc(buffer, bufferSize);
+
+                if(tmp != NULL)
+                    buffer = tmp;
+                else
+                    std::clog << "[Error - PropWriteStream::addType] Failed to allocate memory" << std::endl;
+            }
+
+            memcpy(&buffer[size], bytes, _size);
+            size += _size;
+        }
+
 
 	protected:
 		char* buffer;
