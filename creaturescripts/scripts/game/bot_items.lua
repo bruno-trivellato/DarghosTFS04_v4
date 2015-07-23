@@ -183,7 +183,7 @@ local _ITEMS = {
 					items = { "zaoan legs", "crown legs", "knight legs" }
 				},				
 			},
-			[CONST_SLOT_LEFT] = {
+			[CONST_SLOT_FEET] = {
 				{
 					level_from = 0, level_to = 50,
 					items = { "leather boots" }
@@ -192,7 +192,7 @@ local _ITEMS = {
 					items = { "boots of haste", "leather boots" }
 				}
 			},
-			[CONST_SLOT_LEFT] = 
+			[CONST_SLOT_LEFT] = {
 				{
 					skillCheck = function(skillid) return skillid == SKILL_SWORD end,
 					list = {
@@ -392,8 +392,23 @@ local _ITEMS = {
 function parseItemsNodeByLevel(cid, node)
 
 	for _,v in pairs(node) do
-		if(getPlayerLevel(cid) >= v.level_from and getPlayerLevel(cid) <= v.level_to) then
-			return v.items
+		if(v.vocationCheck ~= nil) then
+			if(v.vocationCheck(cid)) then
+				return parseItemsNodeByLevel(cid, v.list)
+			end
+		elseif(v.skillCheck ~= nil)) then
+			if(v.skillCheck(getPlayerHigherSkill(cid)) then
+				return parseItemsNodeByLevel(cid, v.list)
+			end
+		else
+			
+			if(v.level_from ~= nil and v.level_to ~= nil) then
+				if(getPlayerLevel(cid) >= v.level_from and getPlayerLevel(cid) <= v.level_to) then
+					return v.items
+				end		
+			else
+				var_dump(v)
+			end	
 		end
 	end
 
@@ -403,7 +418,7 @@ function parseItemsNodeByLevel(cid, node)
 end
 
 function randomizeItemList(items)
-	local rand = math.random(1, table.count(items))
+	local rand = math.random(1, #items)
 	local itemId = getItemIdByName(items[rand])
 	if(itemId ~= 0) then
 		return itemId
@@ -433,21 +448,13 @@ end
 
 function doPlayerSwapItem(cid, _slot, node)
 
-	if(node.sets[_slot].vocationCheck ~= nil) then
-		if(node.sets[_slot].vocationCheck(cid)) then
-			node = node.sets[_slot].list
-		end
-	elseif(node.sets[_slot].skillCheck ~= nil)
-		if(node.sets[_slot].vocationCheck(getPlayerHigherSkill(cid))) then
-			node = node.sets[_slot].list
-		end		
-	end
+	local target = node.sets[_slot]
 
-	local slotItems = parseItemsNodeByLevel(cid, node.sets[_slot])
+	local slotItems = parseItemsNodeByLevel(cid, target)
 
 	local slot = getPlayerSlotItem(cid, _slot)
-	if(not slot or not isInArray(slotItems, getItemNameById(slot.itemid))) then
-		if(slot) then
+	if(slot.uid == 0 or not isInArray(slotItems, getItemNameById(slot.itemid))) then
+		if(slot.uid ~= 0) then
 			doRemoveItem(slot.uid)
 		end
 
@@ -465,7 +472,7 @@ function onLogin(cid)
 	if(doPlayerIsBot(cid)) then
 
 		for _, node in pairs(_ITEMS) do
-			if(node.checkFunction(cid)) then
+			if(node.vocationCheck(cid)) then
 
 				local slots = { CONST_SLOT_HEAD, CONST_SLOT_ARMOR, CONST_SLOT_LEGS, CONST_SLOT_FEET, CONST_SLOT_LEFT, CONST_SLOT_RIGHT }
 
@@ -479,11 +486,11 @@ function onLogin(cid)
 				end
 
 				local slot = getPlayerSlotItem(cid, CONST_SLOT_BACKPACK)
-				if(slot) then
+				if(slot.uid ~= 0) then
 					doRemoveItem(slot.uid)
 				end
 
-				local container_id = node.sets[CONST_SLOT_BACKPACK].ids[math.random(1, table.count(node.sets[CONST_SLOT_BACKPACK].ids))]
+				local container_id = node.sets[CONST_SLOT_BACKPACK].ids[math.random(1, #node.sets[CONST_SLOT_BACKPACK].ids)]
 				local item = doCreateItemEx(container_id, 1)
 
 				for k, name in pairs(node.sets[CONST_SLOT_BACKPACK].items) do
