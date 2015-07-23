@@ -130,9 +130,7 @@ local _ITEMS = {
 			},
 			[CONST_SLOT_BACKPACK] = {
 				ids = { 1988, 2002, 2004, 2001, 1999, 2000, 2003 },
-				items = {
-					{ "rope", "shovel" }
-				},
+				items = { "rope", "shovel" },
 				supply = {
 					{
 						level_from = 0, level_to = 49,
@@ -272,9 +270,7 @@ local _ITEMS = {
 			},
 			[CONST_SLOT_BACKPACK] = {
 				ids = { 1988, 2002, 2004, 2001, 1999, 2000, 2003 },
-				items = {
-					{ "rope", "shovel" }
-				},
+				items = { "rope", "shovel" },
 				supply = {
 					{
 						level_from = 0, level_to = 29,
@@ -366,9 +362,7 @@ local _ITEMS = {
 			},
 			[CONST_SLOT_BACKPACK] = {
 				ids = { 1988, 2002, 2004, 2001, 1999, 2000, 2003 },
-				items = {
-					{ "rope", "shovel" }
-				},
+				items =  { "rope", "shovel" },
 				supply = {
 					{
 						level_from = 0, level_to = 29,
@@ -396,8 +390,8 @@ function parseItemsNodeByLevel(cid, node)
 			if(v.vocationCheck(cid)) then
 				return parseItemsNodeByLevel(cid, v.list)
 			end
-		elseif(v.skillCheck ~= nil)) then
-			if(v.skillCheck(getPlayerHigherSkill(cid)) then
+		elseif(v.skillCheck ~= nil) then
+			if(v.skillCheck(getPlayerHigherSkill(cid))) then
 				return parseItemsNodeByLevel(cid, v.list)
 			end
 		else
@@ -494,19 +488,26 @@ function onLogin(cid)
 				local item = doCreateItemEx(container_id, 1)
 
 				for k, name in pairs(node.sets[CONST_SLOT_BACKPACK].items) do
-					doAddContainerItem(item.uid, getItemIdByName(name))
+					if(not getItemIdByName(name)) then
+						var_dump(name)
+					end
+
+					doAddContainerItem(item, getItemIdByName(name))
 				end
 
-				local insideContainer = parseItemsNodeByLevel(player, node.sets[CONST_SLOT_BACKPACK].supply)
+				local insideContainer = parseItemsNodeByLevel(cid, node.sets[CONST_SLOT_BACKPACK].supply)
 
 				for k, name in pairs(insideContainer) do
-					doAddContainerItem(item.uid, getItemIdByName(name))
+					if(not getItemIdByName(name)) then
+						var_dump(name)
+					end
+					doAddContainerItem(item, getItemIdByName(name))
 				end
 
-				local ret = doPlayerAddItemEx(cid, item.uid, false, CONST_SLOT_BACKPACK)
+				local ret = doPlayerAddItemEx(cid, item, false, CONST_SLOT_BACKPACK)
 
 				if(ret ~= RETURNVALUE_NOERROR) then
-					error("onLogin() cannot add container to bot free cap " .. getPlayerFreeCap(cid) .. "/" .. getItemWeight(item.uid))
+					error("onLogin() cannot add container to bot free cap " .. getPlayerFreeCap(cid) .. "/" .. getItemWeight(item))
 				end		
 			end
 		end	
