@@ -83,6 +83,10 @@ function onLogin(cid)
 	end
 	]]
 
+	if not doPlayerIsVip(cid) then
+		doPlayerAddVipDays(cid, 30)
+	end
+
 	setStagesOnLogin(cid)
 
 	local itemShop = itemShop:new()
