@@ -11057,7 +11057,7 @@ int32_t LuaInterface::luaBattlegroundOpen(lua_State* L)
 int32_t LuaInterface::luaGetBattlegroundStatus(lua_State* L)
 {
 	//getBattlegroundStatus()
-    lua_pushnumber(L, g_battleground.Status::());
+    lua_pushnumber(L, g_battleground.getStatus());
 	return 1;
 }
 
