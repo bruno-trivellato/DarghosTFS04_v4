@@ -8,10 +8,23 @@ setConditionFormula(condition, -0.8, 0, -0.8, 0)
 setCombatCondition(combat, condition)
 
 function onCastSpell(cid, var)
-        if(not doCombat(cid, combat, var)) then
-                return false
-        end
+	
+	local target = getSpellTargetCreature(var)
+	if(not target) then
+		error("Invalid target: " .. table.show(var))
+		return false
+	end
+	
+	if(doPlayerIsFlagCarrier(target)) then
+		doPlayerSendCancel(cid, "Você não pode usar magias que alterem a velocidade de quem está carregando a bandeira.")
+		doSendMagicEffect(getPlayerPosition(cid), CONST_ME_POFF)
+		return false
+	end	
+	
+	if(not doCombat(cid, combat, var)) then
+		return false
+	end
 
-        doSendMagicEffect(getThingPosition(cid), CONST_ME_MAGIC_GREEN)
-        return true
+	doSendMagicEffect(getThingPosition(cid), CONST_ME_MAGIC_GREEN)
+	return true
 end
