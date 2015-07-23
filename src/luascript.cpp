@@ -5588,11 +5588,8 @@ int32_t LuaInterface::luaGetWorldCreatures(lua_State* L)
 int32_t LuaInterface::luaGetWorldUpTime(lua_State* L)
 {
 	//getWorldUpTime()
-	uint32_t uptime = 0;
-	if(Status* status = Status::getInstance())
-		uptime = status->getUptime();
-
-	lua_pushnumber(L, uptime);
+    uint64_t uptime = (OTSYS_TIME() - Status::start) / 1000;
+    lua_pushnumber(L, uptime);
 	return 1;
 }
 
@@ -11060,7 +11057,7 @@ int32_t LuaInterface::luaBattlegroundOpen(lua_State* L)
 int32_t LuaInterface::luaGetBattlegroundStatus(lua_State* L)
 {
 	//getBattlegroundStatus()
-	lua_pushnumber(L, g_battleground.getStatus());
+    lua_pushnumber(L, g_battleground.Status::());
 	return 1;
 }
 

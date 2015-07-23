@@ -6888,7 +6888,5 @@ void Game::updateStatus()
     updateStatusEvent = g_scheduler.addEvent(createSchedulerTask(1000 * 60,
         boost::bind(&Game::updateStatus, this)));
 
-    if(Status* status = Status::getInstance()){
-        status->updateDb();
-    }
+    Status::updateDb();
 }

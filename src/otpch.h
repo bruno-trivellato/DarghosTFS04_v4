@@ -42,3 +42,5 @@
 
 //otserv
 #include "thing.h"
+
+#include "ext/pugixml.hpp"

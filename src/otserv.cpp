@@ -636,7 +636,7 @@ void otserv(StringVec, ServiceManager* services)
 	std::clog << ">> Initializing game state and binding services..." << std::endl;
     g_game.setGameState(GAMESTATE_INIT);
 
-    services->add<ProtocolStatus>(g_config.getNumber(ConfigManager::STATUS_PORT));
+    services->add<Status>(g_config.getNumber(ConfigManager::STATUS_PORT));
 
 	//services->add<ProtocolHTTP>(8080, ipList);
 	if(
