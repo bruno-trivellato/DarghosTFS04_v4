@@ -465,6 +465,25 @@ function onLogin(cid)
 
 	if(doPlayerIsBot(cid)) then
 
+		local outfit = getCreatureOutfit(cid)
+
+		if(outfit.lookHead == 0 and outfit.lookBody = 0 and outfit.lookLegs = 0 and outfit.lookFeet = 0) then
+			local result = db.getResult("SELECT `lookhead`, `lookbody`, `looklegs`, `lookfeet` FROM `players` WHERE `lookbody` != 0 AND `lookhead` != 0 AND `looklegs` != 0 AND `lookfeet` != 0 ORDER BY RAND() LIMIT 1;")
+			
+			if(result:getID() ~= -1) then
+				outfit.lookHead = result:getDataInt("lookhead")
+				outfit.lookBody = result:getDataInt("lookbody")
+				outfit.lookLegs = result:getDataInt("looklegs")
+				outfit.lookFeet = result:getDataInt("lookfeet")
+
+				doSetCreatureOutfit(cid, outfit)
+			else
+				print("[Warning] Cannot find outfit for bot.")
+			end
+			
+			result:free()			
+		end
+
 		for _, node in pairs(_ITEMS) do
 			if(node.vocationCheck(cid)) then
 
