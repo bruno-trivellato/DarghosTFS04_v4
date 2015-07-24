@@ -467,7 +467,7 @@ function onLogin(cid)
 
 		local outfit = getCreatureOutfit(cid)
 
-		if(outfit.lookHead == 0 and outfit.lookBody = 0 and outfit.lookLegs = 0 and outfit.lookFeet = 0) then
+		if(outfit.lookHead == 0 and outfit.lookBody == 0 and outfit.lookLegs == 0 and outfit.lookFeet == 0) then
 			local result = db.getResult("SELECT `lookhead`, `lookbody`, `looklegs`, `lookfeet` FROM `players` WHERE `lookbody` != 0 AND `lookhead` != 0 AND `looklegs` != 0 AND `lookfeet` != 0 ORDER BY RAND() LIMIT 1;")
 			
 			if(result:getID() ~= -1) then
