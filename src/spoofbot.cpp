@@ -114,7 +114,7 @@ void PlayerBot::onAttacked(Creature* creature){
     if(creature->getPlayer() == getPlayer())
         return;
 
-    if(creature->getName() == "Trainer")
+    if(creature->getName() == "Hitdoll")
         return;
 
     if(!creature->getMaster())
@@ -403,7 +403,10 @@ bool PlayerBot::checkHeal(){
                 spell = "exura";
         }
         else if(isKnight(getVocationId())){
-            spell = "exura ico";
+            if(level >= 30)
+                spell = "exana mort";
+            else
+                spell = "exura";
         }
 
         g_game.playerSay(getID(), 0, SPEAK_SAY, "", spell);
