@@ -193,8 +193,9 @@ function D_CustomNpcModules.allBless(cid, message, keywords, parameters, node)
 			price = (price + ((math.min(parameters.endLevel, getPlayerLevel(cid)) - parameters.startLevel) * parameters.levelCost))
 		end
 
-		local aditional = parameters.aditionalCostMultipler or 1
-		price = (price * 5) * aditional
+		if isPlayerPremiumCallback(cid) then
+			price = price * 0.8
+		end
 
 		if(getPlayerBlessing(cid, 1) or getPlayerBlessing(cid, 2) or getPlayerBlessing(cid, 3) or getPlayerBlessing(cid, 4) or getPlayerBlessing(cid, 5)) then
 			npcHandler:say("You already have one or more blessings. I can only bless who are not blessed by any god.", cid)
@@ -230,7 +231,12 @@ function D_CustomNpcModules.getBlessPrice(cid, params)
 	end
 
 	local levels = math.max(params.startLevel, math.min(params.endLevel, getPlayerLevel(cid))) - params.startLevel
-	return params.baseCost + (levels * params.levelCost)
+	local ret = params.baseCost + (levels * params.levelCost)
+	if isPlayerPremiumCallback(cid) then
+		ret = ret * 0.8
+	end
+
+	return ret
 end
 
 function D_CustomNpcModules.offerBlessing(cid, message, keywords, parameters, node)
@@ -256,7 +262,7 @@ function D_CustomNpcModules.offerBlessing(cid, message, keywords, parameters, no
 		npcHandler:say('You need know that the twist of fate bless will NOT reduce your death penalties. This special bless will protect you from LOSE your blessings if you die against players. The twist of fate will cost you ' .. D_CustomNpcModules.getBlessPrice(cid, blessParams) .. ' gold coins. You want this?', cid)
 	elseif(isall) then
 		func = D_CustomNpcModules.allBless
-		npcHandler:say('Getting all the FIVE blessings you will reduce your death penalties at maximum. This will cost you ' .. parameters.baseCost .. ' gold coins. You want this?', cid)	
+		npcHandler:say('Getting all the FIVE blessings you will reduce your death penalties at maximum. This will cost you ' .. D_CustomNpcModules.getBlessPrice(cid, blessParams) .. ' gold coins. You want this?', cid)	
 	else
 		func = StdModule.bless
 		npcHandler:say('Getting this bless you will reduce your death penalties by one of the five gods. This will cost you ' .. D_CustomNpcModules.getBlessPrice(cid, blessParams) .. ' gold coins. You want this?', cid)	
