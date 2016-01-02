@@ -19045,10 +19045,12 @@
 		<attribute key="duration" value="25200" />
 		<attribute key="showduration" value="1" />
 	</item>	
+	<!--
 	<item id="12690" article="a" name="bilhete de vip - mensal">
 		<attribute key="weight" value="120" />
 		<attribute key="description" value="Use isto para ganhar um mês de VIP em sua conta. (30 days)." />
 	</item>	
+	-->
 	<item id="12691" article="a" name="outfit ticket">
 		<attribute key="weight" value="1200" />
 		<attribute key="description" value="Ao usar este ticket você irá obter um addon para um outfit especifico." />
@@ -19072,9 +19074,11 @@
 		<attribute key="weight" value="2500" />
 		<attribute key="containerSize" value="10" />
 		<attribute key="description" value="Abra para saber qual presente sortido você ganhou no Darghos! Mas somente no dia de Natal!" />
-	</item>		
+	</item>	
+	<!--	
 	<item id="12696" article="a" name="bilhete de vip - semanal">
 		<attribute key="weight" value="120" />
 		<attribute key="description" value="Use isto para ganhar uma semana de VIP em sua conta  (7 dias)." />
 	</item>	
+	-->
 </items>

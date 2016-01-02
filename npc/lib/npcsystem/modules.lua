@@ -190,10 +190,7 @@ if(Modules == nil) then
 		elseif(parameters.pvpEnabledOnly ~= nil and parameters.pvpEnabledOnly and not doPlayerIsPvpEnable(cid)) then
 			npcHandler:say('You must turn your pvp on to travel to this town.', cid)
 		elseif(parameters.pvpDisabledOnly ~= nil and parameters.pvpDisabledOnly and doPlayerIsPvpEnable(cid)) then
-			npcHandler:say('You must turn your pvp off to travel to this town.', cid)			
-		--[[ DARGHOS_CUSTOM ]]--	
-		elseif(parameters.vip and not doPlayerIsVip(cid)) then        
-			npcHandler:say('I\'m sorry, but you need a VIP account in order to travel to this destination.', cid)		
+			npcHandler:say('You must turn your pvp off to travel to this town.', cid)				
 		elseif(not doPlayerRemoveMoney(cid, parameters.cost)) then
 			npcHandler:say('You don\'t have enough money.', cid)
 		else

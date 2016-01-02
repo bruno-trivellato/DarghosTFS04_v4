@@ -1482,10 +1482,10 @@ end
 
 function addPremiumTest(cid)
 
-	doPlayerAddVipDays(cid, darghos_premium_test_quanty)
+	doPlayerAddPremiumDays(cid, darghos_premium_test_quanty)
 	local account = getPlayerAccountId(cid)
 	db.executeQuery("INSERT INTO `wb_premiumtest` VALUES ('" .. account .. "', '" .. os.time() .. "');")
-	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Parabens! Você recebeu " .. darghos_premium_test_quanty .. " dias de conta VIP no Darghos gratuitamente! Aproveite e divirta-se!")
+	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Parabens! Você recebeu 10 dias de conta premium no Darghos gratuitamente! Aproveite e divirta-se!")
 	sendEnvolveEffect(cid, CONST_ME_HOLYAREA)
 end
 

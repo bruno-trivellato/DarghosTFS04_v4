@@ -20,7 +20,7 @@ function boatDestiny.addAracura(keywordHandler, npcHandler, module)
 	module = (module == nil) and StdModule.travel or module
 
 	local travelNode = keywordHandler:addKeyword({'aracura'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to sail to aracura for 160 gold coins?'})
-	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = true, vip = true, level = 0, cost = 160, destination = BOAT_DESTINY_ARACURA})
+	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = true, level = 0, cost = 160, destination = BOAT_DESTINY_ARACURA})
 	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Then stay here!'})
 end
 
@@ -29,7 +29,7 @@ function boatDestiny.addAaragon(keywordHandler, npcHandler, module)
 	module = (module == nil) and StdModule.travel or module
 
 	local travelNode = keywordHandler:addKeyword({'aaragon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to sail to aaragon for 130 gold coins?'})
-	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = true, vip = true, level = 0, cost = 130, destination = BOAT_DESTINY_AARAGON })
+	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = true, level = 0, cost = 130, destination = BOAT_DESTINY_AARAGON })
 	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Then stay here!'})
 end
 
@@ -83,7 +83,7 @@ function boatDestiny.addIslandOfPeace(keywordHandler, npcHandler, module)
 	module = (module == nil) and StdModule.travel or module
 
 	local travelNode = keywordHandler:addKeyword({'island of peace'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to sail to island of peace for 90 gold coins?'})
-	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = false, vip = false, pvpDisabledOnly = true, level = 0, cost = 90, destination = BOAT_DESTINY_ISLAND_OF_PEACE })
+	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = false, pvpDisabledOnly = true, level = 0, cost = 90, destination = BOAT_DESTINY_ISLAND_OF_PEACE })
 	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Then stay here!'})
 end
 
@@ -202,7 +202,7 @@ function boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
 
 	local travelNode = keywordHandler:addKeyword({'quendor'}, onAsk, {npcHandler = npcHandler, onlyFocus = true})
 	travelNode:addChildKeyword({'yes', 'sim'}, onAccept, {npcHandler = npcHandler, cost = 200, destination = BOAT_DESTINY_QUENDOR })
-	travelNode:addChildKeyword({'no', 'n�o', 'nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Mas que pena... Mas tenha um bom dia!!'})
+	travelNode:addChildKeyword({'no', 'não', 'nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Mas que pena... Mas tenha um bom dia!!'})
 end
 
 -----------
@@ -214,7 +214,7 @@ carpetDestiny = {}
 function carpetDestiny.addAaragon(keywordHandler, npcHandler)
 
 	local travelNode = keywordHandler:addKeyword({'aaragon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to fly in my magic carpet to Aaragon for 60 gold coins?'})
-	travelNode:addChildKeyword({'yes'}, StdModule.travel, {npcHandler = npcHandler, vip = true, premium = true, level = 0, cost = 60, destination = CARPET_DESTINY_AARAGON })
+	travelNode:addChildKeyword({'yes'}, StdModule.travel, {npcHandler = npcHandler, premium = true, level = 0, cost = 60, destination = CARPET_DESTINY_AARAGON })
 	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Then stay here!'})
 end
 

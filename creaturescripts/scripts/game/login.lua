@@ -83,8 +83,14 @@ function onLogin(cid)
 	end
 	]]
 
-	if not doPlayerIsVip(cid) then
-		doPlayerAddVipDays(cid, 30)
+	if(isPremium(cid)) then
+	  if(getPlayerPromotionLevel(cid) == 1) then
+	    doPlayerSetPromotionLevel(cid, 2)
+	  end
+	else
+	  if(getPlayerPromotionLevel(cid) == 2) then
+	    doPlayerSetPromotionLevel(cid, 1)
+	  end
 	end
 
 	setStagesOnLogin(cid)
@@ -279,11 +285,6 @@ function addMapMarksByUids(cid, uids, type)
 end
 
 function onLoginNotify(cid)
-
-	if(doPlayerIsVip(cid)) then
-		local leftDays = getPlayerVipDays(cid) > 0 and getPlayerVipDays(cid) .. " dias restantes." or "menos de um dia restante."
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Conta VIP: " .. leftDays)
-	end	
 
 	--[[
 	local today = os.date("*t").wday
