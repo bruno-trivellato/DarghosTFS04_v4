@@ -9,20 +9,7 @@ SKILL_STAGE_NON_LOGOUT_PLAYERS = SKILL_STAGE_MAGES
 
 stages = {
 	[STAGES_EXPERIENCE] = {
-		{end_level = 39, multipler = 120},
-		{start_level = 40, end_level = 49, multipler = 80},
-		{start_level = 50, end_level = 79, multipler = 60},
-		{start_level = 80, end_level = 99, multipler = 40},
-		{start_level = 100, end_level = 119, multipler = 20},
-		{start_level = 120, end_level = 139, multipler = 15},
-		{start_level = 140, end_level = 159, multipler = 10},
-		{start_level = 160, end_level = 179, multipler = 8},
-		{start_level = 180, end_level = 209, multipler = 4.5},
-		{start_level = 210, end_level = 219, multipler = 3},
-		{start_level = 220, end_level = 229, multipler = 2.5},
-		{start_level = 230, end_level = 239, multipler = 2},
-		{start_level = 240, end_level = 249, multipler = 1.8},
-		{start_level = 250, multipler = 1.5}
+		{start_level = 8, multipler = 2}
 	},
 	
 	--[[
@@ -80,10 +67,7 @@ stages = {
 	]]
 	
 	[STAGES_EXP_PROTECTED] = {
-		{end_level = 39, multipler = 120}, 
-		{start_level = 40, end_level = 79, multipler = 50}, 
-		{start_level = 80, end_level = 99, multipler = 40},
-		{start_level = 100, multipler = 1},
+		{start_level = 8, multipler = 1}
 	},	
 }
 

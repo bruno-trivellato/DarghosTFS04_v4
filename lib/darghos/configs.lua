@@ -64,4 +64,4 @@ darghos_kill_dark_general_exp_bonus_percent = 10
 -- Define se jogadores em area non-pvp/pacificos usarão um estagio de exp diferenciado do normal
 darghos_use_protected_stages = false
 
-darghos_enable_portals = true
+darghos_enable_portals = false

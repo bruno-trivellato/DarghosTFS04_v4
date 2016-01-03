@@ -110,7 +110,7 @@ function christmasPresent.onUse(cid, item, fromPosition, itemEx, toPosition)
 	
 		-- Somente pode abrir depois da meia noite :P
 		if(date.day < 25 and date.month == 12 and date.year == 2011) then			
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Hey! Ainda n„o È dia de natal! Tenha paciencia e aguarde atÈ a noite de natal!")
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Hey! Ainda n√£o √© dia de natal! Tenha paciencia e aguarde at√© a noite de natal!")
 			doSendMagicEffect(getPlayerPosition(cid), CONST_ME_POFF)
 			return true
 		end
@@ -151,7 +151,7 @@ function christmasPresent.onUse(cid, item, fromPosition, itemEx, toPosition)
 			local _item = doAddContainerItem(item.uid, v)
 			if (not _item) then
 				success = false
-				error("N„o foi possivel adicionar um item ao presente de natal do jogador " .. getPlayerName(cid) .. ". Uid: ".. v .. "")
+				error("N√£o foi possivel adicionar um item ao presente de natal do jogador " .. getPlayerName(cid) .. ". Uid: ".. v .. "")
 				break
 			else
 				if( k == 2) then
@@ -166,7 +166,7 @@ function christmasPresent.onUse(cid, item, fromPosition, itemEx, toPosition)
 				doRemoveItem(v)
 			end
 			
-			doPlayerSendCancel(cid, "N„o foi possivel entregar o seu presente! Cerfique de possuir espaÁo e capacidade sulficiente.")
+			doPlayerSendCancel(cid, "N√£o foi possivel entregar o seu presente! Cerfique de possuir espa√ßo e capacidade sulficiente.")
 			doSendMagicEffect(getPlayerPosition(cid), CONST_ME_POFF)
 		end
 
@@ -318,48 +318,43 @@ function outfitTicket.onUse(cid, item, fromPosition, itemEx, toPosition)
 	return true
 end
 
-teleportRune = {}
-
-teleportRune.STATE_NONE = -1
-teleportRune.STATE_TELEPORTING_FIRST = 0
-teleportRune.STATE_TELEPORTING_SECOND = 1
-teleportRune.STATE_TELEPORTING_THIRD = 2
-
 teleportRune.TELEPORT_USAGE_NEVER = -1
-teleportRune.TELEPORT_USAGE_INTERVAL = 30 -- 30 segundos
+teleportRune.TELEPORT_USAGE_INTERVAL = 60 * 30 -- 30 minutos
 
 function teleportRune.onUse(cid, item, frompos, item2, topos)
 
 	if(teleportScrollIsLocked(cid)) then
-		doPlayerSendCancel(cid, "VocÍ n„o pode usar este item neste lugar!")
+		doPlayerSendCancel(cid, "You can not use teleport rune on this place!")
+		return true
+	end
+
+	if(hasCondition(cid, CONDITION_INFIGHT) == TRUE) then
+		doPlayerSendCancel(cid, "You can not use teleport rune when in fight!")
 		return true
 	end
 	
 	if(getPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE) ~= teleportRune.STATE_NONE) then
-		doPlayerSendCancel(cid, "A carga j· sendo carregada, tenha paciencia!")
+		doPlayerSendCancel(cid, "Teleport rune was recharging. Please wait!")
 		return true
 	end
 	
 	local lastTeleportRuneUsage = getPlayerStorageValue(cid, sid.TELEPORT_RUNE_LAST_USAGE)
 	if(lastTeleportRuneUsage ~= teleportRune.TELEPORT_USAGE_NEVER and os.time() <= lastTeleportRuneUsage + teleportRune.TELEPORT_USAGE_INTERVAL) then
-		doPlayerSendCancel(cid, "VocÍ deve aguardar 30 segundos para que sua teleport rune termine de recarregar e vocÍ possa usar-la novamente.")
-
+		local secondsLeft = (lastTeleportRuneUsage + teleportRune.TELEPORT_USAGE_INTERVAL) - os.time()
+		
+		if(secondsLeft >= 60) then
+			doPlayerSendCancel(cid, "Your teleport rune is on cooldown. Wait " .. math.floor(secondsLeft / 60) .. "m and try again.")
+		else
+			doPlayerSendCancel(cid, "Your teleport rune is on cooldown. Wait less then a minunte and try again.")
+		end
+		
+		--doPlayerSendCancel(cid, "Vocƒô deve aguardar " .. math.ceil(((lastTeleportRuneUsage + teleportRune.TELEPORT_USAGE_INTERVAL) - os.time()) / 60) .. " minutos para que sua teleport rune descan√ße e possa usar-la novamente.")
 		return true
 	end
-
-	if(not doPlayerRemoveBalance(cid, 200)) then
-		doPlayerSendCancel(cid, "VocÍ n„o possui R$ 2,00 de saldo em sua conta necess·rios para o uso deste item.")
-		return true		
-	end	
 	
-	doCreatureSay(cid, "Goodbye n00bies!", TALKTYPE_ORANGE_1)
-
-	doSendMagicEffect(getCreaturePosition(cid), CONST_ME_MAGIC_BLUE)	
-	doTeleportThing(cid, getPlayerMasterPos(cid))
-	doSendMagicEffect(getCreaturePosition(cid), CONST_ME_MAGIC_BLUE)
-
-	setPlayerStorageValue(cid, sid.TELEPORT_RUNE_LAST_USAGE, os.time())	
-	changeLog.onUseTeleportRune(cid)
+	doCreatureSay(cid, "30 seconds to teleport rune be charged...", TALKTYPE_ORANGE_1)
+	setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, teleportRune.STATE_TELEPORTING_FIRST)
+	addEvent(teleportRune.firstStep, 1000 * 10, cid)
 	
 	return true
 end
@@ -371,17 +366,17 @@ function teleportRune.firstStep(cid)
 	
 	if(hasCondition(cid, CONDITION_INFIGHT) == TRUE) then
 		setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, teleportRune.STATE_NONE)
-		doCreatureSay(cid, "Arggh! Entrei em batalha! O transporte foi abortado!", TALKTYPE_ORANGE_1)
+		doCreatureSay(cid, "I got in battle. The teleport rune charge was lost!", TALKTYPE_ORANGE_1)
 		return
 	end	
 	
 	if(teleportScrollIsLocked(cid)) then
 		setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, teleportRune.STATE_NONE)
-		doCreatureSay(cid, "Arggh! A teleport rune n„o funciona neste lugar! O transporte foi abortado!", TALKTYPE_ORANGE_1)
+		doCreatureSay(cid, "Teleport rune is not able to charge in this place. The teleport rune charge was lost.", TALKTYPE_ORANGE_1)
 		return	
 	end
 	
-	doCreatureSay(cid, "Faltam 20 segundos para minha teleport rune ser carregada...", TALKTYPE_ORANGE_1)
+	doCreatureSay(cid, "20 seconds to teleport rune be charged...", TALKTYPE_ORANGE_1)
 	setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, teleportRune.STATE_TELEPORTING_SECOND)
 	addEvent(teleportRune.secondStep, 1000 * 10, cid)
 end
@@ -393,17 +388,17 @@ function teleportRune.secondStep(cid)
 	
 	if(hasCondition(cid, CONDITION_INFIGHT) == TRUE) then
 		setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, teleportRune.STATE_NONE)
-		doCreatureSay(cid, "Arggh! Entrei em batalha! O transporte foi abortado!", TALKTYPE_ORANGE_1)
+		doCreatureSay(cid, "I got in battle. The teleport rune charge was lost!", TALKTYPE_ORANGE_1)
 		return
 	end	
 	
 	if(teleportScrollIsLocked(cid)) then
 		setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, teleportRune.STATE_NONE)
-		doCreatureSay(cid, "Arggh! A teleport rune n„o funciona neste lugar! O transporte foi abortado!", TALKTYPE_ORANGE_1)
+		doCreatureSay(cid, "Teleport rune is not able to charge in this place. The teleport rune charge was lost.", TALKTYPE_ORANGE_1)
 		return	
 	end	
 	
-	doCreatureSay(cid, "Faltam 10 segundos para minha teleport rune ser carregada...", TALKTYPE_ORANGE_1)
+	doCreatureSay(cid, "10 seconds to teleport rune be charged...", TALKTYPE_ORANGE_1)
 	setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, teleportRune.STATE_TELEPORTING_THIRD)
 	addEvent(teleportRune.thirdStep, 1000 * 10, cid)
 end
@@ -415,17 +410,17 @@ function teleportRune.thirdStep(cid)
 	
 	if(hasCondition(cid, CONDITION_INFIGHT) == TRUE) then
 		setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, teleportRune.STATE_NONE)
-		doCreatureSay(cid, "Arggh! Entrei em batalha! O transporte foi abortado!", TALKTYPE_ORANGE_1)
+		doCreatureSay(cid, "I got in battle. The teleport rune charge was lost!", TALKTYPE_ORANGE_1)
 		return
 	end	
 	
 	if(teleportScrollIsLocked(cid)) then
 		setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, teleportRune.STATE_NONE)
-		doCreatureSay(cid, "Goodbye n00bies!", TALKTYPE_ORANGE_1)
+		doCreatureSay(cid, "Teleport rune is not able to charge in this place. The teleport rune charge was lost.", TALKTYPE_ORANGE_1)
 		return	
 	end	
 	
-	doCreatureSay(cid, "Finalmente minha teleport rune foi carregada!", TALKTYPE_ORANGE_1)
+	doCreatureSay(cid, "Teleport rune is completly charged! I'm comming home!", TALKTYPE_ORANGE_1)
 	
 	doSendMagicEffect(getCreaturePosition(cid), CONST_ME_MAGIC_BLUE)	
 	doTeleportThing(cid, getPlayerMasterPos(cid))
@@ -445,14 +440,14 @@ function staminaFlask.onUse(cid, item, frompos, item2, topos)
 	local staminaBonus = 40 * 60
 	
 	if(staminaMinutes >= staminaBonus) then
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_SMALL, "VocÍ n„o est· t„o cansado, somente use este item quando a sua barra stamina estiver na cor laranja ou vermelha.")
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_SMALL, "Voc√™ n√£o est√° t√£o cansado, somente use este item quando a sua barra stamina estiver na cor laranja ou vermelha.")
 		return true
 	end
 	
 	local stamimaAdd = staminaMax - staminaMinutes
 	
 	doPlayerSetStamina(cid, stamimaAdd)
-	doCreatureSay(cid, "Aaahhh! IncrÌvel! Me sinto completamente renovado!", TALKTYPE_ORANGE_1)
+	doCreatureSay(cid, "Aaahhh! Incr√≠vel! Me sinto completamente renovado!", TALKTYPE_ORANGE_1)
 	doSendMagicEffect(getPlayerPosition(cid), CONST_ME_HOLYDAMAGE)
 	doRemoveItem(item.uid)
 	

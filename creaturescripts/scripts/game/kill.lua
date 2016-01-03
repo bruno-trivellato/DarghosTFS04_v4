@@ -29,7 +29,7 @@ function killMissions(cid, target)
 
 	local creatures = { 
 		["demon"] = { 
-			{ task_storage = sid.TASK_KILL_DEMONS,  task_kills = sid.TASK_KILLED_DEMONS, task_need_kills = 3000 }
+			{ task_storage = sid.TASK_KILL_DEMONS,  task_kills = sid.TASK_KILLED_DEMONS, task_need_kills = 6666 }
 		} 
 	}
 	
