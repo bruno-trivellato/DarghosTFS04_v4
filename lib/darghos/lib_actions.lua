@@ -318,6 +318,8 @@ function outfitTicket.onUse(cid, item, fromPosition, itemEx, toPosition)
 	return true
 end
 
+teleportRune = {}
+
 teleportRune.TELEPORT_USAGE_NEVER = -1
 teleportRune.TELEPORT_USAGE_INTERVAL = 60 * 30 -- 30 minutos
 
