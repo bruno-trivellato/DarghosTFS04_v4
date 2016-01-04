@@ -54,6 +54,8 @@ bool Spoof::onStartup(){
 
 void Spoof::onThink(){
 
+    return;
+
     updateExpectedCount();
 
     if(m_players.size() >= m_expectedSpoofCount){

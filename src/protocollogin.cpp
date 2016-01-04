@@ -226,17 +226,8 @@ bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
 		//Add premium days
 		if(g_config.getBool(ConfigManager::FREE_PREMIUM))
             output->add<uint16_t>(65535); //client displays free premium
-		else
-#ifdef __DARGHOS_CUSTOM__
-		{
-			if(account.premiumDays == 0)
-                output->add<uint16_t>(65535);
-			else
-                output->add<uint16_t>(account.premiumDays);
-		}
-#else
-        output->add<uint16_t>(account.premiumDays);
-#endif
+		else        
+            output->add<uint16_t>(account.premiumDays);
 			
 
 		OutputMessagePool::getInstance()->send(output);
