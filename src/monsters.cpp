@@ -153,7 +153,7 @@ void MonsterType::dropLoot(Container* corpse)
 #ifdef __DARGHOS_CUSTOM__
 	ss << "Loot of " << nameDescription << ": ";
 
-    if(owner->isVip())
+    if(owner->isPremium())
     {
         gold *= g_config.getNumber(ConfigManager::RATE_GOLD_LOOT);
     }
