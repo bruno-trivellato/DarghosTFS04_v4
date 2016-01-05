@@ -1491,7 +1491,6 @@ end
 
 function canReceivePremiumTest(cid, newlevel)
 
-	--[[
 	if(darghos_premium_test_level == 0 or newlevel < darghos_premium_test_level) then
 		return false
 	end	
@@ -1499,7 +1498,6 @@ function canReceivePremiumTest(cid, newlevel)
 	if(isPremium(cid)) then
 		return false
 	end
-	]]
 
 	local account = getPlayerAccountId(cid)
 	
