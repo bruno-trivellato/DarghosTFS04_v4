@@ -83,16 +83,6 @@ function onLogin(cid)
 	end
 	]]
 
-	if(isPremium(cid)) then
-	  if(getPlayerPromotionLevel(cid) == 1) then
-	    doPlayerSetPromotionLevel(cid, 2)
-	  end
-	else
-	  if(getPlayerPromotionLevel(cid) == 2) then
-	    doPlayerSetPromotionLevel(cid, 1)
-	  end
-	end
-
 	setStagesOnLogin(cid)
 
 	local itemShop = itemShop:new()
