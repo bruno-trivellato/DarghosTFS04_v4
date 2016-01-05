@@ -93,9 +93,9 @@ function onLogin(cid)
 	doPlayerOpenChannel(cid, CUSTOM_CHANNEL_PVP)
 	
 	-- premium test
-	if(canReceivePremiumTest(cid)) then
-		addPremiumTest(cid)
-	end	
+	--if(canReceivePremiumTest(cid)) then
+	--	addPremiumTest(cid)
+	--end	
 	
 	if(not hasValidEmail(cid)) then	
 		notifyValidateEmail(cid)
