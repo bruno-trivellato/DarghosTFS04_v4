@@ -191,7 +191,7 @@ function changeStage(cid, skilltype, multiple)
 		setExperienceRate(cid, multiple * darghos_exp_multipler * changePvpDebuff * expSpecialBonus)
 		
 	elseif(isStagedSkill(skilltype, true)) then
-		setSkillRate(cid, skilltype, multiple * darghos_skills_multipler)
+		--setSkillRate(cid, skilltype, multiple * darghos_skills_multipler)
 	else
 		print("changeStage() | Unknown skilltype " .. skilltype .. " when change the stage for " .. getPlayerName(cid) .. " by " .. multiple .. "x.")
 	end
