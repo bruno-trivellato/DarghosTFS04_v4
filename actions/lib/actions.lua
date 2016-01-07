@@ -95,7 +95,7 @@ TOOLS.ROPE = function(cid, item, fromPosition, itemEx, toPosition)
 				doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTPOSSIBLE)
 			end
 		else
-			if(hole.itemid > 0 and (isPlayer(hole.uid) and not doPlayerIsInBattleground(hole.uid))) then
+			if(hole.itemid > 0) then
 				if(isPlayer(hole.uid) and doPlayerIsInBattleground(hole.uid)) then
 					doPlayerSendCancel(cid, "Você não pode fazer isto dentro de uma Battleground")
 					return true
