@@ -261,7 +261,7 @@ public:
     void setPvpStatus(bool status) { pvpStatus = status; }
     bool isPvpEnabled() const { return pvpStatus; }
 
-    bool isSecureDeath() const { return level <= 80 && skull < SKULL_WHITE; }
+    bool isSecureDeath() const { return level <= 35 && skull < SKULL_WHITE; }
 
     uint64_t getLastDeathExperienceLoss() { return m_lastdeath_experience_loss; }
     int16_t getLastDeathBlessingsLoss() { return m_lastdeath_blessings_loss; }

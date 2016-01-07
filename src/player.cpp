@@ -2498,23 +2498,25 @@ bool Player::onDeath()
 		Item* item = NULL;
 
 #ifdef __DARGHOS_CUSTOM__
-        if(getBlessings() > 0){
-            if(getBlessings() == 5){
-                if(!isSecureDeath()) sendTextMessage(MSG_EVENT_ORANGE, "You died but not worry! You have all blessings and that reduced all losses of experience, magic and skills by 40% and also avoided you loss of any item.");
-                else {
-                    sendTextMessage(MSG_EVENT_ORANGE, "You died but not worry! You are lower level and has been blessed by the Gods reducing all your losses of experience, skills and magic and also avoiding you to loose any items.");
-                    sendTextMessage(MSG_EVENT_ORANGE, "You will continue to receive this special bless when you die since you are with no skulls until you got level 80. After you will need to buy regular blessings with NPCs.");
-                }
-                setDropLoot(LOOT_DROP_PREVENT);
-            }
-            else{
-                uint16_t blessReductionPercent = getBlessings() * g_config.getNumber(ConfigManager::BLESS_REDUCTION);
-                std::stringstream msg_string; msg_string << "You died and have " << getBlessings() << " blessings that reduced all losses of experience, magic and skills by " << blessReductionPercent << "%. Your items losses also has been reduced.";
-                sendTextMessage(MSG_EVENT_ORANGE, msg_string.str());
-            }
+        if(isSecureDeath()){
+            sendTextMessage(MSG_EVENT_ORANGE, "You died but not worry! You are lower level and has been blessed by the Gods reducing all your losses of experience, skills and magic and also avoiding you to loose any items.");
+            sendTextMessage(MSG_EVENT_ORANGE, "You will continue to receive this special bless when you die since you are with no skulls until you got level 35. After you will need to buy regular blessings with NPCs.");
         }
         else{
-            sendTextMessage(MSG_EVENT_ORANGE, "You died and you don't have ANY blessings and now you loss a lot of experience, magic and skills, also you should lost some of your items... In the next time remember to buy blessings to reduce your losses when die.");
+            if(getBlessings() > 0){
+                if(getBlessings() == 5){
+                    sendTextMessage(MSG_EVENT_ORANGE, "You died but not worry! You have all blessings and that reduced all losses of experience, magic and skills by 40% and also avoided you loss of any item.");
+                    setDropLoot(LOOT_DROP_PREVENT);
+                }
+                else{
+                    uint16_t blessReductionPercent = getBlessings() * g_config.getNumber(ConfigManager::BLESS_REDUCTION);
+                    std::stringstream msg_string; msg_string << "You died and have " << getBlessings() << " blessings that reduced all losses of experience, magic and skills by " << blessReductionPercent << "%. Your items losses also has been reduced.";
+                    sendTextMessage(MSG_EVENT_ORANGE, msg_string.str());
+                }
+            }
+            else{
+                sendTextMessage(MSG_EVENT_ORANGE, "You died and you don't have ANY blessings and now you loss a lot of experience, magic and skills, also you should lost some of your items... In the next time remember to buy blessings to reduce your losses when die.");
+            }
         }
 #endif
 
@@ -2545,7 +2547,7 @@ bool Player::onDeath()
 	uint32_t totalDamage = 0, pvpDamage = 0, enemiesLevelSum = 0, alliesLevelSum = 0;
 	std::map<Player*, uint32_t> enemiesList, alliesList;
 
-    if(skillLoss && !isSecureDeath())
+    if(skillLoss)
 	{
 		alliesList.insert(std::pair<Player*, uint32_t>(this, 1));
 		alliesLevelSum += getLevel();
@@ -4873,7 +4875,7 @@ void Player::setPromotionLevel(uint32_t pLevel)
 
 uint16_t Player::getBlessings() const
 {
-    if(getBot())
+    if(getBot() || isSecureDeath())
         return 5;
 
 	if(!g_config.getBool(ConfigManager::BLESSINGS) || (!isPremium() &&
