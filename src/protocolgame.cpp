@@ -2627,6 +2627,8 @@ void ProtocolGame::sendAddCreature(const Creature* creature, const Position& pos
     //player light level
     AddCreatureLight(msg, creature);
 
+    writeToOutputBuffer(msg);
+
     player->sendIcons();
     for(VIPSet::iterator it = player->VIPList.begin(); it != player->VIPList.end(); it++)
     {
@@ -2637,8 +2639,6 @@ void ProtocolGame::sendAddCreature(const Creature* creature, const Position& pos
             sendVIP((*it), vipName, (tmpPlayer && player->canSeeCreature(tmpPlayer)));
         }
     }
-
-    writeToOutputBuffer(msg);
 }
 
 void ProtocolGame::sendRemoveCreature(const Creature*, const Position& pos, uint32_t stackpos)
