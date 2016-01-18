@@ -103,7 +103,7 @@
         <item id="2146" countmax="1" chance1="4200">
           <!--small sapphire-->
         </item>
-        <item id="2528" chance="400">
+        <item id="2528" chance="800">
           <!--tower shield-->
         </item>
         <item id="7441" chance="5360">
@@ -112,10 +112,10 @@
         <item id="7402" chance="200">
           <!--dragon slayer-->
         </item>
-        <item id="2498" chance="600">
+        <item id="2498" chance="400">
           <!--royal helmet-->
         </item>
-        <item id="2492" chance="600">
+        <item id="2492" chance="333">
           <!--dragon scale mail-->
         </item>
         <item id="2396" chance="200">

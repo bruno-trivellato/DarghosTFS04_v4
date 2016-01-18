@@ -72,6 +72,9 @@
     <item id="2406" chance="15000">
       <!--short sword-->
     </item>
+    <item id="7456" chance="10">
+      <!--noble axe-->
+    </item>    
     <item id="1987" chance="100000">
       <inside>
         <item id="2412" chance="10000">
