@@ -2520,26 +2520,35 @@ bool Player::onDeath()
         }
 #endif
 
-		for(int32_t i = SLOT_FIRST; ((skillLoss || lootDrop == LOOT_DROP_FULL) && i < SLOT_LAST); ++i)
-		{
-			if(!(item = getInventoryItem((slots_t)i)) || item->isRemoved() ||
-				(g_moveEvents->hasEquipEvent(item) && !isItemAbilityEnabled((slots_t)i)))
-				continue;
+        Item* checkAol = getInventoryItem(SLOT_NECKLACE);
+        if(checkAol && checkAol->getID() == ITEM_AMULET_OF_LOSS && lootDrop == LOOT_DROP_FULL){
+            setDropLoot(LOOT_DROP_PREVENT);
+            preventDrop = checkAol;
+            m_lastdeath_items_loss = -1;
+            sendTextMessage(MSG_EVENT_ORANGE, "You died and your amulet of loss prevent you to drop all your items.");
+        }
+        else{
+            for(int32_t i = SLOT_FIRST; ((skillLoss || lootDrop == LOOT_DROP_FULL) && i < SLOT_LAST); ++i)
+            {
+                if(!(item = getInventoryItem((slots_t)i)) || item->isRemoved() ||
+                    (g_moveEvents->hasEquipEvent(item) && !isItemAbilityEnabled((slots_t)i)))
+                    continue;
 
-			const ItemType& it = Item::items[item->getID()];
-			if(lootDrop == LOOT_DROP_FULL && it.abilities.preventDrop)
-			{
-				setDropLoot(LOOT_DROP_PREVENT);
-				preventDrop = item;
-#ifdef __DARGHOS_CUSTOM__
-                m_lastdeath_items_loss = -1;
-                sendTextMessage(MSG_EVENT_ORANGE, "You died and an item prevent you to drop all your items (ie: Amulet of Loss).");
-#endif
-			}
+                const ItemType& it = Item::items[item->getID()];
+                if(lootDrop == LOOT_DROP_FULL && it.abilities.preventDrop)
+                {
+                    setDropLoot(LOOT_DROP_PREVENT);
+                    preventDrop = item;
+    #ifdef __DARGHOS_CUSTOM__
+                    m_lastdeath_items_loss = -2;
+                    sendTextMessage(MSG_EVENT_ORANGE, "You died and an item prevent you to drop all your items (ie: Amulet of Loss).");
+    #endif
+                }
 
-			if(skillLoss && !preventLoss && it.abilities.preventLoss)
-				preventLoss = item;
-		}
+                if(skillLoss && !preventLoss && it.abilities.preventLoss)
+                    preventLoss = item;
+            }
+        }
 	}
 
 #ifdef __DARGHOS_CUSTOM__
@@ -2727,8 +2736,6 @@ bool Player::onDeath()
 #ifdef __DARGHOS_CUSTOM__
         if(!usePVPBlessing && !isSecureDeath())
         {
-            sendTextMessage(MSG_EVENT_ORANGE, "You lost all your regular blessings, remember to buy your blessings again to avoid hard losses when you die in the future!");
-
             if(hasPvpBlessing()){
                 blessings = 0;
                 addBlessing(1 << (g_config.getNumber(ConfigManager::USE_BLESSING_AS_PVP) - 1));
@@ -2754,10 +2761,6 @@ bool Player::onDeath()
 
 		g_game.removeCreature(this, false);
 		sendReLoginWindow();
-
-#ifdef __DARGHOS_CUSTOM__
-        sendTextMessage(MSG_EVENT_ORANGE, deathStr.str());
-#endif
 	}
 	else
 	{

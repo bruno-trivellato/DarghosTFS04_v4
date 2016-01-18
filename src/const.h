@@ -463,6 +463,8 @@ enum item_t
     ,ITEM_GOLD_COIN = 2148
     ,ITEM_PLATINUM_COIN = 2152
     ,ITEM_CRYSTAL_COIN = 2160
+
+    ,ITEM_AMULET_OF_LOSS = 2173
 #endif	
 };
 
