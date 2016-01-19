@@ -92,8 +92,16 @@ function doTeleportBack(cid, backPos)
 	return true
 end
 
+local trainersTries = {}
+local TRAINER_TRY_INTERVAL = 15 -- seconds
+
 function onEnterTrainers(cid, login)
   
+	if(trainersTries[getPlayerGUID(cid)] ~= nil and os.time() <= trainersTries[getPlayerGUID(cid)]) then
+		doPlayerSendCancel(cid, "All trainers rooms are full. Try again later.")
+		return false
+	end
+
 	local _uid = uid.TRAINERS_ROOMS_START
 	while(_uid < uid.TRAINERS_ROOMS_LAST) do
 		
@@ -114,7 +122,8 @@ function onEnterTrainers(cid, login)
 	print("[Darghos Movement] Training Rooms - All slots full:" .. _uid)
 	
 	if(not login) then
-		doPlayerSendCancel(cid, "Todos os trainers já estão em uso. Tente novamente mais tarde.")
+		doPlayerSendCancel(cid, "All trainers rooms are full. Try again later.")
+		trainersTries[getPlayerGUID(cid)] = os.time() + TRAINER_TRY_INTERVAL
 	else
 		doTeleportThing(cid, getTownTemplePosition(getPlayerTown(cid)))
 		setPlayerStorageValue(cid, sid.INSIDE_TRAINING_ROOM, -1)

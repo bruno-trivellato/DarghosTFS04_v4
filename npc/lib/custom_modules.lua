@@ -268,8 +268,12 @@ function D_CustomNpcModules.offerBlessing(cid, message, keywords, parameters, no
 		npcHandler:say('Getting this bless you will reduce your death penalties by one of the five gods. This will cost you ' .. D_CustomNpcModules.getBlessPrice(cid, blessParams) .. ' gold coins. You want this?', cid)	
 	end
 
-	node:getParent():addChildKeyword({'yes', 'sim'}, func, parameters)
-	node:getParent():addChildKeyword({'no', 'nao', 'nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Come back later!'})	
+	node:clearChildrenNodes()
+
+	node:addChildKeyword({'yes', 'sim'}, func, parameters)
+	node:addChildKeyword({'no', 'nao', 'nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Come back later!'})	
+
+	return true
 end
 
 function D_CustomNpcModules.addTradeList(shopModule, tradelist_name)
