@@ -13,16 +13,14 @@ function onCreatureSay(cid, type, msg)
 	local distance = getDistanceTo(cid) or -1
 	if((distance < npcSys:getTalkRadius()) and (distance ~= -1)) then
 		if((msg == "hi" or msg == "hello" or msg == "ola") and not (npcSys:isFocused(cid))) then
-			dialog:say("Fique por aqui ".. getCreatureName(cid) .."! Aqui em cima é mais seguro!", cid)
-			npcSys:addFocus(cid)
-		elseif(npcSys:isFocused(cid) and (msg == "task" or msg == "mission" or msg == "yes" or msg == "no")) then
-			dialog:say("Desculpe " .. getCreatureName(cid) .. ", mas somente sei conversar em portugues.", cid)			
-		elseif(npcSys:isFocused(cid) and (msg == "tarefa" or msg == "missão" or msg == "missao")) then
+			dialog:say("Come here ".. getCreatureName(cid) .."! This is a safe place!", cid)
+			npcSys:addFocus(cid)	
+		elseif(npcSys:isFocused(cid) and (msg == "tarefa" or msg == "missão" or msg == "missao" or msg == "task" or msg == "mission")) then
 			npcTask:responseTask(cid)
-		elseif(npcSys:isFocused(cid) and (msg == "não" or msg == "nao")) then
-			dialog:say("Oh... Que pena, mas sem problemas! Então o que deseja?", cid)
+		elseif(npcSys:isFocused(cid) and (msg == "não" or msg == "nao" or msg == "no")) then
+			dialog:say("How can I help you?", cid)
 			npcSys:setTopic(cid, 0)
-		elseif(npcSys:isFocused(cid) and msg == "sim") then
+		elseif(npcSys:isFocused(cid) and (msg == "sim" or msg == "yes")) then
 		
 			if(npcSys:getTopic(cid) == 2) then
 				npcTask:sendTaskObjectives()
@@ -35,7 +33,7 @@ function onCreatureSay(cid, type, msg)
 				npcSys:setTopic(cid, 0)
 			end
 		elseif((npcSys:isFocused(cid)) and (msg == "bye" or msg == "goodbye" or msg == "cya" or msg == "adeus")) then
-			dialog:say("Boa sorte!", cid)
+			dialog:say("Cya!", cid)
 			npcSys:removeFocus(cid)		
 		end
 	end

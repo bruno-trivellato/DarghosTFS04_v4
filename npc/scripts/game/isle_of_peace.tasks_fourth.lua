@@ -21,11 +21,9 @@ function onCreatureSay(cid, type, msg)
 	if((distance < npcSys:getTalkRadius()) and (distance ~= -1)) then
 		if((msg == "hi" or msg == "hello" or msg == "ola") and not (npcSys:isFocused(cid))) then
 		
-			dialog:say("Ola ".. getCreatureName(cid) .."! Diga-me como posso lhe ajudar. Só não demore, não posso me destrair!", cid)
+			dialog:say("Hello ".. getCreatureName(cid) .."! How can I help you? Be fast! I cant distract me!", cid)
 			npcSys:addFocus(cid)
-		elseif(npcSys:isFocused(cid) and (msg == "task" or msg == "mission" or msg == "yes" or msg == "no")) then
-			dialog:say("Desculpe " .. getCreatureName(cid) .. ", mas somente sei conversar em portugues.", cid)	
-		elseif(npcSys:isFocused(cid) and (msg == "tarefa" or msg == "missão" or msg == "missao")) then
+		elseif(npcSys:isFocused(cid) and (msg == "tarefa" or msg == "missão" or msg == "missao" or msg == "task" or msg == "mission")) then
 		
 			--if(kingTask:getState() ~= taskStats.COMPLETED and kingTask:checkPlayerRequirements()) then	
 				--dialog:say("Eu não tenho mais nenhuma tarefa para você, mas sei de algo que talvez lhe interesse, e envolve ajudar o Rei, quer saber mais?", cid)
@@ -33,10 +31,10 @@ function onCreatureSay(cid, type, msg)
 			--else
 				npcTask:responseTask(cid)
 			--end	
-		elseif(npcSys:isFocused(cid) and (msg == "não" or msg == "nao")) then
-			dialog:say("Oh... Que pena, mas sem problemas! Então o que deseja?", cid)
+		elseif(npcSys:isFocused(cid) and (msg == "não" or msg == "nao" or msg == "no")) then
+			dialog:say("So sad. Can I help you?", cid)
 			npcSys:setTopic(cid, 0)
-		elseif(npcSys:isFocused(cid) and msg == "sim") then
+		elseif(npcSys:isFocused(cid) and (msg == "sim" or msg == "yes")) then
 		
 			if(npcSys:getTopic(cid) == 2) then
 				npcTask:sendTaskObjectives()
@@ -48,16 +46,16 @@ function onCreatureSay(cid, type, msg)
 				npcTask:onCompleteConfirm()
 				npcSys:setTopic(cid, 0)	
 			elseif(npcSys:getTopic(cid) == 5) then	
-				dialog:say("O Rei ficará contente ".. getCreatureName(cid) .."! Ao sul desta portão você encontrará uma pequena ponte, atravessando-a entrará num territorio desertico habitado por minotauros. Nele há uma piramide destruida. A sua  tarefa é a seguinte: [...]", cid)
-				dialog:say("Você deve entrar no sub-solo da piramide e decer até o andar mais baixo. Note que está é uma missão muito perigosa pois o sub-solo da piramide é recheada de minotaurs dos mais variados tipos, como minotaur archer, guard e mage [...]", cid, 6)
-				dialog:say("Para lhe auxiliar nesta missão foi dado na recompensa da tarefa dos anões um stealth ring. Ao usar-lo, você ficará invisivel e isso permitirá você andar entre os minotaurs, mas preste atenção: [...]", cid, 6)
-				dialog:say("Minotaurs Mage conseguem enchergar mesmo guerreiros que estão invisiveis, portanto será necessario confrontar-los, portanto, tome muito cuidado. Outra coisa, não perca muito tempo pois o stealth ring tem duração de apénas 15 minutos! [...]", cid, 6)
-				dialog:say("Quando você chegar no andar mais baixo você precisa encontrar uma reliquia real que foi roubada, ela provavelmente está em algum baú. Você deve pegar-la, sair da piramide e levar a reliquia ao Rei. Ele provavelmente lhe dará uma valiosa recompensa!", cid, 6)
-				dialog:say("Desejo boa sorte a você nesta tarefa!", cid, 6)
+				dialog:say( getCreatureName(cid) ..", the King will be happy! Follow to south until you find the sand and the pyramid. Your mission is [...]", cid)
+				dialog:say("go to the lower floor of this pyramid. Be carefull. This mission is dagerous and you need face all kind of minotaurs [...]", cid, 6)
+				dialog:say("On the last mission of the Kronus mines you receive a stealth ring as reward. Using the ring you can avoid some of the minotaurs [...]", cid, 6)
+				dialog:say("But be carefull with the Minotaur Mage, they are not affected by the stealth ring. You will need defeath then. And be faster you can. The ring remains just be 15 minutes! [...]", cid, 6)
+				dialog:say("When you reach the lower floor open the right reward chest and you will find the King's relic. Take her to the King on the town.", cid, 6)
+				dialog:say("Have a good luck with this task!", cid, 6)
 				kingTask:setStarted()
 			end
 		elseif((npcSys:isFocused(cid)) and (msg == "bye" or msg == "goodbye" or msg == "cya" or msg == "adeus")) then
-			dialog:say("Até! E lembre-se: Tenha sempre cuidado fora da cidade!", cid)
+			dialog:say("Always be carefull!", cid)
 			npcSys:removeFocus(cid)		
 		end
 	end

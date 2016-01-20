@@ -21,29 +21,29 @@ function task(cid, message, keywords, parameters, node)
 		if(task:removeRequiredItems()) then
 			if(getPlayerVocation(cid) <= 4 and isPremium(cid)) then
 				setPlayerPromotionLevel(cid, 1)
-				npcHandler:say("Oh! Como soube do roubo da taça real? Este é um artefato muito valioso! Você merece uma generosa recompensa pelo seu ato de bravura! Por isso, eu como Rei de Island of Peace, lhe concedo a PROMOÇÃO!", cid)
+				npcHandler:say("Oh, how you know about the missing royal relic? This is a very valuable artifact! You are worthy to receive the promotion!", cid)
 			else
 				doPlayerAddMoney(cid, 20000)
 				
 				if(isPremium(cid)) then
-					npcHandler:say("Oh! Como soube do roubo da taça real? Este é um artefato muito valioso! Você merece uma generosa recompensa pelo seu ato de bravura! Eu pensei em lhe dar uma promoção pelo ato, mas vejo que você já esta promovido, neste caso vou lhe dar 20.000 gold coins!", cid)
+					npcHandler:say("Oh, how you know about the missing royal relic? This is a very valuable artifact! You could receive the promotion, however you already are promoted. Then I give you 20.000 gold coins!", cid)
 				else
-					npcHandler:say("Oh! Como soube do roubo da taça real? Este é um artefato muito valioso! Você merece uma generosa recompensa pelo seu ato de bravura! Eu pensei em lhe dar uma promoção pelo ato, mas vejo que você não possui uma premium account, neste caso vou lhe dar 20.000 gold coins!", cid)
+					npcHandler:say("Oh, how you know about the missing royal relic? This is a very valuable artifact! You could receive the promotion, however you are not a premium account. Then I give you 20.000 gold coins!", cid)
 				end
 			end
 			
 			task:setCompleted()
 		else
-			npcHandler:say("Os minotauros roubaram um valioso artefato de meu palacio. Meus guardas acreditam que eles o levaram para o leste, na piramide dos minotauros... Preciso de algum bravo guerreiro que se arrisque a recuperar-lo... ",cid)
+			npcHandler:say("The minotaurs stealed a valuable artifact from the palace. The guards belive that they are on the east, on the sand... We need some adventurer ready to recover the relic missed.",cid)
 		end
 	else
-		npcHandler:say("Uhmm, claro! As pessoas precisam de tarefas, converse com as pessoas na cidade, elas sempre possuem alguma tarefa e costumam ser generosas em suas recompensas!",cid)
+		npcHandler:say("Talk about tasks with the people on the town. Some of then should need your services.",cid)
 	end
 
     return true
 end
 
-keywordHandler:addKeyword({'tarefa'}, task, nil)
+keywordHandler:addKeyword({'tarefa', 'task'}, task, nil)
 
 D_CustomNpcModules.addPromotionHandler(keywordHandler, npcHandler)
 

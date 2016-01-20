@@ -13,13 +13,7 @@ function tasks.findMonster(name, task)
 	return nil
 end
 
-function tasks.onKill(cid, target)
-	
-	local name = string.lower(getCreatureName(target))
-	local list = taskMonsters[name]
-	
-	--print("Criatura: " .. name)
-	
+function tasks.processKill(cid, list, name, isparty)
 	if(tasks.hasStartedTask(cid) and list ~= nil) then
 		
 		local taskid = tasks.getStartedTask(cid)
@@ -49,12 +43,22 @@ function tasks.onKill(cid, target)
 				
 				if(killscount == monster.amount) then
 					-- player matou a qtd necessaria de monstros
-					local str = "Parabens! Você concluiu sua missão de derrotar " .. monster.amount .. " " .. name .. "'s!"
+					local str = "Congratulations! You completed the mission defeating " .. monster.amount .. " " .. name .. "'s!"
+
+					if(isparty) then
+						str = str .. " Sharing task progress with party members ENABLED!"
+					end
+
 					task:sendKillMessage(str)
 					--task:setFinished()
 				elseif(killscount < monster.amount) then
 					--print("[LOG] Mensagem")
-					local str = "Você precisa derrotar mais " .. (monster.amount - killscount) .. " " .. name .. "'s para concluir a sua tarefa."
+					local str = "You must defeat more " .. (monster.amount - killscount) .. " " .. name .. "'s to complete your mission."
+
+					if(isparty) then
+						str = str .. " Sharing task progress with party members ENABLED!"
+					end					
+
 					task:sendKillMessage(str)	
 				else
 					return
@@ -67,11 +71,21 @@ function tasks.onKill(cid, target)
 				local playerpoints = task:getPlayerKillsCount(taskid + 1)
 				local newplayerpoints = playerpoints + monsterPoints
 								
-				if(newplayerpoints == requirePoints) then
-					local str = "Parabens! Você concluiu sua missão ao atingir " .. requirePoints .. " pontos!"
+				if(newplayerpoints >= requirePoints) then
+					local str = "Congratulations! You completed the mission reaching " .. requirePoints .. " points!"
+				
+					if(isparty) then
+						str = str .. " Sharing task progress with party members ENABLED!"
+					end				
+
 					task:sendKillMessage(str)		
 				elseif(newplayerpoints < requirePoints) then
-					local str = "Você ganhou " .. monsterPoints .. " pontos por derrotar um " .. name .. "! Você ainda precisa conseguir mais " .. (requirePoints - newplayerpoints) .. " pontos para concluir a sua tarefa."
+					local str = "You got " .. monsterPoints .. " points by defeat an " .. name .. "! You still must reach " .. (requirePoints - newplayerpoints) .. " points to complete your mission."
+					
+					if(isparty) then
+						str = str .. " Sharing task progress with party members ENABLED!"
+					end
+
 					task:sendKillMessage(str)	
 				else
 					if(playerpoints == requirePoints) then
@@ -85,4 +99,74 @@ function tasks.onKill(cid, target)
 			end	
 		end
 	end
+end
+
+tasks.partyKillsHistory = {}
+
+function tasks.getKillHistory(cid, name)
+	if(tasks.partyKillsHistory[cid] == nil) then
+		return nil
+	end
+
+	if(tasks.partyKillsHistory[cid][name] == nil) then
+		return nil
+	end
+
+	return tasks.partyKillsHistory[cid][name]
+end
+
+function tasks.setKillHistory(cid, name)
+	if(tasks.partyKillsHistory[cid] == nil) then
+		table.insert(tasks.partyKillsHistory, cid, { [name] = os.time() })
+		return
+	end
+
+	if(tasks.partyKillsHistory[cid][name] == nil) then
+		table.insert(tasks.partyKillsHistory[cid], os.time(), name)
+		return
+	end
+
+	tasks.partyKillsHistory[cid][name] = os.time()
+end
+
+function tasks.canMemberBeProccessed(cid, pid, name)
+
+	if(cid == pid) then
+		tasks.setKillHistory(cid, name)
+		return true
+	end
+
+	if(getDistanceBetween(getCreaturePosition(cid), getCreaturePosition(pid)) >= 40) then
+		return false
+	end
+
+	local partyHistory = tasks.getKillHistory(pid, name)
+	if(partyHistory == nil) then
+		tasks.setKillHistory(pid, name)
+		return true
+	elseif(os.time() <= (partyHistory + (60 * 3))) then
+		return true
+	end
+
+	return false
+end
+
+function tasks.onKill(cid, target)
+	
+	local name = string.lower(getCreatureName(target))
+	local list = taskMonsters[name]
+
+	local leader = getPlayerParty(cid)
+	if(leader ~= nil) then
+		local party = getPartyMembers(leader)
+		for i, pid in ipairs(party) do
+			if(tasks.canMemberBeProccessed(cid, pid, name)) then
+				tasks.processKill(pid, list, name, true)
+			end		
+		end
+	else
+		tasks.processKill(cid, list, name, false)
+	end
+	
+	--print("Criatura: " .. name)
 end

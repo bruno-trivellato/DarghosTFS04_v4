@@ -36,11 +36,11 @@ function firstLoginEvent(cid)
 			dialog:delay(1)
 		end
 		
-		dialog:say("Seja bem vindo " .. getCreatureName(cid) .. "! Meu nome é " .. getNpcName() .. ", meu trabalho é auxiliar novos jogadores, como você! [...]", cid)
-		dialog:say("Para ajudar no inicio de sua jornada irei lhe dar alguns equipamentos, tome isto! [...]", cid, 6)
+		dialog:say("Be welcome " .. getCreatureName(cid) .. "! I am " .. getNpcName() .. " and my job is assist begginers on the game like you! [...]", cid)
+		dialog:say("I will start giving you some basic equipments to you began your journey! [...]", cid, 6)
 		addEvent(defineFirstItems, 1000 * 8, cid)
-		dialog:say("Estamos tendo algum trabalho com uma criatura, os trolls, eles vivem no sub-solo da cidade e estÃ£o se multiplicando rápidamente [...]", cid, 6)
-		dialog:say("Precisamos eliminar alguns deles para manter o controle... Mas preciso de alguem para efetuar esta {tarefa}!", cid, 6)
+		dialog:say("We are having some challanges with the Trolls. They alive on the underground and their poppulation are comming to be out of control [...]", cid, 6)
+		dialog:say("We need decimate some of the trolls to keep everthing right. You should want this {task}!", cid, 6)
 	end	
 end
 
@@ -57,22 +57,19 @@ function onCreatureSay(cid, type, msg)
 			task:setPlayer(cid)		
 		
 			if(task:getState() == taskStats.COMPLETED) then
-				dialog:say("Mas veja só! É o ".. getCreatureName(cid) .."! Está bem mais forte do que a ultima vez que o vi! Andou fazendo tarefas?", cid)
+				dialog:say("Look that! Is ".. getCreatureName(cid) .." here! You now is stronger then last time I've seen you! You have done some tasks, I'm right?", cid)
 				npcSys:setTopic(cid, 5)
 			else
-				dialog:say("Ola ".. getCreatureName(cid) ..". Gostaria de fazer uma {tarefa}?", cid)
+				dialog:say("Hello ".. getCreatureName(cid) ..". You want start a {task} for me?", cid)
 			end
 			
-			npcSys:addFocus(cid)		
-		elseif(npcSys:isFocused(cid) and (msg == "task" or msg == "mission" or msg == "yes" or msg == "no")) then
-			dialog:say("Desculpe " .. getCreatureName(cid) .. ", mas somente sei conversar em portugues.", cid)				
-		elseif(npcSys:isFocused(cid) and (msg == "tarefa" or msg == "missão" or msg == "missao")) then
-		
+			npcSys:addFocus(cid)					
+		elseif(npcSys:isFocused(cid) and (msg == "tarefa" or msg == "missão" or msg == "missao" or msg == "mission" or msg == "task")) then
 			npcTask:responseTask(cid)
-		elseif(npcSys:isFocused(cid) and (msg == "não" or msg == "nao")) then
-			dialog:say("Oh... Que pena, mas sem problemas! Então o que deseja?", cid)
+		elseif(npcSys:isFocused(cid) and (msg == "não" or msg == "nao" or msg == "no")) then
+			dialog:say("Allright. Can I help you with anything?", cid)
 			npcSys:setTopic(cid, 0)			
-		elseif(npcSys:isFocused(cid) and msg == "sim") then
+		elseif(npcSys:isFocused(cid) and (msg == "sim" or msg == "yes")) then
 		
 			if(npcSys:getTopic(cid) == 2) then
 				npcTask:sendTaskObjectives()
@@ -84,11 +81,11 @@ function onCreatureSay(cid, type, msg)
 				npcTask:onCompleteConfirm()
 				npcSys:setTopic(cid, 0)
 			elseif(npcSys:getTopic(cid) == 5) then
-				dialog:say("Isto é bom! Até imagino que você veio aqui saber sobre mais certo? Haha, não é preciso responder... Bom... Eu não tenho mais nenhuma tarefa mas se você seguir ao leste do templo você chegará na saida leste da cidade e lá você encontrará o guarda Winston [...]", cid)
-				dialog:say("Converse com ele, eu sei estava precisando de alguem para fazer algumas tarefas fora da cidade, agora que você já está mais forte creio que tem capacidade de o ajudar... Boa sorte!", cid, 6)
+				dialog:say("It's good! You come here waiting for some tasks right? Sadly I dont have any tasks for you anymore but follow to east from here and you will reach the exit of the city and find the Winston, the guard [...]", cid)
+				dialog:say("Last time I've talk with Winston he say me about some problems that he is facing! Talk with him. Good luck! ", cid, 6)
 			end
 		elseif((npcSys:isFocused(cid)) and (msg == "bye" or msg == "goodbye" or msg == "cya" or msg == "adeus")) then
-			dialog:say("Se cuide!", cid)
+			dialog:say("Goodbye!", cid)
 			npcSys:removeFocus(cid)	
 		end
 	end

@@ -18,11 +18,9 @@ function onCreatureSay(cid, type, msg)
 	if((distance < npcSys:getTalkRadius()) and (distance ~= -1)) then
 		if((msg == "hi" or msg == "hello" or msg == "ola") and not (npcSys:isFocused(cid))) then
 		
-			dialog:say(getCreatureName(cid) .."! Veja! Todos aqui estão em ardua {tarefa} de treinamento!", cid)
-			npcSys:addFocus(cid)
-		elseif(npcSys:isFocused(cid) and (msg == "task" or msg == "mission" or msg == "yes" or msg == "no")) then
-			dialog:say("Desculpe " .. getCreatureName(cid) .. ", mas somente sei conversar em portugues.", cid)				
-		elseif(npcSys:isFocused(cid) and (msg == "tarefa" or msg == "missão" or msg == "missao")) then
+			dialog:say(getCreatureName(cid) .."! Welcome to the training academy. I have some training {tasks}!", cid)
+			npcSys:addFocus(cid)		
+		elseif(npcSys:isFocused(cid) and (msg == "tarefa" or msg == "missão" or msg == "missao" or msg == "task" or msg == "mission")) then
 		
 			local task = Task:new()
 			task:setNpcName(getNpcName())	
@@ -31,18 +29,18 @@ function onCreatureSay(cid, type, msg)
 			
 			if(task:checkPlayerRequirements()) then
 				if(task:getState() == taskStats.COMPLETED) then
-					dialog:say("Converse com os habitantes! Eles as vezes tem algum trabalho para você!", cid);
+					dialog:say("Talk with the people on the city. Maybe someone has more tasks for you!", cid);
 				else
-					dialog:say("Oh! Claro! Hector havia me enviado uma carta falando sobre você! Vou aplicar um treinamento especial em você e assim estara preparado para confrontar monstros mais fortes...", cid)
+					dialog:say("Allright! Hector has sent a mail about you! I will teach you a special training then you will be ready to face harder challengers...", cid)
 					addEvent(addRewardDelay, 1000 * 2, task)
 					task:setCompleted()
-					dialog:say("Agora sim! Está apto a enfrentar itens mais fortes que habitam a parte de fora da cidade! Volte para o centro da cidade agora e fale com Mereus! Ele certamente tera algo para você!", cid)				
+					dialog:say("Done! Now you are ready to face the challengers out of town. Find Mereus! Him will give you the next instructions!", cid)				
 				end
 			else
-				dialog:say("Há coisas para serem feitas na cidade, converse com Mereus ou com Hector que sei que eles precisam de alguma ajuda.", cid)
+				dialog:say("You first need complete the tasks of Mereus and Hector. Come back here after that.", cid)
 			end
 		elseif((npcSys:isFocused(cid)) and (msg == "bye" or msg == "goodbye" or msg == "cya" or msg == "adeus")) then
-			dialog:say("Otimo! Eu já precisava voltar ao treino mesmo!", cid)
+			dialog:say("Goodbye! Come here always you want!", cid)
 			npcSys:removeFocus(cid)		
 		end
 	end

@@ -80,57 +80,23 @@ end
 
 function boatDestiny.addIslandOfPeace(keywordHandler, npcHandler, module)
 
-	module = (module == nil) and StdModule.travel or module
-
-	local travelNode = keywordHandler:addKeyword({'island of peace'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to sail to island of peace for 90 gold coins?'})
-	travelNode:addChildKeyword({'yes'}, module, {npcHandler = npcHandler, premium = false, pvpDisabledOnly = true, level = 0, cost = 90, destination = BOAT_DESTINY_ISLAND_OF_PEACE })
-	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Then stay here!'})
-end
-
-function boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
-
 	local function onAsk(cid, message, keywords, parameters, node)
 		local npcHandler = parameters.npcHandler
 		if(npcHandler == nil) then
 			print('[Warning - ' .. getCreatureName(getNpcId()) .. '] NpcSystem:', 'StdModule.travel - Call without any npcHandler instance.')
 			return false
 		end
-	
+
 		if(not npcHandler:isFocused(cid)) then
 			return false
 		end	
+
+		if(getPlayerLevel(cid) > 50) then
+			npcHandler:say('Sorry, you only are allowed to travel to island of peace until level 50!', cid)
+			return false
+		end		
 		
-		if(darghos_world_configuration == WORLD_CONF_CHANGE_ALLOWED) then
-			local hasFirstChangePvpArea = getPlayerStorageValue(cid, sid.FIRST_CHANGE_PVP_AREA) == 1
-			
-			if(not hasFirstChangePvpArea) then
-				npcHandler:say('Vejo que voc� nunca viajou para Quendor, este barco pode levar-lo para l�, por ser sua primeira viagem, n�o lhe ser� cobrado nada, por�m saiba que fora de Island of Peace voc� poder� ativar ou desativar <...>', cid)
-				npcHandler:say('a habilidade de entrar em combate com outros jogadores, isto �, seu pvp. Inicialmente o seu pvp est� desativado, caso voc� deseje o ativar converse com o NPC\'s que ficam no templo de todas cidades. <...>', cid)
-				npcHandler:say('Saiba tamb�m que somente � permitido voltar para Island of Peace jogadores que estiverem com seu pvp desativado, se voc� o ativar-lo, n�o poder� voltar. <...>', cid)			
-				npcHandler:say('E ent�o, deseja mesmo embarcar para Quendor?', cid)
-				
-				return true
-			end
-			
-			npcHandler:say('Voc� gostaria de pagar 200 moedas de ouro para viajar para Quendor?', cid)
-		elseif(darghos_world_configuration == WORLD_CONF_WEECLY_CHANGE) then
-			
-			if(getPlayerLevel(cid) <= darghos_weecly_change_max_level_any_day) then
-				npcHandler:say('Voc� gostaria de se mudar para Quendor? Lembre-se que ate atingir o nivel ' .. (darghos_weecly_change_max_level_any_day + 1) .. ' voc� podera fazer essa viagem a qualquer instante e de gra�a!', cid)
-			elseif(getPlayerStorageValue(cid, sid.TEMP_TEN_DAYS_FREE_CHANGE_PVP) == -1) then
-				npcHandler:say('Voc� gostaria de se mudar para Quendor e se tornar um jogador agressivo?', cid)			
-			elseif(getPlayerPremiumDays(cid) > 0) then
-				npcHandler:say('Voc� gostaria de se mudar para Quendor e se tornar um jogador agressivo? PRESTE ATEN��O: PARA O SEU N�VEL {ESTA MUDAN�A IRA CONSUMIR ' .. getChangePvpPrice(cid) .. ' DIAS DE SUA CONTA PREMIUM}! VOC� TEM CERTEZA QUE REALMENTE DESEJA ISTO?', cid)
-			else
-				npcHandler:say('Para efetuar uma mudan�a para Quendor e se tornar um jogador agressivo em seu n�vel � necessario possuir dias de conta premium.', cid)
-				npcHandler:resetNpc(cid)
-				return false	
-			end
-		elseif(darghos_world_configuration == WORLD_CONF_AGRESSIVE_ONLY) then
-			npcHandler:say('Quendor � uma maravilhosa cidade! Mais saiba que por l� e por todo o resto do mundo do Darghos n�o � um local seguro, assim voc� poder�  <...>', cid)
-			npcHandler:say('atacar e ser atacado por outras pessoas... Tamb�m esteja ciente que uma vez abandonando esta ilha voc� se tornar� cidad�o de Quendor e n�o ser� mais possivel retornar <...>', cid)
-			npcHandler:say('E ent�o, deseja mesmo embarcar para Quendor?', cid)		
-		end
+		npcHandler:say('You want travel to Island of Peace for 90 gps?', cid)
 		
 		return true
 	end
@@ -146,54 +112,87 @@ function boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
 			return false
 		end	
 		
-		if(darghos_world_configuration == WORLD_CONF_CHANGE_ALLOWED) then
-			local hasFirstChangePvpArea = getPlayerStorageValue(cid, sid.FIRST_CHANGE_PVP_AREA) == 1
-			
-			if(hasFirstChangePvpArea and not doPlayerRemoveMoney(cid, parameters.cost)) then
-				npcHandler:say('Oh, infelizmente voc� n�o possui o dinheiro necessario para embarcar...', cid)
-				npcHandler:resetNpc(cid)
-				return true
-			end	
-			
-			if(not hasFirstChangePvpArea) then
-				npcHandler:say('Seja bem vindo a Quendor caro ' .. getPlayerName(cid) .. '! Para chegar na cidade, siga para o sul e tenha cuidado com as criatura!', cid)		
-				setPlayerStorageValue(cid, sid.FIRST_CHANGE_PVP_AREA, 1)
-			else		
-				npcHandler:say('Seja bem vindo de volta a Quendor caro ' .. getPlayerName(cid) .. '!', cid)
-			end
-			
-			if(getConfigInfo("worldId") == WORLD_AARAGON) then
-				doPlayerSetTown(cid, towns.QUENDOR)
-				doPlayerEnablePvp(cid)
-				setStageOnChangePvp(cid)
-			end
-		elseif(darghos_world_configuration == WORLD_CONF_WEECLY_CHANGE) then
-			
-			local price = getChangePvpPrice(cid)
-			
-			if(getPlayerStorageValue(cid, sid.TEMP_TEN_DAYS_FREE_CHANGE_PVP) == -1) then
-				setPlayerStorageValue(cid, sid.TEMP_TEN_DAYS_FREE_CHANGE_PVP, 1)
-			elseif(price > 0) then
-				if(getPlayerPremiumDays(cid) < price) then
-					npcHandler:say('Desculpe, mas esta mudan�a consome ' .. price .. ' dias de premium de sua conta, e voc� n�o possui isto!', cid)
-					npcHandler:resetNpc(cid)
-					return true				
-				end
-			
-				doPlayerAddPremiumDays(cid, -price)
-			end			
-			
-			doPlayerSetTown(cid, towns.QUENDOR)
-			doPlayerEnablePvp(cid)
-			
-			npcHandler:say('Seja bem vindo de volta a Quendor caro ' .. getPlayerName(cid) .. '!', cid)
-		elseif(darghos_world_configuration == WORLD_CONF_AGRESSIVE_ONLY) then
-			doPlayerSetTown(cid, towns.QUENDOR)
-			doPlayerEnablePvp(cid)
-			setStageOnChangePvp(cid)
-			
-			npcHandler:say('Seja bem vindo a Quendor caro ' .. getPlayerName(cid) .. '!', cid)
+		
+		if(not doPlayerRemoveMoney(cid, parameters.cost)) then
+			npcHandler:say('You don\'t have enough money to do this!', cid)
+			npcHandler:resetNpc(cid)
+			return true
 		end
+		
+		npcHandler:say('Welcome back to Island of Peace ' .. getPlayerName(cid) .. '!', cid)
+		
+		doPlayerDisablePvp(cid)
+		doPlayerSetTown(cid, towns.ISLAND_OF_PEACE)
+		setStageOnChangePvp(cid)
+		
+		doTeleportThing(cid, parameters.destination, false)
+		doSendMagicEffect(parameters.destination, CONST_ME_TELEPORT)		
+		return true
+	end
+
+	local travelNode = keywordHandler:addKeyword({'island of peace'}, onAsk, {npcHandler = npcHandler, onlyFocus = true})
+	travelNode:addChildKeyword({'yes', 'sim'}, onAccept, {npcHandler = npcHandler, cost = 90, destination = BOAT_DESTINY_ISLAND_OF_PEACE })
+	travelNode:addChildKeyword({'no', 'não', 'nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Allright. Have a good day!'})
+end
+
+function boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
+
+	local function onAsk(cid, message, keywords, parameters, node)
+		local npcHandler = parameters.npcHandler
+		if(npcHandler == nil) then
+			print('[Warning - ' .. getCreatureName(getNpcId()) .. '] NpcSystem:', 'StdModule.travel - Call without any npcHandler instance.')
+			return false
+		end
+	
+		if(not npcHandler:isFocused(cid)) then
+			return false
+		end	
+		
+		local hasFirstChangePvpArea = getPlayerStorageValue(cid, sid.FIRST_CHANGE_PVP_AREA) == 1
+		
+		if(not hasFirstChangePvpArea) then
+			npcHandler:say('I see that this is the first time that you go to Quendor. Have some things that you need to know: <...>', cid)
+			npcHandler:say('Out of Island of Peace, all the game is PvP. This means that others players can kill you. <...>', cid)
+			npcHandler:say('Until level 50 you are free to back to Island of Peace if you want. But when you reach these level, you will not be allowed to back here anymore <...>', cid)			
+			npcHandler:say('Then, you really want go to Quendor? The first travel is for free!', cid)
+			
+			return true
+		end
+		
+		npcHandler:say('You want travel to Quendor for 200 gps?', cid)
+		
+		return true
+	end
+	
+	local function onAccept(cid, message, keywords, parameters, node)
+		local npcHandler = parameters.npcHandler
+		if(npcHandler == nil) then
+			print('[Warning - ' .. getCreatureName(getNpcId()) .. '] NpcSystem:', 'StdModule.travel - Call without any npcHandler instance.')
+			return false
+		end
+	
+		if(not npcHandler:isFocused(cid)) then
+			return false
+		end	
+		
+		local hasFirstChangePvpArea = getPlayerStorageValue(cid, sid.FIRST_CHANGE_PVP_AREA) == 1
+		
+		if(hasFirstChangePvpArea and not doPlayerRemoveMoney(cid, parameters.cost)) then
+			npcHandler:say('You don\'t have enough money to do this!', cid)
+			npcHandler:resetNpc(cid)
+			return true
+		end	
+		
+		if(not hasFirstChangePvpArea) then
+			npcHandler:say('Be welcome to the Quendor ' .. getPlayerName(cid) .. '! You will find the depot and temple following to the east!', cid)		
+			setPlayerStorageValue(cid, sid.FIRST_CHANGE_PVP_AREA, 1)
+		else		
+			npcHandler:say('Welcome back to Quendor ' .. getPlayerName(cid) .. '!', cid)
+		end
+		
+		doPlayerEnablePvp(cid)
+		doPlayerSetTown(cid, towns.QUENDOR)
+		setStageOnChangePvp(cid)
 		
 		doTeleportThing(cid, parameters.destination, false)
 		doSendMagicEffect(parameters.destination, CONST_ME_TELEPORT)		
@@ -202,7 +201,7 @@ function boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
 
 	local travelNode = keywordHandler:addKeyword({'quendor'}, onAsk, {npcHandler = npcHandler, onlyFocus = true})
 	travelNode:addChildKeyword({'yes', 'sim'}, onAccept, {npcHandler = npcHandler, cost = 200, destination = BOAT_DESTINY_QUENDOR })
-	travelNode:addChildKeyword({'no', 'não', 'nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Mas que pena... Mas tenha um bom dia!!'})
+	travelNode:addChildKeyword({'no', 'não', 'nao'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Allright. Have a good day!'})
 end
 
 -----------
