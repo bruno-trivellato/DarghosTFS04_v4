@@ -9,7 +9,7 @@ function onCreatureSay(cid, type, msg) 	npcHandler:onCreatureSay(cid, type, msg)
 function onThink() 						npcHandler:onThink() end
 -- OTServ event handling functions end
 
-boatDestiny.addQuendor(keywordHandler, npcHandler)
+boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
         
 local text = 'Meu navio pode levar-lo a {quendor}.'
         
