@@ -93,7 +93,8 @@ function boatDestiny.addIslandOfPeace(keywordHandler, npcHandler, module)
 
 		if(getPlayerLevel(cid) > 50) then
 			npcHandler:say('Sorry, you only are allowed to travel to island of peace until level 50!', cid)
-			return false
+			npcHandler:resetNpc(cid)
+			return true
 		end		
 		
 		npcHandler:say('You want travel to Island of Peace for 90 gps?', cid)
