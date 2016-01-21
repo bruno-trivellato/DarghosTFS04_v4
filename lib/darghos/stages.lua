@@ -67,7 +67,7 @@ stages = {
 	]]
 	
 	[STAGES_EXP_PROTECTED] = {
-		{start_level = 8, multipler = 1}
+		{start_level = 8, multipler = 2}
 	},	
 }
 

@@ -79,7 +79,7 @@ function onCreatureSay(cid, type, msg)
 				npcSys:setTopic(cid, 0)
 			elseif(npcSys:getTopic(cid) == 4) then
 				npcTask:onCompleteConfirm()
-				npcSys:setTopic(cid, 0)
+				npcSys:setTopic(cid, 3)
 			elseif(npcSys:getTopic(cid) == 5) then
 				dialog:say("It's good! You come here waiting for some tasks right? Sadly I dont have any tasks for you anymore but follow to east from here and you will reach the exit of the city and find the Winston, the guard [...]", cid)
 				dialog:say("Last time I've talk with Winston he say me about some problems that he is facing! Talk with him. Good luck! ", cid, 6)

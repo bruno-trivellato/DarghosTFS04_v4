@@ -31,7 +31,7 @@ function onCreatureSay(cid, type, msg)
 				npcSys:setTopic(cid, 0)
 			elseif(npcSys:getTopic(cid) == 4) then
 				npcTask:onCompleteConfirm()
-				npcSys:setTopic(cid, 0)
+				npcSys:setTopic(cid, 3)
 			end
 		elseif((npcSys:isFocused(cid)) and (msg == "bye" or msg == "goodbye" or msg == "cya" or msg == "adeus")) then
 			dialog:say("Human, be carefull!", cid)

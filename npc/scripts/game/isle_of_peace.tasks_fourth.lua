@@ -44,7 +44,7 @@ function onCreatureSay(cid, type, msg)
 				npcSys:setTopic(cid, 0)
 			elseif(npcSys:getTopic(cid) == 4) then
 				npcTask:onCompleteConfirm()
-				npcSys:setTopic(cid, 0)	
+				npcSys:setTopic(cid, 3)	
 			elseif(npcSys:getTopic(cid) == 5) then	
 				dialog:say( getCreatureName(cid) ..", the King will be happy! Follow to south until you find the sand and the pyramid. Your mission is [...]", cid)
 				dialog:say("go to the lower floor of this pyramid. Be carefull. This mission is dagerous and you need face all kind of minotaurs [...]", cid, 6)
