@@ -298,7 +298,8 @@ trade_lists = {
 		{ name = "shovel", sell_for = 50, buy_for = 8 },				
 		{ name = "worm", sell_for = 1 },				
 		{ name = "torch", sell_for = 2 },				
-		{ name = "magic lightwand", itemtype = 2162, sell_for = 120, buy_for = 35 },				
+		{ name = "magic lightwand", itemtype = 2162, sell_for = 120, buy_for = 35 },
+		{ name = "flask of rusty remover", sell_for = 100 }
 	},	
 	
 	["foods"] = {
