@@ -95,6 +95,12 @@ function boatDestiny.addIslandOfPeace(keywordHandler, npcHandler, module)
 			npcHandler:say('Sorry, you only are allowed to travel to island of peace until level 50!', cid)
 			npcHandler:resetNpc(cid)
 			return true
+		end
+
+		if(getCreatureSkull(cid) >= SKULL_WHITE) then
+			npcHandler:say("You have blood on your hands. Get out of there!", cid)
+			npcHandler:resetNpc(cid)
+			return true
 		end		
 		
 		npcHandler:say('You want travel to Island of Peace for 90 gps?', cid)
