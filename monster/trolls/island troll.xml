@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="island troll" nameDescription="an island troll" race="blood" experience="20" speed="190" manacost="290">
-  <health now="50" max="50"/>
+<monster name="island troll" nameDescription="an island troll" race="blood" experience="25" speed="190" manacost="290">
+  <health now="55" max="55"/>
   <look type="282" head="20" body="30" legs="40" feet="50" corpse="7930"/>
   <targetchange interval="5000" chance="20"/>
   <strategy attack="100" defense="0"/>
