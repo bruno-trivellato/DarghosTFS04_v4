@@ -18,12 +18,12 @@ function task(cid, message, keywords, parameters, node)
 	task:setNpcName(getNpcName())
 	
 	if(task:getState() ~= taskStats.COMPLETED and task:checkPlayerRequirements()) then
-		npcHandler:say("Oh, claro! Mészáros havia me falado sobre você, o bravo matador de dragões, e pediu que lhe desse este premio por você ter o ajudado:",cid)
+		npcHandler:say("Oh, yes, of course! Mesth'zaros talk about you, the young Dragon's slayer. This is the reward by all the work you have done on Island of Peace:",cid)
 		task:doPlayerAddReward()			
 		task:setCompleted()
-		npcHandler:say("Ele havia dito que esperava que você gostasse. Deve ter o ajudado em algo muito perigoso, pois é uma generosa recompensa. Bom, se ver-lo por ai mande lembranças. Boa sorte bravo guerreiro!",cid)
+		npcHandler:say("Well, is a valuable reward and fair by all your dedication. If you see Mesth'zaros give you hi by me. Have good luck on your adventure from here!",cid)
 	else
-		npcHandler:say("Ever talk with citizens about tasks and missions, any times then can give alot of rewards!",cid)
+		npcHandler:say("Always talk with citizens about tasks and missions, sometimes they can give alot of rewards!",cid)
 	end
 
     return true
