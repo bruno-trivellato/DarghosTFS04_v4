@@ -29,6 +29,6 @@ function task(cid, message, keywords, parameters, node)
     return true
 end
 
-keywordHandler:addKeyword({'tarefa'}, task, nil)
+keywordHandler:addKeyword({'task', 'tarefa', 'mission'}, task, nil)
 
 npcHandler:addModule(FocusModule:new())
