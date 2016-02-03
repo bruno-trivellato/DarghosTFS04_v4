@@ -3042,31 +3042,6 @@
 	<spawn centerx="2492" centery="1827" centerz="6" radius="5">
 		<monster name="Ariadne Adept" x="0" y="-1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="2583" centery="1830" centerz="6" radius="5">
-		<monster name="Wyvern" x="3" y="-2" z="6" spawntime="60" />
-		<monster name="Wyvern" x="5" y="3" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="2594" centery="1831" centerz="6" radius="5">
-		<monster name="Wyvern" x="-1" y="-2" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="2573" centery="1834" centerz="6" radius="5">
-		<monster name="Wyvern" x="3" y="-4" z="6" spawntime="60" />
-		<monster name="Wyvern" x="-2" y="4" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="2532" centery="1835" centerz="6" radius="5">
-		<monster name="Wyvern" x="-1" y="-1" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="2543" centery="1836" centerz="6" radius="5">
-		<monster name="Wyvern" x="2" y="-1" z="6" spawntime="60" />
-		<monster name="Wyvern" x="0" y="4" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="2586" centery="1837" centerz="6" radius="5">
-		<monster name="Wyvern" x="1" y="0" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="2560" centery="1840" centerz="6" radius="5">
-		<monster name="Wyvern" x="-3" y="-1" z="6" spawntime="60" />
-		<monster name="Wyvern" x="4" y="-1" z="6" spawntime="60" />
-	</spawn>
 	<spawn centerx="2102" centery="1842" centerz="6" radius="5">
 		<monster name="Valkyrie" x="-1" y="-3" z="6" spawntime="120" />
 		<monster name="Amazon" x="3" y="0" z="6" spawntime="120" />
@@ -3080,27 +3055,8 @@
 		<monster name="Bat" x="-11" y="2" z="6" spawntime="59" />
 		<monster name="Bat" x="-7" y="3" z="6" spawntime="59" />
 	</spawn>
-	<spawn centerx="2571" centery="1844" centerz="6" radius="5">
-		<monster name="Wyvern" x="-1" y="1" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="2596" centery="1844" centerz="6" radius="5">
-		<monster name="Wyvern" x="3" y="-2" z="6" spawntime="60" />
-		<monster name="Wyvern" x="-3" y="2" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="2535" centery="1845" centerz="6" radius="5">
-		<monster name="Wyvern" x="1" y="-4" z="6" spawntime="60" />
-		<monster name="Wyvern" x="-4" y="-1" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="2547" centery="1847" centerz="6" radius="5">
-		<monster name="Wyvern" x="4" y="-1" z="6" spawntime="60" />
-		<monster name="Wyvern" x="-3" y="0" z="6" spawntime="60" />
-	</spawn>
 	<spawn centerx="2781" centery="1847" centerz="6" radius="1">
 		<npc name="thorn.postman" x="0" y="0" z="6" spawntime="60" direction="2" />
-	</spawn>
-	<spawn centerx="2580" centery="1848" centerz="6" radius="5">
-		<monster name="Wyvern" x="-3" y="-4" z="6" spawntime="60" />
-		<monster name="Wyvern" x="-3" y="2" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="2210" centery="1849" centerz="6" radius="5">
 		<monster name="Valkyrie" x="3" y="-2" z="6" spawntime="60" />
@@ -3110,12 +3066,6 @@
 	</spawn>
 	<spawn centerx="2406" centery="1850" centerz="6" radius="1">
 		<npc name="thorn.postman" x="0" y="0" z="6" spawntime="60" direction="2" />
-	</spawn>
-	<spawn centerx="2589" centery="1850" centerz="6" radius="5">
-		<monster name="Wyvern" x="-2" y="2" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="2537" centery="1852" centerz="6" radius="5">
-		<monster name="Wyvern" x="-2" y="2" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="2087" centery="1853" centerz="6" radius="8">
 		<monster name="Amazon" x="0" y="-3" z="6" spawntime="120" />
@@ -3136,9 +3086,6 @@
 	<spawn centerx="2191" centery="1854" centerz="6" radius="5">
 		<monster name="Valkyrie" x="-1" y="-1" z="6" spawntime="60" />
 		<monster name="Valkyrie" x="1" y="-1" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="2545" centery="1854" centerz="6" radius="5">
-		<monster name="Wyvern" x="-1" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="2109" centery="1855" centerz="6" radius="5">
 		<monster name="Amazon" x="2" y="-2" z="6" spawntime="120" />
@@ -3170,24 +3117,11 @@
 	<spawn centerx="2313" centery="1865" centerz="6" radius="5">
 		<monster name="Cyclops" x="2" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="2481" centery="1869" centerz="6" radius="5">
-		<monster name="Valkyrie" x="-1" y="-3" z="6" spawntime="60" />
-		<monster name="Witch" x="-2" y="-1" z="6" spawntime="60" />
-		<monster name="Witch" x="3" y="-1" z="6" spawntime="60" />
-		<monster name="Valkyrie" x="1" y="1" z="6" spawntime="60" />
-	</spawn>
 	<spawn centerx="2125" centery="1871" centerz="6" radius="5">
 		<monster name="Valkyrie" x="0" y="-3" z="6" spawntime="120" />
 		<monster name="Amazon" x="2" y="-2" z="6" spawntime="120" />
 		<monster name="Amazon" x="-2" y="-1" z="6" spawntime="120" />
 		<monster name="Amazon" x="0" y="1" z="6" spawntime="120" />
-	</spawn>
-	<spawn centerx="2492" centery="1871" centerz="6" radius="5">
-		<monster name="Valkyrie" x="-1" y="-4" z="6" spawntime="60" />
-		<monster name="Valkyrie" x="3" y="-4" z="6" spawntime="60" />
-		<monster name="Witch" x="3" y="-1" z="6" spawntime="60" />
-		<monster name="Valkyrie" x="2" y="1" z="6" spawntime="60" />
-		<monster name="Valkyrie" x="4" y="5" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="2307" centery="1872" centerz="6" radius="5">
 		<monster name="Cyclops" x="2" y="1" z="6" spawntime="60" />
@@ -3203,12 +3137,6 @@
 	<spawn centerx="2501" centery="1877" centerz="6" radius="5">
 		<monster name="Ariadne Adept" x="1" y="-1" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="2481" centery="1881" centerz="6" radius="5">
-		<monster name="Witch" x="0" y="-3" z="6" spawntime="60" />
-		<monster name="Valkyrie" x="-2" y="-1" z="6" spawntime="60" />
-		<monster name="Valkyrie" x="1" y="1" z="6" spawntime="60" />
-		<monster name="Witch" x="-1" y="2" z="6" spawntime="60" />
-	</spawn>
 	<spawn centerx="2265" centery="1882" centerz="6" radius="5">
 		<monster name="Cyclops" x="1" y="-5" z="6" spawntime="60" />
 		<monster name="Cyclops" x="5" y="-5" z="6" spawntime="60" />
@@ -3216,12 +3144,6 @@
 		<monster name="Cyclops" x="1" y="-1" z="6" spawntime="60" />
 		<monster name="Cyclops" x="-1" y="0" z="6" spawntime="60" />
 		<monster name="Cyclops" x="-1" y="3" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="2493" centery="1882" centerz="6" radius="5">
-		<monster name="Valkyrie" x="-3" y="-5" z="6" spawntime="60" />
-		<monster name="Valkyrie" x="0" y="-1" z="6" spawntime="60" />
-		<monster name="Witch" x="2" y="-1" z="6" spawntime="60" />
-		<monster name="Valkyrie" x="-3" y="1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="2454" centery="1884" centerz="6" radius="5">
 		<monster name="Ariadne Adept" x="-2" y="2" z="6" spawntime="60" />
@@ -3237,11 +3159,6 @@
 	</spawn>
 	<spawn centerx="2267" centery="1898" centerz="6" radius="5">
 		<monster name="Cyclops" x="-1" y="-1" z="6" spawntime="60" />
-	</spawn>
-	<spawn centerx="2543" centery="1901" centerz="6" radius="5">
-		<monster name="Bat" x="-3" y="-5" z="6" spawntime="60" />
-		<monster name="Bat" x="0" y="-2" z="6" spawntime="60" />
-		<monster name="Bat" x="3" y="0" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="1986" centery="1904" centerz="6" radius="11">
 		<monster name="Minotaur" x="4" y="-9" z="6" spawntime="60" />
