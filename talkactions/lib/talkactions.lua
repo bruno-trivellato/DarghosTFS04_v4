@@ -64,3 +64,8 @@ function doSummonCreatureNear(cid, target)
 	
 	return false
 end
+
+_helpChannel = {}
+
+_helpChannel.locked = false
+_helpChannel.lockedMessage = "The help channel is locked from while. Please, use Rule Violetion Window (Ctrl + R) instead."

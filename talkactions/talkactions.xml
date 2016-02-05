@@ -9,6 +9,8 @@
 	<talkaction words="/getoutfit" channel="65534" access="4" event="script" value="game/getoutfit.lua"/>
 	<talkaction log="yes" words="/poll" channel="65534" logged="1" access="5" event="script" value="game/createpoll.lua"/>
 	<talkaction log="yes" words="/premiumvalue" channel="65534" logged="1" access="5" event="script" value="game/premium.lua"/>
+	<talkaction log="yes" words="/lockhelp" channel="65534" logged="1" access="5" event="script" value="game/helplock.lua"/>
+	<talkaction log="yes" words="/unlockhelp" channel="65534" logged="1" access="5" event="script" value="game/helplock.lua"/>
 	<!-- 
 	<talkaction words="!fulllight" access="0" event="script" value="game/hack_light.lua"/>	
 	<talkaction words="!antikick;!afk" access="0" event="script" value="game/hack_dance.lua"/> 

@@ -44,6 +44,11 @@ local HELP_EXHAUSTED = 15 -- segundos
 
 function help.onSay(cid, words, param, channel)
 	
+	if(_helpChannel.locked) then
+		doPlayerSendChannelMessage(cid, "System", _helpChannel.lockedMessage, TALKTYPE_TYPES["channel-orange"], CHANNEL_HELP)
+		return true
+	end
+
 	local banExpires = getPlayerStorageValue(cid, sid.BANNED_IN_HELP)
 	local lastMessage = getPlayerStorageValue(cid, sid.LAST_HELP_MESSAGE)
 	

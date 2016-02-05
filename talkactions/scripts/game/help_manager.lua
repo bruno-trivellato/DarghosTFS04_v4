@@ -30,7 +30,7 @@ function onSay(cid, words, param)
 			key = "-r"
 			,value = ""
 			,help = "Motivo da punição."
-		}	
+		}		
 	}
 	
 	local code, result = parseTalkactionParameters(configs, param)
