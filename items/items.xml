@@ -8265,9 +8265,10 @@
 	<item id="5460" article="a" name="damaged ventilation grill" />
 	<item id="5461" article="a" name="helmet of the deep">
 		<attribute key="weight" value="21000" />
+		<attribute key="description" value="Enables underwater exploration." />
 		<attribute key="armor" value="2" />
 		<attribute key="slotType" value="head" />
-		<attribute key="suppressDrown" value="1" />
+		<attribute key="transformEquipTo" value="12541" />
 	</item>
 	<item id="5462" name="pirate boots">
 		<attribute key="weight" value="800" />
@@ -18418,11 +18419,13 @@
 		<attribute key="weight" value="2000"/>
 	</item>
 	<item id="12541" article="a" name="helmet of the deep">
-		<attribute key="weight" value="21000"/>
-		<attribute key="armor" value="2"/>
-		<attribute key="slotType" value="head"/>
-		<attribute key="suppressDrown" value="1"/>
-		<attribute key="speed" value="600"/>
+		<attribute key="weight" value="21000" />
+		<attribute key="armor" value="2" />
+		<attribute key="slotType" value="head" />
+		<attribute key="suppressDrown" value="1" />
+		<attribute key="speed" value="600" />
+		<attribute key="transformDeEquipTo" value="5461" />
+		<attribute key="showattributes" value="1" />		
 	</item>
 	<item id="12542" article="a" name="pot of blackjack">
 		<attribute key="description" value="Nomads state that this meal fills you with energy several times before the pot is empty."/>

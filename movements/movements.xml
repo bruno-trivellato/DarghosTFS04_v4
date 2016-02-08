@@ -579,13 +579,14 @@
 		<!-- Dwarven Helmet -->
 	<movevent type="Equip" itemid="2502" slot="head" event="function" value="onEquipItem"/>
 	<movevent type="DeEquip" itemid="2502" slot="head" event="function" value="onDeEquipItem"/>
-		<!-- Helmet of the Deep -->
+		
+		<!-- Helmet of the Deep (unequipped) -->
+	<movevent type="Equip" itemid="5461" slot="head" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="5461" slot="head" event="function" value="onDeEquipItem"/>
+		<!-- Helmet of the Deep (equipped) -->
+	<movevent type="Equip" itemid="12541" slot="head" event="function" value="onEquipItem"/>
 	<movevent type="DeEquip" itemid="12541" slot="head" event="function" value="onDeEquipItem"/>
-	<!--
-	wtf?
-	<movevent type="Equip" itemid="5461" slot="head" event="script" value="hotd.lua"/>
-	<movevent type="Equip" itemid="12541" slot="head" event="script" value="hotd.lua"/>
-	-->
+
 		<!-- Earmuffs -->
 	<movevent type="Equip" itemid="7459" slot="head" event="function" value="onEquipItem"/>
 	<movevent type="DeEquip" itemid="7459" slot="head" event="function" value="onDeEquipItem"/>
