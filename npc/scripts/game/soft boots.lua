@@ -16,11 +16,11 @@ function creatureSayCallback(cid, type, msg)
 	local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
 
 	if(msgcontains(msg, 'soft') or msgcontains(msg, 'boots')) then
-		selfSay('Do you want to repair your worn soft boots for 10000 gold coins?', cid)
+		selfSay('Do you want to repair your worn soft boots for 40000 gold coins?', cid)
 		talkState[talkUser] = 1
 	elseif(msgcontains(msg, 'yes') and talkState[talkUser] == 1) then
 		if(getPlayerItemCount(cid, 6530) >= 1) then
-			if(doPlayerRemoveMoney(cid, 10000) == TRUE) then
+			if(doPlayerRemoveMoney(cid, 40000) == TRUE) then
 				doPlayerRemoveItem(cid, 6530, 1)
 				doPlayerAddItem(cid, 2640)
 				selfSay('Here you are.', cid)
