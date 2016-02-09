@@ -82,7 +82,7 @@
 		<keywords>boots</keywords>
 		<keywords>recharge</keywords>
 		<keywords>trade</keywords>
-		<response text="Do you want repair your worn soft boots for 40.000 gold coins?">
+		<response text="Do you want repair your worn soft boots for 10.000 gold coins?">
 			<action name="topic" value="1"/>
 
 			<interact keywords="yes" topic="1">
@@ -90,7 +90,7 @@
 					<action name="script">
 					<![CDATA[
 					if getPlayerItemCount(cid,10021) >= 1 then
-						if(doPlayerRemoveMoney(cid, 40000)) == TRUE then
+						if(doPlayerRemoveMoney(cid, 10000)) == TRUE then
 							doPlayerRemoveItem(cid,6530,1)
 							doPlayerRemoveItem(cid,10021,1)
 							doPlayerAddItem(cid, 6132,1)
