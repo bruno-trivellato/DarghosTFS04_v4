@@ -32,6 +32,7 @@
 	<event type="kill" name="onKill" event="script" value="game/kill.lua"/>
 	<event type="kill" name="CustomTasks" event="script" value="game/tasks.lua"/>
 	<event type="advance" name="CustomStages" event="script" value="game/stages.lua"/>
+	<event type="think" name="Hots" event="script" value="game/hotd.lua"/>
 	<event type="think" name="Hacks" event="script" value="game/hacks.lua"/>
 	<event type="think" name="GainStamina" event="script" value="game/stamina.lua"/>
 	<event type="statschange" name="onStateChange" event="script" value="game/onstatechange.lua"/>
