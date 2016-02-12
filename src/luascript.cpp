@@ -20,6 +20,7 @@
 
 #include <boost/filesystem.hpp>
 #include <boost/any.hpp>
+#include <boost/range/adaptor/reversed.hpp>
 #include <iostream>
 #include <iomanip>
 
@@ -934,33 +935,35 @@ void LuaInterface::executeTimer(uint32_t eventIndex)
 	LuaTimerEvents::iterator it = m_timerEvents.find(eventIndex);
 	if(it != m_timerEvents.end())
 	{
+        LuaTimerEvent event = std::move(it->second);
+        m_timerEvents.erase(it);
+
 		//push function
-		lua_rawgeti(m_luaState, LUA_REGISTRYINDEX, it->second.function);
+        lua_rawgeti(m_luaState, LUA_REGISTRYINDEX, event.function);
 
 		//push parameters
-		for(std::list<int32_t>::reverse_iterator rt = it->second.parameters.rbegin(); rt != it->second.parameters.rend(); ++rt)
-			lua_rawgeti(m_luaState, LUA_REGISTRYINDEX, *rt);
+        for (auto parameter : boost::adaptors::reverse(event.parameters)) {
+            lua_rawgeti(m_luaState, LUA_REGISTRYINDEX, parameter);
+        }
 
 		//call the function
 		if(reserveEnv())
 		{
 			ScriptEnviroment* env = getEnv();
 			env->setTimerEvent();
-			env->setScriptId(it->second.scriptId, this);
+            env->setScriptId(event.scriptId, this);
 
-			callFunction(it->second.parameters.size());
+            callFunction(event.parameters.size());
 			releaseEnv();
 		}
 		else
 			std::clog << "[Error - LuaInterface::executeTimer] Call stack overflow." << std::endl;
 
-		//free resources
-		for(std::list<int32_t>::iterator lt = it->second.parameters.begin(); lt != it->second.parameters.end(); ++lt)
-			luaL_unref(m_luaState, LUA_REGISTRYINDEX, *lt);
-
-		it->second.parameters.clear();
-		luaL_unref(m_luaState, LUA_REGISTRYINDEX, it->second.function);
-		m_timerEvents.erase(it);
+        //free resources
+        luaL_unref(m_luaState, LUA_REGISTRYINDEX, event.function);
+        for (auto parameter : event.parameters) {
+            luaL_unref(m_luaState, LUA_REGISTRYINDEX, parameter);
+        }
 	}
 }
 
