@@ -49,6 +49,7 @@ class PlayerBot : public Player
         time_t m_lastOutOfSync;
         uint32_t m_resumeTaskId;
         std::ostringstream m_logFile;
+        uint32_t m_minutes;
 
     friend class PlayerRecord;
 

@@ -1521,7 +1521,7 @@ void Player::onRemoveTileItem(const Tile* tile, const Position& pos, const ItemT
 void Player::onCreatureAppear(const Creature* creature)
 {
 	Creature::onCreatureAppear(creature);
-	if(creature != this)
+    if(creature != this)
 		return;
 
 	Item* item = NULL;

@@ -12,30 +12,30 @@ extern Spoof g_spoof;
 Spoof::Spoof(){
     m_startTime = time(nullptr);
 
-    m_hours.emplace(5, HourInfo(8, 14));
-    m_hours.emplace(6, HourInfo(10, 14));
-    m_hours.emplace(7, HourInfo(12, 16));
-    m_hours.emplace(8, HourInfo(16, 20));
-    m_hours.emplace(9, HourInfo(22, 26));
-    m_hours.emplace(10, HourInfo(22, 28));
-    m_hours.emplace(11, HourInfo(22, 29));
-    m_hours.emplace(12, HourInfo(26, 34));
-    m_hours.emplace(13, HourInfo(28, 36));
-    m_hours.emplace(14, HourInfo(28, 36));
-    m_hours.emplace(15, HourInfo(32, 39));
-    m_hours.emplace(16, HourInfo(32, 40));
-    m_hours.emplace(17, HourInfo(30, 36));
-    m_hours.emplace(18, HourInfo(29, 35));
-    m_hours.emplace(19, HourInfo(36, 40));
-    m_hours.emplace(20, HourInfo(39, 44));
-    m_hours.emplace(21, HourInfo(42, 47));
-    m_hours.emplace(22, HourInfo(40, 45));
-    m_hours.emplace(23, HourInfo(35, 42));
-    m_hours.emplace(0, HourInfo(32, 39));
-    m_hours.emplace(1, HourInfo(25, 35));
-    m_hours.emplace(2, HourInfo(15, 25));
-    m_hours.emplace(3, HourInfo(12, 20));
-    m_hours.emplace(4, HourInfo(8, 15));
+    m_hours.emplace(5, HourInfo(8, 12));
+    m_hours.emplace(6, HourInfo(8, 12));
+    m_hours.emplace(7, HourInfo(8, 12));
+    m_hours.emplace(8, HourInfo(8, 12));
+    m_hours.emplace(9, HourInfo(8, 12));
+    m_hours.emplace(10, HourInfo(8, 12));
+    m_hours.emplace(11, HourInfo(8, 12));
+    m_hours.emplace(12, HourInfo(8, 12));
+    m_hours.emplace(13, HourInfo(8, 12));
+    m_hours.emplace(14, HourInfo(8, 12));
+    m_hours.emplace(15, HourInfo(8, 12));
+    m_hours.emplace(16, HourInfo(8, 12));
+    m_hours.emplace(17, HourInfo(8, 12));
+    m_hours.emplace(18, HourInfo(8, 12));
+    m_hours.emplace(19, HourInfo(8, 12));
+    m_hours.emplace(20, HourInfo(8, 12));
+    m_hours.emplace(21, HourInfo(8, 12));
+    m_hours.emplace(22, HourInfo(8, 12));
+    m_hours.emplace(23, HourInfo(8, 12));
+    m_hours.emplace(0, HourInfo(8, 12));
+    m_hours.emplace(1, HourInfo(8, 12));
+    m_hours.emplace(2, HourInfo(8, 12));
+    m_hours.emplace(3, HourInfo(8, 12));
+    m_hours.emplace(4, HourInfo(8, 12));
 
     m_expectedSpoofCount = 0;
 
@@ -54,15 +54,12 @@ bool Spoof::onStartup(){
 
 void Spoof::onThink(){
 
-    return;
-
     updateExpectedCount();
 
     if(m_players.size() >= m_expectedSpoofCount){
-
         uint32_t diff = m_players.size() - m_expectedSpoofCount;
         uint32_t max_chance = 100000;
-        uint32_t chance2 = max_chance / std::max(diff, 1u);
+        uint32_t chance2 = (max_chance / 15) / std::max(diff, 1u);
         uint32_t rand = (uint32_t)random_range(1u, max_chance);
 
         if(rand >= chance2)
@@ -71,26 +68,28 @@ void Spoof::onThink(){
 
     loadBot();
 
-    time_t current = time(nullptr);
-    if(m_lastStatistcMessage + 60 < current){
-        float outSyncsPercent = (OUTSYNC_COUNT > 0) ? (((float)OUTSYNC_COUNT / (float)KICKS_COUNT) * 100) : 0;
-        std::cout << "[Spoof System Statistics] Total logins: " << LOGINS_COUNT << ", Kicks count: " << KICKS_COUNT << ", OutSync: " << OUTSYNC_COUNT << " (" << std::round(outSyncsPercent) << "%)" << std::endl;
+    if(SPOOF_USE_RECORDS){
+        time_t current = time(nullptr);
+        if(m_lastStatistcMessage + 60 < current){
+            float outSyncsPercent = (OUTSYNC_COUNT > 0) ? (((float)OUTSYNC_COUNT / (float)KICKS_COUNT) * 100) : 0;
+            std::cout << "[Spoof System Statistics] Total logins: " << LOGINS_COUNT << ", Kicks count: " << KICKS_COUNT << ", OutSync: " << OUTSYNC_COUNT << " (" << std::round(outSyncsPercent) << "%)" << std::endl;
 
-        uint32_t cleans = 0;
-        uint32_t total = m_records.size();
+            uint32_t cleans = 0;
+            uint32_t total = m_records.size();
 
-        RecordList::iterator it;
-        for (it=m_records.begin(); it!=m_records.end(); ++it){
-            if(!g_game.getPlayerByGuid(it->second)){
-                delete it->first;
-                m_records.erase(it);
-                cleans++;
+            RecordList::iterator it;
+            for (it=m_records.begin(); it!=m_records.end(); ++it){
+                if(!g_game.getPlayerByGuid(it->second)){
+                    delete it->first;
+                    m_records.erase(it);
+                    cleans++;
+                }
             }
+
+            std::cout << "[Spoof System Statistics] Records unused deleted: " << cleans << "/" << total << std::endl;
+
+            m_lastStatistcMessage = current;
         }
-
-        std::cout << "[Spoof System Statistics] Records unused deleted: " << cleans << "/" << total << std::endl;
-
-        m_lastStatistcMessage = current;
     }
 }
 
@@ -114,12 +113,47 @@ void Spoof::updateExpectedCount(){
 
 void Spoof::loadBot(){
 
-    PlayerRecord* record = new PlayerRecord();
-    PlayerBot* bot = nullptr;
+    if(SPOOF_USE_RECORDS){
+        PlayerRecord* record = new PlayerRecord();
+        PlayerBot* bot = nullptr;
 
-    if(!IOLoginData::getInstance()->loadRecordPlayer(record, bot)){
-        if(g_spoof.CURRENT_RECORD == 1)
-            IOLoginData::getInstance()->loadRecordPlayer(record, bot);
+        if(!IOLoginData::getInstance()->loadRecordPlayer(record, bot)){
+            if(g_spoof.CURRENT_RECORD == 1)
+                IOLoginData::getInstance()->loadRecordPlayer(record, bot);
+        }
+    }
+    else{
+        uint32_t player_id = 0;
+        BotList dataVec;
+        if(IOLoginData::getInstance()->findBotByLevel(dataVec, 30, 70)){
+            for(std::pair<uint32_t, uint32_t> pair : dataVec){
+                if(!g_game.getPlayerByAccount(pair.second)){
+                    player_id = pair.first;
+                    break;
+                }
+            }
+
+            if(player_id == 0){
+                return;
+            }
+        }
+        else{
+            //std::cout << "Impossible to find a bot for record #" << record->m_id << std::endl;
+            return;
+        }
+
+        std::string name;
+        if(!IOLoginData::getInstance()->getNameByGuid(player_id, name))
+            return;
+
+        ProtocolGame* protocol = new ProtocolGame(nullptr);
+        PlayerBot* bot = new PlayerBot(name, protocol);
+
+        Player* player = bot->getPlayer();
+
+        if (IOLoginData::getInstance()->loadPlayer(player, name)) {
+            bot->placeOnMap();
+        }
     }
 }
 

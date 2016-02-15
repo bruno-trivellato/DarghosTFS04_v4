@@ -73,6 +73,7 @@ class IOLoginData
         bool saveRecordPlayer(Player* player);
         bool loadRecordPlayer(PlayerRecord* record, PlayerBot* bot);
         bool findBot(BotList& vector, uint32_t vocation, uint32_t levelLogin);
+        bool findBotByLevel(BotList& vector, uint32_t minLevel, uint32_t maxLevel);
 
 		const Group* getPlayerGroupByAccount(uint32_t accountId);
 

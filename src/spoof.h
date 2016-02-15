@@ -4,6 +4,8 @@
 #include "enums.h"
 #include "fileloader.h"
 
+#define SPOOF_USE_RECORDS 0
+
 class PlayerBot;
 class Player;
 class PlayerRecord;

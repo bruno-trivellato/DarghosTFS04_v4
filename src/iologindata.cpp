@@ -522,6 +522,24 @@ bool IOLoginData::findBot(BotList& vector, uint32_t vocation, uint32_t levelLogi
     return false;
 }
 
+bool IOLoginData::findBotByLevel(BotList& vector, uint32_t minLevel, uint32_t maxLevel){
+    Database* db = Database::getInstance();
+    DBQuery query;
+    query << "SELECT `id`, `account_id` FROM `players` WHERE `level` BETWEEN " << minLevel << " AND " << maxLevel << " AND `spoof` = 1 ORDER BY RAND() LIMIT 5";
+
+    DBResult* result = db->storeQuery(query.str());
+    if (result) {
+        do {
+            vector.push_back(std::make_pair(result->getDataInt("id"), result->getDataInt("account_id")));
+        } while (result->next());
+        result->free();
+
+        return true;
+    }
+
+    return false;
+}
+
 bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLoad /*= false*/)
 {
 	Database* db = Database::getInstance();

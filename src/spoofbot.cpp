@@ -17,6 +17,7 @@ PlayerBot::PlayerBot(const std::string& name, ProtocolGame* p) :
     m_loginMicro = OTSYS_TIME();
     m_outOfSync = 0;
     m_lastOutOfSync = 0;
+    m_minutes = 0;
 }
 
 PlayerBot::~PlayerBot()
@@ -46,61 +47,87 @@ void PlayerBot::onExiva(Player* player){
 
 void PlayerBot::placeOnMap(){
 
-    std::cout << "[Spoof System] Bot " << getName() << " loaded with record #" << m_record->m_id << std::endl; 
+    if(m_record != nullptr){
+        std::cout << "[Spoof System] Bot " << getName() << " loaded with record #" << m_record->m_id << std::endl;
 
-    if(!m_record->m_pause && m_record->m_iterator == m_record->m_actions.begin()){
-        m_record->m_lastAction = &(*m_record->m_iterator);
-        m_record->m_iterator++;
+        if(!m_record->m_pause && m_record->m_iterator == m_record->m_actions.begin()){
+            m_record->m_lastAction = &(*m_record->m_iterator);
+            m_record->m_iterator++;
 
-        Position tempPos;
-        tempPos.x = m_record->m_lastAction->posx;
-        tempPos.y = m_record->m_lastAction->posy;
-        tempPos.z = m_record->m_lastAction->posz;
+            Position tempPos;
+            tempPos.x = m_record->m_lastAction->posx;
+            tempPos.y = m_record->m_lastAction->posy;
+            tempPos.z = m_record->m_lastAction->posz;
 
-        Position recPos;
-        recPos.x = m_record->m_posx;
-        recPos.y = m_record->m_posy;
-        recPos.z = m_record->m_posz;
+            Position recPos;
+            recPos.x = m_record->m_posx;
+            recPos.y = m_record->m_posy;
+            recPos.z = m_record->m_posz;
 
-        if(tempPos.getX() != recPos.getX() || tempPos.getY() != recPos.getY() || tempPos.getZ() != recPos.getZ()){
-            if (!g_game.placeCreature(getPlayer(), tempPos)) {
-                std::clog << "[Spoof System] Can not load spoof " << getName() << " on map." << std::endl;
-                return;
+            if(tempPos.getX() != recPos.getX() || tempPos.getY() != recPos.getY() || tempPos.getZ() != recPos.getZ()){
+                if (!g_game.placeCreature(getPlayer(), tempPos)) {
+                    std::clog << "[Spoof System] Can not load spoof " << getName() << " on map." << std::endl;
+                    return;
+                }
+
+                m_logFile << logHeader() << " [" << getName() << "] Try to sync pos moving to first action pos. [" << tempPos.getX() << ", " << tempPos.getY() << ", " << tempPos.getZ() << "]" << std::endl;
+            }
+            else{
+                if (!g_game.placeCreature(getPlayer(), recPos)) {
+                    std::clog << "[Spoof System] Can not load spoof " << getName() << " on map." << std::endl;
+                    return;
+                }
             }
 
-            m_logFile << logHeader() << " [" << getName() << "] Try to sync pos moving to first action pos. [" << tempPos.getX() << ", " << tempPos.getY() << ", " << tempPos.getZ() << "]" << std::endl;
+            g_scheduler.addEvent(createSchedulerTask(m_record->m_lastAction->timestamp ,std::bind(&Spoof::checkBotIdResume, &g_spoof, getGUID())));
         }
-        else{
-            if (!g_game.placeCreature(getPlayer(), recPos)) {
-                std::clog << "[Spoof System] Can not load spoof " << getName() << " on map." << std::endl;
-                return;
+
+        onLoad();
+
+        std::pair<PlayerRecord*, uint32_t> pair(m_record, getGUID());
+        g_spoof.m_records.insert(pair);
+    }
+    else{
+        std::cout << "[Spoof System] Bot " << getName() << " loaded" << std::endl;
+
+        Position pos;
+
+        pos.x = 0;
+        pos.y = 0;
+        pos.z = 0;
+
+        for(uint32_t k = 8000; k < 8119; k++){
+            Thing* thing = ScriptEnviroment::getUniqueThing(k);
+            if(thing){
+                if(!thing->getTile()->getTopCreature()){
+                    pos.x = thing->getPosition().x;
+                    pos.y = thing->getPosition().y;
+                    pos.z = thing->getPosition().z;
+
+                    break;
+                }
             }
         }
 
-        g_scheduler.addEvent(createSchedulerTask(m_record->m_lastAction->timestamp ,std::bind(&Spoof::checkBotIdResume, &g_spoof, getGUID())));
+        if(pos.x == 0){
+            std::clog << "[Spoof System] Not found trainer room for " << getName() << "." << std::endl;
+            return;
+        }
+
+        if (!g_game.placeCreature(getPlayer(), pos)) {
+            std::clog << "[Spoof System] Can not load spoof " << getName() << " on map." << std::endl;
+            return;
+        }
     }
 
     onLoad();
-
     g_spoof.m_players.push_back(getGUID());
-    std::pair<PlayerRecord*, uint32_t> pair(m_record, getGUID());
-    g_spoof.m_records.insert(pair);
     g_spoof.LOGINS_COUNT++;
 }
 
 bool PlayerBot::remove(){
 
     g_spoof.m_players.erase(std::remove(g_spoof.m_players.begin(), g_spoof.m_players.end(), getGUID()), g_spoof.m_players.end());
-
-    if(!m_record){
-        IOLoginData::getInstance()->updateOnlineStatus(getGUID(), false);
-        removeList();
-        setRemoved();
-
-        g_game.removeCreatureCheck(getPlayer());
-
-        return false;
-    }
 
     g_spoof.KICKS_COUNT++;
 
@@ -155,13 +182,17 @@ Creature* PlayerBot::findTarget(){
 void PlayerBot::onLoad(){
     lastLogin = std::max<time_t>(time(nullptr), lastLogin + 1);
 
+    uint32_t duration = 1000 * 60 * 60;
+    if(m_record != nullptr)
+        duration = (uint32_t)m_record->m_recordDuration;
+
     //feeding bot
     Condition* condition = getCondition(CONDITION_REGENERATION, CONDITIONID_DEFAULT);
     if (condition) {
-        condition->setTicks(m_record->m_recordDuration);
+        condition->setTicks(duration);
     }
     else{
-        condition = Condition::createCondition(CONDITIONID_DEFAULT, CONDITION_REGENERATION, (int32_t)m_record->m_recordDuration);
+        condition = Condition::createCondition(CONDITIONID_DEFAULT, CONDITION_REGENERATION, duration);
         condition->setParam(CONDITIONPARAM_HEALTHGAIN, vocation->getGainAmount(GAIN_HEALTH));
         condition->setParam(CONDITIONPARAM_HEALTHTICKS, (vocation->getGainTicks(GAIN_HEALTH) * 1000));
         condition->setParam(CONDITIONPARAM_MANAGAIN, vocation->getGainAmount(GAIN_MANA));
@@ -169,21 +200,58 @@ void PlayerBot::onLoad(){
 
         addCondition(condition);
     }
+
+    const SpectatorVec& list = g_game.getSpectators(getPosition());
+    for(SpectatorVec::const_iterator it = list.begin(); it != list.end(); ++it)
+    {
+        if((*it) != this && canSee((*it)->getPosition())){
+            Creature* creature = (*it);
+
+            if(creature->getName() == "Hitdoll")
+                m_enemies[creature->getID()] = time(nullptr);
+        }
+    }
+
+    uint32_t rand = (uint32_t)random_range(1u, 100000);
+
+    if(rand < 1000){
+        m_minutes = (uint32_t)random_range(240, 300);
+    }
+    else if(rand < 5000){
+        m_minutes = (uint32_t)random_range(120, 180);
+    }
+    else if(rand < 10000){
+        m_minutes = (uint32_t)random_range(75, 120);
+    }
+    else if(rand < 40000){
+        m_minutes = (uint32_t)random_range(25, 40);
+    }
+    else{
+        m_minutes = (uint32_t)random_range(45, 75);
+    }
 }
 
 void PlayerBot::onThink(){
+
+    //time to say bye...
+    if(lastLogin + (m_minutes * 60) < time(nullptr)){
+        g_game.removeCreature(this);
+    }
+
+    setIdleTime(0);
     checkHeal();
 
-    if(m_record){
-        if(m_enemies.size() > 0){
-            Creature* target = findTarget();
-            if(target){
-                chaseMode = CHASEMODE_FOLLOW;
-                g_game.playerSetAttackedCreature(id, target->getID());
+    if(m_enemies.size() > 0){
+        Creature* target = findTarget();
+        if(target){
+            chaseMode = CHASEMODE_FOLLOW;
+            g_game.playerSetAttackedCreature(id, target->getID());
+            if(m_record)
                 m_record->m_pause = true;
-            }
         }
+    }
 
+    if(m_record){
         if(m_record->m_pause && m_enemies.size() == 0 && !walkTask){
             m_record->m_pause = false;
             g_spoof.checkBotResume(this);
@@ -423,49 +491,52 @@ void PlayerBot::lookAt(Player* actor, int32_t lookDistance){
 
     if(actor->hasCustomFlag(PlayerCustomFlag_CanSeeCreatureDetails)){
         s << std::endl << "Position: " << getPosition().getX() << ", " << getPosition().getY() << ", " << getPosition().getZ();
-        s << std::endl << "Record: #" << m_record->m_id << ", Frame: " << std::distance(m_record->m_actions.begin(), m_record->m_iterator) << "/" << std::distance(m_record->m_actions.begin(), m_record->m_actions.end()) << ", Duration: ";
-
-        uint32_t duration = (uint32_t)m_record->m_recordDuration / 1000;
-
-        const uint32_t cseconds_in_hour = 3600;
-        const uint32_t cseconds_in_minute = 60;
-        const uint32_t cseconds = 1;
-
-        uint32_t hours = duration / cseconds_in_hour;
-        uint32_t minutes = (duration % cseconds_in_hour) / cseconds_in_minute;
-        uint32_t seconds = ((duration % cseconds_in_hour) % cseconds_in_minute) / cseconds;
-
-        if(hours > 0){
-            s << hours << "h ";
-        }
-
-        if(minutes > 0){
-            s << minutes << "m ";
-        }
-
-        if(seconds > 0){
-            s << seconds << "s ";
-        }
-
-        s << std::endl << "Flags: ";
 
         std::vector<std::string> v;
         std::ostringstream o;
 
-        if(m_record->m_pause){
-            o << "pause";
-            v.push_back(o.str());
-            o.str("");
-        }
+        if(m_record){
+            s << std::endl << "Record: #" << m_record->m_id << ", Frame: " << std::distance(m_record->m_actions.begin(), m_record->m_iterator) << "/" << std::distance(m_record->m_actions.begin(), m_record->m_actions.end()) << ", Duration: ";
 
-        if(m_outOfSync > 0){
-            if(m_outOfSync == 3)
-                o << "outOfSync";
-            else
-                o << "sync tries " << m_outOfSync;
+            uint32_t duration = (uint32_t)m_record->m_recordDuration / 1000;
 
-            v.push_back(o.str());
-            o.str("");
+            const uint32_t cseconds_in_hour = 3600;
+            const uint32_t cseconds_in_minute = 60;
+            const uint32_t cseconds = 1;
+
+            uint32_t hours = duration / cseconds_in_hour;
+            uint32_t minutes = (duration % cseconds_in_hour) / cseconds_in_minute;
+            uint32_t seconds = ((duration % cseconds_in_hour) % cseconds_in_minute) / cseconds;
+
+            if(hours > 0){
+                s << hours << "h ";
+            }
+
+            if(minutes > 0){
+                s << minutes << "m ";
+            }
+
+            if(seconds > 0){
+                s << seconds << "s ";
+            }
+
+            s << std::endl << "Flags: ";
+
+            if(m_record->m_pause){
+                o << "pause";
+                v.push_back(o.str());
+                o.str("");
+            }
+
+            if(m_outOfSync > 0){
+                if(m_outOfSync == 3)
+                    o << "outOfSync";
+                else
+                    o << "sync tries " << m_outOfSync;
+
+                v.push_back(o.str());
+                o.str("");
+            }
         }
 
         if(m_enemies.size() > 0){
@@ -474,7 +545,7 @@ void PlayerBot::lookAt(Player* actor, int32_t lookDistance){
             o.str("");
         }
 
-        if(!m_record->m_pause || m_record->m_iterator != m_record->m_actions.end()){
+        if(m_record && (!m_record->m_pause || m_record->m_iterator != m_record->m_actions.end())){
 
             uint64_t timestamp;
 
