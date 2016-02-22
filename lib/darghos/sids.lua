@@ -223,6 +223,7 @@
 	PORTAL_ROOM_LAST_BLOCK         = 8938,
 	PORTAL_ROOM_USES               = 8939,
 	PORTAL_ROOM_LAST_USE           = 8940,
+	MUTED						   = 8941,
 
 
 	-- BATTLEGROUND

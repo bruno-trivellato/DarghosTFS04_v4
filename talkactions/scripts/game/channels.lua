@@ -64,5 +64,11 @@ function help.onSay(cid, words, param, channel)
 		setPlayerStorageValue(cid, sid.LAST_HELP_MESSAGE, os.time())
 	end
 
+	local isMuted = getPlayerStorageValue(cid, sid.MUTED) == 1
+	if(isMuted) then
+		doPlayerSendChannelMessage(cid, getPlayerName(cid) .. " [" .. getPlayerLevel(cid) .. "]", words .. " " .. param, TALKTYPE_TYPES["channel-yellow"], CHANNEL_HELP)
+		return true
+	end
+
 	return false
 end
