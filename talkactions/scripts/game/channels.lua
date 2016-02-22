@@ -10,10 +10,14 @@ function onSay(cid, words, param, channel, type)
 		return false
 	end
 
+	local public_channels = { CHANNEL_CHAT, CHANNEL_RL, CHANNEL_HELP, CHANNEL_TRADE }
+
 	if(channel == CHANNEL_HELP) then
 		return help.onSay(cid, words, param, channel)
 	elseif(channel == CUSTOM_CHANNEL_PVP or channel == CUSTOM_CHANNEL_BG_CHAT) then
 		return pvp.onSay(cid, words, param, channel)
+	elseif(isInArray(public_channels, channel)) then
+		return public.onSay(cid, words, param, channel)
 	end
 end
 
@@ -63,12 +67,17 @@ function help.onSay(cid, words, param, channel)
 	else
 		setPlayerStorageValue(cid, sid.LAST_HELP_MESSAGE, os.time())
 	end
+end
+
+public = {}
+
+function public.onSay(cid, words, param, channel)
 
 	local isMuted = getPlayerStorageValue(cid, sid.MUTED) == 1
 	if(isMuted) then
-		doPlayerSendChannelMessage(cid, getPlayerName(cid) .. " [" .. getPlayerLevel(cid) .. "]", words .. " " .. param, TALKTYPE_TYPES["channel-yellow"], CHANNEL_HELP)
+		doPlayerSendChannelMessage(cid, getPlayerName(cid) .. " [" .. getPlayerLevel(cid) .. "]", words .. " " .. param, TALKTYPE_TYPES["channel-yellow"], channel)
 		return true
 	end
 
-	return false
+	return false	
 end
