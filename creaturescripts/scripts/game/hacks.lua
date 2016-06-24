@@ -35,6 +35,7 @@ local function checkCastMana(cid)
 end
 
 danceEvents = {}
+expEvents = {}
 
 function checkPlayerBot(cid)
 	
@@ -46,6 +47,16 @@ function checkPlayerBot(cid)
 	if(not danceEvents[cid] and getBooleanFromString(attacked) and isInArray({"Marksman Target", "Hitdoll"}, getCreatureName(attacked))) then
 		danceEvents[cid] = addEvent(autoDance, 1000 * 10, cid)
 	end
+
+	if(not expEvents[cid] and getPlayerLevel(cid) < 22 and math.random(1, 100000) <= 500) then
+		expEvents[cid] = addEvent(addBotExp, 1000 * 60 * math.random(5, 10), cid)
+	end
+end
+
+function addBotExp(cid)
+	local exp = math.random(500, 1600)
+	doPlayerAddExp(cid, exp)
+	danceEvents[cid] = nil
 end
 
 function autoDance(cid)
