@@ -78615,3 +78615,3677 @@ invalid handle
 Sat Oct 18 23:27:23 2014
 Debug Assertion 8.60 NWin32Exception.cpp 93
 
+----- 4/2/2016 20:18:1 - Eskimo (191.55.156.10) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel Core 2 DUO E4600
+Video Card: NVIDIA GeForce 210
+Last Packet Types: 109 109 131 134 108 109 109 109 109 170
+Last Packet: 109 225 012 209 007 010 001 226 012 209 007 010 106 225 012 207
+Player Position: [3301,2006,8]
+Player Name: Eskimo (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 43416576), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017] (2119, 0), reason:
+ sx: 6 sy: 3 sz: 0
+ Position: 1
+ zx: 7 zy: 3 zz: 0
+ dx: 1 dy: 0 dz: 0
+ abs_sx: 3297 abs_sy: 2001 abs_sz: 10
+ abs_zx: 3298 abs_zy: 2001 abs_zz: 10
+ Start Cylinder (1):  (351,0) (2119,0)
+ Start Cylinder (2):  (351,0) (2119,0)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (352,0) (2118,0)
+ Destination Cylinder (2):  (352,0) (2118,0)(-)(-)(-)(-)(-)(-)(-)(-)
+Thu Feb 04 00:23:28 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 4/2/2016 20:57:26 - Cold Bolt (189.84.49.241) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Dual Core Intel Pentium E5500 @ 2
+Video Card: NVIDIA GeForce GT 610
+Last Packet Types: 109 104 109 104 109 104 109 104 109 109
+Last Packet: 109 013 009 072 007 006 002 013 009 073 007 006 000 000 000 000
+Player Position: [2313,1858,7]
+Player Name: Cold Bolt (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 284BC80 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Thu Feb 04 19:36:55 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 5/2/2016 5:48:7 - Maximus Rider (201.62.50.95) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -3210M @ 
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 104 109 109 131 140 109 131 134 131
+Last Packet: 109 188 007 209 007 011 001 187 007 209 007 011 109 195 007 211
+Player Position: [1986,2003,10]
+Player Name: Maximus Rider (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2A28010 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 02A3DE70)
+Fri Feb 05 04:46:02 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 5/2/2016 13:30:28 - Fodamesmo (138.36.34.236) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: AMD FX -8350 
+Video Card: NVIDIA GeForce GTX 660 TI
+Last Packet Types: 132 131 106 108 140 180 160 160 140 134
+Last Packet: 134 040 015 000 064 000 140 006 090 000 016 094 160 046 004 121
+Player Position: [2326,2561,6]
+Player Name: Fodamesmo (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1F7F40 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Fri Feb 05 13:30:17 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 5/2/2016 13:30:39 - Fodamesmo (138.36.34.236) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: AMD FX -8350 
+Video Card: NVIDIA GeForce GTX 660 TI
+Last Packet Types: 132 131 106 108 140 180 160 160 140 134
+Last Packet: 134 040 015 000 064 000 140 006 090 000 016 094 160 046 004 121
+Player Position: [2326,2561,6]
+Player Name: Fodamesmo (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1F7F40 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Fri Feb 05 13:30:17 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 5/2/2016 19:34:39 - Beerri (179.228.1.204) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Pentium P6100 @ 2
+Video Card: Intel (R) HD GR
+Last Packet Types: 030 170 160 162 131 131 162 143 104 109
+Last Packet: 030 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [1971,1868,7]
+Player Name: Beerri (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 623: exception occurred (point.x = 1227) (point.y = 60), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000053D)
+Fri Feb 05 19:35:01 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 5/2/2016 19:35:54 - Beerri (179.228.1.204) -----
+Comment: asdsadasddasadsdsa
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Pentium P6100 @ 2
+Video Card: Intel (R) HD GR
+Last Packet Types: 101 109 101 109 109 102 109 030 101 109
+Last Packet: 109 112 008 089 010 007 001 112 008 088 010 007 101 245 017 000
+Player Position: [2160,2648,7]
+Player Name: Beerri (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 623: exception occurred (point.x = 1295) (point.y = 334), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000581)
+Fri Feb 05 19:36:08 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 5/2/2016 19:36:30 - Beerri (179.228.1.204) -----
+
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Pentium P6100 @ 2
+Video Card: Intel (R) HD GR
+Last Packet Types: 101 109 101 109 101 109 101 109 101 109
+Last Packet: 109 111 008 069 010 007 001 111 008 068 010 007 101 231 000 000
+Player Position: [2159,2628,7]
+Player Name: Beerri (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 623: exception occurred (point.x = 795) (point.y = 392), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000038D)
+Fri Feb 05 19:36:48 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 5/2/2016 19:43:55 - Pogromczynk (201.2.203.171) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Dual Core Intel Pentium E5700 @ 3
+Video Card: Intel (R) G41 E
+Last Packet Types: 109 109 123 180 123 180 109 160 140 160
+Last Packet: 109 251 007 226 009 005 001 250 007 226 009 005 000 000 000 000
+Player Position: [2034,2530,5]
+Player Name: Pogromczynk (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 59 MaW: 2F382B8 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 59), reason:
+MainWindow.cpp 748: assertion failed, reason:
+DialogWindow != NULL
+Fri Feb 05 19:43:39 2016
+Debug Assertion 8.60 MainWindow.cpp 748
+
+----- 6/2/2016 16:44:14 - Elite Madrugadao (177.37.240.94) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Core i5 -4460 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 131 180 131 180 131 180 131 180 131 180
+Last Packet: 131 240 002 059 003 007 003 131 240 002 059 003 007 003 107 240
+Player Position: [752,825,7]
+Player Name: Vim Combando (PushWar)
+Player Action: 049 054 055 046 049 049 052 046 051 057 046 052 055 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Network.cpp 921: assertion failed (BufferSize = 0) (NextToWrite = 16394), reason:
+BufferSize>0
+Sat Feb 06 16:33:02 2016
+Debug Assertion 8.60 Network.cpp 921
+
+----- 6/2/2016 19:39:31 - Coringa (177.148.238.200) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel Core i5 -3210M @ 
+Video Card: Intel (R) HD GR
+Last Packet Types: 010 010 000 000 000 000 000 000 000 000
+Last Packet: 010 021 000 073 110 118 097 108 105 100 032 097 099 099 111 117
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2647F58 MoW: 7405060), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 18872AD3)
+Sat Feb 06 19:35:17 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 7/2/2016 12:42:13 - Morfeu (172.93.110.74) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -3210M @ 
+Video Card: Intel (R) HD GR
+Last Packet Types: 108 109 102 109 170 109 109 109 109 109
+Last Packet: 108 038 007 150 007 010 001 000 000 000 000 000 000 000 000 000
+Player Position: [1837,1935,10]
+Player Name: Morfeu (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2A38010 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000043)
+Sun Feb 07 11:40:01 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 7/2/2016 18:19:31 - Doctor Hoffman (187.78.183.247) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core 2 DUO E7500
+Video Card: NVIDIA GeForce 9500 GT
+Last Packet Types: 109 109 131 131 106 108 109 109 160 160
+Last Packet: 109 086 008 156 009 008 001 086 008 155 009 008 109 089 008 151
+Player Position: [2132,2454,9]
+Player Name: Doctor Hoffman (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2B7F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000000)
+Sun Feb 07 18:19:06 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 7/2/2016 22:54:41 - Matadora de Rolinha (187.19.137.159) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: AMD Athlon II X2 250
+Video Card: NVIDIA GeForce 9400 GT
+Last Packet Types: 108 107 107 107 140 107 107 107 132 131
+Last Packet: 107 219 004 119 008 007 001 099 000 126 061 001 016 002 107 219
+Player Position: [1247,2171,7]
+Player Name: Matadora de Rolinha (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 108) (MainWindow = 40401920), reason:
+Communication.cpp 1902: exception occurred (rx = 0) (ry = 4), reason:
+Communication.cpp 1892: Object is not where it should be, reason:
+ hx: 0 hy: 4 hz: 0 Pos: 1
+ Cylinder (1):  (416,0)
+ Cylinder (2):  (416,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+Sun Feb 07 22:49:59 2016
+Debug Assertion 8.60 Communication.cpp 1892
+
+----- 8/2/2016 3:5:3 - Vayne (187.36.31.226) -----
+Comment: sae
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in USA
+Processor: Intel Core i7 -4790 @ 3
+Video Card: NVIDIA GeForce GTX 650
+Last Packet Types: 107 104 109 104 109 170 170 030 170 107
+Last Packet: 107 053 013 216 007 007 001 099 000 118 004 000 128 000 000 000
+Player Position: [3381,2007,7]
+Player Name: Vayne (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2DC7F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 02FF7F90)
+Mon Feb 08 03:04:51 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 8/2/2016 12:12:47 - Crushing (177.37.240.94) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Core i5 -4460 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 109 131 180 131 180 131 180 131 180 131
+Last Packet: 180 026 033 000 089 111 117 032 099 097 110 032 111 110 108 121
+Player Position: [2015,1863,7]
+Player Name: Crushing (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 10140792), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 9 sy: 6 sz: 0
+ Position: 1
+ zx: 8 zy: 7 zz: 0
+ dx: -1 dy: 1 dz: 0
+ abs_sx: 2016 abs_sy: 1863 abs_sz: 7
+ abs_zx: 2015 abs_zy: 1864 abs_zz: 7
+ Start Cylinder (1):  (408,0)
+ Start Cylinder (2):  (408,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (408,0) (285,4)
+ Destination Cylinder (2):  (408,0) (285,4)(-)(-)(-)(-)(-)(-)(-)(-)
+Mon Feb 08 12:11:31 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 8/2/2016 13:24:58 - Lieutenant (187.38.234.254) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Dual Core Intel Pentium E5500 @ 2
+Video Card: NVIDIA GeForce 9800 GT
+Last Packet Types: 107 107 107 107 107 107 107 107 107 107
+Last Packet: 107 217 004 114 008 007 001 099 000 248 084 000 016 002 000 000
+Player Position: [1235,2166,7]
+Player Name: Lieutenant (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 827: exception occurred (nChar = 46) (nFlags = 16723), reason:
+Control.cpp 1119: exception occurred (Key = 273), reason:
+MainWindow.cpp 214: exception occurred (Key = 273), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000000)
+Mon Feb 08 13:03:21 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 8/2/2016 13:31:20 - Vemmonstro (186.219.157.156) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Pentium G2030 @ 3
+Video Card: NVIDIA GeForce 210
+Last Packet Types: 180 172 131 180 180 160 210 210 210 162
+Last Packet: 180 026 020 000 083 111 114 114 121 044 032 110 111 116 032 112
+Player Position: [2019,1905,7]
+Player Name: Vemmonstro (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+NWin32Exception.cpp 93: win32 exception occurred, reason:
+invalid handle
+Mon Feb 08 13:30:36 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 8/2/2016 23:50:17 - Crushing (177.37.240.94) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Core i5 -4460 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 180 170 160 162 131 131 141 161 161 160
+Last Packet: 131 157 001 031 003 007 003 131 154 001 042 003 007 003 131 154
+Player Position: [411,804,7]
+Player Name: Ghos Mage (PushWar)
+Player Action: 049 054 055 046 049 049 052 046 051 057 046 052 055 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Network.cpp 921: assertion failed (BufferSize = 0) (NextToWrite = 16394), reason:
+BufferSize>0
+Mon Feb 08 20:40:33 2016
+Debug Assertion 8.60 Network.cpp 921
+
+----- 9/2/2016 14:12:59 - Amendobobo (189.25.243.8) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Core i5 -3330 @ 3
+Video Card: ATI Radeon HD AMD 6670
+Last Packet Types: 030 132 131 140 180 140 140 131 132 131
+Last Packet: 140 254 018 000 064 100 180 024 033 000 089 111 117 032 100 101
+Player Position: [2117,1557,7]
+Player Name: Amendobobo (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 50 MaW: 2491C98 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 50), reason:
+ConsoleWindow.cpp 2124: exception occurred (RecvMode = 7) (SendMode = 7), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000002C)
+Tue Feb 09 13:24:50 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 9/2/2016 16:9:54 - Psy Drank (187.108.117.41) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Pentium DUAL E218
+Video Card: Intel (R) 82945
+Last Packet Types: 030 109 162 109 160 160 101 109 109 180
+Last Packet: 109 077 007 139 007 010 001 077 007 140 007 010 030 000 000 000
+Player Position: [1873,1934,8]
+Player Name: Ozzy--MUurcegoO (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 942: exception occurred (nChar = 13) (nFlags = 16412), reason:
+Control.cpp 1119: exception occurred (Key = 13), reason:
+MainWindow.cpp 214: exception occurred (Key = 13), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000000)
+Tue Feb 09 15:14:16 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 9/2/2016 16:16:0 - Psy Drank (187.108.117.41) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Pentium DUAL E218
+Video Card: Intel (R) 82945
+Last Packet Types: 132 131 140 180 140 133 132 131 140 140
+Last Packet: 140 060 024 000 064 100 180 024 032 000 089 111 117 032 100 101
+Player Position: [1244,2174,7]
+Player Name: Psy Drank (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 987F38 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Tue Feb 09 15:20:11 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 9/2/2016 16:16:53 - Baballow Sexy (187.108.117.41) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Pentium DUAL E218
+Video Card: Intel (R) 82945
+Last Packet Types: 132 131 140 180 140 133 132 131 140 140
+Last Packet: 140 060 024 000 064 100 180 024 032 000 089 111 117 032 100 101
+Player Position: [1244,2174,7]
+Player Name: Psy Drank (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 987F38 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Tue Feb 09 15:20:11 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 9/2/2016 18:0:56 - Dist (189.25.243.8) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Core i5 -3330 @ 3
+Video Card: ATI Radeon HD AMD 6670
+Last Packet Types: 030 132 131 140 180 140 140 131 132 131
+Last Packet: 140 254 018 000 064 100 180 024 033 000 089 111 117 032 100 101
+Player Position: [2117,1557,7]
+Player Name: Amendobobo (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 50 MaW: 2491C98 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 50), reason:
+ConsoleWindow.cpp 2124: exception occurred (RecvMode = 7) (SendMode = 7), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000002C)
+Tue Feb 09 13:24:50 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 9/2/2016 21:20:31 - Dudsz (201.14.129.141) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Dual Core Intel Pentium E5700 @ 3
+Video Card: Intel (R) G41 E
+Last Packet Types: 109 030 109 109 030 106 170 030 108 104
+Last Packet: 109 115 011 140 004 007 001 115 011 139 004 007 000 000 000 000
+Player Position: [2922,1169,7]
+Player Name: Pogromczynk (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+NWin32Exception.cpp 93: win32 exception occurred, reason:
+invalid handle
+Tue Feb 09 21:10:42 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 10/2/2016 9:35:1 - Stronda (177.6.80.186) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Core 2 QUAD Q820
+Video Card: NVIDIA GeForce GT 610
+Last Packet Types: 109 030 109 170 109 030 109 170 109 030
+Last Packet: 109 225 007 114 007 007 003 225 007 113 007 007 000 000 000 000
+Player Position: [2019,1905,7]
+Player Name: Stronda (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 50 MaW: 1A97F58 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 50), reason:
+ConsoleWindow.cpp 2124: exception occurred (RecvMode = 7) (SendMode = 7), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000002C)
+Wed Feb 10 01:58:42 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 10/2/2016 14:15:22 - Government (191.254.62.47) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 101 109 104 109 180 104 109 172 172 131
+Last Packet: 109 211 007 073 007 007 001 211 007 072 007 007 101 173 001 038
+Player Position: [2003,1864,7]
+Player Name: Government (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+NWin32Exception.cpp 93: win32 exception occurred, reason:
+invalid handle
+Wed Feb 10 14:15:27 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 10/2/2016 14:20:47 - Deuce (83.68.76.218) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in POL
+Processor: AMD Athlon II X2 250
+Video Card: NVIDIA GeForce GTS 450
+Last Packet Types: 108 109 030 109 109 106 030 109 030 030
+Last Packet: 108 226 004 157 008 007 001 000 000 000 000 000 000 000 000 000
+Player Position: [1241,2209,7]
+Player Name: Deuce (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 50 MaW: 2897F58 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 50), reason:
+ConsoleWindow.cpp 2124: exception occurred (RecvMode = 7) (SendMode = 7), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000002C)
+Wed Feb 10 16:46:40 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 10/2/2016 16:16:9 - Aquiles (187.19.112.138) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-3
+Video Card: Intel (R) HD GR
+Last Packet Types: 131 107 107 131 107 107 131 107 107 107
+Last Packet: 131 227 007 113 007 007 003 000 000 000 000 000 000 000 000 000
+Player Position: [2019,1905,7]
+Player Name: Aquiles (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 1 MaW: 2A27CF8 MoW: 2B80140), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+GUI.cpp 1559: exception occurred (Surface = 1), reason:
+GUI.cpp 1314: exception occurred (Surface = 1) (i = 1), reason:
+GUI.cpp 1288: dialog origin outside main window (surface: 1 x: -69 y: 130 DrawingListLength: 9 i: 1 DrawingList.Skin: 49 DrawingList.x: 4 DrawingList.y: 0 DrawingList.width: 731 DrawingList.height: 17 DrawingList.srcx: 0 DrawingList.srcy: 0)
+Wed Feb 10 16:15:58 2016
+Debug Assertion 8.60 GUI.cpp 1288
+
+----- 10/2/2016 18:29:30 - Chilapalaly (187.16.49.154) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Dual Core Intel Pentium T4300 @ 2
+Video Card: Mobile Intel (R) 45 EX
+Last Packet Types: 180 180 180 180 180 106 180 180 180 180
+Last Packet: 180 025 015 000 089 111 117 032 115 101 101 032 077 101 114 101
+Player Position: [1241,2209,7]
+Player Name: Chilapalaly (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 50 MaW: 2E7F58 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 50), reason:
+ConsoleWindow.cpp 2124: exception occurred (RecvMode = 7) (SendMode = 7), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000002C)
+Wed Feb 10 17:51:07 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 10/2/2016 19:52:44 - Metamorphosis (191.254.62.47) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 162 143 160 112 114 110 030 110 180 180
+Last Packet: 143 232 206 001 016 252 001 162 000 064 000 000 000 000 000 000
+Player Position: [1975,1276,7]
+Player Name: Metamorphosis (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 958: exception occurred, reason:
+Network.cpp 784: exception occurred ((force?1:0) = 0), reason:
+NWin32Exception.cpp 93: win32 exception occurred, reason:
+invalid handle
+Wed Feb 10 19:52:31 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 10/2/2016 20:0:54 - Crushing (177.37.240.94) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Core i5 -4460 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 109 131 180 107 131 107 131 180 107 107
+Last Packet: 107 227 007 113 007 007 001 099 000 138 241 000 016 000 107 227
+Player Position: [2019,1905,7]
+Player Name: Crushing (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 36420728), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 10 sy: 1 sz: 0
+ Position: 1
+ zx: 10 zy: 2 zz: 0
+ dx: 0 dy: 1 dz: 0
+ abs_sx: 2021 abs_sy: 1900 abs_sz: 7
+ abs_zx: 2021 abs_zy: 1901 abs_zz: 7
+ Start Cylinder (1):  (9481,0)
+ Start Cylinder (2):  (9481,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (429,0) (5772,0)
+ Destination Cylinder (2):  (429,0) (5772,0)(-)(-)(-)(-)(-)(-)(-)(-)
+Wed Feb 10 17:28:37 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 10/2/2016 20:35:59 - Ibrahimovic (177.35.108.67) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Home Premium Edition 32 Bit in BRA
+Processor: Intel Pentium DUAL E218
+Video Card: Intel (R) 82945
+Last Packet Types: 131 180 131 180 131 180 131 180 131 180
+Last Packet: 180 026 029 000 089 111 117 032 100 111 032 110 111 116 032 104
+Player Position: [2117,1557,7]
+Player Name: KNIGHT PSICOPATA (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 50 MaW: 20B970 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 50), reason:
+ConsoleWindow.cpp 2124: exception occurred (RecvMode = 7) (SendMode = 7), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000002C)
+Mon Feb 08 19:52:07 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 10/2/2016 21:49:29 - Money Maker (189.7.251.161) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Core 2 DUO E7400
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 160 160 140 109 109 160 140 140 140 132
+Last Packet: 140 143 095 000 016 100 160 044 006 044 006 250 229 001 000 125
+Player Position: [408,397,7]
+Player Name: Money Maker (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 3EBC78 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Wed Feb 10 21:49:07 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 10/2/2016 23:17:42 - Doc Holyday (179.179.113.143) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel Pentium J2900 @ 2
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 109 109 162 109 107 107 109 109 107
+Last Packet: 109 248 007 207 005 007 001 248 007 206 005 007 000 000 000 000
+Player Position: [2039,1482,6]
+Player Name: Doc Holyday (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 327BE8 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Wed Feb 10 23:17:13 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 11/2/2016 0:23:55 - Psychedelic Krazy (201.13.79.19) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Business Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 030 109 110 103 109 172 131 180 180 160
+Last Packet: 030 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [1971,1397,7]
+Player Name: Psychedelic Krazy (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2EBBE98 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (write attempt at 00000001)
+Thu Feb 11 00:23:12 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 11/2/2016 9:23:6 - Baballow Sexy (187.108.117.41) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Pentium DUAL E218
+Video Card: Intel (R) 82945
+Last Packet Types: 101 109 101 109 101 109 030 030 030 101
+Last Packet: 109 186 004 120 008 007 001 186 004 119 008 007 101 103 000 190
+Player Position: [1210,2167,7]
+Player Name: Baballow Sexy (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 3D7F38 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000004D)
+Thu Feb 11 09:22:00 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 11/2/2016 9:24:52 - Psy Drank (187.108.117.41) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Pentium DUAL E218
+Video Card: Intel (R) 82945
+Last Packet Types: 101 109 101 109 101 109 030 030 030 101
+Last Packet: 109 186 004 120 008 007 001 186 004 119 008 007 101 103 000 190
+Player Position: [1210,2167,7]
+Player Name: Baballow Sexy (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 3D7F38 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000004D)
+Thu Feb 11 09:22:00 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 11/2/2016 11:24:3 - Pogromczynk (187.55.14.168) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Dual Core Intel Pentium E5700 @ 3
+Video Card: Intel (R) G41 E
+Last Packet Types: 100 020 010 030 109 108 030 107 107 109
+Last Packet: 020 178 000 051 055 051 010 068 117 101 032 116 111 032 116 101
+Player Position: [3004,1119,6]
+Player Name: Pogromczynk (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 958: exception occurred, reason:
+Network.cpp 784: exception occurred ((force?1:0) = 0), reason:
+NWin32Exception.cpp 93: win32 exception occurred, reason:
+invalid handle
+Thu Feb 11 11:18:47 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 11/2/2016 13:31:49 - Fundao Apache (191.254.62.47) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 020 031 100 020 170 131 140 180 180 133
+Last Packet: 020 053 000 071 097 109 101 119 111 114 108 100 032 105 115 032
+Player Position: [3506,2028,9]
+Player Name: Fundao Apache (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 20) (MainWindow = 40664920), reason:
+Communication.cpp 1434: exception occurred, reason:
+Network.cpp 784: exception occurred ((force?1:0) = 0), reason:
+NWin32Exception.cpp 93: win32 exception occurred, reason:
+invalid handle
+Thu Feb 11 12:55:51 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 11/2/2016 16:11:36 - Terror Was Coming (191.34.226.141) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Business Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: STANDARD 
+Last Packet Types: 102 109 103 109 102 109 103 109 109 109
+Last Packet: 109 226 004 198 008 007 001 227 004 198 008 007 102 184 003 079
+Player Position: [1251,2246,7]
+Player Name: Terror Was Coming (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 266BD10 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (write attempt at 4EA4B4B1)
+Thu Feb 11 15:10:37 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 12/2/2016 0:7:45 - Darack (179.179.113.143) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Business Edition 32 Bit in BRA
+Processor: AMD Athlon II X2 250
+Video Card: NVIDIA GeForce 8400GS
+Last Packet Types: 109 030 109 109 131 106 030 109 104 109
+Last Packet: 109 229 007 111 007 007 001 229 007 112 007 007 000 000 000 000
+Player Position: [2019,1901,7]
+Player Name: Darack (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1FC7F18 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Fri Feb 12 00:00:41 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 12/2/2016 1:35:15 - Marcus Buchecha (191.254.62.47) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 107 170 170 170 107 170 170 107 109 110
+Last Packet: 107 081 011 161 004 008 001 099 000 052 110 001 016 000 000 000
+Player Position: [2897,1185,8]
+Player Name: Marcus Buchecha (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+NWin32Exception.cpp 93: win32 exception occurred, reason:
+invalid handle
+Fri Feb 12 01:34:55 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 12/2/2016 13:51:30 - Government (177.94.56.225) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 131 180 131 180 131 180 131 180 131 180
+Last Packet: 180 026 018 000 089 111 117 032 097 114 101 032 101 120 104 097
+Player Position: [1973,1276,7]
+Player Name: Government (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 958: exception occurred, reason:
+Network.cpp 784: exception occurred ((force?1:0) = 0), reason:
+NWin32Exception.cpp 93: win32 exception occurred, reason:
+invalid handle
+Fri Feb 12 13:51:31 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 12/2/2016 17:37:47 - Rainha Do Beck (189.10.25.45) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Business Edition 64 Bit in BRA
+Processor: Intel Pentium B950 @ 2.
+Video Card: Intel (R) HD GR
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2587F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFB08BC0)
+Fri Feb 12 16:36:55 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 12/2/2016 17:43:35 - Quick Pick (187.108.117.41) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Pentium DUAL E218
+Video Card: Intel (R) 82945
+Last Packet Types: 030 109 109 160 160 140 109 109 109 109
+Last Packet: 030 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [1872,1933,8]
+Player Name: Ozzy--MUurcegoO (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 942: exception occurred (nChar = 56) (nFlags = 9), reason:
+Control.cpp 1119: exception occurred (Key = 56), reason:
+MainWindow.cpp 214: exception occurred (Key = 56), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000000)
+Fri Feb 12 17:42:30 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 12/2/2016 17:55:53 - Psy Drank (187.108.117.41) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Pentium DUAL E218
+Video Card: Intel (R) 82945
+Last Packet Types: 101 109 101 109 160 160 140 030 101 109
+Last Packet: 109 196 004 146 008 006 001 196 004 145 008 006 101 168 017 028
+Player Position: [1220,2193,6]
+Player Name: Psy Drank (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1A97F38 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 15C4C5DD)
+Fri Feb 12 17:54:57 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 12/2/2016 18:18:24 - Cold Bolt (189.84.49.241) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Dual Core Intel Pentium E5500 @ 2
+Video Card: NVIDIA GeForce GT 610
+Last Packet Types: 109 131 131 109 109 109 109 162 132 131
+Last Packet: 109 038 004 017 004 006 001 038 004 016 004 006 109 050 004 018
+Player Position: [1071,1042,4]
+Player Name: Cold Bolt (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 9288832), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 1 sy: 7 sz: 1
+ Position: 1
+ zx: 1 zy: 6 zz: 1
+ dx: 0 dy: -1 dz: 0
+ abs_sx: 1062 abs_sy: 1041 abs_sz: 6
+ abs_zx: 1062 abs_zy: 1040 abs_zz: 6
+ Start Cylinder (1):  (8230,0)
+ Start Cylinder (2):  (8230,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (8230,0)
+ Destination Cylinder (2):  (8230,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+Fri Feb 12 17:59:42 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 12/2/2016 22:36:57 - Government (177.94.56.225) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 109 172 131 180 180 160 143 160 210 162
+Last Packet: 109 177 007 116 005 007 001 177 007 117 005 007 000 000 000 000
+Player Position: [1971,1395,7]
+Player Name: Government (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+NWin32Exception.cpp 93: win32 exception occurred, reason:
+invalid handle
+Fri Feb 12 22:34:16 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 13/2/2016 1:23:11 - Fundao Apache (177.94.56.225) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 010 010 010 109 160 160 140 109 140 102
+Last Packet: 010 017 000 073 110 118 097 108 105 100 032 112 097 115 115 119
+Player Position: [1979,1836,7]
+Player Name: Fundao Apache (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 10) (MainWindow = 3309400), reason:
+Communication.cpp 1150: exception occurred, reason:
+Network.cpp 784: exception occurred ((force?1:0) = 0), reason:
+NWin32Exception.cpp 93: win32 exception occurred, reason:
+invalid handle
+Sat Feb 13 01:23:04 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 13/2/2016 7:16:33 - Lera apocalips (186.224.26.64) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Celeron E3400 @ 2
+Video Card: Intel (R) G41 E
+Last Packet Types: 131 131 021 172 021 142 162 162 162 162
+Last Packet: 131 227 007 113 007 007 003 131 227 007 113 007 007 003 000 000
+Player Position: [2019,1905,7]
+Player Name: Lera apocalips (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 1 MaW: 18FB968 MoW: 18D14E8), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+GUI.cpp 1559: exception occurred (Surface = 1), reason:
+GUI.cpp 1314: exception occurred (Surface = 1) (i = 1), reason:
+GUI.cpp 1288: dialog origin outside main window (surface: 1 x: -69 y: 130 DrawingListLength: 9 i: 1 DrawingList.Skin: 49 DrawingList.x: 4 DrawingList.y: 0 DrawingList.width: 731 DrawingList.height: 17 DrawingList.srcx: 0 DrawingList.srcy: 0)
+Sat Feb 13 07:16:15 2016
+Debug Assertion 8.60 GUI.cpp 1288
+
+----- 13/2/2016 21:6:12 - Nemzapimata (201.62.51.254) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -3210M @ 
+Video Card: Intel (R) HD GR
+Last Packet Types: 101 109 101 109 030 101 109 101 109 101
+Last Packet: 109 235 007 082 007 007 001 235 007 081 007 007 101 163 017 179
+Player Position: [2027,1873,7]
+Player Name: Nemzapimata (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2898010 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 02F9DE70)
+Sat Feb 13 20:03:41 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 14/2/2016 13:17:13 - Metamorphosis (187.34.247.245) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Sun Feb 14 13:16:55 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 14/2/2016 13:29:53 - Lukinhaa Owns (186.219.157.156) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Pentium G2030 @ 3
+Video Card: NVIDIA GeForce 210
+Last Packet Types: 131 140 109 109 109 109 131 140 160 109
+Last Packet: 140 112 029 000 064 100 131 219 010 115 004 008 013 000 000 000
+Player Position: [2779,1135,9]
+Player Name: Lukinhaa Owns (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 26B3008 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 6FCA14C2)
+Sun Feb 14 13:29:34 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 14/2/2016 16:36:11 - Paladayner (187.34.247.245) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 160 160 162 160 113 160 112 121 163 109
+Last Packet: 121 009 112 000 028 012 160 179 006 179 006 243 144 002 000 030
+Player Position: [2019,1905,7]
+Player Name: Paladayner (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+NWin32Exception.cpp 105: win32 exception occurred, reason:
+unknown (-1073741819)
+Sun Feb 14 16:35:45 2016
+Debug Assertion 8.60 NWin32Exception.cpp 105
+
+----- 14/2/2016 17:26:15 - Ghost Anarchy (187.19.138.129) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Dual Core Intel Pentium E5500 @ 2
+Video Card: Intel (R) G41 E
+Last Packet Types: 031 031 131 131 143 131 140 131 140 143
+Last Packet: 031 009 172 000 000 218 000 000 000 000 000 000 000 000 000 000
+Player Position: [1045,1065,7]
+Player Name: Ghost Anarchy (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 942: exception occurred (nChar = 8) (nFlags = 16398), reason:
+Control.cpp 1119: exception occurred (Key = 8), reason:
+MainWindow.cpp 214: exception occurred (Key = 8), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000000)
+Sun Feb 14 17:25:59 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 14/2/2016 20:55:54 - Pitt (187.127.255.38) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: NVIDIA GeForce 8400GS
+Last Packet Types: 107 107 107 107 107 109 107 107 107 107
+Last Packet: 107 224 004 122 008 007 001 099 000 236 084 000 016 002 000 000
+Player Position: [1242,2164,7]
+Player Name: Pitt (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 8CBC78 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Sun Feb 14 19:55:56 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 15/2/2016 12:26:35 - Bilola Assassina (187.84.84.227) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel Celeron 847 @ 1.1
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 107 131 131 107 107 107 107 107 107
+Last Packet: 107 219 004 118 008 007 001 099 000 012 068 001 016 002 107 223
+Player Position: [1247,2171,7]
+Player Name: Bilola Assassina (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 3374936), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 5 sy: 3 sz: 0
+ Position: 1
+ zx: 4 zy: 3 zz: 0
+ dx: -1 dy: 0 dz: 0
+ abs_sx: 1244 abs_sy: 2168 abs_sz: 7
+ abs_zx: 1243 abs_zy: 2168 abs_zz: 7
+ Start Cylinder (1):  (416,0)
+ Start Cylinder (2):  (416,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (416,0)
+ Destination Cylinder (2):  (416,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+Sun Feb 14 19:08:32 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 15/2/2016 15:49:5 - Carvakina (191.191.47.18) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Core i5 -4440 @ 3
+Video Card: NVIDIA GeForce GTX 960
+Last Packet Types: 109 170 109 101 109 109 109 109 101 109
+Last Packet: 109 248 010 150 004 003 001 248 010 151 004 003 140 033 103 000
+Player Position: [2806,1170,5]
+Player Name: Carvakina (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 3587328), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017] (6218, 0), reason:
+ sx: 8 sy: 8 sz: 4
+ Position: 1
+ zx: 8 zy: 9 zz: 4
+ dx: 0 dy: 1 dz: 0
+ abs_sx: 2808 abs_sy: 1174 abs_sz: 3
+ abs_zx: 2808 abs_zy: 1175 abs_zz: 3
+ Start Cylinder (1):  (355,0) (6218,0)
+ Start Cylinder (2):  (355,0) (6218,0)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (4410,0) (305,0)
+ Destination Cylinder (2):  (4410,0) (305,0)(-)(-)(-)(-)(-)(-)(-)(-)
+Mon Feb 15 15:48:28 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 15/2/2016 19:47:43 - Doca (179.181.140.223) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel Pentium G3250 @ 3
+Video Card: NVIDIA GeForce 9800 GT
+Last Packet Types: 030 030 162 143 030 030 030 030 170 030
+Last Packet: 030 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [1925,1863,6]
+Player Name: Doca (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1F7F28 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000046)
+Mon Feb 15 18:47:36 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 15/2/2016 23:19:48 - Smek (179.176.189.178) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows XP Home Edition in BRA
+Processor: Intel Core 2 DUO E7200
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 103 109 103 109 104 109 160 131 180 104
+Last Packet: 109 187 004 120 008 007 001 187 004 121 008 007 103 170 017 036
+Player Position: [1211,2169,7]
+Player Name: Smek (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1A03640 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000018)
+Mon Feb 15 22:19:13 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 15/2/2016 23:20:3 - Hellknight (179.176.189.178) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows XP Home Edition in BRA
+Processor: Intel Core 2 DUO E7200
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 103 109 103 109 104 109 160 131 180 104
+Last Packet: 109 187 004 120 008 007 001 187 004 121 008 007 103 170 017 036
+Player Position: [1211,2169,7]
+Player Name: Smek (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1A03640 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000018)
+Mon Feb 15 22:19:13 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 15/2/2016 23:57:6 - Fundao Apache (191.254.69.125) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 181 101 109 104 109 101 109 104 109 101
+Last Packet: 109 212 007 079 007 007 004 212 007 078 007 007 101 173 001 000
+Player Position: [2004,1870,7]
+Player Name: Fundao Apache (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+NWin32Exception.cpp 93: win32 exception occurred, reason:
+invalid handle
+Mon Feb 15 23:56:53 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 16/2/2016 0:58:31 - Todo Revoltado (200.236.252.26) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-3
+Video Card: Intel (R) HD GR
+Last Packet Types: 161 131 133 131 161 160 160 140 161 131
+Last Packet: 133 033 008 007 006 007 033 008 006 006 007 001 131 033 008 006
+Player Position: [2081,1543,7]
+Player Name: Todo Revoltado (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2B7BF0 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Tue Feb 16 00:58:10 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 16/2/2016 10:35:12 - Baballow Sexy (187.108.117.41) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Pentium DUAL E218
+Video Card: Intel (R) 82945
+Last Packet Types: 109 107 162 162 162 100 108 102 109 105
+Last Packet: 109 224 004 236 008 007 001 223 004 236 008 007 000 000 000 000
+Player Position: [1249,2286,5]
+Player Name: Baballow Sexy (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 50 MaW: 1BC7F38 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 50), reason:
+ConsoleWindow.cpp 2124: exception occurred (RecvMode = 7) (SendMode = 7), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000002C)
+Tue Feb 16 10:30:38 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 16/2/2016 13:21:32 - Mokumojin (179.233.130.216) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Pentium G2030 @ 3
+Video Card: NVIDIA GeForce 8400GS
+Last Packet Types: 107 107 107 107 132 131 140 140 107 107
+Last Packet: 107 218 004 114 008 007 001 099 000 054 085 000 016 003 000 000
+Player Position: [1233,2161,7]
+Player Name: Mokumojin (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 28D7F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Tue Feb 16 13:21:26 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 16/2/2016 13:51:57 - Baballow Sexy (187.108.117.41) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Pentium DUAL E218
+Video Card: Intel (R) 82945
+Last Packet Types: 030 030 103 109 104 109 030 030 162 162
+Last Packet: 030 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [1251,2253,6]
+Player Name: Baballow Sexy (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 947F38 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Tue Feb 16 13:49:35 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 16/2/2016 20:4:6 - MyClub (189.84.49.241) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Dual Core Intel Pentium E5500 @ 2
+Video Card: NVIDIA GeForce GT 610
+Last Packet Types: 162 146 104 109 104 109 104 109 030 109
+Last Packet: 109 138 007 075 007 006 001 137 007 075 007 006 104 250 017 000
+Player Position: [1929,1867,6]
+Player Name: MyClub (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 263BC80 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Tue Feb 16 19:03:01 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 16/2/2016 23:13:18 - Pogromczynk (177.5.177.82) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Dual Core Intel Pentium E5700 @ 3
+Video Card: Intel (R) G41 E
+Last Packet Types: 109 131 160 160 140 160 133 131 132 131
+Last Packet: 131 093 011 151 004 008 003 140 183 173 001 016 100 131 096 011
+Player Position: [2908,1176,8]
+Player Name: Pogromczynk (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 49447608), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017] (8120, 0), reason:
+ sx: 11 sy: 1 sz: 2
+ Position: 2
+ zx: 11 zy: 2 zz: 2
+ dx: 0 dy: 1 dz: 0
+ abs_sx: 2911 abs_sy: 1171 abs_sz: 8
+ abs_zx: 2911 abs_zy: 1172 abs_zz: 8
+ Start Cylinder (1):  (351,0) (2886,5) (285,1) (3031,24) (285,2) (3031,3) (285,1) (3031,17) (4266,0) (8120,0)
+ Start Cylinder (2):  (351,0) (2886,5) (8120,0) (4266,0) (3031,17) (285,1) (3031,3) (285,2) (3031,24) (285,1)
+ Destination Cylinder (1):  (353,0) (3031,11) (284,2) (3031,3) (284,3) (3031,12) (99,268545429)
+ Destination Cylinder (2):  (353,0) (99,268545429) (3031,12) (284,3) (3031,3) (284,2) (3031,11)(-)(-)(-)
+Tue Feb 16 23:13:21 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 17/2/2016 3:0:24 - Rosick Barao (187.41.238.232) -----
+
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel Celeron 1007U @ 1
+Video Card: Intel (R) HD GR
+Last Packet Types: 100 040 020 000 000 000 000 000 000 000
+Last Packet: 020 034 000 049 010 087 101 108 099 111 109 101 032 116 111 032
+Player Name: Gordiinho (Justera)
+Player Action: 048 046 048 046 048 046 048 058 055 049 055 051
+Player.cpp 344: exception occurred, reason:
+Player.cpp 448: exception occurred, reason:
+Control.cpp 2157: exception occurred (MessageType: 0 MaW: 38C1A10 MoW: 3A80930), reason:
+Control.cpp 2152: exception occurred, reason:
+NWin32Exception.cpp 55: win32 exception occurred, reason:
+access violation (read attempt at 00907E3F)
+Tue Feb 16 23:21:45 2016
+Debug Assertion 10.90 NWin32Exception.cpp 55
+
+----- 17/2/2016 10:51:22 - Mad Pox (189.84.49.241) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Dual Core Intel Pentium E5500 @ 2
+Video Card: NVIDIA GeForce GT 610
+Last Packet Types: 104 109 104 109 109 104 109 030 104 109
+Last Packet: 109 189 007 075 007 007 003 188 007 075 007 007 104 152 001 023
+Player Position: [1980,1867,7]
+Player Name: Mad Pox (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 26EBC80 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 027EFC98)
+Wed Feb 17 09:51:04 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 17/2/2016 11:28:54 - Dunha (208.76.53.35) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -3210M @ 
+Video Card: Intel (R) HD GR
+Last Packet Types: 160 160 140 160 160 140 160 160 140 160
+Last Packet: 140 220 111 003 016 100 160 084 011 084 011 037 022 000 000 084
+Player Position: [2978,1168,7]
+Player Name: Dunha (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2AC8010 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Wed Feb 17 10:26:19 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 17/2/2016 15:5:45 - Projeto Lucian (189.90.40.34) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Dual Core Intel Pentium E6500 @ 2
+Video Card: Intel (R) G41 E
+Last Packet Types: 161 132 131 140 180 140 131 161 030 161
+Last Packet: 140 233 018 000 064 100 180 024 032 000 089 111 117 032 100 101
+Player Position: [2171,1529,7]
+Player Name: Projeto Lucian (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1DF7F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000064)
+Wed Feb 17 14:05:22 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 17/2/2016 16:20:2 - Pitt (189.107.250.208) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Core 2 DUO E7500
+Video Card: STANDARD 
+Last Packet Types: 107 107 107 107 107 107 107 107 107 107
+Last Packet: 107 217 004 118 008 007 001 099 000 181 105 000 016 001 107 223
+Player Position: [1242,2164,7]
+Player Name: Pitt (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1AC7F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (write attempt at 4E9EB4B1)
+Wed Feb 17 15:17:55 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 17/2/2016 16:47:10 - Lord Kabexa (177.35.233.6) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 030 109 109 030 109 210 210 210 210
+Last Packet: 109 222 007 069 007 007 001 221 007 069 007 007 000 000 000 000
+Player Position: [2005,1865,7]
+Player Name: Lord Kabexa (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 347C28 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Wed Feb 17 16:44:29 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 17/2/2016 18:31:39 - Lord Kabexa (177.35.233.6) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 210 210 210 210 210 210 210 210 210 210
+Last Packet: 010 127 046 001 016 050 000 000 100 051 008 021 006 007 246 017
+Player Position: [2099,1557,7]
+Player Name: Lord Kabexa (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1499: exception occurred (MaW: 2141EE0 MoW: 0 ), reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Wed Feb 17 18:29:04 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 18/2/2016 0:39:58 - Pelotinha Pvpzudo (201.1.138.42) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Business Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 131 140 109 109 106 109 109 131 140 109
+Last Packet: 140 011 082 000 064 100 131 140 005 249 005 013 013 000 000 000
+Player Position: [1429,1529,12]
+Player Name: Pelotinha Pvpzudo (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2D3BE98 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Thu Feb 18 00:39:30 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 18/2/2016 1:29:38 - Insano (177.35.233.6) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 108 107 160 160 140 030 107 107 160 140
+Last Packet: 107 043 008 074 009 006 001 074 011 005 108 041 008 072 009 006
+Player Position: [2090,2377,6]
+Player Name: Insano (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2101EE0 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Thu Feb 18 01:27:03 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 18/2/2016 1:59:42 - Terror Was Coming (177.207.27.202) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Business Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: STANDARD 
+Last Packet Types: 160 140 030 180 104 109 104 109 104 109
+Last Packet: 140 199 091 002 016 100 160 212 003 212 003 143 086 000 000 149
+Player Position: [3277,2005,7]
+Player Name: Terror Was Coming (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 260BD10 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Thu Feb 18 00:58:24 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 18/2/2016 2:7:10 - Netinho Neimabala (189.7.251.161) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Core 2 DUO E7400
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 030 210 210 210 210 210 210 162 141 130
+Last Packet: 030 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [1980,1840,7]
+Player Name: Netinho Neimabala (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1C2BC78 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+GUI.cpp 1559: exception occurred (Surface = 1), reason:
+MapWindow.cpp 869: exception occurred (Surface = 1), reason:
+MapWindow.cpp 822: exception occurred, reason:
+Graphics.cpp 1368: exception occurred (Surface = 1) (FontNumber = 2), reason:
+Graphics.cpp 1356: exception occurred (Surface = 1) (FontNumber = 2), reason:
+Graphics.cpp 1481: assertion failed (Length = 104), reason:
+Length <= (int) strlen(Text)
+Thu Feb 18 02:06:54 2016
+Debug Assertion 8.60 Graphics.cpp 1481
+
+----- 18/2/2016 4:25:15 - Dhawkz (189.7.251.161) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Core 2 DUO E7400
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 102 109 102 109 102 109 102 109 102 109
+Last Packet: 109 087 011 142 004 007 001 088 011 142 004 007 102 173 001 017
+Player Position: [2904,1166,7]
+Player Name: Sky Hemp (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1D1BC78 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 80402200)
+Thu Feb 18 04:24:56 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 18/2/2016 16:0:50 - Ghost Rider (177.35.233.6) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 212 030 109 172 131 180 180 160 143 210
+Last Packet: 212 122 006 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [1970,1397,7]
+Player Name: Ghost Rider (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2C7C28 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Thu Feb 18 15:58:01 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 18/2/2016 16:31:2 - Todo Revoltado (200.236.238.223) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-3
+Video Card: Intel (R) HD GR
+Last Packet Types: 107 108 107 146 109 109 109 109 030 106
+Last Packet: 107 207 007 074 007 007 001 099 000 045 174 000 016 000 000 000
+Player Position: [2003,1862,7]
+Player Name: Todo Revoltado (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 24C7C20 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Thu Feb 18 16:30:26 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 18/2/2016 16:39:40 - Garota Do Ceu (200.236.238.223) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-3
+Video Card: Intel (R) HD GR
+Last Packet Types: 107 108 107 146 109 109 109 109 030 106
+Last Packet: 107 207 007 074 007 007 001 099 000 045 174 000 016 000 000 000
+Player Position: [2003,1862,7]
+Player Name: Todo Revoltado (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 24C7C20 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Thu Feb 18 16:30:26 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 18/2/2016 16:40:7 - Garota Do Ceu (200.236.238.223) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-3
+Video Card: Intel (R) HD GR
+Last Packet Types: 172 109 109 131 134 109 131 134 162 141
+Last Packet: 172 009 000 004 000 072 101 108 112 000 000 000 000 000 000 000
+Player Position: [1237,2206,9]
+Player Name: Garota Do Ceu (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 22F8038 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Thu Feb 18 16:39:46 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 18/2/2016 18:40:51 - Spartan (187.19.138.129) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Dual Core Intel Pentium E5500 @ 2
+Video Card: Intel (R) G41 E
+Last Packet Types: 107 180 102 109 109 102 109 102 109 102
+Last Packet: 107 208 007 072 007 007 001 099 000 078 087 000 016 003 000 000
+Player Position: [2000,1864,7]
+Player Name: Ghost Anarchy (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 942: exception occurred (nChar = 17) (nFlags = 16), reason:
+Control.cpp 1119: exception occurred (Key = 1137), reason:
+MainWindow.cpp 214: exception occurred (Key = 1137), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000000)
+Thu Feb 18 18:40:42 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 19/2/2016 13:21:45 - Falco Hero (179.126.72.226) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Dual Core AMD Athlon 64 X2 480
+Video Card: NVIDIA GeForce 8400GS
+Last Packet Types: 107 107 107 107 107 107 107 107 107 107
+Last Packet: 107 222 004 118 008 007 001 099 000 232 084 000 016 003 000 000
+Player Position: [1239,2162,7]
+Player Name: Falco Hero (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1499: exception occurred (MaW: 3ABC78 MoW: 0 ), reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Fri Feb 19 13:21:58 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 19/2/2016 13:23:5 - Bentabebendo (187.21.132.5) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel Core i7 -4770K @ 
+Video Card: NVIDIA GeForce GTX 770
+Last Packet Types: 150 030 170 170 170 170 030 170 181 180
+Last Packet: 150 001 000 000 000 227 011 001 094 002 094 002 033 065 079 076
+Player Position: [68,941,15]
+Player Name: Jhonyhc (BaiakDoom)
+Player Action: 049 057 056 046 053 048 046 050 048 049 046 049 048 053 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 150) (MainWindow = 37191480), reason:
+Communication.cpp 2619: exception occurred, reason:
+Network.cpp 504: exception occurred, reason:
+Utils.cpp 550: assertion failed (Position = 19) (Size-Length = -23436), reason:
+Position<=Size-Length
+Wed Feb 17 20:07:59 2016
+Debug Assertion 8.60 Utils.cpp 550
+
+----- 19/2/2016 13:45:23 - Ema (200.236.238.223) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-3
+Video Card: Intel (R) HD GR
+Last Packet Types: 172 160 120 021 172 131 180 180 160 160
+Last Packet: 172 009 000 004 000 072 101 108 112 000 000 000 000 000 000 000
+Player Position: [2019,1905,7]
+Player Name: Ema (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 50 MaW: 2277C20 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 50), reason:
+ConsoleWindow.cpp 2124: exception occurred (RecvMode = 7) (SendMode = 7), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000002C)
+Fri Feb 19 13:44:48 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 19/2/2016 22:28:59 - Hell Knight (179.111.127.7) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 107 107 107 107 107 030 107 107 107
+Last Packet: 107 219 004 117 008 007 001 099 000 042 236 000 016 002 107 219
+Player Position: [1247,2171,7]
+Player Name: Hell Knight (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 39616344), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 3 sy: 2 sz: 0
+ Position: 1
+ zx: 3 zy: 3 zz: 0
+ dx: 0 dy: 1 dz: 0
+ abs_sx: 1242 abs_sy: 2167 abs_sz: 7
+ abs_zx: 1242 abs_zy: 2168 abs_zz: 7
+ Start Cylinder (1):  (416,0)
+ Start Cylinder (2):  (416,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (416,0) (3577,1)
+ Destination Cylinder (2):  (416,0) (3577,1)(-)(-)(-)(-)(-)(-)(-)(-)
+Fri Feb 19 21:45:48 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 19/2/2016 23:30:9 - Terror Was Coming (177.206.193.205) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Business Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: STANDARD 
+Last Packet Types: 030 160 160 140 160 160 140 030 110 163
+Last Packet: 030 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [2092,1910,9]
+Player Name: Terror Was Coming (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: B2BD10 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Fri Feb 19 22:29:35 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 20/2/2016 0:6:54 - Kanaith Bolado (138.97.127.14) -----
+Comment: 
+Graphic Engine: OpenGL (1)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-4
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 131 180 131 134 160 140 131 180 170
+Last Packet: 170 000 000 000 000 006 000 100 114 097 103 111 110 000 000 020
+Player Position: [2028,1960,6]
+Player Name: Kanaith Bolado (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 8683352), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 6 sy: 11 sz: 2
+ Position: 2
+ zx: 6 zy: 12 zz: 2
+ dx: 0 dy: 1 dz: 0
+ abs_sx: 2027 abs_sy: 1966 abs_sz: 5
+ abs_zx: 2027 abs_zy: 1967 abs_zz: 5
+ Start Cylinder (1):  (103,0) (1105,0)
+ Start Cylinder (2):  (103,0) (1105,0)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (103,0) (2118,0)
+ Destination Cylinder (2):  (103,0) (2118,0)(-)(-)(-)(-)(-)(-)(-)(-)
+Sat Feb 20 00:06:16 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 20/2/2016 10:30:54 - Psychedelic Krazy (201.1.136.187) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Business Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 160 109 109 109 160 109 109 131 131 108
+Last Packet: 160 079 003 232 003 154 122 000 000 042 025 217 004 171 000 060
+Player Position: [1369,1462,13]
+Player Name: Psychedelic Krazy (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2F2BE98 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (write attempt at 00000001)
+Sat Feb 20 10:30:20 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 20/2/2016 15:37:15 - Gona (190.203.132.6) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows XP Professional in ESP
+Processor: Intel Pentium DUAL E218
+Video Card: Intel (R) G33/G
+Last Packet Types: 107 107 107 107 030 107 107 107 107 107
+Last Packet: 107 218 004 119 008 007 001 099 000 234 084 000 016 000 000 000
+Player Position: [1243,2164,7]
+Player Name: Gona (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 8F13E60 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Sat Feb 20 13:09:05 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 21/2/2016 14:30:16 - Terror Was Coming (177.159.18.178) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Business Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: STANDARD 
+Last Packet Types: 160 160 140 132 131 140 180 140 131 030
+Last Packet: 140 117 019 003 016 100 160 135 005 135 005 065 103 001 000 067
+Player Position: [2171,1571,7]
+Player Name: Terror Was Coming (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 251BD10 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Sun Feb 21 12:28:34 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 21/2/2016 21:34:2 - Daily Davina Claire (172.93.110.74) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -3210M @ 
+Video Card: Intel (R) HD GR
+Last Packet Types: 100 020 000 000 000 000 000 000 000 000
+Last Packet: 020 178 000 051 055 051 010 068 117 101 032 116 111 032 116 101
+Player Name: Daily Davina Claire (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 27A8010 MoW: 288C4A0), reason:
+Control.cpp 1723: exception occurred, reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFB08BC0)
+Sun Feb 21 21:31:13 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 22/2/2016 18:13:29 - Caffrey (46.174.27.45) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Home Premium Edition 64 Bit in POL
+Processor: Dual Core AMD Athlon II P320
+Video Card: ATI Mobility Radeon HD 4200 SERI
+Last Packet Types: 109 030 131 106 109 030 104 109 109 104
+Last Packet: 109 205 007 074 007 007 001 204 007 074 007 007 000 000 000 000
+Player Position: [1994,1870,7]
+Player Name: Caffrey (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2387F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 023F7FF0)
+Mon Feb 22 22:11:05 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 22/2/2016 18:29:11 - Dunha (172.93.110.74) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -3210M @ 
+Video Card: Intel (R) HD GR
+Last Packet Types: 170 131 131 134 131 107 160 160 140 131
+Last Packet: 131 243 007 249 006 007 003 170 015 143 002 000 012 000 083 107
+Player Position: [2036,1786,7]
+Player Name: Dunha (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2C8010 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 66722EE8)
+Mon Feb 22 18:26:23 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 22/2/2016 22:38:53 - Terror Was Coming (177.135.0.252) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Business Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: STANDARD 
+Last Packet Types: 107 111 181 111 104 109 163 180 132 131
+Last Packet: 107 172 012 227 007 006 002 099 000 167 161 001 064 000 000 000
+Player Position: [3244,2018,6]
+Player Name: Terror Was Coming (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 107) (MainWindow = 41139472), reason:
+Communication.cpp 1846: exception occurred (rx = 8) (ry = 7), reason:
+Communication.cpp 1830: Object is not where it should be, reason:
+ hx: 8 hy: 7 hz: 1 Pos: 2
+ Cylinder (1):  (4567,0) (2889,5)
+ Cylinder (2):  (4567,0) (2889,5)(-)(-)(-)(-)(-)(-)(-)(-)
+Mon Feb 22 22:38:18 2016
+Debug Assertion 8.60 Communication.cpp 1830
+
+----- 23/2/2016 21:12:6 - Sit Safira (186.185.13.154) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Home Premium Edition 32 Bit in ESP
+Processor: Intel Pentium G2030 @ 3
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 109 109 109 030 109 109 109 109 109
+Last Packet: 109 027 008 244 006 006 001 027 008 243 006 006 000 000 000 000
+Player Position: [2081,1782,7]
+Player Name: Sit Safira (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 942: exception occurred (nChar = 13) (nFlags = 0), reason:
+Control.cpp 1119: exception occurred (Key = 13), reason:
+MainWindow.cpp 214: exception occurred (Key = 13), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000000)
+Tue Feb 23 19:41:32 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 24/2/2016 8:44:20 - Zhe Ruela (187.114.93.4) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Pentium P6100 @ 2
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 107 107 107 107 107 107 107 107 107
+Last Packet: 107 107 000 154 000 007 001 099 000 245 015 132 016 003 107 107
+Player Position: [111,154,9]
+Player Name: Ekir (UnderWar)
+Player Action: 049 053 056 046 054 057 046 050 051 046 049 050 057 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 41320280), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017] (3031, 2), reason:
+ sx: 3 sy: 2 sz: 3
+ Position: 2
+ zx: 3 zy: 1 zz: 3
+ dx: 0 dy: -1 dz: 0
+ abs_sx: 107 abs_sy: 151 abs_sz: 8
+ abs_zx: 107 abs_zy: 150 abs_zz: 8
+ Start Cylinder (1):  (408,0) (1948,0) (3031,2)
+ Start Cylinder (2):  (408,0) (1948,0) (3031,2)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (413,0)
+ Destination Cylinder (2):  (413,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+Tue Feb 23 17:29:22 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 24/2/2016 11:41:16 - Hartlas (177.132.208.26) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows XP Home Edition in BRA
+Processor: Intel Core 2 DUO E7200
+Video Card: NVIDIA GeForce 8600 GT
+Last Packet Types: 131 162 146 100 108 172 021 142 162 162
+Last Packet: 010 079 105 002 016 050 000 000 100 033 008 207 005 007 248 017
+Player Position: [2171,1571,7]
+Player Name: Hartlas (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 1 MaW: 1A03640 MoW: 19DD5D0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+GUI.cpp 1559: exception occurred (Surface = 1), reason:
+GUI.cpp 1314: exception occurred (Surface = 1) (i = 1), reason:
+GUI.cpp 1288: dialog origin outside main window (surface: 1 x: -69 y: 130 DrawingListLength: 9 i: 1 DrawingList.Skin: 49 DrawingList.x: 4 DrawingList.y: 0 DrawingList.width: 731 DrawingList.height: 17 DrawingList.srcx: 0 DrawingList.srcy: 0)
+Wed Feb 24 11:40:39 2016
+Debug Assertion 8.60 GUI.cpp 1288
+
+----- 24/2/2016 12:52:54 - Caffrey (46.174.27.45) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in POL
+Processor: Dual Core AMD Athlon II P320
+Video Card: ATI Mobility Radeon HD 4200 SERI
+Last Packet Types: 109 109 131 140 109 109 131 131 108 109
+Last Packet: 109 049 004 020 004 004 001 050 004 020 004 004 000 000 000 000
+Player Position: [1076,1044,7]
+Player Name: Caffrey (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 8A7F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 1C8F1BDE)
+Wed Feb 24 16:50:30 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 24/2/2016 12:53:19 - Caffrey (46.174.27.45) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in POL
+Processor: Dual Core AMD Athlon II P320
+Video Card: ATI Mobility Radeon HD 4200 SERI
+Last Packet Types: 109 109 160 109 109 109 109 131 140 109
+Last Packet: 160 091 004 091 004 236 062 001 000 244 119 249 000 101 000 034
+Player Position: [1076,1044,7]
+Player Name: Caffrey (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2334D30 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 023F5F50)
+Wed Feb 24 16:50:49 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 24/2/2016 13:34:57 - Ghost Rider (187.181.163.63) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 172 021 142 162 162 162 162 146 100 108
+Last Packet: 010 211 090 000 016 050 000 000 100 127 008 100 010 006 231 000
+Player Position: [2019,1905,7]
+Player Name: Ghost Rider (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 1 MaW: 2181F38 MoW: 2217418), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+GUI.cpp 1559: exception occurred (Surface = 1), reason:
+GUI.cpp 1314: exception occurred (Surface = 1) (i = 1), reason:
+GUI.cpp 1288: dialog origin outside main window (surface: 1 x: -24 y: 130 DrawingListLength: 9 i: 1 DrawingList.Skin: 49 DrawingList.x: 4 DrawingList.y: 0 DrawingList.width: 731 DrawingList.height: 17 DrawingList.srcx: 0 DrawingList.srcy: 0)
+Wed Feb 24 13:32:19 2016
+Debug Assertion 8.60 GUI.cpp 1288
+
+----- 24/2/2016 13:38:6 - Lord Kabexa (187.181.163.63) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 109 109 109 030 106 109 109 109 109
+Last Packet: 109 038 008 186 007 011 001 039 008 186 007 011 109 028 008 178
+Player Position: [2081,1977,10]
+Player Name: Lord Kabexa (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 21D1F38 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Wed Feb 24 13:35:27 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 24/2/2016 14:5:42 - Ruzzo (186.185.96.16) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Home Premium Edition 32 Bit in ESP
+Processor: Intel Pentium G2030 @ 3
+Video Card: Intel (R) HD GR
+Last Packet Types: 144 144 144 144 144 107 144 144 144 144
+Last Packet: 144 246 084 000 016 001 144 246 084 000 016 001 144 246 084 000
+Player Position: [2187,1985,8]
+Player Name: Ruzzo (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 942: exception occurred (nChar = 116) (nFlags = 20), reason:
+Control.cpp 1119: exception occurred (Key = 116), reason:
+MainWindow.cpp 214: exception occurred (Key = 116), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000000)
+Wed Feb 24 12:34:33 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 24/2/2016 22:54:21 - Metamorphosis (191.8.11.155) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 106 131 131 131 131 131 131 131 131 131
+Last Packet: 106 205 007 152 005 008 002 098 000 087 172 000 064 100 000 248
+Player Position: [1996,1425,8]
+Player Name: Metamorphosis (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+NWin32Exception.cpp 93: win32 exception occurred, reason:
+invalid handle
+Wed Feb 24 22:53:04 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 25/2/2016 5:51:22 - Caffrey (46.174.27.45) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in POL
+Processor: Dual Core AMD Athlon II P320
+Video Card: ATI Mobility Radeon HD 4200 SERI
+Last Packet Types: 102 109 104 109 030 030 104 109 162 146
+Last Packet: 109 189 007 072 007 007 001 190 007 072 007 007 102 010 037 082
+Player Position: [1982,1864,7]
+Player Name: Caffrey (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 20C7F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 022E7FF0)
+Thu Feb 25 09:48:48 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 25/2/2016 13:36:58 - Insano (187.181.163.63) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 030 132 131 140 180 140 131 132 131 140
+Last Packet: 140 158 018 000 064 100 180 024 033 000 089 111 117 032 100 101
+Player Position: [2153,1459,7]
+Player Name: Insano (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 20F1F38 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Thu Feb 25 13:34:18 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 25/2/2016 17:26:19 - Vinin Ell Loko (191.184.254.169) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel CORE I3-3
+Video Card: Intel (R) HD GR
+Last Packet Types: 102 109 102 109 102 109 102 109 160 160
+Last Packet: 109 191 007 045 007 007 002 192 007 045 007 007 102 173 001 000
+Player Position: [1984,1837,7]
+Player Name: Vinin Ell Loko (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 207CF8 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Thu Feb 25 17:26:03 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 25/2/2016 17:59:56 - Lord Thanos (200.196.143.244) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Core 2 DUO E8400
+Video Card: Intel (R) Q35 E
+Last Packet Types: 109 030 162 141 130 161 160 120 121 120
+Last Packet: 109 205 007 062 007 006 001 204 007 062 007 006 000 000 000 000
+Player Position: [1996,1857,7]
+Player Name: Lord Thanos (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1F77F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Thu Feb 25 17:59:50 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 25/2/2016 19:51:29 - John Cenna (189.30.71.103) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Dual Core Intel Pentium E5700 @ 3
+Video Card: ATI Radeon HD 4650
+Last Packet Types: 030 030 030 132 113 160 114 180 110 110
+Last Packet: 030 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [2923,1172,7]
+Player Name: John Cenna (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+NWin32Exception.cpp 93: win32 exception occurred, reason:
+invalid handle
+Thu Feb 25 19:51:10 2016
+Debug Assertion 8.60 NWin32Exception.cpp 93
+
+----- 25/2/2016 20:6:1 - Ruzzo (186.185.120.250) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Home Premium Edition 32 Bit in ESP
+Processor: Intel Pentium G2030 @ 3
+Video Card: Intel (R) HD GR
+Last Packet Types: 132 131 140 180 140 131 030 132 131 140
+Last Packet: 140 232 018 000 064 100 180 024 032 000 089 111 117 032 100 101
+Player Position: [2153,1529,7]
+Player Name: Ruzzo (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 50 MaW: 1B18118 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 50), reason:
+ConsoleWindow.cpp 2124: exception occurred (RecvMode = 7) (SendMode = 7), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000002C)
+Thu Feb 25 18:27:36 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 25/2/2016 20:42:22 - Slark (177.206.233.56) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel Pentium G3250 @ 3
+Video Card: NVIDIA GeForce 9800 GT
+Last Packet Types: 172 021 142 162 162 162 100 108 131 180
+Last Packet: 010 247 231 000 016 050 000 000 100 090 008 104 010 006 246 017
+Player Position: [2019,1905,7]
+Player Name: Slark (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 1 MaW: 2587F28 MoW: 7435D78), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+GUI.cpp 1559: exception occurred (Surface = 1), reason:
+GUI.cpp 1314: exception occurred (Surface = 1) (i = 1), reason:
+GUI.cpp 1288: dialog origin outside main window (surface: 1 x: -69 y: 130 DrawingListLength: 9 i: 1 DrawingList.Skin: 49 DrawingList.x: 4 DrawingList.y: 0 DrawingList.width: 731 DrawingList.height: 17 DrawingList.srcx: 0 DrawingList.srcy: 0)
+Thu Feb 25 20:42:19 2016
+Debug Assertion 8.60 GUI.cpp 1288
+
+----- 26/2/2016 9:5:56 - Metamorphosis (191.8.11.155) -----
+
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Player.cpp 361: exception occurred, reason:
+Network.cpp 892: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1214: exception occurred, reason:
+Communication.cpp 121: exception occurred, reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000004)
+Fri Feb 26 08:26:20 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 26/2/2016 9:45:45 - Bola do Amor (177.40.184.181) -----
+
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Business Edition 32 Bit in BRA
+Processor: Intel Celeron B800 @ 1.
+Video Card: Intel (R) HD GR
+Player.cpp 361: exception occurred, reason:
+Network.cpp 892: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1214: exception occurred, reason:
+Communication.cpp 121: exception occurred, reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000004)
+Fri Feb 26 03:07:24 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 26/2/2016 13:28:27 - Master Mago (201.14.24.178) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Mobile AMD Turion 64 TECHNO
+Video Card: ATI Radeon XPRESS SE
+Last Packet Types: 109 107 107 107 107 107 107 107 107 107
+Last Packet: 107 222 004 121 008 007 001 099 000 237 084 000 016 002 107 222
+Player Position: [1242,2170,7]
+Player Name: Master Mago (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 28421352), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 2 sy: 10 sz: 0
+ Position: 1
+ zx: 3 zy: 10 zz: 0
+ dx: 1 dy: 0 dz: 0
+ abs_sx: 1236 abs_sy: 2174 abs_sz: 7
+ abs_zx: 1237 abs_zy: 2174 abs_zz: 7
+ Start Cylinder (1):  (416,0)
+ Start Cylinder (2):  (416,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (416,0)
+ Destination Cylinder (2):  (416,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+Fri Feb 26 13:28:20 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 26/2/2016 13:30:10 - Ghost Rider (179.217.255.53) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 109 109 109 109 109 109 109 109 109
+Last Packet: 109 245 007 220 009 007 001 245 007 221 009 007 109 255 007 215
+Player Position: [2046,2523,5]
+Player Name: Insano (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2111F38 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Fri Feb 26 13:27:26 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 26/2/2016 13:50:31 - Lukinhaa Owns (186.219.157.156) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Pentium G2030 @ 3
+Video Card: NVIDIA GeForce 210
+Player.cpp 361: exception occurred, reason:
+Network.cpp 892: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1214: exception occurred, reason:
+Communication.cpp 121: exception occurred, reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000004)
+Fri Feb 26 13:50:16 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 26/2/2016 22:1:20 - Night Hound (191.8.11.155) -----
+
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 031 133 132 131 140 180 140 180 107 030
+Last Packet: 031 155 222 000 000 092 000 000 000 000 000 000 000 000 000 000
+Player Position: [2099,1557,7]
+Player Name: Paladayner (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 31) (MainWindow = 9076568), reason:
+Communication.cpp 185: exception occurred, reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000004)
+Fri Feb 26 13:10:38 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 27/2/2016 11:4:53 - GEORGE (186.233.105.187) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Celeron E3400 @ 2
+Video Card: Intel (R) G41 E
+Last Packet Types: 030 160 030 160 160 140 160 030 160 160
+Last Packet: 030 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [1252,2255,6]
+Player Name: GEORGE (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2DB968 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 01EDBB90)
+Sat Feb 27 11:04:48 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 27/2/2016 19:10:28 - Metamorphosis (179.110.84.113) -----
+
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 107 109 131 180 131 180 180 180 131 180
+Last Packet: 180 026 018 000 089 111 117 032 097 114 101 032 101 120 104 097
+Player Position: [2022,1468,6]
+Player Name: Metamorphosis (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 892: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1214: exception occurred, reason:
+Communication.cpp 121: exception occurred, reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000004)
+Sat Feb 27 15:19:23 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 28/2/2016 13:25:8 - Metamorphosis (191.23.85.221) -----
+
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in BRA
+Processor: Intel Core i5 -2320 @ 3
+Video Card: NVIDIA GeForce GT 630
+Last Packet Types: 031 132 131 140 180 140 131 180 107 180
+Last Packet: 031 019 082 000 000 123 000 000 000 000 000 000 000 000 000 000
+Player Position: [2117,1487,7]
+Player Name: Smoking Da Tank (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 31) (MainWindow = 2064216), reason:
+Communication.cpp 185: exception occurred, reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000004)
+Sun Feb 28 13:10:38 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 28/2/2016 19:38:8 - Alucard (138.117.124.3) -----
+Comment: 
+Graphic Engine: OpenGL (1)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 109 109 109 109 030 160 160 140 109
+Last Packet: 109 187 007 105 007 008 001 187 007 104 007 008 000 000 000 000
+Player Position: [1978,1893,9]
+Player Name: Alucard (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 37257048), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017] (1866, 0), reason:
+ sx: 8 sy: 9 sz: 3
+ Position: 1
+ zx: 8 zy: 8 zz: 3
+ dx: 0 dy: -1 dz: 0
+ abs_sx: 1979 abs_sy: 1897 abs_sz: 8
+ abs_zx: 1979 abs_zy: 1896 abs_zz: 8
+ Start Cylinder (1):  (351,0) (1866,0)
+ Start Cylinder (2):  (351,0) (1866,0)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (351,0)
+ Destination Cylinder (2):  (351,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+Sun Feb 28 19:37:48 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 28/2/2016 20:31:23 - Insano (177.83.238.122) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 131 132 131 140 180 140 160 160 140 131
+Last Packet: 131 087 008 021 006 007 003 000 000 000 000 000 000 000 000 000
+Player Position: [2135,1557,7]
+Player Name: Insano (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 20D7C20 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Sun Feb 28 20:28:30 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 29/2/2016 12:18:16 - Terror Was Coming (177.207.37.200) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Business Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: STANDARD 
+Last Packet Types: 172 131 180 180 160 143 210 210 210 210
+Last Packet: 010 002 022 001 016 050 000 000 100 197 007 073 007 007 152 001
+Player Position: [1989,1865,7]
+Player Name: Terror Was Coming (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 26BD18 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Mon Feb 29 12:17:16 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 29/2/2016 16:34:4 - Alucard (138.117.124.3) -----
+Comment: 
+Graphic Engine: OpenGL (1)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 107 107 107 107 107 107 107 107 107 107
+Last Packet: 107 087 008 021 006 007 001 099 000 121 086 000 016 003 107 087
+Player Position: [2135,1557,7]
+Player Name: Alucard (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 327F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+DialogWindow.cpp 122: exception occurred (Surface = 1), reason:
+DialogWindow.cpp 707: exception occurred (Surface = 1) ((int) Child = 40462568), reason:
+DialogElements.cpp 1177: exception occurred (Surface = 1), reason:
+Graphics.cpp 1174: exception occurred (Debug: 7 Type: 2854 PX: 1 PY: 1 Ph: 1 W: 1 H: 1 L: 1 X: 1 Y: 1 L: 1 S: 200), reason:
+Graphics.cpp 1010: exception occurred (Surface = 1) (SpriteNumber = 200), reason:
+SurfaceGL.cpp 1362: exception occurred, reason:
+SurfaceGL.cpp 1289: exception occurred, reason:
+SurfaceGL.cpp 647: exception ocurred (_Surface: 3 CurrentTargetSurface: 2 Texture: 1 Function: glCopyTexSubImage2D), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000000C)
+Mon Feb 29 16:10:10 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 29/2/2016 21:50:51 - Haxixe (177.9.176.61) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Starter Edition 32 Bit in BRA
+Processor: AMD C-60 APU 
+Video Card: ATI Radeon HD AMD 6200 
+Last Packet Types: 160 160 160 140 030 160 160 140 210 210
+Last Packet: 160 189 001 189 001 139 230 000 000 117 019 052 000 060 000 091
+Player Position: [2037,1869,7]
+Player Name: Haxixe (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1E37CB8 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 13020E79)
+Mon Feb 29 21:50:20 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 2/3/2016 8:8:5 - Ruzzo (186.185.8.35) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Home Premium Edition 32 Bit in ESP
+Processor: Intel Pentium G2030 @ 3
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 180 131 180 180 180 180 131 180 180
+Last Packet: 180 025 033 000 085 115 105 110 103 032 111 110 101 032 111 102
+Player Position: [1949,2107,7]
+Player Name: Ruzzo (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 827: exception occurred (nChar = 116) (nFlags = 63), reason:
+Control.cpp 1119: exception occurred (Key = 260), reason:
+MainWindow.cpp 214: exception occurred (Key = 260), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000000)
+Wed Mar 02 06:37:29 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 2/3/2016 13:14:13 - Preparoubebeufaz (138.117.124.3) -----
+Comment: 
+Graphic Engine: OpenGL (1)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 132 131 106 108 140 180 160 160 140 134
+Last Packet: 134 001 012 000 064 000 140 237 084 000 016 000 160 000 000 209
+Player Position: [2033,1952,6]
+Player Name: Alucard (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 827: exception occurred (nChar = 114) (nFlags = 61), reason:
+Control.cpp 1119: exception occurred (Key = 258), reason:
+MainWindow.cpp 214: exception occurred (Key = 258), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000000)
+Wed Mar 02 13:13:29 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 2/3/2016 21:58:42 - Preparoubebeufaz (138.117.124.3) -----
+Comment: 
+Graphic Engine: OpenGL (1)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 107 107 107 107 107 107 107 107 107 107
+Last Packet: 107 033 008 021 006 007 001 099 000 059 115 000 016 001 107 033
+Player Position: [2081,1557,7]
+Player Name: Alucard (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2241CA8 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+GUI.cpp 1559: exception occurred (Surface = 1), reason:
+MapWindow.cpp 869: exception occurred (Surface = 1), reason:
+MapWindow.cpp 803: exception occurred, reason:
+SurfaceGL.cpp 1289: exception occurred, reason:
+SurfaceGL.cpp 647: exception ocurred (_Surface: 1 CurrentTargetSurface: 2 Texture: 1 Function: glCopyTexSubImage2D), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000000C)
+Wed Mar 02 21:32:20 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 3/3/2016 6:37:17 - Alucard (138.117.124.3) -----
+Comment: 
+Graphic Engine: OpenGL (1)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 030 107 107 107 107 107 107 107 107 107
+Last Packet: 107 051 008 021 006 007 001 099 000 159 125 000 016 001 107 051
+Player Position: [2099,1557,7]
+Player Name: Alucard (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 21F1CA8 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+GUI.cpp 1559: exception occurred (Surface = 1), reason:
+DialogWindow.cpp 122: exception occurred (Surface = 1), reason:
+ContentWindows.cpp 1661: exception occurred (Surface = 1), reason:
+Graphics.cpp 1403: exception occurred (Surface = 1), reason:
+Graphics.cpp 1356: exception occurred (Surface = 1) (FontNumber = 4), reason:
+SurfaceGL.cpp 1375: exception occurred, reason:
+SurfaceGL.cpp 1449: exception ocurred (ToSurface: 1 FromSurface: 16 Texture: 15 DebuggingProgress: 1), reason:
+SurfaceGL.cpp 647: exception ocurred (_Surface: 1 CurrentTargetSurface: 5 Texture: 4 Function: glCopyTexSubImage2D), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000000C)
+Thu Mar 03 01:01:03 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 4/3/2016 0:1:35 - Alucard (138.117.124.3) -----
+Comment: 
+Graphic Engine: OpenGL (1)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 107 107 107 107 107 107 107 107 107 107
+Last Packet: 107 033 008 179 005 007 001 099 000 233 084 000 016 000 107 033
+Player Position: [2081,1459,7]
+Player Name: Alucard (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2517F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+GUI.cpp 1559: exception occurred (Surface = 1), reason:
+MapWindow.cpp 869: exception occurred (Surface = 1), reason:
+MapWindow.cpp 803: exception occurred, reason:
+SurfaceGL.cpp 1289: exception occurred, reason:
+SurfaceGL.cpp 647: exception ocurred (_Surface: 1 CurrentTargetSurface: 2 Texture: 1 Function: glCopyTexSubImage2D), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000000C)
+Thu Mar 03 23:39:11 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 4/3/2016 12:35:47 - Alucard (138.117.124.3) -----
+Comment: 
+Graphic Engine: OpenGL (1)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 132 131 106 108 140 180 160 160 140
+Last Packet: 134 008 136 000 064 000 140 011 136 000 016 030 160 168 000 053
+Player Position: [2098,1923,8]
+Player Name: Alucard (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 2719576), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 14 sy: 12 sz: 1
+ Position: 1
+ zx: 14 zy: 11 zz: 1
+ dx: 0 dy: -1 dz: 0
+ abs_sx: 2103 abs_sy: 1928 abs_sz: 9
+ abs_zx: 2103 abs_zy: 1927 abs_zz: 9
+ Start Cylinder (1):  (410,0)
+ Start Cylinder (2):  (410,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (410,0) (5576,0)
+ Destination Cylinder (2):  (410,0) (5576,0)(-)(-)(-)(-)(-)(-)(-)(-)
+Fri Mar 04 12:25:43 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 5/3/2016 0:5:43 - Alucard (138.117.124.3) -----
+Comment: 
+Graphic Engine: OpenGL (1)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 030 133 132 131 140 180 140 107 107 107
+Last Packet: 140 229 018 000 064 100 180 024 033 000 089 111 117 032 100 101
+Player Position: [2099,1529,7]
+Player Name: Alucard (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2417F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+DialogWindow.cpp 122: exception occurred (Surface = 1), reason:
+DialogWindow.cpp 707: exception occurred (Surface = 1) ((int) Child = 39272680), reason:
+DialogElements.cpp 1177: exception occurred (Surface = 1), reason:
+Graphics.cpp 1174: exception occurred (Debug: 7 Type: 2854 PX: 1 PY: 1 Ph: 1 W: 1 H: 1 L: 1 X: 1 Y: 1 L: 1 S: 200), reason:
+Graphics.cpp 1010: exception occurred (Surface = 1) (SpriteNumber = 200), reason:
+SurfaceGL.cpp 1362: exception occurred, reason:
+SurfaceGL.cpp 1289: exception occurred, reason:
+SurfaceGL.cpp 647: exception ocurred (_Surface: 3 CurrentTargetSurface: 2 Texture: 1 Function: glCopyTexSubImage2D), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000000C)
+Sat Mar 05 00:05:06 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 9/3/2016 4:59:20 - Mlk Shooter (201.95.30.182) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Dual Core Intel Pentium T4500 @ 2
+Video Card: Mobile Intel (R) 4 SER
+Last Packet Types: 131 170 131 131 143 131 131 131 131 131
+Last Packet: 131 112 126 246 125 007 003 131 112 126 246 125 007 003 131 113
+Player Name: Mlk Shooter (MegaTibia)
+Player Action: 054 057 046 053 056 046 053 046 053 048 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1499: exception occurred (MaW: 1B87F58 MoW: 0 ), reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+GUI.cpp 1559: exception occurred (Surface = 1), reason:
+DialogWindow.cpp 122: exception occurred (Surface = 1), reason:
+DialogWindow.cpp 707: exception occurred (Surface = 1) ((int) Child = 30399360), reason:
+ContentWindows.cpp 1290: exception occurred (Surface = 1) (Obj.Type = 0), reason:
+GUI.cpp 1559: exception occurred (Surface = 1), reason:
+ContentWindows.cpp 968: exception occurred (Surface = 1), reason:
+ContentWindows.cpp 998: exception occurred, reason:
+Creatures.cpp 1121: assertion failed (GetPlayerID() = 268436067), reason:
+Player != NULL
+Wed Mar 09 04:58:44 2016
+Debug Assertion 8.60 Creatures.cpp 1121
+
+----- 12/3/2016 22:17:0 - Juninho Darkangel (189.123.198.207) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 103 109 103 109 102 109 102 109 160 104
+Last Packet: 109 199 004 153 008 007 002 199 004 154 008 007 103 163 017 033
+Player Position: [1223,2202,7]
+Player Name: Juninho Darkangel (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 227F00 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000000)
+Sat Mar 12 22:15:53 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 14/3/2016 13:28:34 - Juninho Santos (189.123.198.207) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel CORE I3-2
+Video Card: Intel (R) HD GR
+Last Packet Types: 106 106 108 180 131 131 131 131 131 131
+Last Packet: 180 019 215 000 089 111 117 032 100 105 101 100 032 097 110 100
+Player Position: [2319,2591,6]
+Player Name: Juninho Darkangel (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 106) (MainWindow = 29458176), reason:
+Communication.cpp 1784: exception occurred (rx = 8) (ry = 6), reason:
+Map.cpp 488: assertion failed (Position = 3), reason:
+Position<=Point.getObjectCount()
+Mon Mar 14 13:26:02 2016
+Debug Assertion 8.60 Map.cpp 488
+
+----- 15/3/2016 9:42:39 - Luan Darkangel (177.40.101.99) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Dual Core Intel Pentium E5700 @ 3
+Video Card: Intel (R) G33/G
+Last Packet Types: 131 134 161 160 160 140 109 109 109 030
+Last Packet: 161 010 000 010 000 010 000 010 000 010 000 013 028 010 000 134
+Player Position: [1228,2229,10]
+Player Name: Luan Darkangel (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1817CB8 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Tue Mar 15 09:42:14 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 15/3/2016 20:9:20 - Luan Darkangel (177.40.101.99) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Dual Core Intel Pentium E5700 @ 3
+Video Card: Intel (R) G33/G
+Last Packet Types: 131 131 131 131 131 131 131 131 131 131
+Last Packet: 109 089 009 010 010 006 001 088 009 010 010 006 107 085 009 012
+Player Position: [2390,2572,6]
+Player Name: Luan Darkangel (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 827: exception occurred (nChar = 112) (nFlags = 59), reason:
+Control.cpp 1119: exception occurred (Key = 256), reason:
+MainWindow.cpp 214: exception occurred (Key = 256), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000000)
+Tue Mar 15 16:12:55 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 16/3/2016 16:25:17 - Skull Basher (78.148.61.15) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows XP Home Edition in GBR
+Processor: AMD A8-6410 A
+Video Card: ATI Radeon AMD (TM) 
+Last Packet Types: 107 030 109 107 107 107 109 030 107 107
+Last Packet: 107 214 007 074 007 007 001 099 000 166 172 000 016 002 000 000
+Player Position: [2003,1866,7]
+Player Name: Skull Basher (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 508: exception occurred (nIDEvent = 1), reason:
+Control.cpp 1437: exception occurred, reason:
+GUI.cpp 1033: exception occurred (i = 0), reason:
+GUI.cpp 1093: exception occurred (elapsed = 108), reason:
+GUI.cpp 2090: exception occurred, reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 41206D75)
+Wed Mar 16 16:04:00 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 16/3/2016 19:2:32 - Caffrey (46.174.24.4) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 64 Bit in POL
+Processor: Dual Core AMD Athlon II P320
+Video Card: ATI Mobility Radeon HD 4200 SERI
+Last Packet Types: 109 030 109 109 030 109 030 109 109 030
+Last Packet: 109 203 007 074 007 007 001 203 007 075 007 007 000 000 000 000
+Player Position: [1997,1864,7]
+Player Name: Caffrey (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 22A7F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000018)
+Wed Mar 16 23:02:24 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 19/3/2016 15:25:21 - White Fenix (201.33.178.82) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows XP Professional in BRA
+Processor: Dual Core AMD Athlon 64 X2 360
+Video Card: NVIDIA GeForce 6100 NFOR
+Last Packet Types: 109 170 160 162 131 131 162 143 109 109
+Last Packet: 143 059 087 000 016 003 002 162 080 000 131 060 008 137 007 010
+Player Position: [2108,1929,10]
+Player Name: White Fenix (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 18298712), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017] (4861, 0), reason:
+ sx: 4 sy: 10 sz: 0
+ Position: 1
+ zx: 4 zy: 9 zz: 0
+ dx: 0 dy: -1 dz: 0
+ abs_sx: 2102 abs_sy: 1931 abs_sz: 12
+ abs_zx: 2102 abs_zy: 1930 abs_zz: 12
+ Start Cylinder (1):  (410,0) (4861,0)
+ Start Cylinder (2):  (410,0) (4861,0)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (410,0) (4858,0)
+ Destination Cylinder (2):  (410,0) (4858,0)(-)(-)(-)(-)(-)(-)(-)(-)
+Sat Mar 19 15:25:00 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 21/3/2016 20:10:18 - Btreze (187.10.241.245) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Dual Core Intel Pentium E5800 @ 3
+Video Card: Intel (R) G41 E
+Last Packet Types: 131 180 180 180 107 109 180 108 106 160
+Last Packet: 180 026 018 000 089 111 117 032 097 114 101 032 101 120 104 097
+Player Position: [2734,2161,7]
+Player Name: [VIP] Onofre Elder Druid (1877)
+Player Action: 049 057 056 046 049 048 048 046 049 053 057 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1BA1F10 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Mon Mar 21 20:09:59 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 22/3/2016 13:44:4 - Black lorD (191.55.222.196) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Celeron 847 @ 1.1
+Video Card: Intel (R) HD GR
+Last Packet Types: 172 172 172 131 180 180 107 160 143 160
+Last Packet: 172 009 000 004 000 072 101 108 112 000 000 000 000 000 000 000
+Player Position: [1981,1285,7]
+Player Name: Black lorD (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 2E7F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 026F8010)
+Tue Mar 22 13:43:28 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 26/3/2016 10:36:57 - Btreze (191.209.13.1) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Dual Core Intel Pentium E5800 @ 3
+Video Card: Intel (R) G41 E
+Last Packet Types: 107 107 107 107 131 170 131 131 107 107
+Last Packet: 107 149 000 052 000 007 001 099 000 113 058 153 016 003 107 149
+Player Position: [150,50,7]
+Player Name: [VIP] Btreze (Tic-Tac Server)
+Player Action: 049 057 056 046 049 048 048 046 049 053 057 046 049 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1C51EB8 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Sat Mar 26 10:36:48 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 4/5/2016 17:35:32 - Super Lemon Haze (189.29.38.118) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Basic Edition 32 Bit in BRA
+Processor: Intel Pentium P6100 @ 2
+Video Card: Intel (R) HD GR
+Last Packet Types: 109 109 104 109 109 104 109 109 109 104
+Last Packet: 109 049 011 158 004 007 001 049 011 157 004 007 000 000 000 000
+Player Position: [2856,1177,7]
+Player Name: Super Lemon Haze (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 95BC78 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000B3C)
+Wed May 04 17:35:33 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 9/5/2016 16:43:29 - Maria (186.167.248.203) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows XP Professional in VEN
+Processor: Intel Pentium DUAL E216
+Video Card: Intel (R) G33/G
+Last Packet Types: 200 109 109 109 109 107 107 132 131 106
+Last Packet: 200 136 000 076 124 000 114 000 015 136 000 007 000 067 105 116
+Player Position: [32092,32197,8]
+Player Name: Maria (Oldera)
+Player Action: 050 048 049 046 054 057 046 050 046 053 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 17 MaW: 8E4F198 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 17), reason:
+Dialogs.cpp 338: exception occurred, reason:
+Dialogs.cpp 1705: exception occurred, reason:
+Objects.cpp 631: exception occurred (Number = 368), reason:
+Container.h 226: index out of range (original i: 368, i: 367, min: 1, d: 367)
+Mon May 09 15:41:27 2016
+Debug Assertion 8.60 Container.h 226
+
+----- 18/5/2016 16:45:13 - Jedite (189.61.102.217) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 64 Bit in BRA
+Processor: Intel Core i5 -3570K @ 
+Video Card: NVIDIA GeForce GTX 460
+Last Packet Types: 109 133 131 180 131 140 106 105 108 131
+Last Packet: 180 024 202 123 167 128 008 201 000 000 000 180 000 000 000 000
+Player Position: [31690,32935,8]
+Player Name: Itexo (48 viewers)
+Player Action: 048 046 048 046 048 046 048 058 055 049 055 050
+Player.cpp 344: exception occurred, reason:
+Network.cpp 855: exception occurred, reason:
+Control.cpp 1522: exception occurred (Type = 109) (MainWindow = 039B2210), reason:
+Communication.cpp 2956: exception occurred, reason:
+Communication.cpp 2844: exception occurred, reason:
+Communication.cpp 2837: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017] (1856, 0), reason:
+ StartX: 12 StartY: 13 StartZ: 1
+ RNum: 2
+ DestX: 12 DestY: 12 DestZ: 1
+ dx: 0 dy: -1 dz: 0
+ abs_sx: 31693 abs_sy: 32941 abs_sz: 9
+ abs_zx: 31693 abs_zy: 32940 abs_zz: 9
+ Start Cylinder (1):  (353,0) (4674,0) (1856,0)
+ Start Cylinder (2):  (353,0) (4674,0) (1856,0)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (351,0) (1856,0)
+ Destination Cylinder (2):  (351,0) (1856,0)(-)(-)(-)(-)(-)(-)(-)(-)
+Tue May 17 20:05:31 2016
+Debug Assertion 10.90 Communication.cpp 2837
+
+----- 20/5/2016 20:23:57 - Deus royalpaladin (177.16.219.92) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Business Edition 32 Bit in BRA
+Processor: Dual Core Intel Pentium E5700 @ 3
+Video Card: NVIDIA GeForce 7100 / NV
+Last Packet Types: 101 109 102 109 101 109 109 160 160 140
+Last Packet: 109 235 007 082 007 008 001 235 007 081 007 008 101 017 255 173
+Player Position: [2027,1873,8]
+Player Name: Deus royalpaladin (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1A7EF8 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Fri May 20 20:23:45 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 25/5/2016 9:56:0 - Ralph Lauren (179.180.245.2) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows XP Professional in BRA
+Processor: Dual Core Intel Pentium E5400 @ 2
+Video Card: Intel (R) G33/G
+Last Packet Types: 131 131 131 131 131 131 161 131 133 107
+Last Packet: 131 219 004 118 008 007 003 131 219 004 113 008 007 003 131 211
+Player Position: [1237,2163,7]
+Player Name: Ralph Lauren (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 8E73440 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Wed May 25 09:54:10 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 27/5/2016 14:35:19 - Fodao (201.3.26.13) -----
+
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Starter Edition 32 Bit in BRA
+Processor: AMD E-350
+Video Card: ATI Radeon HD AMD 6310 
+Last Packet Types: 011 000 000 000 000 000 000 000 000 000
+Last Packet: 011 081 000 089 111 117 114 032 099 108 105 101 110 116 032 118
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 75 MaW: 1A87CF8 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 75), reason:
+Network.cpp 830: exception occurred, reason:
+Network.cpp 211: assertion failed (CurrentServer = 1735549284), reason:
+CurrentServer<NUMBEROFSERVER
+Fri May 27 14:24:17 2016
+Debug Assertion 8.60 Network.cpp 211
+
+----- 4/6/2016 16:55:5 - Hitude (187.19.112.200) -----
+
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel Celeron N2808 @ 1
+Video Card: Intel (R) HD GR
+Last Packet Types: 106 162 031 100 040 020 101 109 180 211
+Last Packet: 106 240 066 099 066 007 001 097 000 000 000 000 000 218 106 001
+Player Position: [32374,32242,6]
+Player Name: Lady Ico (FORWARD)
+Player Action: 048 046 048 046 048 046 048 058 055 049 055 051
+Player.cpp 344: exception occurred, reason:
+Network.cpp 855: exception occurred, reason:
+Control.cpp 1522: exception occurred (Type = 106) (MainWindow = 03892DA8), reason:
+Communication.cpp 2508: exception occurred (rx = -15229) (ry = -15240), reason:
+Map.cpp 539: assertion failed (rx = -15229), reason:
+In(rx,0,MAPSIZE_X-1) [bug0000013]
+Sat Jun 04 12:54:30 2016
+Debug Assertion 10.90 Map.cpp 539
+
+----- 6/6/2016 10:4:28 - Hartlas (177.18.184.66) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows XP Home Edition in BRA
+Processor: Intel Core i5 -2310 @ 2
+Video Card: Intel (R) HD GR
+Last Packet Types: 161 132 131 140 180 140 180 180 107 180
+Player Name: Player Name: (exception)
+Player.cpp 361: exception occurred, reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 10D1C6ED)
+Mon Jun 06 10:03:51 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 6/6/2016 10:4:56 - Stifodaum (177.18.184.66) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows XP Home Edition in BRA
+Processor: Intel Core i5 -2310 @ 2
+Video Card: Intel (R) HD GR
+Last Packet Types: 161 132 131 140 180 140 180 180 107 180
+Player Name: Player Name: (exception)
+Player.cpp 361: exception occurred, reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 10D1C6ED)
+Mon Jun 06 10:03:51 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 6/6/2016 10:5:16 - Shing Ling (177.18.184.66) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows XP Home Edition in BRA
+Processor: Intel Core i5 -2310 @ 2
+Video Card: Intel (R) HD GR
+Last Packet Types: 161 132 131 140 180 140 180 180 107 180
+Player Name: Player Name: (exception)
+Player.cpp 361: exception occurred, reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 10D1C6ED)
+Mon Jun 06 10:03:51 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 6/6/2016 12:2:59 - Black Out Knight (179.126.222.237) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 32 Bit in BRA
+Processor: Dual Core AMD Athlon II P340
+Video Card: ATI Mobility Radeon HD 4200 SERI
+Last Packet Types: 109 160 160 140 132 131 140 180 140 107
+Last Packet: 131 220 004 125 008 007 003 107 220 004 125 008 007 001 099 000
+Player Position: [1244,2173,7]
+Player Name: Black Out Knight (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 9011224), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 6 sy: 1 sz: 0
+ Position: 1
+ zx: 5 zy: 1 zz: 0
+ dx: -1 dy: 0 dz: 0
+ abs_sx: 1242 abs_sy: 2168 abs_sz: 7
+ abs_zx: 1241 abs_zy: 2168 abs_zz: 7
+ Start Cylinder (1):  (416,0)
+ Start Cylinder (2):  (416,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (416,0) (2314,0) (3577,3) (99,-2147482501)
+ Destination Cylinder (2):  (416,0) (99,-2147482501) (3577,3) (2314,0)(-)(-)(-)(-)(-)(-)
+Mon Jun 06 11:46:52 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 6/6/2016 12:16:50 - Black Out Knight (179.126.222.237) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 32 Bit in BRA
+Processor: Dual Core AMD Athlon II P340
+Video Card: ATI Mobility Radeon HD 4200 SERI
+Last Packet Types: 109 107 107 180 180 107 107 107 107 107
+Last Packet: 107 220 004 125 008 007 001 099 000 247 097 000 016 002 180 026
+Player Position: [1244,2173,7]
+Player Name: Black Out Knight (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 22461608), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017], reason:
+ sx: 8 sy: 1 sz: 0
+ Position: 1
+ zx: 7 zy: 1 zz: 0
+ dx: -1 dy: 0 dz: 0
+ abs_sx: 1244 abs_sy: 2168 abs_sz: 7
+ abs_zx: 1243 abs_zy: 2168 abs_zz: 7
+ Start Cylinder (1):  (416,0)
+ Start Cylinder (2):  (416,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (416,0)
+ Destination Cylinder (2):  (416,0)(-)(-)(-)(-)(-)(-)(-)(-)(-)
+Mon Jun 06 12:05:06 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 7/6/2016 23:0:15 - Fulano (187.84.81.3) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Intel Atom N2600 @ 1
+Video Card: STANDARD 
+Last Packet Types: 109 108 109 162 109 109 160 160 140 106
+Last Packet: 108 191 004 179 008 011 001 109 185 004 182 008 009 002 184 004
+Player Position: [1215,2234,10]
+Player Name: Fulano (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1927F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000018)
+Tue Jun 07 23:00:03 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 10/6/2016 23:19:24 - Black Out Knight (179.126.233.209) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Home Premium Edition 32 Bit in BRA
+Processor: Dual Core AMD Athlon II P340
+Video Card: ATI Mobility Radeon HD 4200 SERI
+Last Packet Types: 109 131 134 160 140 106 109 131 140 109
+Last Packet: 134 027 114 000 064 000 131 147 004 207 008 007 003 109 158 004
+Player Position: [1171,2255,7]
+Player Name: Black Out Knight (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 109) (MainWindow = 2260792), reason:
+Communication.cpp 2151: exception occurred, reason:
+Communication.cpp 2142: MoveCreature has been received for a coordinate where there is no creature anymore [bug0000017] (6216, 0), reason:
+ sx: 16 sy: 7 sz: 3
+ Position: 3
+ zx: 16 zy: 8 zz: 3
+ dx: 0 dy: 1 dz: 0
+ abs_sx: 1182 abs_sy: 2259 abs_sz: 4
+ abs_zx: 1182 abs_zy: 2260 abs_zz: 4
+ Start Cylinder (1):  (4405,0) (4677,0) (1107,0) (6216,0)
+ Start Cylinder (2):  (4405,0) (4677,0) (1107,0) (6216,0)(-)(-)(-)(-)(-)(-)
+ Destination Cylinder (1):  (4410,0) (4673,0) (1103,0) (4580,0) (1898,0)
+ Destination Cylinder (2):  (4410,0) (4673,0) (1103,0) (4580,0) (1898,0)(-)(-)(-)(-)(-)
+Fri Jun 10 23:19:16 2016
+Debug Assertion 8.60 Communication.cpp 2142
+
+----- 11/6/2016 14:48:37 - Infante (187.19.244.15) -----
+Comment: 
+Graphic Engine: DirectX5 (0)
+Operating System: Windows Vista Family in BRA
+Processor: Intel Atom D525 @ 1.
+Video Card: Intel (R) GRAPH
+Last Packet Types: 160 160 140 109 109 109 102 109 102 109
+Last Packet: 140 174 089 000 016 100 160 190 000 190 000 044 101 000 000 018
+Player Position: [1218,2259,10]
+Player Name: Infante (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1F41F08 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (write attempt at 4EA0B4A9)
+Sat Jun 11 14:51:50 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 11/6/2016 20:15:26 - Lord Ricril (189.76.141.2) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: AMD Phenom 8450 TRIP
+Video Card: NVIDIA GeForce 6150SE NF
+Last Packet Types: 109 109 131 134 161 131 134 161 161 131
+Last Packet: 109 213 004 160 008 009 002 213 004 159 008 009 000 000 000 000
+Player Position: [1234,2209,8]
+Player Name: Lord Ricril (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 23D7F58 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 00000044)
+Sat Jun 11 20:16:02 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 12/6/2016 7:3:16 - Error (46.148.0.10) -----
+
+Windows Version: 6.2 build 9200 on 2
+Graphic Engine: DirectX9 (2)
+Last Packet Types: 100 010 100 020 000 000 000 000 000 000
+Last Packet: 068 009 010 230 102 000 016 050 000 000 100 232 003 232 003 007
+Player Name: Error
+Player.cpp 358: exception occurred, reason:
+Network.cpp 978: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1318: exception occurred (Type = 100) (MainWindow = 40467096), reason:
+Communication.cpp 1545: exception occurred (PlayerX = 1000) (PlayerY = 1000), reason:
+Communication.cpp 1522: exception occurred (xmin = 0) (ymin = 0), reason:
+Communication.cpp 1501: exception occurred (Type = 7834) (OldType = 0), reason:
+Objects.cpp 280: exception occurred (Type = 7834) (Flag = 11), reason:
+Objects.cpp 277: assertion failed (Type = 7834) (ObjectProperties->high() = 7540), reason:
+In(Type,ObjectProperties->low(),ObjectProperties->high())
+Sat Jun 11 18:53:58 2016
+Debug Assertion 8.10 Objects.cpp 277
+
+----- 17/6/2016 12:46:47 - Btreze (177.94.76.248) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Dual Core Intel Pentium E5800 @ 3
+Video Card: Intel (R) G41 E
+Last Packet Types: 109 131 140 131 131 109 131 107 146 109
+Last Packet: 109 153 000 054 000 007 002 152 000 054 000 007 000 000 000 000
+Player Position: [155,55,7]
+Player Name: Btreze (Pvp Baiak)
+Player Action: 049 053 056 046 054 057 046 053 046 051 053 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 0 MaW: 1DFB658 MoW: 0), reason:
+Control.cpp 1723: exception occurred, reason:
+Control.cpp 386: exception occurred (Force?1:0 = 0), reason:
+MainWindow.cpp 138: exception occurred (Surface = 1), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at FFFFFFE9)
+Fri Jun 17 12:46:54 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+
+----- 19/6/2016 18:24:49 - Leozedksoek (191.17.191.11) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows 7 Ultimate Edition 32 Bit in BRA
+Processor: Dual Core Intel Pentium T4200 @ 2
+Video Card: Mobile Intel (R) 4 SER
+Last Packet Types: 030 103 109 108 103 109 106 030 109 030
+Last Packet: 030 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [1241,2206,7]
+Player Name: Leozedksoek (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 40 MaW: 347F58 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 40), reason:
+Dialogs.cpp 652: exception occurred, reason:
+Dialogs.cpp 4306: exception occurred, reason:
+Dialogs.cpp 4368: exception occurred (Number = 0), reason:
+Objects.cpp 280: exception occurred (Type = 11863) (Flag = 7), reason:
+Objects.cpp 277: assertion failed (Type = 11863) (ObjectProperties->high() = 11703), reason:
+In(Type,ObjectProperties->low(),ObjectProperties->high())
+Sun Jun 19 18:24:55 2016
+Debug Assertion 8.60 Objects.cpp 277
+
+----- 22/6/2016 17:59:4 - Bagulho Of Veloster (177.39.68.13) -----
+Comment: 
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in BRA
+Processor: Intel Celeron 1007U @ 1
+Video Card: Intel (R) HD GR
+Last Packet Types: 030 109 109 108 030 106 109 030 109 109
+Last Packet: 030 000 000 000 000 000 000 000 000 000 000 000 000 000 000 000
+Player Position: [2003,1863,7]
+Player Name: Bagulho Of Veloster (Darghos)
+Player Action: 049 054 055 046 049 049 052 046 050 049 057 046 051 054 058 055 050 055 050
+Player.cpp 361: exception occurred, reason:
+Player.cpp 465: exception occurred, reason:
+Control.cpp 1728: exception occurred (MessageType: 50 MaW: 2191ED8 MoW: 0), reason:
+Control.cpp 1693: exception occurred (Type = 50), reason:
+ConsoleWindow.cpp 2124: exception occurred (RecvMode = 7) (SendMode = 7), reason:
+NWin32Exception.cpp 50: win32 exception occurred, reason:
+access violation (read attempt at 0000002C)
+Wed Jun 22 17:26:01 2016
+Debug Assertion 8.60 NWin32Exception.cpp 50
+

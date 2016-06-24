@@ -33,24 +33,27 @@
     <attack name="earth" interval="1000" chance="25" radius="7" target="0" min="-225" max="-335">
       <attribute key="areaEffect" value="plantattack"/>
     </attack>
-    <attack name="manadrain" interval="1000" chance="30" radius="4" target="1" min="-800" max="-1500">
+    <attack name="manadrain" interval="1000" chance="30" radius="3" target="1" min="-800" max="-1500">
       <attribute key="areaEffect" value="groundshaker"/>
+    </attack>
+    <attack name="death" interval="1000" chance="1" length="1" spread="0" min="-2000" max="-2400">
+      <attribute key="shootEffect" value="whirlwindaxe"/>
     </attack>
   </attacks>
   <defenses armor="100" defense="100">
     <defense name="speed" interval="2000" chance="12" speedchange="900" duration="8000">
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
-    <defense name="healing" interval="2000" chance="50" min="700" max="1800">
+    <defense name="healing" interval="2000" chance="50" min="1250" max="2600">
       <attribute key="areaEffect" value="blueshimmer"/>    
     </defense>
   </defenses>
   <elements>
-    <element physicalPercent="70"/>
-    <element deathPercent="80"/>
+    <element physicalPercent="80"/>
+    <element deathPercent="90"/>
     <element earthPercent="99"/>
-    <element icePercent="65"/>
-	<element holyPercent="65"/>
+    <element icePercent="70"/>
+	<element holyPercent="70"/>
     <element firePercent="99"/>
   </elements>
   <immunities>
@@ -76,28 +79,28 @@
 	<item id="2160" countmax="23" chance="90000">
 		<!--gold coin-->
 	</item>	  
-    <item id="6391" chance="25000">
+    <item id="6391" chance="10000">
       <!--nightmare shield-->       
       </item>
     <item id="8851" chance="5000">
       <!--royal crossbow-->   
       </item>
-    <item id="2646" chance="2000">
+    <item id="2646" chance="1000">
       <!--golden boots-->
     </item>
     <item id="2471" chance="500">
       <!--golden helmet-->
     </item>
-    <item id="2400" chance="10000">
+    <item id="2400" chance="5000">
       <!--magic sword-->
     </item>
-    <item id="6553" chance="25000">
+    <item id="6553" chance="10000">
       <!--ruthless axe-->
     </item>
     <item id="2173" chance="75000">
       <!--amulet of loss-->
     </item>
-    <item id="2414" chance="75000">
+    <item id="2414" chance="40000">
       <!--dragon lance-->
     </item>
 	<item id="2365" countmax="1" chance="100000">
@@ -105,46 +108,46 @@
         <item id="2377" chance="90000">
           <!--two handed sword-->
         </item>
-        <item id="2502" chance="60000">
+        <item id="2502" chance="20000">
           <!--dwarven helmet-->
         </item>	
-        <item id="7416" chance="25000">
+        <item id="7416" chance="10000">
           <!--bloody edge-->
         </item>
-        <item id="2472" chance="60000">
+        <item id="2472" chance="25000">
           <!--magic plate armor-->
         </item>
-        <item id="5887" chance="20000">
+        <item id="5887" chance="10000">
           <!--piece of royal steel-->
         </item>
-        <item id="2426" chance="60000">
+        <item id="2426" chance="25000">
           <!--naginata-->
         </item>
-        <item id="2393" chance="60000">
+        <item id="2393" chance="25000">
           <!--giant sword-->
         </item>
-        <item id="2392" chance="90000">
+        <item id="2392" chance="40000">
           <!--fire sword-->
         </item>
-        <item id="2476" chance="60000">
+        <item id="2476" chance="40000">
           <!--knight armor-->
         </item>
-        <item id="2645" chance="60000">
+        <item id="2645" chance="25000">
           <!--steel boots-->
         </item>
-        <item id="2520" chance="60000">
+        <item id="2520" chance="25000">
           <!--demon shield-->
         </item>
-        <item id="2514" chance="60000">
+        <item id="2514" chance="25000">
           <!--mastermind shield-->
         </item>
         <item id="2474" chance="500">
           <!--winged helmet-->
         </item>
-        <item id="2470" chance="60000">
+        <item id="2470" chance="25000">
           <!--golden legs-->
         </item>
-        <item id="2493" chance="10000">
+        <item id="2493" chance="5000">
           <!--demon helmet-->
         </item>
         <item id="7368" countmax="100" chance="90000">

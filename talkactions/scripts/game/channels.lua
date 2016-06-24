@@ -11,14 +11,21 @@ function onSay(cid, words, param, channel, type)
 	end
 
 	local public_channels = { CHANNEL_CHAT, CHANNEL_RL, CHANNEL_HELP, CHANNEL_TRADE }
+	if(isInArray(public_channels, channel)) then
+		local ret = public.onSay(cid, words, param, channel)
+		if(ret) then
+			return true
+		end
+	end
+
 
 	if(channel == CHANNEL_HELP) then
 		return help.onSay(cid, words, param, channel)
 	elseif(channel == CUSTOM_CHANNEL_PVP or channel == CUSTOM_CHANNEL_BG_CHAT) then
 		return pvp.onSay(cid, words, param, channel)
-	elseif(isInArray(public_channels, channel)) then
-		return public.onSay(cid, words, param, channel)
 	end
+
+	return false
 end
 
 pvp = {}

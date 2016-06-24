@@ -2,14 +2,32 @@ STAGES_EXPERIENCE = 1
 STAGES_EXP_PROTECTED = 2
 STAGES_SKILLS = 3
 STAGES_MAGIC = 4
-STAGES_EXP_TENERIAN = 5
+STAGES_EXP_NOVIUM = 5
+STAGES_EXP_NOVIUM_PROTECTED = 6
 
 SKILL_STAGE_MAGES = 2
 SKILL_STAGE_NON_LOGOUT_PLAYERS = SKILL_STAGE_MAGES
 
 stages = {
 	[STAGES_EXPERIENCE] = {
-		{start_level = 8, multipler = 2}
+		{start_level = 1, multipler = 2}
+	},
+
+	[STAGES_EXP_PROTECTED] = {
+		{start_level = 1, multipler = 2}
+	},
+
+	[STAGES_EXP_NOVIUM] = {
+		{start_level = 1, end_level = 99, multipler = 10}
+    ,{start_level = 100, end_level = 159, multipler = 8}
+    ,{start_level = 160, end_level = 179, multipler = 4}
+    ,{start_level = 180, end_level = 199, multipler = 3}
+    ,{start_level = 200, multipler = 2}
+	},
+
+	[STAGES_EXP_NOVIUM_PROTECTED] = {
+		{start_level = 1, end_level = 59, multipler = 10}
+    ,{start_level = 60, multipler = 2}
 	},
 	
 	--[[
@@ -65,10 +83,6 @@ stages = {
 		}
 	},
 	]]
-	
-	[STAGES_EXP_PROTECTED] = {
-		{start_level = 8, multipler = 2}
-	},	
 }
 
 function getPlayerMultiple(cid, stagetype, skilltype)
@@ -80,13 +94,18 @@ function getPlayerMultiple(cid, stagetype, skilltype)
 		return 1
 	end
 	
-	if(getPlayerTown(cid) == towns.ISLAND_OF_PEACE and darghos_use_protected_stages and stagetype == STAGES_EXPERIENCE) then
-		_stages = stages[STAGES_EXP_PROTECTED]
-	end
+  local world_id = getConfigValue('worldId')
 
-	local world_id = getConfigValue('worldId')
-	if(world_id == WORLD_TENERIAN) then
-		_stages = stages[STAGES_EXP_TENERIAN]
+	if(getPlayerTown(cid) == towns.ISLAND_OF_PEACE and darghos_use_protected_stages and stagetype == STAGES_EXPERIENCE) then
+    if(world_id == WORLD_ANTINUM) then
+		  _stages = stages[STAGES_EXP_PROTECTED]
+    else
+      _stages = stages[STAGES_EXP_NOVIUM_PROTECTED]
+    end
+  else
+	  if(world_id == WORLD_NOVIUM) then
+		  _stages = stages[STAGES_EXP_NOVIUM]
+	  end  
 	end
 	
 	if(stagetype == STAGES_MAGIC or stagetype == STAGES_SKILLS) then

@@ -301,11 +301,13 @@ function NpcTasks:onCompleteConfirm()
 		if(infos.confirmParam == "callResponseTask") then
 			consoleLog(T_LOG_NOTIFY, getNpcName(), "NpcTasks:responseTask", "... and the action is an callResponseTask (talk about anther task?)")
 			self:responseTask()
+      self.npcSystem:setTopic(self.cid, 2)
 		else
 			consoleLog(T_LOG_WARNING, getNpcName(), "NpcTasks:onCompleteConfirm", "Unknown param for action.", {player=getCreatureName(self.cid), taskid=self.currentTask, param=infos.confirmParam})
 		end
 	elseif(infos.onConfirm == "teleport") then
 		
+    self.npcSystem:setTopic(self.cid, 0)
 		local destPos = infos.confirmParam
 		
 		consoleLog(T_LOG_NOTIFY, getNpcName(), "NpcTasks:responseTask", "... and the action is an teleport event!", destPos)
