@@ -6702,6 +6702,42 @@
 		<monster name="Frost Dragon" x="6" y="3" z="7" spawntime="300" />
 		<monster name="Frost Dragon" x="-3" y="6" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="2332" centery="1442" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2350" centery="1442" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2368" centery="1442" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2386" centery="1442" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2404" centery="1442" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2422" centery="1442" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2440" centery="1442" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2458" centery="1442" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2476" centery="1442" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2494" centery="1442" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2512" centery="1442" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2530" centery="1442" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="1931" centery="1444" centerz="7" radius="8">
 		<monster name="Frost Dragon" x="3" y="-2" z="7" spawntime="60" />
 		<monster name="Frost Dragon" x="-3" y="6" z="7" spawntime="180" />
@@ -6764,6 +6800,42 @@
 		<monster name="frost dragon hatchling" x="-3" y="0" z="7" spawntime="60" />
 		<monster name="Frost Dragon" x="1" y="2" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="2332" centery="1456" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2350" centery="1456" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2368" centery="1456" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2386" centery="1456" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2404" centery="1456" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2422" centery="1456" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2440" centery="1456" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2458" centery="1456" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2476" centery="1456" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2494" centery="1456" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2512" centery="1456" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2530" centery="1456" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="1997" centery="1458" centerz="7" radius="5">
 		<monster name="Frost Dragon" x="0" y="1" z="7" spawntime="60" />
 	</spawn>
@@ -6811,6 +6883,42 @@
 	</spawn>
 	<spawn centerx="2019" centery="1462" centerz="7" radius="5">
 		<monster name="Frost Dragon" x="1" y="5" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2332" centery="1470" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2350" centery="1470" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2368" centery="1470" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2386" centery="1470" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2404" centery="1470" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2422" centery="1470" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2440" centery="1470" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2458" centery="1470" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2476" centery="1470" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2494" centery="1470" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2512" centery="1470" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2530" centery="1470" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="2006" centery="1471" centerz="7" radius="5">
 		<monster name="Frost Dragon" x="-1" y="-2" z="7" spawntime="60" />
@@ -6860,6 +6968,42 @@
 	<spawn centerx="2005" centery="1475" centerz="7" radius="5">
 		<monster name="Frost Dragon" x="0" y="3" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="2332" centery="1484" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2350" centery="1484" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2368" centery="1484" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2386" centery="1484" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2404" centery="1484" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2422" centery="1484" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2440" centery="1484" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2458" centery="1484" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2476" centery="1484" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2494" centery="1484" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2512" centery="1484" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2530" centery="1484" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="2039" centery="1486" centerz="7" radius="5">
 		<monster name="Frost Dragon" x="-2" y="-3" z="7" spawntime="60" />
 		<monster name="frost dragon hatchling" x="4" y="-2" z="7" spawntime="60" />
@@ -6908,6 +7052,42 @@
 	<spawn centerx="2028" centery="1489" centerz="7" radius="5">
 		<monster name="Frost Dragon" x="-1" y="2" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="2332" centery="1498" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2350" centery="1498" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2368" centery="1498" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2386" centery="1498" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2404" centery="1498" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2422" centery="1498" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2440" centery="1498" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2458" centery="1498" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2476" centery="1498" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2494" centery="1498" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2512" centery="1498" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2530" centery="1498" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="2082" centery="1501" centerz="7" radius="3">
 		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
@@ -6942,6 +7122,42 @@
 		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="2280" centery="1501" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2332" centery="1512" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2350" centery="1512" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2368" centery="1512" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2386" centery="1512" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2404" centery="1512" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2422" centery="1512" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2440" centery="1512" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2458" centery="1512" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2476" centery="1512" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2494" centery="1512" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2512" centery="1512" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2530" centery="1512" centerz="7" radius="3">
 		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="2082" centery="1515" centerz="7" radius="3">
@@ -6980,6 +7196,42 @@
 	<spawn centerx="2280" centery="1515" centerz="7" radius="3">
 		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="2332" centery="1526" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2350" centery="1526" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2368" centery="1526" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2386" centery="1526" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2404" centery="1526" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2422" centery="1526" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2440" centery="1526" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2458" centery="1526" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2476" centery="1526" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2494" centery="1526" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2512" centery="1526" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2530" centery="1526" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="2082" centery="1529" centerz="7" radius="3">
 		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
@@ -7014,6 +7266,42 @@
 		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="2280" centery="1529" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2332" centery="1540" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2350" centery="1540" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2368" centery="1540" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2386" centery="1540" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2404" centery="1540" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2422" centery="1540" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2440" centery="1540" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2458" centery="1540" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2476" centery="1540" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2494" centery="1540" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2512" centery="1540" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2530" centery="1540" centerz="7" radius="3">
 		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="2082" centery="1543" centerz="7" radius="3">
@@ -7052,6 +7340,42 @@
 	<spawn centerx="2280" centery="1543" centerz="7" radius="3">
 		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="2332" centery="1554" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2350" centery="1554" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2368" centery="1554" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2386" centery="1554" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2404" centery="1554" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2422" centery="1554" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2440" centery="1554" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2458" centery="1554" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2476" centery="1554" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2494" centery="1554" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2512" centery="1554" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2530" centery="1554" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="2082" centery="1557" centerz="7" radius="3">
 		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
@@ -7086,6 +7410,42 @@
 		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="2280" centery="1557" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2332" centery="1568" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2350" centery="1568" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2368" centery="1568" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2386" centery="1568" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2404" centery="1568" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2422" centery="1568" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2440" centery="1568" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2458" centery="1568" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2476" centery="1568" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2494" centery="1568" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2512" centery="1568" centerz="7" radius="3">
+		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="2530" centery="1568" centerz="7" radius="3">
 		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="2082" centery="1571" centerz="7" radius="3">
