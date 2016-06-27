@@ -574,7 +574,7 @@ class Game
 		GameState_t getGameState() const {return gameState;}
 		void setGameState(GameState_t newState);
 
-		void saveGameState(bool shallow);
+        void saveGameState(bool shallow, bool isServerSave = false);
 		void loadGameState();
 
 		void cleanMapEx(uint32_t& count);

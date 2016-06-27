@@ -264,7 +264,7 @@ void Game::setGameState(GameState_t newState)
 				}
 
 				Houses::getInstance()->payHouses();
-				saveGameState(false);
+                saveGameState(false, true);
                 g_dispatcher.addTask(createTask(boost::bind(&Game::shutdown, this)));
 
                 g_scheduler.stop();
@@ -286,7 +286,7 @@ void Game::setGameState(GameState_t newState)
 						++it;
 				}
 
-				saveGameState(false);
+                saveGameState(false, true);
 				break;
 			}
 
@@ -300,7 +300,7 @@ void Game::setGameState(GameState_t newState)
 	}
 }
 
-void Game::saveGameState(bool shallow)
+void Game::saveGameState(bool shallow, bool isServerSave)
 {
 	std::clog << "> Saving server..." << std::endl;
 	uint64_t start = OTSYS_TIME();
@@ -316,6 +316,9 @@ void Game::saveGameState(bool shallow)
 #endif
 	for(AutoList<Player>::iterator it = Player::autoList.begin(); it != Player::autoList.end(); ++it)
 	{
+        if(!isServerSave && it->second->getBot() && random_range(1, 100) >= 25)
+            continue;
+
 		it->second->loginPosition = it->second->getPosition();
 #ifdef __DARGHOS_THREAD_SAVE__
 		io->savePlayer(it->second, query_insert, false, shallow);
