@@ -263,55 +263,32 @@ function outfitTicket.onUse(cid, item, fromPosition, itemEx, toPosition)
 		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "This is an invalid outfit ticket. Report to game master!")
 		return true
 	end
-	
-	local playerOutfit = { outfit = false, first_addon = false, second_addon = false }
-	
-	if(canPlayerWearOutfitId(cid, outfitId, 0)) then
-		playerOutfit.outfit = true
-	end
-	
-	if(canPlayerWearOutfitId(cid, outfitId, 1)) then
-		playerOutfit.first_addon = true
-	end
-	
-	if(canPlayerWearOutfitId(cid, outfitId, 2)) then
-		playerOutfit.second_addon = true
-	end
-	
-	if(not playerOutfit.outfit) then
-		local log_id = getItemAttribute(item.uid, "itemShopLogId")
-		
-		if(log_id and not doLogItemShopUse(cid, log_id)) then
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_SMALL, "The benefit of this item has already been provided. Issue reported.")
-			return true
-		end		
-	
-		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You earned the " .. tempName .. " outfit!")
-		doPlayerAddOutfitId(cid, outfitId, 0)
-	elseif(not playerOutfit.first_addon) then
-		local log_id = getItemAttribute(item.uid, "itemShopLogId")
-		
-		if(log_id and not doLogItemShopUse(cid, log_id)) then
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_SMALL, "The benefit of this item has already been provided. Issue reported.")
-			return true
-		end		
-	
-		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You earned the first addon for " .. tempName .. " outfit!")
-		doPlayerAddOutfitId(cid, outfitId, 1)	
-	elseif(not playerOutfit.second_addon) then
-		local log_id = getItemAttribute(item.uid, "itemShopLogId")
-		
-		if(log_id and not doLogItemShopUse(cid, log_id)) then
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_SMALL, "The benefit of this item has already been provided. Issue reported.")
-			return true
-		end		
-		
-		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You earned the second addon for " .. tempName .. " outfit!")
-		doPlayerAddOutfitId(cid, outfitId, 2)
-	else
+
+	if(canPlayerWearOutfitId(cid, outfitId, 0) and canPlayerWearOutfitId(cid, outfitId, 1) and canPlayerWearOutfitId(cid, outfitId, 2)) then
 		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You already have the full " .. tempName .. " outfit!")
-		return true		
+		return true				
 	end
+	
+	if(not canPlayerWearOutfitId(cid, outfitId, 0)) then
+		doPlayerAddOutfitId(cid, outfitId, 0)
+	end
+	
+	if(not canPlayerWearOutfitId(cid, outfitId, 1)) then
+		doPlayerAddOutfitId(cid, outfitId, 1)	
+	end
+	
+	if(not canPlayerWearOutfitId(cid, outfitId, 2)) then
+		doPlayerAddOutfitId(cid, outfitId, 2)
+	end
+
+	local log_id = getItemAttribute(item.uid, "itemShopLogId")
+	
+	if(log_id and not doLogItemShopUse(cid, log_id)) then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_SMALL, "The benefit of this item has already been provided. Issue reported.")
+		return true
+	end		
+
+	doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You earned the full " .. tempName .. " outfit & addons!")
 	
 	sendEnvolveEffect(cid, CONST_ME_HOLYAREA)
 	doRemoveItem(item.uid)
