@@ -9711,7 +9711,7 @@ int32_t LuaInterface::luaDoSaveServer(lua_State* L)
 	if(lua_gettop(L) > 0)
 		shallow = popNumber(L);
 
-	g_dispatcher.addTask(createTask(boost::bind(&Game::saveGameState, &g_game, shallow)));
+    g_dispatcher.addTask(createTask(boost::bind(&Game::saveGameState, &g_game, shallow, false)));
 	lua_pushnil(L);
 	return 1;
 }
