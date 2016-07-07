@@ -91,6 +91,7 @@ function public.onSay(cid, words, param, channel)
 	if currentSpeakingBot[cid] then
 		if not isPlayer(currentSpeakingBot[cid]) then
 			doPlayerSendChannelMessage(cid, "Bot with uid #" .. currentSpeakingBot[cid] .. " not found.", channel)
+			return true
 		end
 
 		local users = getChannelUsers(channel)
