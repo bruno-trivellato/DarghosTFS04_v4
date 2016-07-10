@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<monster speed="280" manacost="0" race="blood" skull="red" experience="55000" name="dark archer" nameDescription="an archer of dark forces">
-  <health max="13400" now="13400"/>
+<monster speed="280" manacost="0" race="blood" skull="red" experience="20000" name="dark archer" nameDescription="an archer of dark forces">
+  <health max="6000" now="6000"/>
   <look head="79" body="95" addons="3" legs="19" type="129" corpse="6080" feet="95"/>
   <targetchange chance="20" interval="5000"/>
   <strategy defense="0" attack="100"/>
@@ -19,14 +19,14 @@
     <flag checkcorpseowner="0"/>
   </flags>
   <attacks>
-    <attack chance="16" interval="2000" range="7" min="-325" name="physical" max="-675">
+    <attack chance="16" interval="2000" range="7" min="-325" name="physical" max="-450">
       <attribute key="shootEffect" value="infernalbolt"/>
     </attack>
-    <attack chance="41" interval="2000" range="7" min="-180" name="physical" max="-280">
+    <attack chance="41" interval="2000" range="7" min="-180" name="physical" max="-250">
       <attribute key="shootEffect" value="etherealspear"/>
     </attack>
     <attack target="1" chance="25" inteval="2000" script="monsters/multi_shot.lua"/>
-    <attack chance="75" interval="2000" range="5" min="-200" name="physical" max="-420">
+    <attack chance="75" interval="2000" range="5" min="-50" name="physical" max="-420">
       <attribute key="shootEffect" value="redstar"/>
     </attack>
   </attacks>

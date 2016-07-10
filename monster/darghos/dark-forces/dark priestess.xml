@@ -46,7 +46,7 @@
     <item chance="33333" id="2145" countmax="34"/>
     <item chance="25000" id="2150" countmax="27"/>
     <item chance="666" id="8903"/> <!-- Spellbook of lost souls -->
-    <item chance="666" id="11355"/> <!-- Spellweaver's robe -->
+    <item chance="333" id="11355"/> <!-- Spellweaver's robe -->
     <item chance="1000" id="12646"/> <!-- Draken boots -->
     <item chance="100" id="12647"/> <!-- Snake god's wristguard -->
     <item chance="100" id="12630"/> <!-- Cobra crown -->

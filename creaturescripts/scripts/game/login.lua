@@ -92,6 +92,9 @@ function onLogin(cid)
 	Auctions.onLogin(cid)	
 	
 	doPlayerOpenChannel(cid, CUSTOM_CHANNEL_PVP)
+
+	-- a player will never log-in inside the event...
+	doPlayerLeaveDarkGeneral(cid)
 	
 	-- premium test
 	if(canReceivePremiumTest(cid, getPlayerLevel(cid))) then
@@ -266,7 +269,7 @@ function addMapMarksByUids(cid, uids, type)
 
 	for k,v in pairs(uids) do
 		local uid = 12000 + v.uid
-		if(getThing(uid).uid ~= 0) then
+		if(getThing(uid, false).uid ~= 0) then
 			local pos = getThingPosition(12000 + v.uid)
 			doPlayerAddMapMark(cid, pos, type, v.description)
 		else

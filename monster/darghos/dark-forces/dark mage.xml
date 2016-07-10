@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<monster speed="260" race="blood" skull="red" experience="55000" name="dark mage" nameDescription="an mage of dark forces">
-  <health max="9700" now="9700"/>
+<monster speed="260" race="blood" skull="red" experience="20000" name="dark mage" nameDescription="an mage of dark forces">
+  <health max="6000" now="6000"/>
   <look head="113" body="114" addons="1" legs="114" type="145" corpse="6080" feet="79"/>
   <targetchange chance="10" interval="5000"/>
   <strategy defense="0" attack="100"/>
@@ -33,13 +33,13 @@
     <attack target="1" chance="20" radius="1" interval="2000" name="energyfield">
       <attribute key="shootEffect" value="burstarrow"/>
     </attack>
-    <attack chance="75" interval="2000" range="5" min="-430" name="death" max="-510">
+    <attack chance="30" interval="2000" range="5" min="-280" name="death" max="-410">
       <attribute key="shootEffect" value="suddendeath"/>
     </attack>
-    <attack chance="21" spread="3" interval="2000" length="5" min="-370" name="ice" max="-420">
+    <attack chance="21" spread="3" interval="2000" length="5" min="-210" name="ice" max="-320">
       <attribute key="areaEffect" value="icearea"/>
     </attack>
-    <attack target="1" chance="44" radius="4" interval="2000" min="-260" name="earth" max="-420">
+    <attack target="1" chance="44" radius="4" interval="2000" min="-120" name="earth" max="-220">
       <attribute key="areaEffect" value="bigplants"/>
     </attack>
   </attacks>
@@ -73,16 +73,16 @@
     <item chance="100000" id="7589" countmax="25"/>
     <item chance="50000" id="2152" countmax="19"/>
     <item chance="25000" id="2150" countmax="39"/>
-    <item chance="20000" id="7891"/>
+    <item chance="5000" id="7891"/>
     <item chance="20000" id="2146" countmax="25"/>
     <item chance="3333" id="7440"/>
     <item chance="12500" id="2147" countmax="14"/>
-    <item chance="12500" id="7900"/>
-    <item chance="10000" id="7894"/>
-    <item chance="666" id="11356"/> <!-- Zaoan Robe -->
-    <item chance="666" id="11355"/> <!-- Spellweaver's Robe -->
+    <item chance="5000" id="7900"/>
+    <item chance="5000" id="7894"/>
+    <item chance="333" id="11356"/> <!-- Zaoan Robe -->
+    <item chance="333" id="11355"/> <!-- Spellweaver's Robe -->
     <item chance="100" id="8918"/> <!-- Spellbook of dark mysteries -->
-    <item chance="666" id="9933"/> <!-- Firewalker boots -->
+    <item chance="100" id="9933"/> <!-- Firewalker boots -->
     <item chance="100" id="12643"/> <!-- Royal Scale Robe -->
   </loot>
 </monster>

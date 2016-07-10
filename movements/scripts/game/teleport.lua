@@ -1,4 +1,4 @@
-local function pushBack(cid, position, fromPosition, displayMessage)
+function pushBack(cid, position, fromPosition, displayMessage)
 	doTeleportThing(cid, fromPosition, false)
 	doSendMagicEffect(position, CONST_ME_MAGIC_BLUE)
 	if(displayMessage) then
@@ -44,6 +44,16 @@ function onStepIn(cid, item, position, fromPosition)
 			pushBack(cid, position, fromPosition)
 			return false
 		end
+	end
+
+	if(item.actionid == aid.SURVIVAL_ENTRANCE) then
+		doPlayerSendCancel(cid, "O evento de sobrevivencia está em desenvolvimento e ficará disponível em breve.")
+		pushBack(cid, position, fromPosition)
+		return false
+	end
+
+	if not darkGeneralPortal(cid, item, position, fromPosition) then
+		return false
 	end
 
 	if(item.actionid == aid.TELEPORT_NO_SKULLS and getCreatureSkull(cid) >= SKULL_WHITE) then

@@ -38,6 +38,8 @@ function onDeath(cid, corpse, deathList)
 			addEvent(summonInquisitionBoss, 1000 * 60 * 60, string.lower(getCreatureName(cid)))
 		elseif(creatureName == "lord vankyner") then
 			onLordVankynerDie()
+		elseif(creatureName == "dark general") then
+			onDarkGeneralDie(cid, corpse, deathList)
 		end
 	end
 	

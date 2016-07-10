@@ -228,33 +228,6 @@ function lookingOutfitTicket(cid, thing)
 	doItemSetAttribute(thing.uid, "description", desc)
 end
 
-function summonDarkGeneral()
-
-	local POSITIONS = {
-	      {pos = {x = 1982, y = 1796, z = 7}, message = "Foi avistado o estandarde supremo da Armada Negra! O GENERAL ataca o portão norte de Quendor!! Protejam a cidade!"} -- quendor north gate
-	      ,{pos = {x = 2102, y = 1869, z = 7}, message = "Foi avistado o estandarde supremo da Armada Negra! O GENERAL ataca o portão leste de Quendor!! Protejam a cidade!"} -- quendor west gate
-	}
-	
-	local summonPos = POSITIONS[math.random(1, #POSITIONS)]
-
-	doBroadcastMessage(summonPos.message, MESSAGE_EVENT_ADVANCE)
-	local creature = doSummonCreature("Dark General", summonPos.pos, true, true)
-	registerCreatureEvent(creature, "monsterDeath")
-end
-
-function onDarkGeneralDie(cid, corpse, deathList)
-	msg = msg or "Rei Ordon anúncia: Guerreiros de Quendor mais uma vez com total bravura se uniram e derrotaram um oponente poderoso! A Armada Negra e o Dark General! Como comemoração pelo feito eu concedo 10% mais experience pelos proximo 3 dias!"
-	doBroadcastMessage(msg, MESSAGE_EVENT_ADVANCE)
-	
-	addEvent(disableRoyalBlessing, 1000 * 20)
-	
-	doSetStorage(gid.EXP_BONUS_KILL_DARK_GENERAL, os.time())
-	local onlineList = getPlayersOnline()
-	for _,uid in pairs(onlineList) do
-		reloadExpStages(uid)
-	end
-end
-
 function enableRoyalBlessing(msg, class)
 	doSetStorage(gid.ROYAL_BLESSING, 1)
 
@@ -1402,7 +1375,7 @@ function playerRecord()
 		end
 	else
 
-		setGlobalStorageValue(gid.PLAYERS_RECORD, 200)
+		setGlobalStorageValue(gid.PLAYERS_RECORD, 200) 
 	end
 end
 

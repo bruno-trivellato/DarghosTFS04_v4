@@ -19,15 +19,13 @@
     <flag checkcorpseowner="0"/>
   </flags>
   <attacks>
-    <!--
 	  <attack interval="1500" attack="140" skill="210" name="melee"/>
-    <attack chance="25" radius="2" interval="2000" min="-750" name="physical" max="-1200">
+    <attack chance="25" radius="2" interval="2000" min="-300" name="physical" max="-600">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack chance="51" interval="2000" range="7" min="-650" name="physical" max="-900">
+    <attack chance="51" interval="2000" range="7" min="-250" name="physical" max="-450">
       <attribute key="shootEffect" value="whirlwindaxe"/>
     </attack>
-	  -->
   </attacks>
   <defenses defense="50" armor="100"/>
   <immunities>
@@ -59,20 +57,20 @@
     <item chance="100000" id="2152" countmax="100"/>
     <item chance="100000" id="5944"/>
     <item chance="50000" id="6500" countmax="5"/>
-    <item chance="50000" id="11240"/>
+    <item chance="5000" id="11240"/>
     <item chance="50000" id="11302"/>
-    <item chance="33333" id="12642"/>
+    <item chance="2000" id="12642"/>
     <item chance="50000" id="7439" countmax="5"/>
     <item chance="50000" id="11305"/>
     <item chance="50000" id="2160" countmax="5"/>
-    <item chance="16666" id="2646"/>
+    <item chance="1000" id="2646"/>
     <item chance="33333" id="12649"/>
-    <item chance="12500" id="2522"/>
-    <item chance="16666" id="8932"/>
-    <item chance="3000" id="2408"/>
-    <item chance="2083" id="2523"/>
+    <item chance="1000" id="2522"/>
+    <item chance="1000" id="8932"/>
+    <item chance="333" id="2408"/>
+    <item chance="333" id="2523"/>
   </loot>
-  <individual maxItems="3" containerId="6511">
+  <individual maxItems="1" chance2item="10" minGold="15" maxGold="25" containerId="6511">
 	  <item name="zaon legs"/>
 	  <item name="elite draken mail"/>
 	  <item name="necromancer shield"/>

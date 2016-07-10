@@ -5,6 +5,10 @@ function onPrepareDeath(cid, deathList)
 		if(doRoyalBlessIsEnable()) then
 			return useRoyalBless(cid)
 		end
+
+		if doPlayerDieOnDarkGeneral(cid) then
+			return false
+		end
 	
 		--local isInside = getPlayerStorageValue(cid, sid.INSIDE_MINI_GAME) == 1
 		

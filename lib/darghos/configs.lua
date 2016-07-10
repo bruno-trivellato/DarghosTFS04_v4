@@ -59,7 +59,7 @@ darghos_need_eat = true
 
 -- Special Events
 darghos_kill_dark_general_exp_bonus_days = 3
-darghos_kill_dark_general_exp_bonus_percent = 10
+darghos_kill_dark_general_exp_bonus_percent = 15
 
 -- Define se jogadores em area non-pvp/pacificos usarão um estagio de exp diferenciado do normal
 darghos_use_protected_stages = false

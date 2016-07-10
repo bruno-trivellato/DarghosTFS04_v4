@@ -3134,6 +3134,9 @@
 		<monster name="Valkyrie" x="-1" y="2" z="6" spawntime="120" />
 		<monster name="Amazon" x="3" y="2" z="6" spawntime="120" />
 	</spawn>
+	<spawn centerx="1745" centery="1876" centerz="6" radius="2">
+		<npc name="quendor.travel0" x="0" y="0" z="6" spawntime="60" direction="2" />
+	</spawn>
 	<spawn centerx="2501" centery="1877" centerz="6" radius="5">
 		<monster name="Ariadne Adept" x="1" y="-1" z="6" spawntime="60" />
 	</spawn>
@@ -3207,6 +3210,10 @@
 		<monster name="Cyclops Drone" x="-2" y="2" z="6" spawntime="60" />
 		<monster name="Cyclops" x="-9" y="8" z="6" spawntime="60" />
 		<monster name="Cyclops" x="-5" y="9" z="6" spawntime="60" />
+	</spawn>
+	<spawn centerx="1806" centery="1916" centerz="6" radius="11">
+		<monster name="Minotaur" x="-11" y="-7" z="6" spawntime="60" />
+		<monster name="Minotaur" x="4" y="2" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="2329" centery="1916" centerz="6" radius="5">
 		<monster name="Cyclops" x="3" y="-2" z="6" spawntime="60" />
@@ -8671,6 +8678,12 @@
 		<monster name="Elder Beholder" x="-5" y="5" z="7" spawntime="60" />
 		<monster name="Beholder" x="6" y="5" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="1754" centery="1828" centerz="7" radius="5">
+		<monster name="Bear" x="0" y="-4" z="7" spawntime="60" />
+		<monster name="Wolf" x="0" y="-2" z="7" spawntime="60" />
+		<monster name="Wolf" x="3" y="0" z="7" spawntime="60" />
+		<monster name="Wolf" x="-4" y="1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="2411" centery="1828" centerz="7" radius="1">
 		<npc name="thorn.guards" x="0" y="0" z="7" spawntime="20" direction="2" />
 	</spawn>
@@ -9009,6 +9022,7 @@
 		<monster name="Giant Spider" x="5" y="-2" z="7" spawntime="60" />
 		<monster name="Giant Spider" x="0" y="5" z="7" spawntime="60" />
 	</spawn>
+	<spawn centerx="1793" centery="1922" centerz="7" radius="5" />
 	<spawn centerx="2196" centery="1922" centerz="7" radius="15">
 		<monster name="Wolf" x="-14" y="-10" z="7" spawntime="60" />
 		<monster name="Bear" x="4" y="-10" z="7" spawntime="60" />
@@ -13242,6 +13256,7 @@
 		<monster name="Troll" x="2" y="0" z="8" spawntime="60" />
 		<monster name="troll champion" x="4" y="0" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="1792" centery="1846" centerz="8" radius="1" />
 	<spawn centerx="2199" centery="1850" centerz="8" radius="5">
 		<monster name="troll champion" x="2" y="-3" z="8" spawntime="60" />
 		<monster name="Troll" x="2" y="0" z="8" spawntime="60" />
@@ -13271,6 +13286,9 @@
 		<monster name="Bug" x="-4" y="0" z="8" spawntime="60" />
 		<monster name="Bug" x="5" y="0" z="8" spawntime="60" />
 		<monster name="Bug" x="4" y="3" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="1839" centery="1852" centerz="8" radius="1">
+		<npc name="global.soft" x="1" y="-1" z="8" spawntime="60" direction="2" />
 	</spawn>
 	<spawn centerx="1998" centery="1852" centerz="8" radius="5">
 		<monster name="Rotworm" x="3" y="-3" z="8" spawntime="60" />
@@ -13373,7 +13391,21 @@
 		<monster name="Troll" x="-3" y="3" z="8" spawntime="60" />
 		<monster name="Orc" x="-1" y="3" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="1818" centery="1864" centerz="8" radius="5">
+		<monster name="Rotworm" x="3" y="-3" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="2239" centery="1864" centerz="8" radius="5" />
+	<spawn centerx="1836" centery="1865" centerz="8" radius="5">
+		<monster name="Troll" x="-5" y="-3" z="8" spawntime="60" />
+		<monster name="Rotworm" x="-3" y="-1" z="8" spawntime="60" />
+		<monster name="Rotworm" x="5" y="2" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="1860" centery="1866" centerz="8" radius="5">
+		<monster name="Troll" x="-2" y="-1" z="8" spawntime="90" />
+		<monster name="Rotworm" x="-3" y="0" z="8" spawntime="60" />
+		<monster name="Troll" x="-1" y="2" z="8" spawntime="90" />
+		<monster name="Troll" x="-5" y="3" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="2020" centery="1867" centerz="8" radius="5">
 		<monster name="Rotworm" x="-1" y="0" z="8" spawntime="60" />
 		<monster name="Rotworm" x="5" y="5" z="8" spawntime="60" />
@@ -13387,6 +13419,9 @@
 	<spawn centerx="2382" centery="1868" centerz="8" radius="5">
 		<monster name="Rotworm" x="1" y="-4" z="8" spawntime="60" />
 		<monster name="Slime" x="2" y="5" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="1810" centery="1869" centerz="8" radius="5">
+		<monster name="Troll" x="-3" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="2088" centery="1869" centerz="8" radius="5">
 		<monster name="Ghoul" x="1" y="2" z="8" spawntime="60" />
@@ -13407,6 +13442,14 @@
 	</spawn>
 	<spawn centerx="2114" centery="1872" centerz="8" radius="5">
 		<monster name="Ghoul" x="-1" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="1801" centery="1873" centerz="8" radius="5">
+		<monster name="Rotworm" x="-1" y="1" z="8" spawntime="60" />
+		<monster name="Rotworm" x="-5" y="3" z="8" spawntime="60" />
+		<monster name="Rotworm" x="5" y="4" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="1850" centery="1874" centerz="8" radius="5">
+		<monster name="Rotworm" x="0" y="-3" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="2242" centery="1874" centerz="8" radius="5">
 		<monster name="Orc" x="-1" y="-4" z="8" spawntime="60" />
@@ -13446,6 +13489,16 @@
 		<monster name="Troll" x="1" y="1" z="8" spawntime="90" />
 		<monster name="Rotworm" x="1" y="4" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="1840" centery="1879" centerz="8" radius="5">
+		<monster name="Rotworm" x="-1" y="0" z="8" spawntime="60" />
+		<monster name="Rotworm" x="5" y="5" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="1860" centery="1879" centerz="8" radius="5">
+		<monster name="Troll" x="2" y="-4" z="8" spawntime="60" />
+		<monster name="Troll" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Rotworm" x="-2" y="0" z="8" spawntime="60" />
+		<monster name="Rotworm" x="5" y="2" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="2008" centery="1879" centerz="8" radius="5">
 		<monster name="Troll" x="-1" y="-4" z="8" spawntime="60" />
 		<monster name="Rotworm" x="0" y="-2" z="8" spawntime="60" />
@@ -13460,6 +13513,13 @@
 		<monster name="Troll" x="5" y="-1" z="8" spawntime="60" />
 		<monster name="Rotworm" x="-3" y="0" z="8" spawntime="60" />
 		<monster name="Rotworm" x="4" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="1807" centery="1882" centerz="8" radius="5">
+		<monster name="Rotworm" x="-2" y="2" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="1871" centery="1882" centerz="8" radius="5">
+		<monster name="Troll" x="-4" y="1" z="8" spawntime="60" />
+		<monster name="Rotworm" x="4" y="3" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="2050" centery="1883" centerz="8" radius="5">
 		<monster name="Rotworm" x="4" y="-5" z="8" spawntime="60" />
@@ -13489,6 +13549,17 @@
 		<monster name="Rotworm" x="-1" y="3" z="8" spawntime="60" />
 		<monster name="Rotworm" x="3" y="3" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="1797" centery="1889" centerz="8" radius="5">
+		<monster name="Rotworm" x="0" y="-3" z="8" spawntime="60" />
+		<monster name="Rotworm" x="2" y="-1" z="8" spawntime="60" />
+		<monster name="Troll" x="-2" y="0" z="8" spawntime="90" />
+	</spawn>
+	<spawn centerx="1858" centery="1889" centerz="8" radius="5">
+		<monster name="Troll" x="2" y="-3" z="8" spawntime="60" />
+		<monster name="Rotworm" x="1" y="-2" z="8" spawntime="60" />
+		<monster name="Troll" x="1" y="1" z="8" spawntime="90" />
+		<monster name="Rotworm" x="1" y="4" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="3274" centery="1889" centerz="8" radius="5">
 		<monster name="Cyclops" x="-2" y="0" z="8" spawntime="120" />
 		<monster name="Cyclops" x="1" y="0" z="8" spawntime="120" />
@@ -13510,8 +13581,17 @@
 		<monster name="Cyclops Drone" x="2" y="23" z="8" spawntime="60" />
 		<monster name="Cyclops Drone" x="18" y="24" z="8" spawntime="60" />
 	</spawn>
-	<spawn centerx="1848" centery="1893" centerz="8" radius="8">
-		<monster name="Giant Spider" x="2" y="1" z="8" spawntime="60" />
+	<spawn centerx="1828" centery="1891" centerz="8" radius="5">
+		<monster name="Troll" x="-1" y="-4" z="8" spawntime="60" />
+		<monster name="Rotworm" x="0" y="-2" z="8" spawntime="60" />
+		<monster name="Troll" x="3" y="1" z="8" spawntime="90" />
+		<monster name="Rotworm" x="4" y="2" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="1813" centery="1892" centerz="8" radius="5">
+		<monster name="Rotworm" x="-1" y="-1" z="8" spawntime="60" />
+		<monster name="Troll" x="5" y="-1" z="8" spawntime="60" />
+		<monster name="Rotworm" x="-3" y="0" z="8" spawntime="60" />
+		<monster name="Rotworm" x="4" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="2033" centery="1893" centerz="8" radius="5">
 		<monster name="Rotworm" x="-2" y="-5" z="8" spawntime="60" />
@@ -13548,6 +13628,11 @@
 		<monster name="Dwarf Soldier" x="1" y="0" z="8" spawntime="60" />
 		<monster name="Cyclops" x="0" y="1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="1870" centery="1895" centerz="8" radius="5">
+		<monster name="Rotworm" x="4" y="-5" z="8" spawntime="60" />
+		<monster name="Rotworm" x="1" y="0" z="8" spawntime="60" />
+		<monster name="Rotworm" x="1" y="3" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="1979" centery="1895" centerz="8" radius="5">
 		<monster name="Rotworm" x="2" y="-4" z="8" spawntime="60" />
 		<monster name="Troll" x="-3" y="-2" z="8" spawntime="90" />
@@ -13578,6 +13663,13 @@
 	<spawn centerx="3315" centery="1896" centerz="8" radius="5">
 		<monster name="Cyclops" x="1" y="-1" z="8" spawntime="120" />
 	</spawn>
+	<spawn centerx="1853" centery="1905" centerz="8" radius="5">
+		<monster name="Rotworm" x="-2" y="-5" z="8" spawntime="60" />
+		<monster name="Rotworm" x="5" y="-4" z="8" spawntime="60" />
+		<monster name="Troll" x="-2" y="-2" z="8" spawntime="90" />
+		<monster name="Rotworm" x="1" y="2" z="8" spawntime="60" />
+		<monster name="Rotworm" x="3" y="5" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="2008" centery="1905" centerz="8" radius="5">
 		<monster name="Minotaur" x="-4" y="1" z="8" spawntime="60" />
 	</spawn>
@@ -13596,6 +13688,17 @@
 	<spawn centerx="3306" centery="1905" centerz="8" radius="5">
 		<monster name="Cyclops" x="0" y="-1" z="8" spawntime="120" />
 	</spawn>
+	<spawn centerx="1828" centery="1906" centerz="8" radius="5">
+		<monster name="Troll" x="-5" y="-3" z="8" spawntime="60" />
+		<monster name="Troll" x="-5" y="1" z="8" spawntime="60" />
+		<monster name="Rotworm" x="3" y="1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="1883" centery="1906" centerz="8" radius="5">
+		<monster name="Rotworm" x="2" y="-5" z="8" spawntime="60" />
+		<monster name="Rotworm" x="3" y="-2" z="8" spawntime="60" />
+		<monster name="Troll" x="-1" y="2" z="8" spawntime="90" />
+		<monster name="Rotworm" x="-2" y="4" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="3294" centery="1906" centerz="8" radius="5">
 		<monster name="Cyclops" x="2" y="-1" z="8" spawntime="120" />
 		<monster name="Cyclops" x="-2" y="2" z="8" spawntime="120" />
@@ -13604,10 +13707,25 @@
 		<monster name="Cyclops" x="1" y="-2" z="8" spawntime="120" />
 		<monster name="Cyclops" x="1" y="2" z="8" spawntime="120" />
 	</spawn>
+	<spawn centerx="1799" centery="1907" centerz="8" radius="5">
+		<monster name="Rotworm" x="2" y="-4" z="8" spawntime="60" />
+		<monster name="Troll" x="-3" y="-2" z="8" spawntime="90" />
+		<monster name="Rotworm" x="-1" y="2" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="1812" centery="1907" centerz="8" radius="5">
+		<monster name="Troll" x="0" y="-4" z="8" spawntime="60" />
+		<monster name="Rotworm" x="-1" y="-3" z="8" spawntime="60" />
+		<monster name="Rotworm" x="1" y="1" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="3339" centery="1907" centerz="8" radius="5">
 		<monster name="Cyclops" x="-2" y="-2" z="8" spawntime="120" />
 		<monster name="Dwarf Soldier" x="2" y="-2" z="8" spawntime="60" />
 		<monster name="Cyclops" x="2" y="1" z="8" spawntime="120" />
+	</spawn>
+	<spawn centerx="1869" centery="1908" centerz="8" radius="5">
+		<monster name="Rotworm" x="-2" y="-3" z="8" spawntime="60" />
+		<monster name="Troll" x="-2" y="0" z="8" spawntime="90" />
+		<monster name="Rotworm" x="2" y="5" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="1983" centery="1908" centerz="8" radius="5">
 		<monster name="Minotaur" x="2" y="0" z="8" spawntime="60" />
@@ -13657,9 +13775,19 @@
 	<spawn centerx="1991" centery="1919" centerz="8" radius="5">
 		<monster name="Minotaur" x="-1" y="-1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="1803" centery="1920" centerz="8" radius="5">
+		<monster name="Minotaur" x="2" y="0" z="8" spawntime="60" />
+		<monster name="Minotaur" x="-3" y="3" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="2078" centery="1921" centerz="8" radius="5">
 		<monster name="Ghoul" x="-4" y="-2" z="8" spawntime="60" />
 		<monster name="Ghoul" x="4" y="-2" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="1789" centery="1922" centerz="8" radius="7">
+		<monster name="Minotaur" x="1" y="-4" z="8" spawntime="60" />
+		<monster name="Minotaur" x="-5" y="0" z="8" spawntime="60" />
+		<monster name="Minotaur" x="5" y="0" z="8" spawntime="60" />
+		<monster name="Minotaur" x="2" y="5" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="2040" centery="1922" centerz="8" radius="5">
 		<monster name="Smuggler" x="1" y="-2" z="8" spawntime="120" />
@@ -13753,6 +13881,9 @@
 		<monster name="Minotaur" x="2" y="-1" z="8" spawntime="60" />
 		<monster name="Minotaur guard" x="-2" y="1" z="8" spawntime="60" />
 		<monster name="Minotaur" x="0" y="2" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="1811" centery="1931" centerz="8" radius="5">
+		<monster name="Minotaur" x="-1" y="-1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="3290" centery="1931" centerz="8" radius="5">
 		<monster name="Minotaur guard" x="1" y="1" z="8" spawntime="60" />

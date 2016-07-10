@@ -105,18 +105,22 @@ function onEnterTrainers(cid, login)
 	local _uid = uid.TRAINERS_ROOMS_START
 	while(_uid < uid.TRAINERS_ROOMS_LAST) do
 		
-		local pos = getThingPosition(_uid)
-		local creature = getTopCreature(pos)
-		if(creature.uid == 0) then
-			doTeleportThing(cid, pos)
-			doSendMagicEffect(pos, CONST_ME_MAGIC_BLUE)
+		if(getThing(_uid, false).uid ~= 0) then
+			local pos = getThingPosition(_uid)
+			local creature = getTopCreature(pos)
+			if(creature.uid == 0) then
+				doTeleportThing(cid, pos)
+				doSendMagicEffect(pos, CONST_ME_MAGIC_BLUE)
 
-			setPlayerStorageValue(cid, sid.INSIDE_TRAINING_ROOM, 1)
+				setPlayerStorageValue(cid, sid.INSIDE_TRAINING_ROOM, 1)
+				
+				return true
+			end
 			
-			return true
+			_uid = _uid + 1
+		else
+			print("[Darghos Movement] Training Rooms - Not found room id:" .. _uid)
 		end
-		
-		_uid = _uid + 1
 	end
 	
 	print("[Darghos Movement] Training Rooms - All slots full:" .. _uid)

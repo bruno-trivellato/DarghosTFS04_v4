@@ -120,6 +120,10 @@
 		PORTAL_HUNTS                           	= 4086,
 		RAIDS_ENTRANCE				= 4087,
 
+		DARK_GENERAL_ENTRANCE		= 4088,
+		DARK_GENERAL_LEAVE			= 4089,
+		SURVIVAL_ENTRANCE			= 4090,
+
 		--  Poi Entrance Fields
 		POI_FIELDS_START			= 6010,
 		POI_FIELDS_END				= 6044,

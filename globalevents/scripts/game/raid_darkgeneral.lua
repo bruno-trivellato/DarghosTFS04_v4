@@ -6,7 +6,6 @@ function onTime(time)
 		return true
 	end
 	
-	doSetStorage(gid.EVENT_DARK_GENERAL, EVENT_STATE_INIT)
 	doExecuteRaid("dark_general")
 	return true
 end
