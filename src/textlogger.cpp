@@ -83,8 +83,7 @@ void Logger::internal(FILE* file, std::string output, bool newLine)
 
 void Logger::log(const char* func, LogType_t type, std::string message, std::string channel/* = ""*/, bool newLine/* = true*/)
 {
-    if(!m_loaded)
-        return;
+    if(!m_loaded) return;
 
 	std::stringstream ss;
 	ss << "[" << formatDate() << "]" << " (";

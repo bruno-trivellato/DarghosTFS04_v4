@@ -1014,8 +1014,7 @@ bool Game::placeCreature(Creature* creature, const Position& pos, bool extendedP
         }
     }
 
-    for(it = list.begin(); it != list.end(); ++it)
-        (*it)->onCreatureAppear(creature);
+    for(it = list.begin(); it != list.end(); ++it) (*it)->onCreatureAppear(creature);
 
 	creature->setLastPosition(pos);
 	creature->getParent()->postAddNotification(NULL, creature, NULL, creature->getParent()->__getIndexOfThing(creature));
@@ -1420,8 +1419,7 @@ ReturnValue Game::internalMoveCreature(Creature* creature, Direction direction, 
 		}
 	}
 
-    if(!hasBitSet(FLAG_IGNOREBLOCKITEM, flags) && creature->getPlayer() && creature->getPlayer()->getBot())
-        flags |= FLAG_IGNOREBLOCKITEM;
+    if(!hasBitSet(FLAG_IGNOREBLOCKITEM, flags) && creature->getPlayer() && creature->getPlayer()->getBot()) flags |= FLAG_IGNOREBLOCKITEM;
 
 	ReturnValue ret = RET_NOTPOSSIBLE;
 	if((toTile = map->getTile(destPos)))
@@ -2663,8 +2661,7 @@ bool Game::playerAutoWalk(uint32_t playerId, std::list<Direction>& listDir)
 
 	player->setNextWalkTask(NULL);
     PlayerBot* bot = player->getBot();
-    if(bot)
-        bot->onAutoWalk();
+    if(bot) bot->onAutoWalk();
 	return player->startAutoWalk(listDir);
 }
 
@@ -4120,8 +4117,7 @@ bool Game::playerYell(Player* player, const std::string& text)
 bool Game::playerSpeakTo(Player* player, SpeakClasses type, const std::string& receiver,
 	const std::string& text)
 {
-    if(player->getBot())
-        return false;
+    if(player->getBot()) return false;
 
 	Player* toPlayer = getPlayerByName(receiver);
 	if(!toPlayer || toPlayer->isRemoved())

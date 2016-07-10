@@ -4878,8 +4878,7 @@ void Player::setPromotionLevel(uint32_t pLevel)
 
 uint16_t Player::getBlessings() const
 {
-    if(getBot() || isSecureDeath())
-        return 5;
+    if(getBot() || isSecureDeath()) return 5;
 
 	if(!g_config.getBool(ConfigManager::BLESSINGS) || (!isPremium() &&
 		g_config.getBool(ConfigManager::BLESSING_ONLY_PREMIUM)))

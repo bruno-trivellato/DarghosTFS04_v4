@@ -48,7 +48,7 @@ void MonsterType::reset()
 
     checkCorpseOwner = g_config.getBool(ConfigManager::CHECK_CORPSE_OWNER);
 
-    individualItemsContainer = maxInvidivualItems = 0;
+    individualItemsContainer = maxInvidivualItems = individualChance2Item = individualMaxGold = individualMinGold = 0;
 
 	maxSummons = -1;
 	targetDistance = 1;
@@ -1446,6 +1446,21 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
                 mType->individualItemsContainer = intValue;
             else
                 SHOW_XML_WARNING("Missing individual container id");
+
+            if(readXMLInteger(p, "chance2item", intValue))
+                mType->individualChance2Item = intValue;
+            else
+                SHOW_XML_WARNING("Missing individual chance2item");
+
+            if(readXMLInteger(p, "minGold", intValue))
+                mType->individualMinGold = intValue;
+            else
+                SHOW_XML_WARNING("Missing individual minGold");
+
+            if(readXMLInteger(p, "maxGold", intValue))
+                mType->individualMaxGold = intValue;
+            else
+                SHOW_XML_WARNING("Missing individual maxGold");
 
             if(!Item::items[mType->individualItemsContainer].isContainer())
                 SHOW_XML_WARNING("Individual container id is not a container");

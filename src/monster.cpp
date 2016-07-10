@@ -1688,9 +1688,10 @@ void Monster::addIndividualItems(Player* player){
         itemsCount = std::floor((uint32_t)mType->maxInvidivualItems * percent);
     }
 
-    if(itemsCount > 0){
-        IndividualLootItems sortedItems;
+    uint32_t chance2Item = random_range(0, 100);
+    IndividualLootItems sortedItems;
 
+    if(itemsCount > 0 && chance2Item <= mType->individualChance2Item){
         uint32_t lastId = 0;
         uint32_t roll = 0;
 
@@ -1713,12 +1714,14 @@ void Monster::addIndividualItems(Player* player){
             lastId = 0;
             roll = 0;
         }
+    }
 
-        const ItemType& it = Item::items[mType->individualItemsContainer];
+    const ItemType& it = Item::items[mType->individualItemsContainer];
 
-        Item* container = Item::CreateItem(it.id, 1);
-        if(container)
-        {
+    Item* container = Item::CreateItem(it.id, 1);
+    if(container)
+    {
+        if(sortedItems.size() > 0){
             for(IndividualLootItems::iterator lit = sortedItems.begin(); lit != sortedItems.end(); lit++){
                 const ItemType& tit = Item::items[*lit];
 
@@ -1730,15 +1733,26 @@ void Monster::addIndividualItems(Player* player){
                         std::clog << "[Warning - Monster::createCorpse] Cannot add individual loot to container." << std::endl;
                 }
             }
-
-            ReturnValue ret = g_game.internalPlayerAddItem(NULL, player, container, false);
-            if(ret != RET_NOERROR)
-                std::clog << "[Warning - Monster::createCorpse] Cannot add individual loot to player inventory." << std::endl;
-
-            std::stringstream ss;
-            ss << "You received a reward's bundle by your endeavour.";
-            player->sendTextMessage((MessageClasses)g_config.getNumber(ConfigManager::LOOT_MESSAGE_TYPE), ss.str());
         }
+        else{
+            uint32_t gold = random_range(mType->individualMinGold, mType->individualMaxGold);
+
+            Item* newItem = Item::CreateItem(ITEM_CRYSTAL_COIN, gold);
+            if(newItem)
+            {
+                ReturnValue ret = g_game.internalAddItem(NULL, container->getContainer(), newItem);
+                if(ret != RET_NOERROR)
+                    std::clog << "[Warning - Monster::createCorpse] Cannot add individual loot (gold) to container." << std::endl;
+            }
+        }
+
+        ReturnValue ret = g_game.internalPlayerAddItem(NULL, player, container, false);
+        if(ret != RET_NOERROR)
+            std::clog << "[Warning - Monster::createCorpse] Cannot add individual loot to player inventory." << std::endl;
+
+        std::stringstream ss;
+        ss << "You received a reward's bundle by your endeavour.";
+        player->sendTextMessage((MessageClasses)g_config.getNumber(ConfigManager::LOOT_MESSAGE_TYPE), ss.str());
     }
 }
 

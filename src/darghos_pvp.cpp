@@ -400,8 +400,7 @@ void Battleground::putInside(Player* player)
 
 BattlegrondRetValue Battleground::onPlayerJoin(Player* player)
 {
-    if(!isOpen())
-        return BATTLEGROUND_CLOSED;
+    if(!isOpen()) return BATTLEGROUND_CLOSED;
 
 	if(player->isBattlegroundDeserter())
 		return BATTLEGROUND_CAN_NOT_JOIN;

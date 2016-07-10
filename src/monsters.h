@@ -118,6 +118,8 @@ class MonsterType
 
         uint32_t maxInvidivualItems;
         uint32_t individualItemsContainer;
+        uint32_t individualChance2Item;
+        uint32_t individualMinGold, individualMaxGold;
 
 		SummonList summonList;
 		LootItems lootItems;
