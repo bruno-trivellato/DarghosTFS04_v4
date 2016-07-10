@@ -3134,9 +3134,6 @@
 		<monster name="Valkyrie" x="-1" y="2" z="6" spawntime="120" />
 		<monster name="Amazon" x="3" y="2" z="6" spawntime="120" />
 	</spawn>
-	<spawn centerx="1745" centery="1876" centerz="6" radius="2">
-		<npc name="quendor.travel0" x="0" y="0" z="6" spawntime="60" direction="2" />
-	</spawn>
 	<spawn centerx="2501" centery="1877" centerz="6" radius="5">
 		<monster name="Ariadne Adept" x="1" y="-1" z="6" spawntime="60" />
 	</spawn>
