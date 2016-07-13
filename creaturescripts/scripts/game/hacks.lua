@@ -38,28 +38,39 @@ danceEvents = {}
 expEvents = {}
 
 function checkPlayerBot(cid)
-	
-	if(getPlayerGroupId(cid) ~= GROUPS_PLAYER_BOT) then
+
+	if(not doPlayerIsBot(cid)) then
+		scriptBotCheckMoving(cid)
 		return
 	end
-			
+
 	local attacked = getCreatureTarget(cid)
 	if(not danceEvents[cid] and getBooleanFromString(attacked) and isInArray({"Marksman Target", "Hitdoll"}, getCreatureName(attacked))) then
 		danceEvents[cid] = addEvent(autoDance, 1000 * 10, cid)
 	end
 
-	if(not expEvents[cid] and getPlayerLevel(cid) < 22 and math.random(1, 100000) <= 500) then
-		expEvents[cid] = addEvent(addBotExp, 1000 * 60 * math.random(5, 10), cid)
+  if(getPlayerLevel(cid) >= 20 and getPlayerPromotionLevel(cid) == 0 and math.random(1, 100000) <= 100) then
+    doPlayerSetPromotionLevel(cid, 1)
+  end
+
+  local guid = getPlayerGUID(cid)
+
+	if((not expEvents[guid] or os.time() >= expEvents[guid]) and getPlayerLevel(cid) < 121 and math.random(1, 100000) <= 500) then
+
+	  local levelExp = getExperienceForLevel(getPlayerLevel(cid) + 1) - getExperienceForLevel(getPlayerLevel(cid))
+    local exp = math.random(math.floor(levelExp * 0.75), math.floor(levelExp * 2.25))
+    --print(getPlayerName(cid) .. " exp: " .. exp)
+	  doPlayerAddExp(cid, exp)
+
+		expEvents[guid] = os.time() + (60 * math.random(40, 60))
 	end
 end
 
-function addBotExp(cid)
-	local exp = math.random(500, 1600)
-	doPlayerAddExp(cid, exp)
-	danceEvents[cid] = nil
-end
-
 function autoDance(cid)
+	if(not isCreature(cid)) then
+		return
+	end
+
 	doCreatureSetLookDirection(cid, math.random(NORTH, WEST))
 	danceEvents[cid] = nil
 end

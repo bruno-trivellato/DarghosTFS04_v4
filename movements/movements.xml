@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <movements>
 
+	<!-- its a hack for any floorchange event (used on botscript) -->
+	<movevent type="StepIn" position="0,0,0" event="script" value="game/floorchange.lua"/>
+
 	<!-- Teleports to Hunts System -->
-        <movevent type="StepIn" fromaid="8500" toaid="8599" event="script" value="game/hunts.lua"/>
+    <movevent type="StepIn" fromaid="8500" toaid="8599" event="script" value="game/hunts.lua"/>
 	<movevent type="StepIn" actionid="4087" event="script" value="game/hunts.lua"/>
 	<movevent type="StepIn" actionid="190" event="script" value="game/leavedoor.lua"/>
 	
