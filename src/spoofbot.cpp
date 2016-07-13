@@ -111,7 +111,7 @@ void PlayerBot::placeOnMap(){
             }
         }
         else{
-            for(uint32_t k = 8000; k < 8119; k++){
+            for(uint32_t k = 8000; k < 8479; k++){
                 Thing* thing = ScriptEnviroment::getUniqueThing(k);
                 if(thing){
                     if(!thing->getTile()->getTopCreature()){
@@ -159,7 +159,7 @@ bool PlayerBot::remove(){
     return true;
 }
 
-void PlayerBot::onCreatureAppear(const Creature* creature){
+void PlayerBot::__onCreatureAppear(const Creature* creature){
 
     if(creature == this)
         updateTargetList();

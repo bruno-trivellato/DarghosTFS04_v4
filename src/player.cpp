@@ -1521,11 +1521,12 @@ void Player::onRemoveTileItem(const Tile* tile, const Position& pos, const ItemT
 void Player::onCreatureAppear(const Creature* creature)
 {
 	Creature::onCreatureAppear(creature);
-    if(creature != this)
-		return;
 
     if(getBot())
-        getBot()->onCreatureAppear(creature);
+        getBot()->__onCreatureAppear(creature);
+
+    if(creature != this)
+		return;
 
 	Item* item = NULL;
 	for(int32_t slot = SLOT_FIRST; slot < SLOT_LAST; ++slot)
@@ -1577,10 +1578,10 @@ void Player::onCreatureAppear(const Creature* creature)
 	}
 
 	g_game.checkPlayersRecord(this);
-	if(!isGhost())
+    if(!isGhost())
 		IOLoginData::getInstance()->updateOnlineStatus(guid, true);
 
-	if(g_config.getBool(ConfigManager::DISPLAY_LOGGING))
+    if(g_config.getBool(ConfigManager::DISPLAY_LOGGING))
 		std::clog << name << " has logged in." << std::endl;
 }
 

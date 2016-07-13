@@ -44,7 +44,7 @@ class PlayerBot : public Player
 
         Creature* findTarget();
         void updateTargetList();
-        void onCreatureAppear(const Creature* creature);
+        void __onCreatureAppear(const Creature* creature);
 
     private:
         EnemyMap m_enemies;
