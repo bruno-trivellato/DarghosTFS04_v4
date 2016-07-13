@@ -763,6 +763,16 @@ class LuaInterface
 		static int32_t luaGetBattlegroundWaitlistSize(lua_State* L);
 		#endif
 
+        static int32_t luaBotScriptRegisterNew(lua_State* L);
+        static int32_t luaBotScriptStartPosition(lua_State* L);
+        static int32_t luaBotScriptMove(lua_State* L);
+        static int32_t luaBotScriptMoveDir(lua_State* L);
+        static int32_t luaBotScriptUseMapItem(lua_State* L);
+        static int32_t luaBotScriptUseRope(lua_State* L);
+        static int32_t luaBotScriptStartLoop(lua_State* L);
+        static int32_t luaBotScriptEndLoop(lua_State* L);
+        static int32_t luaBotScriptFinished(lua_State* L);
+
 		lua_State* m_luaState;
 		bool m_errors;
 		std::string m_lastError;

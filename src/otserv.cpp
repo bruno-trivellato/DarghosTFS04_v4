@@ -89,6 +89,7 @@ inline void boost::throw_exception(std::exception const & e)
 Dispatcher g_dispatcher;
 Scheduler g_scheduler;
 Spoof g_spoof;
+SpoofScripts g_spoofScripts;
 RSA g_RSA;
 ConfigManager g_config;
 Game g_game;

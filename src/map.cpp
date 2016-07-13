@@ -747,7 +747,7 @@ bool Map::getPathTo(const Creature* creature, const Position& destPos,
 }
 
 bool Map::getPathMatching(const Creature* creature, std::list<Direction>& dirList, const FrozenPathingConditionCall& pathCondition, const FindPathParams& fpp)
-{
+{    
     Position pos = creature->getPosition();
     Position endPos;
 
@@ -886,15 +886,14 @@ bool Map::getPathMatching(const Creature* creature, std::list<Direction>& dirLis
 
     int_fast32_t prevx = endPos.x;
     int_fast32_t prevy = endPos.y;
-    int_fast32_t dx, dy;
 
     found = found->parent;
     while (found) {
         pos.x = found->x;
         pos.y = found->y;
 
-        dx = pos.getX() - prevx;
-        dy = pos.getY() - prevy;
+        int_fast32_t dx = pos.getX() - prevx;
+        int_fast32_t dy = pos.getY() - prevy;
 
         prevx = pos.x;
         prevy = pos.y;
@@ -925,7 +924,7 @@ bool Map::getPathMatching(const Creature* creature, std::list<Direction>& dirLis
 //*********** AStarNodes *************
 
 AStarNodes::AStarNodes(uint32_t x, uint32_t y)
-    : openNodes()
+    : nodes(), openNodes()
 {
     curNode = 1;
     closedNodes = 0;
@@ -936,7 +935,7 @@ AStarNodes::AStarNodes(uint32_t x, uint32_t y)
     startNode.x = x;
     startNode.y = y;
     startNode.f = 0;
-    nodeTable[(x << 16) | y] = &startNode;
+    nodeTable[(x << 16) | y] = nodes;
 }
 
 AStarNode* AStarNodes::createOpenNode(AStarNode* parent, uint32_t x, uint32_t y, int_fast32_t f)
@@ -948,7 +947,7 @@ AStarNode* AStarNodes::createOpenNode(AStarNode* parent, uint32_t x, uint32_t y,
     size_t retNode = curNode++;
     openNodes[retNode] = true;
 
-    AStarNode* node = &nodes[retNode];
+    AStarNode* node = nodes + retNode;
     nodeTable[(x << 16) | y] = node;
     node->parent = parent;
     node->x = x;
@@ -965,7 +964,7 @@ AStarNode* AStarNodes::getBestNode()
 
     int32_t best_node_f = std::numeric_limits<int32_t>::max();
     int32_t best_node = -1;
-    for (uint32_t i = 0; i < curNode; i++) {
+    for (size_t i = 0; i < curNode; i++) {
         if (openNodes[i] && nodes[i].f < best_node_f) {
             best_node_f = nodes[i].f;
             best_node = i;
@@ -973,33 +972,25 @@ AStarNode* AStarNodes::getBestNode()
     }
 
     if (best_node >= 0) {
-        return &nodes[best_node];
+        return nodes + best_node;
     }
     return nullptr;
 }
 
 void AStarNodes::closeNode(AStarNode* node)
 {
-    size_t pos = GET_NODE_INDEX(node);
-    if (pos >= MAX_NODES) {
-        std::cout << "AStarNodes. trying to close node out of range" << std::endl;
-        return;
-    }
-
-    openNodes[pos] = false;
+    size_t index = node - nodes;
+    assert(index < MAX_NODES);
+    openNodes[index] = false;
     ++closedNodes;
 }
 
 void AStarNodes::openNode(AStarNode* node)
 {
-    size_t pos = GET_NODE_INDEX(node);
-    if (pos >= MAX_NODES) {
-        std::cout << "AStarNodes. trying to open node out of range" << std::endl;
-        return;
-    }
-
-    if (!openNodes[pos]) {
-        openNodes[pos] = true;
+    size_t index = node - nodes;
+    assert(index < MAX_NODES);
+    if (!openNodes[index]) {
+        openNodes[index] = true;
         --closedNodes;
     }
 }

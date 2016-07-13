@@ -1524,6 +1524,9 @@ void Player::onCreatureAppear(const Creature* creature)
     if(creature != this)
 		return;
 
+    if(getBot())
+        getBot()->onCreatureAppear(creature);
+
 	Item* item = NULL;
 	for(int32_t slot = SLOT_FIRST; slot < SLOT_LAST; ++slot)
 	{
@@ -1980,6 +1983,7 @@ void Player::onThink(uint32_t interval)
 		&& !isConnecting && !pzLocked && !hasCondition(CONDITION_INFIGHT)
 #ifdef __DARGHOS_CUSTOM__
         && !hasCustomFlag(PlayerCustomFlag_ContinueOnlineWhenExit)
+        && !bot
 #endif
     )
 	{

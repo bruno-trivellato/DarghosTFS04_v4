@@ -8,6 +8,7 @@
 
 extern Game g_game;
 extern Spoof g_spoof;
+extern SpoofScripts g_spoofScripts;
 
 Spoof::Spoof(){
     m_startTime = time(nullptr);
@@ -49,6 +50,8 @@ Spoof::Spoof(){
 }
 
 bool Spoof::onStartup(){
+    //load botscripts
+    IOLoginData::getInstance()->loadBotScripts();
     return true;
 }
 
@@ -351,4 +354,218 @@ void PlayerRecord::onLogout(){
 
     m_levelLogout = m_player->getLevel();
     IOLoginData::getInstance()->saveRecordPlayer(m_player);
+}
+
+/* BOT SCRIPTS */
+
+void SpoofScripts::load(std::string name){
+    BotScript botScript(name);
+    IOLoginData::getInstance()->loadBotScript(botScript);
+
+    list.insert(std::make_pair(botScript.name, botScript));
+}
+
+bool SpoofScripts::newBotScript(std::string name){
+    if(current != nullptr){
+        return false;
+    }
+
+    current = new BotScript(name);
+    return true;
+}
+
+bool SpoofScripts::botScriptStartPosition(Position pos){
+    if(current == nullptr){
+        return false;
+    }
+
+    current->start_pos = pos;
+    return true;
+}
+
+bool SpoofScripts::botScriptMove(Position pos){
+    if(current == nullptr){
+        return false;
+    }
+
+    ScriptParam param;
+    param.pos = pos;
+
+    current->list.push_back(std::make_pair(BSA_MOVE, param));
+    return true;
+}
+
+bool SpoofScripts::botScriptMoveDir(Direction dir){
+    if(current == nullptr){
+        return false;
+    }
+
+    ScriptParam param;
+    param.dir = dir;
+
+    current->list.push_back(std::make_pair(BSA_MOVE_DIR, param));
+    return true;
+}
+
+bool SpoofScripts::botScriptUseMapItem(Position pos){
+    if(current == nullptr){
+        return false;
+    }
+
+    ScriptParam param;
+    param.pos = pos;
+
+    current->list.push_back(std::make_pair(BSA_USE_MAP_ITEM, param));
+    return true;
+}
+
+bool SpoofScripts::botScriptUseRope(Position pos){
+    if(current == nullptr){
+        return false;
+    }
+
+    ScriptParam param;
+    param.pos = pos;
+
+    current->list.push_back(std::make_pair(BSA_USE_ROPE, param));
+    return true;
+}
+
+bool SpoofScripts::botScriptStartLoop(){
+    if(current == nullptr){
+        return false;
+    }
+
+    ScriptParam param;
+
+    current->list.push_back(std::make_pair(BSA_LOOP_START, param));
+    return true;
+}
+
+bool SpoofScripts::botScriptEndLoop(){
+    if(current == nullptr){
+        return false;
+    }
+
+    ScriptParam param;
+
+    current->list.push_back(std::make_pair(BSA_LOOP_END, param));
+    return true;
+}
+
+bool SpoofScripts::botScriptFinished(){
+    if(current == nullptr){
+        return false;
+    }
+
+    BotScript botScript(current->name);
+    botScript.list = current->list;
+    botScript.start_pos = current->start_pos;
+
+    list.insert(std::make_pair(current->name, botScript));
+
+    delete current;
+    current = nullptr;
+
+    botScript.save();
+
+    return true;
+}
+
+BotScript* SpoofScripts::assignScript(){
+    for (auto& x: list) {
+        BotScript& botScript = list.at(x.first);
+
+        if(botScript.botsUsing.size() == 0){
+            return &botScript;
+        }
+    }
+
+    return nullptr;
+}
+
+bool BotScript::loadStream(PropStream& stream){
+
+    //start pos
+    stream.getType<uint16_t>(start_pos.x);
+    stream.getType<uint16_t>(start_pos.y);
+    stream.getType<uint16_t>(start_pos.z);
+
+    uint32_t dataSize;
+    stream.getType<uint32_t>(dataSize);
+
+    while(stream.size()){
+
+        uint8_t action;
+        if(!stream.getType<uint8_t>(action))
+            continue;
+
+        ScriptParam param;
+
+        if(action == BSA_MOVE || action == BSA_USE_MAP_ITEM || action == BSA_USE_ROPE){
+            stream.getType<uint16_t>(param.pos.x);
+            stream.getType<uint16_t>(param.pos.y);
+            stream.getType<uint16_t>(param.pos.z);
+        }
+        else if(action == BSA_MOVE_DIR){
+            uint8_t dir;
+            stream.getType<uint8_t>(dir);
+            param.dir = (Direction)dir;
+        }
+
+        list.push_back(std::make_pair((BotScriptAction_t)action, param));
+    }
+
+    if(dataSize == list.size())
+        return true;
+
+    std::clog << "[botScript] Wrong data lenght for " << name << " (" << dataSize << ", " << list.size() << ")." << std::endl;
+    return false;
+}
+
+void BotScript::save(){
+
+    PropWriteStream stream;
+
+    stream.addType<uint16_t>(start_pos.x);
+    stream.addType<uint16_t>(start_pos.y);
+    stream.addType<uint16_t>(start_pos.z);
+
+    stream.addType<uint32_t>(list.size());
+
+    for(ScriptParam_t data : list){
+        stream.addType<uint8_t>(data.first);
+
+        ScriptParam param = data.second;
+
+        switch(data.first){
+            case BSA_MOVE:
+            case BSA_USE_MAP_ITEM:
+            case BSA_USE_ROPE:{
+                stream.addType<uint16_t>(param.pos.x);
+                stream.addType<uint16_t>(param.pos.y);
+                stream.addType<uint16_t>(param.pos.z);
+                break;
+            }
+
+            case BSA_MOVE_DIR:{
+                stream.addType<uint8_t>(param.dir);
+                break;
+            }
+
+            default:
+                break;
+        }
+    }
+
+    IOLoginData::getInstance()->saveBotScript(this, stream);
+}
+
+bool BotScript::hasNextStep(){
+    return list.size() >= (list_pos + 1);
+}
+
+ScriptParam_t BotScript::getNextStep(){
+    //std::clog << "Step [" << list_pos << "/" << list.size() << "]" << std::endl;
+    return list.at(list_pos);
 }

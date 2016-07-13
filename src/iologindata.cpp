@@ -33,12 +33,12 @@
 #include "configmanager.h"
 #include "game.h"
 
-#include "spoof.h"
 #include "spoofbot.h"
 
 extern ConfigManager g_config;
 extern Game g_game;
 extern Spoof g_spoof;
+extern SpoofScripts g_spoofScripts;
 
 #ifndef __GNUC__
 #pragma warning( disable : 4005)
@@ -467,6 +467,76 @@ bool IOLoginData::loadRecordPlayer(PlayerRecord* record, PlayerBot* bot){
     g_spoof.CURRENT_RECORD = 1;
 
     return false;
+}
+
+bool IOLoginData::loadBotScripts(){
+    Database* db = Database::getInstance();
+    DBQuery query;
+    query << "SELECT `name` FROM `bot_scripts`";
+
+    DBResult* result = db->storeQuery(query.str());
+    if (result) {
+        std::list<std::string> names;
+
+        do {
+            names.push_back(result->getDataString("name"));
+        } while (result->next());
+        result->free();
+
+        for(std::string name : names){
+            g_spoofScripts.load(name);
+        }
+
+        return true;
+    }
+
+    return false;
+}
+
+bool IOLoginData::loadBotScript(BotScript& botScript){
+
+    Database* db = Database::getInstance();
+    DBQuery query;
+    query << "SELECT `data` FROM `bot_scripts` WHERE `name` = '" << botScript.name << "'";
+
+    DBResult* result = db->storeQuery(query.str());
+    if (result) {
+        unsigned long attrSize = 0;
+        const char* attr = result->getDataStream("data", attrSize);
+
+        PropStream propStream;
+        propStream.init(attr, attrSize);
+
+        if(botScript.loadStream(propStream)){
+            result->free();
+            std::clog << "Loaded " << botScript.name << ": " << botScript.list.size() << std::endl;
+            return true;
+        }
+        else
+            result->free();
+    }
+
+    return false;
+}
+
+bool IOLoginData::saveBotScript(BotScript* botScript, PropWriteStream& stream){
+
+    Database* db = Database::getInstance();
+    DBQuery query;
+    query << "INSERT INTO `bot_scripts` (`name`, `data`, `date`) VALUES (";
+
+    uint32_t dataSize;
+    const char* data = stream.getStream(dataSize);
+
+    if(dataSize == 0)
+        return false;
+
+    query << db->escapeString(botScript->name) << ',' << db->escapeBlob(data, dataSize) << ',' << time(NULL) << ')';
+
+    if(!db->query(query.str()))
+        return false;
+
+    return true;
 }
 
 bool IOLoginData::saveRecordPlayer(Player* player){

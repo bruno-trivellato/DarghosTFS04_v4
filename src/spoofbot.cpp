@@ -3,12 +3,12 @@
 #include <fstream>
 
 #include "spoofbot.h"
-#include "spoof.h"
 #include "iologindata.h"
 #include "tools.h"
 #include "game.h"
 
 extern Spoof g_spoof;
+extern SpoofScripts g_spoofScripts;
 extern Game g_game;
 
 PlayerBot::PlayerBot(const std::string& name, ProtocolGame* p) :
@@ -18,6 +18,7 @@ PlayerBot::PlayerBot(const std::string& name, ProtocolGame* p) :
     m_outOfSync = 0;
     m_lastOutOfSync = 0;
     m_minutes = 0;
+    m_botScript = nullptr;
 }
 
 PlayerBot::~PlayerBot()
@@ -32,6 +33,7 @@ PlayerBot::~PlayerBot()
             out.close();
         }
     }
+
 /*
     for(RecordAction* action : m_record->m_actions){
         delete action;
@@ -96,22 +98,36 @@ void PlayerBot::placeOnMap(){
         pos.y = 0;
         pos.z = 0;
 
-        for(uint32_t k = 8000; k < 8119; k++){
-            Thing* thing = ScriptEnviroment::getUniqueThing(k);
-            if(thing){
-                if(!thing->getTile()->getTopCreature()){
-                    pos.x = thing->getPosition().x;
-                    pos.y = thing->getPosition().y;
-                    pos.z = thing->getPosition().z;
+        if(getLevel() <= 35)
+            m_botScript = g_spoofScripts.assignScript();
 
-                    break;
-                }
+        if(m_botScript){
+            if(m_botScript->list.size() > 0){
+                m_botScript->botsUsing.push_back(getGUID());
+                pos = m_botScript->start_pos;
+            }
+            else{
+                delete m_botScript;
             }
         }
+        else{
+            for(uint32_t k = 8000; k < 8119; k++){
+                Thing* thing = ScriptEnviroment::getUniqueThing(k);
+                if(thing){
+                    if(!thing->getTile()->getTopCreature()){
+                        pos.x = thing->getPosition().x;
+                        pos.y = thing->getPosition().y;
+                        pos.z = thing->getPosition().z;
 
-        if(pos.x == 0){
-            std::clog << "[Spoof System] Not found trainer room for " << getName() << "." << std::endl;
-            return;
+                        break;
+                    }
+                }
+            }
+
+            if(pos.x == 0){
+                std::clog << "[Spoof System] Not found trainer room for " << getName() << "." << std::endl;
+                return;
+            }
         }
 
         if (!g_game.placeCreature(getPlayer(), pos)) {
@@ -134,7 +150,30 @@ bool PlayerBot::remove(){
     if(m_outOfSync >= 3)
         g_spoof.OUTSYNC_COUNT++;
 
+    if(m_botScript){
+        m_botScript->botsUsing.remove(getGUID());
+        m_botScript->list_pos = 0;
+    }
+
+
     return true;
+}
+
+void PlayerBot::onCreatureAppear(const Creature* creature){
+
+    if(creature == this)
+        updateTargetList();
+    else{
+        if(canSee(creature->getPosition()) && creature->getMonster()){
+            uint32_t cuid = creature->getID();
+            if(creature->getMaster())
+                cuid = creature->getMaster()->getID();
+
+            if(m_enemies.find(cuid) == m_enemies.end()){
+                m_enemies[cuid] = time(nullptr);
+            }
+        }
+    }
 }
 
 void PlayerBot::onAttacked(Creature* creature){
@@ -212,22 +251,41 @@ void PlayerBot::onLoad(){
         }
     }
 
-    uint32_t rand = (uint32_t)random_range(1u, 100000);
-
-    if(rand < 1000){
-        m_minutes = (uint32_t)random_range(240, 300);
-    }
-    else if(rand < 5000){
-        m_minutes = (uint32_t)random_range(120, 180);
-    }
-    else if(rand < 10000){
-        m_minutes = (uint32_t)random_range(75, 120);
-    }
-    else if(rand < 40000){
-        m_minutes = (uint32_t)random_range(25, 40);
+    if(m_botScript){
+        m_minutes = (uint32_t)random_range(5, 20);
     }
     else{
-        m_minutes = (uint32_t)random_range(45, 75);
+        uint32_t rand = (uint32_t)random_range(1u, 100000);
+
+        if(rand < 1000){
+            m_minutes = (uint32_t)random_range(240, 300);
+        }
+        else if(rand < 5000){
+            m_minutes = (uint32_t)random_range(120, 180);
+        }
+        else if(rand < 10000){
+            m_minutes = (uint32_t)random_range(75, 120);
+        }
+        else if(rand < 40000){
+            m_minutes = (uint32_t)random_range(25, 40);
+        }
+        else{
+            m_minutes = (uint32_t)random_range(45, 75);
+        }
+    }
+}
+
+void PlayerBot::updateTargetList(){
+    const SpectatorVec& list = g_game.getSpectators(getPosition());
+    for(SpectatorVec::const_iterator it = list.begin(); it != list.end(); ++it)
+    {
+        Creature* c = (*it);
+        if(c && c != this && canSee(c->getPosition()) && c->getMonster()){
+            if(!c->getMaster())
+                m_enemies[c->getID()] = time(nullptr);
+            else
+                m_enemies[c->getMaster()->getID()] = time(nullptr);
+        }
     }
 }
 
@@ -244,8 +302,9 @@ void PlayerBot::onThink(){
     if(m_enemies.size() > 0){
         Creature* target = findTarget();
         if(target){
-            chaseMode = CHASEMODE_FOLLOW;
             g_game.playerSetAttackedCreature(id, target->getID());
+            setChaseMode(CHASEMODE_FOLLOW);
+
             if(m_record)
                 m_record->m_pause = true;
         }
@@ -262,6 +321,65 @@ void PlayerBot::onThink(){
             m_lastOutOfSync = 0;
         }
     }
+
+    if(m_botScript){
+
+        if(m_enemies.size() == 0 && !walkTask && m_botScript->hasNextStep()){
+
+            ScriptParam_t step = m_botScript->getNextStep();
+
+            if(step.first == BSA_MOVE){
+                if(Position::getDistanceX(getPosition(), step.second.pos) > 0 || Position::getDistanceY(getPosition(), step.second.pos) > 0){
+                    FindPathParams fpp;
+                    fpp.maxSearchDist = 500;
+                    fpp.maxTargetDist = 0;
+                    fpp.minTargetDist = 0;
+                    fpp.clearSight = true;
+                    fpp.fullPathSearch = true;
+
+                    std::list<Direction> listDir;
+                    if(getPathTo(step.second.pos, listDir, fpp)){
+                        g_game.playerAutoWalk(getID(), listDir);
+                        SchedulerTask* task = createSchedulerTask(std::max((int64_t)SCHEDULER_MINTICKS, getStepDuration()),
+                            boost::bind(&PlayerBot::onCompleteMove, this));
+
+                        setNextWalkActionTask(task);
+                    }
+                }
+                else{
+                    m_botScript->list_pos++;
+                }
+            }
+            else if(step.first == BSA_MOVE_DIR){
+                g_game.playerMove(getID(), step.second.dir);
+                m_botScript->list_pos++;
+
+            }
+            else if(step.first == BSA_USE_ROPE){
+
+            }
+            else if(step.first == BSA_USE_MAP_ITEM){
+                if(Position::getDistanceX(getPosition(), step.second.pos) > 1)
+                    m_botScript->list_pos--; //player is not in a range, so, move to last step
+                else{
+                    g_game.playerUseItem(getID(), step.second.pos, 1, 0, 0, false);
+                    m_botScript->list_pos++;
+                }
+            }
+            else if(step.first == BSA_LOOP_START){
+                m_botScript->list_pos++;
+                m_botScript->looping = true;
+                m_botScript->loop_start =  m_botScript->list_pos;
+            }
+            else if(step.first == BSA_LOOP_END){
+                m_botScript->list_pos = m_botScript->loop_start;
+            }
+        }
+    }
+}
+
+void PlayerBot::onCompleteMove(){
+
 }
 
 bool PlayerBot::resume(uint32_t& delay){

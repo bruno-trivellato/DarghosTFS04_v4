@@ -2,6 +2,7 @@
 #define FS_SPOOFBOT_H
 
 #include "player.h"
+#include "spoof.h"
 
 typedef std::map<uint32_t, time_t> EnemyMap;
 
@@ -33,6 +34,7 @@ class PlayerBot : public Player
         bool canDoNextAction();
         bool checkHeal();
         void onOutOfSync();
+        void onCompleteMove();
 
         bool syncPath(RecordAction* nextAction);
         bool resume(uint32_t& delay);
@@ -41,6 +43,8 @@ class PlayerBot : public Player
         std::string logHeader();
 
         Creature* findTarget();
+        void updateTargetList();
+        void onCreatureAppear(const Creature* creature);
 
     private:
         EnemyMap m_enemies;
@@ -50,6 +54,7 @@ class PlayerBot : public Player
         uint32_t m_resumeTaskId;
         std::ostringstream m_logFile;
         uint32_t m_minutes;
+        BotScript* m_botScript;
 
     friend class PlayerRecord;
 

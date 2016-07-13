@@ -3,6 +3,7 @@
 
 #include "enums.h"
 #include "fileloader.h"
+#include "position.h"
 
 #define SPOOF_USE_RECORDS 0
 
@@ -10,6 +11,7 @@ class PlayerBot;
 class Player;
 class PlayerRecord;
 class NetworkMessage;
+class BotScript;
 
 class RecordAction{
 
@@ -47,10 +49,79 @@ struct HourInfo{
     uint8_t max;
 };
 
+struct ScriptParam{
+    Position pos;
+    Direction dir;
+};
+
 typedef std::vector<uint32_t> PlayerIdVec;
 typedef std::unordered_map<uint32_t, HourInfo> HourMap;
 typedef std::map<PlayerRecord*, uint32_t> RecordList;
 typedef std::deque<RecordAction> RecordActionList;
+
+typedef std::pair<BotScriptAction_t, ScriptParam> ScriptParam_t;
+typedef std::vector<ScriptParam_t> ScriptList;
+typedef std::map<std::string, BotScript> BotScriptsList;
+
+class BotScript{
+    public:
+        BotScript(std::string _name){
+            name = _name;
+            looping = false;
+            loop_start = loop_end = 0;
+            list_pos = 0;
+        }
+
+        BotScript(){
+            loop_start = loop_end = 0;
+            list_pos = 0;
+        }
+
+        bool hasNextStep();
+        ScriptParam_t getNextStep();
+        void save();
+        bool loadStream(PropStream& stream);
+
+    private:
+        std::string name;
+        bool looping;
+        Position start_pos;
+        uint32_t loop_start, loop_end;
+        ScriptList list;
+        uint32_t list_pos;
+        std::list<uint32_t> botsUsing;
+
+    friend class SpoofScripts;
+    friend class PlayerBot;
+    friend class LuaInterface;
+    friend class IOLoginData;
+};
+
+class SpoofScripts{
+    public:
+        SpoofScripts(){
+            current = nullptr;
+        }
+
+        bool newBotScript(std::string name);
+        bool botScriptStartPosition(Position pos);
+        bool botScriptMove(Position pos);
+        bool botScriptMoveDir(Direction dir);
+        bool botScriptUseMapItem(Position pos);
+        bool botScriptUseRope(Position pos);
+        bool botScriptStartLoop();
+        bool botScriptEndLoop();
+        bool botScriptFinished();
+        void load(std::string name);
+        BotScript* assignScript();
+
+    private:
+        BotScript* current;
+        BotScriptsList list;
+
+    friend class LuaInterface;
+    friend class PlayerBot;
+};
 
 class Spoof
 {

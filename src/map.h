@@ -45,8 +45,7 @@ struct AStarNode
 using boost::shared_ptr;
 #define MAP_MAX_LAYERS 16
 
-#define MAX_NODES 512
-#define GET_NODE_INDEX(a) (a - &nodes[0])
+#define MAX_NODES 2048
 
 #define MAP_NORMALWALKCOST 10
 #define MAP_DIAGONALWALKCOST 25
@@ -55,7 +54,6 @@ class AStarNodes
 {
     public:
         AStarNodes(uint32_t x, uint32_t y);
-        ~AStarNodes() {}
 
         AStarNode* createOpenNode(AStarNode* parent, uint32_t x, uint32_t y, int_fast32_t f);
         AStarNode* getBestNode();

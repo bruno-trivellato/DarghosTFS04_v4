@@ -520,7 +520,14 @@ void MoveEvents::addEvent(MoveEvent* moveEvent, Position pos, MovePosListMap& ma
 
 MoveEvent* MoveEvents::getEvent(const Tile* tile, MoveEvent_t eventType)
 {
-	MovePosListMap::iterator it = m_positionMap.find(tile->getPosition());
+    Position pos = tile->getPosition();
+    if(tile->floorChange(CHANGE_NONE)){
+        pos.x = 0;
+        pos.y = 0;
+        pos.z = 0;
+    }
+
+    MovePosListMap::iterator it = m_positionMap.find(pos);
 	if(it == m_positionMap.end())
 		return NULL;
 
@@ -563,7 +570,7 @@ uint32_t MoveEvents::onCreatureMove(Creature* actor, Creature* creature, const T
 	uint32_t ret = 1;
 	MoveEvent* moveEvent = NULL;
 	if((moveEvent = getEvent(tile, eventType)))
-		ret &= moveEvent->fireStepEvent(actor, creature, NULL, Position(), fromPos, toPos);
+        ret &= moveEvent->fireStepEvent(actor, creature, NULL, tile->getPosition(), fromPos, toPos);
 
 	Item* tileItem = NULL;
 	if(m_lastCacheTile == tile)
