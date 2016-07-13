@@ -10,6 +10,7 @@ local callbacks = {
 				if looping then
 					doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Scriptbot looping stoped.")
 					botScriptEndLoop()
+					looping = false
 				end
 
 				botScriptFinished()
