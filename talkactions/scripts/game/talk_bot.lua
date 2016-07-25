@@ -16,7 +16,7 @@ local callbacks = {
 
 			currentSpeakingBot[cid] = bot
 
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Talking on public channels as " .. getPlayerName(currentSpeakingBot[cid]) .. ".")
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Talking on public channels as " .. getPlayerName(currentSpeakingBot[cid]) .. " (" .. getPlayerLevel(currentSpeakingBot[cid]) .. ").")
 			return true
 		elseif param == "stop" then
 			table.remove(currentSpeakingBot, cid)
