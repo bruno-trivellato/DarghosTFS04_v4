@@ -6,7 +6,7 @@
 	]]>
 	</script>
 
-	<announce delay="0" type="event" message="[Evento] Em 15 minutos irá começar o evento do boss Ancient Nature. O portal para o evento se encontra no depot de Quendor."/>
+	<announce delay="0" type="event" message="[Evento] Em 15 minutos irá começar o evento do boss Ancient Nature. O portal para o evento se encontra no depot de Quendor e já se encontra aberto!"/>
 
 	<script delay="0">
 	<![CDATA[
@@ -14,7 +14,6 @@
 	]]>
 	</script>	
 	
-	<!--
 	<announce delay="300000" type="event" message="[Evento] Em 10 minutos irá começar o evento do boss Ancient Nature. O boss deste evento se movimenta muito lentamente, porem seu dano é letal (hit kill). Sempre mantenha distancia!"/>
 
 	<announce delay="600000" type="event" message="[Evento] Em 5 minutos irá começar o evento do boss Ancient Nature. Este é um evento de sobrevivencia e caso você morra, não irá perder nada, mas não poderá voltar ao evento. Os vencedores são os que ficarem vivos até o boss ser derrotado. Caso ele não seja, os vencedores serão os ultimos 3 sobreviventes."/>
@@ -22,9 +21,8 @@
 	<announce delay="840000" type="event" message="[Evento] Em 1 minuto irá começar o evento do boss Ancient Nature. Não é permitido entrar no evento apos ele já ter iniciado! Então se você ainda não entrou, seja rápido!"/>
 
 	<announce delay="899000" type="event" message="[Evento] Foi iniciado mais um evento do boss Ancient Nature! Boa sorte aos participantes!"/>	
-	-->
 
-	<script delay="60000">
+	<script delay="900000">
 	<![CDATA[
 	openAncientNatureEvent()
 	]]>
