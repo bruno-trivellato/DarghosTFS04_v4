@@ -124,6 +124,9 @@
 		DARK_GENERAL_LEAVE			= 4089,
 		SURVIVAL_ENTRANCE			= 4090,
 
+		ENT_ENTRANCE				= 4092,
+		ENT_LEAVE					= 4093,
+
 		--  Poi Entrance Fields
 		POI_FIELDS_START			= 6010,
 		POI_FIELDS_END				= 6044,

@@ -16,6 +16,10 @@
 	<globalevent name="bgend" type="bgend" event="script" value="game/battleground.lua"/>	
 
 	<!-- Darghos Raids -->
+	<globalevent name="raid_darkgeneral" time="15:55:00" event="script" value="game/raid_darkgeneral.lua"/>
+	<globalevent name="raid_ent1" time="14:45:00" event="script" value="game/raid_ancientnature.lua"/>
+	<globalevent name="raid_ent2" time="17:45:00" event="script" value="game/raid_ancientnature.lua"/>
+	<globalevent name="raid_ent3" time="22:45:00" event="script" value="game/raid_ancientnature.lua"/>
 
 	<globalevent name="save" interval="3600000" event="script" value="save.lua"/>
 	<!-- <globalevent name="clean" time="5:00:00" event="script" value="clean.lua"/> -->

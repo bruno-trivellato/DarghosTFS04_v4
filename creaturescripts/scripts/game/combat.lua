@@ -43,6 +43,10 @@ function onCombat(cid, target)
 		end		
 	end
 
+	if not doPlayerCombatAncientNature(cid, target) then
+		return false
+	end
+
 	--checks attacker
 	if(server_distro == DISTROS_OPENTIBIA) then
 		if(isPlayer(cid) == TRUE and isMonster(target) and (getCreatureName(target) == "Marksman Target" or getCreatureName(target) == "Hitdoll")) then

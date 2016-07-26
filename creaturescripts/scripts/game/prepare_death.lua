@@ -9,6 +9,10 @@ function onPrepareDeath(cid, deathList)
 		if doPlayerDieOnDarkGeneral(cid) then
 			return false
 		end
+
+		if doPlayerDieOnAncientNature(cid) then
+			return false
+		end		
 	
 		--local isInside = getPlayerStorageValue(cid, sid.INSIDE_MINI_GAME) == 1
 		

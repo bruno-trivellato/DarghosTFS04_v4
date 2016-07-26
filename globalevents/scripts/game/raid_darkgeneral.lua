@@ -2,7 +2,7 @@ function onTime(time)
 
 	local date = os.date("*t")
 	
-	if(date.wday ~= WEEKDAY.SATURDAY) then
+	if(date.wday ~= WEEKDAY.SUNDAY) then
 		return true
 	end
 	

@@ -6,10 +6,28 @@
 	]]>
 	</script>
 
-	<announce delay="0" type="event" message="Forcas se organizam ao norte de Quendor para convocar o Avatar da mae natureza!"/>
-	<announce delay="60000" type="event" message="A grande arvore comeca a ser convocada em Quendor! Se dirijam para a cidade o mais rapido possivel!"/>
-	<announce delay="120000" type="event" message="A antiga arvore foi summonada! Preparem-se humanos, para enfrentar esta grande força da natureza!"/>
+	<announce delay="0" type="event" message="[Evento] Em 15 minutos irá começar o evento do boss Ancient Nature. O portal para o evento se encontra no depot de Quendor."/>
+
+	<script delay="0">
+	<![CDATA[
+	summonAncientNature()
+	]]>
+	</script>	
 	
-	<singlespawn delay="120000" name="Ent" x="1986" y="1807" z="7" />
+	<!--
+	<announce delay="300000" type="event" message="[Evento] Em 10 minutos irá começar o evento do boss Ancient Nature. O boss deste evento se movimenta muito lentamente, porem seu dano é letal (hit kill). Sempre mantenha distancia!"/>
+
+	<announce delay="600000" type="event" message="[Evento] Em 5 minutos irá começar o evento do boss Ancient Nature. Este é um evento de sobrevivencia e caso você morra, não irá perder nada, mas não poderá voltar ao evento. Os vencedores são os que ficarem vivos até o boss ser derrotado. Caso ele não seja, os vencedores serão os ultimos 3 sobreviventes."/>
+
+	<announce delay="840000" type="event" message="[Evento] Em 1 minuto irá começar o evento do boss Ancient Nature. Não é permitido entrar no evento apos ele já ter iniciado! Então se você ainda não entrou, seja rápido!"/>
+
+	<announce delay="899000" type="event" message="[Evento] Foi iniciado mais um evento do boss Ancient Nature! Boa sorte aos participantes!"/>	
+	-->
+
+	<script delay="60000">
+	<![CDATA[
+	openAncientNatureEvent()
+	]]>
+	</script>
 	
 </raid>

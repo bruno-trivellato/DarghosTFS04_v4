@@ -40,6 +40,8 @@ function onDeath(cid, corpse, deathList)
 			onLordVankynerDie()
 		elseif(creatureName == "dark general") then
 			onDarkGeneralDie(cid, corpse, deathList)
+		elseif(creatureName == "ancient nature") then
+			onAncientNatureDie(cid, corpse, deathList)
 		end
 	end
 	
