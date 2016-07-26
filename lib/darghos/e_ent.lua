@@ -75,11 +75,25 @@ end
 
 function doPlayerCombatAncientNature(cid, target)
 
-	if getPlayerStorageValue(cid, sid.ENT_INSIDE) ~= 1 then
+	local player = nil
+	if(isPlayer(cid) == TRUE) then
+		player = cid
+	elseif(isPlayer(getCreatureMaster(cid)) == TRUE) then
+		player = getCreatureMaster(cid)
+	end	
+
+	if getPlayerStorageValue(player, sid.ENT_INSIDE) ~= 1 then
 		return true
 	end	
 
-	if isPlayer(target) then
+	local player_target = nil
+	if(isPlayer(target) == TRUE) then
+		player_target = target
+	elseif(isPlayer(getCreatureMaster(target)) == TRUE) then
+		player_target = getCreatureMaster(target)
+	end	
+
+	if isPlayer(player_target) then
 		return false
 	end
 
