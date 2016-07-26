@@ -145,7 +145,7 @@ function doPlayerDieOnAncientNature(cid)
 
 
 	doPlayerLeaveAncientNature(cid)
-	doTeleportThing(cid, getTownTemplePosition(getPlayerTown(cid)))
+	luaDeath(cid)
 
 	return true
 end

@@ -27,10 +27,17 @@ function onPrepareDeath(cid, deathList)
 	return true
 end
 
+function luaDeath(cid)
+
+	doCreatureAddHealth(cid, getCreatureMaxHealth(cid), nil, nil, true)
+	doCreatureAddMana(cid, getCreatureMaxMana(cid), false)
+	doRemoveConditions(cid, false)
+
+	doTeleportThing(cid, getTownTemplePosition(getPlayerTown(cid)))
+end
+
 function useRoyalBless(cid)
 	
-	doTeleportThing(cid, getTownTemplePosition(getPlayerTown(cid)))
-	doRemoveCreature(cid, true)
-	
+	luaDeath(cid)
 	return false
 end

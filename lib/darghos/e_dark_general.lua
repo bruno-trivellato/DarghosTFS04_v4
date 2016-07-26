@@ -31,9 +31,8 @@ function doPlayerDieOnDarkGeneral(cid)
 	end
 
 	doPlayerLeaveDarkGeneral(cid)
-	doTeleportThing(cid, getTownTemplePosition(getPlayerTown(cid)))
-	doRemoveCreature(cid, true)	
 
+	luaDeath(cid)
 	return true
 end
 
