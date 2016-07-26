@@ -140,6 +140,12 @@ function doPlayerDieOnAncientNature(cid)
 		end		
 
 		doBroadcastMessage(text, MESSAGE_EVENT_DEFAULT)
+
+		local boss = getCreatureByName("ancient nature")
+		if(boss) then
+			doRemoveCreature(boss)
+		end
+		
 		ancientNatureDied = {}
 	end
 
