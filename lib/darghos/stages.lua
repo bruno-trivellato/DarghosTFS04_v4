@@ -188,6 +188,12 @@ function changeStage(cid, skilltype, multiple)
 			expSpecialBonus = darghos_kill_dark_general_exp_bonus_percent
 			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Por sua participação na ultima retomada de Quendor contra o Dark General todos seus ganhos de expêriencia estão aumentados em " .. darghos_kill_dark_general_exp_bonus_percent .. "% até o proximo evento.")
 		end	
+
+		local ent = tonumber(getPlayerStorageValue(cid, sid.ENT_PARTICIPATION))
+		if(ent == 1) then
+			expSpecialBonus = expSpecialBonus + darghos_participate_ent_exp_bonus_percent
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Por sua participação no evento da Ancient Nature seu ganho de expêriencia esta aumentado em " .. darghos_participate_ent_exp_bonus_percent .. "% até o proximo server save.")
+		end			
 		
 		local expSpecialBonusEnd = getPlayerStorageValue(cid, sid.EXP_MOD_ESPECIAL_END)
 		
