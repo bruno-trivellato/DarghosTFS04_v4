@@ -27,6 +27,20 @@ function doUpdateDBPlayerSkull(cid)
 	db.executeQuery(queryStr)	
 end
 
+function getAccountExpBonus(cid)
+	local account = getPlayerAccountId(cid)
+
+	local data, result = {}, db.getResult("SELECT `exp`, `end`, `desc` FROM `wb_account_exp` WHERE `account_id` = " .. account .. " AND `end` > UNIX_TIMESTAMP();")
+	if(result:getID() ~= -1) then
+		repeat
+			table.insert(data, {["exp"] = result:getDataInt("exp"), ["end"] = result:getDataInt("end"), ["desc"] = result:getDataString("desc")})
+		until not(result:next())
+		result:free()
+	end	
+
+	return data
+end
+
 function increasePremiumSpells(cid, min, max)
 	--if(isPremium(cid)) then
 	--	min = math.floor(min * 1.1)

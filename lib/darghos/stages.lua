@@ -183,9 +183,17 @@ function changeStage(cid, skilltype, multiple)
 		
 		local expSpecialBonus = 0
 		
+		local bonuses = getAccountExpBonus(cid)
+		if #bonuses > 0 then
+			for k,v in pairs(bonuses) do
+				expSpecialBonus = expSpecialBonus + v["exp"]
+				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, v["desc"] .. " [expires in " .. os.date("%x %X", v["end"]) .. "].")
+			end
+		end
+
 		local darkGeneralBuffDuration = getPlayerStorageValue(cid, sid.SLAIN_DARK_GENERAL)		
 		if(darkGeneralBuffDuration > 0 and os.time() < darkGeneralBuffDuration) then
-			expSpecialBonus = darghos_kill_dark_general_exp_bonus_percent
+			expSpecialBonus = expSpecialBonus + darghos_kill_dark_general_exp_bonus_percent
 			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Por sua participação na ultima retomada de Quendor contra o Dark General todos seus ganhos de expêriencia estão aumentados em " .. darghos_kill_dark_general_exp_bonus_percent .. "% até o proximo evento.")
 		end	
 
