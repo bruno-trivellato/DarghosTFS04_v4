@@ -733,6 +733,10 @@ class LuaInterface
 		static int32_t luaDoPlayerDisablePvp(lua_State* L);
 		static int32_t luaDoPlayerIsPvpEnable(lua_State* L);
 		static int32_t luaGetPlayerCurrentPing(lua_State* L);
+        static int32_t luaSetPlayerDungeonId(lua_State* L);
+        static int32_t luaGetPlayerDungeonId(lua_State* L);
+        static int32_t luaSetPlayerDungeonStatus(lua_State* L);
+        static int32_t luaGetPlayerDungeonStatus(lua_State* L);
 		static int32_t luaSpawnCreaturesByName(lua_State* L);
         static int32_t luaDoPlayerWeaponIsDualHand(lua_State* L);
         static int32_t luaDoPlayerIsVip(lua_State* L);

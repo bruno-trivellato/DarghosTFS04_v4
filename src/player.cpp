@@ -101,6 +101,8 @@ Player::Player(const std::string& _name, ProtocolGame* p):
 #ifdef __DARGHOS_CUSTOM__
 	m_isVip = m_hasExpBonus = false;
 	m_criticalFactor = g_config.getDouble(ConfigManager::CRITICAL_HIT_MUL);
+    m_dungeonId = 0;
+    m_dungeonStatus = DUNGEON_STATUS_NONE;
 #endif
 
 	promotionLevel = walkTaskEvent = actionTaskEvent = nextStepEvent = bloodHitCount = shieldBlockCount = 0;
@@ -2495,6 +2497,38 @@ bool Player::onDeath()
             setLossSkill(false);
             setDropLoot(LOOT_DROP_NONE);
             sendTextMessage(MSG_EVENT_ADVANCE, "You died during a hunt when the server are under connections issues. You was teleported to the temple with no one death penalty.");
+        }
+    }
+    else if(isInDungeon() && getDungeonStatus() == DUNGEON_STATUS_INSIDE)
+    {
+        setDropLoot(LOOT_DROP_PREVENT);
+        setLossSkill(false);
+
+        if(Creature::onDeath())
+        {
+            setDungeonStatus(DUNGEON_STATUS_OUTSIDE);
+            Thing* thing = ScriptEnviroment::getUniqueThing((uint32_t)m_dungeonId + 1);
+            if(thing)
+            {
+                pzLocked = false;
+                if(health <= 0)
+                {
+                    health = healthMax;
+                    mana = manaMax;
+                }
+
+                sendStats();
+                sendIcons();
+
+                onIdleStatus();
+                g_game.addCreatureHealth(this);
+
+                const Position& oldPos = getPosition();
+                g_game.internalTeleport(this, thing->getPosition(), true);
+                g_game.addMagicEffect(oldPos, MAGIC_EFFECT_TELEPORT);
+            }
+
+            return true;
         }
     }
 #endif

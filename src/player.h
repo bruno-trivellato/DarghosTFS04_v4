@@ -135,6 +135,13 @@ enum Exhaust_t
 #endif
 };
 
+enum DungeonStatus_t
+{
+    DUNGEON_STATUS_NONE = 0
+    ,DUNGEON_STATUS_INSIDE = 1
+    ,DUNGEON_STATUS_OUTSIDE = 2
+};
+
 typedef std::set<uint32_t> VIPSet;
 typedef std::vector<std::pair<uint32_t, Container*> > ContainerVector;
 typedef std::map<uint32_t, std::pair<Depot*, bool> > DepotMap;
@@ -823,6 +830,13 @@ public:
     void setPause(bool isPause) { pause = isPause; onTargetLost(); }
     bool isPause() { return pause; }
 
+    void setDungeon(uint16_t dungeonId) { m_dungeonId = dungeonId; }
+    uint16_t getDungeon() { return m_dungeonId; }
+    bool isInDungeon() { return m_dungeonId != 0; }
+
+    void setDungeonStatus(DungeonStatus_t status) { m_dungeonStatus = status; }
+    DungeonStatus_t getDungeonStatus() { return m_dungeonStatus; }
+
     typedef std::list<uint16_t> LatencyList_t;
     LatencyList_t latencyList;
 
@@ -968,6 +982,8 @@ private:
 
 #ifdef __DARGHOS_CUSTOM__
     bool pvpStatus;
+    uint16_t m_dungeonId;
+    DungeonStatus_t m_dungeonStatus;
     bool pause;
     uint64_t m_lastdeath_experience_loss;
     int16_t m_lastdeath_blessings_loss, m_lastdeath_items_loss;

@@ -2515,6 +2515,18 @@ void LuaInterface::registerFunctions()
     //getPlayerCurrentPing(cid)
     lua_register(m_luaState, "getPlayerCurrentPing", LuaInterface::luaGetPlayerCurrentPing);
 
+    //setPlayerDungeonId(cid, dungeonId)
+    lua_register(m_luaState, "setPlayerDungeonId", LuaInterface::luaSetPlayerDungeonId);
+
+    //getPlayerDungeonId(cid)
+    lua_register(m_luaState, "getPlayerDungeonId", LuaInterface::luaGetPlayerDungeonId);
+
+    //setPlayerDungeonStatus(cid, status)
+    lua_register(m_luaState, "setPlayerDungeonStatus", LuaInterface::luaSetPlayerDungeonStatus);
+
+    //getPlayerDungeonStatus(cid)
+    lua_register(m_luaState, "getPlayerDungeonStatus", LuaInterface::luaGetPlayerDungeonStatus);
+
 	//spawnCreaturesByName(name)
 	lua_register(m_luaState, "spawnCreaturesByName", LuaInterface::luaSpawnCreaturesByName);
 
@@ -10744,6 +10756,82 @@ int32_t LuaInterface::luaGetPlayerCurrentPing(lua_State* L)
     if(Player* player = env->getPlayerByUID(popNumber(L)))
     {
         lua_pushnumber(L, player->getCurrentPing());
+    }
+    else
+    {
+        errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
+        lua_pushboolean(L, false);
+    }
+
+    return 1;
+}
+
+int32_t LuaInterface::luaSetPlayerDungeonId(lua_State* L)
+{
+    //setPlayerDungeonId(cid, dungeonId)
+    ScriptEnviroment* env = getEnv();
+
+    uint16_t dungeonId = popNumber(L);
+
+    if(Player* player = env->getPlayerByUID(popNumber(L)))
+    {
+        player->setDungeon(dungeonId);
+        lua_pushboolean(L, true);
+    }
+    else
+    {
+        errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
+        lua_pushboolean(L, false);
+    }
+
+    return 1;
+}
+
+int32_t LuaInterface::luaGetPlayerDungeonId(lua_State* L)
+{
+    //getPlayerDungeonId(cid)
+    ScriptEnviroment* env = getEnv();
+    if(Player* player = env->getPlayerByUID(popNumber(L)))
+    {
+        lua_pushnumber(L, player->getDungeon());
+    }
+    else
+    {
+        errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
+        lua_pushboolean(L, false);
+    }
+
+    return 1;
+}
+
+int32_t LuaInterface::luaSetPlayerDungeonStatus(lua_State* L)
+{
+    //setPlayerDungeonStatus(cid, status)
+    ScriptEnviroment* env = getEnv();
+
+    uint16_t status = popNumber(L);
+
+    if(Player* player = env->getPlayerByUID(popNumber(L)))
+    {
+        player->setDungeonStatus((DungeonStatus_t)status);
+        lua_pushboolean(L, true);
+    }
+    else
+    {
+        errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
+        lua_pushboolean(L, false);
+    }
+
+    return 1;
+}
+
+int32_t LuaInterface::luaGetPlayerDungeonStatus(lua_State* L)
+{
+    //getPlayerDungeonStatus(cid)
+    ScriptEnviroment* env = getEnv();
+    if(Player* player = env->getPlayerByUID(popNumber(L)))
+    {
+        lua_pushnumber(L, player->getDungeonStatus());
     }
     else
     {
