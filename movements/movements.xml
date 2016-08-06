@@ -9,6 +9,9 @@
 	<movevent type="StepIn" actionid="4087" event="script" value="game/hunts.lua"/>
 	<movevent type="StepIn" actionid="190" event="script" value="game/leavedoor.lua"/>
 	
+	<!-- Dungeons -->
+	<movevent type="StepIn" actionid="7400" event="script" value="game/dungeons.lua"/>	
+
 	*Kashmir Quest
 	<movevent type="StepIn" itemid="9738" event="script" value="game/kashmir.quest/azerusdeath.lua"/>
 	<movevent type="StepIn" actionid="7501" event="script" value="game/kashmir.quest/azerusarmy.lua"/>

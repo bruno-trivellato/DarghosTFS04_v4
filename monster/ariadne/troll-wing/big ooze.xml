@@ -19,7 +19,7 @@
     <flag runonhealth="0"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" skill="465" attack="90" poison="465"/>
+    <attack name="melee" interval="2000" skill="340" attack="70" poison="465"/>
     <attack name="poisonfield" interval="2000" chance="30" radius="7">
       <attribute key="areaEffect" value="poison"/>
     </attack>	

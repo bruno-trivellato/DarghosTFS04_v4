@@ -21,10 +21,10 @@
   </flags>
   <attacks>
     <attack name="melee" interval="2000" skill="220" attack="75" poison="250"/>
-    <attack name="lifedrain" interval="2000" chance="50" min="-365" max="-812" target="1">
+    <attack name="lifedrain" interval="2000" chance="50" min="-365" max="-512" target="1">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="physical" interval="2000" chance="40" radius="3" target="1" min="-700" max="-1350">
+    <attack name="physical" interval="2000" chance="40" radius="3" target="1" min="-334" max="-747">
       <attribute key="shootEffect" value="smallearth"/>
     </attack>
     <attack name="paralyze" interval="2000" chance="50" target="1">

@@ -44,11 +44,11 @@ function onCreatureMove(creature, oldPos, newPos)
 	
 	if(isPlayer(creature) == TRUE) then		
 	
-		if(getPlayerStorageValue(creature, QUESTLOG.ARIADNE.LAIR) < 1) then
+		if(getPlayerLevel(creature) < 100) then
 	
 			for k,v in pairs(cannotContinue) do
 				if(doComparePositions(newPos, v)) then
-					selfSay("O Rei proibiu a todos entrarem no pantano. Você não pode passar por aqui!")
+					selfSay("O Rei determinou que somente guerreiros que já tiverem atingido o level 120 poderão passar por aqui!")
 					doTeleportPlayerBack(creature, newPos)
 
 					break			

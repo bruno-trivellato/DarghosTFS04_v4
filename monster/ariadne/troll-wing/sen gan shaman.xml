@@ -26,7 +26,7 @@
     <attack name="fire" interval="500" chance="7" range="7" min="-25" max="-40">
       <attribute key="shootEffect" value="fire"/>
     </attack>
-    <attack name="death" interval="200" chance="20" range="7" min="-225" max="-365">
+    <attack name="death" interval="200" chance="20" range="7" min="-75" max="-115">
       <attribute key="shootEffect" value="suddendeath"/>
       <attribute key="areaEffect" value="mortarea"/>
     </attack>

@@ -19,12 +19,12 @@
     <flag runonhealth="0"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" skill="390" attack="90"/>
+    <attack name="melee" interval="2000" skill="290" attack="65"/>
     <attack name="speed" interval="2000" chance="25" range="8" radius="6" target="1" speedchange="-300" duration="20000">
       <attribute key="shootEffect" value="poison"/>
       <attribute key="areaEffect" value="greenbubble"/>
     </attack>
-    <attack name="ice" interval="2000" chance="30" length="8" spread="3" min="-435" max="-740">
+    <attack name="ice" interval="2000" chance="30" length="8" spread="3" min="-330" max="-475">
       <attribute key="areaEffect" value="bluebubble"/>
     </attack>
     <attack name="manadrain" interval="2000" chance="20" radius="5" target="0" min="-1115" max="-1780">
@@ -33,10 +33,10 @@
     <attack name="skills" interval="2000" chance="5" length="1" spread="0" maxhealthPercent="-25" duration="10000">
       <attribute key="areaEffect" value="stun"/>
     </attack>	
-    <attack name="earth" interval="2000" chance="30" length="8" spread="3" min="-663" max="-970">
+    <attack name="earth" interval="2000" chance="30" length="8" spread="3" min="-427" max="-540">
       <attribute key="areaEffect" value="plantattack"/>
     </attack>
-    <attack name="ice" interval="2000" chance="30" range="7" target="1" min="-325" max="-560">
+    <attack name="ice" interval="2000" chance="30" range="7" target="1" min="-190" max="-340">
       <attribute key="shootEffect" value="smallice"/>
     </attack>
   </attacks>

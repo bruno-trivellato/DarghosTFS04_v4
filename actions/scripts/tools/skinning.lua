@@ -36,15 +36,7 @@ local SKINS = {
 
 function onUse(cid, item, fromPosition, itemEx, toPosition)
 	local skin = SKINS[item.itemid][itemEx.itemid]
-	if(skin == nil) then
-	
-		-- #ifdef __DARGHOS_CUSTOM__
-		if(itemEx.actionid == aid.ARIADNE_GHAZRAN_CORPSE) then
-			obsidianKnifeOnGhazranCorpse(cid)
-			return true
-		end
-		-- #endif
-	
+	if(skin == nil) then	
 		doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTPOSSIBLE)
 		return true
 	end

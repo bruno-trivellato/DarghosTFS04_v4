@@ -20,11 +20,11 @@ dungeonList =
 {	
 	[gid.DUNGEONS_ARIADNE_GHAZRAN] =
 	{
-		maxPlayers = 6
-		,onPlayerEndLockTime = 60 * 60 * 24
+		maxPlayers = 12
 		,onEndLockTime = 60 --seconds
-		,maxTimeIn = 60 -- minutes
-		,requiredItems = { {name = "obsidian knife"} }
+		,maxTimeIn = 60 * 4 -- minutes
+		,minLevel = 100
+		,entranceCostByPlayer = 100000
 		,onEnterEvent = function (cid)
 			local mapMarks = uid.MM_GHAZRAN_TOTEMS
 			
@@ -81,16 +81,6 @@ function Dungeons.onPlayerEnter(cid, item, position)
 
 	local dungeonId = item.actionid
 	local dungeonInfo = dungeonList[dungeonId]
-	
-	local canEnter = ((getPlayerStorageValue(cid, dungeonId) == -1 or tonumber(getPlayerStorageValue(cid, dungeonId)) + dungeonInfo.onPlayerEndLockTime <= os.time()) and true or false)
-	
-	-- Verificamos se o Player jÃ¡ fez a Dungeon no dia
-	if not(canEnter) then
-		doPlayerSendCancel(cid, "Você já concluiu está dungeon hoje. Não pode passar novamente por aqui novamente por enquanto...")
-		Dungeons.doTeleportPlayerBack(cid, position)
-		
-		return false
-	end
 
 	if not isInParty(cid) then
 		doPlayerSendCancel(cid, "Para entrar em uma Dungeon você deve estar em party.")
@@ -113,8 +103,8 @@ function Dungeons.onPlayerEnter(cid, item, position)
 		return false
 	end
 	
-	if Dungeons.isFree(dungeonId) and #getPartyMembers(cid) ~= dungeonInfo.maxPlayers then
-		doPlayerSendCancel(cid, "A sua party precisa possuir " .. dungeonInfo.maxPlayers .. " jogadores.")
+	if Dungeons.isFree(dungeonId) and #getPartyMembers(cid) > dungeonInfo.maxPlayers then
+		doPlayerSendCancel(cid, "A sua party precisa possuir no máximo " .. dungeonInfo.maxPlayers .. " jogadores.")
 		Dungeons.doTeleportPlayerBack(cid, position)
 
 		return false
@@ -153,6 +143,63 @@ function Dungeons.onPlayerEnter(cid, item, position)
 			Dungeons.doTeleportPlayerBack(cid, position)
 			
 			return false
+		end
+	end
+
+	-- calculamos o custo de entrada
+	if Dungeons.isFree(dungeonId) then
+		local enoughLevel = true
+
+		for k,pid in pairs(getPartyMembers(cid)) do
+			if getPlayerLevel(pid) < dungeonInfo.minLevel then
+				enoughLevel = false
+			end
+		end
+
+		if not enoughLevel then
+			doPlayerSendCancel(cid, "Alguem em sua party não possui level minimo de " .. dungeonInfo.minLevel .. " para entrar na dungeon...")
+			Dungeons.doTeleportPlayerBack(cid, position)		
+
+			return false	
+		end
+
+		local enoughMoney = true
+		local text = "Custo de cada jogador na party para entrar na dungeon:";
+
+		for k,pid in pairs(getPartyMembers(cid)) do
+			local weekTries = Dungeons.getPlayerWeekclyIn(pid, dungeonId)
+			local playerCost = weekTries >= 1 and weekTries * dungeonInfo.entranceCostByPlayer or dungeonInfo.entranceCostByPlayer
+
+			text = text .. "\n" .. getPlayerName(pid) .. " [" .. playerCost .. " gold coins, ";
+
+			if getPlayerMoney(pid) < playerCost then
+				enoughMoney = false
+				text = text .. "insulficiente]"
+				doPlayerSendTextMessage(pid, MESSAGE_INFO_DESCR, "O líder de sua party deseja iniciar uma dungeon mas você não possui " .. playerCost .. " gold coins necessários para a sua entrada.")
+			else
+				text = text .. "sulficiente]"
+			end
+		end
+
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, text)
+
+		if enoughMoney then
+			for k,pid in pairs(getPartyMembers(cid)) do
+				local weekTries = Dungeons.getPlayerWeekclyIn(pid, dungeonId)
+				local playerCost = weekTries >= 1 and weekTries * dungeonInfo.entranceCostByPlayer or dungeonInfo.entranceCostByPlayer
+
+				if doPlayerRemoveMoney(pid, playerCost) ~= TRUE then
+					print("Cannot remove player money to enter dungeon: " .. getPlayerName(pid))
+				else
+					doPlayerSendTextMessage(pid, MESSAGE_INFO_DESCR, "O seu líder iniciou uma dungeon e foi cobrado " .. playerCost .. " gold coins de sua entrada.")
+					Dungeons.doPlayerIncreaseWeecklyIn(pid, dungeonId)
+				end
+			end		
+		else
+			doPlayerSendCancel(cid, "Alguem em sua party não possui dinheiro sulficiente para entrar na dungeon (verifique o log)...")
+			Dungeons.doTeleportPlayerBack(cid, position)
+			
+			return false		
 		end
 	end
 	
@@ -200,6 +247,10 @@ function Dungeons.onPlayerEnter(cid, item, position)
 	
 	if(dungeonInfo.onEnterEvent ~= nil) then
 		dungeonInfo.onEnterEvent(cid)
+	end
+
+	if(getPlayerStorageValue(cid, QUESTLOG.ARIADNE.GHAZRAN_WING) == -1) then
+		setPlayerStorageValue(cid, QUESTLOG.ARIADNE.GHAZRAN_WING, 0)
 	end
 	
 	return true	
@@ -392,6 +443,20 @@ function Dungeons.onThink(dungeonId, runningTime, awayTime)
 	end
 end
 
+function Dungeons.doKickPlayer(cid)
+	setPlayerDungeonId(cid, DUNGEON_NONE)
+	setPlayerDungeonStatus(cid, DUNGEON_STATUS_NONE)			
+end
+
+function Dungeons.getPlayerWeekclyIn(cid, dungeonId)
+	return (tonumber(getPlayerStorageValue(cid, dungeonId)) <= 0) and 0 or tonumber(getPlayerStorageValue(cid, dungeonId))
+end
+
+function Dungeons.doPlayerIncreaseWeecklyIn(cid, dungeonId)
+	local attempts = Dungeons.getPlayerWeekclyIn(cid, dungeonId) + 1
+	setPlayerStorageValue(cid, dungeonId, attempts)
+end
+
 function Dungeons.onAbandon(dungeonId)
 
 	local leader = Dungeons.getLeader(dungeonId)
@@ -402,8 +467,7 @@ function Dungeons.onAbandon(dungeonId)
 		if getPlayerDungeonId(cid) == dungeonId then
 			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Você e toda sua party estiveram por mais de 5 minutos fora da Dungeon, e por isso, foi considerado que vocês a abandonaram.")
 			
-			setPlayerDungeonId(cid, DUNGEON_NONE)
-			setPlayerDungeonStatus(cid, DUNGEON_STATUS_NONE)		
+			Dungeons.doKickPlayer(cid)
 		end
 	end	
 	
@@ -428,8 +492,7 @@ function Dungeons.onTimeEnd(dungeonId)
 				doSendMagicEffect(dest, CONST_ME_MAGIC_BLUE)
 			end
 			
-			setPlayerDungeonId(cid, DUNGEON_NONE)
-			setPlayerDungeonStatus(cid, DUNGEON_STATUS_NONE)		
+			Dungeons.doKickPlayer(cid)	
 		end
 	end
 	
@@ -461,8 +524,8 @@ function Dungeons.onPlayerDeath(cid)
 	--doTeleportThing(cid, dest)
 	--doSendMagicEffect(dest, CONST_ME_MAGIC_BLUE)
 	
-	doCreatureAddHealth(cid, getCreatureMaxHealth(cid), nil, nil, true)
-	doCreatureAddMana(cid, getCreatureMaxMana(cid), false)
+	--doCreatureAddHealth(cid, getCreatureMaxHealth(cid), nil, nil, true)
+	--doCreatureAddMana(cid, getCreatureMaxMana(cid), false)
 	doRemoveConditions(cid, false)
 	
 	
@@ -473,9 +536,7 @@ end
 function Dungeons.onLogin(cid)
 
 	if (isPlayerInDungeon(cid)) then
-		setPlayerDungeonId(cid, DUNGEON_NONE)
-		setPlayerDungeonStatus(cid, DUNGEON_STATUS_NONE)
-		
+		Dungeons.doKickPlayer(cid)
 		doTeleportThing(cid, getPlayerMasterPos(cid))
 		
 		--print("[Dungeons.onLogin] " .. getPlayerName(cid) .. " dungeon info cleaned.")
@@ -507,10 +568,7 @@ function Dungeons.onPlayerLeave(cid)
 
 	local dungeonId = getPlayerDungeonId(cid)
 	
-	setPlayerDungeonId(cid, DUNGEON_NONE)
-	setPlayerDungeonStatus(cid, DUNGEON_STATUS_NONE)
-
-	setPlayerStorageValue(cid, dungeonId, os.time())
+	Dungeons.doKickPlayer(cid)
 	
 	if(Dungeons.getPlayersIn(dungeonId) == 1) then
 		Dungeons.resetPlayersIn(dungeonId)
@@ -518,6 +576,8 @@ function Dungeons.onPlayerLeave(cid)
 	else
 		Dungeons.decreasePlayers(dungeonId)	
 	end
+
+	return true
 end
 
 function Dungeons.onPartyPassLeadership(cid, target)
@@ -538,8 +598,7 @@ function Dungeons.onPartyLeave(cid)
 		doPlayerSendCancel(cid, "Você não pode sair de uma party estando dentro de uma Dungeon.")
 		return false
 	elseif(getPlayerDungeonStatus(cid) == DUNGEON_STATUS_OUT) then
-		setPlayerDungeonStatus(cid, DUNGEON_STATUS_NONE)
-		setPlayerDungeonId(cid, DUNGEON_NONE)
+		Dungeons.doKickPlayer(cid)
 	end
 	
 	return true

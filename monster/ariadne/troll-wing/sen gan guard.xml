@@ -19,7 +19,7 @@
     <flag runonhealth="0"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" skill="350" attack="90" poison="350"/>
+    <attack name="melee" interval="2000" skill="270" attack="60" poison="350"/>
     <attack name="poisoncondition" interval="2000" chance="17" radius="7" target="0" min="-300" max="-600">
       <attribute key="areaEffect" value="poison"/>
     </attack>
@@ -105,7 +105,7 @@
     <item id="12644" chance="50">
       <!--shield of corruption-->
     </item>
-    <item id="2393" chance="8000">
+    <item id="2393" chance="1000">
       <!--giant sword-->
     </item>
     <item id="6553" chance="400">

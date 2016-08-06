@@ -39,7 +39,7 @@ function onUse(cid, item, frompos, item2, topos)
 			end
 			
 			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Você conseguiu todas benções de Ghazran! Seu questlog foi atualizado!")
-			setPlayerStorageValue(cid, QUESTLOG.ARIADNE.GHAZRAN_WING, 2)
+			setPlayerStorageValue(cid, QUESTLOG.ARIADNE.GHAZRAN_WING, 1)
 		end
 
 	end

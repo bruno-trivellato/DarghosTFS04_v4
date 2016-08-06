@@ -13,21 +13,15 @@
 		</mission>
 	</quest>
 	
-	<quest name="Ariadne's Quest" startstorageid="3600" startstoragevalue="1">
-		<mission name="The Lair" storageid="3600" startvalue="2" endvalue="3">
-			<missionstate id="2" description="Encontre a entrada do Ariadne Lair no pantano ao Leste da cidade de Thorn." /> 
-			<missionstate id="3" description="Ariadne Lair encontrado." />
-		</mission>
-		
-		<mission name="Sen Gan Trolls Wing" storageid="3601" startvalue="1" endvalue="4">
-			<missionstate id="1" description="Mecha nos doze bone totem's e obtenha as  benções necessárias para passar pela ponte envenenada e chegar ao hall de Ghazran, o deus dragão dos trolls." />
-			<missionstate id="2" description="Derrote Ghazran e use sua Obsidian Knife no corpo para remover sua língua, um dos ingredientes do antidoto." />
-			<missionstate id="3" description="Leve a língua de Ghazran até o Rei Ordon de Thorn." />
-			<missionstate id="4" description="Wing completa." />
+	<quest name="Ariadne's Dungeon" startstorageid="3600" startstoragevalue="0">	
+		<mission name="Sen Gan Trolls Wing" storageid="3600" startvalue="0" endvalue="2">
+			<missionstate id="0" description="Click on all bone totem's to get the blessings that will allow you cross the bridge." />
+			<missionstate id="1" description="Inside Ghazan Lair you will find some egggs on the ground. Click on then. This will make Ghazran come to the fight." />
+			<missionstate id="2" description="Dungeon finished. Get your reward!" />
 		</mission>	
 		
-		<mission name="Cultists Wing" storageid="3602" startvalue="1" endvalue="4">	
-			<missionstate id="1" description="Dungeon sendo desenvolvida..." />
+		<mission name="Cultists Wing" storageid="3601" startvalue="0" endvalue="1">	
+			<missionstate id="0" description="Dungeon sendo desenvolvida..." />
 		</mission>	
 	</quest>
 

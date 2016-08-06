@@ -22,14 +22,14 @@
     <attack name="speed" interval="2000" chance="40" range="10" radius="10" target="1" speedchange="-900" duration="20000">
       <attribute key="areaEffect" value="sleep"/>
     </attack>
-    <attack name="earth" interval="1200" chance="23" radius="9" target="0" min="-512" max="-754">
+    <attack name="earth" interval="1200" chance="23" radius="9" target="0" min="-270" max="-440">
       <attribute key="areaEffect" value="poison"/>
     </attack>
 	<attack name="skills" interval="2000" chance="10" radius="7" target="1" magiclevelPercent="15" duration="20000"/>
-    <attack name="earth" interval="1200" chance="21" length="9" spread="4" min="-936" max="-1635">
+    <attack name="earth" interval="1200" chance="21" length="9" spread="4" min="-551" max="-870">
       <attribute key="areaEffect" value="plantattack"/>
     </attack>
-    <attack name="earth" interval="1200" chance="18" radius="5" target="0" min="-775" max="-1234">
+    <attack name="earth" interval="1200" chance="18" radius="5" target="0" min="-497" max="-724">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
     <attack name="manadrain" interval="1200" chance="22" radius="6" target="0" min="-1115" max="-2750">
