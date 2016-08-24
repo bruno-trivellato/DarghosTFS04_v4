@@ -46,7 +46,7 @@ function killMissions(cid, target)
 				
 				setPlayerStorageValue(cid, v.task_kills, tostring(slains))
 				if(slains == v.task_need_kills) then
-					doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You complete the task defeating " .. task_need_kills .. " " .. target_name .. "!")
+					doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You complete the task defeating " .. v.task_need_kills .. " " .. target_name .. "!")
 				elseif(slains < v.task_need_kills) then
 					doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You must defeat more " .. v.task_need_kills - slains .. " " .. target_name .. " to complete this task.")
 				end
