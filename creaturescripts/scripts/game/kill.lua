@@ -29,7 +29,7 @@ function killMissions(cid, target)
 
 	local creatures = { 
 		["demon"] = { 
-			{ task_storage = sid.TASK_KILL_DEMONS,  task_kills = sid.TASK_KILLED_DEMONS, task_need_kills = 6666 }
+			{ task_storage = sid.TASK_KILL_DEMONS,  task_kills = sid.TASK_KILLED_DEMONS, task_need_kills = 3000 }
 		} 
 	}
 	
@@ -45,7 +45,7 @@ function killMissions(cid, target)
 				slains = slains + 1
 				
 				setPlayerStorageValue(cid, v.task_kills, tostring(slains))
-				if(slains == v.task_need_kills) then
+				if(slains >= v.task_need_kills) then
 					doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You complete the task defeating " .. v.task_need_kills .. " " .. target_name .. "!")
 				elseif(slains < v.task_need_kills) then
 					doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You must defeat more " .. v.task_need_kills - slains .. " " .. target_name .. " to complete this task.")
