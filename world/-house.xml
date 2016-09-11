@@ -341,7 +341,7 @@
 	<house name="Aracura West XII" houseid="550" entryx="3320" entryy="2010" entryz="6" rent="6500" townid="10" size="16" />
 	<house name="Aracura West XIII" houseid="551" entryx="3320" entryy="2017" entryz="6" rent="8500" townid="10" size="19" />
 	<house name="Fort Guard" houseid="654" entryx="2069" entryy="1839" entryz="7" rent="285000" townid="1" size="133" />
-	<house name="Castle of Wargrowth" houseid="655" entryx="1980" entryy="1791" entryz="7" rent="5000000" townid="1" size="1251" />
+	<house name="Castle of Wargrowth" houseid="655" entryx="1980" entryy="1791" entryz="7" rent="5000000" townid="1" size="1191" />
 	<house name="South Flat 1" houseid="656" entryx="2186" entryy="2707" entryz="7" rent="6000" townid="5" size="20" />
 	<house name="West Flat 1" houseid="657" entryx="2165" entryy="2705" entryz="7" rent="14000" townid="5" size="39" />
 	<house name="West Flat 2" houseid="658" entryx="2172" entryy="2700" entryz="7" rent="3000" townid="5" size="4" />
