@@ -176,20 +176,20 @@ Bg_Team_t* Battleground::findPlayerTeam(Player* player)
 void Battleground::finish()
 {
 	if(teamsMap[BATTLEGROUND_TEAM_ONE].points > teamsMap[BATTLEGROUND_TEAM_TWO].points)
-		finish(BATTLEGROUND_TEAM_ONE);
+        finishByWinner(BATTLEGROUND_TEAM_ONE);
 	else if(teamsMap[BATTLEGROUND_TEAM_ONE].points < teamsMap[BATTLEGROUND_TEAM_TWO].points)
-		finish(BATTLEGROUND_TEAM_TWO);
+        finishByWinner(BATTLEGROUND_TEAM_TWO);
     else{
         if(teamsMap[BATTLEGROUND_TEAM_ONE].points == 0)
-            finish(BATTLEGROUND_TEAM_NONE); //empate? somente em caso de 0x0
+            finishByWinner(BATTLEGROUND_TEAM_NONE); //empate? somente em caso de 0x0
         else{
             //empates em 1x1 e 2x2 será considerado vencedor o time que capturou a ultima bandeira
-            finish(lastTeamScore);
+            finishByWinner(lastTeamScore);
         }
     }
 }
 
-void Battleground::finish(Bg_Teams_t teamWinner)
+void Battleground::finishByWinner(Bg_Teams_t teamWinner)
 {
 	status = FINISHED;
     g_scheduler.stopEvent(endEvent);
@@ -212,7 +212,7 @@ void Battleground::finish(Bg_Teams_t teamWinner)
 			player->sendPvpChannelMessage("Você será levado ao lugar em que estava em 5 segundos...");
 
             g_scheduler.addEvent(createSchedulerTask(1000 * 5,
-				boost::bind(&Battleground::kickPlayer, this, player, true)));
+                std::bind(&Battleground::kickPlayer, this, player, true)));
 
 			time_t timeInBg = time(NULL) - it_players->second.join_in;
 			time_t bgDuration = time(NULL) - lastInit;
@@ -270,7 +270,7 @@ bool Battleground::buildTeams()
 
 		putInTeam((*it), team);
         g_scheduler.addEvent(createSchedulerTask(1000 * 4,
-			boost::bind(&Battleground::callPlayer, this, (*it)->getID())));
+            std::bind(&Battleground::callPlayer, this, (*it)->getID())));
 
         waitlist.erase(it);
 	}
@@ -278,7 +278,7 @@ bool Battleground::buildTeams()
 	g_globalEvents->execute(GLOBALEVENT_BATTLEGROUND_PREPARE);
 
     g_scheduler.addEvent(createSchedulerTask((1000 * 60 * 2) + (1000 * 5),
-		boost::bind(&Battleground::start, this)));
+        std::bind(&Battleground::start, this)));
 	return true;
 }
 
@@ -323,8 +323,7 @@ void Battleground::start()
 	for(GlobalEventMap::iterator it = events.begin(); it != events.end(); ++it)
 		it->second->executeOnBattlegroundStart(notJoin);
 
-    endEvent = g_scheduler.addEvent(createSchedulerTask(duration,
-		boost::bind(&Battleground::finish, this)));
+    endEvent = g_scheduler.addEvent(createSchedulerTask(duration, std::bind(&Battleground::finish, this)));
 }
 
 Bg_Teams_t Battleground::sortTeam()
@@ -414,7 +413,7 @@ BattlegrondRetValue Battleground::onPlayerJoin(Player* player)
 		buildTeams();
 
         g_scheduler.addEvent(createSchedulerTask(1000 * 60 * 60 * 2,
-            boost::bind(&Battleground::removeIdleWaitlistPlayer, this, player->getID())));
+            std::bind(&Battleground::removeIdleWaitlistPlayer, this, player->getID())));
 
 		return BATTLEGROUND_PUT_IN_WAITLIST;
 	}
@@ -623,7 +622,7 @@ void Battleground::onPlayerDeath(Player* player, DeathList deathList)
 			status = FINISHED;
 
             g_scheduler.addEvent(createSchedulerTask(1000,
-				boost::bind(&Battleground::finish, this, lastDmg->getBattlegroundTeam())));
+                std::bind(&Battleground::finish, this, lastDmg->getBattlegroundTeam())));
 		}*/
 	}
 
@@ -813,7 +812,7 @@ void Battleground::incrementTeamPoints(Bg_Teams_t team_id, uint32_t points)
 
     if(teamsMap[team_id].points >= winPoints && status == STARTED)
     {
-		finish(team_id);
+        finishByWinner(team_id);
     }
 }
 
@@ -836,7 +835,7 @@ void Battleground::setTeamPoints(Bg_Teams_t team_id, uint32_t points)
 
     if(teamsMap[team_id].points >= winPoints && status == STARTED)
     {
-		finish(team_id);
+        finishByWinner(team_id);
     }
     else{
 

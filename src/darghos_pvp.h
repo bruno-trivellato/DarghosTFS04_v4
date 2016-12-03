@@ -90,7 +90,7 @@ class Battleground
 		Bg_Teams_t sortTeam();
 
 		BgTeamsMap getTeams() const { return teamsMap; }
-		void finish(Bg_Teams_t teamWinner);
+        void finishByWinner(Bg_Teams_t teamWinner);
 		void finish();
 
         uint32_t getLastId() { return lastID; }

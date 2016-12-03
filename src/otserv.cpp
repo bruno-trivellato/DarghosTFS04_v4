@@ -196,7 +196,7 @@ void signalHandler(int32_t sig)
 	{
 		case SIGHUP:
             g_dispatcher.addTask(createTask(
-                boost::bind(&Game::saveGameState, &g_game, false, true)));
+                std::bind(&Game::saveGameState, &g_game, false, true)));
 			break;
 
 		case SIGTRAP:
@@ -209,7 +209,7 @@ void signalHandler(int32_t sig)
 
 		case SIGUSR1:
             g_dispatcher.addTask(createTask(
-				boost::bind(&Game::setGameState, &g_game, GAMESTATE_CLOSED)));
+				std::bind(&Game::setGameState, &g_game, GAMESTATE_CLOSED)));
 			break;
 
 		case SIGUSR2:
@@ -218,17 +218,17 @@ void signalHandler(int32_t sig)
 
 		case SIGCONT:
             g_dispatcher.addTask(createTask(
-				boost::bind(&Game::reloadInfo, &g_game, RELOAD_ALL, 0)));
+				std::bind(&Game::reloadInfo, &g_game, RELOAD_ALL, 0)));
 			break;
 
 		case SIGQUIT:
             g_dispatcher.addTask(createTask(
-				boost::bind(&Game::setGameState, &g_game, GAMESTATE_SHUTDOWN)));
+				std::bind(&Game::setGameState, &g_game, GAMESTATE_SHUTDOWN)));
 			break;
 
 		case SIGTERM:
             g_dispatcher.addTask(createTask(
-				boost::bind(&Game::shutdown, &g_game)));
+				std::bind(&Game::shutdown, &g_game)));
 			break;
 
 		default:
@@ -281,7 +281,7 @@ int main(int argc, char* argv[])
 	g_config.startup();
 
 #ifdef __OTSERV_ALLOCATOR_STATS__
-	boost::thread(boost::bind(&allocatorStatsThread, (void*)NULL));
+	boost::thread(std::bind(&allocatorStatsThread, (void*)NULL));
 	// TODO: shutdown this thread?
 #endif
 #ifdef __EXCEPTION_TRACER__
@@ -310,7 +310,7 @@ int main(int argc, char* argv[])
 #endif
 
 	OutputHandler::getInstance();
-    g_dispatcher.addTask(createTask(boost::bind(otserv, args, &servicer)));
+    g_dispatcher.addTask(createTask(std::bind(otserv, args, &servicer)));
 
 	g_loaderSignal.wait(g_loaderUniqueLock);
     if(servicer.is_running())

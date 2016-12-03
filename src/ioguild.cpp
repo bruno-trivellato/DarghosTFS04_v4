@@ -467,7 +467,7 @@ bool IOGuild::updateWar(War_t& war)
 	if(war.frags[WAR_GUILD] >= war.limit || war.frags[WAR_ENEMY] >= war.limit)
 	{
 		g_scheduler.addEvent(createSchedulerTask(1000,
-			boost::bind(&IOGuild::finishWar, this, war, true)));
+			std::bind(&IOGuild::finishWar, this, war, true)));
 		return true;
 	}
 

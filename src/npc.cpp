@@ -15,12 +15,6 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ////////////////////////////////////////////////////////////////////////
 #include "otpch.h"
-#include <libxml/xmlmemory.h>
-#include <libxml/parser.h>
-
-#include <functional>
-#include <iostream>
-#include <fstream>
 
 #include "npc.h"
 #include "tools.h"

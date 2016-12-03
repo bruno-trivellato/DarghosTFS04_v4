@@ -33,7 +33,7 @@
 extern ConfigManager g_config;
 #endif
 
-boost::recursive_mutex DBQuery::databaseLock;
+std::recursive_mutex DBQuery::databaseLock;
 Database* _Database::_instance = NULL;
 
 Database* _Database::getInstance()
@@ -174,7 +174,7 @@ void DBInsert::runQuerys(QueryWeight_t queryWeight)
         }
     }
 
-    boost::this_thread::at_thread_exit(boost::bind(&DBInsert::onThreadExit, this));
+    boost::this_thread::at_thread_exit(std::bind(&DBInsert::onThreadExit, this));
 }
 
 void DBInsert::onThreadExit()
@@ -197,13 +197,13 @@ void DBInsert::runThreadedQuerys()
 {
     std::clog << "Running " << normalQuerys.size() << " normal querys, " << lightQuerys.size() << " light querys and " << heavyQuerys.size() << " heavy querys..." << std::endl;
 
-    boost::thread* thread = new boost::thread(boost::bind(&DBInsert::runQuerys, this, QUERY_WEIGHT_NORMAL));
+    boost::thread* thread = new boost::thread(std::bind(&DBInsert::runQuerys, this, QUERY_WEIGHT_NORMAL));
     threads.push_back(thread);
 
-    thread = new boost::thread(boost::bind(&DBInsert::runQuerys, this, QUERY_WEIGHT_LIGHT));
+    thread = new boost::thread(std::bind(&DBInsert::runQuerys, this, QUERY_WEIGHT_LIGHT));
     threads.push_back(thread);
 
-    thread = new boost::thread(boost::bind(&DBInsert::runQuerys, this, QUERY_WEIGHT_HEAVY));
+    thread = new boost::thread(std::bind(&DBInsert::runQuerys, this, QUERY_WEIGHT_HEAVY));
     threads.push_back(thread);
 }
 #endif

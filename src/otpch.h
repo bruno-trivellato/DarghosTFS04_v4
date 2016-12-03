@@ -21,6 +21,13 @@
 #include <winerror.h>
 #endif
 
+#include <libxml/xmlmemory.h>
+#include <libxml/parser.h>
+
+#include <functional>
+#include <iostream>
+#include <fstream>
+
 //libxml
 #include <libxml/xmlmemory.h>
 #include <libxml/parser.h>
@@ -37,6 +44,7 @@
 #include <thread>
 #include <unordered_map>
 #include <list>
+#include <forward_list>
 #include <vector>
 #include <deque>
 

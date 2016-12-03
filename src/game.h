@@ -682,7 +682,7 @@ class Game
 
 		typedef std::list<Item*> DecayList;
 		DecayList decayItems[EVENT_DECAYBUCKETS];
-		DecayList toDecayItems;
+        std::forward_list<Item*> toDecayItems;
 		size_t lastBucket;
 
 		static const int32_t LIGHT_LEVEL_DAY = 250;

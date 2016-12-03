@@ -65,7 +65,7 @@ DatabaseMySQL::DatabaseMySQL() :
     //timeout = g_config.getNumber(ConfigManager::SQL_KEEPALIVE) * 1000;
     //if(timeout)
     //	m_timeoutTask = g_scheduler.addEvent(createSchedulerTask(timeout,
-    //		boost::bind(&DatabaseMySQL::keepAlive, this)));
+    //		std::bind(&DatabaseMySQL::keepAlive, this)));
 
 	if(asLowerCaseString(g_config.getString(ConfigManager::HOUSE_STORAGE)) == "relational")
 		return;
@@ -276,7 +276,7 @@ void DatabaseMySQL::keepAlive()
 	}
 
 	g_scheduler.addEvent(createSchedulerTask(timeout,
-		boost::bind(&DatabaseMySQL::keepAlive, this)));
+		std::bind(&DatabaseMySQL::keepAlive, this)));
 }
 
 int32_t MySQLResult::getDataInt(const std::string& s)

@@ -287,7 +287,7 @@ bool ProtocolGame::login(const std::string& name, uint32_t id, const std::string
 
         addRef();
         m_eventConnect = g_scheduler.addEvent(createSchedulerTask(
-            1000, boost::bind(&ProtocolGame::connect, this, _player->getID(), operatingSystem, version)));
+            1000, std::bind(&ProtocolGame::connect, this, _player->getID(), operatingSystem, version)));
         return true;
     }
 
@@ -510,7 +510,7 @@ bool ProtocolGame::parseFirstPacket(NetworkMessage& msg)
         return false;
     }
 
-    g_dispatcher.addTask(createTask(boost::bind(
+    g_dispatcher.addTask(createTask(std::bind(
         &ProtocolGame::login, this, character, id, password, operatingSystem, version, gamemaster)));
     return true;
 }
@@ -851,7 +851,7 @@ void ProtocolGame::parsePacket(NetworkMessage &msg)
     else
     {
         //if(player->m_record != nullptr && !player->getBot())
-            //g_dispatcher.addTask(createTask(boost::bind(&PlayerRecord::onDoAction, player->m_record, recvbyte, msg)));
+            //g_dispatcher.addTask(createTask(std::bind(&PlayerRecord::onDoAction, player->m_record, recvbyte, msg)));
 
 #ifdef __DARGHOS_CUSTOM_SPELLS__
         bool hasPerfomedAction = false;
@@ -1294,7 +1294,7 @@ void ProtocolGame::parsePacket(NetworkMessage &msg)
                         player->sendTextMessage(MSG_INFO_DESCR, "You have been banished.");
 
                         g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_WRAPS_GREEN);
-                        g_scheduler.addEvent(createSchedulerTask(1000, boost::bind(
+                        g_scheduler.addEvent(createSchedulerTask(1000, std::bind(
                             &Game::kickPlayer, &g_game, player->getID(), false)));
                     }
                 }
@@ -1495,7 +1495,7 @@ bool ProtocolGame::canSee(uint16_t x, uint16_t y, uint16_t z) const
 //********************** Parse methods *******************************//
 void ProtocolGame::parseLogout(NetworkMessage&)
 {
-    g_dispatcher.addTask(createTask(boost::bind(&ProtocolGame::logout, this, true, false)));
+    g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::logout, this, true, false)));
 }
 
 void ProtocolGame::parseCreatePrivateChannel(NetworkMessage&)

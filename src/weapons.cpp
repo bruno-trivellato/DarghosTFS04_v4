@@ -154,6 +154,20 @@ int32_t Weapons::getMaxWeaponDamage(int32_t level, int32_t attackSkill, int32_t 
 	return (int32_t)std::ceil((2 * (attackValue * (attackSkill + 5.8) / 25 + (level - 1) / 10.)) / attackFactor);
 }
 
+void Weapons::getMinMaxDamage(int32_t& minDamage, int32_t& maxDamage, int32_t baseFullDamage, int32_t level, int32_t attackSkill){
+    int32_t baseHalfDamage = (int32_t)std::ceil(baseFullDamage / 2);
+
+    int32_t chance2FullDamage = std::min(std::max(50 * level, 1000), 10000) + std::min(attackSkill * 181, 20000);
+    if(random_range(1, 100000) < chance2FullDamage){
+        minDamage = (int32_t)std::ceil(baseFullDamage * 0.9);
+        maxDamage = baseFullDamage;
+    }
+    else{
+        minDamage = (int32_t)std::ceil(baseHalfDamage * 0.9);
+        maxDamage = baseHalfDamage;
+    }
+}
+
 Weapon::Weapon(LuaInterface* _interface):
 	Event(_interface)
 {
@@ -376,6 +390,8 @@ bool Weapon::useFist(Player* player, Creature* target)
 		player->sendCritical();
 	}
 #endif
+
+    Weapons::getMinMaxDamage(minDamage, maxDamage, maxDamage, player->getLevel(), attackSkill);
 
 	Vocation* vocation = player->getVocation();
 	if(vocation && vocation->getMultiplier(MULTIPLIER_MELEE) != 1.0)
@@ -671,6 +687,8 @@ int32_t WeaponMelee::getWeaponDamage(const Player* player, const Creature*, cons
 	if(maxDamage)
 		return -ret;
 
+    Weapons::getMinMaxDamage(minValue, ret, maxValue, player->getLevel(), attackSkill);
+
 	return -random_range(minValue, ret, DISTRO_NORMAL);
 }
 
@@ -698,6 +716,8 @@ int32_t WeaponMelee::getElementDamage(const Player* player, const Item* item) co
 		player->sendCritical();
 	}
 #endif
+
+    Weapons::getMinMaxDamage(minValue, maxValue, maxValue, player->getLevel(), attackSkill);
 
 	Vocation* vocation = player->getVocation();
 	if(vocation && vocation->getMultiplier(MULTIPLIER_MELEE) != 1.0)
@@ -963,13 +983,7 @@ int32_t WeaponDistance::getWeaponDamage(const Player* player, const Creature* ta
 	if(maxDamage)
 		return -ret;
 
-	if(target && minValue == 0)
-	{
-		if(target->getPlayer())
-			minValue = (int32_t)std::ceil(player->getLevel() * 0.1);
-		else
-			minValue = (int32_t)std::ceil(player->getLevel() * 0.2);
-	}
+    Weapons::getMinMaxDamage(minValue, ret, maxValue, player->getLevel(), attackSkill);
 
 	return -random_range(minValue, ret, DISTRO_NORMAL);
 }

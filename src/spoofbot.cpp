@@ -341,7 +341,7 @@ void PlayerBot::onThink(){
                     if(getPathTo(step.second.pos, listDir, fpp)){
                         g_game.playerAutoWalk(getID(), listDir);
                         SchedulerTask* task = createSchedulerTask(std::max((int64_t)SCHEDULER_MINTICKS, getStepDuration()),
-                            boost::bind(&PlayerBot::onCompleteMove, this));
+                            std::bind(&PlayerBot::onCompleteMove, this));
 
                         setNextWalkActionTask(task);
                     }

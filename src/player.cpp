@@ -3987,7 +3987,7 @@ bool Player::setAttackedCreature(Creature* creature)
 		setFollowCreature(NULL);
 
 	if(creature)
-		g_dispatcher.addTask(createTask(boost::bind(&Game::checkCreatureAttack, &g_game, getID())));
+		g_dispatcher.addTask(createTask(std::bind(&Game::checkCreatureAttack, &g_game, getID())));
 
 	return true;
 }
@@ -4023,7 +4023,7 @@ void Player::doAttacking(uint32_t)
 		if(_weapon->interruptSwing() && !canDoAction())
 		{
 			SchedulerTask* task = createSchedulerTask(getNextActionTime(),
-				boost::bind(&Game::checkCreatureAttack, &g_game, getID()));
+				std::bind(&Game::checkCreatureAttack, &g_game, getID()));
 			setNextActionTask(task);
 		}
 		else
@@ -4852,7 +4852,7 @@ bool Player::addUnjustifiedKill(const Player* attacked, bool countNow)
 
 		sendTextMessage(MSG_INFO_DESCR, "You have been banished.");
 		g_game.addMagicEffect(getPosition(), MAGIC_EFFECT_WRAPS_GREEN);
-		g_scheduler.addEvent(createSchedulerTask(1000, boost::bind(
+		g_scheduler.addEvent(createSchedulerTask(1000, std::bind(
 			&Game::kickPlayer, &g_game, getID(), false)));
 	}
 	else

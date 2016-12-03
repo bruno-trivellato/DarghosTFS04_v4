@@ -93,9 +93,9 @@ void GlobalEvents::startup()
 {
 	execute(GLOBALEVENT_STARTUP);
 	g_scheduler.addEvent(createSchedulerTask(TIMER_INTERVAL,
-		boost::bind(&GlobalEvents::timer, this)));
+		std::bind(&GlobalEvents::timer, this)));
 	g_scheduler.addEvent(createSchedulerTask(SCHEDULER_MINTICKS,
-		boost::bind(&GlobalEvents::think, this)));
+		std::bind(&GlobalEvents::think, this)));
 }
 
 void GlobalEvents::timer()
@@ -114,7 +114,7 @@ void GlobalEvents::timer()
 	}
 
 	g_scheduler.addEvent(createSchedulerTask(TIMER_INTERVAL,
-		boost::bind(&GlobalEvents::timer, this)));
+		std::bind(&GlobalEvents::timer, this)));
 }
 
 void GlobalEvents::think()
@@ -132,7 +132,7 @@ void GlobalEvents::think()
 	}
 
 	g_scheduler.addEvent(createSchedulerTask(SCHEDULER_MINTICKS,
-		boost::bind(&GlobalEvents::think, this)));
+		std::bind(&GlobalEvents::think, this)));
 }
 
 void GlobalEvents::execute(GlobalEvent_t type)
