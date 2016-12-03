@@ -10,6 +10,10 @@
 		<monster name="Demon Skeleton" x="2" y="-1" z="0" spawntime="60" />
 		<monster name="Elf Arcanist" x="3" y="-1" z="0" spawntime="60" />
 	</spawn>
+	<spawn centerx="1093" centery="1221" centerz="1" radius="10">
+		<monster name="Werewolf" x="-2" y="-2" z="1" spawntime="20" />
+		<monster name="Hellspawn" x="1" y="-2" z="1" spawntime="60" />
+	</spawn>
 	<spawn centerx="2139" centery="1812" centerz="1" radius="3">
 		<monster name="Dragon" x="-2" y="-2" z="1" spawntime="60" />
 		<monster name="Dragon" x="2" y="-2" z="1" spawntime="60" />
@@ -75,6 +79,20 @@
 		<monster name="Ice Witch" x="-3" y="0" z="2" spawntime="300" />
 		<monster name="Barbarian Bloodwalker" x="1" y="0" z="2" spawntime="220" />
 		<monster name="Ice Witch" x="0" y="1" z="2" spawntime="300" />
+	</spawn>
+	<spawn centerx="1093" centery="1220" centerz="2" radius="10">
+		<monster name="Werewolf" x="-6" y="-8" z="2" spawntime="20" />
+		<monster name="Hellspawn" x="-9" y="-7" z="2" spawntime="20" />
+		<monster name="Werewolf" x="5" y="-7" z="2" spawntime="20" />
+		<monster name="Hellspawn" x="8" y="-7" z="2" spawntime="20" />
+		<monster name="Vampire Bride" x="-2" y="-5" z="2" spawntime="20" />
+		<monster name="Vampire Bride" x="2" y="-4" z="2" spawntime="20" />
+		<monster name="Werewolf" x="-2" y="-1" z="2" spawntime="20" />
+		<monster name="Werewolf" x="1" y="-1" z="2" spawntime="20" />
+		<monster name="Hellspawn" x="-7" y="2" z="2" spawntime="20" />
+		<monster name="Hellspawn" x="6" y="2" z="2" spawntime="20" />
+		<monster name="Werewolf" x="-3" y="7" z="2" spawntime="60" />
+		<monster name="Werewolf" x="2" y="7" z="2" spawntime="60" />
 	</spawn>
 	<spawn centerx="2734" centery="1328" centerz="2" radius="3" />
 	<spawn centerx="2172" centery="1795" centerz="2" radius="2">
@@ -203,17 +221,24 @@
 		<monster name="Barbarian Bloodwalker" x="-1" y="2" z="3" spawntime="220" />
 		<monster name="Ice Witch" x="0" y="4" z="3" spawntime="300" />
 	</spawn>
-	<spawn centerx="1093" centery="1212" centerz="3" radius="1">
-		<monster name="Giant Spider" x="-1" y="0" z="3" spawntime="60" />
-	</spawn>
-	<spawn centerx="1103" centery="1217" centerz="3" radius="1">
-		<monster name="Giant Spider" x="-1" y="0" z="3" spawntime="60" />
-	</spawn>
-	<spawn centerx="1083" centery="1219" centerz="3" radius="1">
-		<monster name="Giant Spider" x="0" y="0" z="3" spawntime="60" />
-	</spawn>
-	<spawn centerx="1093" centery="1219" centerz="3" radius="1">
-		<monster name="Giant Spider" x="-1" y="0" z="3" spawntime="60" />
+	<spawn centerx="1093" centery="1220" centerz="3" radius="10">
+		<monster name="Vampire Bride" x="-7" y="-7" z="3" spawntime="20" />
+		<monster name="Werewolf" x="-4" y="-7" z="3" spawntime="20" />
+		<monster name="Vampire Bride" x="6" y="-7" z="3" spawntime="20" />
+		<monster name="Mutated Bat" x="9" y="-6" z="3" spawntime="20" />
+		<monster name="Hellspawn" x="-8" y="-5" z="3" spawntime="60" />
+		<monster name="Nightstalker" x="7" y="-5" z="3" spawntime="20" />
+		<monster name="Vampire Bride" x="-2" y="-3" z="3" spawntime="20" />
+		<monster name="Vampire Bride" x="1" y="-2" z="3" spawntime="20" />
+		<monster name="Mutated Bat" x="-2" y="-1" z="3" spawntime="60" />
+		<monster name="Nightstalker" x="-6" y="0" z="3" spawntime="20" />
+		<monster name="Nightstalker" x="4" y="0" z="3" spawntime="20" />
+		<monster name="Vampire Bride" x="8" y="0" z="3" spawntime="20" />
+		<monster name="Werewolf" x="-9" y="1" z="3" spawntime="20" />
+		<monster name="Werewolf" x="-1" y="1" z="3" spawntime="20" />
+		<monster name="Vampire Bride" x="5" y="1" z="3" spawntime="20" />
+		<monster name="Werewolf" x="-5" y="2" z="3" spawntime="20" />
+		<monster name="Mutated Bat" x="7" y="2" z="3" spawntime="20" />
 	</spawn>
 	<spawn centerx="2734" centery="1328" centerz="3" radius="3">
 		<monster name="Mummy" x="-2" y="-2" z="3" spawntime="60" />
@@ -453,20 +478,32 @@
 		<monster name="Winter Wolf" x="20" y="15" z="4" spawntime="60" />
 		<monster name="Winter Wolf" x="14" y="20" z="4" spawntime="60" />
 	</spawn>
-	<spawn centerx="1088" centery="1214" centerz="4" radius="1">
-		<monster name="Giant Spider" x="-1" y="0" z="4" spawntime="60" />
-	</spawn>
-	<spawn centerx="1100" centery="1214" centerz="4" radius="1">
-		<monster name="Giant Spider" x="-1" y="0" z="4" spawntime="60" />
+	<spawn centerx="1093" centery="1219" centerz="4" radius="10">
+		<monster name="Werewolf" x="-6" y="-7" z="4" spawntime="20" />
+		<monster name="Vampire Bride" x="-3" y="-5" z="4" spawntime="20" />
+		<monster name="Werewolf" x="-9" y="-4" z="4" spawntime="20" />
+		<monster name="Nightstalker" x="2" y="-4" z="4" spawntime="20" />
+		<monster name="Mutated Bat" x="5" y="-4" z="4" spawntime="20" />
+		<monster name="Nightstalker" x="-7" y="-2" z="4" spawntime="20" />
+		<monster name="Vampire Bride" x="1" y="-2" z="4" spawntime="20" />
+		<monster name="Mutated Bat" x="3" y="-2" z="4" spawntime="60" />
+		<monster name="Nightstalker" x="5" y="-2" z="4" spawntime="20" />
+		<monster name="Vampire Bride" x="-6" y="-1" z="4" spawntime="20" />
+		<monster name="Nightstalker" x="8" y="-1" z="4" spawntime="20" />
+		<monster name="Nightstalker" x="-4" y="0" z="4" spawntime="20" />
+		<monster name="Mutated Bat" x="-6" y="1" z="4" spawntime="60" />
+		<monster name="Nightstalker" x="6" y="3" z="4" spawntime="20" />
+		<monster name="Vampire Bride" x="8" y="3" z="4" spawntime="20" />
+		<monster name="Vampire Bride" x="-3" y="5" z="4" spawntime="20" />
+		<monster name="Nightstalker" x="-1" y="5" z="4" spawntime="20" />
+		<monster name="Mutated Bat" x="1" y="5" z="4" spawntime="20" />
+		<monster name="Mutated Bat" x="-2" y="7" z="4" spawntime="20" />
 	</spawn>
 	<spawn centerx="937" centery="1220" centerz="4" radius="5">
 		<monster name="Orc Warlord" x="-2" y="0" z="4" spawntime="60" />
 	</spawn>
 	<spawn centerx="950" centery="1220" centerz="4" radius="5">
 		<monster name="Orc Warlord" x="2" y="0" z="4" spawntime="60" />
-	</spawn>
-	<spawn centerx="1093" centery="1225" centerz="4" radius="1">
-		<monster name="Giant Spider" x="-1" y="0" z="4" spawntime="60" />
 	</spawn>
 	<spawn centerx="1902" centery="1229" centerz="4" radius="20">
 		<monster name="Winter Wolf" x="-16" y="-17" z="4" spawntime="60" />
@@ -1106,15 +1143,6 @@
 		<monster name="Wyvern" x="3" y="1" z="5" spawntime="60" />
 		<monster name="Wyvern" x="-3" y="4" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="1087" centery="1214" centerz="5" radius="1">
-		<monster name="Tarantula" x="1" y="0" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="1100" centery="1214" centerz="5" radius="1">
-		<monster name="Tarantula" x="1" y="0" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="1095" centery="1216" centerz="5" radius="1">
-		<monster name="Tarantula" x="1" y="0" z="5" spawntime="60" />
-	</spawn>
 	<spawn centerx="1913" centery="1216" centerz="5" radius="15">
 		<monster name="Mammoth" x="14" y="-14" z="5" spawntime="60" />
 		<monster name="Mammoth" x="9" y="-6" z="5" spawntime="60" />
@@ -1123,20 +1151,28 @@
 		<monster name="Mammoth" x="-6" y="8" z="5" spawntime="60" />
 		<monster name="Mammoth" x="2" y="11" z="5" spawntime="60" />
 	</spawn>
-	<spawn centerx="1087" centery="1218" centerz="5" radius="1">
-		<monster name="Tarantula" x="1" y="0" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="1100" centery="1218" centerz="5" radius="1">
-		<monster name="Tarantula" x="1" y="-1" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="1088" centery="1222" centerz="5" radius="1">
-		<monster name="Tarantula" x="1" y="0" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="1096" centery="1222" centerz="5" radius="1">
-		<monster name="Tarantula" x="1" y="0" z="5" spawntime="60" />
-	</spawn>
-	<spawn centerx="1093" centery="1227" centerz="5" radius="1">
-		<monster name="Giant Spider" x="-1" y="0" z="5" spawntime="60" />
+	<spawn centerx="1092" centery="1220" centerz="5" radius="10">
+		<monster name="Vampire Bride" x="3" y="-8" z="5" spawntime="20" />
+		<monster name="Nightstalker" x="-4" y="-7" z="5" spawntime="20" />
+		<monster name="Mutated Bat" x="5" y="-7" z="5" spawntime="60" />
+		<monster name="Mutated Bat" x="-2" y="-6" z="5" spawntime="20" />
+		<monster name="Nightstalker" x="8" y="-6" z="5" spawntime="20" />
+		<monster name="Nightstalker" x="3" y="-5" z="5" spawntime="20" />
+		<monster name="Nightstalker" x="-9" y="-3" z="5" spawntime="20" />
+		<monster name="Vampire Bride" x="-6" y="-3" z="5" spawntime="20" />
+		<monster name="Vampire Bride" x="7" y="-3" z="5" spawntime="20" />
+		<monster name="Nightstalker" x="10" y="-3" z="5" spawntime="20" />
+		<monster name="Mutated Bat" x="-7" y="-2" z="5" spawntime="20" />
+		<monster name="Nightstalker" x="9" y="-2" z="5" spawntime="20" />
+		<monster name="Vampire Bride" x="-4" y="-1" z="5" spawntime="20" />
+		<monster name="Nightstalker" x="-1" y="1" z="5" spawntime="20" />
+		<monster name="Nightstalker" x="1" y="1" z="5" spawntime="20" />
+		<monster name="Mutated Bat" x="7" y="1" z="5" spawntime="20" />
+		<monster name="Vampire Bride" x="3" y="2" z="5" spawntime="20" />
+		<monster name="Mutated Bat" x="-2" y="3" z="5" spawntime="20" />
+		<monster name="Nightstalker" x="2" y="3" z="5" spawntime="20" />
+		<monster name="Nightstalker" x="-2" y="4" z="5" spawntime="20" />
+		<monster name="Mutated Bat" x="3" y="4" z="5" spawntime="20" />
 	</spawn>
 	<spawn centerx="2819" centery="1236" centerz="5" radius="2">
 		<monster name="Cyclops" x="0" y="-1" z="5" spawntime="30" />

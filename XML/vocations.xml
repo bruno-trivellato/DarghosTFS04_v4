@@ -138,7 +138,7 @@
 
 		gainhpticks="4" gainhpamount="45" gainmanaticks="3" gainmanaamount="90" 
 
-			manamultiplier="1.4" attackspeed="1500" soulmax="200" gainsoulticks="15" fromvoc="7" lessloss="40">
+			manamultiplier="1.4" attackspeed="2000" soulmax="200" gainsoulticks="15" fromvoc="7" lessloss="40">
 
 		<formula meleeDamage="1.2" distDamage="1.0" wandDamage="1.0" magDamage="1.0" magHealingDamage="1.0" defense="1.0" magDefense="1.0" armor="1.0"/>
 
@@ -150,7 +150,7 @@
 
 		gainhpticks="3" gainhpamount="45" gainmanaticks="6" gainmanaamount="90" 
 
-			manamultiplier="3.0" attackspeed="1500" soulmax="200" gainsoulticks="15" fromvoc="8" lessloss="40">
+			manamultiplier="3.0" attackspeed="2000" soulmax="200" gainsoulticks="15" fromvoc="8" lessloss="40">
 
 		<formula meleeDamage="1.2" distDamage="1.0" wandDamage="1.0" magDamage="1.0" magHealingDamage="1.0" defense="1.0" magDefense="1.0" armor="1.0"/>
 
