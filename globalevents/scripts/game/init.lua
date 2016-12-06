@@ -36,8 +36,8 @@ function onStartup()
 	end
 	
 	-- resetando storages diarios
-	
 	db.executeQuery("UPDATE `player_storage` SET `value` = -1 WHERE `key` = '" .. sid.WEBSITE_POLL_NOTIFY .. "'")
+	db.executeQuery("UPDATE `player_storage` SET `value` = -1 WHERE `key` = '" .. sid.ENT_PARTICIPATION .. "'")
 
 	doSetStorage(gid.ARENA_PLAYER_INSIDE, -1)
 	doSetStorage(gid.ARENA_LAST_BATTLE_START, 0)
