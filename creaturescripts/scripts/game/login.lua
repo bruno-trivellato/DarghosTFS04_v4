@@ -5,6 +5,7 @@ function onLogin(cid)
 	--Register the kill/die event
 	registerCreatureEvent(cid, "CustomPlayerDeath")
 	registerCreatureEvent(cid, "CustomStages")
+	registerCreatureEvent(cid, "CustomStagesThink")
 	registerCreatureEvent(cid, "Inquisition")
 	registerCreatureEvent(cid, "CustomPlayerTarget")
 	registerCreatureEvent(cid, "CustomPlayerCombat")

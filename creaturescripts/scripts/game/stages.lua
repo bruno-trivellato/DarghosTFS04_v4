@@ -33,3 +33,26 @@ function onAdvance(cid, type, oldlevel, newlevel)
 	
 	return LUA_TRUE
 end
+
+local lastUpdateData = {}
+local updateInterval = 60
+
+function onThink(cid, interval)
+
+	local data = lastUpdateData[cid]
+	
+	if(data ~= nil) then
+		if(os.time() >= data["lastUpdate"] + updateInterval) then
+			local battlegroundBuffDuration = tonumber(getPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_DURATION))
+			if(battlegroundBuffDuration ~= 0 and os.time() > battlegroundBuffDuration) then
+				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "O seu buff por participação em Battleground de " .. BG_EXP_BUFF .. "% acabou. Faça mais Battlegrounds para renovar o buff!")
+				setPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_DURATION, 0)
+				reloadExpStages(cid, true)
+			end			
+		end
+	else
+		local data = {}
+		data["lastUpdate"] = os.time()		
+		table.insert(lastUpdateData, cid, data)		
+	end
+end

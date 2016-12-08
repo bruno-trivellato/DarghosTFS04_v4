@@ -42,26 +42,26 @@ function onBattlegroundEnd(cid, winner, timeIn, bgDuration, initIn)
 			local ratingMessage = "Você piorou a sua classificação (rating) em " .. removedRating .. " pontos por sua derrota na Battleground."
 			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, ratingMessage)		
 			
-                        local expGain = math.floor(pvpBattleground.getExperienceGain(cid) * (BG_EXPGAIN_LOST_PERCENT / 100))
-                        local staminaChange = timeIn / 60
-                        
-                        expGain = math.floor(expGain * (timeIn / bgDuration)) -- calculamo a exp obtida com base no tempo de participa??o do jogador
-                        expGain = math.floor(expGain * (bgDuration / BG_CONFIG_DURATION)) -- calculamo a exp obtida com base na dura??o da battleground                        
+            --local expGain = math.floor(pvpBattleground.getExperienceGain(cid) * (BG_EXPGAIN_LOST_PERCENT / 100))
+            
+            --expGain = math.floor(expGain * (timeIn / bgDuration)) -- calculamo a exp obtida com base no tempo de participa??o do jogador
+            --expGain = math.floor(expGain * (bgDuration / BG_CONFIG_DURATION)) -- calculamo a exp obtida com base na dura??o da battleground                        
                         
 			local gainHonor = pvpBattleground.doUpdateHonor(cid)
 			local gainMoney = isPremium(cid) and BG_MONEY_LOST or math.ceil(BG_MONEY_LOST * (FREE_GAINS_PERCENT / 100))
 			
-			local msg = "Não foi dessa vez... Mas mas você ganhou " .. expGain .. " pontos de expêriencia, " .. gainHonor .. " pontos de honra " .. ((BG_GIVE_MONEY) and "e " .. gainMoney .. " moedas de ouro " or "") .. "pela sua participação e coragem!"
+			local msg = "Não foi dessa vez... Mas mas você ganhou um buff de " .. BG_EXP_BUFF .. "%+ experiencia durante " .. (BG_EXP_BUFF_DURATION / 60) .. " minutos, " .. gainHonor .. " pontos de honra " .. ((BG_GIVE_MONEY) and "e " .. gainMoney .. " moedas de ouro " or "") .. "pela sua participação e coragem!"
 			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, msg)
 			
 			if(BG_GIVE_MONEY) then
 				doPlayerAddMoney(cid, gainMoney)
 			end
                         
-                        doPlayerSetStamina(cid, -staminaChange)
-                        doPlayerAddExp(cid, expGain)
+            --doPlayerAddExp(cid, expGain)
+            setPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_DURATION, os.time() + BG_EXP_BUFF_DURATION)
+            reloadExpStages(cid)
 			
-			pvpBattleground.storePlayerParticipation(cid, getPlayerBattlegroundTeam(cid), false, expGain, -removedRating, gainHonor)
+			pvpBattleground.storePlayerParticipation(cid, getPlayerBattlegroundTeam(cid), false, 0, -removedRating, gainHonor)
 			playerHistory.logBattlegroundLost(cid, newRating)
 		end
 	
@@ -80,16 +80,15 @@ function onBattlegroundEnd(cid, winner, timeIn, bgDuration, initIn)
 				end
 			end		
 					
-			local expGain = pvpBattleground.getExperienceGain(cid)
-			local staminaChange = timeIn / 60
+			--local expGain = pvpBattleground.getExperienceGain(cid)
 			
-			expGain = math.floor(expGain * (timeIn / bgDuration)) -- calculamo a exp obtida com base no tempo de participa??o do jogador
-			expGain = math.floor(expGain * (bgDuration / BG_CONFIG_DURATION)) -- calculamo a exp obtida com base na dura??o da battleground
+			--expGain = math.floor(expGain * (timeIn / bgDuration)) -- calculamo a exp obtida com base no tempo de participa??o do jogador
+			--expGain = math.floor(expGain * (bgDuration / BG_CONFIG_DURATION)) -- calculamo a exp obtida com base na dura??o da battleground
 		
 			local gainHonor = pvpBattleground.doUpdateHonor(cid)
 			local gainMoney = isPremium(cid) and BG_MONEY_WIN or math.ceil(BG_MONEY_WIN * (FREE_GAINS_PERCENT / 100))
 			
-			local msg = "Você ganhou " .. expGain .. " pontos de experiência, " .. gainHonor .. " pontos de honra " .. ((BG_GIVE_MONEY) and "e " .. gainMoney .. " moedas de ouro " or "") .. "pela sua participação nesta vitoria!"
+			local msg = "Você ganhou um buff de " .. BG_EXP_BUFF .. "%+ experiencia durante " .. BG_EXP_BUFF_DURATION .. " minutos, " .. gainHonor .. " pontos de honra " .. ((BG_GIVE_MONEY) and "e " .. gainMoney .. " moedas de ouro " or "") .. "pela sua participação nesta vitoria!"
 			
 			local currentRating = getPlayerBattlegroundRating(cid)
 			local changeRating = pvpBattleground.getChangeRating(cid, timeIn, bgDuration)
@@ -97,11 +96,10 @@ function onBattlegroundEnd(cid, winner, timeIn, bgDuration, initIn)
 		
 			if(winnerTeam == BATTLEGROUND_TEAM_NONE) then
 			
-				staminaChange = math.floor(staminaChange / 2)
-				expGain = math.floor(expGain / 2)
+				--expGain = math.floor(expGain / 2)
 				gainMoney = math.floor(gainMoney / 2)
 				
-				msg = "Você adquiriu " .. expGain .. " pontos de experiencia, " .. gainHonor .. " pontos de honra " .. ((BG_GIVE_MONEY) and "e " .. gainMoney .. " moedas de ouro " or "") .. "pela sua participação neste empate!"
+				msg = "Você ganhou um buff de " .. BG_EXP_BUFF .. "%+ experiencia durante " .. (BG_EXP_BUFF_DURATION / 60) .. " minutos, " .. gainHonor .. " pontos de honra " .. ((BG_GIVE_MONEY) and "e " .. gainMoney .. " moedas de ouro " or "") .. "pela sua participação neste empate!"
 				
 				changeRating = math.floor(changeRating / 2)
 				ratingMessage = "Você melhorou a sua classificação (rating) em " .. changeRating .. " pontos por seu empate na Battleground."
@@ -110,7 +108,7 @@ function onBattlegroundEnd(cid, winner, timeIn, bgDuration, initIn)
 				playerHistory.logBattlegroundWin(cid, currentRating + changeRating)
 			end		
 			
-			pvpBattleground.storePlayerParticipation(cid, getPlayerBattlegroundTeam(cid), false, expGain, changeRating, gainHonor, getPlayerStamina(cid) > 40 * 60)
+			pvpBattleground.storePlayerParticipation(cid, getPlayerBattlegroundTeam(cid), false, 0, changeRating, gainHonor, getPlayerStamina(cid) > 40 * 60)
 	
 			if(not playerHistory.hasAchievement(cid, PH_ACH_BATTLEGROUND_RANK_BRAVE)
 				and currentRating < 1000
@@ -134,9 +132,10 @@ function onBattlegroundEnd(cid, winner, timeIn, bgDuration, initIn)
 				doPlayerAddMoney(cid, gainMoney)
 			end
 			
-			doPlayerSetStamina(cid, -staminaChange)
 			doPlayerSetBattlegroundRating(cid, currentRating + changeRating)			
-			doPlayerAddExp(cid, expGain)
+			--doPlayerAddExp(cid, expGain)
+			setPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_DURATION, os.time() + BG_EXP_BUFF_DURATION)
+			reloadExpStages(cid)
 			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, msg)
 			if(not isPremium(cid)) then
 				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Adquira já sua conta premium, ajude o Darghos a continuar inovando como com as Battlegrounds e ainda receba até três vezes mais recompensas! www.darghos.com.br/index.php?ref=account.premium")

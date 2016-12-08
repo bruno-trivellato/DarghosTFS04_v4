@@ -1,5 +1,8 @@
-BG_ENABLED = false
+BG_ENABLED = true
 BG_ENABLED_GAINS = true
+
+BG_EXP_BUFF = 25 -- percent
+BG_EXP_BUFF_DURATION = 60 * 60 * 2 -- two hours
 
 FREE_GAINS_PERCENT = 30
 BG_EXP_RATE = 1
@@ -7,8 +10,8 @@ BG_EACH_BONUS_PERCENT = 50
 BG_BONUS_INTERVAL = 60 * 60
 
 BG_GIVE_MONEY = true
-BG_MONEY_WIN = 50000
-BG_MONEY_LOST = 50000
+BG_MONEY_WIN = 20000
+BG_MONEY_LOST = 10000
 BG_EXPGAIN_LOST_PERCENT = 30
 
 BG_CONFIG_TEAMSIZE = 5
@@ -854,7 +857,7 @@ end
 function pvpBattleground.addObjects()
 
 	clearBattlegroundStatistics()
-	local ITEM_GATE = 1560
+	local ITEM_GATE = 1514
 	
 	-- creature walls
 	--[[
@@ -1074,7 +1077,7 @@ function pvpBattleground.removeWall(team)
 		[BATTLEGROUND_TEAM_TWO] = {uid.BATTLEGROUND_WALLS_END, uid.BATTLEGROUND_WALLS_END - 1, uid.BATTLEGROUND_WALLS_END - 2}
 	}
 	
-	local ITEM_GATE = 1560
+	local ITEM_GATE = 1514
 	
 	for k,v in pairs(teamWalls[team]) do
 		local pos = getThingPos(v)

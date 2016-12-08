@@ -115,9 +115,9 @@ function onBattlegroundEnd()
 	secondsLeftMessage = 1
 	bgEvents.messages = nil	
 	
-	if(pvpBattleground.hasGain()) then
+	--[[if(pvpBattleground.hasGain()) then
 		bgEvents.bonus = addEvent(checkBonus, 1000 * BG_BONUS_INTERVAL)
-	end
+	end]]--
 	
 	return true
 end
@@ -204,7 +204,7 @@ end
 
 function onStartup()
 	pvpBattleground.onInit()
-	bgEvents.bonus = addEvent(checkBonus, 1000 * BG_BONUS_INTERVAL)
+	--bgEvents.bonus = addEvent(checkBonus, 1000 * BG_BONUS_INTERVAL)
 end
 
 function onTime(time)
@@ -215,9 +215,9 @@ function onTime(time)
 		if(date.hour == BG_GAIN_START_HOUR) then
 			doBroadcastMessage("Este é um alerta para avisar que esta iniciado o periodo de recompensas em Battlegrounds de hoje! São mais de 12 horas de muito PvP para você aproveitar e conseguir experiencia, pontos de honra e rating além de façanhas! Boa sorte!",  MESSAGE_TYPES["green"])
 		
-			if(pvpBattleground.getBonus() > 0) then
+			--[[if(pvpBattleground.getBonus() > 0) then
 				bgEvents.bonus = addEvent(checkBonus, 1000 * 10, true)
-			end
+			end]]--
 		elseif(date.hour == BG_GAIN_END_HOUR) then
 			doBroadcastMessage("Este é um alerta para avisar que esta encerrado o periodo de recompensas em Battlegrounds por hoje! As Battlegrounds iram voltar a conceder recompensas a 11:00! Tenha uma boa noite!",  MESSAGE_TYPES["green"])
 		end

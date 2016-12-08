@@ -170,7 +170,9 @@ function isStagedSkill(skilltype, includeMagic)
 	return isInArray(skills, skilltype)
 end
 
-function changeStage(cid, skilltype, multiple)
+function changeStage(cid, skilltype, multiple, silent)
+
+	silent = silent or false
 
 	if(skilltype == SKILL__LEVEL) then
 		
@@ -187,21 +189,36 @@ function changeStage(cid, skilltype, multiple)
 		if #bonuses > 0 then
 			for k,v in pairs(bonuses) do
 				expSpecialBonus = expSpecialBonus + v["exp"]
-				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, v["desc"] .. " [expires in " .. os.date("%x %X", v["end"]) .. "].")
+				if not silent then
+					doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, v["desc"] .. " [expires in " .. os.date("%x %X", v["end"]) .. "].")
+				end
 			end
 		end
 
 		local darkGeneralBuffDuration = getPlayerStorageValue(cid, sid.SLAIN_DARK_GENERAL)		
 		if(darkGeneralBuffDuration > 0 and os.time() < darkGeneralBuffDuration) then
 			expSpecialBonus = expSpecialBonus + darghos_kill_dark_general_exp_bonus_percent
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Por sua participação na ultima retomada de Quendor contra o Dark General todos seus ganhos de expêriencia estão aumentados em " .. darghos_kill_dark_general_exp_bonus_percent .. "% até o proximo evento.")
+			if not silent then
+				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Por sua participação na ultima retomada de Quendor contra o Dark General todos seus ganhos de expêriencia estão aumentados em " .. darghos_kill_dark_general_exp_bonus_percent .. "% até o proximo evento.")
+			end
 		end	
 
 		local ent = tonumber(getPlayerStorageValue(cid, sid.ENT_PARTICIPATION))
 		if(ent == 1) then
 			expSpecialBonus = expSpecialBonus + darghos_participate_ent_exp_bonus_percent
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Por sua participação no evento da Ancient Nature seu ganho de expêriencia esta aumentado em " .. darghos_participate_ent_exp_bonus_percent .. "% até o proximo server save.")
-		end			
+			if not silent then
+				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Por sua participação no evento da Ancient Nature seu ganho de expêriencia esta aumentado em " .. darghos_participate_ent_exp_bonus_percent .. "% até o proximo server save.")
+			end
+		end
+
+		local battlegroundBuffDuration = tonumber(getPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_DURATION))
+		if(os.time() < battlegroundBuffDuration) then
+			expSpecialBonus = expSpecialBonus + BG_EXP_BUFF
+			if not silent then
+				local minLeft = battlegroundBuffDuration - os.time()
+				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Por sua participação em Battlegrounds seu ganho de expêriencia esta aumentado em " .. BG_EXP_BUFF .. "% pelos proximos " .. math.ceil(minLeft / 60) .. " minutos.")
+			end
+		end
 		
 		local expSpecialBonusEnd = getPlayerStorageValue(cid, sid.EXP_MOD_ESPECIAL_END)
 		
@@ -225,8 +242,9 @@ function changeStage(cid, skilltype, multiple)
 	end
 end
 
-function reloadExpStages(cid)
-	changeStage(cid, SKILL__LEVEL, getPlayerMultiple(cid, STAGES_EXPERIENCE))
+function reloadExpStages(cid, silent)
+	silent = silent or false
+	changeStage(cid, SKILL__LEVEL, getPlayerMultiple(cid, STAGES_EXPERIENCE), silent)
 end
 
 function setStagesOnLogin(cid)

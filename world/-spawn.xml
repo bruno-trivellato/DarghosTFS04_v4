@@ -2590,9 +2590,6 @@
 	<spawn centerx="2987" centery="1275" centerz="6" radius="5">
 		<monster name="Bog Raider" x="1" y="2" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="2860" centery="1276" centerz="6" radius="3">
-		<npc name="global.rashid" x="-1" y="1" z="6" spawntime="60" direction="2" />
-	</spawn>
 	<spawn centerx="2832" centery="1277" centerz="6" radius="2">
 		<monster name="Dragon" x="1" y="0" z="6" spawntime="30" />
 	</spawn>
@@ -6204,10 +6201,7 @@
 		<monster name="Hitdoll S" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="2860" centery="1276" centerz="7" radius="5">
-		<monster name="Skeleton" x="0" y="-2" z="7" spawntime="60" />
-		<monster name="Skeleton" x="2" y="0" z="7" spawntime="60" />
-		<monster name="Skeleton" x="-2" y="1" z="7" spawntime="60" />
-		<monster name="Skeleton Warrior" x="0" y="1" z="7" spawntime="60" />
+		<npc name="global.rashid" x="0" y="-1" z="7" spawntime="60" direction="2" />
 	</spawn>
 	<spawn centerx="2890" centery="1276" centerz="7" radius="6">
 		<monster name="Deer" x="-4" y="-2" z="7" spawntime="60" />
@@ -8825,6 +8819,9 @@
 	<spawn centerx="2140" centery="1859" centerz="7" radius="5">
 		<monster name="Amazon" x="-1" y="-2" z="7" spawntime="120" />
 		<monster name="Amazon" x="-2" y="1" z="7" spawntime="120" />
+	</spawn>
+	<spawn centerx="2006" centery="1860" centerz="7" radius="3">
+		<npc name="quendor.pvp" x="1" y="-1" z="7" spawntime="60" direction="2" />
 	</spawn>
 	<spawn centerx="2089" centery="1861" centerz="7" radius="5">
 		<monster name="Amazon" x="-3" y="1" z="7" spawntime="120" />
@@ -12756,6 +12753,7 @@
 	<spawn centerx="2466" centery="1635" centerz="8" radius="1">
 		<npc name="battleground.magic2" x="0" y="0" z="8" spawntime="60" direction="2" />
 	</spawn>
+	<spawn centerx="2533" centery="1638" centerz="8" radius="1" />
 	<spawn centerx="2606" centery="1644" centerz="8" radius="5">
 		<monster name="Pillar" x="-4" y="-3" z="8" spawntime="60" />
 		<monster name="catapult l" x="-2" y="-3" z="8" spawntime="3600" />
@@ -12782,6 +12780,9 @@
 		<monster name="Stone Wall" x="2" y="4" z="8" spawntime="3600" />
 	</spawn>
 	<spawn centerx="2358" centery="1663" centerz="8" radius="1">
+		<npc name="battleground.magic1" x="0" y="0" z="8" spawntime="60" direction="2" />
+	</spawn>
+	<spawn centerx="2551" centery="1669" centerz="8" radius="1">
 		<npc name="battleground.magic1" x="0" y="0" z="8" spawntime="60" direction="2" />
 	</spawn>
 	<spawn centerx="2137" centery="1688" centerz="8" radius="5">
