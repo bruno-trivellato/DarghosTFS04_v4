@@ -642,9 +642,9 @@ function pvpBattleground.broadcastLeftOnePlayer()
 	end
 
 	local messages = {
-		"Quer ganhar experiencia e dinheiro se divertindo com PvP no classico Capture The Flag? Participe da proxima battleground! Restam apénas mais um para fechar os times 6x6! -> !bg entrar",
-		"Restam apénas mais um jogador para fechar os times 6x6 para a proxima partida de Battleground! Ganhe recompensas! Ao morrer nada é perdido! Divirta-se! -> !bg entrar",
-		"Gosta de PvP misturado com objetivos como o classico Capture The Flag? Prove seu valor! Restam apénas mais um jogadore para fechar os times 6x6 para a proxima Battleground! -> !bg entrar",
+		"Quer ganhar bonus de experiencia, dinheiro e outras recompensas se divertindo com PvP no classico Capture The Flag? Participe da proxima battleground! Restam apénas mais um para fechar os times " .. BG_CONFIG_TEAMSIZE .. "x" .. BG_CONFIG_TEAMSIZE .. "! -> !bg entrar",
+		"Restam apénas mais um jogador para fechar os times " .. BG_CONFIG_TEAMSIZE .. "x" .. BG_CONFIG_TEAMSIZE .. " para a proxima partida de Battleground! Ganhe recompensas! Ao morrer nada é perdido! Divirta-se! -> !bg entrar",
+		"Gosta de PvP misturado com objetivos como o classico Capture The Flag? Prove seu valor! Restam apénas mais um jogadore para fechar os times " .. BG_CONFIG_TEAMSIZE .. "x" .. BG_CONFIG_TEAMSIZE .. " para a proxima Battleground! -> !bg entrar",
 		"Não conhece o sistema de Battlegrounds? Conheça agora! Falta apénas você para o proxima batalha 6x6! Não há perdas nas mortes, ajude o time na busca a bandeira adversária rumo a vitoria e ganhe recompensas! -> !bg entrar",
 	}
 	
@@ -976,6 +976,8 @@ function pvpBattleground.putFlag(team_id, pos, dropping)
         if(stone.uid ~= 0) then
             doRemoveItem(stone.uid)
         end
+
+    doCleanTile(pos)
 
 	local uid = doCreateItem(BATTLEGROUND_TEAM[team_id].item_id, pos)
 	doItemSetAttribute(uid, "uid", BATTLEGROUND_TEAM[team_id].flag)
