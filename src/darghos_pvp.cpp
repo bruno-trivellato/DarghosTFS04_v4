@@ -126,14 +126,19 @@ void Battleground::removeIdleWaitlistPlayer(uint32_t player_id)
 
 bool Battleground::playerIsInWaitlist(Player* player)
 {
-    /*for(Bg_Waitlist_t::iterator it = waitlist.begin(); it != waitlist.end(); it++)
+    bool alertMc = false;
+    for(Bg_Waitlist_t::iterator it = waitlist.begin(); it != waitlist.end(); it++)
 	{
         Player* waiting = (*it);
-        if(waiting == player || waiting->getIP() == player->getIP())
+        if(waiting == player)
 		{
 			return true;
 		}
-    }*/
+        else if(waiting->getIP() == player->getIP() && !alertMc){
+            player->sendPvpChannelMessage("ALERTA: Foi identificado que sua conexão possui mais deu um personagem na fila para a proxima Battleground. O uso de multiclient na Battleground é rigorosamente proibido e um replay dessa partida será assistido por um moderador e caso seja confirmado abuso de multiclient, você recebera punições e pode até mesmo ser banido permanentemente da Battleground em todos os seus personagens!", SPEAK_CHANNEL_O);
+            alertMc = true;
+        }
+    }
 
 	return false;
 }
