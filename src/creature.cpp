@@ -704,13 +704,13 @@ bool Creature::onDeath()
     #ifdef __DARGHOS_PVP_SYSTEM__
     if(getPlayer() && getPlayer()->isInBattleground())
     {
-            g_battleground.onPlayerDeath(getPlayer(), deathList);
+        g_battleground.onPlayerDeath(getPlayer(), deathList);
 
-    dropCorpse(deathList);
-    if(master)
-        master->removeSummon(this);
+        dropCorpse(deathList);
+        if(master)
+            master->removeSummon(this);
 
-            return true;
+        return true;
     }
     #endif
 

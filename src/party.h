@@ -52,8 +52,10 @@ class Party
         bool setSharedExperience(Player* player, bool _sharedExpActive);
         bool isSharedExperienceActive() const {return sharedExpActive;}
         bool isSharedExperienceEnabled() const {return sharedExpEnabled;}
-        bool canUseSharedExperience(const Player* player, uint32_t highestLevel = 0) const;
+        bool canUseSharedExperience(const Player* player) const;
         void updateSharedExperience();
+
+        void updateVocationsList();
 
         void addPlayerHealedMember(Player* player, uint32_t points);
         void addPlayerDamageMonster(Player* player, uint32_t points);
@@ -71,6 +73,8 @@ class Party
 
         Player* leader;
         bool sharedExpActive, sharedExpEnabled;
+
+        float extraExpRate;
 
         struct CountBlock_t
         {

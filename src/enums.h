@@ -306,6 +306,10 @@ enum PlayerSex_t
 	// own use- each female should be even and male odd.
 };
 
+enum Vocation_t : uint16_t {
+        VOCATION_NONE = 0
+};
+
 enum WarType_t
 {
 	WAR_FIRST = 0,

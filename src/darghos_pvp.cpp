@@ -126,14 +126,14 @@ void Battleground::removeIdleWaitlistPlayer(uint32_t player_id)
 
 bool Battleground::playerIsInWaitlist(Player* player)
 {
-	for(Bg_Waitlist_t::iterator it = waitlist.begin(); it != waitlist.end(); it++)
+    /*for(Bg_Waitlist_t::iterator it = waitlist.begin(); it != waitlist.end(); it++)
 	{
         Player* waiting = (*it);
         if(waiting == player || waiting->getIP() == player->getIP())
 		{
 			return true;
 		}
-	}
+    }*/
 
 	return false;
 }
@@ -543,6 +543,8 @@ void Battleground::onPlayerDeath(Player* player, DeathList deathList)
 		return;
 
 	Bg_Teams_t team_id = player->getBattlegroundTeam();
+
+    player->onEnterBattleground(); //update life/mana stats
 
 	Bg_DeathEntry_t* deathEntry = new Bg_DeathEntry_t;
 	deathEntry->date = time(NULL);

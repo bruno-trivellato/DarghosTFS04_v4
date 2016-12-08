@@ -711,8 +711,6 @@ ReturnValue Tile::__queryAdd(int32_t, const Thing* thing, uint32_t,
                 iThing = __getThing(i);
                 if(const Item* iItem = iThing->getItem())
                 {
-                    std::clog << "Item Id " << iItem->getID() << std::endl;
-
                     const ItemType& iType = Item::items[iItem->getID()];
                     if(iType.isHangable)
                         hasHangable = true;
