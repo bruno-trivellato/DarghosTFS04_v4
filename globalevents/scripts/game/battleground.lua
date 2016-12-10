@@ -115,9 +115,9 @@ function onBattlegroundEnd()
 	secondsLeftMessage = 1
 	bgEvents.messages = nil	
 	
-	--[[if(pvpBattleground.hasGain()) then
+	if(pvpBattleground.hasGain()) then
 		bgEvents.bonus = addEvent(checkBonus, 1000 * BG_BONUS_INTERVAL)
-	end]]--
+	end
 	
 	return true
 end
