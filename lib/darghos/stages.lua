@@ -213,10 +213,12 @@ function changeStage(cid, skilltype, multiple, silent)
 
 		local battlegroundBuffDuration = tonumber(getPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_DURATION))
 		if(os.time() < battlegroundBuffDuration) then
-			expSpecialBonus = expSpecialBonus + BG_EXP_BUFF
+			local bonus = tonumber(getPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_STACKS))
+			local percent = (bonus * BG_EACH_BONUS_PERCENT) + BG_EXP_BUFF			
+			expSpecialBonus = expSpecialBonus + percent
 			if not silent then
 				local minLeft = battlegroundBuffDuration - os.time()
-				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Por sua participação em Battlegrounds seu ganho de expêriencia esta aumentado em " .. BG_EXP_BUFF .. "% pelos proximos " .. math.ceil(minLeft / 60) .. " minutos.")
+				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Por sua participação em Battlegrounds seu ganho de expêriencia esta aumentado em " .. percent .. "% pelos proximos " .. math.ceil(minLeft / 60) .. " minutos.")
 			end
 		end
 		

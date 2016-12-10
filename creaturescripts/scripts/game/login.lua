@@ -125,6 +125,14 @@ function onLogin(cid)
 		doPlayerPopupFYI(cid, message)
 	end
 
+	if getPlayerLevel(cid) >= BATTLEGROUND_MIN_LEVEL then
+		local bonus = pvpBattleground.getBonus()		
+		local percent = (math.min(bonus, 7) * BG_EACH_BONUS_PERCENT) + BG_EXP_BUFF
+
+		local bg_channel_msg = "Gosta de PvP? Digite '!bg entrar' para garantir lugar na proxima Battleground, um evento de PvP em times " .. BG_CONFIG_TEAMSIZE .. "x" .. BG_CONFIG_TEAMSIZE .. " automático! Ao participar você ganhará de recompensa: bonus de " .. percent .. "% exp aumentada por 2 horas, gold, honor points e mais! Venha para combate!"
+		pvpBattleground.sendPlayerChannelMessage(cid, bg_channel_msg)
+	end
+
 	local arr = { access.GOD, access.GAME_MASTER, access.COMMUNITY_MANAGER }
 	if(isInArray(arr, getPlayerAccess(cid))) then
 		addAllOufits(cid)

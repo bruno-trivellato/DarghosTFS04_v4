@@ -59,6 +59,7 @@ function onBattlegroundEnd(cid, winner, timeIn, bgDuration, initIn)
                         
             --doPlayerAddExp(cid, expGain)
             setPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_DURATION, os.time() + BG_EXP_BUFF_DURATION)
+            setPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_STACKS, math.min(pvpBattleground.getBonus(), 7))
             reloadExpStages(cid)
 			
 			pvpBattleground.storePlayerParticipation(cid, getPlayerBattlegroundTeam(cid), false, 0, -removedRating, gainHonor)
@@ -135,6 +136,7 @@ function onBattlegroundEnd(cid, winner, timeIn, bgDuration, initIn)
 			doPlayerSetBattlegroundRating(cid, currentRating + changeRating)			
 			--doPlayerAddExp(cid, expGain)
 			setPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_DURATION, os.time() + BG_EXP_BUFF_DURATION)
+			setPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_STACKS, math.min(pvpBattleground.getBonus(), 7))
 			reloadExpStages(cid)
 			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, msg)
 			if(not isPremium(cid)) then

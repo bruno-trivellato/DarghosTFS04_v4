@@ -187,14 +187,14 @@ function checkBonus(onlyAlert)
 	local bonus = pvpBattleground.getBonus()
 	bonus = bonus + 1
 	
-	local percent = bonus * BG_EACH_BONUS_PERCENT
+	local percent = (math.min(bonus, 7) * BG_EACH_BONUS_PERCENT) + BG_EXP_BUFF
 	
 	local hourStr = "na ultima hora"
 	if(bonus > 1) then
 		hourStr = "há " .. bonus .. " horas"
 	end
 	
-	doBroadcastMessage("Nenhuma Battleground foi iniciada " .. hourStr .. ", será concedido bonus extra de " .. percent .. "% mais experience ao time vencedor da proxima Battleground! Garanta seu lugar na proxima e aproveite! -> !bg entrar",  MESSAGE_TYPES["green"])
+	doBroadcastMessage("Nenhuma Battleground foi iniciada " .. hourStr .. ", os participantes da proxima partida receberão " .. percent .. "% mais experience durante 2 horas! Garanta seu lugar e aproveite! -> !bg entrar",  MESSAGE_TYPES["green"])
 	bgEvents.bonus = addEvent(checkBonus, 1000 * BG_BONUS_INTERVAL)
 	
 	if(not onlyAlert) then
@@ -204,7 +204,7 @@ end
 
 function onStartup()
 	pvpBattleground.onInit()
-	--bgEvents.bonus = addEvent(checkBonus, 1000 * BG_BONUS_INTERVAL)
+	bgEvents.bonus = addEvent(checkBonus, 1000 * BG_BONUS_INTERVAL)
 end
 
 function onTime(time)
@@ -213,11 +213,11 @@ function onTime(time)
 	
 	if(not isInArray(BG_GAIN_EVERYHOUR_DAYS, date.wday)) then
 		if(date.hour == BG_GAIN_START_HOUR) then
-			doBroadcastMessage("Este é um alerta para avisar que esta iniciado o periodo de recompensas em Battlegrounds de hoje! São mais de 12 horas de muito PvP para você aproveitar e conseguir experiencia, pontos de honra e rating além de façanhas! Boa sorte!",  MESSAGE_TYPES["green"])
+			doBroadcastMessage("Este é um alerta para avisar que esta iniciado o periodo de recompensas em Battlegrounds de hoje! São mais de 12 horas de muito PvP para você aproveitar e conseguir buff de exp, pontos de honra e rating além de façanhas! Boa sorte!",  MESSAGE_TYPES["green"])
 		
-			--[[if(pvpBattleground.getBonus() > 0) then
+			if(pvpBattleground.getBonus() > 0) then
 				bgEvents.bonus = addEvent(checkBonus, 1000 * 10, true)
-			end]]--
+			end
 		elseif(date.hour == BG_GAIN_END_HOUR) then
 			doBroadcastMessage("Este é um alerta para avisar que esta encerrado o periodo de recompensas em Battlegrounds por hoje! As Battlegrounds iram voltar a conceder recompensas a 11:00! Tenha uma boa noite!",  MESSAGE_TYPES["green"])
 		end

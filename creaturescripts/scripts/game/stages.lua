@@ -45,8 +45,11 @@ function onThink(cid, interval)
 		if(os.time() >= data["lastUpdate"] + updateInterval) then
 			local battlegroundBuffDuration = tonumber(getPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_DURATION))
 			if(battlegroundBuffDuration ~= 0 and os.time() > battlegroundBuffDuration) then
-				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "O seu buff por participação em Battleground de " .. BG_EXP_BUFF .. "% acabou. Faça mais Battlegrounds para renovar o buff!")
+				local bonus = tonumber(getPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_STACKS))
+				local percent = (bonus * BG_EACH_BONUS_PERCENT) + BG_EXP_BUFF
+				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "O seu buff por participação em Battleground de " .. percent .. "% acabou. Faça mais Battlegrounds para renovar o buff!")
 				setPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_DURATION, 0)
+				setPlayerStorageValue(cid, sid.BATTLEGROUND_EXP_BUFF_STACKS, 0)
 				reloadExpStages(cid, true)
 			end			
 		end
