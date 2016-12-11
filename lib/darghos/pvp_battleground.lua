@@ -219,7 +219,6 @@ function pvpBattleground.getExpGainRate(cid)
 	local bonus = pvpBattleground.getBonus()
 	if(bonus > 0) then
 		rate = rate + (bonus * (BG_EACH_BONUS_PERCENT / 100))
-		pvpBattleground.setBonus(0)
 	end
 	
 	if(not isPremium(cid)) then
