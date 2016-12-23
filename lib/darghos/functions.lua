@@ -1177,6 +1177,22 @@ function summonDemonOak()
 	setGlobalStorageValue(gid.THE_DEMON_OAK, temp_monster)
 end
 
+function summonGrynchGoblin()
+
+	if(not getCreatureByName("Grynch Goblin")) then
+		local summonPos = {x = 1981, y = 1902, z = 6}
+
+		local creature = doSummonCreature("Grynch Goblin", summonPos, true, true)
+	end
+end
+
+function onGrynchGoblinDie(cid)
+	
+	if isPlayer(cid) and getPlayerStorageValue(cid, sid.SANTA_CLAUS_MISSION) == 0 then
+		setPlayerStorageValue(cid, sid.SANTA_CLAUS_MISSION, 1)
+	end
+end
+
 inquisitionBosses =	{
 	{name = "Ushuriel", uid = uid.INQ_USHURIEL_SPAWN},
 	{name = "Madareth", uid = uid.INQ_MADARETH_SPAWN},

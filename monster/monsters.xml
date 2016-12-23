@@ -14,6 +14,7 @@
 	<monster name="Summon Dark Mage" file="darghos/dark-forces/summon dark mage.xml" />
 	<monster name="Summon Dark Priestess" file="darghos/dark-forces/summon dark priestess.xml" />	
 	
+	<monster name="Grynch Goblin" file="darghos/Grynch Goblin.xml" />
 	<monster name="Demon Oak" file="darghos/demon_oak.xml"/>
 	<monster name="Bad Bug" file="darghos/bad bug.xml"/>
 	<monster name="Medusa" file="darghos/Medusa.xml"/>

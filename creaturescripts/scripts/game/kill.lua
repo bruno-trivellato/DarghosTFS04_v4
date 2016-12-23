@@ -4,6 +4,8 @@ function onKill(cid, target, damage, flags)
 	
 	if(cName == "ungreez") then
 		onUngreezDie(cid, target, damage, flags)
+	elseif(cName == "grynch goblin") then
+		onGrynchGoblinDie(cid)
 	end
 	
 	killDemonOak(cid, target)
