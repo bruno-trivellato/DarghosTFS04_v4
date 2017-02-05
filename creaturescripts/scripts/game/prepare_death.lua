@@ -21,7 +21,7 @@ function onPrepareDeath(cid, deathList)
 		--end
 		
 		
-		--Dungeons.onPlayerDeath(cid)		
+		Dungeons.onPlayerDeath(cid)		
 	end
 	
 	return true
