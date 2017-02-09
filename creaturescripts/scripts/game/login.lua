@@ -16,6 +16,8 @@ function onLogin(cid)
 	registerCreatureEvent(cid, "PrepareDeath")
 	registerCreatureEvent(cid, "onTradeAccept")
 	registerCreatureEvent(cid, "onTradeRequest")
+	registerCreatureEvent(cid, "onPartyPassLeadership")
+	registerCreatureEvent(cid, "onPartyLeave")	
 
 	local replaceUids = {
 		[2500] = 2041

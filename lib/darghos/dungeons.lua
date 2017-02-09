@@ -440,7 +440,7 @@ function Dungeons.onThink(dungeonId, runningTime, awayTime)
 			local leader = Dungeons.getLeader(dungeonId)
 		
 			if not leader or not isInParty(leader) then
-				Dungeons.log("Leader " .. getPlayerName(leader) .. " is no in party anymore. Dungeon empty.")
+				Dungeons.log("Last party destroyed. Dungeon empty.")
 				Dungeons.resetPlayersIn(dungeonId)
 				Dungeons.updateEntranceDescription(dungeonId)
 				
@@ -642,12 +642,27 @@ function Dungeons.onPartyPassLeadership(cid, target)
 end
 
 function Dungeons.onPartyLeave(cid)	
-	if(getPlayerDungeonStatus(cid) == DUNGEON_STATUS_IN) then
-		doPlayerSendCancel(cid, "Você não pode sair de uma party estando dentro de uma Dungeon.")
-		return false
-	elseif(getPlayerDungeonStatus(cid) == DUNGEON_STATUS_OUT) then
-		Dungeons.log("Kicking player " .. getPlayerName(cid) .. " due party leave.")
-		Dungeons.doKickPlayer(cid)
+	if isPlayerInDungeon(cid) then
+		if(getPlayerDungeonStatus(cid) == DUNGEON_STATUS_IN) then
+			doPlayerSendCancel(cid, "Você não pode sair de uma party estando dentro de uma Dungeon.")
+			return false
+		elseif(getPlayerDungeonStatus(cid) == DUNGEON_STATUS_OUT) then
+
+			local dungeonId = getPlayerDungeonId(cid)
+			local leader = Dungeons.getLeader(dungeonId);
+
+			if isPlayer(leader) then
+				for k,pid in pairs(getPartyMembers(leader)) do
+					if getPlayerDungeonStatus(pid) == DUNGEON_STATUS_IN then
+						doPlayerSendCancel(cid, "Someone in your party is still inside the Dungeon...")
+						return false					
+					end
+				end
+			end
+
+			Dungeons.log("Kicking player " .. getPlayerName(cid) .. " due party leave.")
+			Dungeons.doKickPlayer(cid)
+		end
 	end
 	
 	return true

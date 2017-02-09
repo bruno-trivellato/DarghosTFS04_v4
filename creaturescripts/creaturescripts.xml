@@ -50,5 +50,8 @@
 	
 	<!-- Kashmir Quest -->
 	<event type="death" name="Azerus" event="script" value="game/azerus.lua"/>
+
+	<event type="partypassleadership" name="onPartyPassLeadership" event="script" value="game/party_events.lua"/>
+	<event type="partyleave" name="onPartyLeave" event="script" value="game/party_events.lua"/>	
 	
 </creaturescripts>

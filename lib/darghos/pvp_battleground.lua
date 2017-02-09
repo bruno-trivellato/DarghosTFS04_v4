@@ -719,6 +719,11 @@ function pvpBattleground.onEnter(cid)
 		doPlayerPopupFYI(cid, str)
 		return false
 	end
+
+	if(isPlayerInDungeon(cid)) then
+		doPlayerSendCancel(cid, "Primeiro abandone a Dungeon antes de entrar em uma Battleground.")
+		return false			
+	end
 	
 	if(doPlayerIsInArena(cid)) then
 		doPlayerSendCancel(cid, "Você não pode entrar na battleground enquanto estiver dentro de uma Arena.")
