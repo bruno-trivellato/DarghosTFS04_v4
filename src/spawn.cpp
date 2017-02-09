@@ -131,18 +131,25 @@ bool Spawns::parseSpawnNode(xmlNodePtr p, bool checkDuplicate)
 				continue;
 
 			std::string name = strValue;
-			int32_t interval = MINSPAWN_INTERVAL / 1000;
-			if(readXMLInteger(tmpNode, "spawntime", intValue) || readXMLInteger(tmpNode, "interval", intValue))
-			{
-				if(intValue <= interval)
-				{
-					std::clog << "[Warning - Spawns::loadFromXml] " << name << " " << centerPos << " spawntime cannot"
-						<< " be less than " << interval << " seconds." << std::endl;
-					continue;
-				}
+            std::string tname = asLowerCaseString(name);
+            int32_t interval;
+            if(tname == "sen gan guard" || tname == "sen gan shaman" || tname == "sen gan hunter" || tname == "sen gan hydra" || tname == "swamp thing" || tname == "big ooze" || tname == "bone wall"){
+                interval = 14400; //the max duration of the dungeon to make sure the monsters will not spawn
+            }
+            else{
+                interval = MINSPAWN_INTERVAL / 1000;
+                if(readXMLInteger(tmpNode, "spawntime", intValue) || readXMLInteger(tmpNode, "interval", intValue))
+                {
+                    if(intValue <= interval)
+                    {
+                        std::clog << "[Warning - Spawns::loadFromXml] " << name << " " << centerPos << " spawntime cannot"
+                            << " be less than " << interval << " seconds." << std::endl;
+                        continue;
+                    }
 
-				interval = intValue;
-			}
+                    interval = intValue;
+                }
+            }
 
 			interval *= 1000;
 			Position placePos = centerPos;
