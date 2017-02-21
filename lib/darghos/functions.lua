@@ -1,3 +1,13 @@
+function getWorldConfig(config)
+
+	local value = world_config[getConfigValue("worldId")][config]
+	if value == nil then
+		std.clog("World config " .. config .. " not found.")
+	end
+
+	return value
+end
+
 function scriptBotCheckMoving(cid)
 	if getPlayerStorageValue(cid, sid.SCRIPTBOT_RECORDING) == 1 then
 		local pos = getPlayerStorageValue(cid, sid.SCRIPTBOT_LAST_POS) ~= -1 and unpackPosition(getPlayerStorageValue(cid, sid.SCRIPTBOT_LAST_POS)) or false

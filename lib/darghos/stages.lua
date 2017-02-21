@@ -10,6 +10,7 @@ SKILL_STAGE_NON_LOGOUT_PLAYERS = SKILL_STAGE_MAGES
 
 stages = {
 	[STAGES_EXPERIENCE] = {
+<<<<<<< HEAD
 		{start_level = 1, end_level = 99, multipler = 10}
     ,{start_level = 100, end_level = 159, multipler = 8}
     ,{start_level = 160, end_level = 179, multipler = 4}
@@ -20,19 +21,36 @@ stages = {
 	[STAGES_EXP_PROTECTED] = {
 		{start_level = 1, end_level = 59, multipler = 10}
     ,{start_level = 60, multipler = 2}
+=======
+		{start_level = 1, end_level = 99, multipler = 80}
+	    ,{start_level = 100, end_level = 199, multipler = 40}
+	    ,{start_level = 200, end_level = 249, multipler = 20}
+	    ,{start_level = 250, end_level = 299, multipler = 10}
+	    ,{start_level = 300, end_level = 339, multipler = 5}
+	    ,{start_level = 340, multipler = 2}
+	},
+
+	[STAGES_EXP_PROTECTED] = {
+		{start_level = 1, end_level = 99, multipler = 80}
+	    ,{start_level = 100, end_level = 199, multipler = 40}
+	    ,{start_level = 200, end_level = 249, multipler = 20}
+	    ,{start_level = 250, end_level = 299, multipler = 10}
+	    ,{start_level = 300, end_level = 339, multipler = 5}
+	    ,{start_level = 340, multipler = 2}
+>>>>>>> 4d223173b40d90d70edd88880c5522c701ed61cb
 	},
 
 	[STAGES_EXP_NOVIUM] = {
 		{start_level = 1, end_level = 99, multipler = 10}
-    ,{start_level = 100, end_level = 159, multipler = 8}
-    ,{start_level = 160, end_level = 179, multipler = 4}
-    ,{start_level = 180, end_level = 199, multipler = 3}
-    ,{start_level = 200, multipler = 2}
+	    ,{start_level = 100, end_level = 159, multipler = 8}
+	    ,{start_level = 160, end_level = 179, multipler = 4}
+	    ,{start_level = 180, end_level = 199, multipler = 3}
+	    ,{start_level = 200, multipler = 2}
 	},
 
 	[STAGES_EXP_NOVIUM_PROTECTED] = {
 		{start_level = 1, end_level = 59, multipler = 10}
-    ,{start_level = 60, multipler = 2}
+    	,{start_level = 60, multipler = 2}
 	},
 	
 	--[[
