@@ -10,24 +10,34 @@ SKILL_STAGE_NON_LOGOUT_PLAYERS = SKILL_STAGE_MAGES
 
 stages = {
 	[STAGES_EXPERIENCE] = {
-		{start_level = 1, multipler = 2}
+		{start_level = 1, end_level = 99, multipler = 80}
+	    ,{start_level = 100, end_level = 199, multipler = 40}
+	    ,{start_level = 200, end_level = 249, multipler = 20}
+	    ,{start_level = 250, end_level = 299, multipler = 10}
+	    ,{start_level = 300, end_level = 339, multipler = 5}
+	    ,{start_level = 340, multipler = 2}
 	},
 
 	[STAGES_EXP_PROTECTED] = {
-		{start_level = 1, multipler = 2}
+		{start_level = 1, end_level = 99, multipler = 80}
+	    ,{start_level = 100, end_level = 199, multipler = 40}
+	    ,{start_level = 200, end_level = 249, multipler = 20}
+	    ,{start_level = 250, end_level = 299, multipler = 10}
+	    ,{start_level = 300, end_level = 339, multipler = 5}
+	    ,{start_level = 340, multipler = 2}
 	},
 
 	[STAGES_EXP_NOVIUM] = {
 		{start_level = 1, end_level = 99, multipler = 10}
-    ,{start_level = 100, end_level = 159, multipler = 8}
-    ,{start_level = 160, end_level = 179, multipler = 4}
-    ,{start_level = 180, end_level = 199, multipler = 3}
-    ,{start_level = 200, multipler = 2}
+	    ,{start_level = 100, end_level = 159, multipler = 8}
+	    ,{start_level = 160, end_level = 179, multipler = 4}
+	    ,{start_level = 180, end_level = 199, multipler = 3}
+	    ,{start_level = 200, multipler = 2}
 	},
 
 	[STAGES_EXP_NOVIUM_PROTECTED] = {
 		{start_level = 1, end_level = 59, multipler = 10}
-    ,{start_level = 60, multipler = 2}
+    	,{start_level = 60, multipler = 2}
 	},
 	
 	--[[
@@ -185,7 +195,7 @@ function changeStage(cid, skilltype, multiple, silent)
 		
 		local expSpecialBonus = 0
 		
-		local bonuses = getAccountExpBonus(cid)
+		--[[local bonuses = getAccountExpBonus(cid)
 		if #bonuses > 0 then
 			for k,v in pairs(bonuses) do
 				expSpecialBonus = expSpecialBonus + v["exp"]
@@ -193,7 +203,7 @@ function changeStage(cid, skilltype, multiple, silent)
 					doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, v["desc"] .. " [expires in " .. os.date("%x %X", v["end"]) .. "].")
 				end
 			end
-		end
+		end]]--
 
 		local darkGeneralBuffDuration = getPlayerStorageValue(cid, sid.SLAIN_DARK_GENERAL)		
 		if(darkGeneralBuffDuration > 0 and os.time() < darkGeneralBuffDuration) then

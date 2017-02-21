@@ -66,3 +66,14 @@ darghos_participate_ent_exp_bonus_percent = 100
 darghos_use_protected_stages = false
 
 darghos_enable_portals = false
+
+world_config = {
+	
+	[WORLD_ANTINUM] = {
+		["change_pvp_allowed"] = true
+	},
+
+	[WORLD_NOVIUM] = {
+		["change_pvp_allowed"] = false
+	}
+}

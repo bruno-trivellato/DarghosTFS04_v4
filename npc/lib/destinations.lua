@@ -159,7 +159,11 @@ function boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
 		
 		if(not hasFirstChangePvpArea) then
 			npcHandler:say('I see that this is the first time that you go to Quendor. Have some things that you need to know: <...>', cid)
-			npcHandler:say('Out of Island of Peace, all the game is PvP. This means that others players can kill you. <...>', cid)
+			if not getWorldConfig("change_pvp_allowed") then
+				npcHandler:say('Out of Island of Peace, all the game is PvP. This means that others players can kill you. <...>', cid)
+			else
+				npcHandler:say('Out of Island of Peace you can enable your PvP by using "!changepvp" command. Be careful, doing that others players can kill you. <...>', cid)
+			end
 			npcHandler:say('Until level 50 you are free to back to Island of Peace if you want. But when you reach these level, you will not be allowed to back here anymore <...>', cid)			
 			npcHandler:say('Then, you really want go to Quendor? The first travel is for free!', cid)
 			
@@ -197,7 +201,10 @@ function boatDestiny.addQuendorFromIslandOfPeace(keywordHandler, npcHandler)
 			npcHandler:say('Welcome back to Quendor ' .. getPlayerName(cid) .. '!', cid)
 		end
 		
-		doPlayerEnablePvp(cid)
+		if not getWorldConfig("change_pvp_allowed") then
+			doPlayerEnablePvp(cid)
+		end
+
 		doPlayerSetTown(cid, towns.QUENDOR)
 		setStageOnChangePvp(cid)
 		
