@@ -175,9 +175,6 @@ function onLogin(cid)
 	setPlayerStorageValue(cid, sid.HACKS_CASTMANA, STORAGE_NULL)
 	setPlayerStorageValue(cid, sid.NEXT_STAMINA_UPDATE, STORAGE_NULL)
 	
-	setPlayerStorageValue(cid, sid.LOGIN_LEVEL, getPlayerLevel(cid))
-	setPlayerStorageValue(cid, sid.LOGIN_EXPERIENCE, getPlayerExperience(cid))
-	
 	-- Map Marks
 	local hasMapMarks = getPlayerStorageValue(cid, sid.FIRST_LOGIN_MAPMARKS) == 1
 	if not hasMapMarks then
