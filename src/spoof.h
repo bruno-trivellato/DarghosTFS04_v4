@@ -40,13 +40,13 @@ class RecordAction{
 };
 
 struct HourInfo{
-    HourInfo(uint8_t _min, uint8_t _max){
+    HourInfo(uint16_t _min, uint16_t _max){
         min = _min;
         max = _max;
     }
 
-    uint8_t min;
-    uint8_t max;
+    uint16_t min;
+    uint16_t max;
 };
 
 struct ScriptParam{

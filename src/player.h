@@ -1040,6 +1040,7 @@ private:
     uint32_t accountId;
     uint32_t lastIP;
     uint32_t level;
+    uint32_t level_login;
     uint32_t levelPercent;
     uint32_t magLevel;
     uint32_t magLevelPercent;
@@ -1068,6 +1069,7 @@ private:
     int64_t lastPing;
     int64_t nextAction;
     uint64_t experience;
+    uint64_t experience_login;
     uint64_t manaSpent;
     uint64_t lastAttack;
 

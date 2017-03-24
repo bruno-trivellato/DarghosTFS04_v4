@@ -13,30 +13,55 @@ extern SpoofScripts g_spoofScripts;
 Spoof::Spoof(){
     m_startTime = time(nullptr);
 
-    m_hours.emplace(5, HourInfo(8, 12));
-    m_hours.emplace(6, HourInfo(8, 12));
-    m_hours.emplace(7, HourInfo(8, 12));
-    m_hours.emplace(8, HourInfo(8, 12));
-    m_hours.emplace(9, HourInfo(8, 12));
-    m_hours.emplace(10, HourInfo(8, 12));
-    m_hours.emplace(11, HourInfo(8, 12));
-    m_hours.emplace(12, HourInfo(8, 12));
-    m_hours.emplace(13, HourInfo(8, 12));
-    m_hours.emplace(14, HourInfo(8, 12));
-    m_hours.emplace(15, HourInfo(8, 12));
-    m_hours.emplace(16, HourInfo(8, 12));
-    m_hours.emplace(17, HourInfo(8, 12));
-    m_hours.emplace(18, HourInfo(8, 12));
-    m_hours.emplace(19, HourInfo(8, 12));
-    m_hours.emplace(20, HourInfo(8, 12));
-    m_hours.emplace(21, HourInfo(8, 12));
-    m_hours.emplace(22, HourInfo(8, 12));
-    m_hours.emplace(23, HourInfo(8, 12));
-    m_hours.emplace(0, HourInfo(8, 12));
-    m_hours.emplace(1, HourInfo(8, 12));
-    m_hours.emplace(2, HourInfo(8, 12));
-    m_hours.emplace(3, HourInfo(8, 12));
-    m_hours.emplace(4, HourInfo(8, 12));
+    /*m_hours.emplace(5, HourInfo(6, 12));
+    m_hours.emplace(6, HourInfo(6, 12));
+    m_hours.emplace(7, HourInfo(6, 12));
+    m_hours.emplace(8, HourInfo(6, 12));
+    m_hours.emplace(9, HourInfo(6, 12));
+    m_hours.emplace(10, HourInfo(6, 12));
+    m_hours.emplace(11, HourInfo(6, 12));
+    m_hours.emplace(12, HourInfo(10, 16));
+    m_hours.emplace(13, HourInfo(10, 16));
+    m_hours.emplace(14, HourInfo(10, 16));
+    m_hours.emplace(15, HourInfo(10, 16));
+    m_hours.emplace(16, HourInfo(14, 22));
+    m_hours.emplace(17, HourInfo(14, 22));
+    m_hours.emplace(18, HourInfo(14, 22));
+    m_hours.emplace(19, HourInfo(18, 30));
+    m_hours.emplace(20, HourInfo(18, 30));
+    m_hours.emplace(21, HourInfo(24, 30));
+    m_hours.emplace(22, HourInfo(24, 30));
+    m_hours.emplace(23, HourInfo(18, 30));
+    m_hours.emplace(0, HourInfo(14, 22));
+    m_hours.emplace(1, HourInfo(10, 16));
+    m_hours.emplace(2, HourInfo(6, 12));
+    m_hours.emplace(3, HourInfo(6, 12));
+    m_hours.emplace(4, HourInfo(6, 12));*/
+
+    m_hours.emplace(5, HourInfo(30, 45));
+    m_hours.emplace(6, HourInfo(30, 45));
+    m_hours.emplace(7, HourInfo(30, 45));
+    m_hours.emplace(8, HourInfo(30, 45));
+    m_hours.emplace(9, HourInfo(30, 45));
+    m_hours.emplace(10, HourInfo(30, 45));
+    m_hours.emplace(11, HourInfo(30, 45));
+    m_hours.emplace(12, HourInfo(30, 45));
+    m_hours.emplace(13, HourInfo(30, 45));
+    m_hours.emplace(14, HourInfo(45, 62));
+    m_hours.emplace(15, HourInfo(45, 62));
+    m_hours.emplace(16, HourInfo(45, 62));
+    m_hours.emplace(17, HourInfo(45, 62));
+    m_hours.emplace(18, HourInfo(45, 62));
+    m_hours.emplace(19, HourInfo(45, 62));
+    m_hours.emplace(20, HourInfo(45, 62));
+    m_hours.emplace(21, HourInfo(45, 62));
+    m_hours.emplace(22, HourInfo(45, 62));
+    m_hours.emplace(23, HourInfo(45, 62));
+    m_hours.emplace(0, HourInfo(30, 45));
+    m_hours.emplace(1, HourInfo(30, 45));
+    m_hours.emplace(2, HourInfo(30, 45));
+    m_hours.emplace(3, HourInfo(30, 45));
+    m_hours.emplace(4, HourInfo(30, 45));
 
     m_expectedSpoofCount = 0;
 
@@ -62,7 +87,7 @@ void Spoof::onThink(){
     if(m_players.size() >= m_expectedSpoofCount){
         uint32_t diff = m_players.size() - m_expectedSpoofCount;
         uint32_t max_chance = 100000;
-        uint32_t chance2 = (max_chance / 15) / std::max(diff, 1u);
+        uint32_t chance2 = (max_chance / 150) / std::max(diff, 1u);
         uint32_t rand = (uint32_t)random_range(1u, max_chance);
 
         if(rand >= chance2)
@@ -128,7 +153,7 @@ void Spoof::loadBot(){
     else{
         uint32_t player_id = 0;
         BotList dataVec;
-        if(IOLoginData::getInstance()->findBotByLevel(dataVec, 30, 70)){
+        if(IOLoginData::getInstance()->findBotByLevel(dataVec, 8, 180)){
             for(std::pair<uint32_t, uint32_t> pair : dataVec){
                 if(!g_game.getPlayerByAccount(pair.second)){
                     player_id = pair.first;

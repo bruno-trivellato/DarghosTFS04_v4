@@ -98,7 +98,8 @@ class Battleground
 		BattlegroundStatus getStatus() { return status; }
 
         BattlegrondRetValue onPlayerJoin(Player* player);
-		BattlegrondRetValue kickPlayer(Player* player, bool force = false);
+        void kickPlayerById(uint32_t player_id, bool force = false);
+        void kickPlayer(Player* player, bool force = false);
 		void onPlayerDeath(Player* killer, DeathList deathList);
 		PlayersMap listPlayersOfTeam(Bg_Teams_t team);
 		Bg_PlayerInfo_t* findPlayerInfo(Player* player);
@@ -176,3 +177,4 @@ class Battleground
 
 #endif
 #endif
+

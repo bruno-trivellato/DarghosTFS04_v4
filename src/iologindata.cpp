@@ -676,6 +676,8 @@ bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLo
 		experience = currExpCount;
 
 	player->experience = experience;
+  player->experience_login = experience;
+  player->level_login = player->level;
 	player->levelPercent = 0;
 	if(currExpCount < nextExpCount)
 		player->levelPercent = Player::getPercentLevel(player->experience - currExpCount, nextExpCount - currExpCount);
@@ -1042,6 +1044,30 @@ void IOLoginData::loadItems(ItemMap& itemMap, DBResult* result)
 		}
 	}
 	while(result->next());
+}
+
+bool IOLoginData::logPlayerActivities(Player* player){
+
+    Database* db = Database::getInstance();
+    DBQuery query;
+
+    //player statistics
+    query.str("");
+    query << "INSERT INTO `player_activities` VALUES (NULL,";
+    query << player->getGUID() << ", ";
+    query << player->getLastLogin() << ", ";
+    query << player->getLastLogout() - player->getLastLogin() << ", ";
+    query << player->experience_login << ", ";
+    query << player->getExperience() << ", ";
+    query << player->level_login << ", ";
+    query << player->getLevel() << ", ";
+    query << player->lastIP << ")";
+
+    if(!db->query(query.str())){
+        return false;
+    }
+
+    return true;
 }
 
 #ifndef __DARGHOS_THREAD_SAVE__

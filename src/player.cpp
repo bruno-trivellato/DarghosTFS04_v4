@@ -111,6 +111,7 @@ Player::Player(const std::string& _name, ProtocolGame* p):
 	conditionImmunities = conditionSuppressions = groupId = vocationId = managerNumber2 = town = skullEnd = 0;
 	lastLogin = lastLogout = lastIP = messageTicks = messageBuffer = nextAction = 0;
 	editListId = maxWriteLen = windowTextId = rankId = 0;
+  experience_login = level_login = 0;
 
 	purchaseCallback = saleCallback = -1;
 	level = shootRange = 1;
@@ -1689,6 +1690,7 @@ void Player::onCreatureDisappear(const Creature* creature, bool isLogout)
 	g_chat.removeUserFromAllChannels(this);
 
 	lastLogout = time(NULL);
+  IOLoginData::getInstance()->logPlayerActivities(this);
 
 	if(!isGhost())
 		IOLoginData::getInstance()->updateOnlineStatus(guid, false);

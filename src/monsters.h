@@ -147,7 +147,7 @@ class Monsters
 
 		uint32_t getIdByName(const std::string& name);
 		bool isLoaded() const {return loaded;}
-		static uint16_t getLootRandom();
+		static uint32_t getLootRandom();
 
 	private:
 		bool loaded;

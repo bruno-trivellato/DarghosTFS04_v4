@@ -31,11 +31,7 @@ void Battleground::onClose()
 	{
 		for(PlayersMap::iterator it_players = it_teams->second.players.begin(); it_players != it_teams->second.players.end(); it_players++)
 		{
-			Player* player = g_game.getPlayerByID(it_players->first);
-			if(!player)
-				continue;
-
-			kickPlayer(player, true);
+            kickPlayerById(it_players->first, true);
 		}
 	}
 
@@ -217,7 +213,7 @@ void Battleground::finishByWinner(Bg_Teams_t teamWinner)
 			player->sendPvpChannelMessage("Você será levado ao lugar em que estava em 5 segundos...");
 
             g_scheduler.addEvent(createSchedulerTask(1000 * 5,
-                std::bind(&Battleground::kickPlayer, this, player, true)));
+                std::bind(&Battleground::kickPlayerById, this, (uint32_t)it_players->first, true)));
 
 			time_t timeInBg = time(NULL) - it_players->second.join_in;
 			time_t bgDuration = time(NULL) - lastInit;
@@ -473,11 +469,22 @@ BattlegrondRetValue Battleground::onPlayerJoin(Player* player)
     return BATTLEGROUND_NO_ERROR;
 }
 
-BattlegrondRetValue Battleground::kickPlayer(Player* player, bool force)
+void Battleground::kickPlayerById(uint32_t player_id, bool force)
+{
+    Player* player = g_game.getPlayerByID(player_id);
+    if(!player){
+        std::clog << "Cannot kick player from battleground: " << player_id << std::endl;
+        return;
+    }
+
+    kickPlayer(player, force);
+}
+
+void Battleground::kickPlayer(Player* player, bool force)
 {
 	if(!player || player->isRemoved())
 	{
-		return BATTLEGROUND_NO_ERROR;
+        return;
 	}
 
 	Bg_Teams_t team_id = player->getBattlegroundTeam();
@@ -538,8 +545,6 @@ BattlegrondRetValue Battleground::kickPlayer(Player* player, bool force)
 	{
 		(*it)->executeBgLeave(player);
 	}
-
-	return BATTLEGROUND_NO_ERROR;
 }
 
 void Battleground::onPlayerDeath(Player* player, DeathList deathList)
@@ -878,3 +883,4 @@ bool Battleground::orderWaitlistByRating(Player* first, Player* second)
 }
 
 #endif
+

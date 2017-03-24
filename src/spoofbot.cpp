@@ -293,7 +293,7 @@ void PlayerBot::onThink(){
 
     //time to say bye...
     if(lastLogin + (m_minutes * 60) < time(nullptr)){
-        g_game.removeCreature(this);
+        kickPlayer(true, true);
     }
 
     setIdleTime(0);
@@ -704,3 +704,4 @@ std::string PlayerBot::logHeader(){
     std::string str(buf);
     return str;
 }
+

@@ -90,9 +90,10 @@ void MonsterType::reset()
 	elementMap.clear();
 }
 
-uint16_t Monsters::getLootRandom()
+uint32_t Monsters::getLootRandom()
 {
-	return (uint16_t)std::ceil((double)random_range(0, MAX_LOOTCHANCE) / g_config.getDouble(ConfigManager::RATE_LOOT));
+    double rand = random_range(0, MAX_LOOTCHANCE);
+    return (uint32_t)std::ceil(rand / g_config.getDouble(ConfigManager::RATE_LOOT));
 }
 
 void MonsterType::dropLoot(Container* corpse)
