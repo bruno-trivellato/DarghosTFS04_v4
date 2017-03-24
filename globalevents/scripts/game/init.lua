@@ -34,6 +34,11 @@ function onStartup()
 	if(today.wday == WEEKDAY.SATURDAY) then
 		db.executeQuery("UPDATE `player_storage` SET `value` = -1 WHERE `key` = '" .. sid.HAS_MADE_WEECLY_CHANGE .. "'")
 	end
+
+	-- resetando dungeons semanalmente as terças
+	if(today.wday == WEEKDAY.TUESDAY) then
+		db.executeQuery("UPDATE `player_storage` SET `value` = -1 WHERE `key` = '" .. gid.DUNGEONS_ARIADNE_GHAZRAN .. "'")
+	end
 	
 	-- resetando storages diarios
 	db.executeQuery("UPDATE `player_storage` SET `value` = -1 WHERE `key` = '" .. sid.WEBSITE_POLL_NOTIFY .. "'")

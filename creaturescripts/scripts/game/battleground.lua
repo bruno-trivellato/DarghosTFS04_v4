@@ -214,7 +214,7 @@ function onReceiveFlagStacks(cid, stacks)
     
     msg = string.gsub(msg, "|PLAYER_FLAG|", getPlayerName(cid) .. " (" .. getPlayerLevel(cid) .. ")")
     msg = string.gsub(msg, "|TEAM_FLAG|", teams[getPlayerBattlegroundTeam(cid)])    
-    msg = string.gsub(msg, "|DAMAGE|", stacks * 10)
+    msg = string.gsub(msg, "|DAMAGE|", stacks * 25)
     
     pvpBattleground.sendPvpChannelMessage(msg, PVPCHANNEL_MSGMODE_INBATTLE)
 end
