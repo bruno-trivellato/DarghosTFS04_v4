@@ -626,7 +626,7 @@ bool Combat::CombatHealthFunc(Creature* caster, Creature* target, const CombatPa
                     Bg_Team_t* team = NULL;
                     if((team = g_battleground.findPlayerTeam(target->getPlayer()))){
                         if(team->flag_debuff_stacks > 0){
-                            change = change * (1. + (0.10 * team->flag_debuff_stacks));
+                            change = change * (1. + (0.25 * team->flag_debuff_stacks));
                         }
                     }
                 }

@@ -2018,17 +2018,12 @@ void Player::onThink(uint32_t interval)
         {
             team->flag_debuff_ticks += interval;
 
-            if(team->flag_debuff_ticks >= 1000 * 60)
+            if(team->flag_debuff_ticks >= 1000 * 30)
             {
 
                 bool increased = false;
 
-                if(team->flag_debuff_stacks == 0 && team->flag_debuff_ticks >= 1000 * 60 * 2){
-                    team->flag_debuff_stacks++;
-                    team->flag_debuff_ticks = 0;
-                    increased = true;
-                }
-                else if(team->flag_debuff_stacks >= 1 && team->flag_debuff_stacks < 5){
+                if(team->flag_debuff_stacks >= 0 && team->flag_debuff_stacks < 6){
                     team->flag_debuff_stacks++;
                     team->flag_debuff_ticks = 0;
                     increased = true;

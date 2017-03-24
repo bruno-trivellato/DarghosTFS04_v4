@@ -131,8 +131,8 @@ bool Battleground::playerIsInWaitlist(Player* player)
 			return true;
 		}
         else if(waiting->getIP() == player->getIP() && !alertMc){
-            player->sendPvpChannelMessage("ALERTA: Foi identificado que sua conexão possui mais deu um personagem na fila para a proxima Battleground. O uso de multiclient na Battleground é rigorosamente proibido e um replay dessa partida será assistido por um moderador e caso seja confirmado abuso de multiclient, você recebera punições e pode até mesmo ser banido permanentemente da Battleground em todos os seus personagens!", SPEAK_CHANNEL_O);
-            alertMc = true;
+            player->sendPvpChannelMessage("ALERTA: Foi identificado que sua conexão possui mais deu um personagem na fila para a proxima Battleground. O uso de multiclient na Battleground não é permitido!", SPEAK_CHANNEL_O);
+            return true;
         }
     }
 
