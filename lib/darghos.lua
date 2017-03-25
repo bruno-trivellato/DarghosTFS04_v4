@@ -27,4 +27,6 @@ dofile(getDataDir() .. "lib/darghos/teleports.lua")
 
 dofile(getDataDir() .. "lib/darghos/e_dark_general.lua")
 dofile(getDataDir() .. "lib/darghos/e_ent.lua")
+dofile(getDataDir() .. "lib/darghos/e_bking.lua")
+
 --dofile(getDataDir() .. "lib/darghos/daily.lua")

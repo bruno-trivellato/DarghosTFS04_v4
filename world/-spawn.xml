@@ -31948,11 +31948,7 @@
 		<monster name="Banshee" x="1" y="3" z="14" spawntime="60" />
 		<monster name="Demon" x="3" y="3" z="14" spawntime="60" />
 	</spawn>
-	<spawn centerx="1987" centery="1815" centerz="14" radius="1">
-		<monster name="Vampire" x="-1" y="-1" z="14" spawntime="60" />
-		<monster name="Priestess" x="1" y="0" z="14" spawntime="60" />
-		<monster name="Necromancer" x="-1" y="1" z="14" spawntime="60" />
-	</spawn>
+	<spawn centerx="1987" centery="1815" centerz="14" radius="1" />
 	<spawn centerx="2323" centery="1928" centerz="14" radius="30">
 		<monster name="Ghastly Dragon" x="-1" y="-23" z="14" spawntime="120" />
 		<monster name="Draken Elite" x="7" y="-23" z="14" spawntime="120" />
@@ -32171,20 +32167,15 @@
 		<monster name="Behemoth" x="1" y="-1" z="15" spawntime="600" />
 	</spawn>
 	<spawn centerx="2002" centery="1814" centerz="15" radius="1">
-		<monster name="Cyclops Drone" x="0" y="1" z="15" spawntime="60" />
-		<monster name="Cyclops" x="1" y="1" z="15" spawntime="60" />
+		<monster name="Cyclops Drone" x="0" y="-1" z="15" spawntime="60" />
+		<monster name="Cyclops" x="1" y="-1" z="15" spawntime="60" />
 	</spawn>
 	<spawn centerx="1984" centery="1823" centerz="15" radius="1">
 		<monster name="Cyclops Smith" x="1" y="-1" z="15" spawntime="60" />
 		<monster name="Cyclops" x="1" y="1" z="15" spawntime="60" />
 	</spawn>
 	<spawn centerx="2007" centery="1824" centerz="15" radius="1">
-		<monster name="Behemoth" x="1" y="-1" z="15" spawntime="60" />
+		<monster name="Behemoth" x="1" y="0" z="15" spawntime="60" />
 	</spawn>
-	<spawn centerx="1999" centery="1830" centerz="15" radius="1">
-		<monster name="Behemoth" x="1" y="-1" z="15" spawntime="600" />
-		<monster name="Cyclops" x="-1" y="0" z="15" spawntime="60" />
-		<monster name="Cyclops Drone" x="1" y="0" z="15" spawntime="60" />
-		<monster name="Cyclops Smith" x="1" y="1" z="15" spawntime="60" />
-	</spawn>
+	<spawn centerx="1999" centery="1830" centerz="15" radius="1" />
 </spawns>

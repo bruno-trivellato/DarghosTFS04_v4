@@ -5,81 +5,32 @@
 	]]>
 	</script>
 
-	<announce delay="0" type="event" message="A loud bang could be heared coming from the center of the planet... Quendor must be prepared!"/>
-	<announce delay="60000" type="event" message="Heavy metals are distorting, the giants glorify the arrival of their KING!"/>
+	<announce delay="0" type="event" message="A loud bang could be heared coming from the center of the planet... Quendor must be prepared! The portal to world boss will be available in Quendor Depot."/>
+	<announce delay="60000" type="event" message="Heavy metals are distorting, the giants glorify the arrival of their KING! The portal to world boss will be available in Quendor Depot."/>
 	
-	<announce delay="180000" type="event" message="Giants are coming from everyware to acclaim their King! The north territory must be avoided! Specially the underground!"/>	
+	<announce delay="180000" type="event" message="Giants are coming from everyware to acclaim their King! The north territory must be avoided! Specially the underground! The portal to world boss will be available in Quendor Depot."/>	
 
-	<areaspawn delay="180000" centerx="1932" centery="1798" centerz="7" radius="15">
-		<monster name="Cyclops" minamount="10" maxamount="15"/>
-		<monster name="Cyclops Drone" minamount="4" maxamount="6"/>
-		<monster name="Cyclops Smith" minamount="8" maxamount="12"/>
-	</areaspawn>
-
-	<areaspawn delay="600000" centerx="2030" centery="1748" centerz="7" radius="15">
-		<monster name="Cyclops" minamount="10" maxamount="15"/>
-		<monster name="Cyclops Drone" minamount="4" maxamount="6"/>
-		<monster name="Cyclops Smith" minamount="8" maxamount="12"/>
-	</areaspawn>
-
-	<!-- entrada casinha -->
-	<areaspawn delay="180000" centerx="1925" centery="1806" centerz="9" radius="5">
-		<monster name="Cyclops" minamount="4" maxamount="6"/>
-		<monster name="Cyclops Drone" minamount="2" maxamount="4"/>
-		<monster name="Cyclops Smith" minamount="2" maxamount="4"/>
-	</areaspawn>
-
-	<areaspawn delay="180000" centerx="1924" centery="1796" centerz="10" radius="5">
-		<monster name="Cyclops" minamount="2" maxamount="6"/>
-		<monster name="Cyclops Drone" minamount="2" maxamount="4"/>
-		<monster name="Cyclops Smith" minamount="2" maxamount="4"/>
-		<monster name="Behemoth" minamount="3" maxamount="5"/>
-	</areaspawn>
-
-	<areaspawn delay="180000" centerx="2004" centery="1815" centerz="11" radius="5">
-		<monster name="Cyclops" minamount="2" maxamount="6"/>
-		<monster name="Cyclops Drone" minamount="2" maxamount="4"/>
-		<monster name="Cyclops Smith" minamount="2" maxamount="4"/>
-		<monster name="Behemoth" minamount="3" maxamount="5"/>
-	</areaspawn>
-
-	<areaspawn delay="180000" centerx="2017" centery="1811" centerz="12" radius="5">
-		<monster name="Cyclops Drone" minamount="2" maxamount="4"/>
-		<monster name="Cyclops Smith" minamount="2" maxamount="4"/>
-		<monster name="Behemoth" minamount="4" maxamount="6"/>
-	</areaspawn>
-
-	<areaspawn delay="180000" centerx="1991" centery="1807" centerz="13" radius="5">
-		<monster name="Behemoth" minamount="3" maxamount="5"/>
-	</areaspawn>
-
-	<areaspawn delay="180000" centerx="1992" centery="1822" centerz="13" radius="5">
-		<monster name="Behemoth" minamount="3" maxamount="5"/>
-	</areaspawn>
-
-	<areaspawn delay="180000" centerx="1986" centery="1820" centerz="15" radius="5">
-		<monster name="Behemoth" minamount="4" maxamount="6"/>
-	</areaspawn>	
-	<areaspawn delay="180000" centerx="2005" centery="1827" centerz="15" radius="5">
-		<monster name="Behemoth" minamount="4" maxamount="6"/>
-	</areaspawn>
-
-	<!-- entrada slime -->
-	<areaspawn delay="180000" centerx="1999" centery="1803" centerz="9" radius="5">
-		<monster name="Cyclops" minamount="2" maxamount="6"/>
-		<monster name="Cyclops Drone" minamount="2" maxamount="4"/>
-		<monster name="Cyclops Smith" minamount="2" maxamount="4"/>
-		<monster name="Behemoth" minamount="3" maxamount="5"/>
-	</areaspawn>	
 	
-	<announce delay="780000" type="event" message="The KING arrive on the underground! The giants new are intimidating the city! Quendor must show your power!"/>
+	<announce delay="300000" type="event" message="The KING arrive on the underground! The giants new are intimidating the city! Quendor must show your power! The portal to world boss is available in Quendor Depot."/>
 
-	<areaspawn delay="780000" centerx="1986" centery="1820" centerz="15" radius="5">
-		<monster name="Behemoth" minamount="4" maxamount="6"/>
-	</areaspawn>	
-	<areaspawn delay="780000" centerx="2005" centery="1827" centerz="15" radius="5">
-		<monster name="Behemoth" minamount="4" maxamount="6"/>
-	</areaspawn>	
+	<script delay="300000">
+	<![CDATA[
+	summonBking()
+	]]>	
+	</script>
 	
-	<singlespawn delay="780000" name="Behemoth king" x="2005" y="1831" z="15" />
+	<!-- FIM DA RAID: 6h -->
+	<script delay="21600000">
+	<![CDATA[
+	local bking = getCreatureByName("behemoth king")
+	
+	if(bking) then
+		doRemoveCreature(bking)
+		local msg = "There's no one that can defeat the king of Behemoths. Maybe next time..."
+		addEvent(doBroadcastMessage, 1000 * 2, msg, MESSAGE_EVENT_ADVANCE)
+	end
+	
+	doSetStorage(gid.EVENT_BKING, EVENT_STATE_END)
+	]]>	
+	</script>		
 </raid>

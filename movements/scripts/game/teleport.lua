@@ -72,6 +72,10 @@ function onStepIn(cid, item, position, fromPosition)
 		return false
 	end	
 
+	if not bkingPortal(cid, item, position, fromPosition) then
+		return false
+	end
+
 	if(item.actionid == aid.TELEPORT_NO_SKULLS and getCreatureSkull(cid) >= SKULL_WHITE) then
 			doPlayerSendCancel(cid, "You have blood in your hands. The destination of this portal os not for you.")
 			pushBack(cid, position, fromPosition)

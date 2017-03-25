@@ -226,6 +226,14 @@ function changeStage(cid, skilltype, multiple, silent)
 			end
 		end	
 
+		local bkingBuffDuration = getPlayerStorageValue(cid, sid.SLAIN_BKING)		
+		if(bkingBuffDuration > 0 and os.time() < bkingBuffDuration) then
+			expSpecialBonus = expSpecialBonus + darghos_kill_bking_exp_bonus_percent
+			if not silent then
+				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "By your collaboration last time defeating Behemoth King your experience gains will be increased by " .. darghos_kill_bking_exp_bonus_percent .. "% for a week.")
+			end
+		end			
+
 		local ent = tonumber(getPlayerStorageValue(cid, sid.ENT_PARTICIPATION))
 		if(ent == 1) then
 			expSpecialBonus = expSpecialBonus + darghos_participate_ent_exp_bonus_percent
