@@ -3,7 +3,7 @@ function darkGeneralPortal(cid, item, position, fromPosition)
 		if(getStorage(gid.EVENT_DARK_GENERAL) == EVENT_STATE_INIT) then
 			doPlayerEnterDarkGeneral(cid)
 		else
-			doPlayerSendCancel(cid, "O evento do Dark General só está disponível aos domingos a partir das 16:00.")
+			doPlayerSendCancel(cid, "O evento do Dark General só está disponível aos Dom 15:00, Qua 18:00 e Qui 23:00.")
 			pushBack(cid, position, fromPosition)
 			return false
 		end

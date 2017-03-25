@@ -42,6 +42,8 @@ function onDeath(cid, corpse, deathList)
 			onDarkGeneralDie(cid, corpse, deathList)
 		elseif(creatureName == "ancient nature") then
 			onAncientNatureDie(cid, corpse, deathList)
+		elseif(creatureName == "behemoth king") then
+			onBkingDie(cid, corpse, deathList)			
 		elseif(creatureName == "ghazran") then
 			onGhazranDie(corpse)
 		end

@@ -127,6 +127,9 @@
 		ENT_ENTRANCE				= 4092,
 		ENT_LEAVE					= 4093,
 
+		BKING_ENTRANCE				= 4094,
+		BKING_LEAVE					= 4095,
+
 		--  Poi Entrance Fields
 		POI_FIELDS_START			= 6010,
 		POI_FIELDS_END				= 6044,

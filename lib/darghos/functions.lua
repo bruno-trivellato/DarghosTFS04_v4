@@ -583,12 +583,16 @@ function doCreateRespawnArea(respawns, position, radius)
 	local min_y, max_y = position.y - radius, position.y + radius
 	
 	for k,v in pairs(respawns) do
+		local tries = 0
 		for i = 1, v.count do
 			local temp_pos = { z = position.z }
 			temp_pos.x = math.random(min_x, max_x)
 			temp_pos.y = math.random(min_y, max_y)
-			
-			doCreateMonster(v.name, temp_pos, true)
+
+			if not doCreateMonster(v.name, temp_pos, false, false, false) then
+				tries = tries + 1
+				i = i - 1
+			end
 		end
 	end
 end
