@@ -12753,10 +12753,12 @@
 		<monster name="catapult r" x="3" y="5" z="8" spawntime="3600" />
 		<monster name="Pillar" x="5" y="5" z="8" spawntime="60" />
 	</spawn>
-	<spawn centerx="2466" centery="1635" centerz="8" radius="1">
-		<npc name="battleground.magic2" x="0" y="0" z="8" spawntime="60" direction="2" />
+	<spawn centerx="2466" centery="1636" centerz="8" radius="1">
+		<npc name="battleground.magic2" x="0" y="-1" z="8" spawntime="60" direction="2" />
 	</spawn>
-	<spawn centerx="2533" centery="1638" centerz="8" radius="1" />
+	<spawn centerx="2533" centery="1638" centerz="8" radius="1">
+		<npc name="battleground.magic2" x="0" y="-1" z="8" spawntime="60" direction="2" />
+	</spawn>
 	<spawn centerx="2606" centery="1644" centerz="8" radius="5">
 		<monster name="Pillar" x="-4" y="-3" z="8" spawntime="60" />
 		<monster name="catapult l" x="-2" y="-3" z="8" spawntime="3600" />

@@ -36,7 +36,7 @@
     <attack name="manadrain" interval="1000" chance="30" radius="3" target="1" min="-800" max="-1500">
       <attribute key="areaEffect" value="groundshaker"/>
     </attack>
-    <attack script="monsters/behemoth_king_wave.lua" interval="2000" chance="100"/>
+    <attack script="monsters/behemoth_king_wave.lua" interval="16000" chance="100"/>
     <attack script="monsters/behemoth_king_minions.lua" interval="2000" chance="100"/>    
     <attack name="death" interval="1000" chance="1" length="1" spread="0" min="-2000" max="-2400">
       <attribute key="shootEffect" value="whirlwindaxe"/>
@@ -52,7 +52,7 @@
     <element deathPercent="90"/>
     <element earthPercent="99"/>
     <element icePercent="70"/>
-	<element holyPercent="70"/>
+  <element holyPercent="70"/>
     <element firePercent="99"/>
   </elements>
   <immunities>
@@ -72,9 +72,9 @@
     <voice sentence="I NEED TO EAT YOU!"/>
   </voices>
   <loot capacity="900">
-	<item id="2160" countmax="23" chance="90000">
-		<!--gold coin-->
-	</item>	  
+  <item id="2160" countmax="23" chance="90000">
+    <!--gold coin-->
+  </item>   
     <item id="6391" chance="10000">
       <!--nightmare shield-->       
       </item>
@@ -102,14 +102,14 @@
     <item id="12644" chance="2000">
       <!--shield of corruption-->
     </item>    
-	<item id="2365" countmax="1" chance="100000">
+  <item id="2365" countmax="1" chance="100000">
       <inside>
         <item id="2377" chance="90000">
           <!--two handed sword-->
         </item>
         <item id="2502" chance="20000">
           <!--dwarven helmet-->
-        </item>	
+        </item> 
         <item id="7416" chance="10000">
           <!--bloody edge-->
         </item>
@@ -154,34 +154,34 @@
         </item>
       </inside>
       <!--backpack of holding-->
-	  </item>
+    </item>
   </loot>
-    <individual maxItems="1" chance2item="20" minGold="15" maxGold="25" containerId="6511">
-  	  <item name="backpack of holding"/>
-  	  <item name="golden legs"/>
+    <individual maxItems="1" chance2item="40" minGold="15" maxGold="25" containerId="6511">
+      <item name="backpack of holding"/>
+      <item name="golden legs"/>
       <item name="cobra crown"/>
       <item name="elite draken helmet"/>
-  	  <item name="mastermind shield"/>
-  	  <item name="demon helmet"/>
-  	  <item name="steel boots"/>
-  	  <item name="knight armor"/>
-  	  <item name="fire sword"/>
-  	  <item name="naginata"/>
-  	  <item name="giant sword"/>
-  	  <item name="two handed sword"/>
-  	  <item name="magic plate armor"/>
-  	  <item name="nightmare shield"/>
-  	  <item name="dragon lance"/>
-  	  <item name="royal helmet"/>
-  	  <item name="magic sword"/>
-  	  <item name="ruthless axe"/>
-  	  <item name="amulet of loss"/>
-  	  <item name="dwarven helmet"/>
-  	  <item name="bright sword"/>
-  	  <item name="katana"/>
-  	  <item name="boots of haste"/>
-  	  <item name="demon helmet"/>
-  	  <item name="spike sword"/>
-  	  <item name="golden armor"/>
+      <item name="mastermind shield"/>
+      <item name="demon helmet"/>
+      <item name="steel boots"/>
+      <item name="knight armor"/>
+      <item name="fire sword"/>
+      <item name="naginata"/>
+      <item name="giant sword"/>
+      <item name="two handed sword"/>
+      <item name="magic plate armor"/>
+      <item name="nightmare shield"/>
+      <item name="dragon lance"/>
+      <item name="royal helmet"/>
+      <item name="magic sword"/>
+      <item name="ruthless axe"/>
+      <item name="amulet of loss"/>
+      <item name="dwarven helmet"/>
+      <item name="bright sword"/>
+      <item name="katana"/>
+      <item name="boots of haste"/>
+      <item name="demon helmet"/>
+      <item name="spike sword"/>
+      <item name="golden armor"/>
   </individual>
 </monster>
