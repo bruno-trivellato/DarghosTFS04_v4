@@ -53,5 +53,7 @@
 
 	<event type="partypassleadership" name="onPartyPassLeadership" event="script" value="game/party_events.lua"/>
 	<event type="partyleave" name="onPartyLeave" event="script" value="game/party_events.lua"/>	
+
+	<event type="think" name="bossThink" event="script" value="game/bosses.lua"/>
 	
 </creaturescripts>

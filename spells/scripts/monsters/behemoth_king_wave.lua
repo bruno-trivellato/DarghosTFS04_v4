@@ -106,11 +106,11 @@ BEHE_WAVE_FRAMES[8] = {
 local PLAYERS_HITS = 0
 
 local PHASE = {}
-PHASE[1] = { begin = 90, interval = 1800, min = 275, max = 390 }
-PHASE[2] = { begin = 60, interval = 1200, min = 335, max = 460 }
-PHASE[3] = { begin = 20, interval = 600, min = 415, max = 525 }
+PHASE[1] = { begin = 100, interval = 1000, min = 275, max = 390 }
+PHASE[2] = { begin = 60, interval = 600, min = 335, max = 460 }
+PHASE[3] = { begin = 20, interval = 300, min = 415, max = 525 }
 
-local CURRENT_PHASE = 0
+local CURRENT_PHASE = 1
 
 local combats_frames = {}
 local combat_areas = {}
@@ -142,15 +142,24 @@ function onCastSpell(cid, var)
 
 	local lifePercent = math.floor((getCreatureHealth(cid) * 100) / getCreatureMaxHealth(cid))
 
-	if lifePercent >= 90 and CURRENT_PHASE >= 4 then
-		CURRENT_PHASE = 0
-	end 
-
-	if((CURRENT_PHASE == 0 and lifePercent <= PHASE[1].begin) or (CURRENT_PHASE > 0 and PHASE[CURRENT_PHASE + 1] ~= nil and lifePercent <= PHASE[CURRENT_PHASE + 1].begin)) then
-		changePhase()
-		doCreatureSay(cid, "KING DEATH WAVE IS COMING!", TALKTYPE_MONSTER_YELL)
-		addEvent(doCombatFrame, 1000 * 4, cid, var, 1)
+	if lifePercent <= PHASE[3].begin then
+		CURRENT_PHASE = 3
+	elseif lifePercent <= PHASE[2].begin then
+		CURRENT_PHASE = 2
+	else
+		CURRENT_PHASE = 1
 	end
+
+	local list = getSpectators({x = 1995, y = 1820, z = 15}, 18, 18, false)
+
+	for k,v in ipairs(list) do
+		if isPlayer(v) then
+			doPlayerSendTextMessage(v, MESSAGE_STATUS_CONSOLE_BLUE, "Behemoth King usou a habilidade DEATH WAVE. Se esconda para evitar dano em você e nos outros!")
+		end
+	end
+
+	doCreatureSay(cid, "KING DEATH WAVE IS COMING!", TALKTYPE_MONSTER_YELL)
+	addEvent(doCombatFrame, 1000 * 4, cid, var, 1)	
 
 	return true
 end
@@ -163,13 +172,5 @@ function doCombatFrame(cid, var, frame)
 	else
 		
 		PLAYERS_HITS = 0
-	end
-end
-
-function changePhase()
-	if(CURRENT_PHASE >= 4) then
-		CURRENT_PHASE = 1
-	else
-		CURRENT_PHASE = CURRENT_PHASE + 1
 	end
 end

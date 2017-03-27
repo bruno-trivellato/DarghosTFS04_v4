@@ -64,21 +64,56 @@ function summonBehemoths(cid)
 
 	local pos = getCreaturePosition(cid)
 
-	local list = getSpectators(pos, 10, 10, false)
+	local list = getSpectators({x = 1995, y = 1820, z = 15}, 18, 18, false)
 	local behemoths = 0
 
+	local plist = {}
 	for k,v in ipairs(list) do
 		if string.lower(getCreatureName(v)) == "behemoth" then
 			behemoths = behemoths + 1
+		end
+
+		if isPlayer(v) then
+			table.insert(plist, v)
 		end
 	end
 
 	if(behemoths <= 16) then
 		doCreatureSay(cid, "BEHEMOTHS COME AND SERVE YOUR MASTER!", TALKTYPE_MONSTER_YELL)
 
+		for k,v in ipairs(plist) do
+			doPlayerSendTextMessage(v, MESSAGE_STATUS_CONSOLE_BLUE, "Behemoth King invocou alguns Behemoths para ajudar! Mate os para evitar que o boss se cure!")
+		end
 		
-		local respawn = {{name = "behemoth", count = 8}};
+		local behe_positions = {
+			{x = 1996, y = 1812, z = 15},
+			{x = 1998, y = 1812, z = 15},
+			{x = 2000, y = 1814, z = 15},
+			{x = 2004, y = 1818, z = 15},
+			{x = 2006, y = 1820, z = 15},
+			{x = 2005, y = 1822, z = 15},
+			{x = 1998, y = 1828, z = 15},
+			{x = 1995, y = 1828, z = 15},
+			{x = 1993, y = 1828, z = 15},
+			{x = 1988, y = 1822, z = 15},
+			{x = 1988, y = 1820, z = 15},
+			{x = 1989, y = 1818, z = 15},
+			{x = 1990, y = 1812, z = 15},
+			{x = 1989, y = 1829, z = 15},
+			{x = 2003, y = 1831, z = 15},
+			{x = 2005, y = 1825, z = 15}
+		}
 
-		doCreateRespawnArea(respawn, pos, 7)
+		local used = table.copy(behe_positions)
+
+		for i=1, 8 do
+			local pos = math.random(1, #used)
+			
+			if not doCreateMonster("behemoth", used[pos], false, false, false) then
+				std.clog("[Behemoth King Minions] No place found to summon")
+			end
+
+			table.remove(used, pos)
+		end
 	end
 end
