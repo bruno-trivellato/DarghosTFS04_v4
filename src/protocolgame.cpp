@@ -816,8 +816,8 @@ void ProtocolGame::parsePacket(NetworkMessage &msg)
         return;
     }
 
-    //a dead player cannot performs actions
-    if((player->isRemoved() || player->getHealth() <= 0) && recvbyte != 0x14){
+    //a dead player cannot performs actions, its false, on Darghos, dead players can not be dead
+    if(player->isRemoved() && recvbyte != 0x14){
         disconnect();
         return;
     }
