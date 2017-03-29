@@ -523,8 +523,14 @@ void Monster::setIdle(bool _idle)
 	if(isRemoved() || getHealth() <= 0)
 		return;
 
+    if(mType->isNeverIdle){
+        isIdle = false;
+        g_game.addCreatureCheck(this);
+        return;
+    }
+
 	isIdle = _idle;
-	if(isIdle)
+    if(isIdle)
 	{
 		onIdleStatus();
 		clearTargetList();

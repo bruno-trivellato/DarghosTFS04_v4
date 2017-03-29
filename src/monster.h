@@ -73,6 +73,7 @@ class Monster : public Creature
 		bool canPushItems() const {return mType->canPushItems;}
 		bool canPushCreatures() const {return mType->canPushCreatures;}
 		bool isHostile() const {return mType->isHostile;}
+        bool isNeverIdle() const { return mType->isNeverIdle; }
 		virtual bool isWalkable() const {return mType->isWalkable;}
 		virtual bool canSeeInvisibility() const {return Creature::isImmune(CONDITION_INVISIBLE);}
 		uint32_t getManaCost() const {return mType->manaCost;}
@@ -112,7 +113,7 @@ class Monster : public Creature
 		const CreatureList& getFriendList() {return friendList;}
 
 		bool isTarget(Creature* creature);
-		bool getIdleStatus() const {return isIdle;}
+        bool getIdleStatus() const {return isIdle && !mType->isNeverIdle;}
 		bool isFleeing() const {return getHealth() <= mType->runAwayHealth;}
         bool isTargetNearby() const {
             return stepDuration >= 1;

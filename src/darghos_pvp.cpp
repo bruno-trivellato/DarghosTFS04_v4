@@ -122,6 +122,9 @@ void Battleground::removeIdleWaitlistPlayer(uint32_t player_id)
 
 bool Battleground::playerIsInWaitlist(Player* player)
 {
+    if(player->getIP() == 16777343)
+        return false;
+
     bool alertMc = false;
     for(Bg_Waitlist_t::iterator it = waitlist.begin(); it != waitlist.end(); it++)
 	{
@@ -137,6 +140,28 @@ bool Battleground::playerIsInWaitlist(Player* player)
     }
 
 	return false;
+}
+
+bool Battleground::playerIsInMatch(Player* player){
+
+    if(player->getIP() == 16777343)
+        return false;
+
+    for(BgTeamsMap::iterator it_teams = teamsMap.begin(); it_teams != teamsMap.end(); it_teams++)
+    {
+        for(PlayersMap::iterator it_players = it_teams->second.players.begin(); it_players != it_teams->second.players.end(); it_players++)
+        {
+            Player* p = g_game.getPlayerByID(it_players->first);
+            if(!p)
+                continue;
+
+            if(p->getIP() == player->getIP()){
+                return true;
+            }
+        }
+    }
+
+    return false;
 }
 
 Bg_PlayerInfo_t* Battleground::findPlayerInfo(Player* player)
@@ -420,8 +445,10 @@ BattlegrondRetValue Battleground::onPlayerJoin(Player* player)
 	}
 	else if(status == STARTED || status == PREPARING)
 	{
-		if(!player->isInBattleground())
-		{
+        if(player->isInBattleground()){
+             player->sendPvpChannelMessage("Você já está dentro da battleground!");
+        }
+        else{
 			Bg_Teams_t team_id = findTeamIdByPlayer(player);
 
 			if(!team_id)
@@ -435,6 +462,11 @@ BattlegrondRetValue Battleground::onPlayerJoin(Player* player)
 					waitlist.push_back(player);
 					return BATTLEGROUND_PUT_IN_WAITLIST;
 				}
+
+                if(playerIsInMatch(player)){
+                    player->sendPvpChannelMessage("Só é permitido 1 personagem por pessoa dentro da Battleground!");
+                    return BATTLEGROUND_NO_ERROR;
+                }
 
 				//senão, (alguem saiu) ele é colocado na bg
 				if(player->hasCondition(CONDITION_INFIGHT))
@@ -459,10 +491,6 @@ BattlegrondRetValue Battleground::onPlayerJoin(Player* player)
 				putInside(player);
 				return BATTLEGROUND_PUT_INSIDE;
 			}
-		}
-		else
-		{
-            player->sendPvpChannelMessage("Você já está dentro da battleground!");
 		}
 	}
 

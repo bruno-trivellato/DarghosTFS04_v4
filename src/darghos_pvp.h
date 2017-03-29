@@ -109,6 +109,7 @@ class Battleground
 		void putInside(Player* player);
 		void start();
 		bool playerIsInWaitlist(Player* player);
+        bool playerIsInMatch(Player* player);
 		void removeWaitlistPlayer(Player* player);
         void removeIdleWaitlistPlayer(uint32_t player_id);
 		uint32_t getTeamSize() { return teamSize; }
