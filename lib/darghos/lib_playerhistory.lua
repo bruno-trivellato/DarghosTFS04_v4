@@ -47,6 +47,11 @@ PH_ACH_MISC_GOT_LEVEL_200 = 2001
 PH_ACH_MISC_GOT_LEVEL_300 = 2002
 PH_ACH_MISC_GOT_LEVEL_400 = 2003
 PH_ACH_MISC_GOT_LEVEL_500 = 2004
+PH_ACH_MISC_GOT_LEVEL_600 = 2005
+PH_ACH_MISC_GOT_LEVEL_700 = 2006
+PH_ACH_MISC_GOT_LEVEL_800 = 2007
+PH_ACH_MISC_GOT_LEVEL_900 = 2008
+PH_ACH_MISC_GOT_LEVEL_1000 = 2009
 
 PH_TYPE_LOG = 1
 PH_TYPE_ACHIEVEMENT = 2
@@ -139,6 +144,21 @@ playerAchievements = {
 	
 	,[PH_ACH_MISC_GOT_LEVEL_500] = {
 		notifyText = "[Façanha alcançada] Você atingiu o level 500!"
+	}	
+	,[PH_ACH_MISC_GOT_LEVEL_600] = {
+		notifyText = "[Façanha alcançada] Você atingiu o level 600!"
+	}
+	,[PH_ACH_MISC_GOT_LEVEL_700] = {
+		notifyText = "[Façanha alcançada] Você atingiu o level 700!"
+	}
+	,[PH_ACH_MISC_GOT_LEVEL_800] = {
+		notifyText = "[Façanha alcançada] Você atingiu o level 800!"
+	}
+	,[PH_ACH_MISC_GOT_LEVEL_900] = {
+		notifyText = "[Façanha alcançada] Você atingiu o level 900!"
+	}
+	,[PH_ACH_MISC_GOT_LEVEL_1000] = {
+		notifyText = "[Façanha alcançada] Você atingiu o level 1000!"
 	}	
 	,[PH_ACH_BE_PROMOTED] = {
 		notifyText = "[Façanha alcançada] Você atingiu o level 20 e ganhou uma promoção!"

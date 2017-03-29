@@ -797,7 +797,7 @@ function raidLog(raidname)
 	local out = os.date("%X") .. " | Raid [" .. raidname .. "] started. "
 	
 	local date = os.date("*t")
-	local fileStr = date.day .. "-" .. date.month .. ".log"
+	local fileStr = date.day .. "-" .. date.month .. "-" .. date.year .. ".log"
 	local patch = getConfigValue("logsDirectory") .. "raids/"
 	local file = io.open(patch .. fileStr, "a+")
 	

@@ -18,6 +18,16 @@ function onAdvance(cid, type, oldlevel, newlevel)
 			playerHistory.onAchiev(cid, PH_ACH_MISC_GOT_LEVEL_400)
 		elseif(newlevel == 500 and not playerHistory.hasAchievement(cid, PH_ACH_MISC_GOT_LEVEL_500)) then
 			playerHistory.onAchiev(cid, PH_ACH_MISC_GOT_LEVEL_500)
+		elseif(newlevel == 600 and not playerHistory.hasAchievement(cid, PH_ACH_MISC_GOT_LEVEL_600)) then
+			playerHistory.onAchiev(cid, PH_ACH_MISC_GOT_LEVEL_600)		
+		elseif(newlevel == 700 and not playerHistory.hasAchievement(cid, PH_ACH_MISC_GOT_LEVEL_700)) then
+			playerHistory.onAchiev(cid, PH_ACH_MISC_GOT_LEVEL_700)
+		elseif(newlevel == 800 and not playerHistory.hasAchievement(cid, PH_ACH_MISC_GOT_LEVEL_800)) then
+			playerHistory.onAchiev(cid, PH_ACH_MISC_GOT_LEVEL_800)
+		elseif(newlevel == 900 and not playerHistory.hasAchievement(cid, PH_ACH_MISC_GOT_LEVEL_900)) then
+			playerHistory.onAchiev(cid, PH_ACH_MISC_GOT_LEVEL_900)
+		elseif(newlevel == 1000 and not playerHistory.hasAchievement(cid, PH_ACH_MISC_GOT_LEVEL_1000)) then
+			playerHistory.onAchiev(cid, PH_ACH_MISC_GOT_LEVEL_1000)				
 		end
 	
 		--[[

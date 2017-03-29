@@ -64,6 +64,7 @@ function summonAncientNature()
 
 	local creature = doSummonCreature("ent", summonPos, true, true)
 	registerCreatureEvent(creature, "monsterDeath")
+	registerCreatureEvent(creature, "onStateChange")
 
 	for k,v in pairs(ancientWalls) do
 		local item = getTileItemById(v, ancientWallId)

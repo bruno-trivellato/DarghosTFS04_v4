@@ -18,6 +18,8 @@
     <flag targetdistance="1"/>
     <flag checkcorpseowner="0"/>
     <flag runonhealth="0"/>
+    <flag canpushcreatures="1"/>
+    <flag neveridle="1"/>
   </flags>
   <attacks>
     <attack name="melee" interval="2000" skill="210" attack="120"/>
@@ -52,7 +54,7 @@
     <element deathPercent="90"/>
     <element earthPercent="99"/>
     <element icePercent="70"/>
-  <element holyPercent="70"/>
+    <element holyPercent="70"/>
     <element firePercent="99"/>
   </elements>
   <immunities>

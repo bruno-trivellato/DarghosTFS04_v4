@@ -2,6 +2,10 @@
 <monsters>
 
 	<!-- Darghos -->
+	<monster name="Royal Paladin" file="darghos/sim_paladin.xml" />
+	<monster name="Master Sorcerer" file="darghos/sim_sorcerer.xml" />
+	<monster name="Elite Knight" file="darghos/sim_knight.xml" />
+
 	<monster name="Dark Warrior" file="darghos/dark-forces/dark warrior.xml" />
 	<monster name="Dark General" file="darghos/dark-forces/dark general.xml" />
 	<monster name="Dark Archer" file="darghos/dark-forces/dark archer.xml" />
@@ -28,7 +32,7 @@
 	<monster name="Bayemon" file="darghos/Bayemon.xml" />
 	<monster name="Bazir" file="darghos/bazir.xml" />
 	<monster name="Behemoth King" file="darghos/behemoth king.xml" />
-	<monster name="Behemoth Minion" file="darghos/Behemoth Minion.xml" />
+	<monster name="King Minion" file="darghos/Behemoth Minion.xml" />
 	<monster name="Dark Eye" file="darghos/Dark Eye.xml" />
 	<monster name="Demon Crusher" file="darghos/demon_crusher.xml" />
 	<monster name="demonportal" file="darghos/demonportal.xml" />
