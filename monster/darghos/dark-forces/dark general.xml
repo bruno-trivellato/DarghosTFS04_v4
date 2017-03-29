@@ -26,6 +26,7 @@
     <attack chance="51" interval="2000" range="7" min="-250" name="physical" max="-450">
       <attribute key="shootEffect" value="whirlwindaxe"/>
     </attack>
+    <attack script="monsters/general_priestess.lua" interval="20000" chance="100"/>
   </attacks>
   <defenses defense="50" armor="100"/>
   <immunities>
@@ -41,12 +42,9 @@
     <element icePercent="-10"/>
     <element holyPercent="-15"/>
     <element physicalPercent="50"/>
-	<element deathPercent="-1000"/>
+	   <element deathPercent="35"/>
     <element energyPercent="10"/>
   </elements>
-  <summons maxSummons="0">
-    <summon chance="7" interval="1000" name="dark priestess"/>
-  </summons>
   <voices chance="50" interval="5000">
     <voice sentence="O esforço de vocês Quendorianos é inutil!"/>
     <voice sentence="Tropas! Me curem!"/>
