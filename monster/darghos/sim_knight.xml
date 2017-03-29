@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monster speed="350" race="blood" experience="0" name="elite knight" nameDescription="a knight">
+  <health max="5315" now="5315"/>
+  <look head="57" body="132" addons="3" legs="114" type="131" corpse="6080" feet="114"/>
+  <targetchange chance="10" interval="15000"/>
+  <strategy defense="30" attack="70"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="40"/>
+    <flag runonhealth="0"/>
+    <flag checkcorpseowner="0"/>
+  </flags>
+  <attacks>
+    <attack interval="2000" attack="50" skill="120" name="melee"/>
+    <attack chance="100" radius="1" interval="3000" min="-635" name="physical" max="-735">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+  </attacks>
+  <defenses defense="40" armor="40">
+    <defense name="healing" interval="1000" chance="100" min="825" max="875">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity earth="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+</monster>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monster speed="260" race="blood" skull="red" experience="20000" name="Royal Paladin" nameDescription="an paladin">
+  <health max="3605" now="3605"/>
+  <look head="113" body="114" addons="1" legs="114" type="145" corpse="6080" feet="79"/>
+  <targetchange chance="10" interval="5000"/>
+  <strategy defense="0" attack="100"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="1"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag staticattack="70"/>
+    <flag targetdistance="5"/>
+    <flag runonhealth="600"/>
+    <flag checkcorpseowner="0"/>
+  </flags>
+  <attacks>
+    <attack chance="100" interval="2000" range="7" min="-325" name="physical" max="-775">
+      <attribute key="shootEffect" value="infernalbolt"/>
+    </attack>
+    <attack chance="100" interval="2000" range="7" min="-150" name="physical" max="-225">
+      <attribute key="shootEffect" value="enchantedspear"/>
+    </attack>    
+  </attacks>
+  <defenses defense="35" armor="25">
+    <defense name="healing" interval="1000" chance="100" min="1225" max="1425">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity fire="0"/>
+    <immunity lifedrain="0"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+</monster>

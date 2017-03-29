@@ -1,5 +1,6 @@
 bking_enraged_notify = false
 bking_locked_notify = false
+bking_idle_ticks = 0
 
 function bkingOnThink(cid, interval)
 
@@ -7,7 +8,7 @@ function bkingOnThink(cid, interval)
 
 	local players = tonumber(getStorage(gid.EVENT_BKING_PLAYERS))
 
-	if lifePercent <= 95 and not bking_locked_notify then
+	if lifePercent <= 80 and not bking_locked_notify then
 		doBroadcastMessage("A group of " .. players .. " brave players was on Behemoth King challange. The portal to the boss now is locked until the group get your destiny!", MESSAGE_TYPES["orange"])
 		doSetStorage(gid.EVENT_BKING, EVENT_STATE_WAITING)
 
@@ -19,42 +20,55 @@ function bkingOnThink(cid, interval)
 		bking_enraged_notify = true
 	end
 
-	if players == 1 and bking_locked_notify then
-		addEvent(bkingCheck, 1000, cid)
+	if bking_locked_notify then
+		if players == 0 then
+			bkingReset(cid)
+		end
+
+		local targets = getMonsterTargetList(cid)
+		if #targets == 0 then
+			bking_idle_ticks = bking_idle_ticks + 1000
+		else
+			bking_idle_ticks = 0
+		end
+
+		if bking_idle_ticks > 8000 then
+			bkingReset(cid)
+		end
 	end
 
 	return true
 end
 
-function bkingCheck(cid)
-	local players = tonumber(getStorage(gid.EVENT_BKING_PLAYERS))
-	if players == 0 and bking_locked_notify then
-		doCreatureAddHealth(cid, getCreatureMaxHealth(cid) - getCreatureHealth(cid), CONST_ME_MAGIC_BLUE)
+function bkingReset(cid)
 
-		local list = getSpectators({x = 1995, y = 1820, z = 15}, 18, 18, false)
-		for k,v in ipairs(list) do
-		
-			local player = nil
-			if isPlayer(v) then
-				std.clog("[Behemoth King Warning] Player " .. getCreatureName(v) .. " still in the room during cleaning phase. Player kicked (will back on temple next login)")
-				doRemoveCreature(v)
-			elseif isPlayer(getCreatureMaster(v)) then
-				doRemoveCreature(v)
-			end	
+	doCreatureAddHealth(cid, getCreatureMaxHealth(cid) - getCreatureHealth(cid), CONST_ME_MAGIC_BLUE)
 
-			if isMonster(v) then
-				if string.lower(getCreatureName(v)) == "behemoth" then
-					doRemoveCreature(v)
-				end
+	local list = getSpectators({x = 1995, y = 1820, z = 15}, 18, 18, false)
+	for k,v in ipairs(list) do
+	
+		local player = nil
+		if isPlayer(v) then
+	        if(getPlayerGroupId(v) <= GROUPS_GAMEMASTER) then
+	        	doPlayerLeaveBking(v)
+				luaDeath(v)
+	        end
+		elseif isPlayer(getCreatureMaster(v)) and getPlayerGroupId(getCreatureMaster(v)) <= GROUPS_GAMEMASTER then
+			doRemoveCreature(v)
+		end	
+
+		if isMonster(v) then
+			if string.lower(getCreatureName(v)) == "behemoth" then
+				doRemoveCreature(v)
 			end
 		end
-
-		doBroadcastMessage("The last group has been smashed by Behemoth King! Portal to the boss in Quendor depot is now open!", MESSAGE_TYPES["orange"])
-		doSetStorage(gid.EVENT_BKING, EVENT_STATE_INIT)
-
-		bking_locked_notify = false
-		bking_enraged_notify = false
 	end
+
+	doBroadcastMessage("The last group has been smashed by Behemoth King! Portal to the boss in Quendor depot is now open!", MESSAGE_TYPES["orange"])
+	doSetStorage(gid.EVENT_BKING, EVENT_STATE_INIT)
+
+	bking_locked_notify = false
+	bking_enraged_notify = false
 end
 
 function bkingPortal(cid, item, position, fromPosition)
