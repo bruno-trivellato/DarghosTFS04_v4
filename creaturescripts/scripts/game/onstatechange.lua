@@ -48,9 +48,29 @@ local function ancientNatureStatChangeCallback(cid, attacker, type, combat, valu
 	return true
 end
 
+darkGeneralDamageReceiving = 0
+darkGeneralDamageTimmer = 0
+
+local function darkGeneralStatChangeCallback(cid, attacker, type, combat, value)
+
+	if darkGeneralDamageTimmer == 0 or os.time() > darkGeneralDamageTimmer then
+		darkGeneralDamageTimmer = os.time() + 10
+
+		doSetStorage(gid.EVENT_DARK_GENERAL_DMG, math.floor(darkGeneralDamageReceiving / 10))
+		darkGeneralDamageReceiving = 0
+	end
+
+	if type == STATSCHANGE_HEALTHLOSS then
+		darkGeneralDamageReceiving = darkGeneralDamageReceiving + value
+	end
+
+	return true
+end
+
 local monsterCallbacks = { 
 	["bg_wall"] = {callback = bgWallStatChangeCallback}
 	,["ancient nature"] = {callback = ancientNatureStatChangeCallback}
+	,["dark general"] = {callback = darkGeneralStatChangeCallback}
 }
 
 function onStatsChange(cid, attacker, type, combat, value)

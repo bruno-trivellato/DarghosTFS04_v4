@@ -130,12 +130,24 @@ function doPlayerDieOnAncientNature(cid)
 		doPlayerAddExperience(w1, ancientNatureExpRewards[1])
 		text = text .. "1st (" .. getPlayerName(w1) .. ", " .. ancientNatureExpRewards[1] .. " exp)"
 
+		if not playerHistory.hasAchievement(w1, PH_ACH_BE_FIRST_ENT) then
+			playerHistory.onAchiev(w1, PH_ACH_BE_FIRST_ENT)
+		end
+
 		if w2 ~= nil then
+			if not playerHistory.hasAchievement(w2, PH_ACH_BE_SECOND_ENT) then
+				playerHistory.onAchiev(w2, PH_ACH_BE_SECOND_ENT)
+			end
+
 			doPlayerAddExperience(w2, ancientNatureExpRewards[2])
 			text = text .. "\n2st (" .. getPlayerName(w2) .. ", " .. ancientNatureExpRewards[2] .. " exp)"
 		end
 
 		if w3 ~= nil then
+			if not playerHistory.hasAchievement(w3, PH_ACH_BE_THIRD_ENT) then
+				playerHistory.onAchiev(w3, PH_ACH_BE_THIRD_ENT)
+			end
+
 			doPlayerAddExperience(w3, ancientNatureExpRewards[3])
 			text = text .. "\n3st (" .. getPlayerName(w3) .. ", " .. ancientNatureExpRewards[3] .. " exp)"
 		end		
@@ -165,6 +177,10 @@ function onAncientNatureDie(cid, corpse, deathList)
 	local onlineList = getPlayersOnline()
 	for _,uid in pairs(onlineList) do
 		if getPlayerStorageValue(uid, sid.ENT_INSIDE) == 1 then
+			if not playerHistory.hasAchievement(uid, PH_ACH_DEFEAT_ENT) then
+				playerHistory.onAchiev(uid, PH_ACH_DEFEAT_ENT)
+			end
+
 			doPlayerAddExperience(uid, ancientNatureExpRewards[1])
 		end
 	end
