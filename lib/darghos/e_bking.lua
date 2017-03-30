@@ -145,6 +145,10 @@ function onBkingDie(cid, corpse, deathList)
 	local onlineList = getPlayersOnline()
 	for _,uid in pairs(onlineList) do
 		if getPlayerStorageValue(uid, sid.BKING_INSIDE) == 1 then
+			if not playerHistory.hasAchievement(uid, PH_ACH_DEFEAT_BEHEMOTH_KING) then
+				playerHistory.onAchiev(uid, PH_ACH_DEFEAT_BEHEMOTH_KING)
+			end
+			
 			setPlayerStorageValue(uid, sid.SLAIN_BKING, os.time() + ((60 * 60 * 24 * 7) - (60 * 60 * (os.date("%H") - 16))))
 			reloadExpStages(uid)
 		end

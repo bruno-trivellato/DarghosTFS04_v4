@@ -41,7 +41,15 @@ PH_ACH_DUNGEON_ARIADNE_TROLLS_COMPLETE_WITHOUT_ANYONE_DIE = 1003
 -- Misc (2000 a 2500)
 PH_ACH_BE_PROMOTED = 2500
 
--- Misc (2000 a 2999)
+-- Events (2700 a 2999)
+PH_ACH_DEFEAT_DARK_GENERAL 	= 2700
+PH_ACH_BE_FIRST_ENT 		= 2701
+PH_ACH_BE_SECOND_ENT 		= 2702
+PH_ACH_BE_THIRD_ENT			= 2703
+PH_ACH_DEFEAT_ENT			= 2704
+PH_ACH_DEFEAT_BEHEMOTH_KING	= 2705 
+
+-- Leveling (2000 a 2100)
 PH_ACH_MISC_GOT_LEVEL_100 = 2000
 PH_ACH_MISC_GOT_LEVEL_200 = 2001
 PH_ACH_MISC_GOT_LEVEL_300 = 2002
@@ -163,6 +171,24 @@ playerAchievements = {
 	,[PH_ACH_BE_PROMOTED] = {
 		notifyText = "[Façanha alcançada] Você atingiu o level 20 e ganhou uma promoção!"
 	}
+	,[PH_ACH_DEFEAT_DARK_GENERAL] = {
+		notifyText = "[Façanha alcançada] Você derrotou o Dark General!"
+	}
+	,[PH_ACH_BE_FIRST_ENT] = {
+		notifyText = "[Façanha alcançada] Você terminou o evento Ancient Nature em primeiro!"
+	}
+	,[PH_ACH_BE_SECOND_ENT] = {
+		notifyText = "[Façanha alcançada] Você terminou o evento Ancient Nature em segundo!"
+	}
+	,[PH_ACH_BE_THIRD_ENT] = {
+		notifyText = "[Façanha alcançada] Você terminou o evento Ancient Nature em terceiro!"
+	}
+	,[PH_ACH_DEFEAT_ENT] = {
+		notifyText = "[Façanha alcançada] Você derrotou a Ancient Nature!"
+	}
+	,[PH_ACH_DEFEAT_BEHEMOTH_KING] = {
+		notifyText = "[Façanha alcançada] Você derrotou o Behemoth King!"
+	}				
 }
 
 playerHistory = {}

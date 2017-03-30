@@ -25,13 +25,13 @@ function onTargetTile(cid, pos)
 end
 setCombatCallback(combat, CALLBACK_PARAM_TARGETTILE, "onTargetTile")
 
-local toSummon = 4
+local toSummon
 
 function onCastSpell(cid, var)
 
-	local list = getSpectators(getCreaturePosition(cid), 18, 18, false)
+	local list = getSpectators(getCreaturePosition(cid), 8, 8, false)
 
-	toSummon = 4
+	toSummon = 5
 	if #list > 0 then
 		for k,v in ipairs(list) do
 			if string.lower(getCreatureName(v)) == "dark priestess" then
