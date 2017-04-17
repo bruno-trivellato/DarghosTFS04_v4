@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Swamp Thing" nameDescription="a swamp thing" race="venom" experience="78500" speed="600" manacost="0">
+<monster name="Swamp Thing" nameDescription="a swamp thing" race="venom" experience="157000" speed="600" manacost="0">
   <health now="47365" max="47365"/>
   <look type="299" corpse="8951"/>
   <targetchange interval="8000" chance="30"/>
