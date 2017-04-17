@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Sen Gan Guard" nameDescription="a sen gan guard" race="VENOM" experience="32300" speed="520" manacost="1">
+<monster name="Sen Gan Guard" nameDescription="a sen gan guard" race="VENOM" experience="64600" speed="520" manacost="1">
   <health now="23625" max="23625"/>
   <look type="338" corpse="11273"/>
   <targetchange interval="5000" chance="20"/>

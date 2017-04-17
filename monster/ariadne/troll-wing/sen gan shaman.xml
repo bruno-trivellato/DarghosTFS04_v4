@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Sen Gan Shaman" nameDescription="a sen gan shaman" race="VENOM" experience="32450" speed="420" manacost="1">
+<monster name="Sen Gan Shaman" nameDescription="a sen gan shaman" race="VENOM" experience="64900" speed="420" manacost="1">
   <health now="19475" max="19475"/>
   <look type="340" corpse="11316"/>
   <targetchange interval="1000" chance="10"/>

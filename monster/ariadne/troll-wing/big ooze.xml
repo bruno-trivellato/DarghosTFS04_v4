@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Big Ooze" nameDescription="a big ooze" race="venom" experience="78600" speed="400" manacost="0">
+<monster name="Big Ooze" nameDescription="a big ooze" race="venom" experience="157200" speed="400" manacost="0">
   <health now="51650" max="51650"/>
   <look type="238" corpse="6532"/>
   <targetchange interval="5000" chance="8"/>
