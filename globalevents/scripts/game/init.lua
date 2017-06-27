@@ -51,6 +51,8 @@ function onStartup()
 	
 	doSetStorage(gid.KASHMIR_QUEST_RUNNING,-1)
 	print("[onStartup] Resetando Kashmir Quest")
+
+	Dungeons.onServerStart()
 	
 	return true
 end
