@@ -30,10 +30,8 @@
 	<talkaction words="!online;/online" event="script" value="game/online.lua"/>
 	<talkaction words="!bg;/bg;!battleground;/battleground" event="script" value="game/battleground.lua"/>
 
-<!--
 	<talkaction words="!buypremium" event="script" value="game/premium.lua"/>
 	<talkaction words="!sellpremium" event="script" value="game/premium.lua"/>
--->
 
 	<!--<talkaction words="!buystamina;!stamina" event="script" value="game/stamina.lua"/>-->
 	<talkaction words="!changepvp" event="script" value="game/changepvp.lua"/>
