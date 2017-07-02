@@ -83,7 +83,7 @@ local function getCurrentPrice(type)
 		end
 		
 	elseif type == PREMIUM_TYPE_SELL then
-		v = getGlobalStorageValue(gid.PREMIUM_VALUE)
+		v = getGlobalStorageValue(gid.PREMIUM_VALUE) * 4
 
 		if v < priceConfigWorlds[world_id].startPrice then
 			
