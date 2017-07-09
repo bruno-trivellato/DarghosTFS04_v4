@@ -1,7 +1,3 @@
-
-PREMIUM_TYPE_BUY = 0
-PREMIUM_TYPE_SELL = 1
-
 local CODE_EXPIRATION = 1 -- minutes
 
 local codes = {}
@@ -13,11 +9,6 @@ CODE_NO_ERROR = 3
 
 BUY_DAYS = 5
 SELL_DAYS = 20
-
-local priceConfigWorlds = {	
-	[WORLD_ANTINUM] = { startPrice = 1000000, increase = math.random(200, 250), decrease = math.random(800, 1000) }
-	,[WORLD_NOVIUM] = { startPrice = 300000, increase = math.random(66, 83), decrease = math.random(264, 332) }
-}
 
 local function generateCode(cid)
 
@@ -69,45 +60,17 @@ local function registerHistory(cid, type, value)
 	db.executeQuery("INSERT INTO `premium_history` (`player_id`, `date`, `type`, `value`) VALUES (" .. getPlayerGUID(cid) .. ", " .. os.time() .. ", " .. type .. ", " .. value .. ");")
 end
 
-local function getCurrentPrice(type)
-
-	local v
-	local world_id = getConfigValue('worldId')
-
-	if type == PREMIUM_TYPE_BUY then
-		v = getGlobalStorageValue(gid.PREMIUM_VALUE)
-
-		if v < priceConfigWorlds[world_id].startPrice then
-			v = priceConfigWorlds[world_id].startPrice
-			setGlobalStorageValue(gid.PREMIUM_VALUE, v)
-		end
-		
-	elseif type == PREMIUM_TYPE_SELL then
-		v = getGlobalStorageValue(gid.PREMIUM_VALUE) * 4
-
-		if v < priceConfigWorlds[world_id].startPrice then
-			
-			v = priceConfigWorlds[world_id].startPrice
-			setGlobalStorageValue(gid.PREMIUM_VALUE, v)
-		end
-
-		v = v * 0.95
-	end
-
-	return v
-end
-
 local callbacks = {
 	
 	["/premiumvalue"] = function(cid, param)
-		local oldvalue = getCurrentPrice(PREMIUM_TYPE_BUY)
+		local oldvalue = getCurrentPremiumPrice(PREMIUM_TYPE_BUY)
 		setGlobalStorageValue(gid.PREMIUM_VALUE, param)
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You change the premium value from " .. oldvalue .. " to " .. param .. " gold coins.")
 	end,
 
 	["!buypremium"] = function(cid, param)
 
-		local price = getCurrentPrice(PREMIUM_TYPE_BUY)
+		local price = getCurrentPremiumPrice(PREMIUM_TYPE_BUY)
 
 		if(param ~= "") then
 			local code_value, code_ret = unpack(checkCode(cid, param))
@@ -145,7 +108,7 @@ local callbacks = {
 	end,
 
 	["!sellpremium"] = function(cid, param)
-		local price = getCurrentPrice(PREMIUM_TYPE_SELL)
+		local price = getCurrentPremiumPrice(PREMIUM_TYPE_SELL)
 
 		if(param ~= "") then
 			local ret = checkCode(cid, param)
