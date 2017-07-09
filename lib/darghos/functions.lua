@@ -1506,47 +1506,6 @@ function sendEnvolveEffect(cid, effect)
 	doSendMagicEffect({x = getPlayerPosition(cid).x + 1, y = getPlayerPosition(cid).y, z = getPlayerPosition(cid).z}, effect) 	
 end 
 
-function addPremiumTest(cid)
-
-	doPlayerAddPremiumDays(cid, darghos_premium_test_quanty)
-	local account = getPlayerAccountId(cid)
-	db.executeQuery("INSERT INTO `wb_premiumtest` VALUES ('" .. account .. "', '" .. os.time() .. "');")
-	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Parabens! Você recebeu 10 dias de conta premium no Darghos gratuitamente! Aproveite e divirta-se!")
-	sendEnvolveEffect(cid, CONST_ME_HOLYAREA)
-end
-
-function canReceivePremiumTest(cid, newlevel)
-
-	if(darghos_premium_test_level == 0 or newlevel < darghos_premium_test_level) then
-		return false
-	end	
-
-	if(isPremium(cid)) then
-		return false
-	end
-
-	local account = getPlayerAccountId(cid)
-	
-	local result = db.getResult("SELECT COUNT(*) as `rowscount` FROM `wb_premiumtest` WHERE `account_id` = '" .. account .. "';")
-	if(result:getID() == -1) then
-		--print("[Spoofing] Players list not found.")
-		return false
-	end
-
-	local rowscount = result:getDataInt("rowscount")
-	result:free()		
-	
-	if(rowscount > 0) then
-		return false
-	end
-	
-	if(not hasValidEmail(cid)) then
-		return false
-	end
-	
-	return true
-end
-
 function hasValidEmail(cid)
 
 	local account = getPlayerAccountId(cid)

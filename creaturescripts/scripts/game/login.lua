@@ -264,6 +264,21 @@ function onLogin(cid)
 	if(isInTunnel(cid)) then
  		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Voce está conectado através do Darghos Tunnel!")
  	end
+
+ 	if not isPremium(cid) then
+ 		local msg = "Você não possui uma conta premium. No Darghos você precisa ser premium para ter acesso a alguns beneficios. Veja abaixo algumas maneiras de conseguir sua conta premium:\n"
+
+ 		msg = msg .. "1) Comprando no Shop em nosso website (30 dias por R$ 10,00 de saldo).\n"
+
+		local price = getCurrentPremiumPrice(PREMIUM_TYPE_BUY)
+		msg = msg .. "2) Compre de outros players usando o comando !buypremium (preço atual: " .. price .. " gps por 5 dias).\n"
+
+		if canReceivePremiumTest(cid, 25, false) then
+			msg = msg .. "3) Receba 10 dias gratuitos para testar (requer level 25 e email registrado na conta).\n"
+		end
+
+ 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, msg)
+ 	end
 	
 	-- Trainer
 	if(getPlayerStorageValue(cid, sid.INSIDE_TRAINING_ROOM) == 1) then

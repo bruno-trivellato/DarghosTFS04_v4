@@ -24,6 +24,7 @@ dofile(getDataDir() .. "lib/darghos/dungeons.lua")
 dofile(getDataDir() .. "lib/darghos/arena.lua")
 dofile(getDataDir() .. "lib/darghos/tasks.lua")
 dofile(getDataDir() .. "lib/darghos/teleports.lua")
+dofile(getDataDir() .. "lib/darghos/premium.lua")
 
 dofile(getDataDir() .. "lib/darghos/e_dark_general.lua")
 dofile(getDataDir() .. "lib/darghos/e_ent.lua")
