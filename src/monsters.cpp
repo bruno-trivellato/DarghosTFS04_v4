@@ -316,6 +316,7 @@ bool Monsters::loadFromXml(bool reloading /*= false*/)
 		std::string file, name;
 		if(readXMLString(p, "file", file) && readXMLString(p, "name", name))
 		{
+            replaceString(file, "|WORLDNAME|", asLowerCaseString(g_config.getString(ConfigManager::SERVER_NAME)));
 			file = getFilePath(FILE_TYPE_OTHER, "monster/" + file);
 			loadMonster(file, name, reloading);
 		}
