@@ -38,3 +38,17 @@
 18:43:55 | Player [Dardon Star Rusha] | Item Data Entregue com sucesso: {"log_id":142,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 18:43:55 | Player [Dardon Star Rusha] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 18:43:55 | Player [Dardon Star Rusha] | --------------------------------------.
+12:52:51 | Player [Java] | Processando 1 itens a entregar....
+12:52:51 | Player [Java] | Item Data: {"log_id":533,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+12:52:51 | Player [Java] | Item Data Entregue com sucesso: {"log_id":533,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+12:52:52 | Player [Java] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+12:52:52 | Player [Java] | --------------------------------------.
+13:10:00 | Player [Java] | Processando 1 itens a entregar....
+13:10:00 | Player [Java] | Capacidade esgotada, entregando os itens previamente processados..
+13:10:00 | Player [Java] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 0..
+13:10:00 | Player [Java] | --------------------------------------.
+13:12:28 | Player [Java] | Processando 1 itens a entregar....
+13:12:28 | Player [Java] | Item Data: {"log_id":534,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+13:12:28 | Player [Java] | Item Data Entregue com sucesso: {"log_id":534,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+13:12:28 | Player [Java] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+13:12:28 | Player [Java] | --------------------------------------.

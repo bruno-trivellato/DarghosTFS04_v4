@@ -125,8 +125,19 @@
 			if(isPlayer(target)) then
 				PLAYERS_HITS = PLAYERS_HITS + 1
 
-			  local damage = math.random(PHASE[CURRENT_PHASE].min, PHASE[CURRENT_PHASE].max)
-			  damage = damage * PLAYERS_HITS
+			  local players = tonumber(getStorage(gid.EVENT_BKING_PLAYERS))
+
+		  	  local lifePercent = math.floor((getCreatureHealth(cid) * 100) / getCreatureMaxHealth(cid))
+          local damage
+			  if players <= 3 and getStorage(gid.EVENT_BKING) == EVENT_STATE_WAITING and lifePercent > 10 then
+			  	damage = math.random(3500, 4500)
+		      else
+		      	damage = math.random(PHASE[CURRENT_PHASE].min, PHASE[CURRENT_PHASE].max)
+			  end
+
+			  if CURRENT_PHASE > 1 then
+			    damage = damage * PLAYERS_HITS
+        end
 
 			  return doCreatureAddHealth(target, -damage, CONST_ME_HITAREA, COLOR_GREY)
 			end

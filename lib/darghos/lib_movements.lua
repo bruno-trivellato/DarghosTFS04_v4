@@ -120,6 +120,7 @@ function onEnterTrainers(cid, login)
 			_uid = _uid + 1
 		else
 			print("[Darghos Movement] Training Rooms - Not found room id:" .. _uid)
+      _uid = _uid + 1
 		end
 	end
 	

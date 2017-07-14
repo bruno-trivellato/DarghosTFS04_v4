@@ -13,6 +13,7 @@ local negationPattern = {'no', 'não', 'nao'}
 
 local TALK_MISSION = {
 	NONE = 0,
+	YES = 1,
 }
 
 local TALK_STATE = TALK_MISSION.NONE
@@ -53,11 +54,16 @@ function confirmCallback(cid, message, keywords, parameters, node)
 		return false
 	end
 
-	local npcHandler = parameters.npcHandler
+	if parameters.talkState == TALK_MISSION.YES then
+		local npcHandler = parameters.npcHandler
 
-	setPlayerStorageValue(cid, sid.SANTA_CLAUS_MISSION, 0)
-	npcHandler:say("Retorne aqui quando terminar para receber seu presente!", cid)
-	npcHandler:resetNpc()
+		setPlayerStorageValue(cid, sid.SANTA_CLAUS_MISSION, 0)
+		npcHandler:say("Retorne aqui quando terminar para receber seu presente!", cid)
+		npcHandler:resetNpc(cid)
+	else
+		parameters.talkState = TALK_MISSION.NONE
+		return true
+	end
 	
 	return true
 end
@@ -76,8 +82,11 @@ function missionCallback(cid, message, keywords, parameters, node)
 		npcHandler:say("Ho Ho Ho! " .. getPlayerName(cid) .. ", você quer um presente de natal? Mas primeiro você precisa provar que é um bom Darghoniano! O malvado Grynch Goblin deseja atrapalhar a festa natalina e não podemos deixar isto acontecer! <...>", cid)
 		npcHandler:say("O bom velinho precisa que você dê uma lição no Grynch Goblin. Você o encontará em uma montanha ao sul perto daqui. Você aceita a missão?", cid)
 
+		parameters.talkState = TALK_MISSION.YES
 		node:addChildKeyword(confirmPattern, confirmCallback, parameters)
 		node:addChildKeyword(negationPattern, noCallback, parameters)
+
+		--npcHandler:resetNpc(cid)
 		
 	elseif(questStatus == 0) then
 		npcHandler:say("Ainda não derrotou o Grynch Goblin?? Apresse-se! O natal corre perigo!", cid)		
@@ -85,7 +94,6 @@ function missionCallback(cid, message, keywords, parameters, node)
 		
 	elseif(questStatus == 1) then
 		npcHandler:say("Ho Ho Ho! Feliz natal " .. getPlayerName(cid) .. ", aqui está o seu presente por ter me ajudado!", cid)
-		npcHandler:resetNpc(cid)
 		setPlayerStorageValue(cid, sid.SANTA_CLAUS_MISSION, 2)
 
 		local backpack = doCreateItemEx(11263, 1)
@@ -134,9 +142,11 @@ function missionCallback(cid, message, keywords, parameters, node)
 		if(doPlayerAddItemEx(cid, backpack, false) ~= RETURNVALUE_NOERROR) then
 			error("Cannot add Santa Claus present to player #" .. getPlayerName(cid))
 		end	
+
+		npcHandler:resetNpc(cid)
 	else
 		npcHandler:say("Ho Ho Ho, tenha um feliz natal, e obrigado por ajudar com o Grynch Goblin!", cid)
-		npcHandler:resetNpc()
+		npcHandler:resetNpc(cid)
 	end
 	
 	return true
@@ -145,3 +155,4 @@ end
 local node = keywordHandler:addKeyword({'mission', 'missão', 'missao', 'present'}, missionCallback, {npcHandler = npcHandler, onlyFocus = true, talkState = TALK_MISSION.NONE})
 
 npcHandler:addModule(FocusModule:new())
+

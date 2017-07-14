@@ -49,3 +49,43 @@
 17:20:29 | Player [ChefeDeQuadrilhaCrew] | Item Data Entregue com sucesso: {"log_id":213,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 17:20:29 | Player [ChefeDeQuadrilhaCrew] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 17:20:29 | Player [ChefeDeQuadrilhaCrew] | --------------------------------------.
+00:20:31 | Player [Carlinhoo Rlz] | Processando 1 itens a entregar....
+00:20:31 | Player [Carlinhoo Rlz] | Item Data: {"log_id":558,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+00:20:31 | Player [Carlinhoo Rlz] | Item Data Entregue com sucesso: {"log_id":558,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+00:20:31 | Player [Carlinhoo Rlz] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+00:20:31 | Player [Carlinhoo Rlz] | --------------------------------------.
+09:13:27 | Player [Hades Kerubim] | Processando 5 itens a entregar....
+09:13:27 | Player [Hades Kerubim] | Item Data: {"log_id":559,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:13:27 | Player [Hades Kerubim] | Item Data: {"log_id":560,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:13:27 | Player [Hades Kerubim] | Item Data: {"log_id":561,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:13:27 | Player [Hades Kerubim] | Item Data: {"log_id":563,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:13:27 | Player [Hades Kerubim] | Item Data: {"log_id":564,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:13:27 | Player [Hades Kerubim] | Item Data Entregue com sucesso: {"log_id":559,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:13:27 | Player [Hades Kerubim] | Item Data Entregue com sucesso: {"log_id":560,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:13:28 | Player [Hades Kerubim] | Item Data Entregue com sucesso: {"log_id":561,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:13:28 | Player [Hades Kerubim] | Item Data Entregue com sucesso: {"log_id":563,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:13:28 | Player [Hades Kerubim] | Item Data Entregue com sucesso: {"log_id":564,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:13:28 | Player [Hades Kerubim] | Processo concluido. Resultado: Total de itens 5, Itens não recebidos 0, Itens a Receber 5..
+09:13:28 | Player [Hades Kerubim] | --------------------------------------.
+10:06:03 | Player [Bodzin] | Processando 1 itens a entregar....
+10:06:03 | Player [Bodzin] | Item Data: {"log_id":562,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+10:06:03 | Player [Bodzin] | Item Data Entregue com sucesso: {"log_id":562,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+10:06:03 | Player [Bodzin] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+10:06:03 | Player [Bodzin] | --------------------------------------.
+11:54:28 | Player [Carlinhoo Rlz] | Processando 1 itens a entregar....
+11:54:28 | Player [Carlinhoo Rlz] | Item Data: {"log_id":565,"item_count":50,"item_id":2798,"item_name":"Blood Herb","use_present":true,"item_action_id":0}.
+11:54:28 | Player [Carlinhoo Rlz] | Item Data Entregue com sucesso: {"log_id":565,"item_count":50,"item_id":2798,"item_name":"Blood Herb","use_present":true,"item_action_id":0}.
+11:54:28 | Player [Carlinhoo Rlz] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+11:54:28 | Player [Carlinhoo Rlz] | --------------------------------------.
+21:52:38 | Player [Serif] | Processando 1 itens a entregar....
+21:52:38 | Player [Serif] | Item Data: {"log_id":566,"item_count":1,"item_id":7455,"item_name":"Mythril Axe","use_present":true,"item_action_id":0}.
+21:52:38 | Player [Serif] | Item Data Entregue com sucesso: {"log_id":566,"item_count":1,"item_id":7455,"item_name":"Mythril Axe","use_present":true,"item_action_id":0}.
+21:52:38 | Player [Serif] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+21:52:38 | Player [Serif] | --------------------------------------.
+21:54:20 | Player [Serif] | Processando 2 itens a entregar....
+21:54:20 | Player [Serif] | Item Data: {"log_id":567,"item_count":1,"item_id":12691,"item_name":"Knight outfit ticket","use_present":true,"item_action_id":"4"}.
+21:54:20 | Player [Serif] | Item Data: {"log_id":568,"item_count":1,"item_id":10513,"item_name":"Squeezing Gear of Girlpower","use_present":true,"item_action_id":0}.
+21:54:20 | Player [Serif] | Item Data Entregue com sucesso: {"log_id":567,"item_count":1,"item_id":12691,"item_name":"Knight outfit ticket","use_present":true,"item_action_id":"4"}.
+21:54:20 | Player [Serif] | Item Data Entregue com sucesso: {"log_id":568,"item_count":1,"item_id":10513,"item_name":"Squeezing Gear of Girlpower","use_present":true,"item_action_id":0}.
+21:54:20 | Player [Serif] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+21:54:20 | Player [Serif] | --------------------------------------.

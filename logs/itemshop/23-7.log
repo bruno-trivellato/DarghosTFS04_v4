@@ -34,3 +34,13 @@
 21:06:01 | Player [Mantus Infernalty] | Item Data Entregue com sucesso: {"log_id":109,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 21:06:01 | Player [Mantus Infernalty] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 21:06:01 | Player [Mantus Infernalty] | --------------------------------------.
+13:13:12 | Player [Tum Play Hard] | Processando 1 itens a entregar....
+13:13:12 | Player [Tum Play Hard] | Item Data: {"log_id":530,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+13:13:12 | Player [Tum Play Hard] | Item Data Entregue com sucesso: {"log_id":530,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+13:13:12 | Player [Tum Play Hard] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+13:13:12 | Player [Tum Play Hard] | --------------------------------------.
+15:01:01 | Player [Java] | Processando 1 itens a entregar....
+15:01:01 | Player [Java] | Item Data: {"log_id":531,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+15:01:01 | Player [Java] | Item Data Entregue com sucesso: {"log_id":531,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+15:01:01 | Player [Java] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+15:01:01 | Player [Java] | --------------------------------------.

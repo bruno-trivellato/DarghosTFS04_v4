@@ -1,4 +1,7 @@
 function onSay(cid, words, param, channel)
+
+  summonDarkGeneral()
+
 	local pid = cid
 	local t = string.explode(param, ",")
 	if(t[2]) then

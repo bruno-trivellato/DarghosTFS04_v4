@@ -57,3 +57,8 @@
 23:04:30 | Player [Andre Imortal] | Item Data Entregue com sucesso: {"log_id":131,"item_count":1,"item_id":12690,"item_name":"Premium Ticket - 1 mes","use_present":true,"item_action_id":0}.
 23:04:30 | Player [Andre Imortal] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 23:04:30 | Player [Andre Imortal] | --------------------------------------.
+21:20:59 | Player [MALANDRAMENTE] | Processando 1 itens a entregar....
+21:20:59 | Player [MALANDRAMENTE] | Item Data: {"log_id":532,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+21:20:59 | Player [MALANDRAMENTE] | Item Data Entregue com sucesso: {"log_id":532,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+21:20:59 | Player [MALANDRAMENTE] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+21:20:59 | Player [MALANDRAMENTE] | --------------------------------------.

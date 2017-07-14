@@ -13,7 +13,7 @@
     <flag pushable="1"/>
     <flag canpushitems="1"/>
     <flag canpushcreatures="0"/>
-    <flag staticattack="60"/>
+    <flag staticattack="80"/>
     <flag targetdistance="4"/>
     <flag runonhealth="0"/>
     <flag checkcorpseowner="0"/>
@@ -30,7 +30,7 @@
     <element earthPercent="-10"/>
     <element icePercent="-10"/>
     <element holyPercent="50"/>
-    <element physicalPercent="20"/>
+    <element physicalPercent="-20"/>
     <element energyPercent="10"/>
     <element firePercent="10"/>
     <element deathPercent="-15"/>

@@ -90,3 +90,8 @@
 17:46:38 | Player [PPK Well] | Item Data Entregue com sucesso: {"log_id":3980,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
 17:46:38 | Player [PPK Well] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 17:46:38 | Player [PPK Well] | --------------------------------------.
+11:46:59 | Player [Carlinhoo Rlz] | Processando 1 itens a entregar....
+11:46:59 | Player [Carlinhoo Rlz] | Item Data: {"log_id":590,"item_count":1,"item_id":12691,"item_name":"Warmaster outfit ticket","use_present":true,"item_action_id":"22"}.
+11:46:59 | Player [Carlinhoo Rlz] | Item Data Entregue com sucesso: {"log_id":590,"item_count":1,"item_id":12691,"item_name":"Warmaster outfit ticket","use_present":true,"item_action_id":"22"}.
+11:47:00 | Player [Carlinhoo Rlz] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+11:47:00 | Player [Carlinhoo Rlz] | --------------------------------------.

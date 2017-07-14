@@ -1,4 +1,4 @@
-BG_ENABLED = true
+BG_ENABLED = false
 BG_ENABLED_GAINS = true
 
 BG_EXP_BUFF = 25 -- percent

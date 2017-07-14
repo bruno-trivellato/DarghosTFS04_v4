@@ -8,3 +8,14 @@
 16:09:41 | Player [Dream Knight] | Item Data Entregue com sucesso: {"log_id":430,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 16:09:41 | Player [Dream Knight] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 16:09:41 | Player [Dream Knight] | --------------------------------------.
+17:53:05 | Player [Hades Kerubim] | Processando 4 itens a entregar....
+17:53:06 | Player [Hades Kerubim] | Item Data: {"log_id":604,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+17:53:06 | Player [Hades Kerubim] | Item Data: {"log_id":605,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+17:53:06 | Player [Hades Kerubim] | Item Data: {"log_id":606,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+17:53:06 | Player [Hades Kerubim] | Item Data: {"log_id":607,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+17:53:06 | Player [Hades Kerubim] | Item Data Entregue com sucesso: {"log_id":604,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+17:53:06 | Player [Hades Kerubim] | Item Data Entregue com sucesso: {"log_id":605,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+17:53:06 | Player [Hades Kerubim] | Item Data Entregue com sucesso: {"log_id":606,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+17:53:06 | Player [Hades Kerubim] | Item Data Entregue com sucesso: {"log_id":607,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+17:53:06 | Player [Hades Kerubim] | Processo concluido. Resultado: Total de itens 4, Itens não recebidos 0, Itens a Receber 4..
+17:53:06 | Player [Hades Kerubim] | --------------------------------------.

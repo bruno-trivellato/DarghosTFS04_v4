@@ -56,3 +56,16 @@
 23:15:04 | Player [Forsaken] | Item Data Entregue com sucesso: {"log_id":4045,"item_count":1,"item_id":12642,"item_name":"Royal Draken Mail","use_present":true,"item_action_id":0}.
 23:15:04 | Player [Forsaken] | Processo concluido. Resultado: Total de itens 3, Itens não recebidos 0, Itens a Receber 3..
 23:15:04 | Player [Forsaken] | --------------------------------------.
+09:17:49 | Player [Kerubim Hades] | Processando 5 itens a entregar....
+09:17:49 | Player [Kerubim Hades] | Item Data: {"log_id":593,"item_count":1,"item_id":12691,"item_name":"Pirate outfit ticket","use_present":true,"item_action_id":"12"}.
+09:17:49 | Player [Kerubim Hades] | Item Data: {"log_id":594,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:17:49 | Player [Kerubim Hades] | Item Data: {"log_id":595,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:17:49 | Player [Kerubim Hades] | Item Data: {"log_id":596,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:17:49 | Player [Kerubim Hades] | Item Data: {"log_id":597,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:17:49 | Player [Kerubim Hades] | Item Data Entregue com sucesso: {"log_id":593,"item_count":1,"item_id":12691,"item_name":"Pirate outfit ticket","use_present":true,"item_action_id":"12"}.
+09:17:49 | Player [Kerubim Hades] | Item Data Entregue com sucesso: {"log_id":594,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:17:50 | Player [Kerubim Hades] | Item Data Entregue com sucesso: {"log_id":595,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:17:50 | Player [Kerubim Hades] | Item Data Entregue com sucesso: {"log_id":596,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:17:50 | Player [Kerubim Hades] | Item Data Entregue com sucesso: {"log_id":597,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:17:50 | Player [Kerubim Hades] | Processo concluido. Resultado: Total de itens 5, Itens não recebidos 0, Itens a Receber 5..
+09:17:50 | Player [Kerubim Hades] | --------------------------------------.

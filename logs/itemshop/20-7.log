@@ -75,3 +75,20 @@
 23:30:16 | Player [Jon Jones] | Item Data Entregue com sucesso: {"log_id":88,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 23:30:16 | Player [Jon Jones] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 23:30:16 | Player [Jon Jones] | --------------------------------------.
+09:23:39 | Player [Carlinhoo Rlz] | Processando 2 itens a entregar....
+09:23:39 | Player [Carlinhoo Rlz] | Item Data: {"log_id":518,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+09:23:39 | Player [Carlinhoo Rlz] | Item Data: {"log_id":519,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:23:39 | Player [Carlinhoo Rlz] | Item Data Entregue com sucesso: {"log_id":518,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+09:23:39 | Player [Carlinhoo Rlz] | Item Data Entregue com sucesso: {"log_id":519,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+09:23:39 | Player [Carlinhoo Rlz] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+09:23:39 | Player [Carlinhoo Rlz] | --------------------------------------.
+09:25:28 | Player [Carlinhoo Rlz] | Processando 1 itens a entregar....
+09:25:28 | Player [Carlinhoo Rlz] | Item Data: {"log_id":520,"item_count":1,"item_id":12691,"item_name":"Assassin outfit ticket","use_present":true,"item_action_id":"13"}.
+09:25:28 | Player [Carlinhoo Rlz] | Item Data Entregue com sucesso: {"log_id":520,"item_count":1,"item_id":12691,"item_name":"Assassin outfit ticket","use_present":true,"item_action_id":"13"}.
+09:25:28 | Player [Carlinhoo Rlz] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+09:25:28 | Player [Carlinhoo Rlz] | --------------------------------------.
+20:08:05 | Player [Infortek] | Processando 1 itens a entregar....
+20:08:05 | Player [Infortek] | Item Data: {"log_id":521,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+20:08:05 | Player [Infortek] | Item Data Entregue com sucesso: {"log_id":521,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+20:08:05 | Player [Infortek] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+20:08:05 | Player [Infortek] | --------------------------------------.

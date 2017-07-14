@@ -39,11 +39,11 @@ function pvp.onSay(cid, words, param, channel)
 			if(pvpBattleground.playerSpeakTeam(cid, words .. " " .. param)) then
 				return true			
 			else
-				doPlayerSendCancel(cid, "NÃ£o Ã© permitido a jogadores fora da battleground enviarem mensagens por este canal. Para entrar em uma partida digite \"!bg entrar\"")
+				doPlayerSendCancel(cid, "Não é permitido a jogadores fora da battleground enviarem mensagens por este canal. Para entrar em uma partida digite \"!bg entrar\"")
 				return true
 			end	
 		elseif(channel == CUSTOM_CHANNEL_PVP) then
-			doPlayerSendCancel(cid, "NÃ£o Ã© permitido enviar mensagens neste canal. Para entrar em uma Battleground digite \"!bg entrar\"")
+			doPlayerSendCancel(cid, "Não é permitido enviar mensagens neste canal. Para entrar em uma Battleground digite \"!bg entrar\"")
 			return true		
 		end
 	end
@@ -52,6 +52,7 @@ function pvp.onSay(cid, words, param, channel)
 end
 
 help = {}
+helpWarnings = {}
 
 local HELP_EXHAUSTED = 15 -- segundos
 
@@ -60,6 +61,11 @@ function help.onSay(cid, words, param, channel)
 	if(_helpChannel.locked) then
 		doPlayerSendChannelMessage(cid, "System", _helpChannel.lockedMessage, TALKTYPE_TYPES["channel-orange"], CHANNEL_HELP)
 		return true
+	end
+
+	if not helpWarnings[cid] then
+		doPlayerSendChannelMessage(cid, "Dica", "Você precisa de suporte? Tem uma duvida ou sugestão? Quer fazer uma reclamação? O meio mais rápido de entrar em contato com a staff é curtir nossa pagina no Facebook e nos enviar uma mensagem por lá!", TALKTYPE_TYPES["channel-orange"], CHANNEL_HELP)
+		helpWarnings[cid] = os.time()
 	end
 
 	local banExpires = getPlayerStorageValue(cid, sid.BANNED_IN_HELP)
@@ -105,3 +111,4 @@ function public.onSay(cid, words, param, channel)
 
 	return false	
 end
+

@@ -40,3 +40,19 @@
 22:28:33 | Player [KeriaTer Um Nome] | Item Data Entregue com sucesso: {"log_id":4092,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
 22:28:33 | Player [KeriaTer Um Nome] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 22:28:33 | Player [KeriaTer Um Nome] | --------------------------------------.
+10:50:26 | Player [Lady Warrior] | Processando 2 itens a entregar....
+10:50:26 | Player [Lady Warrior] | Item Data: {"log_id":599,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+10:50:26 | Player [Lady Warrior] | Item Data: {"log_id":600,"item_count":1,"item_id":12691,"item_name":"Demonhunter outfit ticket","use_present":true,"item_action_id":"20"}.
+10:50:26 | Player [Lady Warrior] | Item Data Entregue com sucesso: {"log_id":599,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+10:50:26 | Player [Lady Warrior] | Item Data Entregue com sucesso: {"log_id":600,"item_count":1,"item_id":12691,"item_name":"Demonhunter outfit ticket","use_present":true,"item_action_id":"20"}.
+10:50:26 | Player [Lady Warrior] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+10:50:26 | Player [Lady Warrior] | --------------------------------------.
+13:32:44 | Player [Lady Warrior] | Processando 3 itens a entregar....
+13:32:44 | Player [Lady Warrior] | Item Data: {"log_id":601,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+13:32:44 | Player [Lady Warrior] | Item Data: {"log_id":602,"item_count":1,"item_id":12691,"item_name":"Knight outfit ticket","use_present":true,"item_action_id":"4"}.
+13:32:44 | Player [Lady Warrior] | Item Data: {"log_id":603,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+13:32:44 | Player [Lady Warrior] | Item Data Entregue com sucesso: {"log_id":601,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+13:32:44 | Player [Lady Warrior] | Item Data Entregue com sucesso: {"log_id":602,"item_count":1,"item_id":12691,"item_name":"Knight outfit ticket","use_present":true,"item_action_id":"4"}.
+13:32:44 | Player [Lady Warrior] | Item Data Entregue com sucesso: {"log_id":603,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+13:32:44 | Player [Lady Warrior] | Processo concluido. Resultado: Total de itens 3, Itens não recebidos 0, Itens a Receber 3..
+13:32:44 | Player [Lady Warrior] | --------------------------------------.

@@ -35,3 +35,8 @@
 21:27:34 | Player [Quazy] | Item Data Entregue com sucesso: {"log_id":4086,"item_count":1,"item_id":12643,"item_name":"Royal Scale Robe","use_present":true,"item_action_id":0}.
 21:27:34 | Player [Quazy] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
 21:27:34 | Player [Quazy] | --------------------------------------.
+09:45:18 | Player [Syngenta] | Processando 1 itens a entregar....
+09:45:18 | Player [Syngenta] | Item Data: {"log_id":598,"item_count":1,"item_id":12691,"item_name":"Sumonner outfit ticket","use_present":true,"item_action_id":"6"}.
+09:45:18 | Player [Syngenta] | Item Data Entregue com sucesso: {"log_id":598,"item_count":1,"item_id":12691,"item_name":"Sumonner outfit ticket","use_present":true,"item_action_id":"6"}.
+09:45:18 | Player [Syngenta] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+09:45:18 | Player [Syngenta] | --------------------------------------.

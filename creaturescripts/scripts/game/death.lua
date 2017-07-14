@@ -1,3 +1,6 @@
+deaths = 0
+logouts = 0
+
 function onDeath(cid, corpse, deathList)
 	if isPlayer(cid) then
 		--Fun??es que ser?o chamadas quando um jogador morrer...
@@ -8,6 +11,11 @@ function onDeath(cid, corpse, deathList)
 		--if(getPlayerLevel(cid) < 80 and getCreatureSkull(cid) < SKULL_WHITE) then
 		--	setPlayerStorageValue(cid, sid.GIVE_BLESS_AFTER_DEATH, 1)
 		--end
+	  if(not doPlayerIsBot(cid)) then
+		  deaths = deaths + 1
+	  end
+
+    print("Percentagem de mortes sobre logouts: " .. (deaths * 100) / logouts .. "%")
 	end	
 	
 	if(isMonster(cid)) then

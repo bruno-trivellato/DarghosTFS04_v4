@@ -59,7 +59,7 @@
 		
 	-- SPECIAL Raids	
 		-- BOSSES
-		<raid name="grynch_goblin" file="bosses/grynch_goblin.xml" interval2="5" margin="0"/>
+		<!-- <raid name="grynch_goblin" file="bosses/grynch_goblin.xml" interval2="5" margin="0"/> -->
 		<raid name="demodras" file="bosses/demodras.xml" interval2="2880" margin="0"/>
 		<raid name="the_old_widow" file="bosses/the_old_widow.xml" interval2="2880" margin="0"/>
 		<raid name="the_horned_fox" file="bosses/the_horned_fox.xml" interval2="4320" margin="0"/>

@@ -14,7 +14,11 @@ end
 
 local NEXT_PHASE_HEALTH = 90
 
-local SUMMON_BEHEMOTHS_INTERVAL = 1000 * 20
+local SUMMON_BEHEMOTHS_INTERVAL = 1000 * 25
+local SUMMON_BEHEMOTHS_INTERVAL_HIGH = 1000 * 40
+
+local MINIONS = 8
+local MINIONS_HIGH = 4
 
 local INTERNAL_TICKS = 0
 local TICKSADD = 1000 * 2
@@ -22,11 +26,19 @@ local TICKSADD = 1000 * 2
 function onCastSpell(cid, var)
 	INTERNAL_TICKS = INTERNAL_TICKS + TICKSADD
 
-	if(INTERNAL_TICKS >= SUMMON_BEHEMOTHS_INTERVAL) then
-		summonMinions(cid)
-	end
+  local lifePercent = math.floor((getCreatureHealth(cid) * 100) / getCreatureMaxHealth(cid))
 
-	local lifePercent = math.floor((getCreatureHealth(cid) * 100) / getCreatureMaxHealth(cid))
+  local interval = SUMMON_BEHEMOTHS_INTERVAL_HIGH
+  local minions = MINIONS_HIGH
+
+  if lifePercent <= 50 then
+    interval = SUMMON_BEHEMOTHS_INTERVAL
+    minions = MINIONS
+  end
+
+	if(INTERNAL_TICKS >= interval) then
+		summonMinions(cid, minions)
+	end
 
 	if(lifePercent <= NEXT_PHASE_HEALTH) then
 		NEXT_PHASE_HEALTH = NEXT_PHASE_HEALTH - 10
@@ -34,7 +46,7 @@ function onCastSpell(cid, var)
 	end
 end
 
-function summonMinions(cid)
+function summonMinions(cid, minions)
 	INTERNAL_TICKS = 0
 
 	local pos = getCreaturePosition(cid)
@@ -53,7 +65,7 @@ function summonMinions(cid)
 		end
 	end
 
-	if(behemoths <= 16) then
+	if(behemoths <= minions) then
 		doCreatureSay(cid, "BEHEMOTHS COME AND SERVE YOUR MASTER!", TALKTYPE_MONSTER_YELL)
 
 		for k,v in ipairs(plist) do
@@ -83,7 +95,7 @@ function summonMinions(cid)
 
 		local used = table.copy(behe_positions)
 
-		for i=1, 8 do
+		for i=1, minions do
 			local pos = math.random(1, #used)
 			
 			if not doCreateMonster("King Minion", used[pos], false, false, false) then

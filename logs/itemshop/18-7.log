@@ -35,3 +35,26 @@
 21:21:30 | Player [Zajkra] | Item Data Entregue com sucesso: {"log_id":56,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 21:21:30 | Player [Zajkra] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 21:21:30 | Player [Zajkra] | --------------------------------------.
+07:51:45 | Player [Tum Play Hard] | Processando 1 itens a entregar....
+07:51:45 | Player [Tum Play Hard] | Item Data: {"log_id":510,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+07:51:45 | Player [Tum Play Hard] | Item Data Entregue com sucesso: {"log_id":510,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+07:51:46 | Player [Tum Play Hard] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+07:51:46 | Player [Tum Play Hard] | --------------------------------------.
+18:31:29 | Player [Lady Warrior] | Processando 5 itens a entregar....
+18:31:29 | Player [Lady Warrior] | Item Data: {"log_id":511,"item_count":1,"item_id":12649,"item_name":"Blade of Corruption","use_present":true,"item_action_id":0}.
+18:31:29 | Player [Lady Warrior] | Item Data: {"log_id":512,"item_count":1,"item_id":12691,"item_name":"Warrior outfit ticket","use_present":true,"item_action_id":"7"}.
+18:31:29 | Player [Lady Warrior] | Item Data: {"log_id":513,"item_count":1,"item_id":10513,"item_name":"Squeezing Gear of Girlpower","use_present":true,"item_action_id":0}.
+18:31:29 | Player [Lady Warrior] | Item Data: {"log_id":514,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+18:31:29 | Player [Lady Warrior] | Item Data: {"log_id":515,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+18:31:29 | Player [Lady Warrior] | Item Data Entregue com sucesso: {"log_id":511,"item_count":1,"item_id":12649,"item_name":"Blade of Corruption","use_present":true,"item_action_id":0}.
+18:31:29 | Player [Lady Warrior] | Item Data Entregue com sucesso: {"log_id":512,"item_count":1,"item_id":12691,"item_name":"Warrior outfit ticket","use_present":true,"item_action_id":"7"}.
+18:31:30 | Player [Lady Warrior] | Item Data Entregue com sucesso: {"log_id":513,"item_count":1,"item_id":10513,"item_name":"Squeezing Gear of Girlpower","use_present":true,"item_action_id":0}.
+18:31:30 | Player [Lady Warrior] | Item Data Entregue com sucesso: {"log_id":514,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+18:31:30 | Player [Lady Warrior] | Item Data Entregue com sucesso: {"log_id":515,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+18:31:30 | Player [Lady Warrior] | Processo concluido. Resultado: Total de itens 5, Itens não recebidos 0, Itens a Receber 5..
+18:31:30 | Player [Lady Warrior] | --------------------------------------.
+23:44:43 | Player [Come Bosta] | Processando 1 itens a entregar....
+23:44:43 | Player [Come Bosta] | Item Data: {"log_id":516,"item_count":1,"item_id":12691,"item_name":"Assassin outfit ticket","use_present":true,"item_action_id":"13"}.
+23:44:43 | Player [Come Bosta] | Item Data Entregue com sucesso: {"log_id":516,"item_count":1,"item_id":12691,"item_name":"Assassin outfit ticket","use_present":true,"item_action_id":"13"}.
+23:44:43 | Player [Come Bosta] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+23:44:43 | Player [Come Bosta] | --------------------------------------.

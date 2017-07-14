@@ -87,3 +87,13 @@
 23:05:58 | Player [Romulo] | Item Data Entregue com sucesso: {"log_id":4038,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
 23:05:58 | Player [Romulo] | Processo concluido. Resultado: Total de itens 5, Itens não recebidos 0, Itens a Receber 5..
 23:05:58 | Player [Romulo] | --------------------------------------.
+21:27:56 | Player [Ohxy] | Processando 1 itens a entregar....
+21:27:56 | Player [Ohxy] | Item Data: {"log_id":591,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+21:27:56 | Player [Ohxy] | Item Data Entregue com sucesso: {"log_id":591,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+21:27:56 | Player [Ohxy] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+21:27:56 | Player [Ohxy] | --------------------------------------.
+21:29:18 | Player [Ohxy] | Processando 1 itens a entregar....
+21:29:18 | Player [Ohxy] | Item Data: {"log_id":592,"item_count":1,"item_id":7455,"item_name":"Mythril Axe","use_present":true,"item_action_id":0}.
+21:29:18 | Player [Ohxy] | Item Data Entregue com sucesso: {"log_id":592,"item_count":1,"item_id":7455,"item_name":"Mythril Axe","use_present":true,"item_action_id":0}.
+21:29:18 | Player [Ohxy] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+21:29:18 | Player [Ohxy] | --------------------------------------.

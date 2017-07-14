@@ -53,12 +53,29 @@ function checkPlayerBot(cid)
     doPlayerSetPromotionLevel(cid, 1)
   end
 
+  if(getPlayerLevel(cid) >= 60 and getPlayerTown(cid) == towns.ISLAND_OF_PEACE) then
+    local rand = math.random(1, 100)
+    if(rand == 1) then
+      doPlayerSetTown(cid, towns.KASHMIR)
+    elseif(rand == 2) then
+      doPlayerSetTown(cid, towns.NORTHREND)
+    elseif(rand <= 5) then
+      doPlayerSetTown(cid, towns.SALAZART)
+    elseif(rand <= 10) then
+      doPlayerSetTown(cid, towns.ARACURA)
+    elseif(rand <= 20) then
+      doPlayerSetTown(cid, towns.AARAGON)
+    else
+      doPlayerSetTown(cid, towns.QUENDOR)
+    end
+  end
+
   local guid = getPlayerGUID(cid)
 
-	if((not expEvents[guid] or os.time() >= expEvents[guid]) and getPlayerLevel(cid) < 121 and math.random(1, 100000) <= 500) then
+	if((not expEvents[guid] or os.time() >= expEvents[guid]) and getPlayerLevel(cid) < 181 and math.random(1, 100000) <= 500) then
 
 	  local levelExp = getExperienceForLevel(getPlayerLevel(cid) + 1) - getExperienceForLevel(getPlayerLevel(cid))
-    local exp = math.random(math.floor(levelExp * 0.75), math.floor(levelExp * 2.25))
+    local exp = math.random(math.floor(levelExp * 0.25), math.floor(levelExp * 0.35))
     --print(getPlayerName(cid) .. " exp: " .. exp)
 	  doPlayerAddExp(cid, exp)
 

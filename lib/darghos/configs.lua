@@ -31,7 +31,7 @@ darghos_exp_multipler = 1.0
 darghos_skills_multipler = 1.0
 
 -- Darghos receive premium test level
-darghos_premium_test_level = 40 -- set 0 to disable
+darghos_premium_test_level = 25 -- set 0 to disable
 darghos_premium_test_quanty = 10
 
 -- Pacific & Agressives world configuration

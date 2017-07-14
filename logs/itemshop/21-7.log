@@ -49,3 +49,32 @@
 22:42:48 | Player [Megha Mage] | Item Data Entregue com sucesso: {"log_id":97,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 22:42:48 | Player [Megha Mage] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 22:42:48 | Player [Megha Mage] | --------------------------------------.
+01:58:50 | Player [Carlinhoo Rlz] | Processando 1 itens a entregar....
+01:58:50 | Player [Carlinhoo Rlz] | Item Data: {"log_id":522,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+01:58:50 | Player [Carlinhoo Rlz] | Item Data Entregue com sucesso: {"log_id":522,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+01:58:50 | Player [Carlinhoo Rlz] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+01:58:50 | Player [Carlinhoo Rlz] | --------------------------------------.
+03:18:15 | Player [Carlinhoo Rlz] | Processando 2 itens a entregar....
+03:18:15 | Player [Carlinhoo Rlz] | Item Data: {"log_id":523,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+03:18:15 | Player [Carlinhoo Rlz] | Item Data: {"log_id":524,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+03:18:15 | Player [Carlinhoo Rlz] | Item Data Entregue com sucesso: {"log_id":523,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+03:18:16 | Player [Carlinhoo Rlz] | Item Data Entregue com sucesso: {"log_id":524,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+03:18:16 | Player [Carlinhoo Rlz] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+03:18:16 | Player [Carlinhoo Rlz] | --------------------------------------.
+10:33:03 | Player [Xablau Reeina] | Processando 1 itens a entregar....
+10:33:03 | Player [Xablau Reeina] | Item Data: {"log_id":525,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+10:33:03 | Player [Xablau Reeina] | Item Data Entregue com sucesso: {"log_id":525,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+10:33:03 | Player [Xablau Reeina] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+10:33:03 | Player [Xablau Reeina] | --------------------------------------.
+11:31:08 | Player [MrCabecinha] | Processando 2 itens a entregar....
+11:31:08 | Player [MrCabecinha] | Item Data: {"log_id":526,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+11:31:08 | Player [MrCabecinha] | Item Data: {"log_id":527,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+11:31:08 | Player [MrCabecinha] | Item Data Entregue com sucesso: {"log_id":526,"item_count":1,"item_id":6132,"item_name":"Soft Boots","use_present":true,"item_action_id":0}.
+11:31:08 | Player [MrCabecinha] | Item Data Entregue com sucesso: {"log_id":527,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+11:31:08 | Player [MrCabecinha] | Processo concluido. Resultado: Total de itens 2, Itens não recebidos 0, Itens a Receber 2..
+11:31:08 | Player [MrCabecinha] | --------------------------------------.
+22:26:10 | Player [Bodzin] | Processando 1 itens a entregar....
+22:26:10 | Player [Bodzin] | Item Data: {"log_id":528,"item_count":1,"item_id":12691,"item_name":"Citizen outfit ticket","use_present":true,"item_action_id":"1"}.
+22:26:10 | Player [Bodzin] | Item Data Entregue com sucesso: {"log_id":528,"item_count":1,"item_id":12691,"item_name":"Citizen outfit ticket","use_present":true,"item_action_id":"1"}.
+22:26:10 | Player [Bodzin] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+22:26:10 | Player [Bodzin] | --------------------------------------.

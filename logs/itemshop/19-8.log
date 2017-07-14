@@ -28,3 +28,8 @@
 16:55:48 | Player [Mage Underworld] | Item Data Entregue com sucesso: {"log_id":325,"item_count":1,"item_id":12696,"item_name":"Premium Ticket - 1 semana","use_present":true,"item_action_id":0}.
 16:55:48 | Player [Mage Underworld] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
 16:55:48 | Player [Mage Underworld] | --------------------------------------.
+21:21:52 | Player [Wilvendom] | Processando 1 itens a entregar....
+21:21:52 | Player [Wilvendom] | Item Data: {"log_id":577,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+21:21:52 | Player [Wilvendom] | Item Data Entregue com sucesso: {"log_id":577,"item_count":100,"item_id":2160,"item_name":"Crystal Coin","use_present":true,"item_action_id":0}.
+21:21:52 | Player [Wilvendom] | Processo concluido. Resultado: Total de itens 1, Itens não recebidos 0, Itens a Receber 1..
+21:21:52 | Player [Wilvendom] | --------------------------------------.
