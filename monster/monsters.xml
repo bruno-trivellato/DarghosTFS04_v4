@@ -6,17 +6,20 @@
 	<monster name="Master Sorcerer" file="darghos/sim_sorcerer.xml" />
 	<monster name="Elite Knight" file="darghos/sim_knight.xml" />
 
-	<monster name="Dark Warrior" file="darghos/dark-forces/dark warrior.xml" />
-	<monster name="Dark General" file="darghos/dark-forces/dark general.xml" />
-	<monster name="Dark Archer" file="darghos/dark-forces/dark archer.xml" />
-	<monster name="Dark Mage" file="darghos/dark-forces/dark mage.xml" />
-	<monster name="Dark Priestess" file="darghos/dark-forces/dark priestess.xml" />
-	<monster name="Dark Summoner" file="darghos/dark-forces/dark summoner.xml" />
+	<monster name="Dark Warrior" file="darghos/|WORLDNAME|/dark-forces/dark warrior.xml" />
+	<monster name="Dark General" file="darghos/|WORLDNAME|/dark-forces/dark general.xml" />
+	<monster name="Dark Archer" file="darghos/|WORLDNAME|/dark-forces/dark archer.xml" />
+	<monster name="Dark Mage" file="darghos/|WORLDNAME|/dark-forces/dark mage.xml" />
+	<monster name="Dark Priestess" file="darghos/|WORLDNAME|/dark-forces/dark priestess.xml" />
+	<monster name="Dark Summoner" file="darghos/|WORLDNAME|/dark-forces/dark summoner.xml" />
 	
-	<monster name="Summon Dark Warrior" file="darghos/dark-forces/summon dark warrior.xml" />
-	<monster name="Summon Dark Archer" file="darghos/dark-forces/summon dark archer.xml" />
-	<monster name="Summon Dark Mage" file="darghos/dark-forces/summon dark mage.xml" />
-	<monster name="Summon Dark Priestess" file="darghos/dark-forces/summon dark priestess.xml" />	
+	<monster name="Summon Dark Warrior" file="darghos/|WORLDNAME|/dark-forces/summon dark warrior.xml" />
+	<monster name="Summon Dark Archer" file="darghos/|WORLDNAME|/dark-forces/summon dark archer.xml" />
+	<monster name="Summon Dark Mage" file="darghos/|WORLDNAME|/dark-forces/summon dark mage.xml" />
+	<monster name="Summon Dark Priestess" file="darghos/|WORLDNAME|/dark-forces/summon dark priestess.xml" />
+
+	<monster name="Behemoth King" file="darghos/|WORLDNAME|/behemoth king.xml" />
+	<monster name="King Minion" file="darghos/|WORLDNAME|/Behemoth Minion.xml" />	
 	
 	<monster name="Grynch Goblin" file="darghos/Grynch Goblin.xml" />
 	<monster name="Demon Oak" file="darghos/demon_oak.xml"/>
@@ -31,8 +34,6 @@
 	<monster name="Balrog" file="darghos/Balrog.xml" />
 	<monster name="Bayemon" file="darghos/Bayemon.xml" />
 	<monster name="Bazir" file="darghos/bazir.xml" />
-	<monster name="Behemoth King" file="darghos/behemoth king.xml" />
-	<monster name="King Minion" file="darghos/Behemoth Minion.xml" />
 	<monster name="Dark Eye" file="darghos/Dark Eye.xml" />
 	<monster name="Demon Crusher" file="darghos/demon_crusher.xml" />
 	<monster name="demonportal" file="darghos/demonportal.xml" />
