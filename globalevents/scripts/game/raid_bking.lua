@@ -1,9 +1,11 @@
 function onTime(time)
 
+	--[[
 	local world_id = getConfigValue('worldId')
 	if world_id == WORLD_NOVIUM then
 		return true
 	end
+	]]
 
 	local date = os.date("*t")
 
