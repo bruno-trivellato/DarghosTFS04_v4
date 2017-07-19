@@ -265,6 +265,7 @@ function onLogin(cid)
  		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, "Voce está conectado através do Darghos Tunnel!")
  	end
 
+ 	--[[
  	if not isPremium(cid) then
  		local msg = "Você não possui uma conta premium. No Darghos você precisa ser premium para ter acesso a alguns beneficios. Veja abaixo algumas maneiras de conseguir sua conta premium:\n"
 
@@ -279,6 +280,7 @@ function onLogin(cid)
 
  		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_ORANGE, msg)
  	end
+ 	]]
 	
 	-- Trainer
 	if(getPlayerStorageValue(cid, sid.INSIDE_TRAINING_ROOM) == 1) then
