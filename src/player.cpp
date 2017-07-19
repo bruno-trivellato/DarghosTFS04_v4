@@ -4542,12 +4542,10 @@ bool Player::rateExperience(double& gainExp, bool fromMonster)
 	}
 
 #ifdef __DARGHOS_CUSTOM__
-    if(isVip()){
-        if(hasExpBonus())
-            gainExp += uint64_t(gainExp * g_config.getDouble(ConfigManager::VIP_EXP_BONUS));
-        else
-            gainExp += uint64_t(gainExp * g_config.getDouble(ConfigManager::VIP_STATS_BONUS_DEFAULT));
-    }
+    if(hasExpBonus())
+        gainExp += uint64_t(gainExp * g_config.getDouble(ConfigManager::VIP_EXP_BONUS));
+    else if(isVip())
+        gainExp += uint64_t(gainExp * g_config.getDouble(ConfigManager::VIP_STATS_BONUS_DEFAULT));
 #endif
 
 	if(!hasFlag(PlayerFlag_HasInfiniteStamina)){

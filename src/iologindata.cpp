@@ -610,6 +610,19 @@ bool IOLoginData::findBotByLevel(BotList& vector, uint32_t minLevel, uint32_t ma
     return false;
 }
 
+bool IOLoginData::hasEmailRegistered(uint32_t account_id){
+    Database* db = Database::getInstance();
+    DBQuery query;
+    query << "SELECT `a`.`email` FROM `accounts` `a` LEFT JOIN `players` `p` ON `p`.`account_id` = `a`.`id` WHERE `p`.`account_id` = " << account_id << " AND `p`.`level` >= 100 AND `a`.`email` = ''  LIMIT 1";
+
+    DBResult* result;
+    if(!(result = db->storeQuery(query.str())))
+        return true;
+
+    result->free();
+    return false;
+}
+
 bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLoad /*= false*/)
 {
 	Database* db = Database::getInstance();
@@ -652,7 +665,7 @@ bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLo
 
 #ifdef __DARGHOS_CUSTOM__
     player->m_isVip = (account.vipEnd == 0 || time(NULL) > account.vipEnd) ? false : true;
-    player->m_hasExpBonus = (account.lastExpBonus == 0 || time(NULL) > (account.lastExpBonus + g_config.getNumber(ConfigManager::VIP_EXP_BONUS_DURATION))) ? false : true;
+    player->m_hasExpBonus = (account.lastExpBonus == 0 || time(NULL) > account.lastExpBonus) ? false : true;
 #endif
 
 	nameCacheMap[player->getGUID()] = name;

@@ -82,6 +82,7 @@ class IOLoginData
 
 		const Group* getPlayerGroupByAccount(uint32_t accountId);
 
+        bool hasEmailRegistered(uint32_t account_id);
 		bool loadPlayer(Player* player, const std::string& name, bool preLoad = false);
 #ifdef __DARGHOS_THREAD_SAVE__
         bool savePlayer(Player* player, DBInsert& query_insert, bool preSave = true, bool shallow = false);

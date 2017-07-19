@@ -135,6 +135,11 @@ bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
 		return false;
 	}
 
+    if(!IOLoginData::getInstance()->hasEmailRegistered(id)){
+        disconnectClient(0x0A, "You must access our website and register an e-mail address to keep playing on this account.\n\ndarghos.com.br");
+        return false;
+    }
+
 	Ban ban;
 	ban.value = account.number;
 
