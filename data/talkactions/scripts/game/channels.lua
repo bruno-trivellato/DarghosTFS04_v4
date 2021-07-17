@@ -1,5 +1,3 @@
-currentSpeakingBot = {}
-
 function onSay(cid, words, param, channel, type)
 
 	if(wordsIsSpell(words .. " " .. param)) then
@@ -91,21 +89,6 @@ function public.onSay(cid, words, param, channel)
 	local isMuted = getPlayerStorageValue(cid, sid.MUTED) == 1
 	if(isMuted) then
 		doPlayerSendChannelMessage(cid, getPlayerName(cid) .. " [" .. getPlayerLevel(cid) .. "]", words .. " " .. param, TALKTYPE_TYPES["channel-yellow"], channel)
-		return true
-	end
-
-	if currentSpeakingBot[cid] then
-		if not isPlayer(currentSpeakingBot[cid]) then
-			doPlayerSendChannelMessage(cid, "Bot with uid #" .. currentSpeakingBot[cid] .. " not found.", channel)
-			return true
-		end
-
-		local users = getChannelUsers(channel)
-
-		for i, uid in ipairs(users) do
-			doPlayerSendChannelMessage(uid, getPlayerName(currentSpeakingBot[cid]) .. " [" .. getPlayerLevel(currentSpeakingBot[cid]) .. "]", words .. " " .. param, TALKTYPE_TYPES["channel-yellow"], channel)
-		end
-
 		return true
 	end
 

@@ -37,52 +37,6 @@ end
 danceEvents = {}
 expEvents = {}
 
-function checkPlayerBot(cid)
-
-	if(not doPlayerIsBot(cid)) then
-		scriptBotCheckMoving(cid)
-		return
-	end
-
-	local attacked = getCreatureTarget(cid)
-	if(not danceEvents[cid] and getBooleanFromString(attacked) and isInArray({"Marksman Target", "Hitdoll"}, getCreatureName(attacked))) then
-		danceEvents[cid] = addEvent(autoDance, 1000 * 10, cid)
-	end
-
-  if(getPlayerLevel(cid) >= 20 and getPlayerPromotionLevel(cid) == 0 and math.random(1, 100000) <= 100) then
-    doPlayerSetPromotionLevel(cid, 1)
-  end
-
-  if(getPlayerLevel(cid) >= 60 and getPlayerTown(cid) == towns.ISLAND_OF_PEACE) then
-    local rand = math.random(1, 100)
-    if(rand == 1) then
-      doPlayerSetTown(cid, towns.KASHMIR)
-    elseif(rand == 2) then
-      doPlayerSetTown(cid, towns.NORTHREND)
-    elseif(rand <= 5) then
-      doPlayerSetTown(cid, towns.SALAZART)
-    elseif(rand <= 10) then
-      doPlayerSetTown(cid, towns.ARACURA)
-    elseif(rand <= 20) then
-      doPlayerSetTown(cid, towns.AARAGON)
-    else
-      doPlayerSetTown(cid, towns.QUENDOR)
-    end
-  end
-
-  local guid = getPlayerGUID(cid)
-
-	if((not expEvents[guid] or os.time() >= expEvents[guid]) and getPlayerLevel(cid) < 181 and math.random(1, 100000) <= 500) then
-
-	  local levelExp = getExperienceForLevel(getPlayerLevel(cid) + 1) - getExperienceForLevel(getPlayerLevel(cid))
-    local exp = math.random(math.floor(levelExp * 0.25), math.floor(levelExp * 0.35))
-    --print(getPlayerName(cid) .. " exp: " .. exp)
-	  doPlayerAddExp(cid, exp)
-
-		expEvents[guid] = os.time() + (60 * math.random(40, 60))
-	end
-end
-
 function autoDance(cid)
 	if(not isCreature(cid)) then
 		return
@@ -105,5 +59,4 @@ function onThink(cid, interval)
 
 	checkLight(cid)
 	checkCastMana(cid)
-	checkPlayerBot(cid)
 end

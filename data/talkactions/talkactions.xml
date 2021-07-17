@@ -13,8 +13,6 @@
 	<talkaction log="yes" words="/unlockhelp" channel="65534" logged="1" access="5" event="script" value="game/helplock.lua"/>
 	<talkaction log="yes" words="/mutep" channel="65534" logged="1" access="5" event="script" value="game/helplock.lua"/>
 	<talkaction log="yes" words="/unmutep" channel="65534" logged="1" access="5" event="script" value="game/helplock.lua"/>
-	<talkaction log="yes" words="/talkbot" channel="65534" logged="1" access="5" event="script" value="game/talk_bot.lua"/>
-	<talkaction log="yes" words="/scriptbot" channel="65534" logged="1" access="5" event="script" value="game/scriptbot.lua"/>
 	<talkaction log="yes" words="/addexp" channel="65534" logged="1" access="5" event="script" value="game/addexp.lua"/>
 	<!-- 
 	<talkaction words="!fulllight" access="0" event="script" value="game/hack_light.lua"/>	

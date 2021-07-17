@@ -31,7 +31,6 @@ function canReceivePremiumTest(cid, newlevel, checkEmail)
 	
 	local result = db.getResult("SELECT COUNT(*) as `rowscount` FROM `wb_premiumtest` WHERE `account_id` = '" .. account .. "';")
 	if(result:getID() == -1) then
-		--print("[Spoofing] Players list not found.")
 		return false
 	end
 

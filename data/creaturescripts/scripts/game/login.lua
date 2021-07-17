@@ -59,7 +59,7 @@ function onLogin(cid)
 	--playerAutoEat(cid)
 	--customStaminaUpdate(cid)
 	
-	if(not doPlayerIsBot(cid) and getPlayerStorageValue(cid, sid.FIRSTLOGIN_ITEMS) ~= 1) then
+	if(getPlayerStorageValue(cid, sid.FIRSTLOGIN_ITEMS) ~= 1) then
 		defineFirstItems(cid)
 		
 		doPlayerAddBlessing(cid, 1)

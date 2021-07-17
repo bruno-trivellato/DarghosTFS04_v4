@@ -8,17 +8,6 @@ function getWorldConfig(config)
 	return value
 end
 
-function scriptBotCheckMoving(cid)
-	if getPlayerStorageValue(cid, sid.SCRIPTBOT_RECORDING) == 1 then
-		local pos = getPlayerStorageValue(cid, sid.SCRIPTBOT_LAST_POS) ~= -1 and unpackPosition(getPlayerStorageValue(cid, sid.SCRIPTBOT_LAST_POS)) or false
-
-		if not pos or getDistanceBetween(getPlayerPosition(cid), pos) > 5 then
-			setPlayerStorageValue(cid, sid.SCRIPTBOT_LAST_POS, packPosition(getPlayerPosition(cid)))
-			botScriptMove(getPlayerPosition(cid))
-		end
-	end
-end
-
 function isInTunnel(cid)
 	local player_ip_str = doConvertIntegerToIp(getPlayerIp(cid))
 	if(player_ip_str == getConfigValue("ip")) then

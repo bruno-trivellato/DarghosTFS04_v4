@@ -48,12 +48,6 @@ darghos_remove_change_pvp_debuff_cost = 25
 darghos_weecly_change_day = WEEKDAY.FRIDAY
 darghos_weecly_change_max_level_any_day = 99
 
--- Darghos spoof players
--- opções: true (ativo), false (desativo)
-darghos_spoof_players = getConfigInfo('spoofPlayersEnabled')
-darghos_players_to_spoof = getConfigInfo('spoofPlayersCount')
-darghos_spoof_start_in = getConfigInfo('spoofPlayersStarts')
-
 -- Define se é necessario comer para recuperar life/mana
 darghos_need_eat = true
 
