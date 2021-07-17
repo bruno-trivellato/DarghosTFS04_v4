@@ -1,0 +1,26 @@
+<raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("skeletons (quendor)")
+		]]>
+	</script>
+		
+	<announce delay="0" type="event" message="A terra esta tremendo no cemiterio de Quendor!"/>
+	<announce delay="60000" type="event" message="Exercitos de criaturas feitas de ossos marcham para Quendor!"/>
+	<announce delay="100000" type="event" message="Quendor está sob ataques!"/>
+	
+	<!-- Quendor East Gate -->
+	<areaspawn delay="100000" centerx="2069" centery="1861" centerz="7" radius="12">
+		<monster name="Skeleton" minamount="18" maxamount="32"/>
+		<monster name="Skeleton Warrior" minamount="18" maxamount="32"/>
+		<monster name="Demon Skeleton" minamount="18" maxamount="24"/>
+	</areaspawn>
+	
+	<!-- Quendor North Gate -->
+	<areaspawn delay="100000" centerx="2023" centery="1787" centerz="7" radius="12">
+		<monster name="Skeleton" minamount="18" maxamount="32"/>
+		<monster name="Skeleton Warrior" minamount="18" maxamount="32"/>
+		<monster name="Demon Skeleton" minamount="18" maxamount="24"/>
+	</areaspawn>
+	
+</raid>

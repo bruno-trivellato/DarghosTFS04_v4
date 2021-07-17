@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalevents>
+	<!-- DARGHOS -->
+	<globalevent name="custom_init" type="startup" event="script" value="game/init.lua"/>
+	<globalevent name="custom_globalsave" time="12:50:00" event="script" value="game/globalsave.lua"/>
+	<globalevent name="announcements" interval="600000" event="script" value="game/announcements.lua"/>
+	
+	<globalevent name="bginit" type="startup" event="script" value="game/battleground.lua"/>
+	<!--
+	<globalevent name="bggainstart" time="11:00:00" event="script" value="game/battleground.lua"/>
+	<globalevent name="bggainend" time="1:00:00" event="script" value="game/battleground.lua"/>
+	-->
+	<globalevent name="bgstart" type="bgstart" event="script" value="game/battleground.lua"/>
+	<globalevent name="bgprepare" type="bgprepare" event="script" value="game/battleground.lua"/>
+	<globalevent name="bgend" type="bgend" event="script" value="game/battleground.lua"/>	
+
+	<!-- Darghos Raids -->
+	<globalevent name="raid_darkgeneral1" time="14:55:00" event="script" value="game/raid_darkgeneral.lua"/>
+  <globalevent name="raid_darkgeneral2" time="17:55:00" event="script" value="game/raid_darkgeneral.lua"/>
+  <globalevent name="raid_darkgeneral3" time="22:55:00" event="script" value="game/raid_darkgeneral.lua"/>
+	<globalevent name="raid_ent1" time="14:45:00" event="script" value="game/raid_ancientnature.lua"/>
+	<globalevent name="raid_ent2" time="17:45:00" event="script" value="game/raid_ancientnature.lua"/>
+	<globalevent name="raid_ent3" time="22:45:00" event="script" value="game/raid_ancientnature.lua"/>
+	<globalevent name="raid_bking1" time="14:55:00" event="script" value="game/raid_bking.lua"/>
+	<globalevent name="raid_bking2" time="17:55:00" event="script" value="game/raid_bking.lua"/>
+	<globalevent name="raid_bking3" time="22:55:00" event="script" value="game/raid_bking.lua"/>
+
+
+	<globalevent name="save" interval="3600000" event="script" value="save.lua"/>
+	<!-- <globalevent name="clean" time="5:00:00" event="script" value="clean.lua"/> -->
+
+	<globalevent name="init" type="startup" event="script" value="init.lua"/>
+	<globalevent name="globalsave" type="globalsave" event="script" value="init.lua"/>
+	<globalevent name="record" type="record" event="script" value="record.lua"/>
+
+	<!-- <globalevent name="timer_example" time="21:35:11" event="script" value="my_script.lua"/> -->
+</globalevents>

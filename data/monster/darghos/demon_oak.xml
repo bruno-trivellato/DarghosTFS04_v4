@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Demon Oak" nameDescription="a demon" race="fire" experience="1" speed="0" manacost="0">
+  <health now="100" max="100"/>
+  <look typeex="8771" corpse="2916"/>
+  <targetchange interval="2000" chance="10"/>
+  <strategy attack="70" defense="10"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="0"/>
+    <flag hostile="0"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag hidename="1"/>
+    <flag hidehealth="1"/>
+  </flags>
+  <voices interval="2000" chance="15">
+    <voice sentence="AMALDIÇO-O VOCÊ!!" yell="1"/>
+    <voice sentence="AHHHH, SUA DOR ME TORNA MAIS FORTE!!" yell="1"/>
+    <voice sentence="MINHAS RAIZES DRENAM SEU SANGUE DERRAMADO!!" yell="1"/>
+  </voices>
+</monster>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<npc name="Harph" floorchange="0" walkinterval="2000" speed="220" script="|DATA|/game/blacksmith.lua">
+	<health now="150" max="150"/>
+	<look type="151" body="0" feet="115" head="114" legs="115" addons="3" corpse="2212"/>
+  
+	<parameters>
+		<parameter key="message_greet" value="Olá |PLAYERNAME|. Em meu {trade} podemos negociar alguns equipamentos e armas." />
+		<parameter key="message_decline" value="|TOTALCOST| moedas de ouro é muito para você?" />
+		<parameter key="use_trade_lists" value="swords;clubs;axes" />
+	</parameters>  
+</npc>

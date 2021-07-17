@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<npc name="Constantino" floorchange="0" walkinterval="2000" speed="220" script="|DATA|/game/inquisition.lua">
+	<health now="150" max="150" />
+	<look type="130" head="39" body="122" legs="125" feet="57" addons="0" />
+
+	<parameters>
+		<parameter key="module_keywords" value="1" />
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. Say {trade} to see my offers. Or {mission} to know about the Inquisition quest." />
+		<parameter key="keywords" value="job;name" />
+
+		<parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="amulet of lost,2173,50000" />
+		
+		<parameter key="keyword_reply1" value="I was assigned to recruit brave adventurers to help us against the demoniac forces in the Inqusition quest." />
+		<parameter key="keyword_reply2" value="My name is |NPCNAME|." />			
+	</parameters>
+</npc>

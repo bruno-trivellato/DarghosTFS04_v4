@@ -1,0 +1,14 @@
+<raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("Apocalypse")
+	]]>
+	</script>
+
+	<announce delay="0" type="event" message="Uma Grande ameaça pode ser sentida em quendor! Uma nuvem de maldade toma posse da da cidade!."/>
+	<announce delay="60000" type="event" message="O surgimento da criatura antiga está próxima, subordinanos Desta criatura nascem aguardando anciosamente seu retorno."/>
+	<announce delay="180000" type="event" message="Apocalypse retorna das trevas! Quendor foi tomada! Cuidado cidadoes!."/>
+
+	<singlespawn delay="600000" name="Apocalypse" x="1786" y="1894" z="7" />
+	
+</raid>

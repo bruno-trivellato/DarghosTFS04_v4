@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Burning Demon" nameDescription="a burning demon" race="fire" experience="12000000" speed="660" manacost="10000">
+  <health now="500000" max="500000"/>
+  <look type="12" head="114" body="27" legs="103" feet="112" corpse="5995"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="110" defense="10"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="35000"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="180" attack="160"/>
+    <attack name="manadrain" interval="2000" chance="50" range="7" min="-700" max="-1600"/>
+    <attack name="fire" interval="2000" chance="70" range="7" radius="7" target="1" min="-650" max="-930">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack name="firefield" interval="2000" chance="100" range="7" radius="1" target="1">
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+    <attack name="lifedrain" interval="2000" chance="25" length="8" spread="0" min="-500" max="-790">
+      <attribute key="areaEffect" value="purpleenergy"/>
+    </attack>
+    <attack name="speed" interval="2000" chance="35" target="1" speedchange="-1350" duration="30000">
+      <attribute key="shootEffect" value="suddendeath"/>
+    </attack>
+    <attack name="energy" interval="3000" chance="50" range="1" target="1" min="-1200" max="-1500">
+      <attribute key="areaEffect" value="purpleenergy"/>
+    </attack>
+  </attacks>
+  <defenses armor="55" defense="55">
+    <defense name="healing" interval="20000" chance="100" min="30000" max="30000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="speed" interval="1000" chance="46" speedchange="790" duration="8000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+    <element physicalPercent="-5"/>
+    <element energyPercent="30"/>
+    <element earthPercent="30"/>
+    <element icePercent="-35"/>
+    <element holyPercent="-50"/>
+    <element deathPercent="-5"/>
+  </elements>
+  <immunities>
+    <immunity fire="1"/>
+    <immunity drown="1"/>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="2">
+    <summon name="Hellfire Fighter" interval="2000" chance="100" max="2"/>
+  </summons>
+  <voices interval="5000" chance="10">
+    <voice sentence="THE PORTAL WAS OPEN!" yell="1"/>
+  </voices>
+  <loot capacity="5000">
+    <item id="2160" countmax="30" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2160" countmax="30" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2160" countmax="30" chance1="100000">
+      <!--platinum coin-->
+    </item>
+    <item id="2164" chance="60000">
+      <!--might ring-->
+    </item>
+    <item id="2151" countmax="100" chance1="100000" chancemax="100000">
+      <!--talon-->
+    </item>
+        <item id="2514" chance="58000">
+          <!--mastermind shield-->
+        </item>
+        <item id="2472" chance="50000">
+          <!--magic plate armor-->
+        </item>
+        <item id="2470" chance="65000">
+          <!--golden legs-->
+        </item>
+        <item id="7382" chance="55000">
+          <!--demonrage sword-->
+        </item>
+        <item id="7393" chance="90000">
+          <!--demon trophy-->
+        </item>
+        <item id="2520" chance="80000">
+          <!--demon shield-->
+        </item>
+        <item id="12644" chance="26000">
+          <!--Shield of corruption-->
+        </item>
+        <item id="9933" chance="10000">
+          <!--firewalker boots-->
+        </item>
+        <item id="7453" chance="28000">
+          <!--executioner-->
+        </item>
+        <item id="2415" chance="6000">
+          <!--great axe-->
+        </item>
+        <item id="2522" chance="12000">
+          <!--great shield-->
+        </item>
+        <item id="2195" chance="95000">
+          <!--boots of haste-->
+        </item>
+        <item id="8890" chance="23000">
+          <!--robe of the underworld-->
+        </item>
+        <item id="2421" chance="20000">
+          <!--thunder hammer-->
+        </item>
+        <item id="2494" chance="60000">
+          <!--demon armor-->
+        </item>
+        <item id="2493" chance="60000">
+          <!--demon helmet-->
+        </item>
+        <item id="6132" chance="15000">
+          <!--pair of soft boots-->
+        </item>
+        <item id="8886" chance="28000">
+          <!--molten plate-->
+        </item>
+        <item id="8881" chance="23000">
+          <!--fireborn giant armor-->
+        </item>
+        <item id="8851" chance="23000">
+          <!--royal crossbow-->
+        </item>
+        <item id="8854" chance="23000">
+          <!--warsinger bow-->
+        </item>
+        <item id="8918" chance="23000">
+          <!--spellbook of dark mysteries-->
+        </item>
+		<item id="2523" chance="6000">
+          <!--blessed shield-->
+	    </item>
+		<item id="2469" chance="5000">
+          <!--Dragon Scale Legs-->
+		</item>
+		<item id="8882" chance="18000">
+          <!--earthborn titan armor-->
+        </item>
+		<item id="2495" chance="7000">
+          <!--demon legs-->
+        </item>
+		<item id="2496" chance="5000">
+          <!--horned helmet-->
+        </item>
+  </loot>
+      <individual maxItems="3" containerId="6511">
+	  <item name="demon helmet"/>
+	  <item name="demon armor"/>
+	  <item name="demon shield"/>
+	  <item name="pair of soft boots"/>
+	  <item name="amulet of loss"/>
+	  <item name="fireborn giant armor"/>
+	  <item name="spellbook of dark mysteries"/>
+	  <item name="thunder hammer"/>
+	  <item name="golden armor"/>
+	  <item name="golden legs"/>
+	  <item name="magic plate armor"/>
+	  <item name="guardian shield"/>
+	  <item name="firewalker boots"/>
+	  <item name="demon trophy"/>
+	  <item name="teddy bear"/>
+	  <item name="ruthless axe"/>
+	  <item name="demonrage sword"/>
+	  <item name="shield of corruption"/>
+	  <item name="executioner"/>
+	  <item name="boots of haste"/>
+	  <item name="molten plate"/>
+	  <item name="royal crossbow"/>
+	  <item name="warsinger bow"/>
+	  <item name="might ring"/>
+	  <item name="ring of the sky"/>
+	  <item name="great shield"/>
+	  <item name="great axe"/>
+  </individual>
+</monster>

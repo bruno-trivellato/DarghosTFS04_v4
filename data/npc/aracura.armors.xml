@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<npc name="Zerbrus" floorchange="0" walkinterval="2000" speed="220" script="|DATA|/game/blacksmith.lua">
+	<health now="150" max="150"/>
+	<look type="268" head="116" body="20" legs="19" feet="0" addons="0"/>
+  
+	<parameters>
+		<parameter key="message_greet" value="Olá |PLAYERNAME|. Em meu {trade} podemos negociar alguns equipamentos e armas." />
+		<parameter key="message_decline" value="|TOTALCOST| moedas de ouro é muito para você?" />
+		<parameter key="use_trade_lists" value="armors;legs;helmets;boots;shields;equipments_premium" />
+	</parameters>  
+</npc>

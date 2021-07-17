@@ -1,0 +1,211 @@
+﻿<raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("dark general")
+	]]>
+	</script>
+
+	<announce delay="0" type="event" message="[Evento] O Dark General e suas tropas conseguiram tomar Quendor! Precisa-se de bravos guerreiros para a reconquista de Quendor! O portal para a batalha no depot de Quendor estará disponivel em 5 minutos."/>
+	
+	<announce delay="120000" type="event" message="[Evento] Plano: Será necessário atravessar cidade entre escombros e derrotar os seguidores da Armada Negra encontrados pelo caminho. Nossos informantes dizem que o Dark General se situa no centro, nas ruinas do Depot. O portal para a batalha no depot de Quendor estará disponivel em 3 minutos."/>
+
+	<announce delay="240000" type="event" message="[Evento] O Rei Ordon concede a todos que lutarem pela retomada de Quendor a Benção Real. Morrer pela retomada de Quendor não irá sofrer qualquer penalização. O portal para a batalha no depot de Quendor estará disponivel em 1 minuto."/>
+
+	<announce delay="300000" type="event" message="[Evento] Começa a luta pela retomada de Quendor! Se houver sucesso, será concedido um bonus de 15% mais expêriencia durante a semana para todos que participaram! Força e honra aos bravos que defenderem a cidade!"/>	
+	
+	<script delay="300000">
+	<![CDATA[
+	doSetStorage(gid.EVENT_DARK_GENERAL, EVENT_STATE_INIT)
+	]]>
+	</script>
+	
+	<!--
+	Quantidade total de monstros (para calculos de loot)
+	Dark Warriors, Archers & Mages [min = 106] [max = 156]
+	Dark Priestess [min = 70] [max = 101]
+	Dark Summoner [min = 71] [max = 102]
+	
+	Rare Items Drop:
+	
+	Zaoan Legs (15)
+		- Archer [42]
+		- Warrior [42]
+		
+	Zaoan Armor	(15)
+		- Archer [42]
+		- Warrior [42]
+		
+	Draken Boots (8)
+		- Archer [156]
+		- Warrior [156]
+		- Priestess [156]
+		
+	Zaoan Helmet (6)
+		- Archer [104]
+		- Warrior [104]
+		
+	Elite Draken Mail (3)
+		- Archer [208]
+		- Warrior [208]
+
+	Royal Crossbow (1)
+		- Archer [156]
+		
+	The Devileye (<0)
+		- Archer [312]
+		
+	Yols'Bow (<0)
+		- Archer [624]
+		
+	Yalaharian Leg Piece (4)
+		- Archer [39]
+		
+	Necromancer Shield (3)
+		- Warrior [52]
+		
+	Twiceslicer (10)
+		- Warrior [15]
+		
+	Fireborn Giant Armor (2)
+		- Warrior [78]
+		
+	Calamity(<0)
+		- Warrior [624]
+		
+	Guardian Boots(3)
+		- Warrior [52]
+		
+	Nightmare Shield (2)
+		- Warrior [78]
+		
+	Drakinata (12)
+		- Warrior [13]
+		
+	Blade of Corruption (6)
+		- Warrior [26]		
+		
+	Zaoan Robe (8)
+		- Mage [64]
+		- Summoner [64]
+		
+	Spellweaver's Robe (8)
+		- Mage [64]
+		- Priestess [64]		
+		
+	Spellbook of Dark Mysteries (3)
+		- Mage [171]
+		- Priestess	[171]	
+		
+	Firewalker Boots (6)
+		- Mage [26]
+		
+	Royal Scale Robe (4)
+		- Mage [39]
+		
+	Snake God's Wristguard (3)
+		- Priestess [33]
+	
+	Cobra Crown (1)
+		- Priestess [101]
+		
+	Robe of Ice Queen (<0)
+		- Priestess [202]
+		
+	Crystal Boots (1)
+		- Summoner [102]
+		
+	Yalahari Mask (4)
+		- Summoner [25]
+	-->
+
+	<areaspawn delay="300000" centerx="1774" centery="1882" centerz="7" radius="8">
+		<monster name="Dark Warrior" minamount="4" maxamount="6"/>
+		<monster name="Dark Archer" minamount="4" maxamount="6"/>
+		<monster name="Dark Priestess" minamount="2" maxamount="4"/>
+	</areaspawn>
+	
+	<areaspawn delay="300000" centerx="1774" centery="1850" centerz="7" radius="14">
+		<monster name="Dark Warrior" minamount="6" maxamount="10"/>
+		<monster name="Dark Priestess" minamount="4" maxamount="6"/>
+		<monster name="Dark Archer" minamount="6" maxamount="10"/>
+		<monster name="Dark Summoner" minamount="2" maxamount="4"/>
+		<monster name="Dark Mage" minamount="2" maxamount="4"/>
+	</areaspawn>	
+	
+	<areaspawn delay="300000" centerx="1795" centery="1867" centerz="7" radius="12">
+		<monster name="Dark Warrior" minamount="6" maxamount="10"/>
+		<monster name="Dark Archer" minamount="6" maxamount="10"/>
+		<monster name="Dark Mage" minamount="2" maxamount="4"/>
+		<monster name="Dark Priestess" minamount="4" maxamount="6"/>
+	</areaspawn>	
+
+	<areaspawn delay="300000"  centerx="1805" centery="1892" centerz="7" radius="12">
+		<monster name="Dark Warrior" minamount="6" maxamount="10"/>
+		<monster name="Dark Archer" minamount="6" maxamount="10"/>
+		<monster name="Dark Priestess" minamount="4" maxamount="6"/>
+		<monster name="Dark Summoner" minamount="3" maxamount="5"/>
+		<monster name="Dark Mage" minamount="3" maxamount="5"/>
+	</areaspawn>
+	
+	<areaspawn delay="300000" centerx="1833" centery="1899" centerz="7" radius="12">
+		<monster name="Dark Warrior" minamount="6" maxamount="10"/>
+		<monster name="Dark Archer" minamount="6" maxamount="10"/>
+		<monster name="Dark Priestess" minamount="4" maxamount="6"/>
+		<monster name="Dark Summoner" minamount="3" maxamount="5"/>
+		<monster name="Dark Mage" minamount="3" maxamount="5"/>
+	</areaspawn>	
+	
+
+	<areaspawn delay="300000" centerx="1852" centery="1885" centerz="7" radius="12">
+		<monster name="Dark Warrior" minamount="6" maxamount="10"/>
+		<monster name="Dark Archer" minamount="6" maxamount="10"/>
+		<monster name="Dark Priestess" minamount="4" maxamount="6"/>
+		<monster name="Dark Summoner" minamount="3" maxamount="5"/>
+		<monster name="Dark Mage" minamount="3" maxamount="5"/>
+	</areaspawn>
+	
+	<areaspawn delay="300000" centerx="1848" centery="1860" centerz="7" radius="12">
+		<monster name="Dark Warrior" minamount="6" maxamount="10"/>
+		<monster name="Dark Archer" minamount="6" maxamount="10"/>
+		<monster name="Dark Priestess" minamount="4" maxamount="6"/>
+		<monster name="Dark Summoner" minamount="3" maxamount="5"/>
+		<monster name="Dark Mage" minamount="3" maxamount="5"/>
+	</areaspawn>	
+	
+	<areaspawn delay="300000" centerx="1823" centery="1849" centerz="7" radius="12">
+		<monster name="Dark Warrior" minamount="6" maxamount="10"/>
+		<monster name="Dark Archer" minamount="6" maxamount="10"/>
+		<monster name="Dark Priestess" minamount="4" maxamount="6"/>
+		<monster name="Dark Summoner" minamount="3" maxamount="5"/>
+		<monster name="Dark Mage" minamount="3" maxamount="5"/>
+	</areaspawn>	
+	
+	<areaspawn delay="300000" centerx="1822" centery="1873" centerz="7" radius="14">
+		<monster name="Dark Warrior" minamount="6" maxamount="10"/>
+		<monster name="Dark Archer" minamount="6" maxamount="10"/>
+		<monster name="Dark Priestess" minamount="4" maxamount="6"/>
+		<monster name="Dark Summoner" minamount="3" maxamount="5"/>
+		<monster name="Dark Mage" minamount="3" maxamount="5"/>
+	</areaspawn>
+	
+	<script delay="300000">
+	<![CDATA[
+	summonDarkGeneral()
+	]]>	
+	</script>
+	
+	<!-- FIM DA RAID: 6h -->
+	<script delay="21600000">
+	<![CDATA[
+	local general = getCreatureByName("dark general")
+	
+	if(general) then
+		doRemoveCreature(general)
+		local msg = "Quendor fracassou na retomada de Quendor... Dark General triunfa e deixa a cidade em ruinas."
+		addEvent(doBroadcastMessage, 1000 * 2, msg, MESSAGE_EVENT_ADVANCE)
+	end
+	
+	doSetStorage(gid.EVENT_DARK_GENERAL, EVENT_STATE_END)
+	]]>	
+	</script>	
+</raid>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Ancient Nature" nameDescription="Mother Nature" race="fire" experience="0" speed="120" manacost="0">
+  <health now="650000" max="650000"/>
+  <look typeex="2699" corpse="6062"/>
+  <targetchange interval="5000" chance="30"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="60"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="1000" min="-10000" max="-11000"/>
+    <attack name="speed" interval="1000" chance="80" radius="7" target="1" speedchange="-850" duration="4000">
+      <attribute key="shootEffect" value="poison" />
+      <attribute key="areaEffect" value="greenbubble" />
+    </attack>    
+  </attacks>
+  <defenses armor="0" defense="0">
+    <!--
+    <defense name="healing" interval="1500" chance="35" min="1800" max="3600">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="healing" interval="1000" chance="35" min="1400" max="3100">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    -->
+    <defense name="healing" interval="500" chance="35" min="900" max="2400">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>     
+  </defenses>
+  <elements>
+    <element deathPercent="20"/>
+    <element icePercent="20"/>
+    <element earthPercent="20"/>
+    <element holyPercent="20"/>
+    <element energyPercent="20"/>
+    <element physicalPercent="-100"/>
+  </elements>  
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Humans come with that axe, crushing, biting, cutting!" yell="1"/>
+  </voices>
+</monster>

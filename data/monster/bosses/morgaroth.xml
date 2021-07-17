@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monster speed="400" manacost="0" race="UNDEAD" experience="15000" name="Morgaroth" nameDescription="Morgaroth">
+  <health max="55000" now="55000"/>
+  <look head="0" body="94" legs="79" type="12" corpse="6068" feet="79"/>
+  <targetchange chance="20" interval="10000"/>
+  <strategy defense="0" attack="100"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag staticattack="100"/>
+    <flag targetdistance="1"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack interval="1500" attack="65" skill="700" name="melee"/>
+    <attack target="1" chance="35" radius="7" interval="2000" range="7" min="-500" name="fire" max="-600">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack chance="30" spread="0" interval="2000" length="8" min="-580" name="physical" max="-1200">
+      <attribute key="areaEffect" value="mortarea"/>
+    </attack>
+    <attack target="0" chance="20" radius="9" interval="2500" range="7" min="-500" name="physical" max="-900">
+      <attribute key="areaEffect" value="mortarea"/>
+    </attack>
+    <attack duration="15000" target="0" chance="15" radius="9" interval="2000" range="7" name="speed" speedchange="-800">
+      <attribute key="areaEffect" value="rednote"/>
+    </attack>
+  </attacks>
+  <defenses defense="75" armor="75">
+    <defense chance="10" interval="1000" min="500" name="healing" max="1200">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense duration="6000" chance="80" interval="4000" name="speed" speedchange="700">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+    <element energyPercent="40"/>
+    <element deathPercent="80"/>
+    <element physicalPercent="40"/>
+    <element icePercent="-5"/>
+  </elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="6">
+    <summon chance="33" interval="2000" name="demon"/>
+  </summons>
+  <voices chance="30" interval="5000">
+    <voice sentence="I AM MORGAROTH, LORD OF THE TRIANGLE... AND YOU ARE LOST!" yell="1"/>
+    <voice sentence="MY SEED IS FEAR AND MY HARVEST ARE YOUR SOULS!" yell="1"/>
+    <voice sentence="THE TRIANGLE OF TERROR WILL RISE!" yell="1"/>
+    <voice sentence="ZATHROTH! LOOK AT THE DESTRUCTION I AM CAUSING IN YOUR NAME!" yell="1"/>
+  </voices>
+  <loot>
+    <item chance="10000" id="7368" countmax="16"/>
+    <item chance="25000" id="2144" countmax="15"/>
+    <item chance="25000" id="8850"/>
+    <item chance="25000" id="8865"/>
+    <item chance="10000" id="6300"/>
+    <item chance="25000" id="7431"/>
+    <item chance="25000" id="5954" countmax="2"/>
+    <item chance="50000" id="6500" countmax="1"/>
+    <item chance="10000" id="8852"/>
+    <item chance="25000" id="2387"/>
+    <item chance="10000" id="8867"/>
+    <item chance="25000" id="8881"/>
+    <item chance="10000" id="2470"/>
+    <item chance="25000" id="2033"/>
+    <item chance="50000" id="7590"/>
+    <item chance="5882" id="2522"/>
+    <item chance="10000" id="8472"/>
+    <item chance="20000" id="2155"/>
+    <item chance="33333" id="8853"/>
+    <item chance="10000" id="2162"/>
+    <item chance="10000" id="2164"/>
+    <item chance="10000" id="2178"/>
+    <item chance="6250" id="8886"/>
+    <item chance="10000" id="8928"/>
+    <item chance="10000" id="2176"/>
+    <item chance="50000" id="2152" countmax="74"/>
+    <item chance="10000" id="1986"/>
+    <item chance="25000" id="2214"/>
+    <item chance="10000" id="8851"/>
+    <item chance="25000" id="2150" countmax="15"/>
+    <item chance="10000" id="2145" countmax="5"/>
+    <item chance="50000" id="2146" countmax="4"/>
+    <item chance="25000" id="2151" countmax="1"/>
+    <item chance="25000" id="8473"/>
+  </loot>
+</monster>

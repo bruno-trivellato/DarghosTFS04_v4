@@ -1,0 +1,14 @@
+<raid>
+	<script delay="0">
+		<![CDATA[
+		raidLog("Undead (quendor)")
+		]]>
+	</script>
+	
+	<announce delay="0" type="event" message="Uma nuvem preta surge na cidade de quendor."/>
+	<announce delay="60000" type="event" message="A morte pode ser sentida, uma grande terror esta chegando em quendor!"/>
+	<announce delay="180000" type="event" message="Ressurge apos um longe tempo o shinigami, quendor esta sob posse do Deus da morte"/>
+	
+	<singlespawn delay="180000" name="Shade" x="1806" y="1861" z="7" />
+
+</raid>

@@ -1,0 +1,22 @@
+<raid>
+	<script delay="0">
+		<![CDATA[
+		raidLog("Elemental (quendor)")
+		]]>
+	</script>
+	
+	<announce delay="0" type="event" message="Antigas forças da natureza podem ser sentidas das profundezas de quendor."/>
+	<announce delay="60000" type="event" message="Elementais ressurgem das cinzas, criatuas do fogo, agua, energia e terra se juntam para a batalha!"/>
+	<announce delay="180000" type="event" message="Uma fusao foi feita, agora um grande elemento imortal invade quendor!"/>
+	
+	<!-- Quendor North Gate -->
+	<areaspawn delay="60000" centerx="2023" centery="1787" centerz="7" radius="20">
+		<monster name="overcharged energy elemental" minamount="15" maxamount="20"/>
+		<monster name="jagged earth elemental" minamount="15" maxamount="20"/>
+		<monster name="ice overlord" minamount="10" maxamount="15"/>
+		<monster name="fire overlord" minamount="10" maxamount="15"/>
+	</areaspawn>	
+	
+	<singlespawn delay="180000" name="Pyroguard Emberseer" x="1806" y="1861" z="7" />
+
+</raid>

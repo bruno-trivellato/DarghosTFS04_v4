@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Bone Wall" nameDescription="a bone wall" race="undead" experience="0" speed="0" manacost="0">
+  <health now="82500" max="82500"/>
+  <look typeex="6397" corpse="2252"/>
+  <targetchange interval="5000" chance="35"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="4"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <defenses armor="6" defense="12"/>
+  <elements>
+    <element energyPercent="20"/>
+    <element holyPercent="10"/>
+    <element earthPercent="-10"/>
+    <element deathPercent="-5"/>
+  </elements>
+  <immunities>
+    <immunity invisible="1"/>
+  </immunities>
+</monster>

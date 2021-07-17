@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<npc name="Santa Claus" floorchange="0" walkinterval="2000" speed="220" script="|DATA|/game/santa_claus.lua">
+	<health now="100" max="100" />
+ 	<look type="160" head="0" body="112" legs="93" feet="95" />
+
+	<parameters>
+		<parameter key="message_greet" value="Feliz natal |PLAYERNAME|! Já conseguiu o seu {presente}?" />
+	</parameters>   	
+</npc>

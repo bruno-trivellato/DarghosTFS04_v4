@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<npc name="Captain Homelak" floorchange="0" walkinterval="4000" script="|DATA|/game/boats/salazart.lua">
+	<health now="150" max="150"/>
+	<look type="146" head="49" body="27" legs="77" feet="68"/>
+</npc>

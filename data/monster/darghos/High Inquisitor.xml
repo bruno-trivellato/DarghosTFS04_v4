@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="High Inquisitor" nameDescription="monk" race="VENOM" experience="20000000" speed="800" manacost="0">
+  <health now="800000" max="800000"/>
+  <look type="9" head="100" body="150" legs="10" feet="150" corpse="3058"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="2"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" min="-390" max="-960"/>
+    <attack name="manadrain" interval="1000" chance="50" range="7" min="-800" max="-1000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="poison" interval="8000" chance="50" radius="5" target="0" min="-750" max="-950">
+      <attribute key="areaEffect" value="poison"/>
+    </attack>
+    <attack name="energy" interval="7000" chance="50" radius="5" target="0" min="-600" max="-1100">
+      <attribute key="areaEffect" value="energy"/>
+    </attack>
+    <attack name="manadrain" interval="5000" chance="50" radius="3" target="0" min="-1900" max="-2600">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="lifedrain" interval="5000" chance="50" radius="3" target="0" min="-370" max="-450">
+      <attribute key="areaEffect" value="poff"/>
+    </attack>
+    <attack name="strength" interval="3000" chance="10" radius="5" target="0" min="-700" max="-1180">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+    <attack name="firecondition" interval="6000" chance="50" range="7" radius="5" target="1" min="-200" max="-700">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack name="lifedrain" interval="2000" chance="50" length="8" spread="0" min="-50" max="-750">
+      <attribute key="areaEffect" value="greenspark"/>
+    </attack>
+  </attacks>
+  <defenses armor="100" defense="120">
+    <defense name="healing" interval="60000" chance="100" min="50000" max="50000">
+      <attribute key="areaEffect" value="greenshimmer"/>
+    </defense>
+    <defense name="speed" interval="3000" chance="30" speedchange="980" duration="15000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="invisible" interval="5000" chance="50" duration="2000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="1">
+    <summon name="ferumbras" interval="30000" chance="100" max="1"/>
+  </summons>
+  <voices interval="5000" chance="20">
+    <voice sentence="FERUMBRAS IS JUST A KID!" yell="1"/>
+    <voice sentence="POWER? I AM THE POWER!" yell="1"/>
+    <voice sentence="I never die?"/>
+    <voice sentence="Ferumbras told me that I was too much evil!"/>
+    <voice sentence="I AM THE DARKNESS!"/>
+    <voice sentence="SEE THIS DEMONS?!"/>
+    <voice sentence="I never lose!"/>
+  </voices>
+  <loot>
+    <item id="2160" countmax="30" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2160" countmax="30" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2160" countmax="30" chance1="100000">
+      <!--platinum coin-->
+    </item>
+    <item id="2195" chance="10000">
+      <!--boots of haste-->
+    </item>
+    <item id="2656" chance="10000">
+      <!--blue robe-->
+    </item>
+    <item id="2488" chance="5000">
+      <!--crown legs-->
+    </item>
+    <item id="2491" chance="5000">
+      <!--crown helmet-->
+    </item>
+    <item id="2488" chance="5000">
+      <!--crown legs-->
+    </item>
+    <item id="2519" chance="5000">
+      <!--crown shield-->
+    </item>
+    <item id="2471" chance="1000">
+      <!--golden helmet-->
+    </item>
+    <item id="2493" chance="36000">
+      <!--demon helmet-->
+    </item>
+    <item id="2421" chance="18000">
+      <!--thunder hammer-->
+    </item>
+    <item id="2494" chance="38000">
+      <!--demon armor-->
+    </item>
+    <item id="9778" chance="18000">
+      <!--yalahari mask-->
+    </item>
+    <item id="8904" chance="22000">
+      <!--spellscroll of prophecies-->
+    </item>
+    <item id="8878" chance="16000">
+      <!--crystalline armor-->
+    </item>
+    <item id="8890" chance="21000">
+      <!--robe of the underworld-->
+    </item>
+    <item id="8918" chance="21000">
+      <!--spellbook of dark mysteries-->
+    </item>
+    <item id="7405" chance="15000">
+      <!--havoc blade-->
+    </item>
+    <item id="2542" chance="22000">
+      <!--tempest shield-->
+    </item>
+    <item id="8887" chance="15000">
+      <!--frozen plate-->
+    </item>
+    <item id="8868" chance="15000">
+      <!--velvet mantle-->
+    </item>
+    <item id="5809" chance="100000">
+      <!--soul stone-->
+    </item>
+    <item id="2646" chance="12000">
+      <!--golden boots-->
+    </item>
+    <item id="2522" chance="18000">
+      <!--great shield-->
+	</item>
+	<item id="2408" chance="1000">
+      <!--warlord sword-->
+    </item>
+  </loot>
+</monster>

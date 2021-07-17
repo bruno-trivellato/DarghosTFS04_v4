@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("Onixia")
+	]]>
+	</script>
+
+	<announce delay="0" type="event" message="Uma grandiosa força maligna se aproxima de Quendor! Guerreiros preparem-se para o pior!"/>
+	<announce delay="60000" type="event" message="Dragoes de fogo incendeiam Quendor, a cidade entra em caos!"/>
+	<announce delay="120000" type="event" message="Os dragoes mais feroses aparecem, Aclamem a chegada do vosso Mestre, Onyxia retorna!"/>
+
+	<singlespawn delay="120000" name="onyxia" x="1772" y="1845" z="7" />
+	
+</raid>

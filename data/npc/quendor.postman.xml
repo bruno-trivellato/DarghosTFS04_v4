@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<npc name="Daves" floorchange="0" walkinterval="2500" script="|DATA|/game/quendor.postman.lua">
+	<health now="150" max="150"/>
+	<look type="136" head="59" body="86" legs="106" feet="115" addons="0"/>
+
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="module_keywords" value="1" />
+       	<parameter key="message_greet" value="Hello. How may I help you |PLAYERNAME|? Ask me for a {trade} if you want to buy something. I can also explain the {mail} system." />
+		<parameter key="keywords" value="mail;letters;explain letters;parcels;explain parcels;label;city" />
+		<parameter key="shop_buyable" value="parcel,2595,14;letter,2597,10;label,2599,1" />
+
+		<parameter key="keyword_reply1" value="With our mail system you can send {letters} and {parcels} to other Tibians. I can either explain how {letters} and {parcels} work orsell them to you if you ask me for a {trade}." />
+		<parameter key="keyword_reply2" value="If you want to buy a letter, ask me for a {trade}. Or do you want me to {explain letters} how letters work?" />
+		<parameter key="keyword_reply3" value="With a letter you can send a message to another Tibian's depot. If you want to send it to 'Ben' in 'Thais', use the letter - sothat a form opens - and write 'Ben' in the first line and 'Erembor' in the second line. Write your message below that." />
+		<parameter key="keyword_reply4" value="If you want to buy a parcel, ask me for a {trade}. Or do you want me to {explain parcels} how parcels work?" />
+		<parameter key="keyword_reply5" value="In a parcel you can send items to another Tibian's depot. Put your items into the parcel and also place a completed {label} withthe name and the {city} of the receiver inside. Then drag your parcel on one of the blue mailboxes here to send it." />
+		<parameter key="keyword_reply6" value="Including a label in your parcel is important. Imagine you want to send it to 'Ben' in 'Erembor'. Use the label - so that a formopens - and write 'Ben' in the first line and 'Erembor' in the second line. Check the spelling and put it in your parcel!" />
+		<parameter key="keyword_reply7" value="The depots you can send parcels or letters to are in the following cities: Erembor." />
+	</parameters>
+  
+</npc>

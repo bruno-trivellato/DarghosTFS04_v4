@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<monster speed="350" race="blood" skull="red" experience="55000" name="dark warrior" nameDescription="a warrior of dark forces">
+  <health max="8000" now="8000"/>
+  <look head="57" body="132" addons="3" legs="114" type="131" corpse="6080" feet="114"/>
+  <targetchange chance="10" interval="15000"/>
+  <strategy defense="0" attack="100"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="40"/>
+    <flag runonhealth="0"/>
+    <flag checkcorpseowner="0"/>
+  </flags>
+  <attacks>
+    <attack interval="2000" attack="60" skill="210" name="melee"/>
+    <attack chance="30" radius="2" interval="2000" min="-210" name="physical" max="-360">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+    <attack chance="10" spread="0" interval="2000" length="5" min="-250" name="physical" max="-500">
+      <attribute key="areaEffect" value="mortarea"/>
+    </attack>
+  </attacks>
+  <defenses defense="100" armor="50">
+    <defense duration="5000" chance="18" interval="1000" name="speed" speedchange="500">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity earth="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <elements>
+    <element energyPercent="20"/>
+    <element icePercent="-10"/>
+    <element firePercent="-30"/>
+    <element physicalPercent="40"/>
+    <element deathPercent="40"/>
+  </elements>
+  <voices chance="50" interval="7000">
+    <voice sentence="Sintam o terror!"/>
+    <voice sentence="Queimem tudo!"/>
+    <voice sentence="Pelos guerreiros da armada negra!" yell="1"/>
+  </voices>
+  <loot>
+    <item chance="1000" id="11304"/> <!-- Zaoan Legs -->
+    <item chance="100" id="12607"/> <!-- Elite Draken Mail -->
+    <item chance="1000" id="11302"/> <!-- Zaoan Helmet -->
+    <item chance="333" id="6433"/> <!-- Necromancer Shield -->
+    <item chance="1000" id="12646"/> <!-- Draken boots -->
+    <item chance="1000" id="12613"/> <!-- Twiceslicer -->
+    <item chance="150" id="8881"/> <!-- Fireborn giant armor -->
+    <item chance="100" id="8932"/> <!-- Calamity -->
+    <item chance="1000" id="11301"/> <!-- Zaoan Armor -->
+    <item chance="1000" id="2514"/> <!-- Mastermind shield -->
+    <item chance="6666" id="7439"/>
+    <item chance="666" id="11240"/> <!-- Guardian boots -->
+    <item chance="100000" id="2152" countmax="58"/>
+    <item chance="50000" id="8473" countmax="7"/>
+    <item chance="666" id="2472"/> <!-- Magic plate armor -->
+    <item chance="333" id="6391"/> <!-- Nightmare shield -->
+    <item chance="1000" id="2466"/> <!-- Golden armor -->
+    <item chance="666" id="12649"/> <!-- Blade of corruption -->
+	<item chance="150" id="12642"/> <!-- Royal draken mail -->
+    <item chance="50000" id="7591" countmax="16"/>
+    <item chance="3000" id="11305"/>
+  </loot>
+</monster>

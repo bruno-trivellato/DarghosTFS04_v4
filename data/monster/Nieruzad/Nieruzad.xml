@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Nieruzad" nameDescription="a royal lich" race="blood" experience="10000000" speed="70" manacost="100">
+  <health now="1600000" max="1600000"/>
+  <look type="287" head="20" body="30" legs="40" feet="50" corpse="6006"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" min="-550" max="-780"/>
+    <attack name="melee" interval="2000" chance="100" range="7" radius="3" target="0" min="-10000" max="-20000">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+    <attack name="fire" interval="4000" chance="100" range="7" radius="4" target="1" min="-800" max="-1100">
+      <attribute key="areaEffect" value="redshimmer"/>
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+    <attack name="lifedrain" interval="2000" chance="20" range="8" min="-655" max="-1200">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="speed" interval="1000" chance="70" range="7" speedchange="-2500" duration="5000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+  </attacks>
+  <defenses armor="17" defense="23">
+    <defense name="healing" interval="2000" chance="50" min="1000" max="2000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="speed" interval="20000" chance="100" range="7" speedchange="100" duration="15000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+    <element deathPercent="25"/>
+    <element icePercent="25"/>
+    <element earthPercent="25"/>
+    <element holyPercent="25"/>
+    <element energyPercent="25"/>
+	<element firePercent="25"/>
+    <element physicalPercent="-50"/>
+  </elements>  
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="100">
+    <summon name="summon nieruzad Zombie" interval="2000" chance="50" max="25"/>
+    <summon name="summon nieruzad Ghoul" interval="2000" chance="50" max="25"/>
+    <summon name="summon nieruzad Ghost" interval="2000" chance="50" max="25"/>
+    <summon name="summon nieruzad Banshee" interval="2000" chance="50" max="25"/>
+  </summons>
+  <voices interval="5000" chance="100">
+    <voice sentence="Is geting cold here han?!" yell="1"/>
+    <voice sentence="AAAAAAHAHAHA"/>
+    <voice sentence="Yessss closer to me"/>
+    <voice sentence="Come closer, I have to show you the other side."/>
+    <voice sentence="Rise my Soldiers, and fight once more!"/>
+  </voices>
+  <loot>
+    <item id="2160" countmax="100" chance1="100000" chancemax="100000">
+      <!--crystal coin-->
+    </item>
+    <item id="8930" chance="19000">
+      <!--emerald sword-->
+    </item>
+    <item id="6528" chance="22000">
+      <!--the avenger-->
+    </item>
+    <item id="8925" chance="3000">
+      <!--solar axe-->
+    </item>
+    <item id="7455" chance="15000">
+      <!--mythril axe-->
+    </item>
+    <item id="8926" chance="9000">
+      <!--demonwing axe-->
+	</item>
+    <item id="7450" chance="1000">
+      <!--Hammer of Prophecy-->
+	</item>
+    <item id="8858" chance="1000">
+      <!--elethriel's elemental bow-->
+	</item>
+    <item id="8882" chance="13000">
+      <!--earthborn titan armor-->
+    </item>
+    <item id="1994" chance="100000">
+      <inside>
+        <item id="8888" chance="23000">
+          <!--master archer's armor-->
+        </item>
+        <item id="11117" chance="24000">
+          <!--crystal boots-->
+        </item>
+        <item id="2646" chance="6000">
+          <!--golden boots-->
+        </item>
+        <item id="2496" chance="1000">
+          <!--horned helmet-->
+        </item>
+        <item id="2495" chance="1500">
+          <!--demon legs-->
+        </item>
+        <item id="2523" chance="2200">
+          <!--blessed shield-->
+        </item>
+        <item id="6132" chance="22000">
+          <!--pair of soft boots-->
+		
+         
+        </item>
+	<item id="2408" chance="4300">
+	   <!--warlord sword-->
+	</item>
+      </inside>
+      <!--purple bag-->
+    </item>
+  </loot>
+    <individual maxItems="2" containerId="6511">
+	  <item name="zaon legs"/>
+	  <item name="golden legs"/>
+	  <item name="mastermind shield"/>
+	  <item name="blue robe"/>
+	  <item name="eagle shield"/>
+	  <item name="pair of soft boots"/>
+	  <item name="zaoan armor"/>
+	  <item name="blue legs"/>
+	  <item name="emerald sword"/>
+	  <item name="guardian boots"/>
+	  <item name="magic plate armor"/>
+	  <item name="nightmare shield"/>
+	  <item name="blade of corruption"/>
+	  <item name="royal helmet"/>
+	  <item name="magic sword"/>
+	  <item name="demonwing axe"/>
+	  <item name="demon helmet"/>
+	  <item name="demon legs"/>
+	  <item name="hailstorm rod"/>
+	  <item name="snakebite rod"/>
+	  <item name="spellweaver's robe"/>
+	  <item name="boots of haste"/>
+	  <item name="firewalker boots"/>
+	  <item name="spellbook of lost souls"/>
+	  <item name="snake god's wristguard"/>
+	  <item name="cobra crown"/>
+	  <item name="robe of the ice queen"/>
+  </individual>
+</monster>

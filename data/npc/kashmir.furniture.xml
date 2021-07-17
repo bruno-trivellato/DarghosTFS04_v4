@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<npc name="Ludwing" floorchange="0" walkinterval="2000" speed="220" script="|DATA|/game/default.lua">
+	<health now="150" max="150"/>
+	<look type="131" head="116" body="76" legs="114" feet="38" addons="0"/>
+  
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. On my {trade} you can found a variety of furniture, decoration and alot of other objects to your house." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+		<parameter key="use_trade_lists" value="beds;tables;vases;boxes;pillows;plants" />
+	</parameters>  
+</npc>

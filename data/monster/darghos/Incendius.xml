@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Incendius" nameDescription="a Ragnaros Creation" race="fire" experience="1600000" speed="200" manacost="0">
+  <health now="82500" max="82500"/>
+  <look type="49" corpse="6324"/>
+  <targetchange interval="5000" chance="90"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="150" attack="130"/>
+    <attack name="fire" interval="2000" chance="15" range="7" radius="7" target="1" min="-700" max="-1550">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack name="manadrain" interval="1000" chance="5" range="7" min="-200" max="-1100"/>
+    <attack name="fire" interval="1000" chance="20" range="10" radius="4" target="1" min="-500" max="-1200">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack name="firefield" interval="1000" chance="10" range="7" radius="30" target="1">
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+    <attack name="fire" interval="1000" chance="16" length="8" spread="3" min="-600" max="-1300">
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+  </attacks>
+  <defenses armor="50" defense="50">
+
+  </defenses>
+  <elements>
+    <element physicalPercent="25"/>
+    <element energyPercent="5"/>
+    <element icePercent="-15"/>
+    <element deathPercent="25"/>
+  </elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Fire!"/>
+  </voices>
+  <loot>
+    <item id="6391" chance="3000">
+      <!--nightmare shield-->
+    </item>
+	<item id="8881" chance="2450">
+	  <!-- Fireborn giant armor -->
+	</item>
+    <item id="12643" chance="1830">
+      <!--royal scale robe-->
+	</item>
+	<item id="12649" chance="5000">
+      <!--blade of corruption-->
+	</item>
+    <item id="11356" chance="7000">
+      <!--zaoan robe-->
+	</item>
+    <item id="12644" chance="2220">
+      <!--shield of corruption-->
+	</item>
+    <item id="2147" countmax="30" chance="12000">
+      <!--small ruby-->
+	</item>
+    <item id="2156" chance="15000">
+      <!--red gem-->
+	</item>
+    <item id="2214" chance="18000">
+      <!--ring of healing-->
+	</item>
+    <item id="12646" chance="7500">
+      <!--draken boots-->
+	</item>		
+    <item id="11302" chance="9000">
+      <!--zaoan helmet-->
+	</item>
+    <item id="9933" chance="7000">
+      <!--firewalker boots-->
+    </item>
+  </loot>
+</monster>

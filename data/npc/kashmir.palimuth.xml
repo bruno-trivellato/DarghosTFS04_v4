@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Palimuth" script="|DATA|/game/palimuth.lua" walkinterval="0">
+	<health now="100" max="100"/>
+	<look type="325" head="97" body="0" legs="79" feet="98" addons="0"/>
+	
+	<parameters>
+		<parameter key="module_keywords" value="1" />
+		<parameter key="message_farewell" value="Até mais |PLAYERNAME|." />
+		<parameter key="message_greet" value="Olá |PLAYERNAME|." />
+		<parameter key="message_walkaway" value="Humpf." />
+		
+		<parameter key="keywords" value="job;name" />
+		
+		<parameter key="keyword_reply1" value="Eu sou o profeta de Kashmir. Meu dever é coordenar esforços para manter a cidade em ordem." />
+		<parameter key="keyword_reply2" value="Meu nome é Palimuth." />			
+	</parameters>
+</npc>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<npc name="Meyra" floorchange="0" walkinterval="2000" speed="220" script="|DATA|/game/default.lua">
+	<health now="150" max="150"/>
+	<look type="136" head="55" body="77" legs="11" feet="6" addons="0"/>
+  
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. On my {trade} you can found beautiful plants to give life to your house." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+		<parameter key="use_trade_lists" value="plants" />
+	</parameters>  
+</npc>

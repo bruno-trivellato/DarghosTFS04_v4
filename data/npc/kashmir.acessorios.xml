@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<npc name="Bugdann" floorchange="0" walkinterval="2000" speed="220" script="|DATA|/game/default.lua">
+	<health now="150" max="150"/>
+	<look type="153" head="38" body="39" legs="114" feet="0" addons="0"/>
+  
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. On my {trade} you can found bags and backpacks also alot of other utilities tools." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+		<parameter key="use_trade_lists" value="containers_free;containers_premium;tools" />
+	</parameters>  
+</npc>

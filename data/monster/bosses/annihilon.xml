@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Annihilon" nameDescription="Annihilon" race="fire" experience="15000" speed="380" manacost="0">
+  <health now="40000" max="40000"/>
+  <look type="12" head="2" body="28" legs="113" feet="95" addons="0" corpse="6068"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="85"/>
+    <flag runonhealth="2000"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="485" attack="100"/>
+    <attack name="death" interval="1000" chance="17" length="8" spread="0" min="0" max="-800">
+      <attribute key="areaEffect" value="mortarea"/>
+    </attack>
+    <attack name="death" interval="2000" chance="15" target="0" radius="4" min="-200" max="-700">
+      <attribute key="areaEffect" value="icearea"/>
+    </attack>
+    <attack name="physical" interval="3000" chance="18" radius="5" target="1" min="-50" max="-300">
+      <attribute key="areaEffect" value="groundshaker"/>
+    </attack>
+    <attack name="physical" interval="3000" chance="18" radius="5" target="0" min="-1" max="-10">
+      <attribute key="areaEffect" value="groundshaker"/>
+    </attack>
+    <attack name="poisoncondition" interval="4000" chance="35" radius="5" target="1" min="-1" max="-10">
+      <attribute key="areaEffect" value="groundshaker"/>
+    </attack>        
+    <attack name="energy" interval="3000" chance="42" radius="1" target="1" min="-50" max="-500">
+      <attribute key="areaEffect" value="energyarea"/>
+    </attack>
+    <attack name="manadrain" interval="2000" chance="40" radius="5" target="0" min="-50" max="-205">
+      <attribute key="areaEffect" value="purpleenergy"/>
+    </attack>        
+    <attack name="fire" interval="2000" chance="15" radius="6" target="1" duration="20000" speedchange="-800">
+      <attribute key="areaEffect" value="icearea"/>
+    </attack>
+  </attacks>
+  <elements>
+    <element deathPercent="95"/>
+    <element energyPercent="95"/>
+    <element icePercent="20"/>
+    <element holyPercent="-5"/>
+  </elements>
+  <immunities>
+    <immunity invisible="1"/>
+    <immunity paralyze="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Flee as long as you can!" yell="1"/>
+    <voice sentence="Annihilon's might will crush you all!" yell="1"/>
+    <voice sentence="I am coming for you!" yell="1"/>
+  </voices>
+  <loot>
+    <item id="2148" countmax="100" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2152" countmax="30" chance1="20000">
+      <!--platinum coin-->
+    </item>
+    <item id="9808" chance="50000">
+      <!--rusty armor-->
+    </item>
+    <item id="7632" countmax="2" chance="33333">
+      <!--giant shimmering pearl"-->
+    </item>        
+    <item id="2520" chance="4000">
+      <!--demon shield-->
+    </item>
+    <item id="2514" chance="4000">
+      <!--mastermind shield-->
+    </item>
+    <item id="8877" chance="1350">
+      <!--lavos armor-->
+    </item>
+    <item id="8928" chance="1350">
+      <!--obsidian truncheon-->
+    </item>
+    <item id="7431" chance="600">
+      <!--demonbone-->
+    </item>    
+    <item id="8929" chance="600">
+      <!--the stromper-->
+    </item>    
+    <item id="2158" chance="20000">
+      <!--blue gem-->
+    </item>    
+    <item id="2154" chance="20000">
+      <!--yellow gem-->
+    </item>    
+    <item id="2156" chance="20000">
+      <!--red gem-->
+    </item>    
+    <item id="2153" chance="20000">
+      <!--violet gem-->
+    </item> 
+    <item id="2155" chance="15000">
+      <!--green gem-->
+    </item> 
+    <item id="8472" chance="15000">
+      <!--great spirit potion-->
+    </item>      
+    <item id="8473" chance="20000">
+      <!--ultimate health potion-->
+    </item>  
+    <item id="7591" chance="15000">
+      <!--great health potion-->
+    </item>    
+    <item id="7590" chance="10000">
+      <!--great mana potion-->
+    </item>         
+    <item id="2127" chance="20000">
+      <!--emerald bangle-->
+    </item>   
+    <item id="7840" countmax="96" chance="20000">
+      <!--flaming arrow-->
+    </item>      
+    <item id="9971" chance="20000">
+      <!--gold ingot-->
+    </item>      
+    <item id="2381" chance="20000">
+      <!--halberd-->
+    </item>      
+    <item id="6529" countmax="50" chance="20000">
+      <!--infernal bolt-->
+    </item>      
+    <item id="7368" countmax="50" chance="20000">
+      <!--assassin star-->
+    </item>      
+    <item id="2547" countmax="91" chance="20000">
+      <!--power bolt-->
+    </item>      
+    <item id="7368" countmax="50" chance="20000">
+      <!--assassin star-->
+    </item>      
+    <item id="7366" countmax="70" chance="20000">
+      <!--viper star-->
+    </item>      
+    <item id="5944" chance="25000">
+      <!--soul orb-->
+    </item> 
+    <item id="2519" chance="10000">
+      <!--crown shield-->
+    </item>           
+    <item id="2427" chance="16666">
+      <!--guardian halberd-->
+    </item>        
+    <item id="7439" chance="16666">
+      <!--berserk potion-->
+    </item>                
+    <item id="7440" chance="15000">
+      <!--mastermind potion-->
+    </item> 
+    <item id="8891" chance="10000">
+      <!--paladin armor-->
+    </item>                   
+    <item id="2528" chance="10000">
+      <!--tower shield-->
+    </item>                   
+    <item id="2515" chance="10000">
+      <!--guardian shield-->
+    </item>                   
+    <item id="7387" chance="25000">
+      <!--diamond sceptre-->
+    </item>
+    <item id="2452" chance="25000">
+      <!--heavy mace-->
+    </item>
+    <item id="7421" chance="15000">
+      <!--onyx flail-->
+    </item> 
+    <item id="5954" chance1="10000" countmax="2">
+      <!--demon horn-->
+    </item>               
+  </loot>
+</monster>

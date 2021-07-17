@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="bg_wall" nameDescription="wall" race="undead" experience="0" speed="0" manacost="0">
+  <health now="20000" max="20000"/>
+  <look typeex="1560" corpse="0"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="0" defense="100"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="0"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="4"/>
+    <flag staticattack="90"/>
+    <flag hidename="1"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+  </attacks>
+  <defenses armor="50" defense="50">
+    <defense name="healing" interval="5000" chance="100" min="200" max="200"/>
+  </defenses>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <elements>
+    <element physicalPercent="50"/>
+    <element deathPercent="50"/>
+    <element earthPercent="50"/>
+    <element icePercent="50"/>
+    <element firePercent="50"/>
+    <element energyPercent="50"/>
+  </elements>  
+</monster>

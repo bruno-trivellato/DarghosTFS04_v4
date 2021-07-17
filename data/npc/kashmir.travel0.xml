@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<npc name="Captain von Persie" floorchange="0" walkinterval="4000" script="|DATA|/game/boats/kashmir.lua">
+	<health now="150" max="150"/>
+	<look type="151" head="114" body="97" legs="116" feet="114" addons="3"/>  
+</npc>

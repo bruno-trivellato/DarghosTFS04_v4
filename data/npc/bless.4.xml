@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<npc name="Omar, the Havengk" script="|DATA|/game/bless/bless4.lua" floorchange="0" walkinterval="2000" speed="220">
+	<health now="150" max="150"/>
+	<look type="324" head="78" body="41" legs="89" feet="56" addons="0"/>
+  
+ 	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="module_keywords" value="1" />
+       	<parameter key="message_greet" value="Hello. How may I help you |PLAYERNAME|? Ask me for a {trade} if you want to buy something. I can also {bless} you." />
+		<parameter key="keywords" value="job;name" />
+		<parameter key="shop_buyable" value="amulet of lost,2173,50000" />
+		
+		<parameter key="keyword_reply1" value="I am apprendice of the white magic, of the gods. My job is {bless} anyone who needs it. I also {trade} items." />
+		<parameter key="keyword_reply2" value="My name is |NPCNAME|." />		
+	</parameters>   
+</npc>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Son of Ferumbras" tp="1" species="human" nameDescription="the son of ferumbras" race="blood" experience="1950800" speed="680" manacost="0">
+  <health now="163000" max="163000"/>
+  <look type="194" head="117" body="110" legs="129" feet="57" corpse="6080"/>
+  <targetchange interval="60000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag staticattack="50"/>
+    <flag lightlevel="0"/>
+    <flag lightcolor="0"/>
+    <flag targetdistance="2"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack interval="2000" attack="50" poison="200" skill="80" name="melee"/>
+    <!-- Mana Drain -->
+    <attack chance="20" interval="2000" range="7" min="-900" name="manadrain" max="-1330">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <!-- Great Life Bomb -->
+    <attack target="0" chance="21" radius="6" interval="2000" min="-550" name="lifedrain" max="-950">
+      <attribute key="areaEffect" value="redspark"/>
+    </attack>
+    <!-- Great Smoke Bomb -->
+    <attack target="0" chance="20" radius="6" interval="2000" min="-750" name="physical" max="-1470">
+      <attribute key="areaEffect" value="poff"/>
+    </attack>
+    <!-- Poison Explosion -->
+    <attack target="0" chance="20" radius="6" interval="2000" min="-550" name="poison" max="-850">
+      <attribute key="areaEffect" value="poison"/>
+    </attack>
+    <!-- Great Berserk -->
+    <attack target="0" chance="15" radius="5" interval="2000" min="-320" name="physical" max="-1150">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+    <!-- Energy Explosion -->
+    <attack target="0" chance="18" radius="10" interval="2000" min="-460" name="energy" max="-730">
+      <attribute key="areaEffect" value="energy"/>
+    </attack>
+  </attacks>
+  <defenses armor="30" defense="25"/>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="1"/>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="1">
+    <summon name="mirage guardian" interval="1000" chance="25"/>
+  </summons>
+  <loot>
+    <item id="2160" countmax="3" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="8930" chance="2330">
+      <!--esmerald sword-->
+    </item>
+    <item id="8928" chance="2455">
+      <!--obsidian truncheon-->
+    </item>
+    <item id="2393" countmax="1" chance="50000">
+      <!--giant sword-->
+    </item>
+    <item id="1994" chance="100000">
+      <inside>
+        <item id="2421" chance="1890">
+          <!--thunder hammer-->
+        </item>
+        <item id="6132" chance="1435">
+          <!--pair of soft boots-->
+		</item>
+        <item id="8918" chance="2600">
+          <!--spellbook of dark mysteries-->
+        </item>
+        <item id="8883" chance="1200">
+          <!--windborn colossus armor-->
+        </item>
+        <item id="9778" chance="1950">
+          <!--yalahari mask-->
+		</item>
+        <item id="8868" chance="4000">
+          <!--velvet mantle-->
+		</item>
+        <item id="12643" chance="1200">
+          <!--royal scale robe-->
+		</item>
+        <item id="8866" chance="2000">
+          <!--robe of ice queen-->
+		</item>
+        <item id="12630" chance="1450">
+          <!--cobra crown-->
+        </item>
+        <item id="12647" chance="2100">
+          <!--snake god's wristguard-->
+        </item>
+      </inside>
+      <!--purple bag-->
+    </item>
+  </loot>
+</monster>

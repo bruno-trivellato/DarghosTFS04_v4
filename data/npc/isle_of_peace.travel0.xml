@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<npc name="Captain Georgeus" floorchange="0" walkinterval="4000" script="|DATA|/game/boats/island_of_peace.lua">
+	<health now="150" max="150"/>
+	<look type="146" head="79" body="114" legs="76" feet="0" addons="0"/>
+</npc>

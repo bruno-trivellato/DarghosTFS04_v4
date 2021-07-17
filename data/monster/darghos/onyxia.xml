@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Onyxia" nameDescription="Queen Onyxia" race="fire" experience="15000000" speed="550" manacost="0">
+  <health now="800000" max="800000"/>
+  <look type="351" head="0" body="0" legs="0" feet="0" corpse="2881"/>
+  <targetchange interval="1000" chance="0"/>
+  <strategy attack="70" defense="10"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag runonhealth="20000"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="180" attack="160"/>
+    <attack name="manadrain" interval="1000" chance="5" range="7" min="-700" max="-1200"/>
+    <attack name="fire" interval="1000" chance="50" range="10" radius="10" target="1" min="-600" max="-900">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack name="firefield" interval="1000" chance="5" range="7" radius="4" target="1">
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+    <attack name="fire" interval="1000" chance="16" length="8" spread="3" min="-800" max="-1600">
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+  </attacks>
+  <defenses armor="45" defense="50">
+    <defense name="healing" interval="1500" chance="100" min="2000" max="2000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="1"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="6">
+    <summon name="onyxiab" interval="1000" chance="17" max="6"/>
+  </summons>
+  <voices interval="5000" chance="10">
+    <voice sentence="ZCHHHHH" yell="1"/>
+    <voice sentence="Ah! Food for me!" yell="1"/>
+    <voice sentence="Don't hurt my babies!" yell="1"/>
+  </voices>
+  <loot capacity="15000">
+    <item id="2472" countmax="1" chance="60000">
+      <!--magic plate armor-->
+    </item>
+    <item id="2672" countmax="10" chance="50000">
+      <!--dragon ham-->
+    </item>
+    <item id="2167" countmax="1" chance="50000">
+      <!--energy ring-->
+    </item>
+    <item id="2392" countmax="1" chance="90000">
+      <!--fire sword-->
+    </item>
+    <item id="2148" countmax="100" chance="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2148" countmax="100" chance="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2516" countmax="1" chance="90000">
+      <!--dragon shield-->
+    </item>
+    <item id="2498" countmax="1" chance="80000">
+      <!--royal helmet-->
+    </item>
+    <item id="2365" countmax="1" chance="100000">
+      <inside>
+        <item id="2148" countmax="90" chance="65000">
+          <!--gold coin-->
+        </item>
+        <item id="2492" countmax="1" chance="75000">
+          <!--dragon scale mail-->
+        </item>
+        <item id="2528" countmax="1" chance="90000">
+          <!--tower shield-->
+        </item>
+        <item id="5919" countmax="1" chance="100000">
+          <!--dragon claw-->
+        </item>
+        <item id="2514" countmax="1" chance="60000">
+          <!--mastermind shield-->
+        </item>
+        <item id="2470" countmax="1" chance="65000">
+          <!--golden legs-->
+        </item>
+        <item id="2195" countmax="1" chance="80000">
+          <!--boots of haste-->
+        </item>
+        <item id="7423" countmax="1" chance="20000">
+          <!--skullcrusher-->
+        </item>
+        <item id="8869" countmax="1" chance="25000">
+          <!--greenwood coat-->
+        </item>
+        <item id="2539" countmax="1" chance="30000">
+          <!--phoenix shield-->
+        </item>
+        <item id="8854" countmax="1" chance="23000">
+          <!--warsinger bow-->
+        </item>
+        <item id="8852" countmax="1" chance="18000">
+          <!--the devileye-->
+        </item>
+        <item id="8851" countmax="1" chance="23000">
+          <!--royal crossbow-->
+        </item>
+        <item id="8886" countmax="1" chance="28000">
+          <!--molten plate-->
+        </item>
+        <item id="8865" countmax="1" chance="25000">
+          <!--dark lord's cape-->
+        </item>
+        <item id="8867" countmax="1" chance="23000">
+          <!--dragon robe-->
+        </item>
+        <item id="8929" countmax="1" chance="20000">
+          <!--the stomper-->
+        </item>
+        <item id="8926" countmax="1" chance="10000">
+          <!--demonwing axe-->
+        </item>
+        <item id="9776" countmax="1" chance="25000">
+          <!--yalahari armor-->
+        </item>
+        <item id="8924" countmax="1" chance="23000">
+          <!--hellforged axe-->
+        </item>
+        <item id="8881" countmax="1" chance="23000">
+          <!--fireborn giant armor-->
+        </item>
+        <item id="6132" countmax="1" chance="25000">
+          <!--pair of soft boots-->
+        </item>
+        <item id="2522" countmax="1" chance="18000">
+          <!--great shield-->
+        </item>
+        <item id="2421" countmax="1" chance="22000">
+          <!--thunder hammer-->
+        </item>
+        <item id="2453" countmax="1" chance="30000">
+          <!--arcanest staff-->
+        </item>
+        <item id="5791" countmax="1" chance="100000">
+          <!--stuffed dragon-->
+		</item>
+	    <item id="11118" countmax="1" chance="7000">
+          <!--Dragon scale boots-->
+		</item>
+        <item id="8883" countmax="1" chance="21000">
+          <!--Windborn Colossus Armor-->
+		</item>
+	    <item id="2469" countmax="1" chance="3000">
+          <!--Dragon Scale Legs-->
+		 </item>
+	    <item id="2506" countmax="1" chance="5000">
+          <!--Dragon Scale Helmet-->
+		</item>
+	    <item id="8931" countmax="1" chance="6000">
+          <!--The Epiphany-->
+	    </item>
+	    <item id="8927" countmax="1" chance="4000">
+          <!--Dark Trinity Mace-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
+  </loot>
+    <individual maxItems="4" containerId="6511">
+	  <item name="dragon scale mail"/>
+	  <item name="golden legs"/>
+	  <item name="mastermind shield"/>
+	  <item name="fire sword"/>
+	  <item name="dragon shield"/>
+	  <item name="pair of soft boots"/>
+	  <item name="tower shield"/>
+	  <item name="dragon slayer"/>
+	  <item name="dragon claw"/>
+	  <item name="phoenix shield"/>
+	  <item name="magic plate armor"/>
+	  <item name="nightmare shield"/>
+	  <item name="skullcrusher"/>
+	  <item name="royal helmet"/>
+	  <item name="greenwood coat"/>
+	  <item name="warsinger bow"/>
+	  <item name="demon helmet"/>
+	  <item name="the devileye"/>
+	  <item name="royal crossbow"/>
+	  <item name="molten plate"/>
+	  <item name="dark lord's cape"/>
+	  <item name="boots of haste"/>
+	  <item name="firewalker boots"/>
+	  <item name="dragon robe"/>
+	  <item name="the stomper"/>
+	  <item name="arcanest staff"/>
+	  <item name="fireborn giant armor"/>
+	  <item name="Windborn Colossus Armor"/>
+	  <item name="earthborn titan armor"/>
+	  <item name="great shield"/>
+	  <item name="yalahari armor"/>
+  </individual>
+</monster>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<npc name="Oldrak" floorchange="0" walkinterval="2000" speed="220" script="|DATA|/game/oldrak.lua">
+	<health now="150" max="150" />
+	<look type="57" head="78" body="57" legs="58" feet="80" addons="3"/>
+
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. How I can help you?" />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+	</parameters>
+</npc>

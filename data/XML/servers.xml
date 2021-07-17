@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<servers>
+	
+	<server id="0" name="Antinum" versionMin="860" versionMax="860" address="167.114.219.36" port="7272"/>
+	<server id="2" name="Novium" versionMin="860" versionMax="860" address="167.114.219.36" port="7273"/>
+</servers>

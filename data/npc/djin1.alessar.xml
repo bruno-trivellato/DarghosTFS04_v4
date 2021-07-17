@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<npc name="Alessar" floorchange="0" walkinterval="2000" speed="220" script="|DATA|/game/default.lua">
+	<health now="150" max="150"/>
+	<look type="51" head="11" body="112" legs="89" feet="43" addons="0"/>
+  
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. In my {trade} I buy some nice weapons and equipments." />
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!" />
+		<parameter key="use_trade_lists" value="djinn_alessar" />
+	</parameters>  
+</npc>
