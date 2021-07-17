@@ -24,7 +24,6 @@
 #include "player.h"
 #include "account.h"
 #include "group.h"
-#include "spoof.h"
 
 enum DeleteCharacter_t
 {
@@ -37,7 +36,6 @@ enum DeleteCharacter_t
 
 typedef std::pair<int32_t, Item*> itemBlock;
 typedef std::list<itemBlock> ItemBlockList;
-typedef std::vector<std::pair<uint32_t, uint32_t>> BotList;
 
 class IOLoginData
 {
@@ -70,15 +68,6 @@ class IOLoginData
 
 		uint64_t createAccount(std::string name, std::string password);
 		void removePremium(Account account);
-
-        bool loadBotScripts();
-        bool loadBotScript(BotScript& botScript);
-        bool saveBotScript(BotScript* botScript, PropWriteStream& stream);
-
-        bool saveRecordPlayer(Player* player);
-        bool loadRecordPlayer(PlayerRecord* record, PlayerBot* bot);
-        bool findBot(BotList& vector, uint32_t vocation, uint32_t levelLogin);
-        bool findBotByLevel(BotList& vector, uint32_t minLevel, uint32_t maxLevel);
 
 		const Group* getPlayerGroupByAccount(uint32_t accountId);
 

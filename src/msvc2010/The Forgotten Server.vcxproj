@@ -264,7 +264,7 @@
       <AdditionalIncludeDirectories>..\lib\sqlite3\include;..\lib\openssl\include;..\lib\mysql\include;..\lib\luajit\src;..\lib\win32\libxml2\include;..\lib\win32\iconv\include;D:\MSVC\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>false</MultiProcessorCompilation>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>__USE_MYSQL__;__ENABLE_SERVER_DIAGNOSTIC__;__EXCEPTION_TRACER__;__USE_LUALIBRARIES__;__DARGHOS_SPOOF__;__DARGHOS_CUSTOM__;__TFS_NEWEST_REVS_FIXIES__;__NO_CRYPTOPP__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__USE_MYSQL__;__ENABLE_SERVER_DIAGNOSTIC__;__EXCEPTION_TRACER__;__USE_LUALIBRARIES__;__DARGHOS_CUSTOM__;__TFS_NEWEST_REVS_FIXIES__;__NO_CRYPTOPP__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <MinimalRebuild>false</MinimalRebuild>

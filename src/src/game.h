@@ -593,7 +593,6 @@ class Game
 		void checkCreatures();
 		void checkLight();
 		void checkWars();
-        void checkSpoof();
 
 		bool combatBlockHit(CombatType_t combatType, Creature* attacker, Creature* target,
 			int32_t& healthChange, bool checkDefense, bool checkArmor, bool field = false);
@@ -698,7 +697,7 @@ class Game
 		ServiceManager* services;
 
 		uint32_t playersRecord;
-        uint32_t checkLightEvent, checkCreatureEvent, checkDecayEvent, saveEvent, spoofEvent;
+        uint32_t checkLightEvent, checkCreatureEvent, checkDecayEvent, saveEvent;
 		uint32_t checkWarsEvent;
 		bool globalSaveMessage[2];
 

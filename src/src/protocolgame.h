@@ -321,8 +321,6 @@ class ProtocolGame : public Protocol
 		template<class FunctionType>
 		void addGameTaskInternal(uint32_t delay, const FunctionType&);
 
-		friend class Player;
-        friend class PlayerBot;
 		Player* player;
 
 		uint32_t m_eventConnect, m_maxSizeCount;

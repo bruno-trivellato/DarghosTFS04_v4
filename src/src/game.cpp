@@ -54,8 +54,6 @@
 #include "vocation.h"
 #include "group.h"
 #include "status.h"
-#include "spoof.h"
-#include "spoofbot.h"
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
 #include "textlogger.h"
@@ -80,7 +78,6 @@ extern MoveEvents* g_moveEvents;
 extern Weapons* g_weapons;
 extern CreatureEvents* g_creatureEvents;
 extern GlobalEvents* g_globalEvents;
-extern Spoof g_spoof;
 
 #ifdef __DARGHOS_PVP_SYSTEM__
 extern Battleground g_battleground;
@@ -101,7 +98,7 @@ Game::Game()
 	lightLevel = LIGHT_LEVEL_DAY;
 	lightState = LIGHT_STATE_DAY;
 
-    lastBucket = checkCreatureLastIndex = checkLightEvent = checkCreatureEvent = spoofEvent = checkDecayEvent = saveEvent = 0;
+    lastBucket = checkCreatureLastIndex = checkLightEvent = checkCreatureEvent = checkDecayEvent = saveEvent = 0;
 	checkWarsEvent = 0;
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
@@ -127,8 +124,6 @@ void Game::start(ServiceManager* servicer)
         std::bind(&Game::checkLight, this)));
     checkWarsEvent = g_scheduler.addEvent(createSchedulerTask(EVENT_WARSINTERVAL,
         std::bind(&Game::checkWars, this)));
-    spoofEvent = g_scheduler.addEvent(createSchedulerTask(1000,
-        std::bind(&Game::checkSpoof, this)));
 
 #ifdef __DARGHOS_EMERGENCY_DDOS__
     std::clog << "[DDOS EMERGENCY] Enabled" << std::endl;
@@ -316,8 +311,6 @@ void Game::saveGameState(bool shallow, bool isServerSave)
 #endif
 	for(AutoList<Player>::iterator it = Player::autoList.begin(); it != Player::autoList.end(); ++it)
 	{
-        if(!isServerSave && it->second->getBot() && random_range(1, 100) >= 25)
-            continue;
 
 		it->second->loginPosition = it->second->getPosition();
 #ifdef __DARGHOS_THREAD_SAVE__
@@ -1047,19 +1040,6 @@ bool Game::removeCreature(Creature* creature, bool isLogout /*= true*/)
 	if(creature->isRemoved())
 		return false;
 
-    Player* _player = creature->getPlayer();
-    if(_player){
-        PlayerBot* bot = _player->getBot();
-        if(bot){
-            if(!bot->remove())
-                return true;
-        }
-        else{
-            if(_player->m_record != nullptr)
-                _player->m_record->onLogout();
-        }
-    }
-
     Tile* tile = creature->getTile();
     SpectatorVec list;
 
@@ -1418,8 +1398,6 @@ ReturnValue Game::internalMoveCreature(Creature* creature, Direction direction, 
 			destPos.z++;
 		}
 	}
-
-    if(!hasBitSet(FLAG_IGNOREBLOCKITEM, flags) && creature->getPlayer() && creature->getPlayer()->getBot()) flags |= FLAG_IGNOREBLOCKITEM;
 
 	ReturnValue ret = RET_NOTPOSSIBLE;
 	if((toTile = map->getTile(destPos)))
@@ -2660,8 +2638,6 @@ bool Game::playerAutoWalk(uint32_t playerId, std::list<Direction>& listDir)
 	}
 
 	player->setNextWalkTask(NULL);
-    PlayerBot* bot = player->getBot();
-    if(bot) bot->onAutoWalk();
 	return player->startAutoWalk(listDir);
 }
 
@@ -3679,18 +3655,6 @@ bool Game::playerLookAt(uint32_t playerId, const Position& pos, uint16_t spriteI
 			lookDistance = lookDistance + 9 + 6;
 	}
 
-    Creature* creature = thing->getCreature();
-    if(creature){
-        Player* p = creature->getPlayer();
-        if(p){
-            PlayerBot* bot = p->getBot();
-            if(bot){
-                bot->lookAt(player, lookDistance);
-                return true;
-            }
-        }
-    }
-
 	bool deny = false;
 	CreatureEventList lookEvents = player->getCreatureEvents(CREATURE_EVENT_LOOK);
 	for(CreatureEventList::iterator it = lookEvents.begin(); it != lookEvents.end(); ++it)
@@ -4043,13 +4007,10 @@ bool Game::playerSay(uint32_t playerId, uint16_t channelId, SpeakClasses type, c
 		case SPEAK_CHANNEL_RA:
 		case SPEAK_CHANNEL_W:
 		{
-            PlayerBot* bot = player->getBot();
-            if(!bot){
-                if(playerTalkToChannel(player, type, text, channelId))
-                    return true;
+			if(playerTalkToChannel(player, type, text, channelId))
+				return true;
 
-                return playerSay(playerId, 0, SPEAK_SAY, receiver, text);
-            }
+			return playerSay(playerId, 0, SPEAK_SAY, receiver, text);
 		}
 		case SPEAK_PRIVATE_PN:
 			return playerSpeakToNpc(player, text);
@@ -4117,8 +4078,6 @@ bool Game::playerYell(Player* player, const std::string& text)
 bool Game::playerSpeakTo(Player* player, SpeakClasses type, const std::string& receiver,
 	const std::string& text)
 {
-    if(player->getBot()) return false;
-
 	Player* toPlayer = getPlayerByName(receiver);
 	if(!toPlayer || toPlayer->isRemoved())
 	{
@@ -5209,13 +5168,6 @@ void Game::checkWars()
 	IOGuild::getInstance()->checkWars();
     checkWarsEvent = g_scheduler.addEvent(createSchedulerTask(EVENT_WARSINTERVAL,
         std::bind(&Game::checkWars, this)));
-}
-
-void Game::checkSpoof()
-{
-    g_spoof.onThink();
-    spoofEvent = g_scheduler.addEvent(createSchedulerTask(1000,
-        std::bind(&Game::checkSpoof, this)));
 }
 
 void Game::getWorldLightInfo(LightInfo& lightInfo)

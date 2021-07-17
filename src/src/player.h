@@ -48,8 +48,6 @@ class Npc;
 class Party;
 class SchedulerTask;
 class Quest;
-class PlayerRecord;
-class PlayerBot;
 
 enum skillsid_t
 {
@@ -169,13 +167,6 @@ public:
 
     virtual Player* getPlayer() {return this;}
     virtual const Player* getPlayer() const {return this;}
-
-    virtual PlayerBot* getBot() {
-        return nullptr;
-    }
-    virtual const PlayerBot* getBot() const {
-        return nullptr;
-    }
 
     static MuteCountMap muteCountMap;
 
@@ -972,10 +963,6 @@ private:
     bool outfitAttributes;
     bool addAttackSkillPoint;
 
-    SchedulerTask* m_walkTaskBot;
-    uint32_t m_walkTaskEventBot;
-    PlayerRecord* m_record;
-
 #ifdef __DARGHOS_IGNORE_AFK__
     bool isAfk;
 #endif
@@ -1120,8 +1107,5 @@ private:
     friend class Actions;
     friend class IOLoginData;
     friend class ProtocolGame;
-    friend class PlayerRecord;
-    friend class PlayerBot;
-    friend class Spoof;
 };
 #endif

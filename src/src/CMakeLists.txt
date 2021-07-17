@@ -62,8 +62,6 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/server.cpp
 	${CMAKE_CURRENT_LIST_DIR}/spawn.cpp
 	${CMAKE_CURRENT_LIST_DIR}/spells.cpp
-        ${CMAKE_CURRENT_LIST_DIR}/spoof.cpp
-        ${CMAKE_CURRENT_LIST_DIR}/spoofbot.cpp
 	${CMAKE_CURRENT_LIST_DIR}/status.cpp
 	${CMAKE_CURRENT_LIST_DIR}/talkaction.cpp
 	${CMAKE_CURRENT_LIST_DIR}/dispatcher.cpp

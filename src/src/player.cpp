@@ -35,16 +35,12 @@
 #include "game.h"
 #include "chat.h"
 
-#include "spoof.h"
-#include "spoofbot.h"
-
 extern ConfigManager g_config;
 extern Game g_game;
 extern Chat g_chat;
 extern MoveEvents* g_moveEvents;
 extern Weapons* g_weapons;
 extern CreatureEvents* g_creatureEvents;
-extern Spoof g_spoof;
 
 #ifdef __DARGHOS_PVP_SYSTEM__
 extern Battleground g_battleground;
@@ -94,9 +90,6 @@ Player::Player(const std::string& _name, ProtocolGame* p):
 	guildLevel = GUILDLEVEL_NONE;
 
     m_record = nullptr;
-
-    m_walkTaskBot = nullptr;
-    m_walkTaskEventBot = 0;
 
 #ifdef __DARGHOS_CUSTOM__
 	m_isVip = m_hasExpBonus = false;
@@ -1525,9 +1518,6 @@ void Player::onCreatureAppear(const Creature* creature)
 {
 	Creature::onCreatureAppear(creature);
 
-    if(getBot())
-        getBot()->__onCreatureAppear(creature);
-
     if(creature != this)
 		return;
 
@@ -1964,11 +1954,6 @@ void Player::onThink(uint32_t interval)
 {
 	Creature::onThink(interval);
 
-    PlayerBot* bot = getBot();
-    if(bot){
-        bot->onThink();
-    }
-
 	int64_t timeNow = OTSYS_TIME();
 	if(timeNow - lastPing >= 5000)
 	{
@@ -1988,7 +1973,6 @@ void Player::onThink(uint32_t interval)
 		&& !isConnecting && !pzLocked && !hasCondition(CONDITION_INFIGHT)
 #ifdef __DARGHOS_CUSTOM__
         && !hasCustomFlag(PlayerCustomFlag_ContinueOnlineWhenExit)
-        && !bot
 #endif
     )
 	{
@@ -4107,11 +4091,6 @@ void Player::onWalkComplete()
         walkTaskEvent = g_scheduler.addEvent(walkTask);
         walkTask = NULL;
     }
-
-    if(m_walkTaskBot){
-        m_walkTaskEventBot = g_scheduler.addEvent(m_walkTaskBot);
-        m_walkTaskBot = nullptr;
-    }
 }
 
 void Player::getCreatureLight(LightInfo& light) const
@@ -4353,13 +4332,6 @@ void Player::onIdleStatus()
 
 void Player::onPlacedCreature()
 {
-    if(!getBot()){
-        m_record = new PlayerRecord();
-        m_record->m_player = this;
-        m_record->m_levelLogin = level;
-        m_record->m_playerId = guid;
-    }
-
     //scripting event - onLogin
 	if(!g_creatureEvents->playerLogin(this))
 		kickPlayer(true, true);
@@ -4912,7 +4884,7 @@ void Player::setPromotionLevel(uint32_t pLevel)
 
 uint16_t Player::getBlessings() const
 {
-    if(getBot() || isSecureDeath()) return 5;
+    if(isSecureDeath()) return 5;
 
 	if(!g_config.getBool(ConfigManager::BLESSINGS) || (!isPremium() &&
 		g_config.getBool(ConfigManager::BLESSING_ONLY_PREMIUM)))

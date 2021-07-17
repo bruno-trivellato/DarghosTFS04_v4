@@ -318,15 +318,6 @@ enum WarType_t
 	WAR_LAST = WAR_ENEMY
 };
 
-enum BotScriptAction_t{
-    BSA_MOVE = 0,
-    BSA_MOVE_DIR,
-    BSA_USE_MAP_ITEM,
-    BSA_USE_ROPE,
-    BSA_LOOP_START,
-    BSA_LOOP_END
-};
-
 struct War_t
 {
 	War_t()

@@ -42,15 +42,12 @@
 #include "chat.h"
 #include "configmanager.h"
 #include "game.h"
-#include "spoof.h"
-#include "spoofbot.h"
 
 extern Game g_game;
 extern ConfigManager g_config;
 extern Actions actions;
 extern CreatureEvents* g_creatureEvents;
 extern Chat g_chat;
-extern Spoof g_spoof;
 
 template<class FunctionType>
 void ProtocolGame::addGameTaskInternal(uint32_t delay, const FunctionType& func)
@@ -264,13 +261,6 @@ bool ProtocolGame::login(const std::string& name, uint32_t id, const std::string
 
         m_acceptPackets = true;
         return true;
-    }
-    else if(_player->getBot()){
-
-        disconnectClient(0x14, "Your character could not be loaded.");
-        g_game.removeCreature(_player);
-
-        return false;
     }
     else if(_player->client)
     {
@@ -850,8 +840,6 @@ void ProtocolGame::parsePacket(NetworkMessage &msg)
     }
     else
     {
-        //if(player->m_record != nullptr && !player->getBot())
-            //g_dispatcher.addTask(createTask(std::bind(&PlayerRecord::onDoAction, player->m_record, recvbyte, msg)));
 
 #ifdef __DARGHOS_CUSTOM_SPELLS__
         bool hasPerfomedAction = false;

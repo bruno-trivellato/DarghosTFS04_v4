@@ -29,7 +29,6 @@
 #include "monsters.h"
 #include "configmanager.h"
 #include "game.h"
-#include "spoofbot.h"
 
 extern Game g_game;
 extern Spells* g_spells;
@@ -1552,11 +1551,6 @@ bool InstantSpell::SearchPlayer(const InstantSpell*, Creature* creature, const s
 		g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
 		return false;
 	}
-
-    PlayerBot* bot = targetPlayer->getBot();
-    if(bot){
-        bot->onExiva(player);
-    }
 
 	std::stringstream ss;
 	ss << targetPlayer->getName() << " " << g_game.getSearchString(player->getPosition(), targetPlayer->getPosition(), true, true) << ".";

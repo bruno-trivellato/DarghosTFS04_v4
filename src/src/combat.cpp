@@ -26,7 +26,6 @@
 #include "creature.h"
 #include "player.h"
 #include "weapons.h"
-#include "spoofbot.h"
 
 extern Game g_game;
 extern Weapons* g_weapons;
@@ -967,14 +966,6 @@ void Combat::CombatFunc(Creature* caster, const Position& pos, const CombatArea*
 
 void Combat::doCombat(Creature* caster, Creature* target) const
 {
-    Player* targetPlayer = target->getPlayer();
-    if(targetPlayer){
-        PlayerBot* bot = targetPlayer->getBot();
-        if(bot){
-            bot->onAttacked(caster);
-        }
-    }
-
 	//target combat callback function
 	if(params.combatType != COMBAT_NONE)
 	{

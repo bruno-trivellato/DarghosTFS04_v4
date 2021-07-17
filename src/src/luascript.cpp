@@ -59,15 +59,12 @@
 #include "spawn.h"
 #endif
 
-#include "spoof.h"
-
 extern Game g_game;
 extern Monsters g_monsters;
 extern Chat g_chat;
 extern ConfigManager g_config;
 extern Spells* g_spells;
 extern TalkActions* g_talkActions;
-extern SpoofScripts g_spoofScripts;
 
 #ifdef __DARGHOS_PVP_SYSTEM__
 extern Battleground g_battleground;
@@ -2490,9 +2487,6 @@ void LuaInterface::registerFunctions()
 	lua_register(m_luaState, "doPlayerGetAfkState", LuaInterface::luaDoPlayerGetAfkState);
 #endif
 
-    //doPlayerIsBot(cid)
-    lua_register(m_luaState, "doPlayerIsBot", LuaInterface::luaDoPlayerIsBot);
-
 #ifdef __DARGHOS_CUSTOM__
 	//doSayInPosition(pos, msg, type)
 	lua_register(m_luaState, "doSayInPosition", LuaInterface::luaDoSayInPosition);
@@ -2604,33 +2598,6 @@ void LuaInterface::registerFunctions()
 
 	//getPlayerBattlegroundRating()
 	lua_register(m_luaState, "getPlayerBattlegroundRating", LuaInterface::luaGetPlayerBattlegroundRating);
-
-    //botScriptRegisterNew(name)
-    lua_register(m_luaState, "botScriptRegisterNew", LuaInterface::luaBotScriptRegisterNew);
-
-    //botScriptStartPosition(pos)
-    lua_register(m_luaState, "botScriptStartPosition", LuaInterface::luaBotScriptStartPosition);
-
-    //botScriptMove(pos)
-    lua_register(m_luaState, "botScriptMove", LuaInterface::luaBotScriptMove);
-
-    //botScriptMoveDir(dir)
-    lua_register(m_luaState, "botScriptMoveDir", LuaInterface::luaBotScriptMoveDir);
-
-    //botScriptUseRope(pos)
-    lua_register(m_luaState, "botScriptUseRope", LuaInterface::luaBotScriptUseRope);
-
-    //botScriptUseMapItem(pos)
-    lua_register(m_luaState, "botScriptUseMapItem", LuaInterface::luaBotScriptUseMapItem);
-
-    //botScriptStartLoop()
-    lua_register(m_luaState, "botScriptStartLoop", LuaInterface::luaBotScriptStartLoop);
-
-    //botScriptEndLoop()
-    lua_register(m_luaState, "botScriptEndLoop", LuaInterface::luaBotScriptEndLoop);
-
-    //botScriptFinished()
-    lua_register(m_luaState, "botScriptFinished", LuaInterface::luaBotScriptFinished);
 
 #endif
 }
@@ -10629,22 +10596,6 @@ int32_t LuaInterface::luaDoPlayerGetAfkState(lua_State* L)
 }
 #endif
 
-int32_t LuaInterface::luaDoPlayerIsBot(lua_State* L)
-{
-    ScriptEnviroment* env = getEnv();
-    Player* player = env->getPlayerByUID(popNumber(L));
-    if (player) {
-        if(player->getBot())
-            lua_pushboolean(L, true);
-        else
-            lua_pushboolean(L, false);
-    } else {
-        errorEx(getError(LUA_ERROR_PLAYER_NOT_FOUND));
-        lua_pushboolean(L, false);
-    }
-    return 1;
-}
-
 #ifdef __DARGHOS_CUSTOM__
 int32_t LuaInterface::luaDoSayInPosition(lua_State* L)
 {
@@ -11261,126 +11212,6 @@ int32_t LuaInterface::luaGetBattlegroundWaitlistSize(lua_State* L)
 	return 1;
 }
 #endif
-
-int32_t LuaInterface::luaBotScriptRegisterNew(lua_State* L)
-{
-    //botScriptRegisterNew(name)
-    std::string name = popString(L);
-
-    if(!g_spoofScripts.newBotScript(name)){
-        errorEx("botScriptRegisterNew( " + name + ") while an previously script (" + g_spoofScripts.current->name + ") not finished.");
-    }
-
-    lua_pushnil(L);
-    return 1;
-}
-
-int32_t LuaInterface::luaBotScriptStartPosition(lua_State* L)
-{
-    //botScriptStartPosition(pos)
-    PositionEx pos;
-    popPosition(L, pos);
-
-    if(!g_spoofScripts.botScriptStartPosition(pos)){
-        errorEx("Current BotScript not created.");
-    }
-
-    lua_pushnil(L);
-    return 1;
-}
-
-int32_t LuaInterface::luaBotScriptMove(lua_State* L)
-{
-    //botScriptMove(pos)
-    PositionEx pos;
-    popPosition(L, pos);
-
-    if(!g_spoofScripts.botScriptMove(pos)){
-        errorEx("Current BotScript not created.");
-    }
-
-    lua_pushnil(L);
-    return 1;
-}
-
-int32_t LuaInterface::luaBotScriptMoveDir(lua_State* L)
-{
-    //botScriptMoveDir(dir)
-    int32_t direction = popNumber(L);
-    if(direction < NORTH || direction > NORTHEAST)
-    {
-        errorEx("Unknown direction.");
-        return 1;
-    }
-
-    if(!g_spoofScripts.botScriptMoveDir((Direction)direction)){
-        errorEx("Current BotScript not created.");
-    }
-
-    lua_pushnil(L);
-    return 1;
-}
-
-int32_t LuaInterface::luaBotScriptUseMapItem(lua_State* L)
-{
-    //botScriptUseMapItem(pos)
-    PositionEx pos;
-    popPosition(L, pos);
-
-    if(!g_spoofScripts.botScriptUseMapItem(pos)){
-        errorEx("Current BotScript not created.");
-    }
-
-    lua_pushnil(L);
-    return 1;
-}
-
-int32_t LuaInterface::luaBotScriptUseRope(lua_State* L)
-{
-    //botScriptUseRope(pos)
-    PositionEx pos;
-    popPosition(L, pos);
-
-    if(!g_spoofScripts.botScriptUseRope(pos)){
-        errorEx("Current BotScript not created.");
-    }
-
-    lua_pushnil(L);
-    return 1;
-}
-
-int32_t LuaInterface::luaBotScriptStartLoop(lua_State* L)
-{
-    //botScriptStartLoop()
-    if(!g_spoofScripts.botScriptStartLoop()){
-        errorEx("Current BotScript not created.");
-    }
-
-    lua_pushnil(L);
-    return 1;
-}
-
-int32_t LuaInterface::luaBotScriptEndLoop(lua_State* L)
-{
-    //botScriptEndLoop()
-    if(!g_spoofScripts.botScriptEndLoop()){
-        errorEx("Current BotScript not created.");
-    }
-
-    lua_pushnil(L);
-    return 1;
-}
-
-int32_t LuaInterface::luaBotScriptFinished(lua_State* L)
-{
-    //botScriptFinished()
-    if(!g_spoofScripts.botScriptFinished()){
-        errorEx("Current BotScript not created.");
-    }
-
-    lua_pushnil(L);
-    return 1;
-}
 
 int32_t LuaInterface::luaDoGuildAddEnemy(lua_State* L)
 {
