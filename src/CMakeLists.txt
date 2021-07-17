@@ -1,79 +1,56 @@
-message("CMAKE_CURRENT_LIST_DIR is ${CMAKE_CURRENT_LIST_DIR}")  
-set(tfs_SRC
-	${CMAKE_CURRENT_LIST_DIR}/actions.cpp
-	${CMAKE_CURRENT_LIST_DIR}/admin.cpp
-	${CMAKE_CURRENT_LIST_DIR}/allocator.cpp
-	${CMAKE_CURRENT_LIST_DIR}/ioban.cpp
-	${CMAKE_CURRENT_LIST_DIR}/baseevents.cpp
-	${CMAKE_CURRENT_LIST_DIR}/beds.cpp
-	${CMAKE_CURRENT_LIST_DIR}/chat.cpp
-	${CMAKE_CURRENT_LIST_DIR}/combat.cpp
-	${CMAKE_CURRENT_LIST_DIR}/condition.cpp
-	${CMAKE_CURRENT_LIST_DIR}/configmanager.cpp
-	${CMAKE_CURRENT_LIST_DIR}/connection.cpp
-	${CMAKE_CURRENT_LIST_DIR}/container.cpp
-	${CMAKE_CURRENT_LIST_DIR}/creature.cpp
-	${CMAKE_CURRENT_LIST_DIR}/creatureevent.cpp
-	${CMAKE_CURRENT_LIST_DIR}/cylinder.cpp
-	${CMAKE_CURRENT_LIST_DIR}/database.cpp
-	${CMAKE_CURRENT_LIST_DIR}/databasemanager.cpp
-	${CMAKE_CURRENT_LIST_DIR}/databasemysql.cpp
-	${CMAKE_CURRENT_LIST_DIR}/depot.cpp
-        ${CMAKE_CURRENT_LIST_DIR}/darghos_pvp.cpp
-	${CMAKE_CURRENT_LIST_DIR}/fileloader.cpp
-	${CMAKE_CURRENT_LIST_DIR}/game.cpp
-	${CMAKE_CURRENT_LIST_DIR}/gameservers.cpp
-	${CMAKE_CURRENT_LIST_DIR}/globalevent.cpp
-	${CMAKE_CURRENT_LIST_DIR}/group.cpp
-	${CMAKE_CURRENT_LIST_DIR}/house.cpp
-	${CMAKE_CURRENT_LIST_DIR}/housetile.cpp
-	${CMAKE_CURRENT_LIST_DIR}/ioguild.cpp
-	${CMAKE_CURRENT_LIST_DIR}/iologindata.cpp
-	${CMAKE_CURRENT_LIST_DIR}/iomap.cpp
-	${CMAKE_CURRENT_LIST_DIR}/iomapserialize.cpp
-	${CMAKE_CURRENT_LIST_DIR}/item.cpp
-	${CMAKE_CURRENT_LIST_DIR}/itemattributes.cpp
-	${CMAKE_CURRENT_LIST_DIR}/items.cpp
-	${CMAKE_CURRENT_LIST_DIR}/textlogger.cpp
-	${CMAKE_CURRENT_LIST_DIR}/luascript.cpp
-	${CMAKE_CURRENT_LIST_DIR}/mailbox.cpp
-	${CMAKE_CURRENT_LIST_DIR}/map.cpp
-	${CMAKE_CURRENT_LIST_DIR}/monster.cpp
-	${CMAKE_CURRENT_LIST_DIR}/monsters.cpp
-	${CMAKE_CURRENT_LIST_DIR}/movement.cpp
-	${CMAKE_CURRENT_LIST_DIR}/networkmessage.cpp
-	${CMAKE_CURRENT_LIST_DIR}/npc.cpp
-	${CMAKE_CURRENT_LIST_DIR}/otpch.cpp
-	${CMAKE_CURRENT_LIST_DIR}/otserv.cpp
-	${CMAKE_CURRENT_LIST_DIR}/outfit.cpp
-	${CMAKE_CURRENT_LIST_DIR}/outputmessage.cpp
-	${CMAKE_CURRENT_LIST_DIR}/party.cpp
-	${CMAKE_CURRENT_LIST_DIR}/player.cpp
-	${CMAKE_CURRENT_LIST_DIR}/position.cpp
-	${CMAKE_CURRENT_LIST_DIR}/protocol.cpp
-	${CMAKE_CURRENT_LIST_DIR}/protocolgame.cpp
-	${CMAKE_CURRENT_LIST_DIR}/protocollogin.cpp
-	${CMAKE_CURRENT_LIST_DIR}/protocolold.cpp
-	${CMAKE_CURRENT_LIST_DIR}/quests.cpp
-        ${CMAKE_CURRENT_LIST_DIR}/raids.cpp
-        ${CMAKE_CURRENT_LIST_DIR}/rsa.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scheduler.cpp
-	${CMAKE_CURRENT_LIST_DIR}/scriptmanager.cpp
-	${CMAKE_CURRENT_LIST_DIR}/server.cpp
-	${CMAKE_CURRENT_LIST_DIR}/spawn.cpp
-	${CMAKE_CURRENT_LIST_DIR}/spells.cpp
-        ${CMAKE_CURRENT_LIST_DIR}/spoof.cpp
-        ${CMAKE_CURRENT_LIST_DIR}/spoofbot.cpp
-	${CMAKE_CURRENT_LIST_DIR}/status.cpp
-	${CMAKE_CURRENT_LIST_DIR}/talkaction.cpp
-	${CMAKE_CURRENT_LIST_DIR}/dispatcher.cpp
-	${CMAKE_CURRENT_LIST_DIR}/teleport.cpp
-	${CMAKE_CURRENT_LIST_DIR}/thing.cpp
-	${CMAKE_CURRENT_LIST_DIR}/tile.cpp
-	${CMAKE_CURRENT_LIST_DIR}/tools.cpp
-	${CMAKE_CURRENT_LIST_DIR}/trashholder.cpp
-	${CMAKE_CURRENT_LIST_DIR}/vocation.cpp
-	${CMAKE_CURRENT_LIST_DIR}/waitlist.cpp
-	${CMAKE_CURRENT_LIST_DIR}/weapons.cpp	
-)
+cmake_minimum_required(VERSION 2.8)
 
+set(CMAKE_DISABLE_SOURCE_CHANGES ON)
+set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
+
+project(tfs)
+
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
+
+include(cotire)
+
+# Initialize CXXFLAGS.
+set(CMAKE_CXX_FLAGS                "-Wall -Werror")
+set(CMAKE_CXX_FLAGS_DEBUG          "-O0 -g")
+set(CMAKE_CXX_FLAGS_MINSIZEREL     "-Os -DNDEBUG")
+set(CMAKE_CXX_FLAGS_RELEASE        "-Ofast -DNDEBUG")
+set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 -g")
+
+include(FindCXX11)
+
+# Find packages.
+find_package(LibXml2 REQUIRED)
+find_package(GMP REQUIRED)
+find_package(MySQL)
+find_package(LuaJIT)
+find_package(ZLIB)
+find_package(OpenSSL)
+
+#if (LUAJIT_FOUND)
+#    add_definitions(-D__LUAJIT__)
+#else()
+    find_package(Lua)
+#endif()
+
+# Darghos Definitions
+#add_definitions(-D__DARGHOS_CUSTOM__ -D__DARGHOS_EMERGENCY_DDOS__ -D__NO_CRYPTOPP__ -D__USE_MYSQL__ -D__WAR_SYSTEM__ -D__NO_CRYPTOPP__ -D__TFS_NEWEST_REVS_FIXIES__)
+add_definitions(-D__DARGHOS_CUSTOM__ -D__DARGHOS_EMERGENCY_DDOS__ -D__NO_CRYPTOPP__ -D__USE_MYSQL__ -D__WAR_SYSTEM__ -D__NO_CRYPTOPP__ -D__TFS_NEWEST_REVS_FIXIES__ -D__DARGHOS_PVP_SYSTEM__ -D__DARGHOS_CUSTOM_SPELLS__ -D__LOGIN_SERVER__)
+
+set(Boost_USE_STATIC_LIBS   ON)
+set(Boost_USE_MULTITHREADED ON)
+
+find_package(Boost 1.42.0 COMPONENTS thread system filesystem regex REQUIRED)
+
+include(src/CMakeLists.txt)
+add_executable(tfs ${tfs_SRC})
+
+include_directories(${LIBXML2_INCLUDE_DIR} ${MYSQL_INCLUDE_DIR} ${LUA_INCLUDE_DIR} ${Boost_INCLUDE_DIRS} ${GMP_INCLUDE_DIR} ${ZLIB_INCLUDE_DIRS} ${OPENSSL_INCLUDE_DIRS})
+
+find_package(Threads REQUIRED)
+
+if(WIN32 AND __COMPILER_GNU)
+    # mingw-gcc fails to link boost::thread
+    add_definitions(-DBOOST_THREAD_USE_LIB)
+endif(WIN32 AND __COMPILER_GNU)
+
+target_link_libraries(tfs ${LIBXML2_LIBRARIES} ${MYSQL_CLIENT_LIBS} ${LUA_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} ${Boost_LIBRARIES} ${GMP_LIBRARIES} ${ZLIB_LIBRARIES} ${OPENSSL_LIBRARIES})
