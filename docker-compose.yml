@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  darghos:
+    build: .
+    container_name: darghos-server
+    volumes:
+      # Mount source code for development
+      - ./src:/app/src
+      - ./data:/app/data:ro
+      # Mount any additional config files
+      - ./schemas:/app/schemas:ro
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    networks:
+      - darghos-net
+    depends_on:
+      - mysql
+    ports:
+      - "7171:7171"  # Game server port (typical TFS port)
+      - "7172:7172"  # Login server port
+
+  mysql:
+    image: mysql:8.0
+    container_name: darghos-mysql
+    platform: linux/arm64
+    environment:
+      MYSQL_ROOT_PASSWORD: darghos123
+      MYSQL_DATABASE: darghos
+      MYSQL_USER: darghos
+      MYSQL_PASSWORD: darghos123
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./schemas:/docker-entrypoint-initdb.d:ro
+    networks:
+      - darghos-net
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql_data:
+
+networks:
+  darghos-net:
+    driver: bridge

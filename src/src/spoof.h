@@ -7,6 +7,16 @@
 
 #define SPOOF_USE_RECORDS 0
 
+enum BotScriptAction_t
+{
+	BSA_MOVE = 0,
+	BSA_MOVE_DIR = 1,
+	BSA_USE_MAP_ITEM = 2,
+	BSA_USE_ROPE = 3,
+	BSA_LOOP_START = 4,
+	BSA_LOOP_END = 5
+};
+
 class PlayerBot;
 class Player;
 class PlayerRecord;

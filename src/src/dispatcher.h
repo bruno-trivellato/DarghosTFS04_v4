@@ -93,7 +93,7 @@ class Dispatcher
         std::condition_variable taskSignal;
 
         std::list<Task*> taskList;
-        std::atomic<ThreadState> threadState {THREAD_STATE_TERMINATED};
+        std::atomic<ThreadState> threadState{THREAD_STATE_TERMINATED};
 };
 
 extern Dispatcher g_dispatcher;

@@ -89,7 +89,7 @@ class Scheduler
         uint32_t lastEventId;
         std::priority_queue<SchedulerTask*, std::deque<SchedulerTask*>, TaskComparator> eventList;
         std::unordered_set<uint32_t> eventIds;
-        std::atomic<ThreadState> threadState {THREAD_STATE_TERMINATED};
+        std::atomic<ThreadState> threadState{THREAD_STATE_TERMINATED};
 };
 
 extern Scheduler g_scheduler;
