@@ -25,7 +25,15 @@ docker-compose run --rm darghos bash -c "
     echo 'Compiling with make...'
     make -j\$(nproc)
     echo 'Build complete!'
-    ls -la tfs 2>/dev/null && echo 'TFS executable created successfully!' || echo 'Build failed - no executable found'
+    if [ -f tfs ]; then
+        echo 'TFS executable created successfully!'
+        echo 'Copying TFS executable to root directory...'
+        cp tfs /app/tfs
+        chmod +x /app/tfs
+        echo 'TFS executable copied to /app/tfs'
+    else
+        echo 'Build failed - no executable found'
+    fi
 "
 
 echo "Build process finished. Check output above for any errors."

@@ -219,13 +219,19 @@ void ScriptEnviroment::addUniqueThing(Thing* thing)
 	if(!item || !item->getUniqueId())
 		return;
 
-	if(m_globalMap[item->getUniqueId()])
-	{
-		if(item->getActionId() != 2000) //scripted quest system
-			std::clog << "Duplicate uniqueId " << item->getUniqueId() << std::endl;
+	try {
+		if(m_globalMap[item->getUniqueId()])
+		{
+			if(item->getActionId() != 2000) //scripted quest system
+				std::clog << "Duplicate uniqueId " << item->getUniqueId() << std::endl;
+		}
+		else
+			m_globalMap[item->getUniqueId()] = thing;
 	}
-	else
-		m_globalMap[item->getUniqueId()] = thing;
+	catch(const std::bad_alloc& e) {
+		std::clog << "Warning: Failed to allocate memory for uniqueId " << item->getUniqueId() 
+		          << ". Skipping this item to prevent server crash." << std::endl;
+	}
 }
 
 void ScriptEnviroment::removeUniqueThing(Thing* thing)

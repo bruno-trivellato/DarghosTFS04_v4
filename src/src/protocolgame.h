@@ -34,7 +34,7 @@ class Container;
 class Tile;
 class Connection;
 class Quest;
-class RecordAction;
+// class RecordAction; // Disabled for compilation (spoof system)
 
 typedef std::shared_ptr<NetworkMessage> NetworkMessage_ptr;
 class ProtocolGame : public Protocol
@@ -130,7 +130,7 @@ class ProtocolGame : public Protocol
 		void sendTextWindow(uint32_t windowTextId, Item* item, uint16_t maxLen, bool canWrite);
 		void sendTextWindow(uint32_t windowTextId, uint32_t itemId, const std::string& text);
 
-		void sendHouseWindow(uint32_t windowTextId, const std::string& text);
+		void sendHouseWindow(uint32_t windowTextId, House* house, uint32_t listId, const std::string& text);
 		void sendVIPLogIn(uint32_t guid);
 		void sendVIPLogOut(uint32_t guid);
 		void sendVIP(uint32_t guid, const std::string& name, bool isOnline);
@@ -169,6 +169,10 @@ class ProtocolGame : public Protocol
 		void sendUpdateInventoryItem(slots_t slot, const Item* item);
 		void sendRemoveInventoryItem(slots_t slot);
 
+		bool canSee(uint16_t x, uint16_t y, uint16_t z) const;
+		bool canSee(const Creature*) const;
+		bool canSee(const Position& pos) const;
+
 	private:
 		void disconnectClient(uint8_t error, const char* message);
         void writeToOutputBuffer(const NetworkMessage& msg);
@@ -181,14 +185,10 @@ class ProtocolGame : public Protocol
 		virtual void releaseProtocol();
 		virtual void deleteProtocolTask();
 
-		bool canSee(uint16_t x, uint16_t y, uint16_t z) const;
-		bool canSee(const Creature*) const;
-		bool canSee(const Position& pos) const;
-
 		virtual void onConnect();
 		virtual void onRecvFirstMessage(NetworkMessage& msg);
 
-        void doAction(RecordAction* action);
+        // void doAction(RecordAction* action); // Disabled for compilation (spoof system)
 
 		bool parseFirstPacket(NetworkMessage& msg);
 		virtual void parsePacket(NetworkMessage& msg);

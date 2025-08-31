@@ -20,11 +20,20 @@ services:
     ports:
       - "7171:7171"  # Game server port (typical TFS port)
       - "7172:7172"  # Login server port
+      - "8080:8080"  # Web monitor port
+    mem_limit: 4g
+    mem_reservation: 2g
+    shm_size: 2gb
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
 
   mysql:
     image: mysql:8.0
     container_name: darghos-mysql
     platform: linux/arm64
+    command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: darghos123
       MYSQL_DATABASE: darghos

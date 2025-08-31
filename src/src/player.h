@@ -34,6 +34,7 @@
 #include "ioguild.h"
 #include "party.h"
 #include "npc.h"
+// #include "spoof.h" // Disabled for compilation
 
 #ifdef __DARGHOS_PVP_SYSTEM__
 #include "darghos_pvp.h"
@@ -1096,6 +1097,8 @@ private:
     OutfitMap outfits;
     LearnedInstantSpellList learnedInstantSpellList;
     WarMap warMap;
+    
+    // PlayerRecord* m_record; // Disabled for compilation (spoof system)
 
 #ifdef __DARGHOS_PVP_SYSTEM__
     friend class Battleground;

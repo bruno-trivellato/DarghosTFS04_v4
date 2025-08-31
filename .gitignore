@@ -3,3 +3,33 @@ _desktop.ini
 logs/
 spells./
 *.log
+
+# Build directories
+build/
+build-debug/
+src/build/
+src/build-debug/
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary and debug files
+*.tmp
+*.temp
+gdb_script.txt
+
+# Test and development files
+test-server.js
+*web-server*.py
+basic-web-server.py
+simple-web-server.py
+start-services.sh
+
+# Config files that might contain sensitive data
+config.lua

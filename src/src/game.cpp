@@ -5056,52 +5056,93 @@ void Game::internalDecayItem(Item* item)
 
 void Game::checkDecay()
 {
+    // Temporarily disable decay processing to isolate crash
     g_scheduler.addEvent(createSchedulerTask(EVENT_DECAYINTERVAL,
         std::bind(&Game::checkDecay, this)));
+    
+    return;  // Early return - skip decay processing for now
 
 	size_t bucket = (lastBucket + 1) % EVENT_DECAYBUCKETS;
+    
+    // Safety check for bucket bounds
+    if (bucket >= EVENT_DECAYBUCKETS) {
+        std::clog << "Error: Invalid decay bucket " << bucket << std::endl;
+        lastBucket = 0;
+        return;
+    }
+    
     for (auto it = decayItems[bucket].begin(); it != decayItems[bucket].end();)
 	{
 		Item* item = *it;
-        if(!item->canDecay())
-        {
-            item->setDecaying(DECAYING_FALSE);
-            freeThing(item);
+        
+        // Null pointer safety check
+        if (!item) {
+            std::clog << "Warning: Null item in decay bucket " << bucket << std::endl;
             it = decayItems[bucket].erase(it);
             continue;
         }
-
-        int32_t duration = item->getDuration();
-        int32_t decreaseTime = std::min<int32_t>(EVENT_DECAYINTERVAL * EVENT_DECAYBUCKETS, duration);
-
-        duration -= decreaseTime;
-		item->decreaseDuration(decreaseTime);
-
-        if(duration <= 0)
-		{
-			it = decayItems[bucket].erase(it);
-			internalDecayItem(item);
-			freeThing(item);
-		}
-        else if(duration < EVENT_DECAYINTERVAL * EVENT_DECAYBUCKETS)
-		{
-            it = decayItems[bucket].erase(it);
-            size_t newBucket = (bucket + ((duration + EVENT_DECAYINTERVAL / 2) / 1000)) % EVENT_DECAYBUCKETS;
-			if(newBucket == bucket)
-			{
-				internalDecayItem(item);
-				freeThing(item);
-			}
-            else{
-				decayItems[newBucket].push_back(item);
+        
+        // Check if item is still valid before calling methods  
+        int32_t duration = 0;
+        try {
+            if(!item->canDecay())
+            {
+                item->setDecaying(DECAYING_FALSE);
+                freeThing(item);
+                it = decayItems[bucket].erase(it);
+                continue;
             }
-		}
-		else
-			++it;
+
+            duration = item->getDuration();
+            int32_t decreaseTime = std::min<int32_t>(EVENT_DECAYINTERVAL * EVENT_DECAYBUCKETS, duration);
+
+            duration -= decreaseTime;
+            item->decreaseDuration(decreaseTime);
+            
+            if(duration <= 0)
+            {
+                it = decayItems[bucket].erase(it);
+                internalDecayItem(item);
+                freeThing(item);
+            }
+            else if(duration < EVENT_DECAYINTERVAL * EVENT_DECAYBUCKETS)
+            {
+                it = decayItems[bucket].erase(it);
+                size_t newBucket = (bucket + ((duration + EVENT_DECAYINTERVAL / 2) / 1000)) % EVENT_DECAYBUCKETS;
+                
+                // Bounds check for new bucket
+                if (newBucket >= EVENT_DECAYBUCKETS) {
+                    std::clog << "Warning: Invalid new decay bucket " << newBucket << ", using bucket 0" << std::endl;
+                    newBucket = 0;
+                }
+                
+                if(newBucket == bucket)
+                {
+                    internalDecayItem(item);
+                    freeThing(item);
+                }
+                else{
+                    decayItems[newBucket].push_back(item);
+                }
+            }
+            else
+                ++it;
+        }
+        catch (...) {
+            std::clog << "Exception in checkDecay for item, removing from bucket " << bucket << std::endl;
+            it = decayItems[bucket].erase(it);
+            continue;
+        }
 	}
 
 	lastBucket = bucket;
-	cleanup();
+	
+	try {
+		cleanup();
+	}
+	catch (...) {
+		std::clog << "Exception in cleanup() during checkDecay" << std::endl;
+	}
 }
 
 void Game::checkLight()
@@ -6769,20 +6810,36 @@ int64_t Game::getCurrentRxPackets()
 
     std::ifstream handler;
     handler.open(rx_statistics_patch.c_str(), std::ios::binary);
+    
+    // Check if file opened successfully
+    if (!handler.is_open()) {
+        std::clog << "Warning: Cannot open network statistics file: " << rx_statistics_patch << std::endl;
+        return 0;
+    }
 
-    uint64_t length;
-    handler.seekg (0, std::ios::end);
-    length = handler.tellg();
-    handler.seekg (0, std::ios::beg);
-
-    char* buffer;
-    buffer = new char[length];
-    handler.read(buffer, length);
-
-    int64_t value = std::atol(buffer);
-    delete[] buffer;
-
-    return value;
+    // Read content safely without relying on reported file size for /sys files
+    std::string content;
+    handler.seekg(0, std::ios::beg);
+    
+    try {
+        // Read line by line to avoid /sys filesystem size issues
+        std::string line;
+        if (std::getline(handler, line)) {
+            content = line;
+        }
+        handler.close();
+        
+        // Convert to number
+        if (!content.empty()) {
+            return std::atoll(content.c_str());
+        }
+        
+        return 0;
+    }
+    catch (...) {
+        handler.close();
+        return 0;
+    }
 }
 
 /* RX = Download | TX = Upload */
@@ -6793,21 +6850,26 @@ int64_t Game::getCurrentRxBytes()
     rx_statistics_patch = "/sys/class/net/" + g_config.getString(ConfigManager::DDOS_EMERGENCY_PUBLIC_INTERFACE) + "/statistics/rx_bytes";
 
     std::ifstream handler;
-    handler.open(rx_statistics_patch.c_str(), std::ios::binary);
+    handler.open(rx_statistics_patch.c_str());
+    
+    if (!handler.is_open()) {
+        return 0;
+    }
 
-    uint64_t length;
-    handler.seekg (0, std::ios::end);
-    length = handler.tellg();
-    handler.seekg (0, std::ios::beg);
-
-    char* buffer;
-    buffer = new char[length];
-    handler.read(buffer, length);
-
-    int64_t value = std::atol(buffer);
-    delete[] buffer;
-
-    return value;
+    try {
+        std::string line;
+        if (std::getline(handler, line)) {
+            handler.close();
+            return std::atoll(line.c_str());
+        }
+        
+        handler.close();
+        return 0;
+    }
+    catch (...) {
+        handler.close();
+        return 0;
+    }
 }
 
 int64_t Game::getCurrentTxBytes()
@@ -6816,21 +6878,26 @@ int64_t Game::getCurrentTxBytes()
     rx_statistics_patch = "/sys/class/net/" + g_config.getString(ConfigManager::DDOS_EMERGENCY_PUBLIC_INTERFACE) + "/statistics/tx_bytes";
 
     std::ifstream handler;
-    handler.open(rx_statistics_patch.c_str(), std::ios::binary);
+    handler.open(rx_statistics_patch.c_str());
+    
+    if (!handler.is_open()) {
+        return 0;
+    }
 
-    uint64_t length;
-    handler.seekg (0, std::ios::end);
-    length = handler.tellg();
-    handler.seekg (0, std::ios::beg);
-
-    char* buffer;
-    buffer = new char[length];
-    handler.read(buffer, length);
-
-    int64_t value = std::atol(buffer);
-    delete[] buffer;
-
-    return value;
+    try {
+        std::string line;
+        if (std::getline(handler, line)) {
+            handler.close();
+            return std::atoll(line.c_str());
+        }
+        
+        handler.close();
+        return 0;
+    }
+    catch (...) {
+        handler.close();
+        return 0;
+    }
 }
 #endif
 

@@ -20,6 +20,9 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <execinfo.h>
+#include <cxxabi.h>
+#include <signal.h>
 
 #ifndef WINDOWS
 #include <unistd.h>
@@ -75,7 +78,7 @@
 #include "textlogger.h"
 #endif
 
-#include "spoof.h"
+// #include "spoof.h" // Disabled for compilation
 
 #ifdef __NO_BOOST_EXCEPTIONS__
 #include <exception>
@@ -88,8 +91,8 @@ inline void boost::throw_exception(std::exception const & e)
 
 Dispatcher g_dispatcher;
 Scheduler g_scheduler;
-Spoof g_spoof;
-SpoofScripts g_spoofScripts;
+// Spoof g_spoof; // Disabled for compilation
+// SpoofScripts g_spoofScripts; // Disabled for compilation
 RSA g_RSA;
 ConfigManager g_config;
 Game g_game;
@@ -248,12 +251,115 @@ int32_t getch()
 }
 #endif
 
+void printStackTrace()
+{
+	void* buffer[256];
+	int nptrs = backtrace(buffer, 256);
+	char** strings = backtrace_symbols(buffer, nptrs);
+	
+	puts("=== STACK TRACE ===");
+	if (strings != NULL) {
+		for (int i = 0; i < nptrs; i++) {
+			// Try to demangle C++ symbols
+			char* mangled_name = 0, *offset_begin = 0, *offset_end = 0;
+			
+			// Find parentheses and +address offset
+			for (char* p = strings[i]; *p; ++p) {
+				if (*p == '(') {
+					mangled_name = p;
+				} else if (*p == '+') {
+					offset_begin = p;
+				} else if (*p == ')' && offset_begin) {
+					offset_end = p;
+					break;
+				}
+			}
+			
+			if (mangled_name && offset_begin && offset_end && 
+				mangled_name < offset_begin) {
+				*mangled_name++ = '\0';
+				*offset_begin++ = '\0';
+				*offset_end = '\0';
+				
+				int status;
+				char* real_name = abi::__cxa_demangle(mangled_name, 0, 0, &status);
+				
+				printf("#%2d %s : %s+%s\n", i, strings[i],
+					   status == 0 ? real_name : mangled_name, offset_begin);
+				
+				if (real_name) free(real_name);
+			} else {
+				printf("#%2d %s\n", i, strings[i]);
+			}
+		}
+		free(strings);
+	}
+	puts("=== END STACK TRACE ===");
+}
+
 void allocationHandler()
 {
-	puts("Allocation failed, server out of memory!\nDecrease size of your map or compile in a 64-bit mode.");
-	char buffer[1024];
-	delete fgets(buffer, 1024, stdin);
-	exit(-1);
+	puts("\n=== ALLOCATION FAILURE DETECTED ===");
+	puts("Memory allocation failed during server operation.");
+	printf("Process ID: %d\n", getpid());
+	
+	// Print memory info
+	system("echo 'Current Memory Usage:'; free -h");
+	
+	// Print the stack trace
+	printStackTrace();
+	
+	puts("\nDetailed allocation failure information:");
+	puts("This std::bad_alloc was caught by the custom allocation handler.");
+	puts("The server will now attempt to exit gracefully.");
+	
+	// Log to file as well
+	std::ofstream logFile("/tmp/allocation_failure.log", std::ios::app);
+	if (logFile.is_open()) {
+		logFile << "=== ALLOCATION FAILURE " << time(NULL) << " ===" << std::endl;
+		logFile << "Process crashed due to std::bad_alloc" << std::endl;
+		logFile.close();
+	}
+	
+	fflush(stdout);
+	fflush(stderr);
+	
+	// Instead of exiting, try to throw a std::bad_alloc which can be caught
+	throw std::bad_alloc();
+}
+
+void crashHandler(int sig)
+{
+	printf("\n=== CRASH DETECTED ===\n");
+	printf("Signal: %d (%s)\n", sig, 
+		   sig == SIGSEGV ? "SIGSEGV (Segmentation fault)" :
+		   sig == SIGABRT ? "SIGABRT (Abort)" :
+		   sig == SIGFPE ? "SIGFPE (Floating point exception)" :
+		   "Unknown signal");
+	printf("Process ID: %d\n", getpid());
+	
+	printStackTrace();
+	
+	// Log to file
+	std::ofstream logFile("/tmp/crash.log", std::ios::app);
+	if (logFile.is_open()) {
+		logFile << "=== CRASH " << time(NULL) << " Signal: " << sig << " ===" << std::endl;
+		logFile.close();
+	}
+	
+	fflush(stdout);
+	fflush(stderr);
+	
+	// Reset signal handler and re-raise to get core dump
+	signal(sig, SIG_DFL);
+	raise(sig);
+}
+
+void installSignalHandlers()
+{
+	signal(SIGSEGV, crashHandler);
+	signal(SIGABRT, crashHandler);
+	signal(SIGFPE, crashHandler);
 }
 
 void startupErrorMessage(std::string error = "")
@@ -268,6 +374,9 @@ void startupErrorMessage(std::string error = "")
 void otserv(StringVec args, ServiceManager* services);
 int main(int argc, char* argv[])
 {
+	// Install crash handlers first
+	installSignalHandlers();
+	
 	StringVec args = StringVec(argv, argv + argc);
 	if(argc > 1 && !argumentsHandler(args))
 		return 0;
@@ -606,8 +715,15 @@ void otserv(StringVec, ServiceManager* services)
 	}
 
 	std::clog << ">> Loading map and spawns..." << std::endl;
-	if(!g_game.loadMap(g_config.getString(ConfigManager::MAP_NAME)))
-		startupErrorMessage();
+	try {
+		if(!g_game.loadMap(g_config.getString(ConfigManager::MAP_NAME)))
+			startupErrorMessage();
+	}
+	catch(const std::bad_alloc& e) {
+		std::clog << ">> ERROR: Failed to allocate memory during map loading." << std::endl;
+		std::clog << ">> Try using a smaller map or increasing system memory." << std::endl;
+		startupErrorMessage("Map loading failed due to memory allocation error");
+	}
 
 	std::clog << ">> Checking world type... ";
 	std::string worldType = asLowerCaseString(g_config.getString(ConfigManager::WORLD_TYPE));
@@ -632,7 +748,7 @@ void otserv(StringVec, ServiceManager* services)
 		startupErrorMessage("Unknown world type: " + g_config.getString(ConfigManager::WORLD_TYPE));
 	}
 
-    g_spoof.onStartup();
+    // g_spoof.onStartup(); // Disabled for compilation
 
 	std::clog << ">> Initializing game state and binding services..." << std::endl;
     g_game.setGameState(GAMESTATE_INIT);

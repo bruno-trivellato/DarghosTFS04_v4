@@ -63,48 +63,61 @@ void ProtocolLogin::disconnectClient(uint8_t error, const char* message)
 
 bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
 {
+    uint32_t clientIp = getConnection()->getIP();
+    std::clog << "[LOGIN] Connection attempt from IP: " << convertIPAddress(clientIp) << std::endl;
+    
     if(g_game.getGameState() == GAMESTATE_SHUTDOWN)
 	{
+	    std::clog << "[LOGIN] Connection rejected - server shutting down" << std::endl;
 		getConnection()->close();
 		return false;
 	}
-
-	uint32_t clientIp = getConnection()->getIP();
     /*uint16_t operatingSystem = msg.get<uint16_t>();*/msg.skipBytes(2);
 	uint16_t version = msg.get<uint16_t>();
+    std::clog << "[LOGIN] Client version: " << version << std::endl;
 
     msg.skipBytes(12);
 	if(!RSA_decrypt(msg))
 	{
+	    std::clog << "[LOGIN] RSA decryption failed for IP: " << convertIPAddress(clientIp) << std::endl;
 		getConnection()->close();
 		return false;
 	}
+	
+	std::clog << "[LOGIN] RSA decryption successful" << std::endl;
 
 	uint32_t key[4] = {msg.get<uint32_t>(), msg.get<uint32_t>(), msg.get<uint32_t>(), msg.get<uint32_t>()};
 	enableXTEAEncryption();
 	setXTEAKey(key);
 
 	std::string name = msg.getString(), password = msg.getString();
+	std::clog << "[LOGIN] Account: '" << name << "' from IP: " << convertIPAddress(clientIp) << std::endl;
+	
 	if(name.empty())
 	{
+		std::clog << "[LOGIN] Empty account name, checking account manager..." << std::endl;
 		if(!g_config.getBool(ConfigManager::ACCOUNT_MANAGER))
 		{
+		    std::clog << "[LOGIN] Account manager disabled, rejecting empty account name" << std::endl;
 			disconnectClient(0x0A, "Invalid account name.");
 			return false;
 		}
 
+		std::clog << "[LOGIN] Using account manager (account 1)" << std::endl;
 		name = "1";
 		password = "1";
 	}
 
 	if(version < CLIENT_VERSION_MIN || version > CLIENT_VERSION_MAX)
 	{
+	    std::clog << "[LOGIN] Invalid client version " << version << " (min: " << CLIENT_VERSION_MIN << ", max: " << CLIENT_VERSION_MAX << ")" << std::endl;
 		disconnectClient(0x0A, CLIENT_VERSION_STRING);
 		return false;
 	}
 
 	if(g_game.getGameState() < GAMESTATE_NORMAL)
 	{
+	    std::clog << "[LOGIN] Server not ready, game state: " << g_game.getGameState() << std::endl;
 		disconnectClient(0x0A, "Server is just starting up, please wait.");
 		return false;
 	}
@@ -207,8 +220,12 @@ bool ProtocolLogin::parseFirstPacket(NetworkMessage& msg)
 			else
                 output->addString(g_config.getString(ConfigManager::SERVER_NAME));
 
-            output->add<uint32_t>(inet_addr(g_config.getString(ConfigManager::IP).c_str()));
-            output->add<uint16_t>(g_config.getNumber(ConfigManager::GAME_PORT));
+            std::string serverIP = g_config.getString(ConfigManager::IP);
+            uint16_t serverPort = g_config.getNumber(ConfigManager::GAME_PORT);
+            std::clog << "[LOGIN] Sending game server IP: " << serverIP << ":" << serverPort << " to client" << std::endl;
+            
+            output->add<uint32_t>(inet_addr(serverIP.c_str()));
+            output->add<uint16_t>(serverPort);
 			
 			#ifdef __DARGHOS_PROXY__
             output->addString((*it));

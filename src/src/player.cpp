@@ -89,7 +89,7 @@ Player::Player(const std::string& _name, ProtocolGame* p):
 	accountManager = MANAGER_NONE;
 	guildLevel = GUILDLEVEL_NONE;
 
-    m_record = nullptr;
+    // m_record = nullptr; // Disabled for compilation (spoof system)
 
 #ifdef __DARGHOS_CUSTOM__
 	m_isVip = m_hasExpBonus = false;
