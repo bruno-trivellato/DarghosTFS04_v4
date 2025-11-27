@@ -85,7 +85,7 @@ bool GlobalEvents::registerEvent(Event* event, xmlNodePtr, bool override)
 		return true;
 	}
 
-	std::clog << "[Warning - GlobalEvents::configureEvent] Duplicate registered globalevent with name: " << globalEvent->getName() << std::endl;
+	std::cerr << "[Warning - GlobalEvents::configureEvent] Duplicate registered globalevent with name: " << globalEvent->getName() << std::endl;
 	return false;
 }
 
@@ -109,7 +109,7 @@ void GlobalEvents::timer()
 			continue;
 
 		if(!it->second->executeEvent())
-			std::clog << "[Error - GlobalEvents::timer] Couldn't execute event: "
+			std::cerr << "[Error - GlobalEvents::timer] Couldn't execute event: "
 				<< it->second->getName() << std::endl;
 	}
 
@@ -127,7 +127,7 @@ void GlobalEvents::think()
 
 		it->second->setLastExecution(now);
 		if(!it->second->executeEvent())
-			std::clog << "[Error - GlobalEvents::think] Couldn't execute event: "
+			std::cerr << "[Error - GlobalEvents::think] Couldn't execute event: "
 				<< it->second->getName() << std::endl;
 	}
 
@@ -193,7 +193,7 @@ bool GlobalEvent::configureEvent(xmlNodePtr p)
 	std::string strValue;
 	if(!readXMLString(p, "name", strValue))
 	{
-		std::clog << "[Error - GlobalEvent::configureEvent] No name for a globalevent." << std::endl;
+		std::cerr << "[Error - GlobalEvent::configureEvent] No name for a globalevent." << std::endl;
 		return false;
 	}
 
@@ -220,7 +220,7 @@ bool GlobalEvent::configureEvent(xmlNodePtr p)
 #endif
 		else
 		{
-			std::clog << "[Error - GlobalEvent::configureEvent] No valid type \"" << strValue << "\" for globalevent with name " << m_name << std::endl;
+			std::cerr << "[Error - GlobalEvent::configureEvent] No valid type \"" << strValue << "\" for globalevent with name " << m_name << std::endl;
 			return false;
 		}
 
@@ -231,7 +231,7 @@ bool GlobalEvent::configureEvent(xmlNodePtr p)
 		IntegerVec params = vectorAtoi(explodeString(strValue, ":"));
 		if(params[0] > 23 || params[0] < 0)
 		{
-			std::clog << "[Error - GlobalEvent::configureEvent] No valid hour \"" << strValue << "\" for globalevent with name " << m_name << std::endl;
+			std::cerr << "[Error - GlobalEvent::configureEvent] No valid hour \"" << strValue << "\" for globalevent with name " << m_name << std::endl;
 			return false;
 		}
 
@@ -240,7 +240,7 @@ bool GlobalEvent::configureEvent(xmlNodePtr p)
 		{
 			if(params[1] > 59 || params[1] < 0)
 			{
-				std::clog << "[Error - GlobalEvent::configureEvent] No valid minute \"" << strValue << "\" for globalevent with name " << m_name << std::endl;
+				std::cerr << "[Error - GlobalEvent::configureEvent] No valid minute \"" << strValue << "\" for globalevent with name " << m_name << std::endl;
 				return false;
 			}
 
@@ -249,7 +249,7 @@ bool GlobalEvent::configureEvent(xmlNodePtr p)
 			{
 				if(params[2] > 59 || params[2] < 0)
 				{
-					std::clog << "[Error - GlobalEvent::configureEvent] No valid second \"" << strValue << "\" for globalevent with name " << m_name << std::endl;
+					std::cerr << "[Error - GlobalEvent::configureEvent] No valid second \"" << strValue << "\" for globalevent with name " << m_name << std::endl;
 					return false;
 				}
 
@@ -268,7 +268,7 @@ bool GlobalEvent::configureEvent(xmlNodePtr p)
 		return true;
 	}
 
-	std::clog << "[Error - GlobalEvent::configureEvent] No interval for globalevent with name " << m_name << std::endl;
+	std::cerr << "[Error - GlobalEvent::configureEvent] No interval for globalevent with name " << m_name << std::endl;
 	return false;
 }
 
@@ -369,7 +369,7 @@ int32_t GlobalEvent::executeRecord(uint32_t current, uint32_t old, Player* playe
 	}
 	else
 	{
-		std::clog << "[Error - GlobalEvent::executeRecord] Call stack overflow." << std::endl;
+		std::cerr << "[Error - GlobalEvent::executeRecord] Call stack overflow." << std::endl;
 		return 0;
 	}
 }
@@ -418,7 +418,7 @@ int32_t GlobalEvent::executeEvent()
 	}
 	else
 	{
-		std::clog << "[Error - GlobalEvent::executeEvent] Call stack overflow." << std::endl;
+		std::cerr << "[Error - GlobalEvent::executeEvent] Call stack overflow." << std::endl;
 		return 0;
 	}
 }
@@ -467,7 +467,7 @@ int32_t GlobalEvent::executeOnBattlegroundStart(uint32_t notJoinPlayers)
 	}
 	else
 	{
-		std::clog << "[Error - GlobalEvent::executeRecord] Call stack overflow." << std::endl;
+		std::cerr << "[Error - GlobalEvent::executeRecord] Call stack overflow." << std::endl;
 		return 0;
 	}
 }

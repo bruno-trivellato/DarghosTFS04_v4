@@ -68,7 +68,7 @@ void PlayerBot::placeOnMap(){
 
             if(tempPos.getX() != recPos.getX() || tempPos.getY() != recPos.getY() || tempPos.getZ() != recPos.getZ()){
                 if (!g_game.placeCreature(getPlayer(), tempPos)) {
-                    std::clog << "[Spoof System] Can not load spoof " << getName() << " on map." << std::endl;
+                    std::cerr << "[Spoof System] Can not load spoof " << getName() << " on map." << std::endl;
                     return;
                 }
 
@@ -76,7 +76,7 @@ void PlayerBot::placeOnMap(){
             }
             else{
                 if (!g_game.placeCreature(getPlayer(), recPos)) {
-                    std::clog << "[Spoof System] Can not load spoof " << getName() << " on map." << std::endl;
+                    std::cerr << "[Spoof System] Can not load spoof " << getName() << " on map." << std::endl;
                     return;
                 }
             }
@@ -125,13 +125,13 @@ void PlayerBot::placeOnMap(){
             }
 
             if(pos.x == 0){
-                std::clog << "[Spoof System] Not found trainer room for " << getName() << "." << std::endl;
+                std::cerr << "[Spoof System] Not found trainer room for " << getName() << "." << std::endl;
                 return;
             }
         }
 
         if (!g_game.placeCreature(getPlayer(), pos)) {
-            std::clog << "[Spoof System] Can not load spoof " << getName() << " on map." << std::endl;
+            std::cerr << "[Spoof System] Can not load spoof " << getName() << " on map." << std::endl;
             return;
         }
     }

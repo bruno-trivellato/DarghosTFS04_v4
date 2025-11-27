@@ -544,7 +544,7 @@ bool BotScript::loadStream(PropStream& stream){
     if(dataSize == list.size())
         return true;
 
-    std::clog << "[botScript] Wrong data lenght for " << name << " (" << dataSize << ", " << list.size() << ")." << std::endl;
+    std::cerr << "[botScript] Wrong data lenght for " << name << " (" << dataSize << ", " << list.size() << ")." << std::endl;
     return false;
 }
 
@@ -591,6 +591,6 @@ bool BotScript::hasNextStep(){
 }
 
 ScriptParam_t BotScript::getNextStep(){
-    //std::clog << "Step [" << list_pos << "/" << list.size() << "]" << std::endl;
+    //std::cerr << "Step [" << list_pos << "/" << list.size() << "]" << std::endl;
     return list.at(list_pos);
 }

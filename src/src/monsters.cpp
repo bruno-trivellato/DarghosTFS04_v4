@@ -284,15 +284,15 @@ bool Monsters::loadFromXml(bool reloading /*= false*/)
 	xmlDocPtr doc = xmlParseFile(getFilePath(FILE_TYPE_OTHER, "monster/monsters.xml").c_str());
 	if(!doc)
 	{
-		std::clog << "[Warning - Monsters::loadFromXml] Cannot load monsters file." << std::endl;
-		std::clog << getLastXMLError() << std::endl;
+		std::cerr << "[Warning - Monsters::loadFromXml] Cannot load monsters file." << std::endl;
+		std::cerr << getLastXMLError() << std::endl;
 		return false;
 	}
 
 	xmlNodePtr p, root = xmlDocGetRootElement(doc);
 	if(xmlStrcmp(root->name,(const xmlChar*)"monsters"))
 	{
-		std::clog << "[Error - Monsters::loadFromXml] Malformed monsters file." << std::endl;
+		std::cerr << "[Error - Monsters::loadFromXml] Malformed monsters file." << std::endl;
 		xmlFreeDoc(doc);
 		return false;
 	}
@@ -308,7 +308,7 @@ bool Monsters::loadFromXml(bool reloading /*= false*/)
 
 		if(xmlStrcmp(p->name, (const xmlChar*)"monster"))
 		{
-			std::clog << "[Warning - Monsters::loadFromXml] Unknown node name (" << p->name << ")." << std::endl;
+			std::cerr << "[Warning - Monsters::loadFromXml] Unknown node name (" << p->name << ")." << std::endl;
 			p = p->next;
 			continue;
 		}
@@ -898,7 +898,7 @@ bool Monsters::deserializeSpell(xmlNodePtr node, spellBlock_t& sb, const std::st
 		else
 		{
 			delete combat;
-			std::clog << "[Error - Monsters::deserializeSpell] " << description << " - Unknown spell name: " << name << std::endl;
+			std::cerr << "[Error - Monsters::deserializeSpell] " << description << " - Unknown spell name: " << name << std::endl;
 			return false;
 		}
 
@@ -921,7 +921,7 @@ bool Monsters::deserializeSpell(xmlNodePtr node, spellBlock_t& sb, const std::st
 							if(shoot != SHOOT_EFFECT_UNKNOWN)
 								combat->setParam(COMBATPARAM_DISTANCEEFFECT, shoot);
 							else
-								std::clog << "[Warning - Monsters::deserializeSpell] " << description << " - Unknown shootEffect: " << strValue << std::endl;
+								std::cerr << "[Warning - Monsters::deserializeSpell] " << description << " - Unknown shootEffect: " << strValue << std::endl;
 						}
 					}
 					else if(tmpStrValue == "areaeffect")
@@ -932,11 +932,11 @@ bool Monsters::deserializeSpell(xmlNodePtr node, spellBlock_t& sb, const std::st
 							if(effect != MAGIC_EFFECT_UNKNOWN)
 								combat->setParam(COMBATPARAM_EFFECT, effect);
 							else
-								std::clog << "[Warning - Monsters::deserializeSpell] " << description << " - Unknown areaEffect: " << strValue << std::endl;
+								std::cerr << "[Warning - Monsters::deserializeSpell] " << description << " - Unknown areaEffect: " << strValue << std::endl;
 						}
 					}
 					else
-						std::clog << "[Warning - Monsters::deserializeSpells] Effect type \"" << strValue << "\" does not exist." << std::endl;
+						std::cerr << "[Warning - Monsters::deserializeSpells] Effect type \"" << strValue << "\" does not exist." << std::endl;
 				}
 			}
 			attributeNode = attributeNode->next;
@@ -947,14 +947,14 @@ bool Monsters::deserializeSpell(xmlNodePtr node, spellBlock_t& sb, const std::st
 	return true;
 }
 
-#define SHOW_XML_WARNING(desc) std::clog << "[Warning - Monsters::loadMonster] " << desc << ". (" << file << ")" << std::endl;
-#define SHOW_XML_ERROR(desc) std::clog << "[Error - Monsters::loadMonster] " << desc << ". (" << file << ")" << std::endl;
+#define SHOW_XML_WARNING(desc) std::cerr << "[Warning - Monsters::loadMonster] " << desc << ". (" << file << ")" << std::endl;
+#define SHOW_XML_ERROR(desc) std::cerr << "[Error - Monsters::loadMonster] " << desc << ". (" << file << ")" << std::endl;
 
 bool Monsters::loadMonster(const std::string& file, const std::string& monsterName, bool reloading/* = false*/)
 {
 	if(getIdByName(monsterName) && !reloading)
 	{
-		std::clog << "[Warning - Monsters::loadMonster] Duplicate registered monster with name: " << monsterName << std::endl;
+		std::cerr << "[Warning - Monsters::loadMonster] Duplicate registered monster with name: " << monsterName << std::endl;
 		return true;
 	}
 
@@ -980,8 +980,8 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 	xmlDocPtr doc = xmlParseFile(file.c_str());
 	if(!doc)
 	{
-		std::clog << "[Warning - Monsters::loadMonster] Cannot load monster (" << monsterName << ") file (" << file << ")." << std::endl;
-		std::clog << getLastXMLError() << std::endl;
+		std::cerr << "[Warning - Monsters::loadMonster] Cannot load monster (" << monsterName << ") file (" << file << ")." << std::endl;
+		std::cerr << getLastXMLError() << std::endl;
 		return false;
 	}
 
@@ -989,7 +989,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 	xmlNodePtr p, root = xmlDocGetRootElement(doc);
 	if(xmlStrcmp(root->name,(const xmlChar*)"monster"))
 	{
-		std::clog << "[Error - Monsters::loadMonster] Malformed monster (" << monsterName << ") file (" << file << ")." << std::endl;
+		std::cerr << "[Error - Monsters::loadMonster] Malformed monster (" << monsterName << ") file (" << file << ")." << std::endl;
 		xmlFreeDoc(doc);
 		return false;
 	}

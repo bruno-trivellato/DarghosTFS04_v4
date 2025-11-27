@@ -223,13 +223,13 @@ void ScriptEnviroment::addUniqueThing(Thing* thing)
 		if(m_globalMap[item->getUniqueId()])
 		{
 			if(item->getActionId() != 2000) //scripted quest system
-				std::clog << "Duplicate uniqueId " << item->getUniqueId() << std::endl;
+				std::cerr << "Duplicate uniqueId " << item->getUniqueId() << std::endl;
 		}
 		else
 			m_globalMap[item->getUniqueId()] = thing;
 	}
 	catch(const std::bad_alloc& e) {
-		std::clog << "Warning: Failed to allocate memory for uniqueId " << item->getUniqueId() 
+		std::cerr << "Warning: Failed to allocate memory for uniqueId " << item->getUniqueId() 
 		          << ". Skipping this item to prevent server crash." << std::endl;
 	}
 }
@@ -333,7 +333,7 @@ void ScriptEnviroment::insertThing(uint32_t uid, Thing* thing)
 	if(!m_localMap[uid])
 		m_localMap[uid] = thing;
 	else
-		std::clog << "[Error - ScriptEnviroment::insertThing] Thing uid already taken" << std::endl;
+		std::cerr << "[Error - ScriptEnviroment::insertThing] Thing uid already taken" << std::endl;
 }
 
 Thing* ScriptEnviroment::getThingByUID(uint32_t uid)
@@ -770,7 +770,7 @@ bool LuaInterface::loadFile(const std::string& file, Npc* npc/* = NULL*/)
 	if(ret)
 	{
 		m_lastError = popString(m_luaState);
-		std::clog << "[Error - LuaInterface::loadFile] " << m_lastError << std::endl;
+		std::cerr << "[Error - LuaInterface::loadFile] " << m_lastError << std::endl;
 		return false;
 	}
 
@@ -860,23 +860,23 @@ void LuaInterface::error(const char* function, const std::string& desc)
 		if(!interface->m_errors)
 			return;
 
-		std::clog << std::endl << "[Error - " << interface->getName() << "] " << std::endl;
+		std::cerr << std::endl << "[Error - " << interface->getName() << "] " << std::endl;
 		if(callback)
-			std::clog << "In a callback: " << interface->getScript(callback) << std::endl;
+			std::cerr << "In a callback: " << interface->getScript(callback) << std::endl;
 
 		if(timer)
-			std::clog << (callback ? "from" : "In") << " a timer event called from: " << std::endl;
+			std::cerr << (callback ? "from" : "In") << " a timer event called from: " << std::endl;
 
-		std::clog << interface->getScript(script) << std::endl << "Description: ";
+		std::cerr << interface->getScript(script) << std::endl << "Description: ";
 	}
 	else
-		std::clog << std::endl << "[Lua Error] ";
+		std::cerr << std::endl << "[Lua Error] ";
 
-	std::clog << event << std::endl;
+	std::cerr << event << std::endl;
 	if(function)
-		std::clog << "(" << function << ") ";
+		std::cerr << "(" << function << ") ";
 
-	std::clog << desc << std::endl;
+	std::cerr << desc << std::endl;
 }
 
 bool LuaInterface::pushFunction(int32_t function)
@@ -908,7 +908,7 @@ bool LuaInterface::initState()
 
 	registerFunctions();
     if(!loadFile(getFilePath(FILE_TYPE_OTHER, "lib/global.lua")))
-		std::clog << "[Warning - LuaInterface::initState] Cannot load " << getFilePath(FILE_TYPE_OTHER, "lib/") << std::endl;
+		std::cerr << "[Warning - LuaInterface::initState] Cannot load " << getFilePath(FILE_TYPE_OTHER, "lib/") << std::endl;
 
 	lua_newtable(m_luaState);
 	lua_setfield(m_luaState, LUA_REGISTRYINDEX, "EVENTS");
@@ -963,7 +963,7 @@ void LuaInterface::executeTimer(uint32_t eventIndex)
 			releaseEnv();
 		}
 		else
-			std::clog << "[Error - LuaInterface::executeTimer] Call stack overflow." << std::endl;
+			std::cerr << "[Error - LuaInterface::executeTimer] Call stack overflow." << std::endl;
 
         //free resources
         luaL_unref(m_luaState, LUA_REGISTRYINDEX, event.function);
@@ -1024,9 +1024,9 @@ void LuaInterface::dumpStack(lua_State* L/* = NULL*/)
 	if(!stack)
 		return;
 
-	std::clog << "Stack size: " << stack << std::endl;
+	std::cerr << "Stack size: " << stack << std::endl;
 	for(int32_t i = 1; i <= stack ; ++i)
-		std::clog << lua_typename(m_luaState, lua_type(m_luaState, -i)) << " " << lua_topointer(m_luaState, -i) << std::endl;
+		std::cerr << lua_typename(m_luaState, lua_type(m_luaState, -i)) << " " << lua_topointer(m_luaState, -i) << std::endl;
 }
 
 void LuaInterface::pushVariant(lua_State* L, const LuaVariant& var)
@@ -9784,7 +9784,7 @@ int32_t LuaInterface::luaGetItemIdByName(lua_State* L)
 		if(displayError)
 		{
 			errorEx(getError(LUA_ERROR_ITEM_NOT_FOUND));
-			std::clog << "Name of item not found: " << name << std::endl;
+			std::cerr << "Name of item not found: " << name << std::endl;
 		}
 
 		lua_pushboolean(L, false);
@@ -11360,7 +11360,7 @@ int32_t LuaInterface::luaL_errors(lua_State* L)
 	}
 
 EXPOSE_LOG(Cout, std::cout)
-EXPOSE_LOG(Clog, std::clog)
+EXPOSE_LOG(Clog, std::cerr)
 EXPOSE_LOG(Cerr, std::cerr)
 
 #undef EXPOSE_LOG

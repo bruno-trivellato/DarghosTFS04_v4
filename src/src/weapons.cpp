@@ -140,7 +140,7 @@ bool Weapons::registerEvent(Event* event, xmlNodePtr, bool override)
 		return true;
 	}
 
-	std::clog << "[Warning - Weapons::registerEvent] Duplicate registered item with id: " << weapon->getID() << std::endl;
+	std::cerr << "[Warning - Weapons::registerEvent] Duplicate registered item with id: " << weapon->getID() << std::endl;
 	return false;
 }
 
@@ -194,7 +194,7 @@ bool Weapon::configureEvent(xmlNodePtr p)
 	std::string strValue;
 	if(!readXMLInteger(p, "id", intValue))
 	{
-		std::clog << "Error: [Weapon::configureEvent] Weapon without id." << std::endl;
+		std::cerr << "Error: [Weapon::configureEvent] Weapon without id." << std::endl;
 		return false;
 	}
 
@@ -251,7 +251,7 @@ bool Weapon::configureEvent(xmlNodePtr p)
 	while(vocationNode)
 	{
 		if(!parseVocationNode(vocationNode, vocWeaponMap, vocStringVec, error))
-			std::clog << "[Warning - Weapon::configureEvent] " << error << std::endl;
+			std::cerr << "[Warning - Weapon::configureEvent] " << error << std::endl;
 
 		vocationNode = vocationNode->next;
 	}
@@ -564,7 +564,7 @@ bool Weapon::executeUseWeapon(Player* player, const LuaVariant& var) const
 	}
 	else
 	{
-		std::clog << "[Error - Weapon::executeUseWeapon] Call stack overflow" << std::endl;
+		std::cerr << "[Error - Weapon::executeUseWeapon] Call stack overflow" << std::endl;
 		return false;
 	}
 }

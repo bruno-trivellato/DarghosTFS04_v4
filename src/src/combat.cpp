@@ -524,7 +524,7 @@ bool Combat::setCallback(CallBackParam_t key)
 		}
 
 		default:
-			std::clog << "Combat::setCallback - Unknown callback type: " << (uint32_t)key << std::endl;
+			std::cerr << "Combat::setCallback - Unknown callback type: " << (uint32_t)key << std::endl;
 			break;
 	}
 
@@ -1129,7 +1129,7 @@ void ValueCallback::getMinMaxValues(Player* player, int32_t& min, int32_t& max, 
 	//"onGetPlayerMinMaxValues"(cid, ...)
 	if(!m_interface->reserveEnv())
 	{
-		std::clog << "[Error - ValueCallback::getMinMaxValues] Callstack overflow." << std::endl;
+		std::cerr << "[Error - ValueCallback::getMinMaxValues] Callstack overflow." << std::endl;
 		return;
 	}
 
@@ -1195,7 +1195,7 @@ void ValueCallback::getMinMaxValues(Player* player, int32_t& min, int32_t& max, 
 
 		default:
 		{
-			std::clog << "[Warning - ValueCallback::getMinMaxValues] Unknown callback type" << std::endl;
+			std::cerr << "[Warning - ValueCallback::getMinMaxValues] Unknown callback type" << std::endl;
 			return;
 		}
 	}
@@ -1241,7 +1241,7 @@ void TileCallback::onTileCombat(Creature* creature, Tile* tile) const
 		m_interface->releaseEnv();
 	}
 	else
-		std::clog << "[Error - TileCallback::onTileCombat] Call stack overflow." << std::endl;
+		std::cerr << "[Error - TileCallback::onTileCombat] Call stack overflow." << std::endl;
 }
 
 //**********************************************************
@@ -1277,7 +1277,7 @@ void TargetCallback::onTargetCombat(Creature* creature, Creature* target) const
 	}
 	else
 	{
-		std::clog << "[Error - TargetCallback::onTargetCombat] Call stack overflow." << std::endl;
+		std::cerr << "[Error - TargetCallback::onTargetCombat] Call stack overflow." << std::endl;
 		return;
 	}
 }

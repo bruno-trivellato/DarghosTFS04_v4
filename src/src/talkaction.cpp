@@ -117,7 +117,7 @@ bool TalkActions::registerEvent(Event* event, xmlNodePtr p, bool override)
 		{
 			if(!override)
 			{
-				std::clog << "[Warning - TalkAction::registerEvent] Duplicate registered talkaction with words: " << (*it) << std::endl;
+				std::cerr << "[Warning - TalkAction::registerEvent] Duplicate registered talkaction with words: " << (*it) << std::endl;
 				continue;
 			}
 			else
@@ -261,7 +261,7 @@ bool TalkAction::configureEvent(xmlNodePtr p)
 		m_words = strValue;
 	else if(!readXMLString(p, "default", strValue) || !booleanString(strValue))
 	{
-		std::clog << "[Error - TalkAction::configureEvent] No words for TalkAction." << std::endl;
+		std::cerr << "[Error - TalkAction::configureEvent] No words for TalkAction." << std::endl;
 		return false;
 	}
 
@@ -275,7 +275,7 @@ bool TalkAction::configureEvent(xmlNodePtr p)
 		else if(tmpStrValue == "word-spaced")
 			m_filter = TALKFILTER_WORD_SPACED;
 		else
-			std::clog << "[Warning - TalkAction::configureEvent] Unknown filter for TalkAction: " << strValue << ", using default." << std::endl;
+			std::cerr << "[Warning - TalkAction::configureEvent] Unknown filter for TalkAction: " << strValue << ", using default." << std::endl;
 	}
 
 	int32_t intValue;
@@ -333,7 +333,7 @@ bool TalkAction::loadFunction(const std::string& functionName)
 		m_function = software;
 	else
 	{
-		std::clog << "[Warning - TalkAction::loadFunction] Function \"" << m_functionName << "\" does not exist." << std::endl;
+		std::cerr << "[Warning - TalkAction::loadFunction] Function \"" << m_functionName << "\" does not exist." << std::endl;
 		return false;
 	}
 
@@ -411,7 +411,7 @@ int32_t TalkAction::executeSay(Creature* creature, const std::string& words, std
 	}
 	else
 	{
-		std::clog << "[Error - TalkAction::executeSay] Call stack overflow." << std::endl;
+		std::cerr << "[Error - TalkAction::executeSay] Call stack overflow." << std::endl;
 		return 0;
 	}
 }

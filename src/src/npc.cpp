@@ -157,15 +157,15 @@ bool Npc::loadFromXml(const std::string& filename)
 	xmlDocPtr doc = xmlParseFile(filename.c_str());
 	if(!doc)
 	{
-		std::clog << "[Warning - Npc::loadFromXml] Cannot load npc file (" << filename << ")." << std::endl;
-		std::clog << getLastXMLError() << std::endl;
+		std::cerr << "[Warning - Npc::loadFromXml] Cannot load npc file (" << filename << ")." << std::endl;
+		std::cerr << getLastXMLError() << std::endl;
 		return false;
 	}
 
 	xmlNodePtr p, root = xmlDocGetRootElement(doc);
 	if(xmlStrcmp(root->name,(const xmlChar*)"npc"))
 	{
-		std::clog << "[Error - Npc::loadFromXml] Malformed npc file (" << filename << ")." << std::endl;
+		std::cerr << "[Error - Npc::loadFromXml] Malformed npc file (" << filename << ")." << std::endl;
 		xmlFreeDoc(doc);
 		return false;
 	}
@@ -200,7 +200,7 @@ bool Npc::loadFromXml(const std::string& filename)
 
 	if(readXMLInteger(root, "autowalk", intValue))
 	{
-		std::clog << "[Notice - Npc::Npc] NPC Name: " << name << " - autowalk has been deprecated, use walkinterval." << std::endl;
+		std::cerr << "[Notice - Npc::Npc] NPC Name: " << name << " - autowalk has been deprecated, use walkinterval." << std::endl;
 		walkTicks = 2000;
 	}
 
@@ -380,7 +380,7 @@ uint32_t Npc::loadParams(xmlNodePtr node)
 			else if(tmpParam == "lowlevel")
 				params |= RESPOND_LOWLEVEL;
 			else
-				std::clog << "[Warning - Npc::loadParams] NPC Name: " << name << " - Unknown param " << (*it) << std::endl;
+				std::cerr << "[Warning - Npc::loadParams] NPC Name: " << name << " - Unknown param " << (*it) << std::endl;
 		}
 	}
 
@@ -408,14 +408,14 @@ ResponseList Npc::loadInteraction(xmlNodePtr node)
 						_responseList.insert(_responseList.end(), includedResponses.begin(), includedResponses.end());
 					}
 					else
-						std::clog << "[Error - Npc::loadInteraction] Malformed interaction file (" << strValue << ")." << std::endl;
+						std::cerr << "[Error - Npc::loadInteraction] Malformed interaction file (" << strValue << ")." << std::endl;
 
 					xmlFreeDoc(doc);
 				}
 				else
 				{
-					std::clog << "[Warning - Npc::loadInteraction] Cannot load interaction file (" << strValue << ")." << std::endl;
-					std::clog << getLastXMLError() << std::endl;
+					std::cerr << "[Warning - Npc::loadInteraction] Cannot load interaction file (" << strValue << ")." << std::endl;
+					std::cerr << getLastXMLError() << std::endl;
 				}
 			}
 		}
@@ -437,7 +437,7 @@ ResponseList Npc::loadInteraction(xmlNodePtr node)
 							ListItem li;
 							if(!readXMLInteger(tmpNode, "id", intValue))
 							{
-								std::clog << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Missing list item itemId" << std::endl;
+								std::cerr << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Missing list item itemId" << std::endl;
 								tmpNode = tmpNode->next;
 								continue;
 							}
@@ -455,7 +455,7 @@ ResponseList Npc::loadInteraction(xmlNodePtr node)
 								li.keywords = strValue;
 							else
 							{
-								std::clog << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Missing list item keywords" << std::endl;
+								std::cerr << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Missing list item keywords" << std::endl;
 								tmpNode = tmpNode->next;
 								continue;
 							}
@@ -484,7 +484,7 @@ ResponseList Npc::loadInteraction(xmlNodePtr node)
 					}
 				}
 				else
-					std::clog << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Duplicate listId found: " << strValue << std::endl;
+					std::cerr << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Duplicate listId found: " << strValue << std::endl;
 			}
 		}
 		else if(!xmlStrcmp(node->name, (const xmlChar*)"interact"))
@@ -563,7 +563,7 @@ ResponseList Npc::loadInteraction(xmlNodePtr node)
 								if(it != itemListMap.end())
 									prop.itemList.insert(prop.itemList.end(), it->second.begin(), it->second.end());
 								else
-									std::clog << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Could not find a list id called: " << strValue << std::endl;
+									std::cerr << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Could not find a list id called: " << strValue << std::endl;
 							}
 						}
 
@@ -668,7 +668,7 @@ ResponseList Npc::loadInteraction(xmlNodePtr node)
 										action.actionType = ACTION_SETSPELL;
 										action.strValue = strValue;
 										if(strValue != "|SPELL|" && !g_spells->getInstantSpellByName(strValue))
-											std::clog << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Could not find an instant spell called: " << strValue << std::endl;
+											std::cerr << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Could not find an instant spell called: " << strValue << std::endl;
 									}
 								}
 								else if(tmpStrValue == "listname")
@@ -694,7 +694,7 @@ ResponseList Npc::loadInteraction(xmlNodePtr node)
 										action.actionType = ACTION_TEACHSPELL;
 										action.strValue = strValue;
 										if(strValue != "|SPELL|" && !g_spells->getInstantSpellByName(strValue))
-											std::clog << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Could not find an instant spell called: " << strValue << std::endl;
+											std::cerr << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Could not find an instant spell called: " << strValue << std::endl;
 									}
 								}
 								else if(tmpStrValue == "unteachspell")
@@ -704,7 +704,7 @@ ResponseList Npc::loadInteraction(xmlNodePtr node)
 										action.actionType = ACTION_UNTEACHSPELL;
 										action.strValue = strValue;
 										if(strValue != "|SPELL|" && !g_spells->getInstantSpellByName(strValue))
-											std::clog << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Could not find an instant spell called: " << strValue << std::endl;
+											std::cerr << "[Warning - Npc::loadInteraction] NPC Name: " << name << " - Could not find an instant spell called: " << strValue << std::endl;
 									}
 								}
 								else if(tmpStrValue == "sell")
@@ -843,7 +843,7 @@ ResponseList Npc::loadInteraction(xmlNodePtr node)
 									}
 								}
 								else
-									std::clog << "[Warning - Npc::loadInteraction] Unknown action " << strValue << std::endl;
+									std::cerr << "[Warning - Npc::loadInteraction] Unknown action " << strValue << std::endl;
 							}
 
 							if(readXMLInteger(subNode, "key", intValue))
@@ -1712,7 +1712,7 @@ void Npc::executeResponse(Player* player, NpcState* npcState, const NpcResponse*
 								lua_pushstring(L, npcState->respondToText.c_str());
 							else
 							{
-								std::clog << "[Warning - Npc::executeResponse] Unknown script param: " << it->strValue << std::endl;
+								std::cerr << "[Warning - Npc::executeResponse] Unknown script param: " << it->strValue << std::endl;
 								break;
 							}
 
@@ -1735,7 +1735,7 @@ void Npc::executeResponse(Player* player, NpcState* npcState, const NpcResponse*
 					m_interface->releaseEnv();
 				}
 				else
-					std::clog << "[Error] Call stack overflow." << std::endl;
+					std::cerr << "[Error] Call stack overflow." << std::endl;
 			}
 		}
 
@@ -2813,7 +2813,7 @@ NpcEvents::NpcEvents(std::string file, Npc* npc):
 {
 	if(!m_interface->loadFile(file, npc))
 	{
-		std::clog << "[Warning - NpcEvents::NpcEvents] Cannot load script: " << file
+		std::cerr << "[Warning - NpcEvents::NpcEvents] Cannot load script: " << file
 			<< std::endl << m_interface->getLastError() << std::endl;
 		m_loaded = false;
 		return;
@@ -2857,7 +2857,7 @@ void NpcEvents::onCreatureAppear(const Creature* creature)
 		m_interface->releaseEnv();
 	}
 	else
-		std::clog << "[Error - NpcEvents::onCreatureAppear] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
+		std::cerr << "[Error - NpcEvents::onCreatureAppear] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
 }
 
 void NpcEvents::onCreatureDisappear(const Creature* creature)
@@ -2888,7 +2888,7 @@ void NpcEvents::onCreatureDisappear(const Creature* creature)
 		m_interface->releaseEnv();
 	}
 	else
-		std::clog << "[Error - NpcEvents::onCreatureDisappear] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
+		std::cerr << "[Error - NpcEvents::onCreatureDisappear] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
 }
 
 void NpcEvents::onCreatureMove(const Creature* creature, const Position& oldPos, const Position& newPos)
@@ -2922,7 +2922,7 @@ void NpcEvents::onCreatureMove(const Creature* creature, const Position& oldPos,
 		m_interface->releaseEnv();
 	}
 	else
-		std::clog << "[Error - NpcEvents::onCreatureMove] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
+		std::cerr << "[Error - NpcEvents::onCreatureMove] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
 }
 
 void NpcEvents::onCreatureSay(const Creature* creature, SpeakClasses type, const std::string& text, Position* /*pos = NULL*/)
@@ -2956,7 +2956,7 @@ void NpcEvents::onCreatureSay(const Creature* creature, SpeakClasses type, const
 		m_interface->releaseEnv();
 	}
 	else
-		std::clog << "[Error - NpcEvents::onCreatureSay] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
+		std::cerr << "[Error - NpcEvents::onCreatureSay] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
 }
 
 void NpcEvents::onPlayerTrade(const Player* player, int32_t callback, uint16_t itemid,
@@ -2996,7 +2996,7 @@ void NpcEvents::onPlayerTrade(const Player* player, int32_t callback, uint16_t i
 		m_interface->releaseEnv();
 	}
 	else
-		std::clog << "[Error - NpcEvents::onPlayerTrade] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
+		std::cerr << "[Error - NpcEvents::onPlayerTrade] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
 }
 
 void NpcEvents::onPlayerCloseChannel(const Player* player)
@@ -3021,7 +3021,7 @@ void NpcEvents::onPlayerCloseChannel(const Player* player)
 		m_interface->releaseEnv();
 	}
 	else
-		std::clog << "[Error - NpcEvents::onPlayerCloseChannel] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
+		std::cerr << "[Error - NpcEvents::onPlayerCloseChannel] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
 }
 
 void NpcEvents::onPlayerEndTrade(const Player* player)
@@ -3046,7 +3046,7 @@ void NpcEvents::onPlayerEndTrade(const Player* player)
 		m_interface->releaseEnv();
 	}
 	else
-		std::clog << "[Error - NpcEvents::onPlayerEndTrade] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
+		std::cerr << "[Error - NpcEvents::onPlayerEndTrade] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
 }
 
 void NpcEvents::onThink()
@@ -3075,6 +3075,6 @@ void NpcEvents::onThink()
 		m_interface->releaseEnv();
 	}
 	else
-		std::clog << "[Error - NpcEvents::onThink] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
+		std::cerr << "[Error - NpcEvents::onThink] NPC Name: " << m_npc->getName() << " - Call stack overflow" << std::endl;
 }
 

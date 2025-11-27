@@ -119,13 +119,13 @@ void Logger::log(const char* func, LogType_t type, std::string message, std::str
 
 OutputHandler::OutputHandler()
 {
-	log = std::clog.rdbuf(this);
+	log = std::cerr.rdbuf(this);
 	err = std::cerr.rdbuf(this);
 }
 
 OutputHandler::~OutputHandler()
 {
-	std::clog.rdbuf(log);
+	std::cerr.rdbuf(log);
 	std::cerr.rdbuf(err);
 }
 

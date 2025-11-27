@@ -181,7 +181,7 @@ bool Spells::registerEvent(Event* event, xmlNodePtr, bool override)
 			return true;
 		}
 
-		std::clog << "[Warning - Spells::registerEvent] Duplicate registered instant spell with words: " << instant->getWords() << std::endl;
+		std::cerr << "[Warning - Spells::registerEvent] Duplicate registered instant spell with words: " << instant->getWords() << std::endl;
 		return false;
 	}
 
@@ -201,7 +201,7 @@ bool Spells::registerEvent(Event* event, xmlNodePtr, bool override)
 			return true;
 		}
 
-		std::clog << "[Warning - Spells::registerEvent] Duplicate registered rune with id: " << rune->getRuneItemId() << std::endl;
+		std::cerr << "[Warning - Spells::registerEvent] Duplicate registered rune with id: " << rune->getRuneItemId() << std::endl;
 		return false;
 	}
 
@@ -482,7 +482,7 @@ bool CombatSpell::executeCastSpell(Creature* creature, const LuaVariant& var)
 	}
 	else
 	{
-		std::clog << "[Error - CombatSpell::executeCastSpell] Call stack overflow." << std::endl;
+		std::cerr << "[Error - CombatSpell::executeCastSpell] Call stack overflow." << std::endl;
 		return false;
 	}
 }
@@ -531,14 +531,14 @@ bool Spell::configureSpell(xmlNodePtr p)
 		{
 			if(!strcasecmp(reservedList[i], name.c_str()))
 			{
-				std::clog << "Error: [Spell::configureSpell] Spell is using a reserved name: " << reservedList[i] << std::endl;
+				std::cerr << "Error: [Spell::configureSpell] Spell is using a reserved name: " << reservedList[i] << std::endl;
 				return false;
 			}
 		}
 	}
 	else
 	{
-		std::clog << "Error: [Spell::configureSpell] Spell without name." << std::endl;
+		std::cerr << "Error: [Spell::configureSpell] Spell without name." << std::endl;
 		return false;
 	}
 
@@ -567,7 +567,7 @@ bool Spell::configureSpell(xmlNodePtr p)
         if(tmpStrValue == "hellscore")
             castFunction = onCastHellsCore;
         else
-            std::clog << "[Warning - Spell::configureSpell] Cast function \"" <<strValue << "\" does not exist." << std::endl;
+            std::cerr << "[Warning - Spell::configureSpell] Cast function \"" <<strValue << "\" does not exist." << std::endl;
     }
 
 	if(readXMLInteger(p, "castdelay", intValue))
@@ -611,7 +611,7 @@ bool Spell::configureSpell(xmlNodePtr p)
 		else if(tmpStrValue == "creature")
 			blockingCreature = true;
 		else
-			std::clog << "[Warning - Spell::configureSpell] Blocktype \"" <<strValue << "\" does not exist." << std::endl;
+			std::cerr << "[Warning - Spell::configureSpell] Blocktype \"" <<strValue << "\" does not exist." << std::endl;
 	}
 
 	if(readXMLString(p, "aggressive", strValue))
@@ -622,7 +622,7 @@ bool Spell::configureSpell(xmlNodePtr p)
 	while(vocationNode)
 	{
 		if(!parseVocationNode(vocationNode, vocSpellMap, vocStringVec, error))
-			std::clog << "[Warning - Spell::configureSpell] " << error << std::endl;
+			std::cerr << "[Warning - Spell::configureSpell] " << error << std::endl;
 
 		vocationNode = vocationNode->next;
 	}
@@ -1209,7 +1209,7 @@ bool InstantSpell::loadFunction(const std::string& functionName)
 	}
 	else
 	{
-		std::clog << "[Warning - InstantSpell::loadFunction] Function \"" << functionName << "\" does not exist." << std::endl;
+		std::cerr << "[Warning - InstantSpell::loadFunction] Function \"" << functionName << "\" does not exist." << std::endl;
 		return false;
 	}
 
@@ -1525,7 +1525,7 @@ bool InstantSpell::executeCastSpell(Creature* creature, const LuaVariant& var)
 	}
 	else
 	{
-		std::clog << "[Error - InstantSpell::executeCastSpell] Call stack overflow." << std::endl;
+		std::cerr << "[Error - InstantSpell::executeCastSpell] Call stack overflow." << std::endl;
 		return false;
 	}
 }
@@ -1747,7 +1747,7 @@ bool ConjureSpell::loadFunction(const std::string& functionName)
 		function = ConjureItem;
 	else
 	{
-		std::clog << "[Warning - ConjureSpell::loadFunction] Function \"" << functionName << "\" does not exist." << std::endl;
+		std::cerr << "[Warning - ConjureSpell::loadFunction] Function \"" << functionName << "\" does not exist." << std::endl;
 		return false;
 	}
 
@@ -1901,7 +1901,7 @@ bool RuneSpell::configureEvent(xmlNodePtr p)
 		runeId = intValue;
 	else
 	{
-		std::clog << "Error: [RuneSpell::configureSpell] Rune spell without id." << std::endl;
+		std::cerr << "Error: [RuneSpell::configureSpell] Rune spell without id." << std::endl;
 		return false;
 	}
 
@@ -1931,7 +1931,7 @@ bool RuneSpell::loadFunction(const std::string& functionName)
 		function = Soulfire;
 	else
 	{
-		std::clog << "[Warning - RuneSpell::loadFunction] Function \"" << functionName << "\" does not exist." << std::endl;
+		std::cerr << "[Warning - RuneSpell::loadFunction] Function \"" << functionName << "\" does not exist." << std::endl;
 		return false;
 	}
 
@@ -2213,7 +2213,7 @@ bool RuneSpell::executeCastSpell(Creature* creature, const LuaVariant& var)
 	}
 	else
 	{
-		std::clog << "[Error - RuneSpell::executeCastSpell] Call stack overflow." << std::endl;
+		std::cerr << "[Error - RuneSpell::executeCastSpell] Call stack overflow." << std::endl;
 		return false;
 	}
 }

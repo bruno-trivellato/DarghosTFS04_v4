@@ -31,7 +31,7 @@ uint32_t ProtocolOld::protocolOldCount = 0;
 #ifdef __DEBUG_NET_DETAIL__
 void ProtocolOld::deleteProtocolTask()
 {
-	std::clog << "Deleting ProtocolOld" << std::endl;
+	std::cerr << "Deleting ProtocolOld" << std::endl;
 	Protocol::deleteProtocolTask();
 }
 #endif

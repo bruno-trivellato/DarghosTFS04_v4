@@ -51,7 +51,7 @@ void Status::onRecvFirstMessage(NetworkMessage& msg)
 
     if (ip != 0x0100007F) {
         std::string ipStr = convertIPAddress(ip);
-        //std::clog << "[Status Protocol] New connection from " << ipStr << "." << std::endl;
+        //std::cerr << "[Status Protocol] New connection from " << ipStr << "." << std::endl;
         if (ipStr != g_config.getString(ConfigManager::IP)) {
             std::map<uint32_t, int64_t>::const_iterator it = ipConnectMap.find(ip);
             if (it != ipConnectMap.end() && (OTSYS_TIME() < (it->second + g_config.getNumber(ConfigManager::STATUSQUERY_TIMEOUT)))) {
@@ -80,7 +80,7 @@ void Status::onRecvFirstMessage(NetworkMessage& msg)
             if (requestedInfo & REQUEST_PLAYER_STATUS_INFO) {
                 characterName = msg.getString();
             }
-            //std::clog << "[Status Protocol] Parsing ServerInfo data (." << requestedInfo << ")." << std::endl;
+            //std::cerr << "[Status Protocol] Parsing ServerInfo data (." << requestedInfo << ")." << std::endl;
             g_dispatcher.addTask(createTask(std::bind(&Status::sendInfo, this, requestedInfo, characterName)));
             return;
         }

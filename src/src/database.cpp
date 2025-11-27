@@ -141,7 +141,7 @@ void DBInsert::runQueryList(QueryList& list)
         {
             if(!db.query(*it))
             {
-                //std::clog << "Cannot execute threaded query: " << (*it) << std::endl;
+                //std::cerr << "Cannot execute threaded query: " << (*it) << std::endl;
             }
 
             it++;
@@ -195,7 +195,7 @@ void DBInsert::onThreadExit()
 
 void DBInsert::runThreadedQuerys()
 {
-    std::clog << "Running " << normalQuerys.size() << " normal querys, " << lightQuerys.size() << " light querys and " << heavyQuerys.size() << " heavy querys..." << std::endl;
+    std::cerr << "Running " << normalQuerys.size() << " normal querys, " << lightQuerys.size() << " light querys and " << heavyQuerys.size() << " heavy querys..." << std::endl;
 
     boost::thread* thread = new boost::thread(std::bind(&DBInsert::runQuerys, this, QUERY_WEIGHT_NORMAL));
     threads.push_back(thread);

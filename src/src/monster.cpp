@@ -91,7 +91,7 @@ Monster::Monster(MonsterType* _mType):
 	for(StringVec::iterator it = mType->scriptList.begin(); it != mType->scriptList.end(); ++it)
 	{
 		if(!registerCreatureEvent(*it))
-			std::clog << "[Warning - Monster::Monster] Unknown event name - " << *it << std::endl;
+			std::cerr << "[Warning - Monster::Monster] Unknown event name - " << *it << std::endl;
 	}
 
 #ifdef __ENABLE_SERVER_DIAGNOSTIC__
@@ -124,7 +124,7 @@ void Monster::onAttackedCreature(Creature* target)
 void Monster::onAttackedCreatureDisappear(bool)
 {
 #ifdef __DEBUG__
-	std::clog << "Attacked creature disappeared." << std::endl;
+	std::cerr << "Attacked creature disappeared." << std::endl;
 #endif
 	attackTicks = 0;
 	extraMeleeAttack = true;
@@ -322,7 +322,7 @@ bool Monster::doTeleportToMaster()
 void Monster::onCreatureLeave(Creature* creature)
 {
 #ifdef __DEBUG__
-	std::clog << "onCreatureLeave - " << creature->getName() << std::endl;
+	std::cerr << "onCreatureLeave - " << creature->getName() << std::endl;
 #endif
 	if(isSummon() && master == creature)
 	{
@@ -348,7 +348,7 @@ void Monster::onCreatureLeave(Creature* creature)
 		}
 #ifdef __DEBUG__
 		else
-			std::clog << "Monster: " << creature->getName() << " not found in the friendList." << std::endl;
+			std::cerr << "Monster: " << creature->getName() << " not found in the friendList." << std::endl;
 #endif
 	}
 
@@ -365,7 +365,7 @@ void Monster::onCreatureLeave(Creature* creature)
 		}
 #ifdef __DEBUG__
 		else
-			std::clog << "Player: " << creature->getName() << " not found in the targetList." << std::endl;
+			std::cerr << "Player: " << creature->getName() << " not found in the targetList." << std::endl;
 #endif
 	}
 }
@@ -373,7 +373,7 @@ void Monster::onCreatureLeave(Creature* creature)
 bool Monster::searchTarget(TargetSearchType_t searchType /*= TARGETSEARCH_DEFAULT*/)
 {
 #ifdef __DEBUG__
-	std::clog << "Searching target... " << std::endl;
+	std::cerr << "Searching target... " << std::endl;
 #endif
 
 	std::list<Creature*> resultList;
@@ -415,7 +415,7 @@ bool Monster::searchTarget(TargetSearchType_t searchType /*= TARGETSEARCH_DEFAUL
 				std::advance(it, random_range(0, resultList.size() - 1));
 #ifdef __DEBUG__
 
-				std::clog << "Selecting target " << (*it)->getName() << std::endl;
+				std::cerr << "Selecting target " << (*it)->getName() << std::endl;
 #endif
 				return selectTarget(*it);
 			}
@@ -435,7 +435,7 @@ bool Monster::searchTarget(TargetSearchType_t searchType /*= TARGETSEARCH_DEFAUL
 			continue;
 
 #ifdef __DEBUG__
-		/*std::clog << "Selecting target " << (*it)->getName() << std::endl;*/ // Caused a strange crash, will look at it later
+		/*std::cerr << "Selecting target " << (*it)->getName() << std::endl;*/ // Caused a strange crash, will look at it later
 #endif
 		return true;
 	}
@@ -496,7 +496,7 @@ bool Monster::isTarget(Creature* creature)
 bool Monster::selectTarget(Creature* creature)
 {
 #ifdef __DEBUG__
-	std::clog << "Selecting target... " << std::endl;
+	std::cerr << "Selecting target... " << std::endl;
 #endif
 	if(!isTarget(creature))
 		return false;
@@ -506,7 +506,7 @@ bool Monster::selectTarget(Creature* creature)
 	{
 		//Target not found in our target list.
 #ifdef __DEBUG__
-		std::clog << "Target not found in targetList." << std::endl;
+		std::cerr << "Target not found in targetList." << std::endl;
 #endif
 		return false;
 	}
@@ -1005,7 +1005,7 @@ bool Monster::getNextStep(Direction& dir, uint32_t& flags)
 		}
 #ifdef __DEBUG__
 		else
-			std::clog << "[Warning - Monster::getNextStep] no tile found." << std::endl;
+			std::cerr << "[Warning - Monster::getNextStep] no tile found." << std::endl;
 #endif
 	}
 
@@ -1736,7 +1736,7 @@ void Monster::addIndividualItems(Player* player){
                 {
                     ReturnValue ret = g_game.internalAddItem(NULL, container->getContainer(), newItem);
                     if(ret != RET_NOERROR)
-                        std::clog << "[Warning - Monster::createCorpse] Cannot add individual loot to container." << std::endl;
+                        std::cerr << "[Warning - Monster::createCorpse] Cannot add individual loot to container." << std::endl;
                 }
             }
         }
@@ -1748,13 +1748,13 @@ void Monster::addIndividualItems(Player* player){
             {
                 ReturnValue ret = g_game.internalAddItem(NULL, container->getContainer(), newItem);
                 if(ret != RET_NOERROR)
-                    std::clog << "[Warning - Monster::createCorpse] Cannot add individual loot (gold) to container." << std::endl;
+                    std::cerr << "[Warning - Monster::createCorpse] Cannot add individual loot (gold) to container." << std::endl;
             }
         }
 
         ReturnValue ret = g_game.internalPlayerAddItem(NULL, player, container, false);
         if(ret != RET_NOERROR)
-            std::clog << "[Warning - Monster::createCorpse] Cannot add individual loot to player inventory." << std::endl;
+            std::cerr << "[Warning - Monster::createCorpse] Cannot add individual loot to player inventory." << std::endl;
 
         std::stringstream ss;
         ss << "You received a reward's bundle by your endeavour.";

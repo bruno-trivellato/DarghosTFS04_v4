@@ -115,7 +115,7 @@ void Battleground::removeIdleWaitlistPlayer(uint32_t player_id)
         return;
 
     if(playerIsInWaitlist(player)){
-        player->sendPvpChannelMessage("Nenhuma partida foi iniciada nas ultimas 2 horas. Você foi removido da fila. Digite novamente \"!bg entrar\" se você deseja voltar a fila!", SPEAK_CHANNEL_O);
+        player->sendPvpChannelMessage("Nenhuma partida foi iniciada nas ultimas 2 horas. Vocï¿½ foi removido da fila. Digite novamente \"!bg entrar\" se vocï¿½ deseja voltar a fila!", SPEAK_CHANNEL_O);
         removeWaitlistPlayer(player);
     }
 }
@@ -134,7 +134,7 @@ bool Battleground::playerIsInWaitlist(Player* player)
 			return true;
 		}
         else if(waiting->getIP() == player->getIP() && !alertMc){
-            player->sendPvpChannelMessage("ALERTA: Foi identificado que sua conexão possui mais deu um personagem na fila para a proxima Battleground. O uso de multiclient na Battleground não é permitido!", SPEAK_CHANNEL_O);
+            player->sendPvpChannelMessage("ALERTA: Foi identificado que sua conexï¿½o possui mais deu um personagem na fila para a proxima Battleground. O uso de multiclient na Battleground nï¿½o ï¿½ permitido!", SPEAK_CHANNEL_O);
             return true;
         }
     }
@@ -209,7 +209,7 @@ void Battleground::finish()
         if(teamsMap[BATTLEGROUND_TEAM_ONE].points == 0)
             finishByWinner(BATTLEGROUND_TEAM_NONE); //empate? somente em caso de 0x0
         else{
-            //empates em 1x1 e 2x2 será considerado vencedor o time que capturou a ultima bandeira
+            //empates em 1x1 e 2x2 serï¿½ considerado vencedor o time que capturou a ultima bandeira
             finishByWinner(lastTeamScore);
         }
     }
@@ -235,7 +235,7 @@ void Battleground::finishByWinner(Bg_Teams_t teamWinner)
 
 			g_game.playerCancelAttackAndFollow(it_players->first);
 			player->setPause(true);
-			player->sendPvpChannelMessage("Você será levado ao lugar em que estava em 5 segundos...");
+			player->sendPvpChannelMessage("Vocï¿½ serï¿½ levado ao lugar em que estava em 5 segundos...");
 
             g_scheduler.addEvent(createSchedulerTask(1000 * 5,
                 std::bind(&Battleground::kickPlayerById, this, (uint32_t)it_players->first, true)));
@@ -276,7 +276,7 @@ bool Battleground::buildTeams()
 	if(status == STARTED || status == PREPARING)
 		return false;
 
-    //daqui em diante nada pode mudar, a BG irá começar...
+    //daqui em diante nada pode mudar, a BG irï¿½ comeï¿½ar...
     status = PREPARING;
 
 	waitlist.sort(Battleground::orderWaitlistByLevel);
@@ -314,8 +314,8 @@ void Battleground::callPlayer(uint32_t player_id)
 	if(!player)
 		return;
 
-    player->sendPvpChannelMessage("A battleground está pronta para iniciar! Você tem 2 minutos para digitar o comando \"!bg entrar\" para ser enviado a batalha! Boa sorte bravo guerreiro!", SPEAK_CHANNEL_O);
-	player->sendFYIBox("A battleground está pronta para iniciar!\n Você tem 2 minutos para digitar o comando \n\"!bg entrar\" para ser enviado a batalha!\n\n Boa sorte bravo guerreiro!");
+    player->sendPvpChannelMessage("A battleground estï¿½ pronta para iniciar! Vocï¿½ tem 2 minutos para digitar o comando \"!bg entrar\" para ser enviado a batalha! Boa sorte bravo guerreiro!", SPEAK_CHANNEL_O);
+	player->sendFYIBox("A battleground estï¿½ pronta para iniciar!\n Vocï¿½ tem 2 minutos para digitar o comando \n\"!bg entrar\" para ser enviado a batalha!\n\n Boa sorte bravo guerreiro!");
 }
 
 void Battleground::start()
@@ -333,7 +333,7 @@ void Battleground::start()
 			if(!it_players->second.areInside)
 			{
 				if(player)
-					player->sendPvpChannelMessage("Você não apareceu na battleground no tempo esperado... Você ainda pode participar da batalha digitando \"!bg entrar\" novamente.");
+					player->sendPvpChannelMessage("Vocï¿½ nï¿½o apareceu na battleground no tempo esperado... Vocï¿½ ainda pode participar da batalha digitando \"!bg entrar\" novamente.");
 
 				it->second.players.erase(it_players->first);
 				notJoin++;
@@ -446,14 +446,14 @@ BattlegrondRetValue Battleground::onPlayerJoin(Player* player)
 	else if(status == STARTED || status == PREPARING)
 	{
         if(player->isInBattleground()){
-             player->sendPvpChannelMessage("Você já está dentro da battleground!");
+             player->sendPvpChannelMessage("Vocï¿½ jï¿½ estï¿½ dentro da battleground!");
         }
         else{
 			Bg_Teams_t team_id = findTeamIdByPlayer(player);
 
 			if(!team_id)
 			{
-				//se a bg já estiver cheia ele é colocado na fila para a proxima bg
+				//se a bg jï¿½ estiver cheia ele ï¿½ colocado na fila para a proxima bg
 				if(teamsMap[BATTLEGROUND_TEAM_ONE].players.size() >= teamSize && teamsMap[BATTLEGROUND_TEAM_TWO].players.size() >= teamSize)
 				{
 					if(playerIsInWaitlist(player))
@@ -464,11 +464,11 @@ BattlegrondRetValue Battleground::onPlayerJoin(Player* player)
 				}
 
                 if(playerIsInMatch(player)){
-                    player->sendPvpChannelMessage("Só é permitido 1 personagem por pessoa dentro da Battleground!");
+                    player->sendPvpChannelMessage("Sï¿½ ï¿½ permitido 1 personagem por pessoa dentro da Battleground!");
                     return BATTLEGROUND_NO_ERROR;
                 }
 
-				//senão, (alguem saiu) ele é colocado na bg
+				//senï¿½o, (alguem saiu) ele ï¿½ colocado na bg
 				if(player->hasCondition(CONDITION_INFIGHT))
 				{
 					return BATTLEGROUND_INFIGHT;
@@ -480,7 +480,7 @@ BattlegrondRetValue Battleground::onPlayerJoin(Player* player)
 				putInside(player);
 				return BATTLEGROUND_PUT_DIRECTLY;
 			}
-			//o jogador estava na fila, portanto já esta em um time, somente necessario o teleportar para dentro...
+			//o jogador estava na fila, portanto jï¿½ esta em um time, somente necessario o teleportar para dentro...
 			else
 			{
 				if(player->hasCondition(CONDITION_INFIGHT))
@@ -501,7 +501,7 @@ void Battleground::kickPlayerById(uint32_t player_id, bool force)
 {
     Player* player = g_game.getPlayerByID(player_id);
     if(!player){
-        std::clog << "Cannot kick player from battleground: " << player_id << std::endl;
+        std::cerr << "Cannot kick player from battleground: " << player_id << std::endl;
         return;
     }
 
@@ -545,7 +545,7 @@ void Battleground::kickPlayer(Player* player, bool force)
 			pos = player->getMasterPosition();
 
 		if(g_game.internalTeleport(player, pos, true) != RET_NOERROR)
-			std::clog << "[Battleground Warning] Can not teleport player " << player->getName() << " out of the battleground." << std::endl;
+			std::cerr << "[Battleground Warning] Can not teleport player " << player->getName() << " out of the battleground." << std::endl;
 
 		g_game.addMagicEffect(playerInfo.oldPosition, MAGIC_EFFECT_TELEPORT);
 
@@ -560,7 +560,7 @@ void Battleground::kickPlayer(Player* player, bool force)
 		g_game.internalTeleport(player, player->getMasterPosition(), true);
 		g_game.addMagicEffect(player->getMasterPosition(), MAGIC_EFFECT_TELEPORT);
 
-		std::clog << "[Possible Crash] Player " << player->getName() << " leaving from battleground that are not inside." << std::endl;
+		std::cerr << "[Possible Crash] Player " << player->getName() << " leaving from battleground that are not inside." << std::endl;
 	}
 
 	if(player->isPause())
@@ -613,7 +613,7 @@ void Battleground::onPlayerDeath(Player* player, DeathList deathList)
 
             if(!playerInfo || tmp->getBattlegroundTeam() == BATTLEGROUND_TEAM_NONE)
             {
-                std::clog << "Player " << tmp->getName() << " killing player " << player->getName() << " in Battleground but are not in any team?" << std::endl;
+                std::cerr << "Player " << tmp->getName() << " killing player " << player->getName() << " in Battleground but are not in any team?" << std::endl;
                 continue;
             }
 
@@ -691,7 +691,7 @@ bool Battleground::isValidFrag(Bg_PlayerInfo_t* killer_info, Bg_PlayerInfo_t* ta
 		}
 	}
 
-	/* se morreu pouco, entao nao há necessidade de prosseguir*/
+	/* se morreu pouco, entao nao hï¿½ necessidade de prosseguir*/
 	if(temp_list.size() < 3)
 		return true;
 
@@ -719,9 +719,9 @@ bool Battleground::isValidFrag(Bg_PlayerInfo_t* killer_info, Bg_PlayerInfo_t* ta
 
 	temp_list.sort(Battleground::orderDeathListByDate);
 
-	/* Finalmente vamos tentar descobrir se o jogador está dando 'free frag'...
-		Se as 3 ultimas coisas que o jogador fez foi morrer então esta frag
-		será negada, caso exista algum assist ou kill, então é validado
+	/* Finalmente vamos tentar descobrir se o jogador estï¿½ dando 'free frag'...
+		Se as 3 ultimas coisas que o jogador fez foi morrer entï¿½o esta frag
+		serï¿½ negada, caso exista algum assist ou kill, entï¿½o ï¿½ validado
 	*/
 
 	uint8_t i = 1;
@@ -730,7 +730,7 @@ bool Battleground::isValidFrag(Bg_PlayerInfo_t* killer_info, Bg_PlayerInfo_t* ta
 		Bg_DeathEntry_t* deathEntry = (*it);
 		if(deathEntry->lasthit == target_info->statistics->player_id)
 		{
-			/* Se o jogador matou alguem em suas ultimas 3 ações entao a frag é valida*/
+			/* Se o jogador matou alguem em suas ultimas 3 aï¿½ï¿½es entao a frag ï¿½ valida*/
 			return true;
 		}
 
@@ -738,21 +738,21 @@ bool Battleground::isValidFrag(Bg_PlayerInfo_t* killer_info, Bg_PlayerInfo_t* ta
 		{
 			if((*ait) == target_info->statistics->player_id)
 			{
-				/* Se o jogador também causou uma assistencia, entao a frag é valida*/
+				/* Se o jogador tambï¿½m causou uma assistencia, entao a frag ï¿½ valida*/
 				return true;
 			}
 		}
 
 		if(i == 3)
 		{
-			/* Chegamo na 3a ação e não foi encontrado nada além de mortes, então paramos por aqui... a frag não é validada */
+			/* Chegamo na 3a aï¿½ï¿½o e nï¿½o foi encontrado nada alï¿½m de mortes, entï¿½o paramos por aqui... a frag nï¿½o ï¿½ validada */
 			return false;
 		}
 	}
 
 	/*
-	Haviam menos de 3 ações, provavelmente inicio de bg ou algo assim... então validaremos a frag mesmo sem kills/assists.
-	hipoteticamente	este ponto do codigo nunca será acessado, mas vamos previnir ne...
+	Haviam menos de 3 aï¿½ï¿½es, provavelmente inicio de bg ou algo assim... entï¿½o validaremos a frag mesmo sem kills/assists.
+	hipoteticamente	este ponto do codigo nunca serï¿½ acessado, mas vamos previnir ne...
 	*/
 	return true;
 }

@@ -43,7 +43,7 @@ DatabaseSQLite::DatabaseSQLite()
 	// Initialize sqlite
 	if(sqlite3_open(g_config.getString(ConfigManager::SQL_FILE).c_str(), &m_handle) != SQLITE_OK)
 	{
-		std::clog << "Failed to initialize SQLite connection." << std::endl;
+		std::cerr << "Failed to initialize SQLite connection." << std::endl;
 		sqlite3_close(m_handle);
 	}
 	else
@@ -96,14 +96,14 @@ bool DatabaseSQLite::query(const std::string& query)
 
 	std::string buf = _parse(query);
 #ifdef __SQL_QUERY_DEBUG__
-	std::clog << "SQLLITE DEBUG, query: " << buf << std::endl;
+	std::cerr << "SQLLITE DEBUG, query: " << buf << std::endl;
 #endif
 	sqlite3_stmt* stmt;
 	// prepares statement
 	if(OTSYS_SQLITE3_PREPARE(m_handle, buf.c_str(), buf.length(), &stmt, NULL) != SQLITE_OK)
 	{
 		sqlite3_finalize(stmt);
-		std::clog << "OTSYS_SQLITE3_PREPARE(): SQLITE ERROR: " << sqlite3_errmsg(m_handle)  << " (" << buf << ")" << std::endl;
+		std::cerr << "OTSYS_SQLITE3_PREPARE(): SQLITE ERROR: " << sqlite3_errmsg(m_handle)  << " (" << buf << ")" << std::endl;
 		return false;
 	}
 
@@ -112,7 +112,7 @@ bool DatabaseSQLite::query(const std::string& query)
 	if(ret != SQLITE_OK && ret != SQLITE_DONE && ret != SQLITE_ROW)
 	{
 		sqlite3_finalize(stmt);
-		std::clog << "sqlite3_step(): SQLITE ERROR: " << sqlite3_errmsg(m_handle) << std::endl;
+		std::cerr << "sqlite3_step(): SQLITE ERROR: " << sqlite3_errmsg(m_handle) << std::endl;
 		return false;
 	}
 
@@ -130,14 +130,14 @@ DBResult* DatabaseSQLite::storeQuery(const std::string& query)
 
 	std::string buf = _parse(query);
 #ifdef __SQL_QUERY_DEBUG__
-	std::clog << "SQLLITE DEBUG, storeQuery: " << buf << std::endl;
+	std::cerr << "SQLLITE DEBUG, storeQuery: " << buf << std::endl;
 #endif
 	sqlite3_stmt* stmt;
 	// prepares statement
 	if(OTSYS_SQLITE3_PREPARE(m_handle, buf.c_str(), buf.length(), &stmt, NULL) != SQLITE_OK)
 	{
 		sqlite3_finalize(stmt);
-		std::clog << "OTSYS_SQLITE3_PREPARE(): SQLITE ERROR: " << sqlite3_errmsg(m_handle)  << " (" << buf << ")" << std::endl;
+		std::cerr << "OTSYS_SQLITE3_PREPARE(): SQLITE ERROR: " << sqlite3_errmsg(m_handle)  << " (" << buf << ")" << std::endl;
 		return NULL;
 	}
 
@@ -189,7 +189,7 @@ int32_t SQLiteResult::getDataInt(const std::string& s)
 	if(it != m_listNames.end())
 		return sqlite3_column_int(m_handle, it->second);
 
-	std::clog << "Error during getDataInt(" << s << ")." << std::endl;
+	std::cerr << "Error during getDataInt(" << s << ")." << std::endl;
 	return 0; // Failed
 }
 
@@ -199,7 +199,7 @@ int64_t SQLiteResult::getDataLong(const std::string& s)
 	if(it != m_listNames.end())
 		return sqlite3_column_int64(m_handle, it->second);
 
-	std::clog << "Error during getDataLong(" << s << ")." << std::endl;
+	std::cerr << "Error during getDataLong(" << s << ")." << std::endl;
 	return 0; // Failed
 }
 
@@ -212,7 +212,7 @@ std::string SQLiteResult::getDataString(const std::string& s)
 		return value;
 	}
 
-	std::clog << "Error during getDataString(" << s << ")." << std::endl;
+	std::cerr << "Error during getDataString(" << s << ")." << std::endl;
 	return std::string(""); // Failed
 }
 
@@ -226,7 +226,7 @@ const char* SQLiteResult::getDataStream(const std::string& s, uint64_t& size)
 		return value;
 	}
 
-	std::clog << "Error during getDataStream(" << s << ")." << std::endl;
+	std::cerr << "Error during getDataStream(" << s << ")." << std::endl;
 	return NULL; // Failed
 }
 
@@ -234,7 +234,7 @@ void SQLiteResult::free()
 {
 	if(!m_handle)
 	{
-		std::clog << "[Critical - SQLiteResult::free] Trying to free already freed result!!!" << std::endl;
+		std::cerr << "[Critical - SQLiteResult::free] Trying to free already freed result!!!" << std::endl;
 		return;
 	}
 

@@ -91,31 +91,31 @@ bool ProtocolGame::login(const std::string& name, uint32_t id, const std::string
     OperatingSystem_t operatingSystem, uint16_t version, bool gamemaster)
 {
     //dispatcher thread
-    std::clog << "[GAME] Starting login process for character '" << name << "' (account ID: " << id << ")" << std::endl;
+    std::cerr << "[GAME] Starting login process for character '" << name << "' (account ID: " << id << ")" << std::endl;
     
     PlayerVector players = g_game.getPlayersByName(name);
     Player* _player = NULL;
     if(!players.empty())
     {
-        std::clog << "[GAME] Found " << players.size() << " existing player(s) with name '" << name << "'" << std::endl;
+        std::cerr << "[GAME] Found " << players.size() << " existing player(s) with name '" << name << "'" << std::endl;
         _player = players[random_range(0, (players.size() - 1))];
     }
 
     if(!_player || name == "Account Manager" || g_config.getNumber(ConfigManager::ALLOW_CLONES) > (int32_t)players.size())
     {
-        std::clog << "[GAME] Creating new player instance for '" << name << "'" << std::endl;
+        std::cerr << "[GAME] Creating new player instance for '" << name << "'" << std::endl;
         player = new Player(name, this);
         player->addRef();
 
         player->setID();
         if(!IOLoginData::getInstance()->loadPlayer(player, name, true))
         {
-            std::clog << "[GAME] Failed to load player data for '" << name << "'" << std::endl;
+            std::cerr << "[GAME] Failed to load player data for '" << name << "'" << std::endl;
             disconnectClient(0x14, "Your character could not be loaded.");
             return false;
         }
         
-        std::clog << "[GAME] Player data loaded successfully for '" << name << "'" << std::endl;
+        std::cerr << "[GAME] Player data loaded successfully for '" << name << "'" << std::endl;
 
         Ban ban;
         ban.value = player->getID();
@@ -412,26 +412,26 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 bool ProtocolGame::parseFirstPacket(NetworkMessage& msg)
 {
     uint32_t clientIp = getConnection()->getIP();
-    std::clog << "[GAME] Character login attempt from IP: " << convertIPAddress(clientIp) << std::endl;
-    
+    std::cerr << "[GAME] Character login attempt from IP: " << convertIPAddress(clientIp) << std::endl;
+
     if(g_game.getGameState() == GAMESTATE_SHUTDOWN)
     {
-        std::clog << "[GAME] Connection rejected - server shutting down" << std::endl;
+        std::cerr << "[GAME] Connection rejected - server shutting down" << std::endl;
         getConnection()->close();
         return false;
     }
 
     OperatingSystem_t operatingSystem = (OperatingSystem_t)msg.get<uint16_t>();
     uint16_t version = msg.get<uint16_t>();
-    std::clog << "[GAME] Client version: " << version << ", OS: " << operatingSystem << std::endl;
+    std::cerr << "[GAME] Client version: " << version << ", OS: " << operatingSystem << std::endl;
     if(!RSA_decrypt(msg))
     {
-        std::clog << "[GAME] RSA decryption failed for IP: " << convertIPAddress(clientIp) << std::endl;
+        std::cerr << "[GAME] RSA decryption failed for IP: " << convertIPAddress(clientIp) << std::endl;
         getConnection()->close();
         return false;
     }
     
-    std::clog << "[GAME] RSA decryption successful" << std::endl;
+    std::cerr << "[GAME] RSA decryption successful" << std::endl;
 
     uint32_t key[4] = {msg.get<uint32_t>(), msg.get<uint32_t>(), msg.get<uint32_t>(), msg.get<uint32_t>()};
     enableXTEAEncryption();
@@ -440,34 +440,34 @@ bool ProtocolGame::parseFirstPacket(NetworkMessage& msg)
     bool gamemaster = msg.get<char>();
     std::string name = msg.getString(), character = msg.getString(), password = msg.getString();
     
-    std::clog << "[GAME] Account: '" << name << "', Character: '" << character << "', GM: " << (gamemaster ? "yes" : "no") << " from IP: " << convertIPAddress(clientIp) << std::endl;
+    std::cerr << "[GAME] Account: '" << name << "', Character: '" << character << "', GM: " << (gamemaster ? "yes" : "no") << " from IP: " << convertIPAddress(clientIp) << std::endl;
 
     msg.skipBytes(6); //841- wtf?
     if(version < CLIENT_VERSION_MIN || version > CLIENT_VERSION_MAX)
     {
-        std::clog << "[GAME] Invalid client version " << version << " (min: " << CLIENT_VERSION_MIN << ", max: " << CLIENT_VERSION_MAX << ")" << std::endl;
+        std::cerr << "[GAME] Invalid client version " << version << " (min: " << CLIENT_VERSION_MIN << ", max: " << CLIENT_VERSION_MAX << ")" << std::endl;
         disconnectClient(0x14, CLIENT_VERSION_STRING);
         return false;
     }
 
     if(name.empty())
     {
-        std::clog << "[GAME] Empty account name, checking account manager..." << std::endl;
+        std::cerr << "[GAME] Empty account name, checking account manager..." << std::endl;
         if(!g_config.getBool(ConfigManager::ACCOUNT_MANAGER))
         {
-            std::clog << "[GAME] Account manager disabled, rejecting empty account name" << std::endl;
+            std::cerr << "[GAME] Account manager disabled, rejecting empty account name" << std::endl;
             disconnectClient(0x14, "Invalid account name.");
             return false;
         }
 
-        std::clog << "[GAME] Using account manager (account 1)" << std::endl;
+        std::cerr << "[GAME] Using account manager (account 1)" << std::endl;
         name = "1";
         password = "1";
     }
 
     if(g_game.getGameState() < GAMESTATE_NORMAL)
     {
-        std::clog << "[GAME] Server not ready, game state: " << g_game.getGameState() << std::endl;
+        std::cerr << "[GAME] Server not ready, game state: " << g_game.getGameState() << std::endl;
         disconnectClient(0x14, "Gameworld is just starting up, please wait.");
         return false;
     }
@@ -487,22 +487,22 @@ bool ProtocolGame::parseFirstPacket(NetworkMessage& msg)
     uint32_t id = 1;
     if(!IOLoginData::getInstance()->getAccountId(name, id))
     {
-        std::clog << "[GAME] Account '" << name << "' not found in database" << std::endl;
+        std::cerr << "[GAME] Account '" << name << "' not found in database" << std::endl;
         disconnectClient(0x14, "Invalid account name.");
         return false;
     }
     
-    std::clog << "[GAME] Account '" << name << "' found with ID: " << id << std::endl;
+    std::cerr << "[GAME] Account '" << name << "' found with ID: " << id << std::endl;
 
     std::string hash, salt;
     if(!IOLoginData::getInstance()->getPassword(id, hash, salt, character) || !encryptTest(salt + password, hash))
     {
-        std::clog << "[GAME] Authentication failed for account '" << name << "' character '" << character << "'" << std::endl;
+        std::cerr << "[GAME] Authentication failed for account '" << name << "' character '" << character << "'" << std::endl;
         disconnectClient(0x14, "Invalid password.");
         return false;
     }
     
-    std::clog << "[GAME] Authentication successful for account '" << name << "' character '" << character << "'" << std::endl;
+    std::cerr << "[GAME] Authentication successful for account '" << name << "' character '" << character << "'" << std::endl;
 
     Ban ban;
     ban.value = id;
@@ -531,7 +531,7 @@ bool ProtocolGame::parseFirstPacket(NetworkMessage& msg)
         return false;
     }
 
-    std::clog << "[GAME] Dispatching login task for character '" << character << "' (account ID: " << id << ")" << std::endl;
+    std::cerr << "[GAME] Dispatching login task for character '" << character << "' (account ID: " << id << ")" << std::endl;
     g_dispatcher.addTask(createTask(std::bind(
         &ProtocolGame::login, this, character, id, password, operatingSystem, version, gamemaster)));
     return true;
@@ -1495,7 +1495,7 @@ bool ProtocolGame::canSee(uint16_t x, uint16_t y, uint16_t z) const
 {
 #ifdef __DEBUG__
     if(z >= MAP_MAX_LAYERS)
-        std::clog << "[Warning - ProtocolGame::canSee] Z-value is out of range!" << std::endl;
+        std::cerr << "[Warning - ProtocolGame::canSee] Z-value is out of range!" << std::endl;
 #endif
 
     const Position& myPos = player->getPosition();
@@ -2533,7 +2533,7 @@ void ProtocolGame::sendFYIBox(const std::string& message)
 {
     if(message.empty() || message.length() > 1018) //Prevent client debug when message is empty or length is > 1018 (not confirmed)
     {
-        std::clog << "[Warning - ProtocolGame::sendFYIBox] Trying to send an empty or too huge message." << std::endl;
+        std::cerr << "[Warning - ProtocolGame::sendFYIBox] Trying to send an empty or too huge message." << std::endl;
         return;
     }
 

@@ -70,44 +70,44 @@ bool ScriptManager::loadSystem()
 {
 	if(!g_weapons->loadFromXml())
 	{
-		std::clog << "> ERROR: Unable to load Weapons!" << std::endl;
+		std::cerr << "> ERROR: Unable to load Weapons!" << std::endl;
 		return false;
 	}
 
 	g_weapons->loadDefaults();
 	if(!g_spells->loadFromXml())
 	{
-		std::clog << "> ERROR: Unable to load Spells!" << std::endl;
+		std::cerr << "> ERROR: Unable to load Spells!" << std::endl;
 		return false;
 	}
 
 	if(!g_actions->loadFromXml())
 	{
-		std::clog << "> ERROR: Unable to load Actions!" << std::endl;
+		std::cerr << "> ERROR: Unable to load Actions!" << std::endl;
 		return false;
 	}
 
 	if(!g_talkActions->loadFromXml())
 	{
-		std::clog << "> ERROR: Unable to load TalkActions!" << std::endl;
+		std::cerr << "> ERROR: Unable to load TalkActions!" << std::endl;
 		return false;
 	}
 
 	if(!g_moveEvents->loadFromXml())
 	{
-		std::clog << "> ERROR: Unable to load MoveEvents!" << std::endl;
+		std::cerr << "> ERROR: Unable to load MoveEvents!" << std::endl;
 		return false;
 	}
 
 	if(!g_creatureEvents->loadFromXml())
 	{
-		std::clog << "> ERROR: Unable to load CreatureEvents!" << std::endl;
+		std::cerr << "> ERROR: Unable to load CreatureEvents!" << std::endl;
 		return false;
 	}
 
 	if(!g_globalEvents->loadFromXml())
 	{
-		std::clog << "> ERROR: Unable to load GlobalEvents!" << std::endl;
+		std::cerr << "> ERROR: Unable to load GlobalEvents!" << std::endl;
 		return false;
 	}
 
@@ -119,7 +119,7 @@ bool ScriptManager::loadMods()
     /*boost::filesystem::path modsPath(getFilePath(FILE_TYPE_MOD));
 	if(!boost::filesystem::exists(modsPath))
 	{
-		std::clog << "[Error - ScriptManager::loadMods] Couldn't locate main directory" << std::endl;
+		std::cerr << "[Error - ScriptManager::loadMods] Couldn't locate main directory" << std::endl;
 		return false;
 	}
 
@@ -131,30 +131,30 @@ bool ScriptManager::loadMods()
 		if(boost::filesystem::is_directory(it->status()) && (s.size() > 4 ? s.substr(s.size() - 4) : "") != ".xml")
 			continue;
 
-		std::clog << "> Loading " << s << "...";
+		std::cerr << "> Loading " << s << "...";
 		if(loadFromXml(s, enabled))
 		{
-			std::clog << " done";
+			std::cerr << " done";
 			if(!enabled)
 			{
 				++j;
-				std::clog << ", but disabled";
+				std::cerr << ", but disabled";
 			}
 
-			std::clog << ".";
+			std::cerr << ".";
 		}
 		else
-			std::clog << " failed!";
+			std::cerr << " failed!";
 
-		std::clog << std::endl;
+		std::cerr << std::endl;
 		++i;
 	}
 
-	std::clog << "> " << i << " mods were loaded";
+	std::cerr << "> " << i << " mods were loaded";
 	if(j)
-		std::clog << " (" << j << " disabled)";
+		std::cerr << " (" << j << " disabled)";
 
-	std::clog << "." << std::endl;
+	std::cerr << "." << std::endl;
     modsLoaded = true;*/
 	return true;
 }
@@ -179,8 +179,8 @@ bool ScriptManager::loadFromXml(const std::string& file, bool& enabled)
 	xmlDocPtr doc = xmlParseFile(modPath.c_str());
 	if(!doc)
 	{
-		std::clog << "[Error - ScriptManager::loadFromXml] Cannot load mod " << modPath << std::endl;
-		std::clog << getLastXMLError() << std::endl;
+		std::cerr << "[Error - ScriptManager::loadFromXml] Cannot load mod " << modPath << std::endl;
+		std::cerr << getLastXMLError() << std::endl;
 		return false;
 	}
 
@@ -190,8 +190,8 @@ bool ScriptManager::loadFromXml(const std::string& file, bool& enabled)
 	xmlNodePtr p, root = xmlDocGetRootElement(doc);
 	if(xmlStrcmp(root->name,(const xmlChar*)"mod"))
 	{
-		std::clog << "[Error - ScriptManager::loadFromXml] Malformed mod " << modPath << std::endl;
-		std::clog << getLastXMLError() << std::endl;
+		std::cerr << "[Error - ScriptManager::loadFromXml] Malformed mod " << modPath << std::endl;
+		std::cerr << getLastXMLError() << std::endl;
 
 		xmlFreeDoc(doc);
 		return false;
@@ -199,7 +199,7 @@ bool ScriptManager::loadFromXml(const std::string& file, bool& enabled)
 
 	if(!readXMLString(root, "name", strValue))
 	{
-		std::clog << "[Warning - ScriptManager::loadFromXml] Empty name in mod " << modPath << std::endl;
+		std::cerr << "[Warning - ScriptManager::loadFromXml] Empty name in mod " << modPath << std::endl;
 		xmlFreeDoc(doc);
 		return false;
 	}
@@ -264,7 +264,7 @@ bool ScriptManager::loadFromXml(const std::string& file, bool& enabled)
 			{
 				if(!readXMLString(p, "name", strValue))
 				{
-					std::clog << "[Warning - ScriptManager::loadFromXml] Lib without name in mod " << strValue << std::endl;
+					std::cerr << "[Warning - ScriptManager::loadFromXml] Lib without name in mod " << strValue << std::endl;
 					p = p->next;
 					continue;
 				}
@@ -283,7 +283,7 @@ bool ScriptManager::loadFromXml(const std::string& file, bool& enabled)
 						libMap[strValue] = lb;
 					}
 					else
-						std::clog << "[Warning - ScriptManager::loadFromXml] Duplicated lib in mod "
+						std::cerr << "[Warning - ScriptManager::loadFromXml] Duplicated lib in mod "
 							<< strValue << ", previously declared in " << it->second.first << std::endl;
 				}
 			}

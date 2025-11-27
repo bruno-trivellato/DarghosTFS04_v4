@@ -33,7 +33,7 @@ extern RSA g_RSA;
 void Protocol::onSendMessage(OutputMessage_ptr msg)
 {
 	#ifdef __DEBUG_NET_DETAIL__
-	std::clog << "Protocol::onSendMessage" << std::endl;
+	std::cerr << "Protocol::onSendMessage" << std::endl;
 	#endif
 	if(!m_rawMessages)
 	{
@@ -41,7 +41,7 @@ void Protocol::onSendMessage(OutputMessage_ptr msg)
 		if(m_encryptionEnabled)
 		{
 			#ifdef __DEBUG_NET_DETAIL__
-			std::clog << "Protocol::onSendMessage - encrypt" << std::endl;
+			std::cerr << "Protocol::onSendMessage - encrypt" << std::endl;
 			#endif
 			XTEA_encrypt(*msg);
 		}
@@ -49,7 +49,7 @@ void Protocol::onSendMessage(OutputMessage_ptr msg)
 		if(m_checksumEnabled)
 		{
 			#ifdef __DEBUG_NET_DETAIL__
-			std::clog << "Protocol::onSendMessage - crypto header" << std::endl;
+			std::cerr << "Protocol::onSendMessage - crypto header" << std::endl;
 			#endif
 			msg->addCryptoHeader(m_checksumEnabled);
 		}
@@ -62,12 +62,12 @@ void Protocol::onSendMessage(OutputMessage_ptr msg)
 void Protocol::onRecvMessage(NetworkMessage& msg)
 {
 	#ifdef __DEBUG_NET_DETAIL__
-	std::clog << "Protocol::onRecvMessage" << std::endl;
+	std::cerr << "Protocol::onRecvMessage" << std::endl;
 	#endif
 	if(m_encryptionEnabled)
 	{
 		#ifdef __DEBUG_NET_DETAIL__
-		std::clog << "Protocol::onRecvMessage - decrypt" << std::endl;
+		std::cerr << "Protocol::onRecvMessage - decrypt" << std::endl;
 		#endif
 		XTEA_decrypt(msg);
 	}

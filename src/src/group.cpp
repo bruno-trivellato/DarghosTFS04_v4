@@ -47,15 +47,15 @@ bool Groups::loadFromXml()
 	xmlDocPtr doc = xmlParseFile(getFilePath(FILE_TYPE_XML, "groups.xml").c_str());
 	if(!doc)
 	{
-		std::clog << "[Warning - Groups::loadFromXml] Cannot load groups file." << std::endl;
-		std::clog << getLastXMLError() << std::endl;
+		std::cerr << "[Warning - Groups::loadFromXml] Cannot load groups file." << std::endl;
+		std::cerr << getLastXMLError() << std::endl;
 		return false;
 	}
 
 	xmlNodePtr p, root = xmlDocGetRootElement(doc);
 	if(xmlStrcmp(root->name,(const xmlChar*)"groups"))
 	{
-		std::clog << "[Error - Groups::loadFromXml] Malformed groups file." << std::endl;
+		std::cerr << "[Error - Groups::loadFromXml] Malformed groups file." << std::endl;
 		xmlFreeDoc(doc);
 		return false;
 	}
@@ -79,7 +79,7 @@ bool Groups::parseGroupNode(xmlNodePtr p)
 	int32_t intValue;
 	if(!readXMLInteger(p, "id", intValue))
 	{
-		std::clog << "[Warning - Groups::parseGroupNode] Missing group id." << std::endl;
+		std::cerr << "[Warning - Groups::parseGroupNode] Missing group id." << std::endl;
 		return false;
 	}
 
@@ -135,7 +135,7 @@ Group* Groups::getGroup(uint32_t groupId)
 	if(it != groupsMap.end())
 		return it->second;
 
-	std::clog << "[Warning - Groups::getGroup] Group " << groupId << " not found." << std::endl;
+	std::cerr << "[Warning - Groups::getGroup] Group " << groupId << " not found." << std::endl;
 	return &defGroup;
 }
 
