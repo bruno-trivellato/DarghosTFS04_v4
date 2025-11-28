@@ -1,0 +1,23 @@
+# Exclude ARM64 build directory (local Mac builds)
+src/build-arm64/
+
+# Allow AMD64 build directory (Docker builds will cache this)
+# src/build-amd64/ is NOT excluded - it will be cached in Docker layers
+
+# BUT include schema files (needed for database initialization)
+!src/schemas/
+
+# Exclude git
+.git/
+.gitignore
+
+# Exclude documentation
+*.md
+
+# Exclude MacOS files
+.DS_Store
+
+# Exclude deployment scripts (not needed in image)
+deploy-azure.sh
+azure-setup.sh
+simple-setup.sh
