@@ -29,11 +29,14 @@ docker run -d \
 sleep 15
 docker exec -i darghos-mysql mysql -uroot -pdarghos123 darghos < darghos-clean-backup.sql
 
-# 3. Get your local IP
+# 3. Import admin accounts (optional - creates bruno, ninao, yves accounts)
+docker exec -i darghos-mysql mysql -uroot -pdarghos123 darghos < create-admin-accounts.sql
+
+# 4. Get your local IP
 ifconfig | grep "inet " | grep -v 127.0.0.1
 # Example: inet 192.168.1.119
 
-# 4. Build and run TFS server (use YOUR IP from step 3)
+# 5. Build and run TFS server (use YOUR IP from step 4)
 docker build --platform linux/amd64 -f Dockerfile.production -t darghos-server:latest .
 
 docker run -d \
@@ -45,7 +48,7 @@ docker run -d \
   -e SERVER_IP=192.168.1.119 \
   darghos-server:latest
 
-# 5. Check logs (wait for ">> Darghos server Online!")
+# 6. Check logs (wait for ">> Darghos server Online!")
 docker logs -f darghos-server
 ```
 
@@ -99,7 +102,10 @@ az container create \
 sleep 30
 docker run --rm -i mysql:8.0 mysql -h darghos-mysql-${USER}.${LOCATION}.azurecontainer.io -uroot -pdarghos123 darghos < darghos-clean-backup.sql
 
-# 7. Deploy TFS server (note: Azure assigns new IP on each deployment)
+# 7. Import admin accounts (optional - creates bruno, ninao, yves accounts)
+cat create-admin-accounts.sql | docker run --rm -i mysql:8.0 mysql -h darghos-mysql-${USER}.${LOCATION}.azurecontainer.io -uroot -pdarghos123 darghos
+
+# 8. Deploy TFS server (note: Azure assigns new IP on each deployment)
 ACR_PASSWORD=$(az acr credential show --name $ACR_NAME --query "passwords[0].value" -o tsv)
 
 az container create \
@@ -119,7 +125,7 @@ az container create \
   --restart-policy Always \
   --location $LOCATION
 
-# 8. Get public IP and update config
+# 9. Get public IP and update config
 PUBLIC_IP=$(az container show --resource-group $RESOURCE_GROUP --name darghos-tfs-server --query "ipAddress.ip" -o tsv)
 echo "Server IP: $PUBLIC_IP"
 
@@ -146,14 +152,41 @@ az container restart --resource-group $RESOURCE_GROUP --name darghos-tfs-server
 
 **Important:** Azure Container Instances assign a new public IP on each redeployment. Use Azure Files to update `config.lua` without rebuilding containers.
 
+### Azure Management Commands
+
+```bash
+# View TFS server logs
+az container logs --resource-group $RESOURCE_GROUP --name darghos-tfs-server
+
+# View MySQL logs
+az container logs --resource-group $RESOURCE_GROUP --name darghos-mysql
+
+# Check server status
+az container show --resource-group $RESOURCE_GROUP --name darghos-tfs-server --query "{IP:ipAddress.ip, State:instanceView.state}"
+
+# Restart TFS server (after config changes)
+az container restart --resource-group $RESOURCE_GROUP --name darghos-tfs-server
+
+# Stop containers
+az container delete --resource-group $RESOURCE_GROUP --name darghos-tfs-server --yes
+az container delete --resource-group $RESOURCE_GROUP --name darghos-mysql --yes
+
+# List all containers
+az container list --resource-group $RESOURCE_GROUP --output table
+```
+
 ---
 
 ## Connection Details
 
 **Test Account:**
-- **Username**: `test`
-- **Password**: `test`
+- **Username**: `test` / **Password**: `test`
 - **Characters**: Test Knight (lvl 8), Test Sorc (lvl 8), God Admin (lvl 500)
+
+**Admin Accounts** (if you ran `create-admin-accounts.sql`):
+- **Username**: `bruno` / **Password**: `bruno` → Bruno Knight, Bruno Sorc, GOD Bruno (lvl 500)
+- **Username**: `ninao` / **Password**: `ninao` → Ninao Knight, Ninao Sorc, GOD Ninao (lvl 500)
+- **Username**: `yves` / **Password**: `yves` → Yves Knight, Yves Sorc, GOD Yves (lvl 500)
 
 **Database Access:**
 - **Local**: `localhost:3306`
