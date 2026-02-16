@@ -37,21 +37,12 @@ WORKDIR /app
 # Copy source code
 COPY . /app
 
-# Build TFS server (DEBUG mode) - AMD64 specific build directory
-# Using build-amd64 directory to cache AMD64 builds separately from ARM64 local builds
+# Build TFS server (DEBUG mode)
 RUN cd /app/src && mkdir -p build-amd64 && cd build-amd64 && \
     cmake -DCMAKE_BUILD_TYPE=Debug .. && \
     make -j4 && \
     cp tfs /app/tfs-debug && \
     chmod +x /app/tfs-debug
-
-# Build RELEASE version as well (optional, for performance) - AMD64 specific
-# DISABLED: Only building debug version for now
-# RUN cd /app/src && mkdir -p build-release-amd64 && cd build-release-amd64 && \
-#     cmake -DCMAKE_BUILD_TYPE=Release .. && \
-#     make -j4 && \
-#     cp tfs /app/tfs-optimized && \
-#     chmod +x /app/tfs-optimized
 
 # Copy startup script
 COPY start-server.sh /app/start-server.sh

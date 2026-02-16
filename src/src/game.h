@@ -683,6 +683,7 @@ class Game
 		DecayList decayItems[EVENT_DECAYBUCKETS];
         std::forward_list<Item*> toDecayItems;
 		size_t lastBucket;
+		std::mutex decayMutex;  // Protect decay lists from concurrent access
 
 		static const int32_t LIGHT_LEVEL_DAY = 250;
 		static const int32_t LIGHT_LEVEL_NIGHT = 40;

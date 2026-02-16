@@ -5056,21 +5056,29 @@ void Game::internalDecayItem(Item* item)
 
 void Game::checkDecay()
 {
-    // Temporarily disable decay processing to isolate crash
+    std::cerr << "[Decay] checkDecay() called, scheduling next check" << std::endl;
+
     g_scheduler.addEvent(createSchedulerTask(EVENT_DECAYINTERVAL,
         std::bind(&Game::checkDecay, this)));
-    
-    return;  // Early return - skip decay processing for now
+
+    std::cerr << "[Decay] Attempting to acquire decay mutex..." << std::endl;
+
+    // Lock mutex to prevent concurrent access to decay lists
+    std::lock_guard<std::mutex> lockClass(decayMutex);
+
+    std::cerr << "[Decay] Mutex acquired successfully!" << std::endl;
 
 	size_t bucket = (lastBucket + 1) % EVENT_DECAYBUCKETS;
-    
+
+    std::cerr << "[Decay] Checking bucket " << bucket << ", items in bucket: " << decayItems[bucket].size() << std::endl;
+
     // Safety check for bucket bounds
     if (bucket >= EVENT_DECAYBUCKETS) {
         std::cerr << "Error: Invalid decay bucket " << bucket << std::endl;
         lastBucket = 0;
         return;
     }
-    
+
     for (auto it = decayItems[bucket].begin(); it != decayItems[bucket].end();)
 	{
 		Item* item = *it;
@@ -5082,33 +5090,38 @@ void Game::checkDecay()
             continue;
         }
         
-        // Check if item is still valid before calling methods  
+        // Check if item is still valid before calling methods
         int32_t duration = 0;
         try {
             if(!item->canDecay())
             {
+                std::cerr << "[Decay] Item " << item->getID() << " cannot decay, removing from bucket " << bucket << std::endl;
+                it = decayItems[bucket].erase(it);  // Erase FIRST
                 item->setDecaying(DECAYING_FALSE);
-                freeThing(item);
-                it = decayItems[bucket].erase(it);
+                freeThing(item);  // Free AFTER erase
                 continue;
             }
 
             duration = item->getDuration();
+            std::cerr << "[Decay] Processing item " << item->getID() << " in bucket " << bucket << ", duration: " << duration << std::endl;
+
             int32_t decreaseTime = std::min<int32_t>(EVENT_DECAYINTERVAL * EVENT_DECAYBUCKETS, duration);
 
             duration -= decreaseTime;
             item->decreaseDuration(decreaseTime);
-            
+
             if(duration <= 0)
             {
-                it = decayItems[bucket].erase(it);
+                std::cerr << "[Decay] Item " << item->getID() << " fully decayed, removing" << std::endl;
+                it = decayItems[bucket].erase(it);  // Already correct order here
                 internalDecayItem(item);
                 freeThing(item);
             }
             else if(duration < EVENT_DECAYINTERVAL * EVENT_DECAYBUCKETS)
             {
-                it = decayItems[bucket].erase(it);
+                it = decayItems[bucket].erase(it);  // Erase first
                 size_t newBucket = (bucket + ((duration + EVENT_DECAYINTERVAL / 2) / 1000)) % EVENT_DECAYBUCKETS;
+                std::cerr << "[Decay] Moving item " << item->getID() << " from bucket " << bucket << " to bucket " << newBucket << std::endl;
                 
                 // Bounds check for new bucket
                 if (newBucket >= EVENT_DECAYBUCKETS) {
@@ -5118,11 +5131,14 @@ void Game::checkDecay()
                 
                 if(newBucket == bucket)
                 {
+                    std::cerr << "[Decay] Item " << item->getID() << " staying in same bucket, processing immediately" << std::endl;
                     internalDecayItem(item);
                     freeThing(item);
                 }
                 else{
+                    std::cerr << "[Decay] About to push item " << item->getID() << " to bucket " << newBucket << std::endl;
                     decayItems[newBucket].push_back(item);
+                    std::cerr << "[Decay] Successfully moved item to new bucket" << std::endl;
                 }
             }
             else
@@ -5136,13 +5152,18 @@ void Game::checkDecay()
 	}
 
 	lastBucket = bucket;
-	
+
+    std::cerr << "[Decay] Bucket " << bucket << " processing complete, calling cleanup()" << std::endl;
+
 	try {
 		cleanup();
+        std::cerr << "[Decay] cleanup() completed successfully" << std::endl;
 	}
 	catch (...) {
 		std::cerr << "Exception in cleanup() during checkDecay" << std::endl;
 	}
+
+    std::cerr << "[Decay] checkDecay() finished, mutex will be released" << std::endl;
 }
 
 void Game::checkLight()
@@ -6642,20 +6663,29 @@ void Game::shutdown()
 
 void Game::cleanup()
 {
+    std::cerr << "[Decay/Cleanup] cleanup() started, freeing " << releaseThings.size() << " things" << std::endl;
+
 	//free memory
 	for(std::vector<Thing*>::iterator it = releaseThings.begin(); it != releaseThings.end(); ++it)
 		(*it)->unRef();
 
 	releaseThings.clear();
+
+    std::cerr << "[Decay/Cleanup] Processing toDecayItems to add to decay lists" << std::endl;
+
+    // NOTE: No mutex needed here - caller (checkDecay) already holds decayMutex
     for (Item* item : toDecayItems) {
         const uint32_t dur = item->getDuration();
-		if(dur >= EVENT_DECAYINTERVAL * EVENT_DECAYBUCKETS)
+        if(dur >= EVENT_DECAYINTERVAL * EVENT_DECAYBUCKETS)
             decayItems[lastBucket].push_back(item);
-		else
+        else
             decayItems[(lastBucket + 1 + dur / 1000) % EVENT_DECAYBUCKETS].push_back(item);
-	}
+    }
+
+    std::cerr << "[Decay/Cleanup] Added items to decay lists" << std::endl;
 
 	toDecayItems.clear();
+    std::cerr << "[Decay/Cleanup] cleanup() finished" << std::endl;
 }
 
 void Game::freeThing(Thing* thing)
