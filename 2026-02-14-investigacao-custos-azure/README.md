@@ -1,8 +1,8 @@
 # Investigacao de Custos Azure -- Darghos
 
-Este relatorio foi movido para o repositorio Lila.Architecture, onde centralizamos documentacao de infraestrutura e custos.
+Este relatorio foi movido para o repositorio Lila.KnowledgeBase, onde centralizamos documentacao de infraestrutura e custos.
 
-**Localizacao:** `Lila.Architecture/custos/manutencao/2026-02-14-cleanup-darghos-azure.md`
+**Localizacao:** `Lila.KnowledgeBase/investigations/2026-02-14-cleanup-darghos-azure.md`
 
 ## Resumo
 
